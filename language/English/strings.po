@@ -444,7 +444,44 @@ msgctxt "#31154"
 msgid "Choose Trailers Add-on"
 msgstr ""
 
-#empty strings from id 31155 to 31199
+msgctxt "#31155"
+msgid "Views"
+msgstr ""
+
+msgctxt "#31156"
+msgid "Hide Slide View"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Hide Gallery View"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Hide 3D Wall View"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Hide Wall View"
+msgstr ""
+
+msgctxt "#31160"
+msgid "Hide Posters View"
+msgstr ""
+
+msgctxt "#31161"
+msgid "Hide Thumbnails View"
+msgstr ""
+
+msgctxt "#31162"
+msgid "Hide Banner List View"
+msgstr ""
+
+msgctxt "#31163"
+msgid "Hide List Wall View"
+msgstr ""
+
+
+#empty strings from id 31165 to 31199
 #Scripts labels
 
 msgctxt "#31200"
