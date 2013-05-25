@@ -577,8 +577,8 @@ msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font se
 msgstr "Das Aussehen von XBMC ändern. Dazu gehören Skin, Design, Ton und die Auswahl der Schrift, RSS Feed und die Einstellung der verwendeten Sprache. "
 
 msgctxt "#31409"
-msgid "Choose from a variety of advanced settings and customization options to make \"Bello\" fit your needs and taste."
-msgstr "Wählen Sie aus einer Vielzahl von fortgeschrittenen Einstellungs- und Anpassungsoptionen um \"Bello\" auf Ihre Bedürfnisse und Ihren Geschmack anzupassen."
+msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
+msgstr "Wählen Sie aus einer Vielzahl von Einstellungs- und Anpassungsoptionen um \"The Little Black Box\" auf Ihre Bedürfnisse und Ihren Geschmack anzupassen."
 
 msgctxt "#31410"
 msgid "With XBMC you can have several profiles, even a logon screen for controlled access."

@@ -821,9 +821,9 @@ msgstr "Kontrollera hårdvaru och mjukvara funktioner, inkluderat installation f
 
 msgctxt "#31409"
 msgid ""
-"Choose from a variety of advanced settings and customization options to make"
-" \"Bello\" fit your needs and taste."
-msgstr "Välj från ett urval av avancerade inställningar och inställningsalternativ för att göra \"Bello\" anpassat till dina behov och tycken."
+"Choose from a variety of settings and customization options to make"
+" \"The Little Black Box\" fit your needs."
+msgstr "Välj från ett urval av avancerade inställningar och inställningsalternativ för att göra \"The Little Black Box\" anpassat till dina behov."
 
 msgctxt "#31410"
 msgid ""

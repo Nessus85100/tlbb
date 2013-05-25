@@ -821,8 +821,7 @@ msgstr "Controlla le funzioni hardware e software, comprese le impostazioni audi
 
 msgctxt "#31409"
 msgid ""
-"Choose from a variety of advanced settings and customization options to make"
-" \"Bello\" fit your needs and taste."
+"Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
 msgstr "Scegli tra una serie di impostazioni avanzate e personalizzazioni per far si che lo skin risponda ai tuoi gusti."
 
 msgctxt "#31410"

@@ -821,9 +821,8 @@ msgstr "Ελέγξτε βασικές λειτουργίες του υλικού
 
 msgctxt "#31409"
 msgid ""
-"Choose from a variety of advanced settings and customization options to make"
-" \"Bello\" fit your needs and taste."
-msgstr "Επιλέξτε από ένα πλήθος προχωρημένων ρυθμίσεων και επιλογών προσαρμογής για να διαμορφώσετε το 'Bello' σύμφωνα με τα γούστα και τις ανάγκες σας."
+"Choose from a variety of advanced settings and customization options to make \"The Little Black Box\" fit your needs and taste."
+msgstr "Επιλέξτε από ένα πλήθος ρυθμίσεων και επιλογών προσαρμογής για να διαμορφώσετε το 'The Little Black Box' σύμφωνα με τις ανάγκες σας."
 
 msgctxt "#31410"
 msgid ""

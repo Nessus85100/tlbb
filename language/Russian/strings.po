@@ -821,9 +821,8 @@ msgstr "Настройки аудио-, видео оборудования, у�
 
 msgctxt "#31409"
 msgid ""
-"Choose from a variety of advanced settings and customization options to make"
-" \"Bello\" fit your needs and taste."
-msgstr "Множество дополнительных настроек и возможностей персонификации позволят настроить Bello по вашему вкусу."
+"Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
+msgstr "Множество настроек и возможностей персонификации позволят настроить "The Little Black Box" по вашему вкусу."
 
 msgctxt "#31410"
 msgid ""

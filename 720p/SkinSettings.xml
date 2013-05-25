@@ -94,6 +94,10 @@
 						<label>24001</label>
 						<onclick>noop</onclick>
 					</item>
+					<item id="5">
+						<label>31155</label>
+						<onclick>noop</onclick>
+					</item>
 				</content>
 			</control>
 
@@ -134,33 +138,19 @@
 						<onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
 						<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 					</control>
-					<control type="radiobutton." id="8104">
-	          <include>SettingsRadioButton</include>
-						<label>31151</label>
-						<onclick>Skin.ToggleSetting(ShowRSSGlobal)</onclick>
-				    <onclick>Reloadskin</onclick>
-						<selected>Skin.HasSetting(ShowRSSGlobal)</selected>
-						<enable>System.Getbool(lookandfeel.enablerssfeeds)</enable>
-					</control>
-					<control type="radiobutton." id="8105">
-	          <include>SettingsRadioButton</include>
-						<label>31152</label>
-						<onclick>Skin.ToggleSetting(HideFilenameFlagging)</onclick>
-						<selected>Skin.HasSetting(HideFilenameFlagging)</selected>
-					</control>
-					<control type="radiobutton" id="8106">
+					<control type="radiobutton" id="8104">
 	          <include>SettingsRadioButton</include>
 						<label>31139</label>
 						<onclick>Skin.ToggleSetting(EnableAddonsNotifications)</onclick>
 						<selected>Skin.HasSetting(EnableAddonsNotifications)</selected>
 					</control>
-					<control type="radiobutton" id="8107">
+					<control type="radiobutton" id="8105">
 	          <include>SettingsRadioButton</include>
 						<label>31140</label>
 						<onclick>Skin.ToggleSetting(EnableWeatherAlertsNotifications)</onclick>
 						<selected>Skin.HasSetting(EnableWeatherAlertsNotifications)</selected>
 					</control>
-					<control type="radiobutton" id="8108">
+					<control type="radiobutton" id="8106">
 	          <include>SettingsRadioButton</include>
 						<label>31151</label>
 						<onclick>Skin.ToggleSetting(EnableGlobalRSS)</onclick>
@@ -465,14 +455,6 @@
 						<selected>Skin.HasSetting(ShowHomeMenuVideosButton)</selected>
 						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
 					</control>
-					<control type="radiobutton" id="8262">
-						<description>Show DVD Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31115]</label>
-						<onclick>Skin.ToggleSetting(ShowHomeMenuDVDButton)</onclick>
-						<selected>Skin.HasSetting(ShowHomeMenuDVDButton)</selected>
-						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
-					</control>
 					<control type="radiobutton" id="8263">
 						<description>Show MusicVideos Button</description>
 	          <include>SettingsRadioButton</include>
@@ -510,36 +492,6 @@
 						<label>31132</label>
 						<onclick>Skin.ToggleSetting(HideBGVideo)</onclick>
 						<selected>Skin.HasSetting(HideBGVideo)</selected>
-					</control>
-					<control type="radiobutton" id="8303">
-	          <include>SettingsRadioButton</include>
-						<label>31133</label>
-						<onclick>Skin.ToggleSetting(CustomBackground)</onclick>
-						<selected>Skin.HasSetting(CustomBackground)</selected>
-					</control>
-					<control type="button" id="8304">
-	          <include>SettingsButton</include>
-						<label> • $LOCALIZE[31135]</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomImageBackgroundPath)][/COLOR]</label2>
-						<onclick>Skin.Reset(CustomFolderBackgroundPath)</onclick>
-						<onclick>Skin.SetImage(CustomImageBackgroundPath)</onclick>
-						<visible>Skin.HasSetting(CustomBackground)</visible>
-					</control>
-					<control type="button" id="8305">
-	          <include>SettingsButton</include>
-						<label> • $LOCALIZE[31136]</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFolderBackgroundPath)][/COLOR]</label2>
-						<onclick>Skin.Reset(CustomImageBackgroundPath)</onclick>
-						<onclick>Skin.SetPath(CustomFolderBackgroundPath)</onclick>
-						<visible>Skin.HasSetting(CustomBackground)</visible>
-					</control>
-					<control type="radiobutton" id="8306">
-	          <include>SettingsRadioButton</include>
-						<label>    • $LOCALIZE[31131]</label>
-						<onclick>Skin.ToggleSetting(ShowCustomBackgroundOnHomeOnly)</onclick>
-						<selected>Skin.HasSetting(ShowCustomBackgroundOnHomeOnly)</selected>
-						<visible>Skin.HasSetting(CustomBackground)</visible>
-						<enable>!IsEmpty(Skin.String(CustomFolderBackgroundPath))</enable>
 					</control>
 				</control>
 
@@ -667,6 +619,96 @@
 					</control>
 				</control>
 
+				<!-- =========== -->
+				<!-- == Views == -->
+				<!-- =========== -->
+				<control type="grouplist" id="8500">
+				<include>CloseAnimation</include>
+					<visible>Container(8800).Hasfocus(5)</visible>
+					<posx>297</posx>
+					<posy>0</posy>
+					<width>782</width>
+					<height>414</height>
+					<itemgap>2</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>8800</onleft>
+					<onright>9000</onright>
+					<onup>8500</onup>
+					<ondown>8500</ondown>
+					<control type="radiobutton" id="8501">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31156] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideSlideViewVideos)</onclick>
+						<selected>Skin.HasSetting(HideSlideViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8502">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31156] ($LOCALIZE[2])</label>
+						<onclick>Skin.ToggleSetting(HideSlideViewMusic)</onclick>
+						<selected>Skin.HasSetting(HideSlideViewMusic)</selected>
+					</control>
+					<control type="radiobutton" id="8503">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31157] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideGalleryViewVideos)</onclick>
+						<selected>Skin.HasSetting(HideGalleryViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8504">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31157] ($LOCALIZE[2])</label>
+						<onclick>Skin.ToggleSetting(HideGalleryViewMusic)</onclick>
+						<selected>Skin.HasSetting(HideGalleryViewMusic)</selected>
+					</control>
+					<control type="radiobutton" id="8505">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31161] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideThumbnailsVideos)</onclick>
+						<selected>Skin.HasSetting(HideThumbnailsVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8506">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31161] ($LOCALIZE[2])</label>
+						<onclick>Skin.ToggleSetting(HideThumbnailsMusic)</onclick>
+						<selected>Skin.HasSetting(HideThumbnailsMusic)</selected>
+					</control>
+					<control type="radiobutton" id="8507">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31162] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideBannersViewVideos)</onclick>
+						<selected>Skin.HasSetting(HideBannersViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8508">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31162] ($LOCALIZE[2])</label>
+						<onclick>Skin.ToggleSetting(HideBannersViewMusic)</onclick>
+						<selected>Skin.HasSetting(HideBannersViewMusic)</selected>
+					</control>
+					<control type="radiobutton" id="8509">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31160] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HidePostersViewVideos)</onclick>
+						<selected>Skin.HasSetting(HidePostersViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8510">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31158] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(Hide3DWallViewVideos)</onclick>
+						<selected>Skin.HasSetting(Hide3DWallViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8511">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31159] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideWallViewVideos)</onclick>
+						<selected>Skin.HasSetting(HideWallViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8512">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31163] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideListWallViewVideos)</onclick>
+						<selected>Skin.HasSetting(HideListWallViewVideos)</selected>
+					</control>
+				</control>
+
 				<control type="scrollbar." id="60">
 					<posx>1070</posx>
 					<posy>5</posy>
@@ -710,13 +752,13 @@
 				<shadowcolor>99000000</shadowcolor>
 			</control>
 		 <control type="textbox">
-				<description>Category Description</description>
+				<description>Skin Settings Description</description>
 				<posx>0</posx>
 				<posy>425</posy>
-				<width>1045</width>
-				<height>30</height>
-				<textcolor>33white</textcolor>
-				<shadowcolor>44333333</shadowcolor>
+				<width>1050</width>
+				<height>100</height>
+				<textcolor>44white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
 				<font>FontSize_20</font>
 				<align>left</align>
 				<scroll>false</scroll>

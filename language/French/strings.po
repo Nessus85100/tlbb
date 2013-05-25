@@ -673,8 +673,8 @@ msgid "Control core hardware and software functions, including audio and video h
 msgstr "Contrôle du noyau matériel et des fonctions logicielles. Inclut les options de démarrage automatique, la configuration matérielle de la partie audio et le verrouillage des fonctionnalités à l'aide du contrôle parental."
 
 msgctxt "#31409"
-msgid "Choose from a variety of advanced settings and customization options to make \"Bello\" fit your needs and taste."
-msgstr "Choisissez parmi des paramètres avancés et des options de personnalisation afin qui \"Bello\" s'adapte à vos besoins et à vos goûts."
+msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
+msgstr "Choisissez parmi des paramètres et des options de personnalisation afin qui \"The Little Black Box\" s'adapte à vos besoins."
 
 msgctxt "#31410"
 msgid "With XBMC you can have several profiles, even a logon screen for controlled access."
