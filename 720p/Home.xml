@@ -196,6 +196,15 @@
 							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
 		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
+					 <item id="12">
+							<label>$INFO[System.DVDLabel]</label>
+							<onclick>PlayDVD</onclick>
+							<thumb>special://skin/backgrounds/videos.jpg</thumb>
+							<icon>-</icon>
+							<visible>Skin.HasSetting(ShowHomeMenuDVDButton) + System.HasMediaDVD</visible>
+							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
+		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
+					 </item>
 					 <item id="13">
 							<label>$LOCALIZE[137]</label>
 						  <onclick>XBMC.RunScript(script.globalsearch)</onclick>
@@ -884,6 +893,7 @@
 			</control>
 	  </control>
 
+
 		<include condition="!Skin.HasSetting(HideMoviesSubMenu)">HomeSubMenuMovies</include>
 		<include condition="!Skin.HasSetting(HideTVShowsSubMenu)">HomeSubMenuTVShows</include>
 		<include condition="!Skin.HasSetting(HideMusicSubMenu)">HomeSubMenuMusic</include>
@@ -933,12 +943,6 @@
 			    <onclick>SetFocus(20)</onclick>
 			    <onclick>ActivateWindow(shutdownmenu)</onclick>
 				</control>
-				<control type="button" id="213">
-					<description>WiFi</description>
-			    <include>TopButton</include>
-			    <onclick>SetFocus(20)</onclick>
-			    <onclick>ActivateWindow(accesspoints)</onclick>
-				</control>
 			</control>
 			<control type="grouplist">
 				<posx>0</posx>
@@ -971,16 +975,11 @@
 					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="in" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
           <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
 				</control>
-				<control type="label">
-				  <include>TopSmallLabel</include>
-					<label>WiFi</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="in" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
-				</control>
 			</control>
 			<control type="group">
 				<posx>3</posx>
 				<posy>45</posy>
+	      <animation effect="slide" end="-3,3" reversible="false" condition="stringcompare(System.Language,Greek) | stringcompare(System.Language,Italian)">Conditional</animation>
 	      <include>HomeSlideAnimations</include>
 				<control type="label">
 					<description>Library Totals: Movies</description>
@@ -1045,29 +1044,7 @@
 						<effect type="fade" start="100" end="0" delay="40900" time="300" />
 					</animation>
 				</control>
-	    </control>
+	     </control>
 	  </control>
-
-		<control type="group">
-	    <visible>!Window.IsActive(InfoDialog) + !Window.IsActive(extendedprogressdialog)</visible>
-		  <include>TLBBSlideAnimations</include>
-			<control type="group">
-				<posx>188r</posx>
-			  <posy>590</posy>
-				<control type="image">
-					<description>tlbb logo</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>148</width>
-					<height>138</height>
-					<aspectratio>stretch</aspectratio>
-	        <texture>logo.png</texture>
-					<colordiffuse>99white</colordiffuse>
-					<align>right</align>
-					<aligny>center</aligny>
-				</control>
-		  </control>
-		</control>	
-
 	</controls>	
 </window>
