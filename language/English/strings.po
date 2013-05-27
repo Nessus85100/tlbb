@@ -445,7 +445,7 @@ msgid "Choose Trailers Add-on"
 msgstr ""
 
 msgctxt "#31155"
-msgid "Views"
+msgid "Add-ons Button opens..."
 msgstr ""
 
 msgctxt "#31156"
@@ -478,6 +478,10 @@ msgstr ""
 
 msgctxt "#31163"
 msgid "Hide List Wall View"
+msgstr ""
+
+msgctxt "#31164"
+msgid "Views"
 msgstr ""
 
 
