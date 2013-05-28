@@ -217,6 +217,11 @@
 				<include>TopButton</include>
 				<onclick>ReplaceWindow(Profiles)</onclick>	
 			</control>
+			<control type="button" id="111">
+				<description>Update</description>
+				<include>TopButton</include>
+				<onclick>RunScript(special://skin/scripts/update.py)</onclick>
+			</control>
 		 </control>		 
 	   <!-- ==================== -->
 	   <!-- == Buttons Labels == -->
@@ -306,6 +311,13 @@
 				<label>$LOCALIZE[13200]</label>
 				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(110)" reversible="true">Conditional</animation>
         <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(110)" reversible="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>Upfate</description>
+        <include>TopSettingsLabel</include>
+				<label>$LOCALIZE[24069]</label>
+				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(111)" reversible="true">Conditional</animation>
+        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(111)" reversible="true">Conditional</animation>
 			</control>
 		 </control>
 		</control>

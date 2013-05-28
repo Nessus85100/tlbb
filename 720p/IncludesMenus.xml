@@ -386,6 +386,11 @@
 					<label>$LOCALIZE[130]</label>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 				</item>
+				<item id="12">
+					<label>$LOCALIZE[24069]</label>
+				  <onclick>RunScript(special://skin/scripts/update.py)</onclick>
+			    <onclick>SetFocus(20)</onclick>
+				</item>
 			</content>
 		</control>
 	</include>
