@@ -1523,11 +1523,11 @@
 					  <control type="label">
 						  <posx>0</posx>
 						  <posy>0</posy>
-						  <width min="10" max="300">auto</width>
+						  <width min="10" max="350">auto</width>
 			        <font>FontSize_22</font>
 							<textcolor>aawhite</textcolor>
 							<shadowcolor>77000000</shadowcolor>
-							<label>$INFO[ListItem.Property(ReleaseDate)]</label>
+							<label>$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</label>
 							<align>left</align>
 					  </control>
 	        </control>      
@@ -1836,7 +1836,7 @@
 	        </control>
 	        <control type="grouplist">
 						<posx>0</posx>
-						<posy>33</posy>
+						<posy>325</posy>
 						<width>350</width>
 				    <align>left</align>
 				    <orientation>horizontal</orientation>
@@ -1844,11 +1844,11 @@
 					  <control type="label">
 						  <posx>0</posx>
 						  <posy>0</posy>
-						  <width min="10" max="300">auto</width>
+						  <width min="10" max="350">auto</width>
 			        <font>FontSize_22</font>
 							<textcolor>aawhite</textcolor>
 							<shadowcolor>77000000</shadowcolor>
-							<label>$INFO[ListItem.Property(ReleaseDate)]</label>
+							<label>$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</label>
 							<align>left</align>
 					  </control>
 	        </control>      
@@ -2482,7 +2482,6 @@
 				<pagecontrol>60</pagecontrol>
 	      <scrolltime tween="Cubic" easing="out">500</scrolltime>
 				<preloaditems>2</preloaditems>
-				<visible>![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
 				<itemlayout height="265" width="244" condition="![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]">
 					<control type="image">
 						<width>260</width>
@@ -2576,7 +2575,7 @@
 					</control>
 				</focusedlayout>
 
-				<itemlayout height="180" width="244" condition="Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)">
+				<itemlayout height="180" width="244" condition="[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]">
 					<control type="image">
 						<width>260</width>
 						<height>200</height>
@@ -2659,7 +2658,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="180" width="244" condition="Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)">
+				<focusedlayout height="180" width="244" condition="[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]">
 					<control type="image">
 						<width>260</width>
 						<height>200</height>
