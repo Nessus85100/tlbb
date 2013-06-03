@@ -4,7 +4,6 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>BackgroundContent</include>
-		<include>HomeBackground</include>
 		<include>BackgroundVignette</include>
 
 		<control type="group" id="50">
