@@ -109,6 +109,11 @@
 							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
 		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
+					 <item id="50">
+							<label>$LOCALIZE[24069]</label>
+							<onclick>ActivateWindowAndFocus(SystemInfo, 200,0)</onclick>
+							<visible>!IsEmpty(Window(Home).Property(update.available))</visible>
+					 </item>
 					 <item id="2">
 							<label>$LOCALIZE[20342]</label>
 							<onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
@@ -189,7 +194,7 @@
 					 </item>
 					 <item id="11">
 							<label>$LOCALIZE[31000]</label>
-              <onclick>ActivateWindow(PVR)</onclick>
+              <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 							<icon>-</icon>
 						  <visible>System.GetBool(pvrmanager.enabled)</visible>
