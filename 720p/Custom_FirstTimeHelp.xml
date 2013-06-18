@@ -55,12 +55,12 @@
 				<posy>168</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(1) | Control.HasFocus(61)]">Conditional</animation>
 				<control type="textbox">
-					<description>textarea</description>
+					<description>Help Screen 1</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>910</width>
 					<height>380</height>
-					<label>To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab.[CR][CR]To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab.[CR][CR]This dialog will not appear again after you click "Close".</label>
+					<label>[CR]$LOCALIZE[195]</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -93,12 +93,12 @@
 				<posy>168</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(2) | Control.HasFocus(62)]">Conditional</animation>
 				<control type="textbox">
-					<description>textarea</description>
+					<description>Help Screen 2</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>910</width>
 					<height>380</height>
-					<label>This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab.[CR][CR]This dialog will not appear again after you click "Close".</label>
+					<label>[CR]$LOCALIZE[195]</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -126,33 +126,25 @@
 				</control>
 			</control>
 
-
-		  <control type="group" id="9001">
-				<posx>950</posx>
-				<posy>570</posy>
-				<control type="button" id="10">
-					<description>Close button</description>
-					<width>160</width>
-					<height>40</height>
-	        <label>31036</label>
-					<texturenofocus border="12,10,12,10">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="12,10,12,10">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>FontSize_22</font>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>44white</disabledcolor>
-					<shadowcolor>55000000</shadowcolor>
-					<textoffsety>3</textoffsety>
-					<onleft>9002</onleft>
-					<onright>9002</onright>
-					<onup>61</onup>
-				  <ondown>noop</ondown>
-					<onclick>Close</onclick>
+			<control type="group">
+				<posx>185</posx>
+				<posy>168</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(10)">Conditional</animation>
+				<control type="textbox">
+					<description>Close button message</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>910</width>
+					<height>380</height>
+					<label>[CR]This dialog will not appear again after you click "Close".</label>
+					<font>FontSize_20</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<pagecontrol>62</pagecontrol>
 				</control>
-		  </control>
-	
+			</control>
+
 		  <control type="grouplist" id="9002">
 				<posx>173</posx>
 				<posy>570</posy>
@@ -194,7 +186,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				<control type="button" id="3">
+				<control type="button." id="3">
 					<description>'3' button</description>
 					<width>48</width>
 					<height>40</height>
@@ -208,7 +200,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				<control type="button" id="4">
+				<control type="button." id="4">
 					<description>'4' button</description>
 					<width>48</width>
 					<height>40</height>
@@ -223,9 +215,47 @@
 					<focusedcolor>white</focusedcolor>
 				</control>
 		  </control>
+
+		  <control type="group" id="9001">
+				<posx>950</posx>
+				<posy>570</posy>
+				<control type="button" id="10">
+					<description>Close button</description>
+					<width>160</width>
+					<height>40</height>
+	        <label>31036</label>
+					<texturenofocus border="12,10,12,10">dialogs/keyboard/button_nf.png</texturenofocus>
+					<texturefocus border="12,10,12,10">dialogs/keyboard/button_fo.png</texturefocus>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>FontSize_22</font>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<disabledcolor>44white</disabledcolor>
+					<shadowcolor>55000000</shadowcolor>
+					<textoffsety>3</textoffsety>
+					<onleft>9002</onleft>
+					<onright>9002</onright>
+					<onup>61</onup>
+				  <ondown>noop</ondown>
+					<onclick>Close</onclick>
+			    <!-- <onclick>Skin.Setbool(FirstTimeRun)</onclick> -->
+				</control>
+		  </control>
 		</control>
 	</controls>
 </window>
+
+
+
+
+
+
+
+
+
+
+
 
 			<control type="button." id="10">
 				<description>Close button</description>

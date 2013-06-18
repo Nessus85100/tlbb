@@ -148,9 +148,9 @@
 						<textoffsetx>40</textoffsetx>
 						<pulseonselect>false</pulseonselect>
 						<label>24069</label>
-				    <onclick>RunScript(special://skin/scripts/update.py)</onclick>
+				    <onclick>XBMC.RunScript(script.tlbb)</onclick>
 					</control>
-					<control type="button" id="210">
+					<control type="button." id="210">
 						<description>Button About</description>
 						<width>295</width>
 						<height>50</height>
