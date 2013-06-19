@@ -1,2 +1,17 @@
-[B]v1.0.0 (Beta 1)[/B]
-• Initial Release
+[B][COLOR=FF56ADDA]v1.0.0 - Release Date 20/6/2013[/COLOR][/B]
+[B]Initial Release - Skin futures[/B]
+• Support for Weather Underground extended futures.
+• Support for SkinWidgets service.
+• Support for Artist Slideshow script.
+• Support for Next Aired Addon with TV Guide.
+• Support for Artwork Downloader Addon.
+• Support for Global Search Addon.
+• Support for TVTunes Addon.
+• Support for CU LRC Lyrics Addon.
+• Support for XBMC Subtitles Addon.
+• Support for PlayAlbum script (through VideoInfo dialog).
+• Support for Library Editor script (requires manual install of the script atm).
+• Support for custom buttons in Home Menu (up to 10 buttons).
+• Music OSD slide show texts and colors.
+• Unified interface for info dialogs, now playing etc for the whole skin.
+• Introducing a new notifications system for TV Shows (using Next Aired info), Weather (using weather alerts) and Add-ons.

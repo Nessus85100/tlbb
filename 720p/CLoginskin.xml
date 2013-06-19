@@ -1,0 +1,155 @@
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+    <allowoverlays>false</allowoverlays>
+	<controls>
+
+	 <control type="group">
+		<visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(VirtualKeyboard)</visible>
+    <animation type="WindowOpen" reversible="false">
+      <effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+      <effect type="zoom" start="90" end="100" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+    </animation>
+    <animation type="WindowClose" reversible="false">
+      <effect type="zoom" start="100" end="90" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+      <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+    </animation>
+    <animation type="Visible" reversible="false">
+      <effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+      <effect type="zoom" start="90" end="100" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+    </animation>
+    <animation type="Hidden" reversible="false">
+      <effect type="zoom" start="100" end="90" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+      <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+    </animation>
+    <control type="image" id="140">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>480</height>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<texture background="true">dialogs/other/bg_x.png</texture>
+    </control>
+		<control type="label" id="147">
+			<description>Heading</description>
+			<posx>190</posx>
+			<posy>185</posy>
+			<width>340</width>
+			<font>FontSize_36</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
+      <label>Navi-Xtreme Sign in</label>
+		</control>
+
+
+    <control type="label" id="141">
+        <description>label_username</description>
+				<posx>370</posx>
+				<posy>330</posy>
+        <width>100</width>
+        <height>30</height>
+        <label>User Name</label>
+        <textcolor>FFFFFFFF</textcolor>
+        <font>FontSize_20</font>
+    </control>
+
+    <control type="label" id="142">
+        <description>label_password</description>
+        <posx>370</posx>
+        <posy>370</posy>
+        <width>100</width>
+        <height>30</height>
+        <label>Password</label>
+        <textcolor>FFFFFFFF</textcolor>
+        <font>FontSize_20</font>
+    </control>
+ 
+     <control type="button" id="143">
+        <description>username</description>
+        <posx>330</posx>
+        <posy>260</posy>
+				<width>133</width>
+				<height>40</height>
+				<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
+				<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>44white</disabledcolor>
+				<shadowcolor>55000000</shadowcolor>
+				<textoffsety>5</textoffsety>
+        <label>User Name</label>
+    </control>
+ 
+     <control type="button" id="144">
+        <description>password</description>
+        <posx>330</posx>
+        <posy>310</posy>
+				<width>133</width>
+				<height>40</height>
+				<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
+				<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>44white</disabledcolor>
+				<shadowcolor>55000000</shadowcolor>
+				<textoffsety>5</textoffsety>
+        <label>Password</label>
+    </control>  
+
+     <control type="button" id="145">
+        <description>login</description>
+        <posx>230</posx>
+        <posy>370</posy>
+				<width>133</width>
+				<height>40</height>
+				<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
+				<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>44white</disabledcolor>
+				<shadowcolor>55000000</shadowcolor>
+				<textoffsety>5</textoffsety>
+        <label>Sign in</label>
+        <onup>144</onup>         
+        <onright>146</onright>
+        <ondown>145</ondown>  
+    </control>  
+
+     <control type="button" id="146">
+        <description>cancel</description>
+        <posx>380</posx>
+        <posy>370</posy>
+				<width>133</width>
+				<height>40</height>
+				<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
+				<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>44white</disabledcolor>
+				<shadowcolor>55000000</shadowcolor>
+				<textoffsety>5</textoffsety>
+        <label>222</label>
+        <onup>144</onup> 
+        <onleft>145</onleft>  
+        <ondown>146</ondown>        
+    </control>  
+     
+   </control> 
+  </controls>
+</window>
+

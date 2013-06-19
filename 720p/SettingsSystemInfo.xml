@@ -132,7 +132,7 @@
 						<pulseonselect>false</pulseonselect>
 						<label>19191</label>
 					</control>
-					<control type="button" id="200">
+					<control type="button." id="200">
 						<description>Button Update</description>
 						<width>295</width>
 						<height>50</height>

@@ -817,6 +817,7 @@
 		 <control type="group">
 				<posx>-20</posx>
 				<posy>17</posy>
+        <visible>![Container(112).Scrolling | Container(120).Scrolling | Container(129).Scrolling]</visible>
 				<visible>!Container.Scrolling + ![Window.IsVisible(FileManager) + [Container(20).Scrolling | Container(21).Scrolling]] + ![Window.IsVisible(musicplaylisteditor) + [Container(50).Scrolling | Container(100).Scrolling]]</visible>
 				<include>CommonSlideAnimations</include>
         <include>WeatherAndClock</include>

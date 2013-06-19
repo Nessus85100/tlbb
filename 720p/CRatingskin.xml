@@ -1,0 +1,183 @@
+<window>
+ <defaultcontrol>9000</defaultcontrol>
+ <allowoverlays>false</allowoverlays>
+ <controls>
+
+	<control type="group">
+		<visible>!Window.IsActive(ShutdownMenu)</visible>
+    <animation type="WindowOpen" reversible="false">
+      <effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+      <effect type="zoom" start="90" end="100" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+    </animation>
+    <animation type="WindowClose" reversible="false">
+      <effect type="zoom" start="100" end="90" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+      <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+    </animation>
+    <animation type="Visible" reversible="false">
+      <effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+      <effect type="zoom" start="90" end="100" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+    </animation>
+    <animation type="Hidden" reversible="false">
+      <effect type="zoom" start="100" end="90" time="300" delay="0" center="340,260" tween="sine" easing="inout" />
+      <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+    </animation>
+    <control type="image" id="140">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>480</height>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<texture background="true">dialogs/other/bg_x.png</texture>
+    </control>
+		<control type="label" id="141">
+			<description>Heading</description>
+			<posx>190</posx>
+			<posy>185</posy>
+			<width>340</width>
+			<font>FontSize_36</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
+      <label>Select a Star to Rate</label>
+		</control>
+    <control type="image" id="142">
+      <description>Rating</description>
+      <posx>285</posx>
+      <posy>223</posy>
+      <width>150</width>
+      <height>30</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+    </control>
+    <!-- Change Rating Buttons -->
+    <control type="button" id="150">
+      <description>rate0</description>
+      <posx>245</posx>
+      <posy>280</posy>
+      <width>30</width>
+      <height>40</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <ondown>148</ondown> 
+      <onright>143</onright>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control> 
+    <control type="button" id="143">
+      <description>rate1</description>
+      <posx>280</posx>
+      <posy>280</posy>
+      <width>30</width>
+      <height>40</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <ondown>148</ondown> 
+      <onleft>150</onleft>
+      <onright>144</onright>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control> 
+    <control type="button" id="144">
+      <description>rate2</description>
+      <posx>315</posx>
+      <posy>280</posy>
+      <width>30</width>
+      <height>40</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <ondown>148</ondown>  
+      <onleft>143</onleft> 
+      <onright>145</onright>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control> 
+    <control type="button" id="145">
+      <description>rate3</description>
+      <posx>350</posx>
+      <posy>280</posy>
+      <width>30</width>
+      <height>40</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <ondown>148</ondown> 
+      <onleft>144</onleft>         
+      <onright>146</onright>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control>
+    <control type="button" id="146">
+      <description>rate4</description>
+      <posx>385</posx>
+      <posy>280</posy>
+      <width>30</width>
+      <height>40</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <ondown>148</ondown>   
+      <onleft>145</onleft>         
+      <onright>147</onright>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control>    
+    <control type="button" id="147">
+      <description>rate5</description>
+      <posx>420</posx>
+      <posy>280</posy>
+      <width>30</width>
+      <height>40</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <ondown>148</ondown>   
+      <onleft>146</onleft> 
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+    </control>
+    <!-- Save & Cancel Buttons -->
+    <control type="button" id="148">
+      <description>Save</description>
+			<posx>275</posx>
+			<posy>270</posy>
+			<width>80</width>
+			<height>29</height>
+			<texturenofocus border="25,0,25,0">dialogs/keyboard/button_nf.png</texturenofocus>
+			<texturefocus border="25,0,25,0">dialogs/keyboard/button_fo.png</texturefocus>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>FontSize_22</font>
+			<textcolor>99grey</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>44white</disabledcolor>
+			<shadowcolor>55000000</shadowcolor>
+			<textoffsety>4</textoffsety>
+      <label>190</label>
+      <onup>143</onup>         
+      <onright>149</onright>
+      <ondown>148</ondown>        
+    </control>
+    <control type="button" id="149">
+      <description>Cancel</description>
+			<posx>365</posx>
+			<posy>270</posy>
+			<width>80</width>
+			<height>29</height>
+			<texturenofocus border="25,0,25,0">dialogs/keyboard/button_nf.png</texturenofocus>
+			<texturefocus border="25,0,25,0">dialogs/keyboard/button_fo.png</texturefocus>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>FontSize_22</font>
+			<textcolor>99grey</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>44white</disabledcolor>
+			<shadowcolor>55000000</shadowcolor>
+			<textoffsety>4</textoffsety>
+      <label>222</label>
+      <onup>143</onup> 
+      <onleft>148</onleft>  
+      <ondown>149</ondown>         
+    </control>  
+  </control> 
+ </controls>
+</window>
+

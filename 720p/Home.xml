@@ -116,7 +116,8 @@
 					 </item>
 					 <item id="50">
 							<label>$LOCALIZE[24069]</label>
-							<onclick>ActivateWindowAndFocus(SystemInfo, 200,0)</onclick>
+				      <onclick>XBMC.RunScript(script.tlbb)</onclick>
+							<!-- <onclick>ActivateWindowAndFocus(SystemInfo, 200,0)</onclick> -->
 							<visible>!IsEmpty(Window(Home).Property(update.available))</visible>
 					 </item>
 					 <item id="2">

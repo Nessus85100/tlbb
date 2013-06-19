@@ -332,7 +332,13 @@
 
 	<include name="DialogZoomInOutAnimation">
 		<animation type="Conditional" reversible="false" condition="
-		Window.IsActive(PVRGuideInfo) 
+		Control.HasFocus(122)
+		| Control.HasFocus(127)
+		| Window.IsActive(CBrowseskin.xml)
+		| Window.IsActive(CRatingskin.xml)
+		| Window.IsActive(CTextViewskin.xml)
+		| Window.IsActive(CLoginskin.xml)
+		| Window.IsActive(PVRGuideInfo) 
 		| Window.IsActive(PVRRecordingInfo) 
 		| Window.IsActive(PVRTimerSetting) 
 		| Window.IsActive(PVRGuideSearch) 
@@ -368,7 +374,13 @@
       <effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
 		</animation>
 		<animation type="Conditional" reversible="false" condition="
-		!Window.IsActive(PVRGuideInfo) 
+		!Control.HasFocus(122)
+    + !Control.HasFocus(127)
+		+ !Window.IsActive(CBrowseskin.xml)
+		+ !Window.IsActive(CRatingskin.xml)
+		+ !Window.IsActive(CTextViewskin.xml)
+		+ !Window.IsActive(CLoginskin.xml)
+		+ !Window.IsActive(PVRGuideInfo) 
 		+ !Window.IsActive(PVRRecordingInfo) 
 		+ !Window.IsActive(PVRTimerSetting) 
 		+ !Window.IsActive(PVRGuideSearch) 
@@ -512,11 +524,11 @@
   </include>
 
 	<include name="ListFocusAnimation">
-	  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious | Container(58).OnPrevious">
+	  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious | Container(58).OnPrevious | Container(112).OnPrevious | Container(120).OnPrevious">
 			  <effect type="fade" start="20" end="100" time="400"/>
 				<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
     </animation>
-	  <animation type="Focus" reversible="false" condition="Container(50).OnNext | Container(58).OnNext">
+	  <animation type="Focus" reversible="false" condition="Container(50).OnNext | Container(58).OnNext | Container(112).OnNext | Container(120).OnNext">
 			  <effect type="fade" start="20" end="100" time="400"/>
 				<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
     </animation>

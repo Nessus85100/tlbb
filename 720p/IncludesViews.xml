@@ -50,7 +50,8 @@
     
     <include name="VideoPlaylistViews">
       <include>ListView_Videos</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideSlideViewVideos)">SlideView_Videos</include> <!-- id = 51 -->
+      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos</include> <!-- id = 56 -->
+      <include condition="!Skin.HasSetting(HideBannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
     </include>
     
     <include name="MusicPlaylistViews">
