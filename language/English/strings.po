@@ -1,6 +1,6 @@
 # XBMC Media Center language file
-# Addon Name: Bello (Beta)
-# Addon id: skin.bello
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -814,8 +814,8 @@ msgid "Delete Group"
 msgstr ""
 
 #empty strings from id 31354 to 31400
-#Settings Category Description & Header Labels
 
+#Settings Category Description & Header Labels
 msgctxt "#31401"
 msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
 msgstr ""
@@ -849,7 +849,7 @@ msgid "Control core hardware and software functions, including audio and video h
 msgstr ""
 
 msgctxt "#31409"
-msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs."
+msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
 msgstr ""
 
 msgctxt "#31410"
@@ -894,4 +894,25 @@ msgstr ""
 
 msgctxt "#31420"
 msgid "Configure Skin Settings"
+msgstr ""
+
+#First time helper screens
+msgctxt "#31421"
+msgid "First time helper - Screen ONE.[CR][CR]TLBB Team"
+msgstr ""
+
+msgctxt "#31422"
+msgid "First time helper - Screen TWO.[CR][CR]TLBB Team"
+msgstr ""
+
+msgctxt "#31423"
+msgid "First time helper - Screen FOUR.[CR][CR]TLBB Team"
+msgstr ""
+
+msgctxt "#31424"
+msgid "First time helper - Screen FIVE.[CR][CR]TLBB Team"
+msgstr ""
+
+msgctxt "#31425"
+msgid "This dialog will not appear again after you click "Close".[CR]Press "Esc" or "Back" if you want to see this dialog again on the next system restart.[CR][CR]TLBB Team"
 msgstr ""
