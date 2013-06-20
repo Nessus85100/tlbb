@@ -315,7 +315,7 @@
 					<onup>61</onup>
 				  <ondown>noop</ondown>
 					<onclick>Skin.Setbool(FirstTimeRun)</onclick>
-			    <!-- <onclick>Skin.Setbool(FirstTimeRun)</onclick> -->
+			    <onclick>close</onclick>
 				</control>
 		  </control>
 		</control>
