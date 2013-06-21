@@ -898,21 +898,21 @@ msgstr ""
 
 #First time helper screens
 msgctxt "#31421"
-msgid "First time helper - Screen ONE.[CR][CR]TLBB Team"
+msgid "Thank you for purchasing your very own ‘Little Black Box’. You now have unlimited to access to all the latest music, TV shows and movies as well as all the classics![CR][CR]This one time seen “first use help screen”, will guide you to the fastest way of all the goods the ‘Little Black Box’ has to offer you."
 msgstr ""
 
 msgctxt "#31422"
-msgid "First time helper - Screen TWO.[CR][CR]TLBB Team"
+msgid "The first thing you want to do is setting up your network. When you arrive at the Home page after this screen, navigate to the menu at the top of the screen, there you will see the word Wifi on the right hand side. Scroll along to there and once you click on to it all available connections will appear. Select your connection and click ok. If your network requires a password a dialog will appear. Enter your password and click done."
 msgstr ""
 
 msgctxt "#31423"
-msgid "First time helper - Screen FOUR.[CR][CR]TLBB Team"
+msgid "As soon as your box is connected to the internet it will look out for possible updates and download and install them if needed. It will do all of this at the background without interfering with usability. However at the very first launch of the box, the amount of updates might be such that the box has to work rather hard for a bit. So at first use, if the box feels a bit “sluggish” or un-responsive, please be patience and give it a couple of minutes to do it’s magic. (A reboot might be required, but will be shown by a message)."
 msgstr ""
 
 msgctxt "#31424"
-msgid "First time helper - Screen FIVE.[CR][CR]TLBB Team"
+msgid "For setting up your box, it is best to have a look in the manual included into the package.[CR][CR]Additional information can be found on the website of your supplier. Furthermore, some extra information could be found on the XBMC community websites;[CR][CR]1) XBMC (http://www.xbmc.org)[CR]2) XBMCHub (http://www.xbmchub.com)"
 msgstr ""
 
 msgctxt "#31425"
-msgid "This dialog will not appear again after you click "Close".[CR]Press "Esc" or "Back" if you want to see this dialog again on the next system restart.[CR][CR]TLBB Team"
+msgid "This dialog will not appear again after you click "Close".[CR]Press "Esc" or "Back" if you want to see this dialog again on the next system restart."
 msgstr ""

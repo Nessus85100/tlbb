@@ -21,13 +21,19 @@
 				<effect type="fade" time="400" center="auto" start="100" easing="in" end="0" reversible="false"/>
 			</animation>
 			<control type="image">
-			<texture background="true">dialogs/help_guide/bg_help.png</texture>
+			<description>background image</description>
+			<posx>100</posx>
+			<posy>40</posy>
+			<width>1080</width>
+			<height>645</height>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<texture background="true" border="200">dialogs/help_guide/bg_help.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<posx>225</posx>
-				<posy>115</posy>
-				<width>830</width>
+				<posx>250</posx>
+				<posy>152</posy>
+				<width>780</width>
 				<height>50</height>
 				<font>FontSize_36</font>
 				<label>The Little Black Box - First time help</label>
@@ -51,16 +57,16 @@
 				<aligny>center</aligny>
 			</control>
 			<control type="group">
-				<posx>185</posx>
-				<posy>168</posy>
+				<posx>285</posx>
+				<posy>210</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(1) | Control.HasFocus(61)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 1</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>910</width>
-					<height>380</height>
-					<label>[CR]$LOCALIZE[31421]</label>
+					<width>710</width>
+					<height>305</height>
+					<label>$LOCALIZE[31421][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -68,10 +74,10 @@
 					<pagecontrol>61</pagecontrol>
 				</control>
 				<control type="scrollbar" id="61">
-					<posx>913</posx>
-					<posy>8</posy>
+					<posx>714</posx>
+					<posy>5</posy>
 					<width>8</width>
-					<height>370</height>
+					<height>295</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -89,16 +95,16 @@
 			</control>
 
 			<control type="group">
-				<posx>185</posx>
-				<posy>168</posy>
+				<posx>285</posx>
+				<posy>210</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(2) | Control.HasFocus(62)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 2</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>910</width>
-					<height>380</height>
-					<label>[CR]$LOCALIZE[31422]</label>
+					<width>710</width>
+					<height>305</height>
+					<label>$LOCALIZE[31422][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -106,10 +112,10 @@
 					<pagecontrol>62</pagecontrol>
 				</control>
 				<control type="scrollbar" id="62">
-					<posx>913</posx>
-					<posy>8</posy>
+					<posx>714</posx>
+					<posy>5</posy>
 					<width>8</width>
-					<height>370</height>
+					<height>295</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -127,16 +133,16 @@
 			</control>
 
 			<control type="group">
-				<posx>185</posx>
-				<posy>168</posy>
+				<posx>285</posx>
+				<posy>210</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(3) | Control.HasFocus(63)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 3</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>910</width>
-					<height>380</height>
-					<label>[CR]$LOCALIZE[31423]</label>
+					<width>710</width>
+					<height>305</height>
+					<label>$LOCALIZE[31423][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -144,10 +150,10 @@
 					<pagecontrol>63</pagecontrol>
 				</control>
 				<control type="scrollbar" id="63">
-					<posx>913</posx>
-					<posy>8</posy>
+					<posx>714</posx>
+					<posy>5</posy>
 					<width>8</width>
-					<height>370</height>
+					<height>295</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -165,16 +171,16 @@
 			</control>
 
 			<control type="group">
-				<posx>185</posx>
-				<posy>168</posy>
+				<posx>285</posx>
+				<posy>210</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(4) | Control.HasFocus(64)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 4</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>910</width>
-					<height>380</height>
-					<label>[CR]$LOCALIZE[31424]</label>
+					<width>710</width>
+					<height>305</height>
+					<label>$LOCALIZE[31424][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -182,10 +188,10 @@
 					<pagecontrol>64</pagecontrol>
 				</control>
 				<control type="scrollbar" id="64">
-					<posx>913</posx>
-					<posy>8</posy>
+					<posx>714</posx>
+					<posy>5</posy>
 					<width>8</width>
-					<height>370</height>
+					<height>295</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -203,16 +209,16 @@
 			</control>
 
 			<control type="group">
-				<posx>185</posx>
-				<posy>168</posy>
+				<posx>285</posx>
+				<posy>210</posy>
 			  <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(10)">Conditional</animation>
 				<control type="textbox">
 					<description>Close button message</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>910</width>
-					<height>380</height>
-					<label>$LOCALIZE[31425]</label>
+					<width>710</width>
+					<height>305</height>
+					<label>$LOCALIZE[31425][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -222,8 +228,8 @@
 			</control>
 
 		  <control type="grouplist" id="9002">
-				<posx>173</posx>
-				<posy>570</posy>
+				<posx>275</posx>
+				<posy>535</posy>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
 				<onup condition="Control.HasFocus(1)">61</onup>
@@ -293,11 +299,11 @@
 		  </control>
 
 		  <control type="group" id="9001">
-				<posx>950</posx>
-				<posy>570</posy>
+				<posx>865</posx>
+				<posy>535</posy>
 				<control type="button" id="10">
 					<description>Close button</description>
-					<width>160</width>
+					<width>140</width>
 					<height>40</height>
 	        <label>31036</label>
 					<texturenofocus border="12,10,12,10">dialogs/keyboard/button_nf.png</texturenofocus>
