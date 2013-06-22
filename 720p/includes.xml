@@ -53,7 +53,7 @@
 			<include>FullscreenDimensions</include>
 			<texture>windows/bg/bg_black.png</texture>
 			<include>VisibleFadeEffect</include>
-			<visible>Window.IsActive(busydialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)</visible>			
+			<visible>Window.IsActive(busydialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(busy.xml)</visible>			
 		</control>
 	</include>
 

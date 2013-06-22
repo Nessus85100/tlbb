@@ -10,7 +10,7 @@
 		<!-- Main Home List Buttons -->
 		<!-- ====================== -->
 		<control type="group">
-	    <visible allowhiddenfocus="true">!Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+	    <visible allowhiddenfocus="true">!Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(busy.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	    <include>HomeSlideAnimations</include>
 		  <control type="group">
 	      <include>HomeSlideAnimations</include>
