@@ -1,6 +1,7 @@
 <window>
 	<defaultcontrol always="true">8000</defaultcontrol>
-  <onload condition="IsEmpty(Skin.String(AddonsName))">Skin.SetString(AddonsName,addonbrowser)</onload>
+  <onload condition="IsEmpty(Skin.String(AddonsName))">Skin.SetString(AddonsName,videosaddons)</onload>
+  <onload condition="IsEmpty(Skin.String(AddonsPath))">Skin.SetString(AddonsPath,videos)</onload>
   <onload condition="IsEmpty(Skin.String(MusicName))">Skin.SetString(MusicName,library)</onload>
   <onload condition="IsEmpty(Skin.String(MusicPath))">Skin.SetString(MusicPath,root)</onload>
 	<controls>
@@ -780,20 +781,20 @@
 					<control type="radiobutton" id="8510">
 	          <include>SettingsRadioButton</include>
 						<label>$LOCALIZE[31158] ($LOCALIZE[3])</label>
-						<onclick>Skin.ToggleSetting(Hide3DWallViewVideos)</onclick>
-						<selected>Skin.HasSetting(Hide3DWallViewVideos)</selected>
+						<onclick>Skin.ToggleSetting(Show3DWallViewVideos)</onclick>
+						<selected>Skin.HasSetting(Show3DWallViewVideos)</selected>
 					</control>
 					<control type="radiobutton" id="8511">
 	          <include>SettingsRadioButton</include>
 						<label>$LOCALIZE[31159] ($LOCALIZE[3])</label>
-						<onclick>Skin.ToggleSetting(HideWallViewVideos)</onclick>
-						<selected>Skin.HasSetting(HideWallViewVideos)</selected>
+						<onclick>Skin.ToggleSetting(ShowWallViewVideos)</onclick>
+						<selected>Skin.HasSetting(ShowWallViewVideos)</selected>
 					</control>
 					<control type="radiobutton" id="8512">
 	          <include>SettingsRadioButton</include>
 						<label>$LOCALIZE[31163] ($LOCALIZE[3])</label>
-						<onclick>Skin.ToggleSetting(HideListWallViewVideos)</onclick>
-						<selected>Skin.HasSetting(HideListWallViewVideos)</selected>
+						<onclick>Skin.ToggleSetting(ShowListWallViewVideos)</onclick>
+						<selected>Skin.HasSetting(ShowListWallViewVideos)</selected>
 					</control>
 				</control>
 

@@ -344,7 +344,7 @@
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[24001]</label>
-					<onclick>ActivateWindow(40)</onclick>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
 				</item>
 				<item id="3">
 					<label>$LOCALIZE[705]</label>
