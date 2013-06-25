@@ -194,7 +194,7 @@
 					  <control type="button" id="82011">
 								<onleft>8800</onleft>
 								<onright>9000</onright>
-								<onup>8263</onup>
+								<onup>8264</onup>
 								<ondown>8202</ondown>
 						    <enable>!Skin.HasSetting(HideHomeMenuMusicButton)</enable>
 								<texturefocus>-</texturefocus>
@@ -278,7 +278,7 @@
 								<onright>9000</onright>
 								<onup>8201</onup>
 								<ondown>8203</ondown>
-						    <enable>!Skin.HasSetting(HideHomeMenuAddonsButton)</enable>
+						    <enable>Skin.HasSetting(ShowHomeMenuAddonsButton)</enable>
 								<texturefocus>-</texturefocus>
 								<texturenofocus>-</texturenofocus>
 								<onclick condition="stringcompare(Skin.String(AddonsName),picturesaddons)">Skin.SetString(AddonsName,addonbrowser)</onclick>
@@ -304,7 +304,7 @@
 								<label>$LOCALIZE[31155]</label>
 								<label2>[COLOR=selected]$VAR[HomeAddonsButtonAddonsName][/COLOR]</label2>
 						    <visible>!ControlGroup(8202).HasFocus</visible>
-						    <enable>!Skin.HasSetting(HideHomeMenuAddonsButton)</enable>
+						    <enable>Skin.HasSetting(ShowHomeMenuAddonsButton)</enable>
 						</control>
 						<control type="button">
 								<width>780</width>
@@ -318,7 +318,7 @@
 								<label>$LOCALIZE[31155]</label>
 								<label2>[COLOR=selected]$VAR[HomeAddonsButtonAddonsName][/COLOR]</label2>
 						    <visible>ControlGroup(8202).HasFocus</visible>
-						    <enable>!Skin.HasSetting(HideHomeMenuAddonsButton)</enable>
+						    <enable>Skin.HasSetting(ShowHomeMenuAddonsButton)</enable>
 						</control>
 				  </control>
 				  <!-- Hide Now Playing -->
@@ -495,11 +495,11 @@
 						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
 					</control>
 					<control type="radiobutton" id="8256">
-						<description>Hide Addons Button</description>
+						<description>Hide Channels Button</description>
 	          <include>SettingsRadioButton</include>
 						<label> • $LOCALIZE[31111]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuAddonsButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuAddonsButton)</selected>
+						<onclick>Skin.ToggleSetting(HideHomeMenuChannelsButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuChannelsButton)</selected>
 						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
 					</control>
 					<control type="radiobutton" id="8257">
@@ -551,7 +551,15 @@
 						<onclick>Skin.ToggleSetting(ShowHomeMenuMusicVideosButton)</onclick>
 						<selected>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</selected>
 						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
-					</control>					
+					</control>
+					<control type="radiobutton" id="8264">
+						<description>Show Addons Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31165]</label>
+						<onclick>Skin.ToggleSetting(ShowHomeMenuAddonsButton)</onclick>
+						<selected>Skin.HasSetting(ShowHomeMenuAddonsButton)</selected>
+						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
+					</control>		
 				</control>
 
 				<!-- ================= -->

@@ -99,20 +99,14 @@
 							<label>$LOCALIZE[3]</label>
 							<onclick>ActivateWindow(Videos,files,return)</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
-							<icon>-</icon>
 							<visible>Skin.HasSetting(ShowHomeMenuVideosButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 					 <item id="1">
 							<label>$LOCALIZE[31002]</label>
               <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
               <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuTVShowsButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 					 <item id="50">
 							<label>$LOCALIZE[24069]</label>
@@ -125,49 +119,38 @@
 							<onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
               <onclick condition="!Library.HasContent(movies)">ActivateWindow(videos,files,return)</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuMoviesButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
+					 </item>
+					 <item id="51">
+							<label>19019</label>
+							<onclick>ActivateWindow(Video,Addons,return)</onclick>
+							<thumb>special://skin/backgrounds/programs.jpg</thumb>
+							<visible>!Skin.HasSetting(HideHomeMenuChannelsButton)</visible>
 					 </item>
 					 <item id="3">
 							<label>$LOCALIZE[2]</label>
 							<onclick condition="!Library.HasContent(music) | stringcompare(Skin.String(MusicName),files)">ActivateWindow(musicfiles)</onclick>
 							<onclick condition="Library.HasContent(music) + !stringcompare(Skin.String(MusicName),files)">ActivateWindow(musiclibrary,$INFO[Skin.String(MusicPath)])</onclick>
 							<thumb>special://skin/backgrounds/music.jpg</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuMusicButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 					 <item id="4">
 							<label>$LOCALIZE[20389]</label>
 							<onclick>ActivateWindow(videos,musicvideotitles)</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
-							<icon>-</icon>
 							<visible>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 					 <item id="5">
 							<label>$LOCALIZE[1]</label>
 							<onclick>ActivateWindow(Pictures)</onclick>
 							<thumb>special://skin/backgrounds/pictures.jpg</thumb>
-							<thumb>-</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuPicturesButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 					 <item id="6">
 							<label>$LOCALIZE[0]</label>
 							<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 							<thumb>special://skin/backgrounds/programs.jpg</thumb>
-							<thumb>-</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuProgramsButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 					 </item>
 					 <item id="7">
 							<label>$LOCALIZE[24001]</label>
@@ -175,57 +158,39 @@
 							<onclick condition="stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow(AddonBrowser)</onclick>
 							<onclick condition="!stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow($INFO[Skin.String(AddonsPath)],addons,return)</onclick> -->
 							<thumb>special://skin/backgrounds/addons.jpg</thumb>
-							<icon>-</icon>
-							<visible>!Skin.HasSetting(HideHomeMenuAddonsButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
+							<visible>Skin.HasSetting(ShowHomeMenuAddonsButton)</visible>
 					 </item>
 					 <item id="8">
 							<label>$LOCALIZE[8]</label>
 							<onclick>ActivateWindow(Weather)</onclick>
 							<thumb>-</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuWeatherButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Weather-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Weather-Custom-Folder)]</property>
 					 </item>
 					 <item id="9">
 							<label>$LOCALIZE[5]</label>
 							<onclick>ActivateWindow(AppearanceSettings)</onclick>
 						  <onclick>SetFocus(3)</onclick>
 							<thumb>special://skin/backgrounds/settings.jpg</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(System-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(System-Custom-Folder)]</property>
 					 </item>
 					 <item id="11">
 							<label>$LOCALIZE[31000]</label>
               <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
-							<icon>-</icon>
 						  <visible>System.GetBool(pvrmanager.enabled)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 					 <item id="12">
 							<label>$LOCALIZE[137]</label>
 						  <onclick>XBMC.RunScript(script.globalsearch)</onclick>
 							<thumb>-</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Programs-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Programs-Custom-Folder)]</property>
 					 </item>
 					 <item id="13">
 							<label>$LOCALIZE[31018]</label>
 							<onclick condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
 							<thumb>special://skin/backgrounds/videos.jpg</thumb>
-							<icon>-</icon>
 							<visible>!Skin.HasSetting(HideHomeMenuTrailersButton)</visible>
-							<property name="Custom-Background">$INFO[Skin.String(Media-Custom-Background)]</property>
-		          <property name="Custom-Folder">$INFO[Skin.String(Media-Custom-Folder)]</property>
 					 </item>
 		
 		       <!-- Custom Panels -->

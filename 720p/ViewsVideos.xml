@@ -497,13 +497,13 @@
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>FontSize_20</font>
+							<font>ArrowsFont</font>
 							<textcolor>77white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>․  ․  ․</label>
-	            <visible>IsEmpty(ListItem.Year)</visible>
+							<label>←</label>
+	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>20</posx>
@@ -515,8 +515,8 @@
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
-	            <visible>!IsEmpty(ListItem.Year)</visible>
+							<label fallback="․  ․  ․">$INFO[ListItem.Year]</label>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="image">
 							<posx>73</posx>
@@ -527,7 +527,6 @@
 							<height>17</height>-->	
 	            <texture>overlays/unwatched/list/unwatched_nf.png</texture>
 	            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-							<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Window.IsVisible(VideoPlaylist)</visible>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -618,13 +617,13 @@
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>FontSize_20</font>
+							<font>ArrowsFont</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>․  ․  ․</label>
-	            <visible>IsEmpty(ListItem.Year)</visible>
+							<label>←</label>
+	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>20</posx>
@@ -636,8 +635,8 @@
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
-	            <visible>!IsEmpty(ListItem.Year)</visible>
+							<label fallback="․  ․  ․">$INFO[ListItem.Year]</label>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="image">
 							<posx>73</posx>
@@ -648,7 +647,6 @@
 							<height>17</height>-->	
 	            <texture>overlays/unwatched/list/unwatched_fo.png</texture>
 	            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-							<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Window.IsVisible(VideoPlaylist)</visible>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -876,6 +874,16 @@
 		            <effect type="slide" start="-56,0" end="0,0" time="200" tween="circle" easing="out" />
 		            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
 		          </animation>
+							<control type="label.">
+								<width>690</width>
+								<height>100</height>
+								<font>ArrowsFont</font>
+								<textcolor>99white</textcolor>
+								<shadowcolor>99000000</shadowcolor>
+								<align>left</align>
+								<label>←</label>
+		            <visible>Stringcompare(ListItem.Label,..)</visible>
+							</control> 
 							<control type="label">
 								<height>30</height>
 								<width>690</width>

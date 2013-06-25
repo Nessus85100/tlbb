@@ -13,6 +13,8 @@
 
 	<constant name="FanartCrossfadeTime">300</constant>
 	<constant name="IconCrossfadeTime">250</constant>
+	<constant name="ButtonsLabelsFade">50</constant>
+	<constant name="ButtonsLabelsZoom">95</constant>
 
 
 	<include name="BackgroundItems">
@@ -475,6 +477,16 @@
 			<pulseonselect>true</pulseonselect>
 	</include>
 
+	<include name="DialogsButtonLabelNoFocus">
+			<height>62</height>
+			<width min="10" max="552">auto</width>
+			<font>FontSize_20</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+	    <align>left</align>
+	    <aligny>center</aligny>
+			<scroll>false</scroll>
+	</include>
 
   <!-- ================== -->
   <!-- Common Now Playing -->

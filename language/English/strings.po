@@ -269,7 +269,7 @@ msgid "Hide Programs Button"
 msgstr ""
 
 msgctxt "#31111"
-msgid "Hide Add-ons Button"
+msgid "Hide Channels Button"
 msgstr ""
 
 msgctxt "#31112"
@@ -484,8 +484,11 @@ msgctxt "#31164"
 msgid "Views"
 msgstr ""
 
+msgctxt "#31165"
+msgid "Show Add-ons Button"
+msgstr ""
 
-#empty strings from id 31165 to 31199
+#empty strings from id 31166 to 31199
 #Scripts labels
 
 msgctxt "#31200"
