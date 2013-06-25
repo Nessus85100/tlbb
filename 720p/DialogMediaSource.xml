@@ -220,7 +220,7 @@
 					  <include>DialogsButtonLabelNoFocus</include>
             <label>$INFO[Control.GetLabel(19),․  ]</label>
 						<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(19)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine easing="inout" center="15,0" condition="!Control.HasFocus(19)" reversible="true">Conditional</animation>
+	          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(19)" reversible="true">Conditional</animation>
 					</control>
 				</control>
 		  </control>
