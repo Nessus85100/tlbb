@@ -3,7 +3,7 @@
 	<controls>
 	
 		<control type="group">
-	    <visible>!Window.IsActive(ShutdownMenu)</visible>
+	    <visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(screencalibration) + !Window.IsActive(141)</visible>
 			<animation type="WindowOpen">
 				<effect type="zoom" time="500" center="auto" start="200" delay="250" end="100" tween="cubic" easing="out" />
 				<effect type="fade" time="500" center="auto" start="0"  delay="250" easing="out" end="100" reversible="false" />
@@ -253,6 +253,8 @@
 					<textoffsety>3</textoffsety>
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
+					<onclick>ActivateWindow(screencalibration)</onclick>
+					<onclick>SetFocus(2)</onclick>
 				</control>
 				<control type="button" id="2">
 					<description>'2' button</description>
@@ -267,6 +269,8 @@
 					<textoffsety>3</textoffsety>
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
+					<onclick>ActivateWindow(accesspoints)</onclick>
+					<onclick>SetFocus(3)</onclick>
 				</control>
 				<control type="button" id="3">
 					<description>'3' button</description>
@@ -281,6 +285,7 @@
 					<textoffsety>3</textoffsety>
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
+					<onclick>SetFocus(4)</onclick>
 				</control>
 				<control type="button" id="4">
 					<description>'4' button</description>
@@ -295,6 +300,7 @@
 					<textoffsety>3</textoffsety>
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
+					<onclick>SetFocus(10)</onclick>
 				</control>
 		  </control>
 

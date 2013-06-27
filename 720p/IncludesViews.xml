@@ -29,7 +29,6 @@
     <include name="MusicFilesViews">
       <include>ListView_Music</include> <!-- id = 50 -->
       <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
-      <include condition="!Skin.HasSetting(HideBannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
     </include>
 
     <include name="PicturesViews">

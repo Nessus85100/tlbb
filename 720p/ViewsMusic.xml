@@ -14,7 +14,7 @@
 			<include>ListViewAnimationsRight</include>
 			<control type="group">
 			  <include>ListViewAnimationsRight</include>
-				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Singles)] | [Substring(Container.FolderPath,plugin,left) | Container.Content(Addons)] + !IsEmpty(ListItem.Property(Addon.Name))</visible>
+				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] | [Substring(Container.FolderPath,plugin,left) | Container.Content(Addons)] + !IsEmpty(ListItem.Property(Addon.Name))</visible>
 				<control type="image">
 					<posx>430</posx>
 					<posy>-25</posy>
@@ -394,7 +394,7 @@
 			<control type="group">
 			  <include>ListViewAnimationsRight</include>
 			  <visible>IsEmpty(ListItem.Property(Addon.Name))</visible>
-				<visible>![Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Singles)]</visible>
+				<visible>![Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)]</visible>
 				<control type="image">
 					<posx>360</posx>
 					<posy>-60</posy>
@@ -435,17 +435,17 @@
 			  <scrolltime tween="cubic" easing="out">300</scrolltime>
 				<itemlayout height="45" width="710">
 						<control type="label">
-							<posx>19</posx>
+							<posx>20</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>FontSize_20</font>
+							<font>ArrowsFont</font>
 							<textcolor>77white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>․  ․  ․</label>
-              <visible>IsEmpty(ListItem.Year)</visible>
+							<label>←</label>
+	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>20</posx>
@@ -457,8 +457,8 @@
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
-              <visible>!IsEmpty(ListItem.Year)</visible>
+							<label fallback="․  ․  ․">$INFO[ListItem.Year]</label>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -485,6 +485,7 @@
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$VAR[MusicLabel2]</label>
 			        <visible>![Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)]</visible>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>585</posx>
@@ -498,23 +499,24 @@
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
 			        <visible>Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)</visible>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 				</itemlayout>
 				<focusedlayout height="45" width="710">
 		      <control type="group">
 			      <include>ListFocusAnimation</include>
 						<control type="label">
-							<posx>19</posx>
+							<posx>20</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>FontSize_20</font>
+							<font>ArrowsFont</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>․  ․  ․</label>
-              <visible>IsEmpty(ListItem.Year)</visible>
+							<label>←</label>
+	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>20</posx>
@@ -526,8 +528,8 @@
 							<shadowcolor>99000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year]</label>
-              <visible>!IsEmpty(ListItem.Year)</visible>
+							<label fallback="․  ․  ․">$INFO[ListItem.Year]</label>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -554,6 +556,7 @@
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$VAR[MusicLabel2]</label>
 			        <visible>![Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)]</visible>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>585</posx>
@@ -567,6 +570,7 @@
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
 			        <visible>Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)</visible>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
           </control>
 				</focusedlayout>
@@ -649,7 +653,7 @@
 	      <preloaditems>2</preloaditems>
 	      <focusposition>1</focusposition>
 			  <pagecontrol>60</pagecontrol>
-				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Singles)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
+				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
 				<itemlayout width="300" height="300">
 					<control type="image">
 						<width>300</width>
@@ -805,7 +809,7 @@
 	      <onright>51</onright>
 	      <onup>9000</onup>
 	      <ondown>51</ondown>
-	      <visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Singles)] + ![IsEmpty(Container.ListItem.Property(Album_Description)) + IsEmpty(Container.ListItem.Property(Artist_Description))] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
+	      <visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] + ![IsEmpty(Container.ListItem.Property(Album_Description)) + IsEmpty(Container.ListItem.Property(Artist_Description))] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
 	    </control>
 			<control type="scrollbar" id="60">
 				<posx>355</posx>
@@ -881,7 +885,7 @@
 	      <preloaditems>2</preloaditems>
 	      <focusposition>5</focusposition>
 			  <pagecontrol>60</pagecontrol>
-				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Singles)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
+				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
 				<itemlayout width="58" height="380">
 					<control type="image">
 						<posx>35</posx>
@@ -1057,7 +1061,7 @@
         <focusposition>2</focusposition>
         <preloaditems>2</preloaditems>
 				<scrolltime tween="Cubic" easing="Out">500</scrolltime>
-	      <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Singles) | Window.IsVisible(MusicPlaylist)</visible>
+	      <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Window.IsVisible(MusicPlaylist)</visible>
 				<itemlayout width="560" height="65">
 					<control type="label">
 						<posx>40</posx>

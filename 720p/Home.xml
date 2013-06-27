@@ -123,7 +123,7 @@
 					 </item>
 					 <item id="51">
 							<label>19019</label>
-							<onclick>ActivateWindow(Video,Addons,return)</onclick>
+							<onclick>ActivateWindow(videos,addons,return)</onclick>
 							<thumb>special://skin/backgrounds/programs.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuChannelsButton)</visible>
 					 </item>

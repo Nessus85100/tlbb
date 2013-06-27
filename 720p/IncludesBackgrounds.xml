@@ -23,7 +23,11 @@
 		<visible>![Player.HasAudio + !SubString(Window(Videos).Property(TvTunesIsAlive),True) + ![Skin.HasSetting(Vis-Visualization) + Skin.HasSetting(Vis-Fanart) + Skin.HasSetting(Vis-CustomSlideshow) + Skin.HasSetting(Vis-ArtistSlideshow)] + ![IsEmpty(Player.Art(fanart)) + Skin.HasSetting(Vis-Fanart) + !Skin.HasSetting(Vis-ArtistSlideshow) + !Skin.HasSetting(Vis-CustomSlideshow)]]</visible>
 		<control type="image">
 			<description>Default Background Image</description>
-			<include>FullscreenDimensions</include>
+			<posx>-1</posx>
+			<posy>-1</posy>
+			<width>1282</width>
+			<height>722</height>
+			<aspectratio>stretch</aspectratio>
 		  <texture background="true">windows/bg/SKINDEFAULT.jpg</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
