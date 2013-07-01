@@ -1,10 +1,9 @@
 <window id="128">
 	<defaultcontrol>10</defaultcontrol>
 	<controls>
-
 	 <control type="group">
 		<include>DialogAnimation</include>
-    <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(okdialog) + ![Window.IsActive(filebrowser) + !IsEmpty(Window(home).Property(ShowDialog))]</visible>
+    <visible>!Window.IsActive(virtualkeyboard) + !Window.IsVisible(busydialog) + !Window.IsActive(okdialog) + ![Window.IsActive(filebrowser) + !IsEmpty(Window(home).Property(ShowDialog))]</visible>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>

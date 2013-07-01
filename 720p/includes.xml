@@ -55,7 +55,8 @@
 			<include>FullscreenDimensions</include>
 			<texture>windows/bg/bg_black.png</texture>
 			<include>VisibleFadeEffect</include>
-			<visible>Window.IsActive(busydialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(busy.xml)</visible>			
+      <colordiffuse>D1FFFFFF</colordiffuse>
+			<visible>Window.IsActive(busydialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(busy.xml)</visible>
 		</control>
 	</include>
 
@@ -117,7 +118,7 @@
 		 <posy>25</posy>
 		 <include>SettingsSlideAnimations</include>
 		 <include>SettingsWeatherAndClock</include>
-		 <visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)]</visible>
+		 <visible>!Window.IsActive(ShutdownMenu) + ![Window.IsActive(ContextMenu) + Window.IsActive(Profiles)]</visible>
 	   <animation type="Visible">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
