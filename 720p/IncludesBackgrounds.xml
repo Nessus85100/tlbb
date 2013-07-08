@@ -28,7 +28,7 @@
 			<width>1282</width>
 			<height>722</height>
 			<aspectratio>stretch</aspectratio>
-		  <texture background="true">windows/bg/SKINDEFAULT.jpg</texture>
+      <texture background="true">special://skin/extras/bg/default.jpg</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
@@ -154,7 +154,7 @@
 		<control type="image">
 		  <description>Vignette</description>
 			<include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/bg_vignette.png</texture>
+			<texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 <!--	<colordiffuse>FFCDCDCD</colordiffuse>
@@ -162,11 +162,11 @@
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/bg_diffuse.png</texture>
+		  <texture background="true">special://skin/extras/bg/bg_diffuse.png</texture>
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <colordiffuse>D5FFFFFF</colordiffuse>
-			<visible>[Control.IsVisible(50) | Control.IsVisible(51) | [Control.IsVisible(52) + !Window.IsVisible(SystemInfo)] | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Window.IsVisible(script-NextAired-TVGuide.xml)]</visible>
+			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Window.IsActive(shutdownmenu) | Window.IsActive(contextmenu) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation)</visible>
 	  </control>
 	</include>
 

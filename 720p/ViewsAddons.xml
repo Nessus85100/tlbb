@@ -242,7 +242,7 @@
             <visible>Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>20</posx>
+						<posx>18</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>45</height>
@@ -313,7 +313,7 @@
 	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>20</posx>
+							<posx>18</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
@@ -417,7 +417,7 @@
 			<control type="panel" id="56">
 				<posx>25</posx>
 				<posy>100</posy>
-				<width>1230</width>
+				<width>1228</width>
 				<height>720</height>
 				<onleft>56</onleft>
 				<onright>56</onright>
@@ -430,6 +430,7 @@
 				<preloaditems>2</preloaditems>
 				<itemlayout height="265" width="244">
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -440,17 +441,9 @@
 						<posy>24</posy>
 						<width>206</width>
 						<height>200</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-					  <texture background="true">empty_icon.png</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="label">
@@ -469,6 +462,7 @@
 				</itemlayout>
 				<focusedlayout height="265" width="244">
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -479,17 +473,9 @@
 						<posy>24</posy>
 						<width>206</width>
 						<height>200</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-					  <texture background="true">empty_icon.png</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="label">
@@ -506,6 +492,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>

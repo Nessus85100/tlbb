@@ -506,7 +506,7 @@
             <visible>Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>20</posx>
+						<posx>18</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>45</height>
@@ -627,7 +627,7 @@
 	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>20</posx>
+							<posx>18</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
@@ -2296,7 +2296,7 @@
 			<texture background="true">views/posters/bg_wall.png</texture>
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
-      <visible>!Window.IsActive(movieinformation) + Control.IsVisible(55)</visible>
+      <visible>Control.IsVisible(55) + ![Window.IsActive(movieinformation) | Window.IsActive(shutdownmenu) | Window.IsActive(contextmenu)]</visible>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
@@ -2470,7 +2470,7 @@
 		  <colordiffuse>CCFFFFFF</colordiffuse>
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
-      <visible>!Window.IsActive(movieinformation) + Control.IsVisible(55)</visible>
+      <visible>Control.IsVisible(55) + ![Window.IsActive(movieinformation) | Window.IsActive(shutdownmenu) | Window.IsActive(contextmenu)]</visible>
 		</control>
 	</include>
 
@@ -2486,9 +2486,9 @@
 	    <include>DialogZoomInOutAnimation</include>
 	    <include>ThumbnailsAnimations</include>
 			<control type="panel" id="56">
-				<posx>25</posx>
+				<posx>26</posx>
 				<posy>90</posy>
-				<width>1230</width>
+				<width>1227</width>
 				<height>710</height>
 				<onleft>56</onleft>
 				<onright>56</onright>
@@ -2499,8 +2499,9 @@
 				<pagecontrol>60</pagecontrol>
 	      <scrolltime tween="Cubic" easing="out">500</scrolltime>
 				<preloaditems>2</preloaditems>
-				<itemlayout height="265" width="244" condition="![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)]">
+				<itemlayout height="265" width="244" condition="![[Container.Content(Movies) + !substring(Container.FolderPath,plugin://plugin.video,left)] | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | [Container.Content(Episodes) + !substring(Container.FolderPath,plugin://plugin.video,left)] | Window.IsVisible(VideoPlaylist)]">
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -2511,17 +2512,9 @@
 						<posy>24</posy>
 						<width>206</width>
 						<height>200</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-					  <texture background="true">empty_icon.png</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
@@ -2548,8 +2541,9 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="265" width="244" condition="![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)]">
+				<focusedlayout height="265" width="244" condition="![[Container.Content(Movies) + !substring(Container.FolderPath,plugin://plugin.video,left)] | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | [Container.Content(Episodes) + !substring(Container.FolderPath,plugin://plugin.video,left)] | Window.IsVisible(VideoPlaylist)]">
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -2560,17 +2554,9 @@
 						<posy>24</posy>
 						<width>206</width>
 						<height>200</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-					  <texture background="true">empty_icon.png</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
@@ -2597,6 +2583,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -2614,6 +2601,7 @@
 
 				<itemlayout height="180" width="244" condition="[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]">
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>200</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -2635,7 +2623,6 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[ThumbnailsMoviesThumbs]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>Container.Content(Movies) | Container.Content(Sets)</visible>
 					</control>
@@ -2646,7 +2633,6 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[ThumbnailsTVShowsThumbs]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>![Skin.HasSetting(ShowClearlogoThumb) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes)]</visible>
 					</control>
@@ -2657,7 +2643,7 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[ThumbnailsTVShowsClearlogoThumbs]</texture>
-					  <bordersize>20</bordersize>
+					  <bordersize>12</bordersize>
 					  <visible>Skin.HasSetting(ShowClearlogoThumb) + ![Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes)]</visible>
 					</control>
 					<control type="image">
@@ -2667,7 +2653,6 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Art(thumb)]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>Container.Content(Episodes)</visible>
 					</control>
@@ -2697,6 +2682,7 @@
 				</itemlayout>
 				<focusedlayout height="180" width="244" condition="[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]">
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>200</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -2718,7 +2704,6 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[ThumbnailsMoviesThumbs]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>Container.Content(Movies) | Container.Content(Sets)</visible>
 					</control>
@@ -2729,7 +2714,6 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[ThumbnailsTVShowsThumbs]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>![Skin.HasSetting(ShowClearlogoThumb) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes)]</visible>
 					</control>
@@ -2740,7 +2724,7 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[ThumbnailsTVShowsClearlogoThumbs]</texture>
-					  <bordersize>20</bordersize>
+					  <bordersize>12</bordersize>
 					  <visible>Skin.HasSetting(ShowClearlogoThumb) + ![Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes)]</visible>
 					</control>
 					<control type="image">
@@ -2750,7 +2734,6 @@
 						<height>121</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Art(thumb)]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>Container.Content(Episodes)</visible>
 					</control>
@@ -2778,6 +2761,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
+						<posx>-2</posx>
 						<width>260</width>
 						<height>200</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>

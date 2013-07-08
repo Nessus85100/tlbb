@@ -1,6 +1,7 @@
 <window id="40">
 	<defaultcontrol always="true">56</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+  <allowoverlay>yes</allowoverlay>
+  <backgroundcolor>0</backgroundcolor>
 	<views>56,50</views>
 	<controls>
 		<include>BackgroundItems</include>

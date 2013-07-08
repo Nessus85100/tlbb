@@ -1410,7 +1410,7 @@
 				<item id="0">
 					<label>[COLOR=blue]$LOCALIZE[342] $LOCALIZE[575][/COLOR]</label>
 					<property name="Label3">$LOCALIZE[31208]</property>
-					<onclick>ActivateWindow(VideoLibrary,special://skin/playlists/Movies In Progress.xsp,return)</onclick>
+					<onclick>ActivateWindow(VideoLibrary,special://skin/extras/playlists/Movies In Progress.xsp,return)</onclick>
 					<property name="RecommendedMovie1">$INFO[Window.Property(RecommendedMovie.1.Art(poster))]</property>
 					<property name="RecommendedMovie2">$INFO[Window.Property(RecommendedMovie.2.Art(poster))]</property>
 					<property name="RecommendedMovie3">$INFO[Window.Property(RecommendedMovie.3.Art(poster))]</property>
@@ -1533,7 +1533,7 @@
 				<item id="0">
 					<label>[COLOR=blue]$LOCALIZE[31002] $LOCALIZE[575][/COLOR]</label>
 					<property name="Label3">$LOCALIZE[31209]</property>
-					<onclick>ActivateWindow(VideoLibrary,special://skin/playlists/TV Shows In Progress.xsp,return)</onclick>
+					<onclick>ActivateWindow(VideoLibrary,special://skin/extras/playlists/TV Shows In Progress.xsp,return)</onclick>
 					<property name="RecommendedEpisode1">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
 					<property name="RecommendedEpisode2">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
 					<property name="RecommendedEpisode3">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>

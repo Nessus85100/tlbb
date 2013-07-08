@@ -1,6 +1,7 @@
 <window>
 	<defaultcontrol>9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+  <backgroundcolor>0</backgroundcolor>
   <controls>
     <control type="image" id="102">
       <description>default background image</description>
@@ -14,7 +15,7 @@
     <control type="image">
       <description>background image</description>
 			<include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/SKINDEFAULT.jpg</texture>
+      <texture background="true">special://skin/extras/bg/default.jpg</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
     </control>
@@ -25,13 +26,13 @@
 		<control type="image">
 		  <description>bg vignette</description>
 		  <include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/bg_vignette.png</texture>
+			<texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
 			<fadetime>250</fadetime>
 		</control>
 		<control type="image">
 		  <description>bg diffuse</description>
 		  <include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/bg_diffuse.png</texture>
+		  <texture background="true">special://skin/extras/bg/bg_diffuse.png</texture>
 			<fadetime>250</fadetime>
       <colordiffuse>D5FFFFFF</colordiffuse>
 		</control>

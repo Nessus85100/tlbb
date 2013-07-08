@@ -1,8 +1,9 @@
 <window>
-	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<onload condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<defaultcontrol always="true">3999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+  <backgroundcolor>0</backgroundcolor>
+	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<onload condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<controls>
 		<control type="button" id="3999">
 			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1100)</onfocus>

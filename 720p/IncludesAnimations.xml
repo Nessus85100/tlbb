@@ -292,7 +292,7 @@
 		| Window.IsActive(PeripheralSettings) 
 		| Window.IsActive(FileManager) 
 		| Window.IsActive(musicplaylisteditor)
-		| [Window.IsActive(PlayerControls) + Player.HasMedia] 
+		| Window.IsActive(PlayerControls) 
 		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
 		| Window.IsActive(script-RSS_Editor-setEditor.xml)">
@@ -322,7 +322,7 @@
 		+ !Window.IsActive(PeripheralSettings) 
 		+ !Window.IsActive(FileManager) 
 		+ !Window.IsActive(musicplaylisteditor) 
-		+ ![Window.IsActive(PlayerControls) + Player.HasMedia] 
+		+ !Window.IsActive(PlayerControls) 
 		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml)
 		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
 		+ !Window.IsActive(script-RSS_Editor-setEditor.xml)">
@@ -365,7 +365,7 @@
 		| Window.IsActive(Peripherals) 
 		| Window.IsActive(PeripheralSettings)
 		| Window.IsActive(SmartPlaylistRule) 
-		| [Window.IsActive(PlayerControls) + Player.HasMedia] 
+		| Window.IsActive(PlayerControls) 
 		| Window.IsActive(script-globalsearch-infodialog.xml) 
 		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
@@ -407,7 +407,7 @@
 		+ !Window.IsActive(SmartPlaylistRule) 
 		+ !Window.IsActive(Peripherals) 
 		+ !Window.IsActive(PeripheralSettings)
-		+ ![Window.IsActive(PlayerControls) + Player.HasMedia] 
+		+ !Window.IsActive(PlayerControls) 
 		+ !Window.IsActive(script-globalsearch-infodialog.xml) 
 		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
@@ -682,8 +682,8 @@
 		<animation effect="fade" time="450">WindowOpen</animation>
 		<animation effect="fade" time="450" delay="250" condition="Window.Previous(Home)">WindowClose</animation>
 		<animation effect="fade" time="450" condition="!Window.Previous(Home)">WindowClose</animation>
-		<animation effect="fade" time="300">Visible</animation>
-		<animation effect="fade" time="300">Hidden</animation>
+		<animation effect="fade" time="300" tween="sine" easing="inout">Visible</animation>
+		<animation effect="fade" time="300" tween="sine" easing="inout">Hidden</animation>
 	</include>
 	<include name="VisibleFadeEffect">
 		<animation effect="fade" time="250">Visible</animation>

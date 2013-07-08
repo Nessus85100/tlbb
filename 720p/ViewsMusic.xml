@@ -14,6 +14,7 @@
 			<include>ListViewAnimationsRight</include>
 			<control type="group">
 			  <include>ListViewAnimationsRight</include>
+	      <visible>!Stringcompare(ListItem.Label,..)</visible>
 				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] | [Substring(Container.FolderPath,plugin,left) | Container.Content(Addons)] + !IsEmpty(ListItem.Property(Addon.Name))</visible>
 				<control type="image">
 					<posx>430</posx>
@@ -448,7 +449,7 @@
 	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>20</posx>
+							<posx>18</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
@@ -519,7 +520,7 @@
 	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>20</posx>
+							<posx>18</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
@@ -675,84 +676,67 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>300</posx>
-						<control type="image.">
-							<width>1250</width>
-							<height>300</height>
-							<aspectratio align="center">stretch</aspectratio>
-							<texture background="true">overlays/skin_widgets/title_shadow.png</texture>
-		          <include>VisibleFadeEffect</include>
+					  <posx>300</posx>
+			      <posy>225</posy>
+	          <animation type="Focus" reversible="false" condition="Container(51).OnNext">
+	            <effect type="slide" start="56,0" end="0,0" time="200" tween="circle" easing="out" />
+	            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
+	          </animation>
+	          <animation type="Focus" reversible="false" condition="Container(51).OnPrevious">
+	            <effect type="slide" start="-56,0" end="0,0" time="200" tween="circle" easing="out" />
+	            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
+	          </animation>
+						<control type="label">
+						  <posx>15</posx>
+							<height>30</height>
+							<width>640</width>
+							<textcolor>white</textcolor>
+			        <shadowcolor>99000000</shadowcolor>
+							<font>FontSize_38</font>
+				      <scroll>false</scroll>
+							<align>left</align>
+							<label>$INFO[ListItem.label]</label>
+							<visible>!Container.Content(Songs)</visible>
+	            <animation effect="slide" start="0,0" end="0,-208" time="250" tween="sine" easing="inout" condition="Control.HasFocus(100)">Conditional</animation>
 						</control>
-						<control type="image">
-						  <posx>-750</posx>
-							<width>450</width>
-							<height>300</height>
-							<aspectratio align="center">stretch</aspectratio>
-							<texture background="true" flipx="true">overlays/skin_widgets/title_shadow.png</texture>
-		          <include>VisibleFadeEffect</include>
+						<control type="label">
+						  <posx>15</posx>
+							<height>30</height>
+							<width>640</width>
+							<textcolor>white</textcolor>
+			        <shadowcolor>99000000</shadowcolor>
+							<font>FontSize_38</font>
+				      <scroll>false</scroll>
+							<align>left</align>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>Container.Content(Songs)</visible>
 						</control>
-						<control type="group">
-				      <posy>225</posy>
-		          <animation type="Focus" reversible="false" condition="Container(51).OnNext">
-		            <effect type="slide" start="56,0" end="0,0" time="200" tween="circle" easing="out" />
-		            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
-		          </animation>
-		          <animation type="Focus" reversible="false" condition="Container(51).OnPrevious">
-		            <effect type="slide" start="-56,0" end="0,0" time="200" tween="circle" easing="out" />
-		            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
-		          </animation>
-							<control type="label">
-							  <posx>15</posx>
-								<height>30</height>
-								<width>640</width>
-								<textcolor>white</textcolor>
-				        <shadowcolor>99000000</shadowcolor>
-								<font>FontSize_38</font>
-					      <scroll>false</scroll>
-								<align>left</align>
-								<label>$INFO[ListItem.label]</label>
-								<visible>!Container.Content(Songs)</visible>
-		            <animation effect="slide" start="0,0" end="0,-208" time="250" tween="sine" easing="inout" condition="Control.HasFocus(100)">Conditional</animation>
-							</control>
-							<control type="label">
-							  <posx>15</posx>
-								<height>30</height>
-								<width>640</width>
-								<textcolor>white</textcolor>
-				        <shadowcolor>99000000</shadowcolor>
-								<font>FontSize_38</font>
-					      <scroll>false</scroll>
-								<align>left</align>
-								<label>$INFO[ListItem.Title]</label>
-								<visible>Container.Content(Songs)</visible>
-							</control>
-							<control type="label">
-							  <posx>17</posx>
-								<posy>30</posy>
-								<height>30</height>
-								<width>640</width>
-								<textcolor>77white</textcolor>
-				        <shadowcolor>99000000</shadowcolor>
-								<font>FontSize_22</font>
-					      <scroll>false</scroll>
-								<align>left</align>
-								<label>$VAR[GlobalInfo]</label>
-								<visible>!Container.Content(Albums)</visible>
-							</control>
-							<control type="label">
-							  <posx>17</posx>
-								<posy>30</posy>
-								<height>30</height>
-								<width>640</width>
-								<textcolor>77white</textcolor>
-				        <shadowcolor>99000000</shadowcolor>
-								<font>FontSize_22</font>
-					      <scroll>false</scroll>
-								<align>left</align>
-								<label>$INFO[ListItem.Artist]</label>
-								<visible>Container.Content(Albums)</visible>
-							</control>
-						</control>						
+						<control type="label">
+						  <posx>17</posx>
+							<posy>30</posy>
+							<height>30</height>
+							<width>640</width>
+							<textcolor>77white</textcolor>
+			        <shadowcolor>99000000</shadowcolor>
+							<font>FontSize_22</font>
+				      <scroll>false</scroll>
+							<align>left</align>
+							<label>$VAR[GlobalInfo]</label>
+							<visible>!Container.Content(Albums)</visible>
+						</control>
+						<control type="label">
+						  <posx>17</posx>
+							<posy>30</posy>
+							<height>30</height>
+							<width>640</width>
+							<textcolor>77white</textcolor>
+			        <shadowcolor>99000000</shadowcolor>
+							<font>FontSize_22</font>
+				      <scroll>false</scroll>
+							<align>left</align>
+							<label>$INFO[ListItem.Artist]</label>
+							<visible>Container.Content(Albums)</visible>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>
@@ -1187,5 +1171,188 @@
 			</control>			
 		</control>
 	</include>	
+
+
+	<!-- ============================== -->
+	<!-- ==== Wall View Music "59" ==== -->
+	<!-- ============================== -->
+	
+	<include name="3DWallView_Music">
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<visible>Control.IsVisible(59)</visible>
+	      <include>DialogZoomInOutAnimation</include>
+				<control type="group" id="6013">
+					<animation effect="rotatex" center="720,12" start="0" end="20" time="0" condition="true">Conditional</animation>
+					<animation reversible="false" effect="slide" start="0,0" end="0,-256" time="400" tween="quadratic" easing="out">Hidden</animation>
+					<visible>Container.OnNext</visible>
+	        <include>Includes_OnNext_MusicWall</include>
+				</control>
+				<control type="group" id="6014">
+					<animation effect="rotatex" center="720,12" start="0" end="20" time="0" condition="true">Conditional</animation>
+					<animation reversible="false" effect="slide" start="0,0" end="0,256" time="400" tween="quadratic" easing="out">Hidden</animation>
+					<visible>Container.OnPrevious</visible>
+	        <include>Includes_OnPrevious_MusicWall</include>
+				</control>
+				<control type="group">
+					<animation type="WindowOpen" tween="sine" easing="out">
+						<effect type="fade" start="0" end="100" time="1000"/>
+					  <effect type="rotatex" center="720,12" start="0" end="20" time="1000" delay="750"/> -->
+					</animation>
+					<animation type="WindowClose" tween="sine" easing="out">
+						<effect type="rotatex" center="720,12" start="20" end="0" time="1000"/>
+						<effect type="fade" start="100" end="0" time="1000" delay="800"/>
+					</animation>
+					<visible>!Control.IsVisible(6013) + !Control.IsVisible(6014)</visible>
+	        <include>Includes_Static_MusicWall</include>
+				</control>
+			</control>
+
+			<control type="group">
+			 <visible>Control.IsVisible(59)</visible>
+			 <control type="group">
+	      <include>DialogFadeInOutAnimation</include>
+				<animation effect="fade" start="0" end="100" time="400" tween="sine" easing="out">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="2000" tween="sine" easing="out">WindowClose</animation>
+				<control type="image.">
+		      <include>FullscreenDimensions</include>
+					<texture>views/wall/wall_overlay.png</texture>
+			    <fadetime>FanartCrossfadeTime</fadetime>
+			  <colordiffuse>A9FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+		      <include>FullscreenDimensions</include>
+					<texture>views/wall/wall_mask.png</texture>
+			    <fadetime>FanartCrossfadeTime</fadetime>
+				</control>
+			 </control>
+							
+				<control type="group">
+	        <include>DialogZoomInOutAnimation</include>
+					<animation reversible="true" effect="zoom" start="100" end="95" center="640,260" time="300" tween="quadratic" easing="in" condition="Control.IsVisible(6013) | Control.IsVisible(6014)">Conditional</animation>
+					<control type="image">
+						<posx>302</posx>
+						<posy>21</posy>
+						<width>672</width>
+						<height>654</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">views/wall/square_blue_shadow.png</texture>
+					  <animation type="WindowOpen">
+							<effect type="fade" start="0" end="100" time="500" delay="800" tween="sine" easing="out"/>
+							<effect type="zoom" start="398,108,485,472" end="302,21,672,654" time="1000" delay="750" tween="sine" easing="out"/>
+						</animation>
+						<animation type="WindowClose">
+							<effect type="zoom" start="302,21,672,654" end="398,108,485,472" time="1000" delay="0" tween="sine" easing="out"/>
+							<effect type="fade" start="100" end="0" time="500" delay="650" tween="sine" easing="out"/>
+						</animation>
+					</control>
+					<control type="image">
+						<posx>460</posx>
+						<posy>161</posy>
+						<width>356</width>
+						<height>356</height>
+						<aspectratio aligny="center" align="center" stretchdiffuse="false">stretch</aspectratio>
+						<texture background="true" diffuse="views/wall/square_diffuse.png" >$INFO[ListItem.Icon]</texture>
+						<animation type="WindowOpen">
+							<effect type="fade" start="0" end="100" time="500" delay="500"  tween="sine" easing="out"/>
+							<effect type="zoom" start="512,210,256,256" end="460,161,356,356" time="1000" delay="750" tween="sine" easing="out"/>
+						</animation>
+						<animation type="WindowClose">
+							<effect type="zoom" start="460,161,356,356" end="512,210,256,256" time="1000" delay="0" tween="sine" easing="out"/>
+							<effect type="fade" start="100" end="0" time="500" delay="800"  tween="sine" easing="out"/>
+						</animation>
+					</control>
+					<control type="image">
+						<posx>460</posx>
+						<posy>161</posy>
+						<width>356</width>
+						<height>356</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">views/wall/square_overlay.png</texture>
+						<animation type="WindowOpen">
+							<effect type="fade" start="0" end="100" time="500" delay="500"  tween="sine" easing="out"/>
+							<effect type="zoom" start="512,210,256,256" end="460,161,356,356" time="1000" delay="750" tween="sine" easing="out"/>
+						</animation>
+						<animation type="WindowClose">
+							<effect type="zoom" start="460,161,356,356" end="512,210,256,256" time="1000" delay="0" tween="sine" easing="out"/>
+							<effect type="fade" start="100" end="0" time="500" delay="800"  tween="sine" easing="out"/>
+						</animation>
+					</control>
+					<control type="image">
+						<posx>460</posx>
+						<posy>161</posy>
+						<width>356</width>
+						<height>356</height>
+						<aspectratio aligny="center" align="center" stretchdiffuse="false">stretch</aspectratio>
+						<texture background="true" diffuse="views/wall/square_diffuse.png">$INFO[ListItem(-1).Icon]</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="200" condition="Control.IsVisible(6013)">Conditional</animation>
+						<visible>Control.IsVisible(6013) + !stringcompare(ListItem(-1).Label,..)</visible>
+					</control>
+					<control type="image">
+						<posx>460</posx>
+						<posy>161</posy>
+						<width>356</width>
+						<height>356</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">views/wall/square_overlay.png</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="200" condition="Control.IsVisible(6013)">Conditional</animation>
+						<visible>Control.IsVisible(6013) + !stringcompare(ListItem(-1).Label,..)</visible>
+					</control>
+					<control type="image">
+						<posx>460</posx>
+						<posy>161</posy>
+						<width>356</width>
+						<height>356</height>
+						<aspectratio aligny="center" align="center" stretchdiffuse="false">stretch</aspectratio>
+						<texture background="true" diffuse="views/wall/square_diffuse.png">$INFO[ListItem(1).Icon]</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="200" condition="Control.IsVisible(6014)">Conditional</animation>
+						<visible>Control.IsVisible(6014) + !stringcompare(ListItem(1).Label,..)</visible>
+					</control>
+					<control type="image">
+						<posx>460</posx>
+						<posy>161</posy>
+						<width>356</width>
+						<height>356</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true">views/wall/square_overlay.png</texture>
+						<animation effect="fade" start="100" end="0" time="200" delay="200" condition="Control.IsVisible(6014)">Conditional</animation>
+						<visible>Control.IsVisible(6014) + !stringcompare(ListItem(1).Label,..)</visible>
+					</control>
+				</control>
+			</control>
+
+			<control type="group">
+				<control type="fixedlist" id="59">
+					<posx>25</posx>
+					<posy>165</posy>
+					<width>1190</width>
+					<height>356</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>59</onup>
+					<ondown>59</ondown>
+					<focusposition>3</focusposition>
+					<preloaditems>2</preloaditems>
+					<viewtype label="31082">Multiple Walls</viewtype>
+					<pagecontrol>60</pagecontrol>
+				  <scrolltime>200</scrolltime>
+					<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+					<itemlayout height="356" width="356"/>
+					<focusedlayout height="356" width="356">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>356</width>
+						<height>356</height>
+						<texture>-</texture>
+					</control>					
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+	</include>
 
 </includes>

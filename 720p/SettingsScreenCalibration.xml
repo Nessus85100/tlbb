@@ -1,5 +1,6 @@
 <window id="11">
 	<defaultcontrol>8</defaultcontrol>
+  <backgroundcolor>0</backgroundcolor>
   <onload condition="Window.Previous(Startup)">Action(back)</onload>
 	<controls>
 		<control type="videowindow" id="20">
@@ -10,7 +11,7 @@
 		<control type="image">
 			<description>Overlay</description>
 	    <include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/bg_diffuse.png</texture>
+		  <texture background="true">special://skin/extras/bg/bg_diffuse.png</texture>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>FanartFade</include>
 			<visible>Player.HasVideo</visible>

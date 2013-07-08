@@ -1,5 +1,7 @@
 <window>
 	<defaultcontrol always="true">8000</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <backgroundcolor>0</backgroundcolor>
   <onload condition="IsEmpty(Skin.String(AddonsName))">Skin.SetString(AddonsName,videosaddons)</onload>
   <onload condition="IsEmpty(Skin.String(AddonsPath))">Skin.SetString(AddonsPath,videos)</onload>
   <onload condition="IsEmpty(Skin.String(MusicName))">Skin.SetString(MusicName,library)</onload>
@@ -803,6 +805,12 @@
 						<label>$LOCALIZE[31163] ($LOCALIZE[3])</label>
 						<onclick>Skin.ToggleSetting(ShowListWallViewVideos)</onclick>
 						<selected>Skin.HasSetting(ShowListWallViewVideos)</selected>
+					</control>
+					<control type="radiobutton" id="8513">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31158] ($LOCALIZE[2])</label>
+						<onclick>Skin.ToggleSetting(Show3DWallViewMusic)</onclick>
+						<selected>Skin.HasSetting(Show3DWallViewMusic)</selected>
 					</control>
 				</control>
 

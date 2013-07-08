@@ -1,6 +1,7 @@
 <window id="0">
 	<defaultcontrol always="true">20</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+  <allowoverlay>yes</allowoverlay>
+  <backgroundcolor>0</backgroundcolor>
 	<controls>
 		<include>BackgroundContent</include>
 		<include>RecentAndSkinWidgetsFanart</include>
@@ -16,7 +17,7 @@
 	      <include>HomeSlideAnimations</include>
 			  <control type="image">
 	        <include>FullscreenDimensions</include>
-					<texture>windows/bg/colors_pulse.png</texture>
+					<texture background="true">windows/bg/colors_pulse.png</texture>
 				</control>
 				<control type="wraplist" id="20">
 				 <description>Home Container</description>
@@ -98,14 +99,12 @@
 					 <item id="0">
 							<label>$LOCALIZE[3]</label>
 							<onclick>ActivateWindow(Videos,files,return)</onclick>
-							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 							<visible>Skin.HasSetting(ShowHomeMenuVideosButton)</visible>
 					 </item>
 					 <item id="1">
 							<label>$LOCALIZE[31002]</label>
               <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
               <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
-							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuTVShowsButton)</visible>
 					 </item>
 					 <item id="50">
@@ -118,78 +117,66 @@
 							<label>$LOCALIZE[20342]</label>
 							<onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
               <onclick condition="!Library.HasContent(movies)">ActivateWindow(videos,files,return)</onclick>
-							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuMoviesButton)</visible>
 					 </item>
 					 <item id="51">
 							<label>19019</label>
 							<onclick>ActivateWindow(videos,addons,return)</onclick>
-							<thumb>special://skin/backgrounds/programs.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuChannelsButton)</visible>
 					 </item>
 					 <item id="3">
 							<label>$LOCALIZE[2]</label>
 							<onclick condition="!Library.HasContent(music) | stringcompare(Skin.String(MusicName),files)">ActivateWindow(musicfiles)</onclick>
 							<onclick condition="Library.HasContent(music) + !stringcompare(Skin.String(MusicName),files)">ActivateWindow(musiclibrary,$INFO[Skin.String(MusicPath)])</onclick>
-							<thumb>special://skin/backgrounds/music.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuMusicButton)</visible>
 					 </item>
 					 <item id="4">
 							<label>$LOCALIZE[20389]</label>
 							<onclick>ActivateWindow(videos,musicvideotitles)</onclick>
-							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 							<visible>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</visible>
 					 </item>
 					 <item id="5">
 							<label>$LOCALIZE[1]</label>
 							<onclick>ActivateWindow(Pictures)</onclick>
-							<thumb>special://skin/backgrounds/pictures.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuPicturesButton)</visible>
 					 </item>
 					 <item id="6">
 							<label>$LOCALIZE[0]</label>
 							<onclick>ActivateWindow(Programs,Addons,return)</onclick>
-							<thumb>special://skin/backgrounds/programs.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuProgramsButton)</visible>
 					 </item>
 					 <item id="7">
 							<label>$LOCALIZE[24001]</label>
 							<onclick condition="IsEmpty(Skin.String(AddonsName))">ActivateWindow(videos,addons,return)</onclick>
 							<onclick condition="stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow(AddonBrowser)</onclick>
-							<onclick condition="!stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow($INFO[Skin.String(AddonsPath)],addons,return)</onclick> -->
-							<thumb>special://skin/backgrounds/addons.jpg</thumb>
+							<onclick condition="!stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow($INFO[Skin.String(AddonsPath)],addons,return)</onclick>
 							<visible>Skin.HasSetting(ShowHomeMenuAddonsButton)</visible>
 					 </item>
 					 <item id="8">
 							<label>$LOCALIZE[8]</label>
 							<onclick>ActivateWindow(Weather)</onclick>
-							<thumb>-</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuWeatherButton)</visible>
 					 </item>
 					 <item id="9">
 							<label>$LOCALIZE[5]</label>
 							<onclick>ActivateWindow(AppearanceSettings)</onclick>
 						  <onclick>SetFocus(3)</onclick>
-							<thumb>special://skin/backgrounds/settings.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
 					 </item>
 					 <item id="11">
 							<label>$LOCALIZE[31000]</label>
               <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
-							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 						  <visible>System.GetBool(pvrmanager.enabled)</visible>
 					 </item>
 					 <item id="12">
 							<label>$LOCALIZE[137]</label>
 						  <onclick>XBMC.RunScript(script.globalsearch)</onclick>
-							<thumb>-</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
 					 </item>
 					 <item id="13">
 							<label>$LOCALIZE[31018]</label>
 							<onclick condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
-							<thumb>special://skin/backgrounds/videos.jpg</thumb>
 							<visible>!Skin.HasSetting(HideHomeMenuTrailersButton)</visible>
 					 </item>
 		
@@ -426,9 +413,7 @@
 				</control>
 			</control>
 	  </control>
-	 
-	
-	
+
     <!-- ================= -->
 	  <!-- Video Now Playing -->
 	  <!-- ================= -->
@@ -892,7 +877,6 @@
 		<include>HomeSubMenusArrows</include>
 		<include>CommonDialogsFadeOutBG</include>
 		<include>ContentSkinWidgetsInfo</include>
-
 
 	  <!-- ====================================== -->
 	  <!-- Home Shutdown/Favorites/Search Buttons -->
