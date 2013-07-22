@@ -269,7 +269,8 @@
 
 	<include name="DialogFadeInOutAnimation">
 		<animation type="Conditional" reversible="false" condition="
-		Window.IsActive(contextmenu) 
+		Window.IsActive(1110) 
+		| Window.IsActive(contextmenu) 
 		| Window.IsActive(shutdownmenu) 
 		| Window.IsActive(MovieInformation) 
 		| Window.IsActive(MusicInformation) 
@@ -292,14 +293,15 @@
 		| Window.IsActive(PeripheralSettings) 
 		| Window.IsActive(FileManager) 
 		| Window.IsActive(musicplaylisteditor)
-		| Window.IsActive(PlayerControls) 
+		| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
 		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
 		| Window.IsActive(script-RSS_Editor-setEditor.xml)">
       <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="inout"/>
 		</animation>
 		<animation type="Conditional" reversible="false" condition="
-		!Window.IsActive(contextmenu) 
+		!Window.IsActive(1110) 
+		+ !Window.IsActive(contextmenu) 
 		+ !Window.IsActive(shutdownmenu) 
 		+ !Window.IsActive(MovieInformation) 
 		+ !Window.IsActive(MusicInformation) 
@@ -321,8 +323,8 @@
 		+ !Window.IsActive(Peripherals) 
 		+ !Window.IsActive(PeripheralSettings) 
 		+ !Window.IsActive(FileManager) 
-		+ !Window.IsActive(musicplaylisteditor) 
-		+ !Window.IsActive(PlayerControls) 
+		+ !Window.IsActive(musicplaylisteditor)
+		+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
 		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml)
 		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
 		+ !Window.IsActive(script-RSS_Editor-setEditor.xml)">
@@ -332,7 +334,8 @@
 
 	<include name="DialogZoomInOutAnimation">
 		<animation type="Conditional" reversible="false" condition="
-		Control.HasFocus(122)
+		Window.IsActive(1110) 
+		| Control.HasFocus(122)
 		| Control.HasFocus(127)
 		| Window.IsActive(CBrowseskin.xml)
 		| Window.IsActive(CRatingskin.xml)
@@ -364,8 +367,8 @@
 		| Window.IsActive(SmartPlaylistEditor) 
 		| Window.IsActive(Peripherals) 
 		| Window.IsActive(PeripheralSettings)
-		| Window.IsActive(SmartPlaylistRule) 
-		| Window.IsActive(PlayerControls) 
+		| Window.IsActive(SmartPlaylistRule)
+		| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
 		| Window.IsActive(script-globalsearch-infodialog.xml) 
 		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
@@ -374,7 +377,8 @@
       <effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
 		</animation>
 		<animation type="Conditional" reversible="false" condition="
-		!Control.HasFocus(122)
+		! Window.IsActive(1110) 
+		+ !Control.HasFocus(122)
     + !Control.HasFocus(127)
 		+ !Window.IsActive(CBrowseskin.xml)
 		+ !Window.IsActive(CRatingskin.xml)
@@ -407,7 +411,7 @@
 		+ !Window.IsActive(SmartPlaylistRule) 
 		+ !Window.IsActive(Peripherals) 
 		+ !Window.IsActive(PeripheralSettings)
-		+ !Window.IsActive(PlayerControls) 
+		+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
 		+ !Window.IsActive(script-globalsearch-infodialog.xml) 
 		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
@@ -670,13 +674,16 @@
 	</include>	
 
 	<include name="CloseAnimation">
-		<animation effect="fade" time="300" delay="100" reversible="false">Visible</animation>
-		<animation effect="fade" time="300" reversible="false">Hidden</animation>
+		<animation effect="fade" time="200" delay="100" reversible="false">Visible</animation>
+		<animation effect="fade" time="200" reversible="false">Hidden</animation>
 	</include>
-
 	<include name="BackgroundFade">
-		 <animation effect="fade" time="300">Visible</animation>
-		 <animation effect="fade" time="300">Hidden</animation>
+    <animation type="Visible" reversible="false">
+      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+    </animation>
+    <animation type="Hidden" reversible="false">
+      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+    </animation>
 	</include>
 	<include name="FanartFade">
 		<animation effect="fade" time="450">WindowOpen</animation>

@@ -1,9 +1,12 @@
-<window id="1100" type="dialog">
+<window id="1111" type="dialog">
 	<defaultcontrol>9002</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <zorder>0</zorder>
 	<controls>
 	
 		<control type="group">
-	    <visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(screencalibration) + !Window.IsActive(141)</visible>
+		  <visible allowhiddenfocus="true">Window.IsActive(1111)</visible>
+	    <visible>!Window.IsActive(1110) + !Window.IsActive(videos,sources://video/) + !Window.IsActive(selectdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(mediasource) + !Window.IsActive(Programs) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(screencalibration) + !Window.IsActive(141)</visible>
 			<animation type="WindowOpen">
 				<effect type="zoom" time="500" center="auto" start="200" delay="250" end="100" tween="cubic" easing="out" />
 				<effect type="fade" time="500" center="auto" start="0"  delay="250" easing="out" end="100" reversible="false" />
@@ -22,17 +25,17 @@
 			</animation>
 			<control type="image">
 			<description>background image</description>
-			<posx>100</posx>
-			<posy>40</posy>
-			<width>1080</width>
-			<height>645</height>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<texture background="true" border="200">dialogs/help_guide/bg_help.png</texture>
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>1080</width>
+				<height>700</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture background="true" border="200">dialogs/help_guide/bg_help.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
 				<posx>250</posx>
-				<posy>152</posy>
+				<posy>112</posy>
 				<width>780</width>
 				<height>50</height>
 				<font>FontSize_36</font>
@@ -58,14 +61,14 @@
 			</control>
 			<control type="group">
 				<posx>285</posx>
-				<posy>210</posy>
-			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(1) | Control.HasFocus(61)]">Conditional</animation>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(100) | Control.HasFocus(61)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 1</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>710</width>
-					<height>305</height>
+					<height>360</height>
 					<label>$LOCALIZE[31421][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
@@ -77,7 +80,7 @@
 					<posx>714</posx>
 					<posy>5</posy>
 					<width>8</width>
-					<height>295</height>
+					<height>350</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -96,14 +99,14 @@
 
 			<control type="group">
 				<posx>285</posx>
-				<posy>210</posy>
-			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(2) | Control.HasFocus(62)]">Conditional</animation>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(200) | Control.HasFocus(62)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 2</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>710</width>
-					<height>305</height>
+					<height>360</height>
 					<label>$LOCALIZE[31422][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
@@ -115,7 +118,7 @@
 					<posx>714</posx>
 					<posy>5</posy>
 					<width>8</width>
-					<height>295</height>
+					<height>350</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -134,14 +137,14 @@
 
 			<control type="group">
 				<posx>285</posx>
-				<posy>210</posy>
-			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(3) | Control.HasFocus(63)]">Conditional</animation>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(300) | Control.HasFocus(63)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 3</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>710</width>
-					<height>305</height>
+					<height>360</height>
 					<label>$LOCALIZE[31423][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
@@ -153,7 +156,7 @@
 					<posx>714</posx>
 					<posy>5</posy>
 					<width>8</width>
-					<height>295</height>
+					<height>350</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -172,14 +175,14 @@
 
 			<control type="group">
 				<posx>285</posx>
-				<posy>210</posy>
-			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(4) | Control.HasFocus(64)]">Conditional</animation>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(400) | Control.HasFocus(64)]">Conditional</animation>
 				<control type="textbox">
 					<description>Help Screen 4</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>710</width>
-					<height>305</height>
+					<height>360</height>
 					<label>$LOCALIZE[31424][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
@@ -191,7 +194,7 @@
 					<posx>714</posx>
 					<posy>5</posy>
 					<width>8</width>
-					<height>295</height>
+					<height>350</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -210,15 +213,93 @@
 
 			<control type="group">
 				<posx>285</posx>
-				<posy>210</posy>
-			  <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(10)">Conditional</animation>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(500) | Control.HasFocus(65)]">Conditional</animation>
+				<control type="textbox">
+					<description>Help Screen 5</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>710</width>
+					<height>360</height>
+					<label>$LOCALIZE[31425][CR][CR]TLBB Team</label>
+					<font>FontSize_20</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<pagecontrol>65</pagecontrol>
+					<!-- <autoscroll time="2000" delay="10000" repeat="10000">Control.HasFocus(500)</autoscroll> -->
+				</control>
+				<control type="scrollbar" id="65">
+					<posx>714</posx>
+					<posy>5</posy>
+					<width>8</width>
+					<height>350</height>
+					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<onleft>9002</onleft>
+					<onright>9002</onright>
+					<ondown>65</ondown>
+					<onup>65</onup>
+					<onclick>Close</onclick>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(65)">Conditional</animation>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>285</posx>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="![Control.HasFocus(600) | Control.HasFocus(66)]">Conditional</animation>
+				<control type="textbox">
+					<description>Help Screen 6</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>710</width>
+					<height>358</height>
+					<label>$LOCALIZE[31426][CR][CR]TLBB Team</label>
+					<font>FontSize_20</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<pagecontrol>66</pagecontrol>
+					<!-- <autoscroll time="2000" delay="10000" repeat="10000">Control.HasFocus(500)</autoscroll> -->
+				</control>
+				<control type="scrollbar" id="66">
+					<posx>714</posx>
+					<posy>5</posy>
+					<width>8</width>
+					<height>350</height>
+					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<onleft>9002</onleft>
+					<onright>9002</onright>
+					<ondown>66</ondown>
+					<onup>66</onup>
+					<onclick>Close</onclick>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(66)">Conditional</animation>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>285</posx>
+				<posy>170</posy>
+			  <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(900)">Conditional</animation>
 				<control type="textbox">
 					<description>Close button message</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>710</width>
 					<height>305</height>
-					<label>$LOCALIZE[31425][CR][CR]TLBB Team</label>
+					<label>$LOCALIZE[31427][CR][CR]TLBB Team</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -226,25 +307,63 @@
 					<pagecontrol>62</pagecontrol>
 				</control>
 			</control>
+		</control>
 
+		<control type="group">
+		  <visible allowhiddenfocus="true">Window.IsActive(1111)</visible>
+	    <visible>!Window.IsActive(1110) + !Window.IsActive(videos,sources://video/) + !Window.IsActive(selectdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(mediasource) + !Window.IsActive(Programs) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(screencalibration) + !Window.IsActive(141)</visible>
+			<animation type="WindowOpen">
+				<effect type="zoom" time="500" center="auto" start="200" delay="250" end="100" tween="cubic" easing="out" />
+				<effect type="fade" time="500" center="auto" start="0"  delay="250" easing="out" end="100" reversible="false" />
+			</animation>			
+			<animation type="WindowClose">
+				<effect type="zoom" time="400" center="auto" start="100" end="-10" tween="cubic" easing="in" />
+				<effect type="fade" time="400" center="auto" start="100" easing="in" end="0" reversible="false"/>
+			</animation>
+			<animation type="Visible">
+				<effect type="zoom" time="500" center="auto" start="-10" end="100" tween="cubic" easing="out" />
+				<effect type="fade" time="500" center="auto" start="0" easing="out" end="100" reversible="false" />
+			</animation>			
+			<animation type="Hidden">
+				<effect type="zoom" time="400" center="auto" start="100" end="-10" tween="cubic" easing="in" />
+				<effect type="fade" time="400" center="auto" start="100" easing="in" end="0" reversible="false"/>
+			</animation>
 		  <control type="grouplist" id="9002">
+		  <visible allowhiddenfocus="true">ControlGroup(9002).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(61) | Control.HasFocus(62) | Control.HasFocus(63) | Control.HasFocus(64) | Control.HasFocus(65) | Control.HasFocus(66)</visible>
 				<posx>275</posx>
-				<posy>535</posy>
+				<posy>550</posy>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
-				<onup condition="Control.HasFocus(1)">61</onup>
-				<onup condition="Control.HasFocus(2)">62</onup>
-				<onup condition="Control.HasFocus(3)">63</onup>
-				<onup condition="Control.HasFocus(4)">64</onup>
+				<onup condition="Control.HasFocus(100)">61</onup>
+				<onup condition="Control.HasFocus(200)">62</onup>
+				<onup condition="Control.HasFocus(300)">63</onup>
+				<onup condition="Control.HasFocus(400)">64</onup>
+				<onup condition="Control.HasFocus(500)">65</onup>
+				<onup condition="Control.HasFocus(600)">66</onup>
 				<ondown>noop</ondown>
 				<itemgap>10</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
-				<control type="button" id="1">
+				<control type="button" id="100">
 					<description>'1' button</description>
 					<width>48</width>
 					<height>40</height>
-				  <label>12311</label>
+				  <label>$LOCALIZE[12311]</label>
+					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
+					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_22</font>
+					<textoffsety>3</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>SetFocus(200)</onclick>
+				</control>
+				<control type="button" id="200">
+					<description>'2' button</description>
+					<width>48</width>
+					<height>40</height>
+				  <label>$LOCALIZE[12312]</label>
 					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
 					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
 					<align>center</align>
@@ -254,13 +373,13 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<onclick>ActivateWindow(screencalibration)</onclick>
-					<onclick>SetFocus(2)</onclick>
+					<onclick>SetFocus(300)</onclick>
 				</control>
-				<control type="button" id="2">
-					<description>'2' button</description>
+				<control type="button" id="300">
+					<description>'3' button</description>
 					<width>48</width>
 					<height>40</height>
-				  <label>12312</label>
+				  <label>$LOCALIZE[12313]</label>
 					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
 					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
 					<align>center</align>
@@ -270,28 +389,13 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<onclick>ActivateWindow(accesspoints)</onclick>
-					<onclick>SetFocus(3)</onclick>
+					<onclick>SetFocus(400)</onclick>
 				</control>
-				<control type="button" id="3">
-					<description>'3' button</description>
-					<width>48</width>
-					<height>40</height>
-				  <label>12313</label>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>FontSize_22</font>
-					<textoffsety>3</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<onclick>SetFocus(4)</onclick>
-				</control>
-				<control type="button" id="4">
+				<control type="button" id="400">
 					<description>'4' button</description>
 					<width>48</width>
 					<height>40</height>
-				  <label>12314</label>
+				  <label>$LOCALIZE[12314]</label>
 					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
 					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
 					<align>center</align>
@@ -300,14 +404,59 @@
 					<textoffsety>3</textoffsety>
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<onclick>SetFocus(10)</onclick>
+					<!-- <onclick>RunScript(script.tlbbwizard)</onclick> -->
+					<onclick>ActivateWindow(videos,plugin://plugin.video.tlbbwizard)</onclick>
+			    <onclick>Action(Close)</onclick>
+					<onclick>SetFocus(500)</onclick>
+				</control>
+				<control type="button" id="500">
+					<description>'5' button</description>
+					<width>48</width>
+					<height>40</height>
+				  <label>$LOCALIZE[12315]</label>
+					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
+					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_22</font>
+					<textoffsety>3</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>ActivateWindow(videos,sources://video/)</onclick>
+			    <onclick>Action(Close)</onclick>
+					<onclick>SetFocus(600)</onclick>
+				</control>
+				<control type="button" id="600">
+					<description>'6' button</description>
+					<width>48</width>
+					<height>40</height>
+				  <label>$LOCALIZE[12316]</label>
+					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
+					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_22</font>
+					<textoffsety>3</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<onclick>ActivateWindow(MusicFiles)</onclick>
+			    <onclick>Action(Close)</onclick>
+					<onclick>SetFocus(900)</onclick>
 				</control>
 		  </control>
 
-		  <control type="group" id="9001">
+		  <control type="grouplist" id="9001">
+		  <visible allowhiddenfocus="true">ControlGroup(9002).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(61) | Control.HasFocus(62) | Control.HasFocus(63) | Control.HasFocus(64) | Control.HasFocus(65) | Control.HasFocus(66)</visible>
 				<posx>865</posx>
-				<posy>535</posy>
-				<control type="button" id="10">
+				<posy>550</posy>
+				<onleft>600</onleft>
+				<onright>100</onright>
+				<onup>noop</onup>
+			  <ondown>noop</ondown>
+				<itemgap>0</itemgap>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<control type="button" id="900">
 					<description>Close button</description>
 					<width>140</width>
 					<height>40</height>
@@ -322,12 +471,8 @@
 					<disabledcolor>44white</disabledcolor>
 					<shadowcolor>55000000</shadowcolor>
 					<textoffsety>3</textoffsety>
-					<onleft>9002</onleft>
-					<onright>9002</onright>
-					<onup>61</onup>
-				  <ondown>noop</ondown>
 					<onclick>Skin.Setbool(FirstTimeRun)</onclick>
-			    <onclick>close</onclick>
+			    <onclick>Action(Close)</onclick>
 				</control>
 		  </control>
 		</control>

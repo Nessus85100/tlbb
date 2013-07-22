@@ -225,7 +225,7 @@ msgstr ""
 #Skin Settings labels
 
 msgctxt "#31100"
-msgid "Home Categories Buttons"
+msgid "Show/Hide Home Buttons"
 msgstr ""
 
 msgctxt "#31101"
@@ -816,9 +816,120 @@ msgctxt "#31353"
 msgid "Delete Group"
 msgstr ""
 
-#empty strings from id 31354 to 31400
+#empty strings from id 31354 to 31369
+#Quick Navigation labels
 
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr ""
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr ""
+
+msgctxt "#31372"
+msgid "Clean Video Library"
+msgstr ""
+
+msgctxt "#31373"
+msgid "Clean Music Library"
+msgstr ""
+
+msgctxt "#31374"
+msgid "Quick Navigation"
+msgstr ""
+
+msgctxt "#31375"
+msgid "Disable Quick Navigation"
+msgstr ""
+
+msgctxt "#31376"
+msgid "Show Update Video Library Button"
+msgstr ""
+
+msgctxt "#31377"
+msgid "Show Update Music Library Button"
+msgstr ""
+
+msgctxt "#31378"
+msgid "Show Clean Video Library Button"
+msgstr ""
+
+msgctxt "#31379"
+msgid "Show Clean Music Library Button"
+msgstr ""
+
+msgctxt "#31380"
+msgid "Show Party Mode Button"
+msgstr ""
+
+msgctxt "#31381"
+msgid "Show Shutdown Button"
+msgstr ""
+
+msgctxt "#31382"
+msgid "Show File Manager Button"
+msgstr ""
+
+msgctxt "#31383"
+msgid "Hide Movies Button"
+msgstr ""
+
+msgctxt "#31384"
+msgid "Hide TV Shows Button"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Hide Music Button"
+msgstr ""
+
+msgctxt "#31386"
+msgid "Hide Pictures Button"
+msgstr ""
+
+msgctxt "#31387"
+msgid "Hide Add-ons Button"
+msgstr ""
+
+msgctxt "#31388"
+msgid "Hide New Movies Button"
+msgstr ""
+
+msgctxt "#31389"
+msgid "Hide New TV Shows Button"
+msgstr ""
+
+msgctxt "#31390"
+msgid "Hide New Music Button"
+msgstr ""
+
+msgctxt "#31391"
+msgid "Hide Settings Button"
+msgstr ""
+
+msgctxt "#31392"
+msgid "Show Videos Button"
+msgstr ""
+
+msgctxt "#31393"
+msgid "Hide QuickNav Buttons"
+msgstr ""
+
+msgctxt "#31394"
+msgid "Show QuickNav Buttons"
+msgstr ""
+
+msgctxt "#31395"
+msgid "Custom QuickNav Buttons"
+msgstr ""
+
+msgctxt "#31396"
+msgid "Custom Button"
+msgstr ""
+
+#empty strings from id 31397 to 31400
 #Settings Category Description & Header Labels
+
 msgctxt "#31401"
 msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
 msgstr ""
@@ -901,21 +1012,78 @@ msgstr ""
 
 #First time helper screens
 msgctxt "#31421"
-msgid "Thank you for purchasing your very own ‘Little Black Box’. You now have unlimited to access to all the latest music, TV shows and movies as well as all the classics![CR][CR]This one time seen “first use help screen”, will guide you to the fastest way of all the goods the ‘Little Black Box’ has to offer you."
+msgid "Thank you for purchasing [B]The Little Black Box[/B] the revolution in Home Entertainment.[CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual[/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find a FAQ and other useful information. Don’t forget to "Like" us on Facebook for exclusive updates and promotions!"
 msgstr ""
 
 msgctxt "#31422"
-msgid "The first thing you want to do is setting up your network. When you arrive at the Home page after this screen, navigate to the menu at the top of the screen, there you will see the word Wifi on the right hand side. Scroll along to there and once you click on to it all available connections will appear. Select your connection and click ok. If your network requires a password a dialog will appear. Enter your password and click done."
+msgid "[COLOR=selected][B]Setting up your Screen Settings[/B][/COLOR][CR]"
+"․ Click [B]OK[/B] button on your remote to bring up the [B]Calibration[/B] setup screen.[CR]"
+"․ Follow the [B]calibration instructions[/B] to adjust the screen so it fits perfectly to your[CR]   display device.[CR]"
+"․ Click the [B]"Back"[/B] button on your remote when you finish.[CR][CR]"
+"When you finish you will be automatically redirected to the next screen where you can setup your Network."
 msgstr ""
 
 msgctxt "#31423"
-msgid "As soon as your box is connected to the internet it will look out for possible updates and download and install them if needed. It will do all of this at the background without interfering with usability. However at the very first launch of the box, the amount of updates might be such that the box has to work rather hard for a bit. So at first use, if the box feels a bit “sluggish” or un-responsive, please be patience and give it a couple of minutes to do it’s magic. (A reboot might be required, but will be shown by a message)."
+msgid "[COLOR=selected][B]Setting up your Network[/B][/COLOR][CR]"
+"․ Click [B]OK[/B] on your remote to bring up the [B]WiFi[/B] setup window.[CR]"
+"․ Navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary.[CR]"
+"․ Select [B]Wired[/B] if you are using an [B]ethernet[/B] cable.[CR][CR]"
+"When you finish you will be automatically redirected to the next screen where you can install your [B]Regional Channels Add-ons[/B]. If not, please click the [B]"Back"[/B] button on your remote."
 msgstr ""
 
 msgctxt "#31424"
-msgid "For setting up your box, it is best to have a look in the manual included into the package.[CR][CR]Additional information can be found on the website of your supplier. Furthermore, some extra information could be found on the XBMC community websites;[CR][CR]1) XBMC (http://www.xbmc.org)[CR]2) XBMCHub (http://www.xbmchub.com)"
+msgid "[COLOR=selected][B]Selecting your Region for installing Channels[/B][/COLOR][CR]"
+"․ Click [B]OK[/B] on your remote to bring up the [B]Add-ons Region[/B] selection.[CR]"
+"․ Select the [B]region[/B] you are based in.[CR]"
+"․ When finished select [B]"Back"[/B] on your remote.[CR][CR]"
+"[COLOR=selected][B]WARNING:[/B][/COLOR] Selecting the wrong region may contain content that may not be legal in your country. The Little Black Box is not liable for any content or add-ons played and installed on this device.[CR][CR]"
+"When you finish you will be automatically redirected to the next screen where you can [B]add and scrap your videos[/B]. If not, please click the [B]"Back"[/B] button on your remote."
 msgstr ""
 
 msgctxt "#31425"
-msgid "This dialog will not appear again after you click "Close".[CR]Press "Esc" or "Back" if you want to see this dialog again on the next system restart."
+msgid "[COLOR=selected][B]Add and Scrap your Videos to the Library[/B][/COLOR][CR]"
+"․ Click [B]OK[/B] on your remote to add your [B]videos sources.[/B][CR]"
+"․ Click the [B]"Add Videos..."[/B] button.[CR]"
+"․ The [B]"Add Video Source"[/B] screen will be displayed. Click the [B]"Browse"[/B] button.[CR]"
+"․ Now browse to where you keep your videos stored. Once you have found[CR]   the folder you keep your videos in, click the [B]"Save"[/B] button.[CR]"
+"․ Name this [B]Video Source[/B] however you like. If it is a TV Show folder then you will[CR]   probably want to name it [B]"TV Shows"[/B]. Click the [B]"Save"[/B] button when you done.[CR]"
+"․ The Set Content window will display. This is where you tell XBMC what type of[CR]   media is in the folder. Click the the [B]"OK"[/B] button on your remote until you reach[CR]   the correct type (e.g TV Shows). Click the [B]"Save"[/B] button when you done.[CR]"
+"․ Seelect [B]"Yes"[/B] in the next dialog to start scanning the folder contents to the[CR]   library. If "No" is pressed, it can be scanned later via the [B]"Context Menu"[/B].[CR][CR]"
+"When you finish click the [B]"Back"[/B] button on your remote to go to the next screen where you can [B]add and scrap your music[/B]. If you want to have this procedure handy while you add and scrap your Media, [B]open the manual[/B] included in your box."
+msgstr ""
+
+msgctxt "#31426"
+msgid "[COLOR=selected][B]Add and Scrap your Music to the Library[/B][/COLOR][CR]"
+"․ Click [B]OK[/B] on your remote to add your [B]music sources.[/B][CR]"
+"․ Click the [B]"Add Source"[/B] button.[CR]"
+"․ The [B]"Add Music Source"[/B] screen will be displayed. Click the [B]"Browse"[/B] button.[CR]"
+"․ Now browse to where you keep your music stored. Once you have found[CR]   the folder you keep your music in, click the [B]"Save"[/B] button.[CR]"
+"․ Name this [B]Music Source[/B] however you like and click the [B]"Save"[/B] button when[CR]   you done.[CR]"
+"․ Highlight the added [B]Music Source[/B] item and bring up the the [B]"Context Menu".[/B][CR]   Select the option labelled [B]"Scan Item to Library".[/B][CR]"
+"․ XBMC will then scan the selected music source into the library database.[CR][CR]"
+"When you finish click the [B]"Back"[/B] button on your remote to go back to the [B]"First Use Help Guide"[/B]. If you want to have this procedure handy while you add and scrap your Media, [B]open the manual[/B] included in your box."
+msgstr ""
+
+msgctxt "#31427"
+msgid "Now you are ready to use your "Little Black Box". Enjoy the unique entertainment experience of [COLOR=purple][B]The Little Black Box.[/B][/COLOR][CR][CR]This dialog will not appear again after you click [B]"Close"[/B]. Press the [B]"Back"[/B] button if you want to see this dialog again on the next system restart."
+msgstr ""
+
+msgctxt "#31430"
+msgid "Help Tip"
+msgstr ""
+
+msgctxt "#31431"
+msgid "You haven't added any items to Favorites yet. Highlight an item, and choose "Add to favorites" from the context menu."
+msgstr ""
+
+msgctxt "#31432"
+msgid "Mouse usage is not supported. Please disable it from Settings>System>Input Devices>"Enable mouse and Touch Screen support"."
+msgstr ""
+
+msgctxt "#31433"
+msgid "You haven't added any videos to Library yet. Please select "Add videos..." to add your video sources and then choose the content type to scrap the items in the library."
+msgstr ""
+
+msgctxt "#31434"
+msgid "You haven't added any music to Library yet. Please select "Add Source" to add your music sources and then select "Scan item to library" from the context menu."
 msgstr ""

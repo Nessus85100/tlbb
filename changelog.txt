@@ -1,6 +1,27 @@
+[B][COLOR=FF56ADDA]v1.3.0 - Release Date 22/7/2013[/COLOR][/B]
+• More changes regarding system resources and speed optimization.
+• Added 10 custom buttons in "Quick Navigation" menu.
+• Added show/hide options for all "Quick Navigation" menu buttons.
+• Added new custom "Help Tip" dialog when Video/Music library and Favourites are empty.
+• Added new indicators arrows for "button" controls in SkinSettings screens.
+• Reworked all text's in "First Time Helper" screens.
+• Added two more buttons in "First Time Helper" for adding&scrapping Videos amd Music.
+• More dialog textures rework (WIP)
+• Updated language files from Transifex.
+• Severall small fixes & tweeks plus a little housekeeping.
+
+[B]v1.2.1[/B]
+• More dialog textures rework (WIP)
+• Changed StarRating to numbers rating in VideoInfo dialogs.
+• Changed RSS feed, available now only in Home window.
+• Fixed missing sort options from Music files mode.
+• Fixed UnWatched indicators in plain video files.
+• More changes about when there is no content in library's.
+• More changes regarding system resources and speed optimization.
+
 [B]v1.2.0[/B]
-• Major code update to otpimize skin regarding system resources and speed (WIP needs further testing) 
-• Added new Quick Navigation Menu accessible via PlayerControls(pressing letter "M").
+• Major code update to optimize skin regarding system resources and speed (WIP needs further testing) 
+• Added new "Quick Navigation" Menu accessible via PlayerControls (press letter key "M").
 • Added new 3DWall view for Music.
 
 [B]v1.1.0[/B]

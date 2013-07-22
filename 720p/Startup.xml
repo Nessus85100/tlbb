@@ -1,23 +1,27 @@
 <window>
-	<defaultcontrol always="true">3999</defaultcontrol>
+	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>0</backgroundcolor> 
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<controls>
-		<control type="button" id="3999">
-			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1100)</onfocus>
-			<onfocus>SetFocus(10)</onfocus>
+		<include>BackgroundContent</include>
+		<include>BackgroundVignette</include>
+		<control type="button" id="9999">
+			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1111)</onfocus>
+      <onfocus>SetFocus(50)</onfocus>
+			<onfocus>SetFocus(100)</onfocus>
+			<onfocus>Action(left)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
-		<control type="button" id="10">
+		<control type="button" id="100">
 			<description>trigger</description>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
-		<control type="button" id="10">
+		<control type="button" id="100">
 			<description>trigger with startup Playlist</description>
 			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
 			<onfocus>ReplaceWindow(Home)</onfocus>
@@ -25,7 +29,5 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
-		<include>BackgroundContent</include>
-		<include>BackgroundVignette</include>
 	</controls>
 </window>

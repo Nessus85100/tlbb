@@ -22,7 +22,7 @@
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select_icon.png</texture>
+			<texture background="true">dialogs/selectdialog/bg_select_icon_osd.png</texture>
 			<visible>Control.IsVisible(6)</visible>
 			<colordiffuse>FAFFFFFF</colordiffuse>
 			<visible>Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)</visible>
@@ -160,7 +160,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>553</width>
-					<height>74</height>
+					<height>72</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
 				</control>
@@ -219,7 +219,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>553</width>
-					<height>74</height>
+					<height>72</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
 				</control>
@@ -228,9 +228,8 @@
 		</control>
 
 	  <control type="group"  id="10000">
-			<posx>365</posx>
-			<posy>525</posy>
-      <!-- Buttons -->
+			<posx>356</posx>
+			<posy>536</posy>
 			<control type="grouplist" id="10001">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -244,36 +243,31 @@
 				<onup>3</onup>
 				<ondown>3</ondown>
 				<control type="button" id="5">
-					<description>Button</description>
-				  <label>-</label>
-				  <include>TopButton</include>
-				</control>
-			</control>
-      <!-- Buttons Labels -->
-			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>70</height>
-				<width>552</width>
-				<itemgap>15</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<control type="label">
-					<description>Button Label</description>
-					  <include>DialogsButtonLabelNoFocus</include>
-          <label>$INFO[Control.GetLabel(5),․  ]</label>
-					<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(5)" reversible="true">Conditional</animation>
-          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(5)" reversible="true">Conditional</animation>
+					<description>Get more</description>
+				  <width>150</width>
+				  <height>40</height>
+					<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
+					<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>110</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
+				  <label>190</label>
 				</control>
 			</control>
 			<control type="group">
-				<posx>550</posx>
+				<posx>560</posx>
 				<posy>0</posy>
 				<animation effect="fade" end="30" condition="true">Conditional</animation>
 				<control type="label">
 					<description>Page Count Label</description>
 					<width>300</width>
-					<height>57</height>
+					<height>40</height>
 					<font>FontSize_18</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
@@ -286,7 +280,7 @@
 				<control type="label">
 					<description>Page Count Label</description>
 					<width>300</width>
-					<height>57</height>
+					<height>40</height>
 					<font>FontSize_18</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>99000000</shadowcolor>

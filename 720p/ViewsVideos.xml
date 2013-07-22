@@ -2667,7 +2667,7 @@
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 					<control type="label">
-						<posx>128</posx>
+						<posx>126</posx>
 						<posy>141</posy>
 						<width>210</width>
 						<height>35</height>
@@ -2748,7 +2748,7 @@
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 					<control type="label">
-						<posx>128</posx>
+						<posx>126</posx>
 						<posy>141</posy>
 						<width>210</width>
 						<height>35</height>
