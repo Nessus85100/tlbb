@@ -168,7 +168,6 @@
 						 </item>
 						 <item id="13">
 								<label>$LOCALIZE[31018]</label>
-								<onclick condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onclick>
 								<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
 								<visible>!Skin.HasSetting(HideHomeMenuTrailersButton)</visible>
 						 </item>

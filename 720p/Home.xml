@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">20</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
+  <onload condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetString(TrailersAddon_Path,plugin.video.hdtrailers_net)</onload>
 	<controls>
 		<!-- Background Includes -->
 		<include>BackgroundContent</include>
