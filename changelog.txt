@@ -1,3 +1,7 @@
+[B][COLOR=FF56ADDA]v1.3.1 - Release Date 09/8/2013[/COLOR][/B]
+• Small changes to first time helper screens.
+• Make HD-Trailer the default action for the Trailers menu option.
+
 [B][COLOR=FF56ADDA]v1.3.0 - Release Date 22/7/2013[/COLOR][/B]
 • More changes regarding system resources and speed optimization.
 • Added 10 custom buttons in "Quick Navigation" menu.
