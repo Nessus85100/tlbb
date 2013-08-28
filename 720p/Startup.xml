@@ -8,7 +8,7 @@
 		<include>BackgroundContent</include>
 		<include>BackgroundVignette</include>
 		<control type="button" id="9999">
-			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1111)</onfocus>
+			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ReplaceWindow(1111)</onfocus>
       <onfocus>SetFocus(50)</onfocus>
 			<onfocus>SetFocus(100)</onfocus>
 			<onfocus>Action(left)</onfocus>

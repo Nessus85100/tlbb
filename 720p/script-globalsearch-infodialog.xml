@@ -1339,7 +1339,7 @@
 		<control type="group">
 				<posx>47</posx>
 				<posy>70</posy>
-			<include>TopOptionsSlideAnimations</include>
+			<include>ContentInfoSlideAnimations</include>
 			<control type="label">
 				<width>300</width>
 				<height>20</height>

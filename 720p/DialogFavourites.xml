@@ -4,13 +4,13 @@
 	<controls>
 
 		<control type="group">
-	    <include>GlobalSearchSlideAnimations</include>
-      <animation type="Conditional" reversible="true" condition="Window.IsActive(virtualkeyboard) | Window.IsActive(filebrowser)">
+	    <include>HomeSlideAnimations</include>
+      <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard) | Window.IsActive(filebrowser)">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout"/>
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="inout"/>
       </animation>
       <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu)">
-        <effect type="slide" start="0,0" end="0,75" time="350" tween="sine" easing="inout"/>
+        <effect type="slide" start="0,0" end="0,100" time="350" tween="sine" easing="inout"/>
       </animation>
 			<control type="image">
 				<posx>-230</posx>
@@ -144,7 +144,7 @@
 	 <control type="group">
 		  <posx>45</posx>
 		  <posy>25</posy>
-	    <include>TopOptionsSlideAnimations</include>
+	    <include>HomeSlideAnimations</include>
       <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="inout" />

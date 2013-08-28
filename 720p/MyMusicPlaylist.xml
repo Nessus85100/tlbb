@@ -7,233 +7,135 @@
 		<include>BackgroundItems</include>
 		<include>MusicPlaylistViews</include>
 		
-   <!-- ==================== -->
-   <!-- Top Options Controls -->
-   <!-- ==================== -->
-	 <control type="group"  id="9000">
-			<posx>45</posx>
+	  <!-- ============ -->
+	  <!-- Options Menu  -->
+	  <!-- ============ -->
+		<control type="group" id="9000">
+			<posx>30</posx>
 			<posy>25</posy>
-      <include>TopOptionsSlideAnimations</include>
-      <!-- Main Options -->
-			<control type="grouplist" id="9111">
+	    <include>ShutdownMenuAnimation</include>
+	    <include>OptionsTopMenuAnimation</include>
+	    <!-- General Options -->
+	    <control type="group">
+	      <include>GeneralOptionsTopMenuAnimation</include>
+	      <control type="image">
+	        <posx>0</posx>
+	        <posy>-12</posy>
+					<width>380</width>
+					<height>75</height>
+					<texture>dialogs/menus/topmenus_options.png</texture>
+	        <aspectratio>stretch</aspectratio>
+	      </control>
+	      <control type="image">
+	        <posx>0</posx>
+	        <posy>322</posy>
+					<width>380</width>
+					<height>22</height>
+					<texture>dialogs/menus/bottom.png</texture>
+	        <aspectratio>stretch</aspectratio>
+	      </control>
+				<control type="label">
+	        <posx>75</posx>
+				  <label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
+				  <include>TopBigLabel</include>
+				</control>      
+	    </control>
+		  <control type="grouplist" id="9111">
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>0</width>
-				<height>0</height>
+				<posy>63</posy>
+				<width>380</width>
+				<height>520</height>
 				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>9111</onleft>
-				<onright>9111</onright>
-				<onup>noop</onup>
-				<ondown>50</ondown>
-				<onback>50</onback>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9111</onup>
+				<ondown>9111</ondown>
+	      <include>GeneralOptionsTopMenuAnimation</include>
 				<control type="button" id="2">
 					<description>View as</description>
-				  <label>-</label>
-				  <include>TopButton</include>
+				  <include>TopLeftMenusButton</include>
 				</control>
 				<control type="button" id="95">
 					<description>Viewtype Options</description>
-				  <label>-</label>
+				  <label>31014</label>
 					<onclick>SetFocus(9222)</onclick>
-				  <include>TopButton</include>
+				  <include>TopLeftMenusButton</include>
+				  <enable>false</enable>
 				</control>
-				<control type="button" id="3">
-					<description>Short</description>
-					<label>-</label>
-				  <include>TopButton</include>
-				</control>
-				<control type="radiobutton" id="20">
+				<control type="togglebutton" id="20">
 					<description>Shuffle</description>
-					<label>-</label>
-				  <include>TopButton</include>
+	        <label>$LOCALIZE[191]: $LOCALIZE[31012]</label>
+	        <altlabel>$LOCALIZE[191]: $LOCALIZE[31011]</altlabel>
+				  <include>TopLeftMenusButton</include>
 				</control>
-				<control type="button" id="26">
+				<control type="togglebutton" id="28">
+					<description>Randomize</description>
+	        <label>$LOCALIZE[13319]: $LOCALIZE[31012]</label>
+	        <altlabel>$LOCALIZE[13319]: $LOCALIZE[31011]</altlabel>
+				  <include>TopLeftMenusButton</include>
+				</control>
+				<control type="togglebutton" id="26">
 					<description>Repeat</description>
-					<label>-</label>
-				  <include>TopButton</include>
+				  <include>TopLeftMenusButton</include>
 				</control>
 				<control type="button" id="21">
 					<description>Save</description>
 					<label>190</label>
-				  <include>TopButton</include>
+				  <include>TopLeftMenusButton</include>
 				</control>
 				<control type="button" id="22">
 					<description>Clear</description>
 					<label>192</label>
-				  <include>TopButton</include>
+				  <include>TopLeftMenusButton</include>
 				</control>
-			</control>
-      <!-- Main Options Labels -->
-			<control type="grouplist">
-		    <visible allowhiddenfocus="true">ControlGroup(9111).HasFocus + !Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu)</visible>
-	      <animation type="Visible"  reversible="false">
-	          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	          <effect type="slide" start="0,-35" end="0,0" time="350" tween="cubic" easing="out" />
-	      </animation>
-	      <animation type="Hidden" reversible="false">
-	          <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	          <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
-	      </animation>
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>70</height>
-				<width>1190</width>
-				<itemgap>15</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<control type="label">
-				  <include>TopBigLabel</include>
-				  <label>$LOCALIZE[33063]:</label>
-				</control>
-				<control type="label">
-					<description>View as</description>
-				  <include>TopSmallLabel</include>
-          <label>$INFO[Control.GetLabel(2)]</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(2)" reversible="true">Conditional</animation>
-          <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(2)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Viewtype Options</description>
-				  <include>TopSmallLabel</include>
-					<label>$LOCALIZE[31014]</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(95)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(95)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Short</description>
-				  <include>TopSmallLabel</include>
-					<label>$INFO[Control.GetLabel(3)]</label>
-					<animation effect="fade" start="100" end="60" time="200" tween="cubic" easing="inout" condition="!Control.IsEnabled(3)" reversible="true">Conditional</animation>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(3)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(3)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Shuffle</description>
-				  <include>TopSmallLabel</include>
-					<label>$LOCALIZE[191]: $LOCALIZE[31012]</label>
-					<animation effect="fade" start="100" end="60" time="200" tween="cubic" easing="inout" condition="!Control.IsEnabled(20)" reversible="true">Conditional</animation>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(20)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(20)" reversible="true">Conditional</animation>
-			    <visible>!SubString(Control.GetLabel(20),*)</visible>
-				</control>
-				<control type="label">
-					<description>Shuffle</description>
-				  <include>TopSmallLabel</include>
-					<label>$LOCALIZE[191]: $LOCALIZE[31011]</label>
-					<animation effect="fade" start="100" end="60" time="200" tween="cubic" easing="inout" condition="!Control.IsEnabled(20)" reversible="true">Conditional</animation>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(20)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(20)" reversible="true">Conditional</animation>
-			    <visible>SubString(Control.GetLabel(20),*)</visible>
-				</control>
-				<control type="label">
-					<description>Repeat</description>
-				  <include>TopSmallLabel</include>
-					<label>$INFO[Control.GetLabel(26)]</label>
-					<animation effect="fade" start="100" end="60" time="200" tween="cubic" easing="inout" condition="!Control.IsEnabled(26)" reversible="true">Conditional</animation>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(26)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(26)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Save</description>
-				  <include>TopSmallLabel</include>
-					<label>$INFO[Control.GetLabel(21)]</label>
-					<animation effect="fade" start="100" end="60" time="200" tween="cubic" easing="inout" condition="!Control.IsEnabled(21)" reversible="true">Conditional</animation>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(21)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(21)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Clear</description>
-				  <include>TopSmallLabel</include>
-					<label>$INFO[Control.GetLabel(22)]</label>
-					<animation effect="fade" start="100" end="60" time="200" tween="cubic" easing="inout" condition="!Control.IsEnabled(22)" reversible="true">Conditional</animation>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9111).HasFocus(22)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9111).HasFocus(22)" reversible="true">Conditional</animation>
-				</control>
-			</control>
+		  </control>
 	
-      <!-- Viewtype Options -->
+	    <!-- Viewtype Options -->
+	    <control type="group">
+	      <include>ViewtypeOptionsTopMenuAnimation</include>
+	      <control type="image">
+	        <posx>0</posx>
+	        <posy>-12</posy>
+					<width>380</width>
+					<height>75</height>
+					<texture>dialogs/menus/topmenus_options.png</texture>
+	        <aspectratio>stretch</aspectratio>
+	      </control>
+	      <control type="image">
+	        <posx>0</posx>
+	        <posy>100</posy>
+					<width>380</width>
+					<height>22</height>
+					<texture>dialogs/menus/bottom.png</texture>
+	        <aspectratio>stretch</aspectratio> 
+	      </control>
+				<control type="label">
+	        <posx>75</posx>
+				  <label>$LOCALIZE[31014]</label>
+				  <include>TopBigLabel</include>
+				</control>      
+	    </control>
 			<control type="grouplist" id="9222">
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>0</width>
-				<height>0</height>
+				<posy>63</posy>
+				<width>380</width>
+				<height>520</height>
 				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>9222</onleft>
-				<onright>9222</onright>
-				<onup>noop</onup>
-				<ondown>9111</ondown>
-				<onback>9111</onback>
-				<control type="button" id="90">
-					<description>oooooo</description>
-				  <label>-</label>
-					<onclick>noop</onclick>
-				  <include>TopButton</include>
-				</control>
-				<control type="button" id="91">
-					<description>oooooo</description>
-				  <label>-</label>
-					<onclick>noop</onclick>
-				  <include>TopButton</include>
-				</control>
-				<control type="button" id="92">
-					<description>oooooo</description>
-				  <label>-</label>
-					<onclick>noop</onclick>
-				  <include>TopButton</include>
+				<onleft>9111</onleft>
+				<onright>9111</onright>
+				<onup>9222</onup>
+				<ondown>9222</ondown>
+	      <include>ViewtypeOptionsTopMenuAnimation</include>
+				<control type="togglebutton" id="390">
+					<description>empty</description>
+				  <visible>false</visible>
 				</control>
 			</control>
-      <!-- Viewtype Options Labels -->
-			<control type="grouplist">
-		    <visible allowhiddenfocus="true">ControlGroup(9222).HasFocus + !Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu)</visible>
-	      <animation type="Visible"  reversible="false">
-	          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	          <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
-	      </animation>
-	      <animation type="Hidden" reversible="false">
-	          <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	          <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
-	      </animation>
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>70</height>
-				<width>1190</width>
-				<itemgap>15</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<control type="label">
-				  <include>TopBigLabel</include>
-				  <label>$LOCALIZE[31014]:</label>
-				</control>
-				<control type="label">
-					<description>ooooo</description>
-				  <include>TopSmallLabel</include>
-          <label>$INFO[Control.GetLabel(90)]</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(90)" reversible="true">Conditional</animation>
-          <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9222).HasFocus(90)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>ooooo</description>
-				  <include>TopSmallLabel</include>
-          <label>$INFO[Control.GetLabel(91)]</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(91)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9222).HasFocus(91)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>ooooo</description>
-				  <include>TopSmallLabel</include>
-          <label>$INFO[Control.GetLabel(92)]</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(92)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!ControlGroup(9222).HasFocus(92)" reversible="true">Conditional</animation>
-				</control>
-			</control>
-	 </control>
+		</control>
 
 
 		<include>CommonItems</include>
+		<include>CommonWeatherAndClock</include>
 
      <!-- ================ -->
      <!-- Top Content Info -->
@@ -243,7 +145,6 @@
 				<posy>25</posy>
 				<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation)</visible>
 			  <include>CommonSlideAnimations</include>
-		    <include>CommonWeatherAndClock</include>
 				<control type="grouplist">
 					<posx>0</posx>
 					<posy>0</posy>

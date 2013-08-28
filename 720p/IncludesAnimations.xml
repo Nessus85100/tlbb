@@ -48,26 +48,6 @@
 		</animation>
 	</include>
 
-
-	<include name="HomeSlideAnimations">
-     <animation type="WindowOpen" reversible="true">
-        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-        <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
-     </animation>
-     <animation type="WindowClose" reversible="true">
-        <effect type="fade" start="100" end="0" time="250" delay="250" tween="sine" easing="inout" />
-        <effect type="slide" start="0,0" end="0,-55" time="300" delay="250" tween="sine" easing="inout" />
-     </animation>
-     <animation type="Visible" reversible="true">
-        <effect type="fade" start="0" end="100" time="350" delay="150" tween="sine" easing="in"  />
-        <effect type="slide" start="0,55" end="0,0" time="400" delay="150" tween="cubic" easing="out" />
-     </animation>
-     <animation type="Hidden" reversible="true">
-        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
-        <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" />
-     </animation>
-	</include>
-	
 	<include name="TopRightSlideAnimations">
 	    <animation type="WindowOpen">
 	        <effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
@@ -143,6 +123,25 @@
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
     </animation>
 	</include>
+
+	<include name="HomeSlideAnimations">
+     <animation type="WindowOpen" reversible="true">
+        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+        <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+     </animation>
+     <animation type="WindowClose" reversible="true">
+        <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="inout" />
+        <effect type="slide" start="0,0" end="0,-55" time="350" delay="100" tween="sine" easing="inout" />
+     </animation>
+     <animation type="Visible" reversible="true">
+        <effect type="fade" start="0" end="100" time="300" delay="100" tween="sine" easing="in"  />
+        <effect type="slide" start="0,55" end="0,0" time="350" delay="100" tween="cubic" easing="out" />
+     </animation>
+     <animation type="Hidden" reversible="true">
+        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+        <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" />
+     </animation>
+	</include>
 	
 	<include name="CommonSlideAnimations">
 	  <animation type="WindowOpen" reversible="false">
@@ -163,7 +162,7 @@
 	  </animation>
 	</include>
 	
-	<include name="TopOptionsSlideAnimations">
+	<include name="ContentInfoSlideAnimations">
     <animation type="WindowOpen" reversible="false">
         <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
         <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
@@ -174,13 +173,52 @@
     </animation>
     <animation type="Visible" reversible="false">
         <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-        <effect type="slide" start="0,0" end="0,35" time="350" tween="cubic" easing="out" />
+        <effect type="slide" start="0,-35" end="0,0" time="350" tween="cubic" easing="out" />
     </animation>
     <animation type="Hidden" reversible="false">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-        <effect type="slide" start="0,35" end="0,0" time="350" tween="sine" easing="out" />
+        <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
     </animation>
 	</include>
+
+  <include name="OptionsTopMenuAnimation">
+    <animation type="Conditional" condition="Controlgroup(9000).HasFocus" reversible="false">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+    </animation>
+    <animation type="Conditional" condition="!Controlgroup(9000).HasFocus" reversible="false">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
+    </animation>
+    <animation type="WindowClose" reversible="false">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
+    </animation>
+  </include>
+  
+  <include name="GeneralOptionsTopMenuAnimation">
+    <visible allowhiddenfocus="true">!ControlGroup(9222).HasFocus</visible>
+    <animation type="Visible">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+    </animation>
+    <animation type="Hidden">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
+    </animation>
+  </include>
+  
+  <include name="ViewtypeOptionsTopMenuAnimation">
+    <visible allowhiddenfocus="true">ControlGroup(9222).HasFocus</visible>
+    <animation type="Visible">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+    </animation>                                
+    <animation type="Hidden">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
+    </animation>
+  </include>
 
 	<include name="GlobalSearchSlideAnimations">
 	  <animation type="WindowOpen" reversible="false">
@@ -200,26 +238,29 @@
 	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 	  </animation>
 	</include>
-
+	
   <include name="GlobalSearchFocusAnimations">
+	  <animation type="Conditional" condition="Control.HasFocus(9111) | !IsEmpty(Control.GetLabel(190)) | Window.IsActive(script-globalsearch-contextmenu.xml)">
+	     <effect type="zoom" start="100" end="92" center="360,140" time="350" tween="sine" easing="inout"/>
+	  </animation>
     <animation effect="slide" start="0,75" end="0,0" time="450" reversible="false" tween="back" easing="out" condition="Container(111).OnPrevious | Container(121).OnPrevious | Container(131).OnPrevious | Container(141).OnPrevious | Container(151).OnPrevious | Container(161).OnPrevious | Container(171).OnPrevious | Container(181).OnPrevious">Focus</animation>
     <animation effect="slide" start="0,-75" end="0,0" time="450" reversible="false" tween="back" easing="out" condition="Container(111).OnNext | Container(121).OnNext | Container(131).OnNext | Container(141).OnNext | Container(151).OnNext | Container(161).OnNext | Container(171).OnNext | Container(181).OnNext">Focus</animation>
   </include>
 
 	<include name="SettingsSlideAnimations">
-	  <animation type="WindowOpen" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+	  <animation type="WindowOpen" condition="!Window.Previous(1111) + !Window.Previous(Settings) + !Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 	      <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
 	  </animation>
-	  <animation type="WindowClose" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+	  <animation type="WindowClose" condition="!Window.Next(1111) + !Window.Next(Settings) + !Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
 	      <effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
 	      <effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
 	  </animation>
-	  <animation type="Visible" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+	  <animation type="Visible" condition="!Window.Previous(1111) + !Window.Previous(Settings) + !Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
 	  </animation>
-	  <animation type="Hidden" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+	  <animation type="Hidden" condition="!Window.Next(1111) + !Window.Next(Settings) + !Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
 	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 	  </animation>
@@ -249,28 +290,30 @@
 
 	<include name="TLBBSlideAnimations">
 	  <animation type="WindowOpen" reversible="false">
-      <effect type="fade" start="0" end="100" time="400" tween="sine" easing="in"  />
-      <effect type="slide" start="0,55" end="0,0" time="450" tween="cubic" easing="out" />
+      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+      <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
 	  </animation>
 	  <animation type="WindowClose" reversible="false">
-      <effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
-      <effect type="slide" start="0,0" end="0,55" time="350" delay="250" tween="sine" easing="out" />
+      <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="out" />
+      <effect type="slide" start="0,0" end="0,55" time="350" delay="100" tween="sine" easing="out" />
 	  </animation>
 	  <animation type="Visible" reversible="false">
-      <effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
-      <effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+      <effect type="fade" start="0" end="100" time="300" delay="250" tween="sine" easing="in"  />
+      <effect type="slide" start="0,-35" end="0,0" time="350" delay="250" tween="cubic" easing="out" />
 	  </animation>
 	  <animation type="Hidden" reversible="false">
-      <effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
-      <effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+      <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
 	  </animation>
 	</include>
 
 
 	<include name="DialogFadeInOutAnimation">
 		<animation type="Conditional" reversible="false" condition="
-		Window.IsActive(1110) 
-		| Window.IsActive(contextmenu) 
+		ControlGroup(9000).HasFocus
+		| Window.IsActive(1110)
+		| Window.IsActive(accesspoints)
+		| Window.IsActive(contextmenu)
 		| Window.IsActive(shutdownmenu) 
 		| Window.IsActive(MovieInformation) 
 		| Window.IsActive(MusicInformation) 
@@ -300,7 +343,9 @@
       <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="inout"/>
 		</animation>
 		<animation type="Conditional" reversible="false" condition="
-		!Window.IsActive(1110) 
+		! ControlGroup(9000).HasFocus
+		+ !Window.IsActive(1110)
+		+ !Window.IsActive(accesspoints)
 		+ !Window.IsActive(contextmenu) 
 		+ !Window.IsActive(shutdownmenu) 
 		+ !Window.IsActive(MovieInformation) 
@@ -334,7 +379,9 @@
 
 	<include name="DialogZoomInOutAnimation">
 		<animation type="Conditional" reversible="false" condition="
-		Window.IsActive(1110) 
+		ControlGroup(9000).HasFocus
+		| Window.IsActive(1110)
+		| Window.IsActive(accesspoints)
 		| Control.HasFocus(122)
 		| Control.HasFocus(127)
 		| Window.IsActive(CBrowseskin.xml)
@@ -377,7 +424,9 @@
       <effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
 		</animation>
 		<animation type="Conditional" reversible="false" condition="
-		! Window.IsActive(1110) 
+		! ControlGroup(9000).HasFocus
+		+ !Window.IsActive(1110)
+		+ !Window.IsActive(accesspoints)
 		+ !Control.HasFocus(122)
     + !Control.HasFocus(127)
 		+ !Window.IsActive(CBrowseskin.xml)
@@ -529,12 +578,12 @@
 
 	<include name="ListFocusAnimation">
 	  <animation type="Focus" reversible="false" condition="Container(50).OnPrevious | Container(58).OnPrevious | Container(112).OnPrevious | Container(120).OnPrevious">
-			  <effect type="fade" start="20" end="100" time="400"/>
-				<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
+			  <effect type="fade" start="20" end="100" time="200" tween="sine" easing="out"/>
+				<effect type="slide" start="0,25" end="0,0" time="250" tween="back" easing="out"/>
     </animation>
 	  <animation type="Focus" reversible="false" condition="Container(50).OnNext | Container(58).OnNext | Container(112).OnNext | Container(120).OnNext">
-			  <effect type="fade" start="20" end="100" time="400"/>
-				<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
+			  <effect type="fade" start="20" end="100" time="200" tween="sine" easing="out"/>
+				<effect type="slide" start="0,-25" end="0,0" time="250" tween="back" easing="out"/>
     </animation>
 	</include>
 
@@ -686,11 +735,10 @@
     </animation>
 	</include>
 	<include name="FanartFade">
-		<animation effect="fade" time="450">WindowOpen</animation>
-		<animation effect="fade" time="450" delay="250" condition="Window.Previous(Home)">WindowClose</animation>
-		<animation effect="fade" time="450" condition="!Window.Previous(Home)">WindowClose</animation>
-		<animation effect="fade" time="300" tween="sine" easing="inout">Visible</animation>
-		<animation effect="fade" time="300" tween="sine" easing="inout">Hidden</animation>
+		<animation effect="fade" time="450" tween="sine" easing="out">WindowOpen</animation>
+		<animation effect="fade" time="450" tween="sine" easing="in">WindowClose</animation>
+		<animation effect="fade" time="300" tween="sine" easing="out">Visible</animation>
+		<animation effect="fade" time="300" tween="sine" easing="in">Hidden</animation>
 	</include>
 	<include name="VisibleFadeEffect">
 		<animation effect="fade" time="250">Visible</animation>

@@ -1,6 +1,7 @@
 <window id="106">
   <defaultcontrol always="true">996</defaultcontrol>
   <animation effect="slide" end="0,126" time="0" condition="Window.IsVisible(LockSettings)">Conditional</animation>
+  <include condition="!Window.IsVisible(filemanager) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(LockSettings)">ContextCoordinates</include>
 	<controls>
 
 	<include condition="Window.IsVisible(LoginScreen) | Window.IsVisible(Profiles)">ContextMenuContentInfoWindows</include>

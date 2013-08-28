@@ -5,8 +5,8 @@
 		  <posx>45</posx>
 		  <posy>25</posy>
 	    <animation type="WindowClose" reversible="true">
-	      <effect type="fade" start="100" end="0" time="250" delay="250" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,-55" time="300" delay="250" tween="sine" easing="out" />
+        <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="inout" />
+        <effect type="slide" start="0,0" end="0,-55" time="350" delay="100" tween="sine" easing="inout" />
 	    </animation>
 	    <animation type="Conditional" reversible="false" condition="![Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)]">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -159,8 +159,8 @@
 	<include name="SkinWidgetsLists">
 	 <control type="group">
     <animation type="WindowClose" reversible="true">
-      <effect type="fade" start="100" end="0" time="250" delay="250" tween="sine" easing="out" />
-      <effect type="slide" start="0,0" end="0,-55" time="300" delay="250" tween="sine" easing="out" />
+      <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="inout" />
+      <effect type="slide" start="0,0" end="0,-55" time="350" delay="100" tween="sine" easing="inout" />
     </animation>
     <animation type="Conditional" reversible="false" condition="![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(PlayerControls)]">
       <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -276,7 +276,7 @@
 			<onback>ClearProperty(Movement)</onback>
 			<onback>20</onback>
       <viewtype label="535">List</viewtype>
-      <scrolltime tween="Cubic" easing="out">500</scrolltime>
+      <scrolltime tween="Quadratic" easing="out">300</scrolltime>
       <orientation>horizontal</orientation>
       <preloaditems>2</preloaditems>
       <focusposition>1</focusposition>
@@ -1041,7 +1041,7 @@
 			<onback>ClearProperty(Movement)</onback>
 			<onback>20</onback>
       <viewtype label="535">List</viewtype>
-      <scrolltime tween="Cubic" easing="out">500</scrolltime>
+      <scrolltime tween="Quadratic" easing="out">300</scrolltime>
       <orientation>horizontal</orientation>
       <preloaditems>2</preloaditems>
       <focusposition>1</focusposition>
@@ -1805,7 +1805,7 @@
 			<onback>ClearProperty(Movement)</onback>
 			<onback>20</onback>
       <viewtype label="535">List</viewtype>
-      <scrolltime tween="Cubic" easing="out">500</scrolltime>
+      <scrolltime tween="Quadratic" easing="out">300</scrolltime>
       <orientation>horizontal</orientation>
       <preloaditems>2</preloaditems>
       <focusposition>1</focusposition>
@@ -2561,8 +2561,8 @@
         <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
      </animation>
      <animation type="WindowClose">
-        <effect type="fade" start="100" end="0" time="250" delay="250" tween="sine" easing="out" />
-        <effect type="slide" start="0,0" end="0,-55" time="300" delay="250" tween="sine" easing="out" />
+        <effect type="fade" start="100" end="0" time="300" delay="100" tween="sine" easing="inout" />
+        <effect type="slide" start="0,0" end="0,-55" time="350" delay="100" tween="sine" easing="inout" />
      </animation>
      <animation type="Visible">
         <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -2572,7 +2572,7 @@
         <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
         <effect type="slide" start="0,0" end="0,8" time="300" tween="sine" easing="out" />
      </animation>
-		 <visible>!Window.IsActive(Favourites) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(BusyDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(VirtualKeyboard) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(busy.xml) + !Control.HasFocus(81) + !Control.HasFocus(82) + !Control.HasFocus(83) + !Control.HasFocus(23) + !Control.HasFocus(24) + [[[Library.HasContent(movies) + Container(20).HasFocus(2)] + !Skin.HasSetting(HideSubMenuMovies)] | [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + !Skin.HasSetting(HideSubMenuTVShows)] | [[Library.HasContent(music) + Container(20).HasFocus(3)] + !Skin.HasSetting(HideSubMenuMusic)] | [Container(20).HasFocus(9) + !Skin.HasSetting(HideSubMenuSettings)]]</visible>
+		 <visible>!ControlGroup(21).HasFocus + !Window.IsActive(Favourites) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(BusyDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(VirtualKeyboard) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(busy.xml) + !Control.HasFocus(81) + !Control.HasFocus(82) + !Control.HasFocus(83) + !Control.HasFocus(23) + !Control.HasFocus(24) + [[[Library.HasContent(movies) + Container(20).HasFocus(2)] + !Skin.HasSetting(HideSubMenuMovies)] | [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + !Skin.HasSetting(HideSubMenuTVShows)] | [[Library.HasContent(music) + Container(20).HasFocus(3)] + !Skin.HasSetting(HideSubMenuMusic)] | [Container(20).HasFocus(9) + !Skin.HasSetting(HideSubMenuSettings)]]</visible>
 		 <control type="image">
 			<posx>0</posx>
 			<posy>0</posy>

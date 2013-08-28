@@ -221,11 +221,19 @@ msgctxt "#31088"
 msgid "List Wall"
 msgstr ""
 
-#empty strings from id 31089 to 31099
+#empty strings from id 31089 to 31097
 #Skin Settings labels
 
+msgctxt "#31098"
+msgid "Home Menu"
+msgstr ""
+
+msgctxt "#31099"
+msgid "Show Home Menu Buttons"
+msgstr ""
+
 msgctxt "#31100"
-msgid "Show/Hide Home Buttons"
+msgid "Hide Home Menu Buttons"
 msgstr ""
 
 msgctxt "#31101"
@@ -241,7 +249,7 @@ msgid "Hide Now Playing Music Info"
 msgstr ""
 
 msgctxt "#31104"
-msgid "Hide Search Button"
+msgid "Show Search Button"
 msgstr ""
 
 msgctxt "#31105"
@@ -301,7 +309,7 @@ msgid "Custom Button"
 msgstr ""
 
 msgctxt "#31119"
-msgid "Custom Home Buttons"
+msgid "Custom Home Menu Buttons"
 msgstr ""
 
 msgctxt "#31120"
@@ -488,7 +496,11 @@ msgctxt "#31165"
 msgid "Show Add-ons Button"
 msgstr ""
 
-#empty strings from id 31166 to 31199
+msgctxt "#31166"
+msgid "Hide Favourites Button"
+msgstr ""
+
+#empty strings from id 31167 to 31199
 #Scripts labels
 
 msgctxt "#31200"
@@ -1069,7 +1081,7 @@ msgid "Now you are ready to use your "Little Black Box". Enjoy the unique entert
 msgstr ""
 
 msgctxt "#31430"
-msgid "Help Tip"
+msgid "Help"
 msgstr ""
 
 msgctxt "#31431"

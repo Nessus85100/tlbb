@@ -1,9 +1,189 @@
 <window id="4">
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol>7000</defaultcontrol>
   <allowoverlay>no</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
-	<onload condition="!Window.Previous(filemanager)">ReplaceWindow(Home)</onload>
-	<onload condition="Window.Previous(filemanager)">ReplaceWindow(AppearanceSettings)</onload>
 	<controls>
+	<include>BackgroundItems</include>
+
+			<control type="group">
+			  <visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(busy.xml)</visible>
+		    <include>Window_OpenClose_Animation</include>
+		    <include>DialogZoomInOutAnimation</include>
+				<control type="panel" id="7000">
+					<posx>34</posx>
+					<posy>150</posy>
+					<width>1210</width>
+					<height>500</height>
+					<onleft>7000</onleft>
+					<onright>7000</onright>
+					<ondown>7000</ondown>
+					<onup>7000</onup>
+				  <scrolltime>200</scrolltime>
+					<viewtype label="536">icon</viewtype>
+				  <preloaditems>1</preloaditems>
+				  <include>Window_OpenClose_Animation</include>
+					<itemlayout height="200" width="200">
+						<control type="image">
+							<posx>0</posx>
+							<width>216</width>
+							<height>216</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="15">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>22</posx>
+							<posy>23</posy>
+							<width>167</width>
+							<height>142</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="label">
+							<posx>108</posx>
+							<posy>160</posy>
+							<width>162</width>
+							<height>35</height>
+							<textcolor>99white</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<font>FontSize_22</font>
+							<scroll>false</scroll>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="200" width="200">
+						<control type="image">
+							<posx>0</posx>
+							<width>216</width>
+							<height>216</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="15">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<posx>22</posx>
+							<posy>23</posy>
+							<width>167</width>
+							<height>142</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="label">
+							<posx>108</posx>
+							<posy>160</posy>
+							<width>162</width>
+							<height>35</height>
+							<textcolor>99white</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<font>FontSize_22</font>
+							<scroll>false</scroll>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(7000)</visible>
+						</control>
+						<control type="label">
+							<posx>108</posx>
+							<posy>160</posy>
+							<width>162</width>
+							<height>35</height>
+							<textcolor>blue</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+							<font>FontSize_22</font>
+							<scrollspeed>35</scrollspeed>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(7000)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<width>216</width>
+							<height>216</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/focus.png</texture>
+	            <animation type="Focus">
+	              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+	            </animation>
+	            <animation type="Unfocus">
+	              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+	            </animation>
+							<visible>Control.HasFocus(7000)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<onclick>ActivateWindow(AppearanceSettings)</onclick>
+							<thumb>windows/settings/icons/Appearance.png</thumb>
+							<label>480</label>
+						</item>
+						<item id="2">
+							<onclick>ActivateWindow(VideosSettings)</onclick>
+							<thumb>windows/settings/icons/Video.png</thumb>
+							<label>157</label>
+						</item>
+						<item id="3">
+							<onclick>ActivateWindow(PVRSettings)</onclick>
+							<thumb>windows/settings/icons/PVR.png</thumb>
+							<label>31000</label>
+						</item>
+						<item id="4">
+							<onclick>ActivateWindow(MusicSettings)</onclick>
+							<thumb>windows/settings/icons/Music.png</thumb>
+							<label>2</label>
+						</item>
+						<item id="5">
+							<onclick>ActivateWindow(PicturesSettings)</onclick>
+							<thumb>windows/settings/icons/Pictures.png</thumb>
+							<label>1</label>
+						</item>
+						<item id="6">
+							<onclick>ActivateWindow(WeatherSettings)</onclick>
+							<thumb>windows/settings/icons/Weather.png</thumb>
+							<label>8</label>
+						</item>
+						<item id="7">
+							<onclick>ActivateWindow(AddonBrowser)</onclick>
+							<thumb>windows/settings/icons/Addons.png</thumb>
+							<label>24001</label>
+						</item>
+						<item id="8">
+							<onclick>ActivateWindow(NetworkSettings)</onclick>
+							<thumb>windows/settings/icons/Services.png</thumb>
+							<label>14036</label>
+						</item>
+						<item id="9">
+							<onclick>ActivateWindow(SystemSettings)</onclick>
+							<thumb>windows/settings/icons/System.png</thumb>
+							<label>13000</label>
+						</item>
+						<item id="10">
+							<onclick>ActivateWindow(SystemInfo)</onclick>
+							<thumb>windows/settings/icons/SystemInfo.png</thumb>
+							<label>130</label>
+						</item>
+						<item id="11">
+							<onclick>ActivateWindow(SkinSettings)</onclick>
+							<thumb>windows/settings/icons/Skin.png</thumb>
+							<label>20077</label>
+						</item>
+						<item id="12">
+							<onclick>ActivateWindow(1111)</onclick>
+							<thumb>windows/settings/icons/Help.png</thumb>
+							<label>Help</label>
+						</item>
+					</content>
+				</control>
+			</control>
+
+		<include>SettingsWeatherAndClock</include>
+		<include>CommonNowPlaying</include>
+		<include>SettingsCategoryContentInfo</include>
 	</controls>
 </window>		

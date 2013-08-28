@@ -2,54 +2,110 @@
 	<defaultcontrol>450</defaultcontrol>
 	<controls>
 		
-	 <control type="group">
-		<posx>45</posx>
-		<posy>25</posy>
-	  <include>TopOptionsSlideAnimations</include>
-	  <control type="list" id="450">
-			<posx>0</posx>
-			<posy>50</posy>
-			<width>460</width>
-			<height>85</height>
-			<itemgap>0</itemgap>
-			<onleft>Close</onleft>
-			<onright>Close</onright>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<itemlayout width="460" height="40">
-			<control type="label">
-				<posx>0</posx>
-				<width>460</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>77white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label,․  $LOCALIZE[208]... ]</label>
+		<control type="group">
+	    <include>ContentInfoSlideAnimations</include>
+      <control type="image">
+        <posx>30</posx>
+        <posy>13</posy>
+				<width>290</width>
+				<height>75</height>
+				<texture border="90,0,90,0">dialogs/menus/topmenus_stacking.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+      <control type="image">
+        <posx>30</posx>
+        <posy>162</posy>
+				<width>290</width>
+				<height>22</height>
+				<texture border="90,0,90,0">dialogs/menus/bottom.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+			<control type="list" id="450">
+				<posx>30</posx>
+				<posy>88</posy>
+				<width>310</width>
+				<height>540</height>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="37" width="310">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>290</width>
+						<height>37</height>
+						<texture border="90,0,90,0">dialogs/menus/topmenus_nf.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[208]...</label>
+					</control>
+					<control type="label">
+						<posx>263</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="37" width="310">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>290</width>
+						<height>37</height>
+						<texture border="90,0,90,0">dialogs/menus/topmenus_fo.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[208]...</label>
+					</control>
+					<control type="label">
+						<posx>263</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
 			</control>
-			</itemlayout>
-			<focusedlayout width="460" height="40">
-			<control type="label">
-				<posx>0</posx>
-				<width>460</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label,․  $LOCALIZE[208]... ]</label>
-				</control>
-			</focusedlayout>
 		</control>
-	 </control>		
-		
 
 	  <control type="group">
-				<posx>45</posx>
+				<posx>105</posx>
 				<posy>25</posy>
-		    <include>TopOptionsSlideAnimations</include>
+		    <include>ContentInfoSlideAnimations</include>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -57,19 +113,18 @@
 				<width>1000</width>
 				<align>left</align>
 				<aligny>center</aligny>
-				<itemgap>20</itemgap>
+				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="label">
 				  <include>TopBigLabel</include>
-					<label>$LOCALIZE[14000] $LOCALIZE[33061]</label>
+					<label>$LOCALIZE[14000] $LOCALIZE[33061]:</label>
 				</control>
 				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-			    <label>342</label>
-	       <visible>Container.Content(Movies)</visible>
+				  <include>TopBigLabel</include>
+			    <label>$INFO[ListItem.Label]</label>
+	        <visible>Container.Content(Movies)</visible>
 				</control>
 			</control>
 	  </control>
-
 	</controls>
 </window>

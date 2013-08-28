@@ -1,40 +1,42 @@
 <window type="dialog">
-	<defaultcontrol>9000</defaultcontrol>
+	<defaultcontrol>101</defaultcontrol>
   <allowoverlay>no</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
 	<controls>
 
-		<control type="group">
-			<include>FanartFade</include>
-			<control type="image">
-				<description>GlobalSearch Fanart</description>
-			  <include>FullscreenDimensions</include>
-				<texture background="true">$VAR[GlobalSearchFanart]</texture>
-				<fadetime>250</fadetime>
-			  <visible>!Skin.HasSetting(HideBGFanart)</visible>
-			</control>
-			<control type="image">
-			  <description>Vignette</description>
-			  <include>FullscreenDimensions</include>
-			  <texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
-				<fadetime>250</fadetime>
-			</control>
-			<control type="image">
-			  <description>Vignette</description>
-			  <include>FullscreenDimensions</include>
-		    <texture background="true">special://skin/extras/bg/bg_diffuse.png</texture>
-				<fadetime>250</fadetime>
-	      <colordiffuse>D5FFFFFF</colordiffuse>
-			  <visible>!Skin.HasSetting(HideBGFanart)</visible>
-			</control>
-		</control>
-
 		<control type="group" id="100">
-				<visible>IsEmpty(Control.GetLabel(190)) + !Window.IsVisible(AddonSettings)</visible>
-				<include>ShutdownMenuAnimation</include>
+		
+		 <control type="group">
+				<include>FanartFade</include>
+				<control type="image">
+					<description>GlobalSearch Fanart</description>
+				  <include>FullscreenDimensions</include>
+					<texture background="true">$VAR[GlobalSearchFanart]</texture>
+					<fadetime>250</fadetime>
+				  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+				</control>
+				<control type="image">
+				  <description>Vignette</description>
+				  <include>FullscreenDimensions</include>
+				  <texture background="true">windows/bg/bg_vignette.png</texture>
+					<fadetime>250</fadetime>
+				</control>
+				<control type="image">
+				  <description>Vignette</description>
+				  <include>FullscreenDimensions</include>
+				  <texture background="true">windows/bg/bg_diffuse.png</texture>
+					<fadetime>250</fadetime>
+		      <colordiffuse>D5FFFFFF</colordiffuse>
+				  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+				</control>
+		 </control>
+		
+		 <control type="group" id="101">
         <include>DialogZoomInOutAnimation</include>
-				<posx>250</posx>
-				<posy>90</posy>
+			  <visible>!Window.IsVisible(AddonSettings)</visible>
+			  <animation type="Conditional" condition="!IsEmpty(Control.GetLabel(190)) | Control.HasFocus(9111) | Window.IsActive(script-globalsearch-contextmenu.xml)">
+			     <effect type="slide" start="0" end="100" time="350" tween="sine" easing="inout"/>
+			  </animation>
 				<!-- Movies -->
 				<control type="group" id="119">
 					<width>750</width>
@@ -45,17 +47,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="111">
-						<visible>Container(9000).HasFocus(1)</visible>
+						<visible>Container(9111).HasFocus(1)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>111</onup>
 						<ondown>111</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -89,7 +92,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(111) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Window.IsVisible(shutdownmenu)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -178,17 +180,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="121">
-						<visible>Container(9000).HasFocus(2)</visible>
+						<visible>Container(9111).HasFocus(2)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>121</onup>
 						<ondown>121</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -222,7 +225,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(121) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Window.IsVisible(shutdownmenu)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -325,17 +327,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="141">
-						<visible>Container(9000).HasFocus(4)</visible>
+						<visible>Container(9111).HasFocus(4)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>141</onup>
 						<ondown>141</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -369,7 +372,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(141) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -458,17 +460,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="151">
-						<visible>Container(9000).HasFocus(5)</visible>
+						<visible>Container(9111).HasFocus(5)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>151</onup>
 						<ondown>151</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -493,7 +496,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(151) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -574,17 +576,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="161">
-						<visible>Container(9000).HasFocus(6)</visible>
+						<visible>Container(9111).HasFocus(6)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>161</onup>
 						<ondown>161</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -609,7 +612,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(161) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -680,17 +682,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="171">
-						<visible>Container(9000).HasFocus(7)</visible>
+						<visible>Container(9111).HasFocus(7)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>171</onup>
 						<ondown>171</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -724,7 +727,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(171) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -803,17 +805,18 @@
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="181">
-						<visible>Container(9000).HasFocus(8)</visible>
+						<visible>Container(9111).HasFocus(8)</visible>
 				    <include>GlobalSearchSlideAnimations</include>
-						<posx>20</posx>
-						<posy>20</posy>
+						<posx>270</posx>
+						<posy>110</posy>
 						<width>750</width>
 						<height>520</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
+						<onleft>9111</onleft>
+						<onright>9111</onright>
 						<onup>181</onup>
 						<ondown>181</ondown>
 						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<wraparound>true</wraparound>
 						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
 						<itemlayout width="560" height="65">
@@ -847,7 +850,6 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>GlobalSearchFocusAnimations</include>
-				        <animation effect="zoom" start="100" end="92" center="360,140" time="250" tween="sine" easing="inout" condition="![Control.HasFocus(181) | Window.IsVisible(script-globalsearch-contextmenu.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]">Conditional</animation>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
@@ -926,6 +928,55 @@
 						</focusedlayout>
 					</control>
 				</control>
+		 </control>
+	   
+		 <!-- ================ -->
+		 <!-- Top Content Info -->
+		 <!-- ================ -->
+		 <control type="group">
+				<posx>105</posx>
+				<posy>25</posy>
+		    <include>ShutdownMenuAnimation</include>
+			  <visible>![Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-globalsearch-contextmenu.xml)]</visible>
+		    <include>GlobalSearchSlideAnimations</include>
+			  <animation type="Conditional" condition="!Control.HasFocus(9111) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">
+			     <effect type="slide" start="0" end="-60" time="350" tween="sine" easing="inout"/>
+			  </animation>  
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>70</height>
+					<width>1000</width>
+					<align>left</align>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="label">
+					  <include>TopBigLabel</include>
+					  <label>$LOCALIZE[284]</label>
+						<visible>Control.IsVisible(199)</visible>
+					</control>
+					<control type="label">
+					  <include>TopBigLabel</include>
+						<label>$LOCALIZE[283]:</label>
+					  <visible>IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
+					</control>
+					<control type="label">
+					  <include>TopBigLabel</include>
+						<label>$INFO[Container(9111).ListItem.Label]</label>
+					  <visible>IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[194] [COLOR=blue]$INFO[Control.GetLabel(191)][/COLOR]</label>
+					  <include>TopBigLabel</include>
+					  <visible>!IsEmpty(Control.GetLabel(190))</visible>
+					</control>
+				</control>
+		 </control>
+
+	   <control type="group">
+				<include>GlobalSearchSlideAnimations</include>
+	      <include>CommonWeatherAndClock</include>
+	   </control>
 		</control>
 	
 	
@@ -933,28 +984,79 @@
 	  <!-- Top Content Menu -->
 	  <!-- ================ -->
 		<control type="group">
-			<posx>45</posx>
-			<posy>75</posy>
 	    <include>GlobalSearchSlideAnimations</include>
-			<animation effect="slide" start="0" end="-300" time="250" tween="cubic" easing="in" condition="!Control.HasFocus(9000) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">Conditional</animation>
-			<control type="list" id="9000">
-				<posx>0</posx>
-				<posy>0</posy>
+	    <include>ShutdownMenuAnimation</include>
+	    <visible>!Window.IsActive(script-globalsearch-contextmenu.xml)</visible>
+		  <animation type="Conditional" condition="!Control.HasFocus(9111) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">
+	      <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+	      <effect type="slide" start="0,0" end="0,-55" time="300" tween="sine" easing="inout" />
+		  </animation>					
+      <control type="image">
+        <posx>30</posx>
+        <posy>13</posy>
+				<width>380</width>
+				<height>75</height>
+				<texture>dialogs/menus/topmenus_search.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+      <control type="image">
+        <posx>30</posx>
+        <posy>88</posy>
+				<width>360</width>
+				<height>37</height>
+				<texture border="15">dialogs/menus/topmenus_empty.png</texture>
+        <aspectratio>stretch</aspectratio>
+				<visible>!Control.IsVisible(198)</visible>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(119)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(129)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(139)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(149)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(159)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(169)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(179)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(189)">Conditional</animation>
+      </control>
+      <control type="image">
+        <posx>30</posx>
+        <posy>125</posy>
+				<width>380</width>
+				<height>22</height>
+				<texture>dialogs/menus/bottom_search.png</texture>
+        <aspectratio>stretch</aspectratio>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(119)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(129)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(139)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(149)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(159)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(169)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(179)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(189)">Conditional</animation>
+      </control>
+			<control type="list" id="9111">
+				<posx>30</posx>
+				<posy>88</posy>
 				<width>380</width>
 				<height>540</height>
 				<onleft>100</onleft>
 				<onright>100</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>9111</onup>
+				<ondown>9111</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-	      <include>ShutdownMenuAnimation</include>
-				<itemlayout height="40" width="380">
+				<itemlayout height="37" width="380">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>360</width>
+						<height>37</height>
+						<texture border="15">dialogs/menus/topmenus_empty.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
 					<control type="label">
-						<posx>4</posx>
+						<posx>25</posx>
 						<posy>0</posy>
 						<width>380</width>
-						<height>40</height>
+						<height>37</height>
 						<font>FontSize_22</font>
 						<textcolor>77white</textcolor>
 					  <shadowcolor>99000000</shadowcolor>
@@ -962,13 +1064,33 @@
 						<aligny>center</aligny>
 						<label>․  $INFO[ListItem.Label]</label>
 					</control>
-				</itemlayout>
-				<focusedlayout height="40" width="380">
 					<control type="label">
-						<posx>4</posx>
+						<posx>330</posx>
 						<posy>0</posy>
 						<width>380</width>
-						<height>40</height>
+						<height>37</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="37" width="380">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>360</width>
+						<height>37</height>
+						<texture border="15">dialogs/menus/topmenus_empty.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>25</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>37</height>
 						<font>FontSize_22</font>
 						<textcolor>white</textcolor>
 					  <shadowcolor>99000000</shadowcolor>
@@ -976,55 +1098,69 @@
 						<aligny>center</aligny>
 						<label>․  $INFO[ListItem.Label]</label>
 					</control>
+					<control type="label">
+						<posx>330</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>37</height>
+						<font>FontSize_22</font>
+						<textcolor>white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
 				</focusedlayout>
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[342]</label>
+						<label2>$INFO[Control.GetLabel(110)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(119)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[20343]</label>
+						<label2>$INFO[Control.GetLabel(120)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(129)</visible>
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[33054]</label>
+						<label2>$INFO[Control.GetLabel(130)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(139)</visible>
 					</item>
 					<item id="4">
 						<label>$LOCALIZE[20360]</label>
+						<label2>$INFO[Control.GetLabel(140)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(149)</visible>
 					</item>
 					<item id="5">
 						<label>$LOCALIZE[20389]</label>
+						<label2>$INFO[Control.GetLabel(150)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(159)</visible>
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[133]</label>
+						<label2>$INFO[Control.GetLabel(160)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(169)</visible>
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[132]</label>
+						<label2>$INFO[Control.GetLabel(170)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(179)</visible>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[134]</label>
+						<label2>$INFO[Control.GetLabel(180)]</label2>
 						<onclick>noop</onclick>
 						<visible>Control.IsVisible(189)</visible>
 					</item>
 					<item id="9">
-						<label>$LOCALIZE[31203]</label>
-						<onclick>SendClick(198)</onclick>
-						<onclick>Control.Setfocus(9000,0)</onclick>
-						<visible>Control.IsVisible(198)</visible>
-					</item>
-					<item id="10">
 						<label>5</label>
             <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
 						<visible>Control.IsVisible(198)</visible>
@@ -1036,8 +1172,8 @@
 				<!-- Hide this Control and use the list to pass the label -->
 				<posx>2000</posx>
 				<posy>2000</posy>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>9111</onup>
+				<ondown>9111</ondown>
 				<onleft>101</onleft>
 				<onright>101</onright>
 			</control>
@@ -1061,99 +1197,8 @@
 				<visible>false</visible>
 			</control>
 		</control>
-	
-	
-		<include>CommonItems</include>
-	
-	
-	  <!-- ================ -->
-	  <!-- Top Content Info -->
-	  <!-- ================ -->
-	  <control type="group">
-			<posx>45</posx>
-			<posy>25</posy>
-		  <visible>![Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-globalsearch-contextmenu.xml)]</visible>
-	    <include>GlobalSearchSlideAnimations</include>
-	    <include>CommonWeatherAndClock</include>
-	    <include>ShutdownMenuAnimation</include>
-			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>70</height>
-				<width>1000</width>
-				<align>left</align>
-				<itemgap>10</itemgap>
-				<orientation>horizontal</orientation>
-				<control type="label">
-				  <include>TopBigLabel</include>
-				  <label>$LOCALIZE[284]</label>
-					<visible>Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopBigLabel</include>
-					<label>$LOCALIZE[283]:</label>
-				  <visible>IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopBigLabel</include>
-					<label>$INFO[Container(9000).ListItem.Label]</label>
-				  <visible>IsEmpty(Control.GetLabel(190)) + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-					<label>$LOCALIZE[194] [COLOR=blue]$INFO[Control.GetLabel(191)][/COLOR]</label>
-				  <include>TopBigLabel</include>
-				  <visible>!IsEmpty(Control.GetLabel(190))</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(110)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(111) | Container(9000).HasFocus(1)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(120)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(121) | Container(9000).HasFocus(2)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(130)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(131) | Container(9000).HasFocus(3)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(140)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(141) | Container(9000).HasFocus(4)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(150)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(151) | Container(9000).HasFocus(5)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(160)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(161) | Container(9000).HasFocus(6)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(170)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(171) | Container(9000).HasFocus(7)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-					<label>$LOCALIZE[31020] $INFO[Control.GetLabel(180)] $LOCALIZE[31025]</label>
-          <visible>Control.HasFocus(181) | Container(9000).HasFocus(8)</visible>
-          <visible>IsEmpty(Control.GetLabel(190))  + !Control.IsVisible(199)</visible>
-				</control>
-			</control>
-	  </control>
+
+
 		  
 	</controls>
 </window>

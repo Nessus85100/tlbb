@@ -26,13 +26,13 @@
 		<control type="image">
 		  <description>bg vignette</description>
 		  <include>FullscreenDimensions</include>
-			<texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
+			<texture background="true">windows/bg/bg_vignette.png</texture>
 			<fadetime>250</fadetime>
 		</control>
 		<control type="image">
 		  <description>bg diffuse</description>
 		  <include>FullscreenDimensions</include>
-		  <texture background="true">special://skin/extras/bg/bg_diffuse.png</texture>
+			<texture background="true">windows/bg/bg_diffuse.png</texture>
 			<fadetime>250</fadetime>
       <colordiffuse>D5FFFFFF</colordiffuse>
 		</control>
@@ -536,7 +536,7 @@
 	 <control type="group">
 		<posx>45</posx>
 		<posy>0</posy>
-	  <include>TopOptionsSlideAnimations</include>
+	  <include>ContentInfoSlideAnimations</include>
 		<visible allowhiddenfocus="true">Control.HasFocus(122) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
 		<control type="label">
 			<height>30</height>
@@ -591,7 +591,7 @@
 	 <control type="group">
 		<posx>45</posx>
 		<posy>0</posy>
-	  <include>TopOptionsSlideAnimations</include>
+	  <include>ContentInfoSlideAnimations</include>
 		<visible allowhiddenfocus="true">Control.HasFocus(127) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
 		<control type="label">
 			<height>30</height>
@@ -782,12 +782,12 @@
 			</control>
 		</control>		
 
+	  <include>CommonWeatherAndClock</include>	
 
     <!-- Top Content Info -->
 	  <control type="group">
 			<posx>45</posx>
 			<posy>25</posy>
-	    <include>CommonWeatherAndClock</include>	
 	    <include>CommonSlideAnimations</include>
 	    <control type="label" id="109">
 	      <description>Download info text</description>

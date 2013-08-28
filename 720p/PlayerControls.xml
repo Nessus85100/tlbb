@@ -51,7 +51,7 @@
 					<posy>0</posy>
 					<width>129</width>
 					<height>181</height>
-					<texture fallback="thumbs/fallback_fanart.png">$VAR[PlayerThumbs]</texture>
+					<texture fallback="thumbs/fallback_poster.png">$VAR[PlayerThumbs]</texture>
 					<aspectratio aligny="center" scalediffuse="false">stretch</aspectratio>
 				  <visible>VideoPlayer.Content(Movies)</visible>
 				</control>
@@ -61,7 +61,7 @@
 					<posy>0</posy>
 					<width>129</width>
 					<height>181</height>
-					<texture fallback="thumbs/fallback_fanart.png">$VAR[PlayerThumbs]</texture>
+					<texture fallback="thumbs/fallback_poster.png">$VAR[PlayerThumbs]</texture>
 					<aspectratio aligny="center" scalediffuse="false">stretch</aspectratio>
 				  <visible>VideoPlayer.Content(Episodes)</visible>
 				</control>
@@ -1012,7 +1012,7 @@
 							<label>$LOCALIZE[5]</label>
 							<icon>special://skin/extras/icons/Settings.png</icon>
 					    <include>OnClickDialogsClose</include>
-							<onclick>ActivateWindow(AppearanceSettings)</onclick>
+							<onclick>ActivateWindow(Settings)</onclick>
 						  <visible>!Skin.HasSetting(HideSettingsButton)</visible>
 					 </item>
 					 <item id="16">

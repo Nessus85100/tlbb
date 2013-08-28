@@ -10,12 +10,7 @@
 		<include>BackgroundVignette</include>
 		<!-- Main Home Menu Wraplist -->
 		<include>HomeMenuWraplist</include>
-	  <!-- Home TopMenu -->
-		<include>TopHomeMenu</include>
-	  <!-- Home Now Playing -->
-		<include>HomeNowPlaying</include>
-	  <!-- Various Home Includes -->
-    <include>RSSFeed</include> 
+	  <!-- Home Widgets -->
 		<include condition="!Skin.HasSetting(HideMoviesSubMenu)">HomeSubMenuMovies</include>
 		<include condition="!Skin.HasSetting(HideTVShowsSubMenu)">HomeSubMenuTVShows</include>
 		<include condition="!Skin.HasSetting(HideMusicSubMenu)">HomeSubMenuMusic</include>
@@ -24,7 +19,13 @@
 		<include>HomeSubMenusArrows</include>
 		<include>CommonDialogsFadeOutBG</include>
 		<include>ContentSkinWidgetsInfo</include>
+	  <!-- Home Now Playing -->
+		<include>HomeNowPlaying</include>
+	  <!-- Home TopMenu -->
+		<include>TopHomeMenu</include>
+		<include>HomeWeatherAndClock</include>
 	  <!-- TLBB Logo -->
 		<include>TLBBLogo</include>
+    <include>RSSFeed</include> 
 	</controls>	
 </window>

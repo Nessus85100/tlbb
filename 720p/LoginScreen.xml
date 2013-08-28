@@ -92,6 +92,9 @@
 		</control>
    </control>
 
+
+		<include>CommonWeatherAndClock</include>
+
     <!-- ================ -->
     <!-- Top Content Info -->
     <!-- ================ -->
@@ -99,14 +102,14 @@
 			<posx>45</posx>
 			<posy>25</posy>
 		  <visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu) | [Window.IsVisible(LockSettings) | Window.IsVisible(ProfileSettings)]</visible>
-		  <include>HomeSlideAnimations</include>
+		  <include>CommonSlideAnimations</include>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>
-				<itemgap>20</itemgap>
+				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="label">
 				  <include>TopBigLabel</include>
@@ -122,13 +125,6 @@
 				</control>
 			</control>
 	  </control>
-
-	 <control type="group.">
-		<posx>25</posx>
-		<posy>40</posy>
-		<include>HomeSlideAnimations</include>
-	  <include>WeatherAndClock</include>
-	 </control>
 
 		<control type="group">
 			<posx>1112</posx>

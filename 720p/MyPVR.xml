@@ -8,6 +8,7 @@
 		<include>CommonScrollingLetters</include>
 		<include>CommonNowPlaying</include>
 		<include>CommonDialogsFadeOutBG</include>
+		<include>CommonWeatherAndClock</include>
 
     <!-- ==================== -->
     <!-- PVR Options Controls -->
@@ -16,7 +17,6 @@
 			<posx>45</posx>
 			<posy>25</posy>
       <include>CommonSlideAnimations</include>
-		  <include>CommonWeatherAndClock</include>
       <!-- PVR Options -->
 			<control type="grouplist" id="9111">
 				<posx>0</posx>

@@ -278,8 +278,10 @@
 					</control>
 				</control>
 			</control>
-	
-	    <!-- Header & Footer Labels -->
+
+		  <!-- ============================ -->
+      <!-- == Header & Footer Labels == -->
+		  <!-- ============================ -->
 			<control type="group">
 				<posx>120</posx>
 				<posy>163</posy>
@@ -367,8 +369,10 @@
 				</control>
 			</control>
 		</control>
+
 		<include>CommonNowPlaying</include>
 		<include>CommonDialogsFadeOutBG</include>
-		<include>SettingsMenu</include>
+		<include>SettingsCategoryContentInfo</include>
+	  <include>SettingsWeatherAndClock</include>
 	</controls>
 </window>

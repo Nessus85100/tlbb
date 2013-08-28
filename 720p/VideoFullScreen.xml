@@ -4,7 +4,7 @@
 		<control type="image" id="1">
 		  <description>Vignette</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
+			<texture background="true">windows/bg/bg_vignette.png</texture>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <visible>Window.IsActive(InfoDialog) + !Window.IsActive(ShutdownMenu)</visible>
 		 <animation effect="fade" time="300">Visible</animation>
@@ -13,7 +13,7 @@
 		<control type="image" id="1">
 		  <description>Vignette</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
+			<texture background="true">windows/bg/bg_vignette.png</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <visible>!Window.IsActive(SliderDialog)</visible>
@@ -22,7 +22,7 @@
 		<control type="image" id="1">
 		  <description>Diffuse</description>
 			<include>FullscreenDimensions</include>
-		  <texture background="true">special://skin/extras/bg/menus_overlay.png</texture>
+			<texture background="true">windows/bg/menus_overlay.png</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <visible>!Window.IsActive(SliderDialog)</visible>
@@ -612,21 +612,20 @@
 	    <visible>Window.IsActive(FullScreenVideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![Player.ShowInfo | Window.IsActive(VideoOSD)] + !Window.IsActive(script-XBMC-Subtitles-main.xml) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput) + !Window.IsActive(PVROSDChannels) + !Window.IsActive(PVROSDGuide)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" time="350" center="640,360" start="150" end="100" tween="cubic" easing="out"/>
-				<effect type="fade" time="350" center="640,360" start="0" easing="out" end="100"/>
+				<effect type="fade" time="350" start="0" easing="out" end="100"/>
 			</animation>
 			<animation type="WindowClose" reversible="false">
 				<effect type="zoom" time="250" center="640,360" start="100" end="150" tween="cubic" easing="in"/>
-				<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0"/>
+				<effect type="fade" time="250" start="100" easing="in" end="0"/>
 			</animation>
 			<animation type="Visible" reversible="false">
 				<effect type="zoom" time="350" center="640,360" start="150" end="100" tween="cubic" easing="out"/>
-				<effect type="fade" time="350" center="640,360" start="0" easing="out" end="100"/>
+				<effect type="fade" time="350" start="0" easing="out" end="100"/>
 			</animation>			
 			<animation type="Hidden" reversible="false">
 				<effect type="zoom" time="350" center="640,360" start="100" end="150" tween="cubic" easing="in"/>
-				<effect type="fade" time="350" center="640,360" start="100" easing="in" end="0"/>
+				<effect type="fade" time="350" start="100" easing="in" end="0"/>
 			</animation>
-			
 			<control type="image" id="1">
 				<posx>450</posx>     
 				<posy>165</posy>    
@@ -634,8 +633,11 @@
 				<height>395</height> 
 				<texture>osd/osd_controls_bg.png</texture>
 				<colordiffuse>AA999999</colordiffuse>
+				<animation type="Conditional" condition="Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">
+					<effect type="zoom" time="350" delay="9000" center="640,360" start="100" end="0" tween="cubic" easing="in"/>
+					<effect type="fade" time="350" delay="9000" start="100" easing="in" end="0"/>
+				</animation>
 			</control>
-	
 		  <control type="group" id="1">
 				<posx>485</posx>
 				<posy>195</posy>
@@ -672,6 +674,10 @@
 			<control type="group" id="1">
 				<posx>485</posx>
 				<posy>215</posy>
+				<animation type="Conditional" condition="Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">
+					<effect type="zoom" time="350" delay="9000" center="640,360" start="100" end="0" tween="cubic" easing="in"/>
+					<effect type="fade" time="350" delay="9000" start="100" easing="in" end="0"/>
+				</animation>
 				<control type="group" id="1">
 					<posx>3</posx>
 					<visible>!Player.ChapterCount</visible>

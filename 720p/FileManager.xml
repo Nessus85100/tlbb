@@ -333,7 +333,6 @@
 			<posy>25</posy>
 		  <visible>!Window.IsActive(ShutdownMenu)</visible>
 		  <include>CommonSlideAnimations</include>
-		  <include>CommonWeatherAndClock</include>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -360,6 +359,7 @@
 			</control>
 	  </control>
 
+		<include>CommonWeatherAndClock</include>
 		<include>CommonItems</include>
 	</controls>
 </window>

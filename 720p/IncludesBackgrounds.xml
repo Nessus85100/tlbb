@@ -22,7 +22,7 @@
 			<aspectratio>stretch</aspectratio>
       <texture background="true">windows/bg/black.jpg</texture>
 			<visible>Player.HasAudio</visible>
-		</control>	
+		</control>
 		<control type="image">
 			<description>Default Background Image</description>
 			<posx>-1</posx>
@@ -35,6 +35,14 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>![Player.HasVideo + !Skin.HasSetting(HideBGVideo)]</visible>
 			<visible>![Player.HasAudio + [[Skin.HasSetting(Vis-Fanart) + !IsEmpty(Player.Art(fanart))] | Skin.HasSetting(Vis-CustomSlideshow) | Skin.HasSetting(Vis-ArtistSlideshow)]]</visible>
+		</control>
+		<control type="image">
+			<description>Media BG</description>
+		  <include>FullscreenDimensions</include>
+			<texture background="true">$VAR[MediaBackground]</texture>
+			<include>FanartFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		  <visible>Skin.HasSetting(HideBGFanart)</visible>
 		</control>
 		<control type="videowindow">
 			<description>Video</description>
@@ -145,13 +153,31 @@
 			<visible>Control.HasFocus(83)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
+		<!-- HomeWidget RecentMovies fanart -->
+	  <control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Container(35).ListItem.Property(FanartImage)]</texture>
+			<include>BackgroundFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Control.HasFocus(35)</visible>
+		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+		</control>
+		<!-- HomeWidget RecentMovies fanart -->
+	  <control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Container(45).ListItem.Property(FanartImage)]</texture>
+			<include>BackgroundFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Control.HasFocus(45)</visible>
+		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+		</control>
 	</include>
 
 	<include name="BackgroundVignette">
 		<control type="image">
 		  <description>Vignette</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">special://skin/extras/bg/bg_vignette.png</texture>
+			<texture background="true">windows/bg/bg_vignette.png</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 <!--	<colordiffuse>FFCDCDCD</colordiffuse>
@@ -159,11 +185,11 @@
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
-		  <texture background="true">special://skin/extras/bg/bg_diffuse.png</texture>
+			<texture background="true">windows/bg/bg_diffuse.png</texture>
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <colordiffuse>D5FFFFFF</colordiffuse>
-			<visible>Control.IsVisible(50) | Control.IsVisible(57) | [Window.IsActive(contextmenu) + ![Window.IsActive(favourites) | Window.IsActive(locksettings)]] | Window.IsActive(shutdownmenu) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation)</visible>
+			<visible>Control.IsVisible(57) | [Control.IsVisible(50) + !Window.IsActive(weather) + !Window.IsActive(musicplaylisteditor)] | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)]</visible>
 	  </control>
 	</include>
 

@@ -1,9 +1,14 @@
 <window id="141">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">100</defaultcontrol>
 	<controls>
+	<control type="button" id="100">
+		<include>TopButton</include>
+    <onfocus>SetFocus(3)</onfocus>
+    <animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
+  </control>
 	 <control type="group">
 	  <include>DialogAnimation</include>
-		<visible>!Window.IsActive(yesnodialog)</visible>
+		<visible>!Window.IsActive(yesnodialog) + !Window.IsActive(busydialog) + !Window.IsActive(VirtualKeyboard)</visible>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>

@@ -1,3 +1,20 @@
+[B][COLOR=FF56ADDA]v1.5.0 - Release Date 28/8/2013[/COLOR][/B]
+• New layout for the Settings categories window.
+• New layout for all the menus including top view options menus.
+• New fallbacks icons with TLBB logo.
+• Added Media sections backgrounds visible when the fanart is disable.
+  NOTE: The backgrounds are outside of the media folder (tlbb/extras/bg) so user can replace them easily.
+• Fixed Access Point dialog missing focus at open.
+• Changed the pause info in videofullscreen to fadeout after a couple of seconds.
+• Changed fanart thumb to poster thumb in Thumbnails view for Movies and TV Shows.
+• More changes regarding system resources and speed optimization.
+• Severall code fixes and tweeks.
+
+[B][COLOR=FF56ADDA]v1.4.0[/COLOR][/B]
+• New layout for the Fist time helper.
+• Fixed "Help Tip" still showing after Movies or TV Shows scrapped in the library.
+• Fixed missing watched overlay for Video Add-ons.
+
 [B][COLOR=FF56ADDA]v1.3.1 - Release Date 09/8/2013[/COLOR][/B]
 • Small changes to first time helper screens.
 • Make HD-Trailer the default action for the Trailers menu option.
