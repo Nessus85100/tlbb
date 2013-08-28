@@ -1,3 +1,7 @@
+[B][COLOR=FF56ADDA]v1.5.1 - Release Date 29/8/2013[/COLOR][/B]
+• Added Settings button to the home top menu and changed the "WiFi" string to "Network".
+• Changed Settings button in the home menu hidden by default.
+
 [B][COLOR=FF56ADDA]v1.5.0 - Release Date 28/8/2013[/COLOR][/B]
 • New layout for the Settings categories window.
 • New layout for all the menus including top view options menus.

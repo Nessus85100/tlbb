@@ -159,7 +159,7 @@
 						 <item id="9">
 								<label>$LOCALIZE[5]</label>
 								<onclick>ActivateWindow(Settings)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
+								<visible>Skin.HasSetting(ShowHomeMenuSettingsButton)</visible>
 						 </item>
 						 <item id="11">
 								<label>$LOCALIZE[31000]</label>
@@ -893,11 +893,11 @@
 					<align>left</align>
 	        <orientation>horizontal</orientation>
 	        <include>HomeSlideAnimations</include>
-					<control type="button." id="210">
-						<description>Favorites</description>
+					<control type="button" id="210">
+						<description>Settings</description>
 				    <include>TopButton</include>
 				    <onclick>SetFocus(20)</onclick>
-				    <onclick>ActivateWindow(favourites)</onclick>
+						<onclick>ActivateWindow(Settings)</onclick>
 					</control>
 					<control type="button" id="211">
 						<description>Search</description>
@@ -931,29 +931,29 @@
 					  <include>TopBigLabel</include>
 						<label>10000</label>
 					</control>
-					<control type="label.">
+					<control type="label">
 					  <include>TopSmallLabel</include>
-						<label>$LOCALIZE[1036]</label>
+						<label>$LOCALIZE[5]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="in" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="94" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
 						<label>$LOCALIZE[137]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="in" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="94" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
 						<label>$LOCALIZE[33060]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="in" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="94" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
-						<label>WiFi</label>
+						<label>$LOCALIZE[705]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="in" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="94" time="200" tween="cubic" easing="in" center="auto" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
 					</control>
 				</control>
 				<control type="group">
