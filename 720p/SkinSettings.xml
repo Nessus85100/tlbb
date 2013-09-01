@@ -19,7 +19,7 @@
 			  <include>FullscreenDimensions</include>
 			  <texture background="true">windows/settings/bg_settings.png</texture>
 			</control>
-		</control>			
+		</control>
 
 		<!-- ======================== -->
 		<!-- == Categories Buttons == -->
@@ -203,7 +203,7 @@
 					  <control type="button" id="82011">
 								<onleft>8800</onleft>
 								<onright>9000</onright>
-								<onup>8260</onup>
+								<onup>8209</onup>
 								<ondown>8202</ondown>
 						    <enable>!Skin.HasSetting(HideHomeMenuMusicButton)</enable>
 								<texturefocus>-</texturefocus>
@@ -459,20 +459,28 @@
 						<selected>Skin.HasSetting(HideHomeMenuWeatherButton)</selected>
 						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
 					</control>
+					<control type="radiobutton" id="8258">
+						<description>Hide Trailers Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31105]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuTrailersButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuTrailersButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
 					<control type="radiobutton" id="8259">
 						<description>Hide Favorites Button</description>
 	          <include>SettingsRadioButton</include>
 						<label> • $LOCALIZE[31166]</label>
 						<onclick>Skin.ToggleSetting(HideHomeMenuFavoritesButton)</onclick>
 						<selected>Skin.HasSetting(HideHomeMenuFavoritesButton)</selected>
-						<visible>Skin.HasSetting(HomeCategoriesSettings)</visible>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
 					</control>
 					<control type="radiobutton" id="8260">
-						<description>Hide Trailers Button</description>
+						<description>Hide Settings Button</description>
 	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31105]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuTrailersButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuTrailersButton)</selected>
+						<label> • $LOCALIZE[31113]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuSettingsButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuSettingsButton)</selected>
 						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
 					</control>
 
@@ -516,14 +524,6 @@
 						<label> • $LOCALIZE[31104]</label>
 						<onclick>Skin.ToggleSetting(ShowHomeMenuSearchButton)</onclick>
 						<selected>Skin.HasSetting(ShowHomeMenuSearchButton)</selected>
-						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8258">
-						<description>Show Settings Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31113]</label>
-						<onclick>Skin.ToggleSetting(ShowHomeMenuSettingsButton)</onclick>
-						<selected>Skin.HasSetting(ShowHomeMenuSettingsButton)</selected>
 						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
 					</control>
 					

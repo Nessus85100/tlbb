@@ -413,7 +413,7 @@
 					<aspectratio align="right" aligny="center">keep</aspectratio>
 					<fadetime>150</fadetime>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<bordertexture border="20">views/list/icon_border.png</bordertexture>
+					<bordertexture border="20">views/list/panel2.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 			</control>
@@ -857,7 +857,7 @@
 					<height>460</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>150</fadetime>
-					<texture border="50">views/list/icon_border.png</texture>
+					<texture border="50">views/list/panel2.png</texture>
 					<bordersize>20</bordersize>
 				</control>
 		  </control>

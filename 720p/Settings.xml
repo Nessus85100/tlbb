@@ -36,6 +36,16 @@
 							<width>167</width>
 							<height>142</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<posx>22</posx>
+							<posy>23</posy>
+							<width>167</width>
+							<height>142</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
@@ -45,8 +55,8 @@
 							<posy>160</posy>
 							<width>162</width>
 							<height>35</height>
-							<textcolor>99white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<textcolor>white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<font>FontSize_22</font>
 							<scroll>false</scroll>
 							<align>center</align>
@@ -67,8 +77,19 @@
 							<posy>23</posy>
 							<width>167</width>
 							<height>142</height>
+							<colordiffuse>FF04aeda</colordiffuse>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<posx>22</posx>
+							<posy>23</posy>
+							<width>167</width>
+							<height>142</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
 						</control>
@@ -77,8 +98,8 @@
 							<posy>160</posy>
 							<width>162</width>
 							<height>35</height>
-							<textcolor>99white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<textcolor>white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<font>FontSize_22</font>
 							<scroll>false</scroll>
 							<align>center</align>
@@ -92,7 +113,7 @@
 							<width>162</width>
 							<height>35</height>
 							<textcolor>blue</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<font>FontSize_22</font>
 							<scrollspeed>35</scrollspeed>
 							<align>center</align>
@@ -107,12 +128,7 @@
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="30">views/thumbnails/focus.png</texture>
 	            <animation type="Focus">
-	              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-	              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-	            </animation>
-	            <animation type="Unfocus">
-	              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-	              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
 	            </animation>
 							<visible>Control.HasFocus(7000)</visible>
 						</control>
@@ -120,62 +136,63 @@
 					<content>
 						<item id="1">
 							<onclick>ActivateWindow(AppearanceSettings)</onclick>
-							<thumb>windows/settings/icons/Appearance.png</thumb>
+							<thumb>icons/Appearance.png</thumb>
 							<label>480</label>
 						</item>
 						<item id="2">
 							<onclick>ActivateWindow(VideosSettings)</onclick>
-							<thumb>windows/settings/icons/Video.png</thumb>
+							<thumb>DefaultVideo.png</thumb>
 							<label>157</label>
 						</item>
 						<item id="3">
 							<onclick>ActivateWindow(PVRSettings)</onclick>
-							<thumb>windows/settings/icons/PVR.png</thumb>
+							<thumb>icons/LiveTV.png</thumb>
 							<label>31000</label>
 						</item>
 						<item id="4">
 							<onclick>ActivateWindow(MusicSettings)</onclick>
-							<thumb>windows/settings/icons/Music.png</thumb>
+							<thumb>DefaultAudio.png</thumb>
 							<label>2</label>
 						</item>
 						<item id="5">
 							<onclick>ActivateWindow(PicturesSettings)</onclick>
-							<thumb>windows/settings/icons/Pictures.png</thumb>
+							<thumb>DefaultPicture.png</thumb>
 							<label>1</label>
 						</item>
 						<item id="6">
 							<onclick>ActivateWindow(WeatherSettings)</onclick>
-							<thumb>windows/settings/icons/Weather.png</thumb>
+							<thumb>icons/Weather.png</thumb>
 							<label>8</label>
 						</item>
 						<item id="7">
 							<onclick>ActivateWindow(AddonBrowser)</onclick>
-							<thumb>windows/settings/icons/Addons.png</thumb>
+							<thumb>DefaultAddon.png</thumb>
 							<label>24001</label>
 						</item>
 						<item id="8">
 							<onclick>ActivateWindow(NetworkSettings)</onclick>
-							<thumb>windows/settings/icons/Services.png</thumb>
+							<thumb>DefaultNetwork.png</thumb>
 							<label>14036</label>
 						</item>
 						<item id="9">
 							<onclick>ActivateWindow(SystemSettings)</onclick>
-							<thumb>windows/settings/icons/System.png</thumb>
+							<thumb>icons/System.png</thumb>
 							<label>13000</label>
 						</item>
 						<item id="10">
 							<onclick>ActivateWindow(SystemInfo)</onclick>
-							<thumb>windows/settings/icons/SystemInfo.png</thumb>
+							<thumb>icons/SystemInfo.png</thumb>
 							<label>130</label>
 						</item>
 						<item id="11">
 							<onclick>ActivateWindow(SkinSettings)</onclick>
-							<thumb>windows/settings/icons/Skin.png</thumb>
+							<thumb>icons/Skin.png</thumb>
+							<icon>icons/Skin2.png</icon>
 							<label>20077</label>
 						</item>
 						<item id="12">
 							<onclick>ActivateWindow(1111)</onclick>
-							<thumb>windows/settings/icons/Help.png</thumb>
+							<thumb>icons/Help.png</thumb>
 							<label>Help</label>
 						</item>
 					</content>

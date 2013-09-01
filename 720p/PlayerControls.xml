@@ -809,8 +809,16 @@
 			  <itemgap>0</itemgap>
 			  <orientation>horizontal</orientation>
         <viewtype>list</viewtype>
-	      <scrolltime tween="Cubic" easing="out">500</scrolltime>
+	      <scrolltime tween="Cubic" easing="out">300</scrolltime>
 				<itemlayout height="235" width="235">
+					<control type="image">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>175</width>
+						<height>165</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture>osd/quicknav/nofocus.png</texture>
+					</control>
 					<control type="image">
 						<posx>35</posx>
 						<posy>5</posy>
@@ -819,14 +827,6 @@
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
 					  <bordersize>6</bordersize>
-					</control>
-					<control type="image">
-						<posx>30</posx>
-						<posy>0</posy>
-						<width>175</width>
-						<height>165</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture>osd/quicknav/nofocus.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="235" width="235">
@@ -843,15 +843,10 @@
 						<posy>5</posy>
 						<width>165</width>
 						<height>155</height>
+						<colordiffuse>FF04aeda</colordiffuse>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
 					  <bordersize>6</bordersize>
-            <animation type="Focus">
-              <effect type="fade" start="50" end="100" time="200" tween="sine" easing="in" />
-            </animation>
-            <animation type="Unfocus">
-              <effect type="fade" start="100" end="50" time="200" tween="sine" easing="out" />
-            </animation>					  
 					</control>
 					<control type="label">
 						<posx>118</posx>
@@ -894,7 +889,7 @@
 				 <content>
 					 <item id="1">
 							<label>$LOCALIZE[31002]</label>
-							<icon>special://skin/extras/icons/TVShows.png</icon>
+							<icon>DefaultTVShows.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
               <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
@@ -902,7 +897,7 @@
 					 </item>
 					 <item id="2">
 							<label>$LOCALIZE[20342]</label>
-							<icon>special://skin/extras/icons/Movies.png</icon>
+							<icon>DefaultMovies.png</icon>
 					    <include>OnClickDialogsClose</include>
 							<onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
               <onclick condition="!Library.HasContent(movies)">ActivateWindow(videos,files,return)</onclick>
@@ -910,7 +905,7 @@
 					 </item>
 					 <item id="4">
 							<label>$LOCALIZE[2]</label>
-							<icon>special://skin/extras/icons/Music.png</icon>
+							<icon>DefaultAudio.png</icon>
 					    <include>OnClickDialogsClose</include>
 							<onclick condition="!Library.HasContent(music) | stringcompare(Skin.String(MusicName),files)">ActivateWindow(musicfiles)</onclick>
 							<onclick condition="Library.HasContent(music) + !stringcompare(Skin.String(MusicName),files)">ActivateWindow(musiclibrary,$INFO[Skin.String(MusicPath)])</onclick>
@@ -918,21 +913,21 @@
 					 </item>
 					 <item id="3">
 							<label>$LOCALIZE[3]</label>
-							<icon>special://skin/extras/icons/Videos.png</icon>
+							<icon>DefaultVideo.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick>ActivateWindow(videos,files,return)</onclick>
 						  <visible>Skin.HasSetting(ShowVideosButton)</visible>
 					 </item>
 					 <item id="5">
 							<label>$LOCALIZE[1]</label>
-							<icon>special://skin/extras/icons/Pictures.png</icon>
+							<icon>DefaultPicture.png</icon>
 					    <include>OnClickDialogsClose</include>
 							<onclick>ActivateWindow(Pictures)</onclick>
 						  <visible>!Skin.HasSetting(HidePicturesButton)</visible>
 					 </item>
 					 <item id="6">
 							<label>$LOCALIZE[24001]</label>
-							<icon>special://skin/extras/icons/Addons.png</icon>
+							<icon>DefaultAddon.png</icon>
 					    <include>OnClickDialogsClose</include>
 							<onclick condition="IsEmpty(Skin.String(AddonsPath))">ActivateWindow(AddonBrowser)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(AddonsPath))">ActivateWindow($INFO[Skin.String(AddonsPath)],addons)</onclick>
@@ -940,7 +935,7 @@
 					 </item>
 					 <item id="7">
 							<label>$LOCALIZE[31244]</label>
-							<icon>special://skin/extras/icons/RecentlyAddedMovies.png</icon>
+							<icon>DefaultRecentlyAddedMovies.png</icon>
 					    <include>OnClickDialogsClose</include>
 				      <onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 							<visible>Library.HasContent(Movies)</visible>
@@ -948,7 +943,7 @@
 					 </item>
 					 <item id="8">
 							<label>$LOCALIZE[31245]</label>
-							<icon>special://skin/extras/icons/RecentlyAddedTVShows.png</icon>
+							<icon>DefaultRecentlyAddedEpisodes.png</icon>
 					    <include>OnClickDialogsClose</include>
 				      <onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 							<visible>Library.HasContent(TVShows)</visible>
@@ -956,7 +951,7 @@
 					 </item>
 					 <item id="9">
 							<label>$LOCALIZE[31246]</label>
-							<icon>special://skin/extras/icons/RecentlyAddedMusic.png</icon>
+							<icon>DefaultMusicRecentlyAdded.png</icon>
 					    <include>OnClickDialogsClose</include>
 				      <onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
 							<visible>Library.HasContent(Music)</visible>
@@ -964,7 +959,7 @@
 					 </item>
 					 <item id="10">
 							<label>$LOCALIZE[589]</label>
-							<icon>special://skin/extras/icons/PartyMode.png</icon>
+							<icon>icons/PartyMode.png</icon>
 					    <include>OnClickDialogsClose</include>
 				      <onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
               <onclick>PlayerControl(PartyMode)</onclick>
@@ -974,7 +969,7 @@
 					 </item>
 			<!-- <item id="-">
 							<label>$LOCALIZE[653]</label>
-							<icon>special://skin/extras/icons/UpdateLibrary.png</icon>
+							<icon>icons/UpdateLibrary.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick condition="Window.IsVisible(Videos) + !Library.IsScanningVideo">UpdateLibrary(video)</onclick>
               <onclick condition="Window.IsVisible(MusicLibrary) + !Library.IsScanningMusic">UpdateLibrary(music)</onclick>
@@ -982,49 +977,49 @@
 					 </item> -->
 					 <item id="11">
 							<label>$LOCALIZE[31370]</label>
-							<icon>special://skin/extras/icons/UpdateVideoLibrary.png</icon>
+							<icon>icons/UpdateVideoLibrary.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick>UpdateLibrary(video)</onclick>
 						  <visible>Skin.HasSetting(ShowUpdateVideoLibraryButton)</visible>
 					 </item>
 					 <item id="12">
 							<label>$LOCALIZE[31371]</label>
-							<icon>special://skin/extras/icons/UpdateMusicLibrary.png</icon>
+							<icon>icons/UpdateMusicLibrary.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick>UpdateLibrary(music)</onclick>
 						  <visible>Skin.HasSetting(ShowUpdateMusicLibraryButton)</visible>
 					 </item>
 					 <item id="13">
 							<label>$LOCALIZE[31372]</label>
-							<icon>special://skin/extras/icons/CleanVideoLibrary.png</icon>
+							<icon>icons/CleanVideoLibrary.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick>CleanLibrary(Video)</onclick>
 						  <visible>Skin.HasSetting(ShowCleanVideoLibraryButton)</visible>
 					 </item>
 					 <item id="14">
 							<label>$LOCALIZE[31373]</label>
-							<icon>special://skin/extras/icons/CleanMusicLibrary.png</icon>
+							<icon>icons/CleanMusicLibrary.png</icon>
 					    <include>OnClickDialogsClose</include>
               <onclick>CleanLibrary(Music)</onclick>
 						  <visible>Skin.HasSetting(ShowCleanMusicLibraryButton)</visible>
 					 </item>
 					 <item id="15">
 							<label>$LOCALIZE[5]</label>
-							<icon>special://skin/extras/icons/Settings.png</icon>
+							<icon>icons/Settings.png</icon>
 					    <include>OnClickDialogsClose</include>
 							<onclick>ActivateWindow(Settings)</onclick>
 						  <visible>!Skin.HasSetting(HideSettingsButton)</visible>
 					 </item>
 					 <item id="16">
 							<label>$LOCALIZE[31016]</label>
-							<icon>special://skin/extras/icons/FileManager.png</icon>
+							<icon>icons/FileManager.png</icon>
 					    <include>OnClickDialogsClose</include>
 				      <onclick>ActivateWindow(FileManager)</onclick>
 						  <visible>Skin.HasSetting(ShowFileManagerButton)</visible>
 					 </item>
 					 <item id="17">
 							<label>$LOCALIZE[13005]</label>
-							<icon>special://skin/extras/icons/Shutdown.png</icon>
+							<icon>icons/Shutdown.png</icon>
 					    <include>OnClickDialogsClose</include>
 							<onclick>XBMC.Powerdown()</onclick>
 							<visible>System.CanPowerDown</visible>

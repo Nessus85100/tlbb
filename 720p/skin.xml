@@ -64,7 +64,7 @@
         <height>440</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
 			  <texture background="true">$INFO[Control.GetLabel(105)]</texture>
-				<bordertexture border="20">views/list/icon_border.png</bordertexture>
+				<bordertexture border="20">views/list/panel2.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 	    <control type="image" id="126">
@@ -533,113 +533,175 @@
 <!-- ============================ -->
 
     <!-- Left Menu -->
-	 <control type="group">
-		<posx>45</posx>
-		<posy>0</posy>
-	  <include>ContentInfoSlideAnimations</include>
-		<visible allowhiddenfocus="true">Control.HasFocus(122) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
-		<control type="label">
-			<height>30</height>
-			<width min="10" max="1280">auto</width>
-			<font>FontSize_40</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-	    <align>left</align>
-	    <aligny>center</aligny>
-			<scroll>false</scroll>
-			<label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
-		</control>
-	  <control type="list" id="122">
-			<posx>0</posx>
-			<posy>40</posy>
-			<width>460</width>
-			<height>285</height>
-			<itemgap>0</itemgap>
-			<onup>122</onup>
-			<ondown>122</ondown>
-			<itemlayout width="460" height="40">
+		<control type="group">
+	    <include>ContentInfoSlideAnimations</include>
+	    <include>ShutdownMenuAnimation</include>
+		  <visible allowhiddenfocus="true">Control.HasFocus(122) + !Window.IsActive(ContextMenu)</visible>
+      <control type="image">
+        <posx>30</posx>
+        <posy>13</posy>
+				<width>290</width>
+				<height>75</height>
+				<texture border="90,0,90,0">dialogs/menus/topmenus_options.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+      <control type="image">
+        <posx>30</posx>
+        <posy>347</posy>
+				<width>290</width>
+				<height>22</height>
+				<texture border="90,0,90,0">dialogs/menus/bottom.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
 			<control type="label">
-				<posx>3</posx>
-				<width>460</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>77white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label,․  ]</label>
+        <posx>105</posx>
+        <posy>25</posy>
+			  <label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
+			  <include>TopBigLabel</include>
+			</control>      
+			<control type="list" id="122">
+				<posx>30</posx>
+				<posy>88</posy>
+				<width>310</width>
+				<height>540</height>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+				<onup>122</onup>
+				<ondown>122</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="37" width="310">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>290</width>
+						<height>37</height>
+						<texture border="90,0,90,0">dialogs/menus/topmenus_nf.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="37" width="310">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>290</width>
+						<height>37</height>
+						<texture border="90,0,90,0">dialogs/menus/topmenus_fo.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
 			</control>
-			</itemlayout>
-			<focusedlayout width="460" height="40">
-			<control type="label">
-				<posx>3</posx>
-				<width>460</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label,․  ]</label>
-				</control>
-			</focusedlayout>
 		</control>
-	 </control>		    
 
 
     <!-- Right Menu -->
-	 <control type="group">
-		<posx>45</posx>
-		<posy>0</posy>
-	  <include>ContentInfoSlideAnimations</include>
-		<visible allowhiddenfocus="true">Control.HasFocus(127) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
-		<control type="label">
-			<height>30</height>
-			<width min="10" max="1280">auto</width>
-			<font>FontSize_40</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-	    <align>left</align>
-	    <aligny>center</aligny>
-			<scroll>false</scroll>
-			<label>$LOCALIZE[31025] $LOCALIZE[33061]</label>
-		</control>
-	  <control type="list" id="127">
-			<posx>0</posx>
-			<posy>40</posy>
-			<width>460</width>
-			<height>285</height>
-			<itemgap>0</itemgap>
-			<onup>127</onup>
-			<ondown>127</ondown>
-			<itemlayout width="460" height="40">
+		<control type="group">
+	    <include>ContentInfoSlideAnimations</include>
+	    <include>ShutdownMenuAnimation</include>
+		  <visible allowhiddenfocus="true">Control.HasFocus(127) + !Window.IsActive(ContextMenu)</visible>
+      <control type="image">
+        <posx>30</posx>
+        <posy>13</posy>
+				<width>290</width>
+				<height>75</height>
+				<texture border="90,0,90,0">dialogs/menus/topmenus_stacking.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+      <control type="image">
+        <posx>30</posx>
+        <posy>310</posy>
+				<width>290</width>
+				<height>22</height>
+				<texture border="90,0,90,0">dialogs/menus/bottom.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
 			<control type="label">
-				<posx>3</posx>
-				<width>460</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>77white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label,․  ]</label>
+        <posx>105</posx>
+        <posy>25</posy>
+			  <label>$LOCALIZE[31025] $LOCALIZE[33061]</label>
+			  <include>TopBigLabel</include>
+			</control>      
+			<control type="list" id="127">
+				<posx>30</posx>
+				<posy>88</posy>
+				<width>310</width>
+				<height>540</height>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+				<onup>127</onup>
+				<ondown>127</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="37" width="310">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>290</width>
+						<height>37</height>
+						<texture border="90,0,90,0">dialogs/menus/topmenus_nf.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="37" width="310">
+		      <control type="image">
+		        <posx>0</posx>
+		        <posy>0</posy>
+						<width>290</width>
+						<height>37</height>
+						<texture border="90,0,90,0">dialogs/menus/topmenus_fo.png</texture>
+		        <aspectratio>stretch</aspectratio>
+		      </control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>35</height>
+						<font>FontSize_22</font>
+						<textcolor>white</textcolor>
+					  <shadowcolor>99000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
 			</control>
-			</itemlayout>
-			<focusedlayout width="460" height="40">
-			<control type="label">
-				<posx>3</posx>
-				<width>460</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label,․  ]</label>
-				</control>
-			</focusedlayout>
 		</control>
-	 </control>		
 
 
 

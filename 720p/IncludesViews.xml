@@ -15,8 +15,8 @@
       <include condition="Skin.HasSetting(ShowListWallViewVideos)">ListWallView_Videos</include> <!-- id = 58 -->
       <include condition="!Skin.HasSetting(HidePostersViewVideos)">PostersView_Videos</include> <!-- id = 55 -->
       <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView</include> <!-- id = 56 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos</include> <!-- id = 560 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos2</include> <!-- id = 561 -->
+      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Posters</include> <!-- id = 560 -->
+      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Landscape</include> <!-- id = 561 -->
       <include condition="!Skin.HasSetting(HideBannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
     </include>
     

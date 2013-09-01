@@ -1,3 +1,13 @@
+[B][COLOR=FF56ADDA]v1.5.2 - Release Date 1/9/2013[/COLOR][/B]
+• Make all default icons white.
+• Make the top menu "Settings" and "Favourites" buttons hidden by default.
+• Bring back the Settings button in the home main menu by default.
+• Make the small info beside the main label the same format for all views.
+• Make texts in plots bigger.
+• Fixed some missing visible conditions.
+• Reduce size in several big textures
+• Several animations tweeks in all the views for quicker navigation.
+
 [B][COLOR=FF56ADDA]v1.5.1 - Release Date 29/8/2013[/COLOR][/B]
 • Added Settings button to the home top menu and changed the "WiFi" string to "Network".
 • Changed Settings button in the home menu hidden by default.

@@ -7,8 +7,8 @@
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
   <onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + !Player.HasMedia + Skin.HasSetting(TVTunesEnabled)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<controls>
-		<include>BackgroundItems</include>
-		<include>VideoViews</include>
+	 <include>BackgroundItems</include>
+	 <include>VideoViews</include>
 
    <!-- ============ -->
    <!-- Options Menu  -->
@@ -18,6 +18,14 @@
 		<posy>25</posy>
     <include>ShutdownMenuAnimation</include>
     <include>OptionsTopMenuAnimation</include>
+    <animation type="Conditional"  reversible="false" condition="![Window.IsActive(MovieInformation) | Window.IsActive(AddonInformation)]">
+      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+    </animation>
+    <animation type="Conditional" reversible="false" condition="Window.IsActive(MovieInformation) | Window.IsActive(AddonInformation)">
+      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+    </animation>
     <!-- General Options -->
     <control type="group">
       <include>GeneralOptionsTopMenuAnimation</include>
@@ -294,7 +302,6 @@
 			  <visible>Control.IsVisible(560) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Window.IsVisible(VideoPlaylist)]</visible>
 			</control>
 		</control>
-
 
 	 </control>
 

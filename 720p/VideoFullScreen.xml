@@ -626,17 +626,17 @@
 				<effect type="zoom" time="350" center="640,360" start="100" end="150" tween="cubic" easing="in"/>
 				<effect type="fade" time="350" start="100" easing="in" end="0"/>
 			</animation>
+			<animation type="Conditional" condition="Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">
+				<effect type="zoom" time="350" delay="9000" center="640,360" start="100" end="0" tween="cubic" easing="in"/>
+				<effect type="fade" time="350" delay="9000" start="100" easing="in" end="0"/>
+			</animation>
 			<control type="image" id="1">
-				<posx>450</posx>     
-				<posy>165</posy>    
-				<width>395</width>     
-				<height>395</height> 
+				<posx>450</posx>
+				<posy>165</posy>
+				<width>395</width>
+				<height>395</height>
 				<texture>osd/osd_controls_bg.png</texture>
 				<colordiffuse>AA999999</colordiffuse>
-				<animation type="Conditional" condition="Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">
-					<effect type="zoom" time="350" delay="9000" center="640,360" start="100" end="0" tween="cubic" easing="in"/>
-					<effect type="fade" time="350" delay="9000" start="100" easing="in" end="0"/>
-				</animation>
 			</control>
 		  <control type="group" id="1">
 				<posx>485</posx>
@@ -674,10 +674,6 @@
 			<control type="group" id="1">
 				<posx>485</posx>
 				<posy>215</posy>
-				<animation type="Conditional" condition="Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">
-					<effect type="zoom" time="350" delay="9000" center="640,360" start="100" end="0" tween="cubic" easing="in"/>
-					<effect type="fade" time="350" delay="9000" start="100" easing="in" end="0"/>
-				</animation>
 				<control type="group" id="1">
 					<posx>3</posx>
 					<visible>!Player.ChapterCount</visible>
