@@ -13,6 +13,7 @@
       <include condition="Skin.HasSetting(Show3DWallViewVideos)">3DWallView_Videos</include> <!-- id = 53 -->
       <include condition="Skin.HasSetting(ShowWallViewVideos)">WallView_Videos</include> <!-- id = 54 -->
       <include condition="Skin.HasSetting(ShowListWallViewVideos)">ListWallView_Videos</include> <!-- id = 58 -->
+      <include condition="!Skin.HasSetting(HideVideoWallFanartViewVideos)">VideoWallFanartView</include> <!-- id = 580 -->
       <include condition="!Skin.HasSetting(HidePostersViewVideos)">PostersView_Videos</include> <!-- id = 55 -->
       <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView</include> <!-- id = 56 -->
       <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Posters</include> <!-- id = 560 -->

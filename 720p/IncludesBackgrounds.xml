@@ -104,7 +104,7 @@
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
-		  <visible>![Control.IsVisible(55) + !Window.IsActive(movieinformation)]</visible>
+		  <visible>![Control.IsVisible(55) + !Window.IsActive(movieinformation)] + !Control.IsVisible(580)</visible>
 		</control>
 		<control type="image">
 			<description>Pictures Fanart</description>

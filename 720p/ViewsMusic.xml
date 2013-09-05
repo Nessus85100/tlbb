@@ -42,7 +42,7 @@
 					<height>222</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>150</fadetime>
-					<texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[PosterThumbs]</texture>
+					<texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
 					<bordersize>6</bordersize>
 				</control>
@@ -435,110 +435,136 @@
 				<pagecontrol>60</pagecontrol>
 			  <scrolltime tween="cubic" easing="out">300</scrolltime>
 				<itemlayout height="45" width="710">
-						<control type="label">
-							<posx>20</posx>
-							<posy>0</posy>
-							<width>100</width>
-							<height>45</height>
-							<font>ArrowsFont</font>
-							<textcolor>77white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>←</label>
-	            <visible>Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<posx>18</posx>
-							<posy>0</posy>
-							<width>100</width>
-							<height>45</height>
-							<font>FontSize_22</font>
-							<textcolor>77white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label fallback="․  ․  ․">$INFO[ListItem.Year]</label>
-	            <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<posx>95</posx>
-							<posy>0</posy>
-							<width>455</width>
-							<height>45</height>
-							<font>FontSize_22</font>
-							<textcolor>77white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-				      <label>$VAR[MusicLabel]</label>
-              <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<posx>585</posx>
-							<posy>0</posy>
-							<width>300</width>
-							<height>45</height>
-							<font>FontSize_22</font>
-							<textcolor>77white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<align>right</align>
-							<aligny>center</aligny>
-							<label fallback="․  ․  ․">$VAR[MusicLabel2]</label>
-			        <visible>![Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)]</visible>
-	            <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<posx>585</posx>
-							<posy>0</posy>
-							<width>300</width>
-							<height>45</height>
-							<font>FontSize_22</font>
-							<textcolor>77white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<align>right</align>
-							<aligny>center</aligny>
-							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-			        <visible>Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)</visible>
-	            <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
+					<control type="label">
+						<posx>14</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>45</height>
+						<font>BackFont</font>
+						<textcolor>77white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>↚</label>
+            <visible>Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>45</height>
+						<font>FontSize_20</font>
+						<textcolor>77white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>․  ․  ․</label>
+            <visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>45</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Year]</label>
+            <visible>!IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<posx>95</posx>
+						<posy>0</posy>
+						<width>455</width>
+						<height>45</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+			      <label>$VAR[MusicLabel]</label>
+            <visible>!Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<posx>585</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>45</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label fallback="․  ․  ․">$VAR[MusicLabel2]</label>
+		        <visible>![Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)]</visible>
+            <visible>!Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<posx>585</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>45</height>
+						<font>FontSize_22</font>
+						<textcolor>77white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
+		        <visible>Container.Content(Addons) | Substring(Container.FolderPath,plugin,left)</visible>
+            <visible>!Stringcompare(ListItem.Label,..)</visible>
+					</control>
 				</itemlayout>
 				<focusedlayout height="45" width="710">
 		      <control type="group">
 						<control type="image">
-							<posx>10</posx>
+							<posx>7</posx>
 							<posy>3</posy>
-			        <width>585</width>
+			        <width>586</width>
 							<height>40</height>	
 					    <aspectratio align="center" aligny="center">strecth</aspectratio>
 				      <colordiffuse>22ffffff</colordiffuse>
-				      <texture>views/list/list_fo.png</texture>
+				      <texture background="true">views/list/list_fo.png</texture>
 						</control>
 						<control type="label">
-							<posx>20</posx>
+							<posx>14</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>ArrowsFont</font>
+							<font>BackFont</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>←</label>
+							<label>↚</label>
 	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>18</posx>
+							<posx>15</posx>
+							<posy>0</posy>
+							<width>100</width>
+							<height>45</height>
+							<font>FontSize_20</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>․  ․  ․</label>
+	            <visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
+						</control>
+						<control type="label">
+							<posx>15</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label fallback="․  ․  ․">$INFO[ListItem.Year]</label>
-	            <visible>!Stringcompare(ListItem.Label,..)</visible>
+							<label>$INFO[ListItem.Year]</label>
+	            <visible>!IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -547,7 +573,7 @@
 							<height>45</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 				      <label>$VAR[MusicLabel]</label>
@@ -560,7 +586,7 @@
 							<height>45</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$VAR[MusicLabel2]</label>
@@ -574,7 +600,7 @@
 							<height>45</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
@@ -603,18 +629,18 @@
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			<control type="image">
-				<posx>56</posx>
+				<posx>53</posx>
 				<posy>135</posy>
 				<width>23</width>
 				<height>20</height> <!-- stringcompare(Container.FolderPath,musicdb://4/) -->
-				<texture>views/scrollbar/arrow.png</texture>
+				<texture background="true">views/scrollbar/arrow.png</texture>
 		  </control>
 		  <control type="image">
-				<posx>56</posx>
-				<posy>598</posy>
+				<posx>53</posx>
+				<posy>596</posy>
 				<width>23</width>
 				<height>20</height>		
-				<texture flipy="true">views/scrollbar/arrow.png</texture>
+				<texture background="true" flipy="true">views/scrollbar/arrow.png</texture>
 		  </control>
 		</control>
 	 </control>
@@ -633,13 +659,13 @@
 	    <include>CommonSlideAnimations</include>
 		  <control type="group">
 			  <visible>Control.IsVisible(51)</visible>
-				<control type="image">
+				<control type="image.">
 					<posx>-230</posx>
 					<posy>-25</posy>
 					<width>1800</width>
 					<height>760</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture background="true">views/slide/shine.png</texture>
+					<texture background="true">views/list/shine.png</texture>
 				</control>
 				<control type="image">
 			    <include>FullscreenDimensions</include>
@@ -657,7 +683,7 @@
 	      <onup>100</onup>
 	      <ondown>60</ondown>
 	      <viewtype label="31080">List</viewtype>
-	      <scrolltime tween="Cubic" easing="out">500</scrolltime>
+        <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 	      <orientation>horizontal</orientation>
 	      <preloaditems>2</preloaditems>
 	      <focusposition>1</focusposition>
@@ -667,20 +693,24 @@
 					<control type="image">
 						<width>300</width>
 						<height>300</height>
-						<aspectratio align="center">stretch</aspectratio>
-						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
+		        <colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_square.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="300" height="300">
 					<control type="group">
-	          <animation type="Focus" condition="Container(51).OnNext | Container(51).OnPrevious">
-	            <effect type="fade" start="50" end="100" time="350" tween="sine" easing="inout" />
-	          </animation>
+		        <animation type="Focus" reversible="false" condition="Container(51).OnNext">
+		          <effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+		        </animation>
+		        <animation type="Focus" reversible="false" condition="Container(51).OnPrevious">
+		          <effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+		        </animation>
 						<control type="image">
 							<width>300</width>
 							<height>300</height>
 							<aspectratio align="center">stretch</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
+						  <texture background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -932,7 +962,7 @@
 							<width>675</width>
 							<height>380</height>
 							<aspectratio align="center">stretch</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_fanart_big.png">$VAR[FanartThumbs]</texture>
+						  <texture background="true" fallback="thumbs/fallback_fanart_big_tp.png">$VAR[FanartThumbs]</texture>
 							<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
 							<bordersize>6</bordersize>
 						</control>
@@ -1104,7 +1134,7 @@
 							<posy>21</posy>
 							<width>212</width>
 							<height>212</height>
-							<texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Art(thumb)]</texture>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
 							<bordersize>6</bordersize>

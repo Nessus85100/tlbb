@@ -1,8 +1,16 @@
+[B][COLOR=FF56ADDA]v1.5.3 - Release Date 6/9/2013[/COLOR][/B]
+• Added new "VideoWall Fanart" view for Movies and TV Shows.
+• Added a viewtype option to choose between fanart/clearlogo/landscape in ListView and GalleryView for TV Shows.
+• Added some missing fallbacks icons.
+• Added some missing visible conditions in options menu.
+• Added new parent folder indicator.
+• Severall code fixes and tweeks.
+
 [B][COLOR=FF56ADDA]v1.5.2 - Release Date 1/9/2013[/COLOR][/B]
 • Make all default icons white.
 • Make the top menu "Settings" and "Favourites" buttons hidden by default.
 • Bring back the Settings button in the home main menu by default.
-• Make the small info beside the main label the same format for all views.
+• Make the small info below the main labels, same format for all views.
 • Make texts in plots bigger.
 • Fixed some missing visible conditions.
 • Reduce size in several big textures
@@ -20,7 +28,8 @@
   NOTE: The backgrounds are outside of the media folder (tlbb/extras/bg) so user can replace them easily.
 • Fixed Access Point dialog missing focus at open.
 • Changed the pause info in videofullscreen to fadeout after a couple of seconds.
-• Changed fanart thumb to poster thumb in Thumbnails view for Movies and TV Shows.
+• Removed fanart thumb and added poster thumb in Thumbnails view for Movies and TV Shows.
+• Added option in Thumbnails view to show more info for Movies and TV Shows.
 • More changes regarding system resources and speed optimization.
 • Severall code fixes and tweeks.
 

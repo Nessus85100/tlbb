@@ -565,6 +565,23 @@
     </animation>
   </include>
 
+	<include name="VideoWallAnimations">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" time="350" center="640,360" start="130" end="100" tween="sine" easing="out" />
+			<effect type="fade" time="350" start="0" tween="sine" easing="out" end="100" />
+		</animation>			
+		<animation type="WindowClose" reversible="false">
+			<effect type="zoom" time="350" center="640,360" start="100" end="130" tween="sine" easing="in" />
+			<effect type="fade" time="350" start="100" tween="sine" easing="in" end="0"/>
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" time="350" start="0" tween="sine" easing="out" end="100"/>
+		</animation>			
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" time="350" start="100" tween="sine" easing="in" end="0"/>
+		</animation>
+  </include>
+
   <include name="OSDPlotAnimation">
     <animation type="Visible" reversible="false">
         <effect type="slide" start="150,0" end="0,0" time="500" tween="sine" easing="out"/>
@@ -728,10 +745,10 @@
 	</include>
 	<include name="BackgroundFade">
     <animation type="Visible" reversible="false">
-      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
     </animation>
     <animation type="Hidden" reversible="false">
-      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
     </animation>
 	</include>
 	<include name="FanartFade">

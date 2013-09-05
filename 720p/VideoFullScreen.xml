@@ -22,7 +22,7 @@
 		<control type="image" id="1">
 		  <description>Diffuse</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">windows/bg/menus_overlay.png</texture>
+		  <texture background="true">windows/bg/menus_overlay.png</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <visible>!Window.IsActive(SliderDialog)</visible>
@@ -68,13 +68,22 @@
 			  <control type="group" id="1">
 				 <posx>-5</posx>
 			   <visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
+					<control type="image" id="1">
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>185</width>
+						<height>258</height>
+						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+						<texture diffuse="thumbs/poster_diffuse.png">thumbs/thumb_back.png</texture>
+						<fadetime>800</fadetime>
+					</control>
 				 <control type="image" id="1">
 						<posx>10</posx>
 						<posy>10</posy>
 						<width>185</width>
 						<height>258</height>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<texture fallback="thumbs/fallback_poster.png" diffuse="thumbs/poster_diffuse.png">$VAR[PlayerThumbs]</texture>
-						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<fadetime>800</fadetime>
 				 </control>
 				 <control type="image" id="1">
@@ -129,83 +138,8 @@
 						</animation>
 				 </control>
 			  </control>
-		    <!-- Videos -->
+		    <!-- LiveTV Cover -->
 			  <control type="group" id="1">
-				 <posx>-5</posx>
-				 <posy>60</posy>
-				  <visible>![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)]</visible>
-					<control type="image" id="1">
-						<posx>8</posx>
-						<posy>8</posy>
-						<width>294</width>
-						<height>199</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="thumbs/video_diffuse.png">thumbs/thumb_back.png</texture>
-						<fadetime>800</fadetime>
-					</control>
-				  <control type="image" id="1">
-						<posx>8</posx>
-						<posy>8</posy>
-						<width>294</width>
-						<height>199</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<texture fallback="thumbs/fallback_fanart.png" diffuse="thumbs/video_diffuse.png">$VAR[PlayerThumbs]</texture>
-						<fadetime>800</fadetime>
-				  </control>
-				  <control type="image" id="1">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>310</width>
-						<height>215</height>
-						<texture>thumbs/video_overlay.png</texture>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<fadetime>800</fadetime>
-				  </control>
-				  <control type="image" id="1">
-						<description>paused indicator</description>
-						<posx>8</posx>
-						<posy>8</posy>
-						<width>294</width>
-						<height>199</height>
-						<texture diffuse="thumbs/video_diffuse.png">osd/paused-overlay.png</texture>
-						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
-						<animation type="conditional" condition="Player.Paused" reversible="true">
-							<effect type="fade" start="0" end="50" time="300" />
-						</animation>
-				  </control>
-				  <control type="image" id="1">
-						<description>ff indicator</description>
-						<posx>8</posx>
-						<posy>8</posy>
-						<width>294</width>
-						<height>199</height>
-						<texture diffuse="thumbs/video_diffuse.png">osd/ff-overlay.png</texture>
-						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
-						<animation type="conditional" condition="Player.Forwarding" reversible="true">
-							<effect type="fade" start="0" end="50" time="300" />
-						</animation>
-				  </control>
-				  <control type="image" id="1">
-						<description>rw indicator</description>
-						<posx>8</posx>
-						<posy>8</posy>
-						<width>294</width>
-						<height>199</height>
-						<texture diffuse="thumbs/video_diffuse.png">osd/rw-overlay.png</texture>
-						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
-						<animation type="conditional" condition="Player.Rewinding" reversible="true">
-							<effect type="fade" start="0" end="50" time="300" />
-						</animation>
-				  </control>
-			  </control>
-		    <!-- LiveTV Cover (SQUARED - DISABLED) -->
-			  <control type="group." id="1">
 				 <posx>-5</posx>
 				 <posy>60</posy>
 				  <visible>VideoPlayer.Content(LiveTV)</visible>
@@ -278,7 +212,83 @@
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
 				  </control>
-			  </control> 
+			  </control> 			  
+		    <!-- Videos -->
+			  <control type="group" id="1">
+				 <posx>-5</posx>
+				 <posy>60</posy>
+          <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
+					<control type="image" id="1">
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>294</width>
+						<height>199</height>
+						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+						<texture diffuse="thumbs/video_diffuse.png">thumbs/thumb_back.png</texture>
+						<fadetime>800</fadetime>
+					</control>
+				  <control type="image" id="1">
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>294</width>
+						<height>199</height>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<texture fallback="thumbs/fallback_episode.png" diffuse="thumbs/video_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+						<fadetime>800</fadetime>
+				  </control>
+				  <control type="image" id="1">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>310</width>
+						<height>215</height>
+						<texture>thumbs/video_overlay.png</texture>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<fadetime>800</fadetime>
+				  </control>
+				  <control type="image" id="1">
+						<description>paused indicator</description>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>294</width>
+						<height>199</height>
+						<texture diffuse="thumbs/video_diffuse.png">osd/paused-overlay.png</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<visible>Player.Paused</visible>
+						<include>VisibleFadeEffect</include>
+						<animation type="conditional" condition="Player.Paused" reversible="true">
+							<effect type="fade" start="0" end="50" time="300" />
+						</animation>
+				  </control>
+				  <control type="image" id="1">
+						<description>ff indicator</description>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>294</width>
+						<height>199</height>
+						<texture diffuse="thumbs/video_diffuse.png">osd/ff-overlay.png</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<visible>Player.Forwarding</visible>
+						<include>VisibleFadeEffect</include>
+						<animation type="conditional" condition="Player.Forwarding" reversible="true">
+							<effect type="fade" start="0" end="50" time="300" />
+						</animation>
+				  </control>
+				  <control type="image" id="1">
+						<description>rw indicator</description>
+						<posx>8</posx>
+						<posy>8</posy>
+						<width>294</width>
+						<height>199</height>
+						<texture diffuse="thumbs/video_diffuse.png">osd/rw-overlay.png</texture>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<visible>Player.Rewinding</visible>
+						<include>VisibleFadeEffect</include>
+						<animation type="conditional" condition="Player.Rewinding" reversible="true">
+							<effect type="fade" start="0" end="50" time="300" />
+						</animation>
+				  </control>
+			  </control>
+
 
 		    <!-- Movies Info -->
 				<control type="group" id="1">
@@ -440,7 +450,7 @@
 				</control>
 		    <!-- LiveTV Info -->
 			  <control type="group" id="1">
-					<posx>315</posx>
+					<posx>220</posx>
 					<posy>105</posy>
 	        <include>OSDPlotAnimation</include>
 	        <visible>[IsEmpty(Window(VideoOSD).Property(ShowPlot)) | IsEmpty(VideoPlayer.Plot)]</visible>

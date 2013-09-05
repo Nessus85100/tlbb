@@ -836,6 +836,12 @@
 						<onclick>Skin.ToggleSetting(HidePostersViewVideos)</onclick>
 						<selected>Skin.HasSetting(HidePostersViewVideos)</selected>
 					</control>
+					<control type="radiobutton" id="8514">
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[31167] ($LOCALIZE[3])</label>
+						<onclick>Skin.ToggleSetting(HideVideoWallFanartViewVideos)</onclick>
+						<selected>Skin.HasSetting(HideVideoWallFanartViewVideos)</selected>
+					</control>
 					<control type="radiobutton" id="8510">
 	          <include>SettingsRadioButton</include>
 						<label>$LOCALIZE[31158] ($LOCALIZE[3])</label>

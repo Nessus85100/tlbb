@@ -229,26 +229,26 @@
 			  <scrolltime tween="cubic" easing="out">300</scrolltime>
 				<itemlayout height="45" width="710">
 					<control type="label">
-						<posx>20</posx>
+						<posx>14</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>45</height>
-						<font>ArrowsFont</font>
+						<font>BackFont</font>
 						<textcolor>77white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
+						<shadowcolor>77000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>←</label>
+						<label>↚</label>
             <visible>Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>18</posx>
+						<posx>15</posx>
 						<posy>0</posy>
 						<width>100</width>
 						<height>45</height>
-						<font>FontSize_22</font>
+						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
+						<shadowcolor>77000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>․  ․  ․</label>
@@ -261,7 +261,7 @@
 						<height>44</height>
 						<font>FontSize_22</font>
 						<textcolor>77white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
+						<shadowcolor>77000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -274,7 +274,7 @@
 						<height>45</height>
 						<font>FontSize_22</font>
 						<textcolor>77white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
+						<shadowcolor>77000000</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
@@ -288,7 +288,7 @@
 						<height>45</height>
 						<font>FontSize_22</font>
 						<textcolor>red</textcolor>
-						<shadowcolor>99000000</shadowcolor>
+						<shadowcolor>77000000</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
@@ -299,35 +299,35 @@
 				<focusedlayout height="45" width="710">
 		      <control type="group">
 						<control type="image">
-							<posx>10</posx>
+							<posx>7</posx>
 							<posy>3</posy>
-			        <width>585</width>
+			        <width>586</width>
 							<height>40</height>	
 					    <aspectratio align="center" aligny="center">strecth</aspectratio>
 				      <colordiffuse>22ffffff</colordiffuse>
-				      <texture>views/list/list_fo.png</texture>
+				      <texture background="true">views/list/list_fo.png</texture>
 						</control>
 						<control type="label">
-							<posx>20</posx>
+							<posx>14</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>ArrowsFont</font>
+							<font>BackFont</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>←</label>
+						  <label>↚</label>
 	            <visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>18</posx>
+							<posx>15</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>45</height>
-							<font>FontSize_22</font>
+							<font>FontSize_20</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>․  ․  ․</label>
@@ -340,7 +340,7 @@
 							<height>44</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -353,7 +353,7 @@
 							<height>45</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
@@ -367,7 +367,7 @@
 							<height>45</height>
 							<font>FontSize_22</font>
 							<textcolor>red</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<shadowcolor>77000000</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
@@ -395,18 +395,18 @@
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			<control type="image">
-				<posx>57</posx>
+				<posx>53</posx>
 				<posy>135</posy>
 				<width>23</width>
 				<height>20</height>
-				<texture>views/scrollbar/arrow.png</texture>
+				<texture background="true">views/scrollbar/arrow.png</texture>
 		  </control>
 		  <control type="image">
-				<posx>57</posx>
-				<posy>598</posy>
+				<posx>53</posx>
+				<posy>596</posy>
 				<width>23</width>
-				<height>20</height>
-				<texture flipy="true">views/scrollbar/arrow.png</texture>
+				<height>20</height>		
+				<texture background="true" flipy="true">views/scrollbar/arrow.png</texture>
 		  </control>
 		</control>
 	 </control>		
