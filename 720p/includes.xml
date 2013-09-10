@@ -1039,13 +1039,11 @@
 	<variable name="GlobalInfo">
 		<value condition="Substring(ListItem.Path,videodb://1/7,left) + ListItem.IsFolder + !IsEmpty(ListItem.Title)">$LOCALIZE[342] $LOCALIZE[20141]</value>
 		<value condition="Container.Content(Movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</value>
-		<value condition="Container.Content(Movies)">$INFO[ListItem.Genre]</value>
-    <value condition="Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.Label))">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</value>
-		<value condition="Container.Content(TVShows) + IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</value>
-		<value condition="Container.Content(TVShows) + IsEmpty(Window(Home).Property(NextAired.Label)) + IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Genre]</value>
-		<value condition="Container.Content(Seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</value>
+    <value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)">$INFO[ListItem.MPAA,$LOCALIZE[20074]: ]</value>
+    <value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(Episodes) + ![IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)]">$INFO[ListItem.Season,$LOCALIZE[20373] ,  •  ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,  •  ]$INFO[ListItem.Premiered,$LOCALIZE[31003] ]</value>
 		<value condition="Container.Content(Episodes) + [IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)]">$INFO[ListItem.Premiered]</value>
+		<value condition="[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(MusicVideos)">$INFO[ListItem.Artist]$INFO[ListItem.Album , • ]</value>
 		<value condition="Container.Content(Files) + !SubString(Container.FolderPath,plugin://)">$INFO[ListItem.Date]$INFO[ListItem.Size, • ]$INFO[ListItem.Duration, • ]</value>
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Style)]</value>
@@ -1062,7 +1060,7 @@
 		<value condition="Container.Content(Movies) + IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Year]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(Movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</value>
 		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Year,, • ,]$INFO[ListItem.Rating,, • ,]$INFO[ListItem.Property(UnWatchedEpisodes] $LOCALIZE[16101]</value>
-		<value condition="Container.Content(Episodes)">$INFO[ListItem.Season,$LOCALIZE[20359] ,x,]$INFO[ListItem.Episode,, • ]$INFO[ListItem.Premiered,$LOCALIZE[31003] ]</value>
+		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,$LOCALIZE[31003] ]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 	</variable>
 	
 	<variable name="DialogsInfo">

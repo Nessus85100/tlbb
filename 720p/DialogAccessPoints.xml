@@ -45,7 +45,7 @@
 					<height>28</height>
 					<colordiffuse>55ffffff</colordiffuse>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>dialogs/accesspoints/ap-lock.png</texture>
+					<texture background="true">dialogs/accesspoints/ap-lock.png</texture>
 					<visible>!IsEmpty(ListItem.Property(encryption))</visible>
 				</control>
 				<control type="image">
@@ -54,7 +54,7 @@
 					<width>40</width>
 					<height>40</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>dialogs/accesspoints/$INFO[ListItem.Property(state)].png</texture>
+					<texture background="true">dialogs/accesspoints/$INFO[ListItem.Property(state)].png</texture>
 				</control>
 				<control type="image">
 					<posx>467</posx>
@@ -62,7 +62,7 @@
 					<width>40</width>
 					<height>22</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-				  <texture>dialogs/accesspoints/ap-signal$INFO[ListItem.Property(signal)].png</texture>
+				  <texture background="true">dialogs/accesspoints/ap-signal$INFO[ListItem.Property(signal)].png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
@@ -81,20 +81,20 @@
 					<posy>0</posy>
 					<width>552</width>
 					<height>47</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
+					<texture background="true">dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout height="51" width="552">
 			 <control type="group">
-	      <animation effect="slide" start="0,35" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(3).OnPrevious">focus</animation>
-	      <animation effect="slide" start="0,-35" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(3).OnNext">focus</animation>
+	      <animation effect="slide" start="0,25" end="0,0" time="250" reversible="false" tween="back" easing="out" condition="Container(3).OnPrevious">focus</animation>
+	      <animation effect="slide" start="0,-25" end="0,0" time="250" reversible="false" tween="back" easing="out" condition="Container(3).OnNext">focus</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>552</width>
 					<height>47</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture background="true">buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(3)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
@@ -105,7 +105,7 @@
 					<height>28</height>
 					<colordiffuse>ffcccccc</colordiffuse>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>dialogs/accesspoints/ap-lock.png</texture>
+					<texture background="true">dialogs/accesspoints/ap-lock.png</texture>
 					<visible>!IsEmpty(ListItem.Property(encryption))</visible>
 				</control>
 				<control type="label">
@@ -126,7 +126,7 @@
 					<width>40</width>
 					<height>40</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>dialogs/accesspoints/$INFO[ListItem.Property(state)].png</texture>
+					<texture background="true">dialogs/accesspoints/$INFO[ListItem.Property(state)].png</texture>
 				</control>
 				<control type="image">
 					<posx>467</posx>
@@ -134,14 +134,14 @@
 					<width>40</width>
 					<height>22</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-				  <texture>dialogs/accesspoints/ap-signal$INFO[ListItem.Property(signal)].png</texture>
+				  <texture background="true">dialogs/accesspoints/ap-signal$INFO[ListItem.Property(signal)].png</texture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>552</width>
 					<height>51</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
+					<texture background="true">dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
 				</control>
 			 </control>

@@ -5,7 +5,7 @@
 
 		<control type="group">
 	    <include>HomeSlideAnimations</include>
-      <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard) | Window.IsActive(filebrowser)">
+      <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard) | Window.IsActive(filebrowser) | Window.IsActive(playercontrols)">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout"/>
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="inout"/>
       </animation>

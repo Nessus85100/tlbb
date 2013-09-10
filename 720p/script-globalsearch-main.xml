@@ -60,27 +60,29 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
-								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
 								<label>$INFO[ListItem.Property(Genre)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>575</posx>
+								<posx>585</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -91,11 +93,11 @@
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -104,7 +106,7 @@
 									<posy>20</posy>
 									<width>150</width>
 									<height>212</height>
-									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Art(thumb)]</texture>
+									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Icon)]</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
 									<bordersize>6</bordersize>
@@ -120,48 +122,53 @@
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>575</posx>
+									<posx>585</posx>
 									<posy>200</posy>
 									<width>128</width>
 									<height>22</height>
-								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 									<aspectratio align="right">keep</aspectratio>
+									<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>25</posy>
-									<width>540</width>
-									<label>$INFO[ListItem.Label]</label>
+									<posy>22</posy>
+									<width>530</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>50</posy>
-									<label>$INFO[ListItem.Property(Genre)]</label>
-									<font>FontSize_18</font>
+									<posy>44</posy>
+									<width>520</width>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
-									<width>540</width>
+									<label>$INFO[ListItem.Property(Genre)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>180</posx>
-									<posy>83</posy>
+									<posy>77</posy>
 									<width>530</width>
-									<height>105</height>
-								  <align>justify</align>
-									<label fallback="195">$INFO[ListItem.Property(Plotoutline)]</label>
-								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
+									<height>110</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
+								  <align>justify</align>
+									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
+								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>197</posy>
-									<width>400</width>
-									<font>FontSize_18</font>
+									<posy>194</posy>
+									<width>380</width>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
                   <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
 								</control>
@@ -193,27 +200,29 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
-								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<align>left</align>
 								<label>$INFO[ListItem.Property(Genre)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>575</posx>
+								<posx>585</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -224,11 +233,11 @@
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -237,7 +246,7 @@
 									<posy>20</posy>
 									<width>150</width>
 									<height>212</height>
-									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Art(thumb)]</texture>
+									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Art(Poster))]</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
 									<bordersize>6</bordersize>
@@ -253,50 +262,55 @@
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>575</posx>
+									<posx>585</posx>
 									<posy>200</posy>
 									<width>128</width>
 									<height>22</height>
-								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 									<aspectratio align="right">keep</aspectratio>
+									<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>25</posy>
-									<width>540</width>
-									<label>$INFO[ListItem.Label]</label>
+									<posy>22</posy>
+									<width>530</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>50</posy>
-									<label>$INFO[ListItem.Property(Genre)]</label>
-									<font>FontSize_18</font>
+									<posy>44</posy>
+									<width>520</width>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
-									<width>540</width>
+									<label>$INFO[ListItem.Property(Genre)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>180</posx>
-									<posy>83</posy>
+									<posy>77</posy>
 									<width>530</width>
-									<height>105</height>
+									<height>110</height>
+									<font>FontSize_20</font>
+									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
-									<textcolor>99white</textcolor>
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>197</posy>
-									<width>400</width>
-									<font>FontSize_18</font>
+									<posy>194</posy>
+									<width>380</width>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
-                  <label>$INFO[ListItem.Property(Premiered),, • ]$INFO[ListItem.Property(Rating),,]$INFO[ListItem.Property(MPAA), • ,]</label>
+                  <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),,]$INFO[ListItem.Property(MPAA), • ,]</label>
 								</control>
 							</control>
 						</focusedlayout>
@@ -340,27 +354,27 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
 								<label>$INFO[ListItem..Property(Season),,x]$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
 								<label>$INFO[ListItem.Property(TvShowTitle)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>575</posx>
+								<posx>585</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -371,11 +385,11 @@
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -400,7 +414,7 @@
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>575</posx>
+									<posx>585</posx>
 									<posy>200</posy>
 									<width>128</width>
 									<height>22</height>
@@ -411,39 +425,44 @@
 									<posx>240</posx>
 									<posy>25</posy>
 									<width>470</width>
-									<label>$INFO[ListItem..Property(Season),,x]$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>240</posx>
 									<posy>50</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Property(TvShowTitle)]</label>
-									<font>FontSize_18</font>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Property(TvShowTitle),, ]$INFO[ListItem..Property(Season),,x]$INFO[ListItem.Property(Episode)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>240</posx>
-									<posy>83</posy>
+									<posy>80</posy>
 									<width>470</width>
 									<height>105</height>
+									<font>FontSize_20</font>
+									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
-									<textcolor>99white</textcolor>
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>195</posy>
+									<posy>194</posy>
 									<width>470</width>
-                  <label>$INFO[ListItem.Property(Premiered),$LOCALIZE[31003]  ]</label>
-									<font>FontSize_18</font>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Property(Premiered),$LOCALIZE[31003] ]$INFO[ListItem.Property(Rating), • ,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
 								</control>
 							</control>
 						</focusedlayout>
@@ -473,33 +492,33 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
-								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 								<label>$INFO[ListItem.Property(Artist)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -527,39 +546,44 @@
 									<posx>240</posx>
 									<posy>25</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Label]</label>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>240</posx>
 									<posy>50</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Property(Artist)]</label>
-									<font>FontSize_18</font>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Property(Artist)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>240</posx>
-									<posy>83</posy>
+									<posy>80</posy>
 									<width>470</width>
 									<height>105</height>
+									<font>FontSize_20</font>
+									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
-									<textcolor>99white</textcolor>
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>195</posy>
+									<posy>194</posy>
 									<width>470</width>
-                  <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
-									<font>FontSize_18</font>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+                  <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Rating),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
 								</control>
 							</control>
 						</focusedlayout>
@@ -589,33 +613,33 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
-								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 								<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -633,39 +657,44 @@
 									<posx>240</posx>
 									<posy>25</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Label]</label>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>240</posx>
 									<posy>50</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-									<font>FontSize_18</font>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Property(Artist_Genre)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>240</posx>
-									<posy>83</posy>
+									<posy>80</posy>
 									<width>470</width>
 									<height>105</height>
+									<font>FontSize_20</font>
+									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Artist_Description)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
-									<textcolor>99white</textcolor>
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>195</posy>
+									<posy>194</posy>
 									<width>470</width>
-                  <label>$INFO[ListItem.Property(Artist_YearsActive), $LOCALIZE[21898]  ]</label>
-									<font>FontSize_18</font>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+                  <label>$INFO[ListItem.Property(Artist_YearsActive), $LOCALIZE[21898]  ]</label>
 								</control>
 							</control>
 						</focusedlayout>
@@ -695,27 +724,27 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
 								<label>$INFO[ListItem.Property(Artist)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>575</posx>
+								<posx>585</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -726,11 +755,11 @@
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -745,7 +774,7 @@
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>575</posx>
+									<posx>585</posx>
 									<posy>200</posy>
 									<width>128</width>
 									<height>22</height>
@@ -756,39 +785,44 @@
 									<posx>240</posx>
 									<posy>25</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Label]</label>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>240</posx>
 									<posy>50</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Property(Artist)]</label>
-									<font>FontSize_18</font>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Property(Artist)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>240</posx>
-									<posy>83</posy>
+									<posy>80</posy>
 									<width>470</width>
 									<height>105</height>
+									<font>FontSize_20</font>
+									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Album_Description)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
-									<textcolor>99white</textcolor>
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>195</posy>
+									<posy>194</posy>
 									<width>470</width>
-                  <label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Album_label), • ]</label>
-									<font>FontSize_18</font>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+                  <label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Album_label), • ]</label>
 								</control>
 							</control>
 						</focusedlayout>
@@ -818,27 +852,27 @@
 						<focusposition>2</focusposition>
 						<movement>2</movement>
 						<wraparound>true</wraparound>
-						<scrolltime tween="Cubic" easing="Out">350</scrolltime>
+				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
 								<posx>40</posx>
 								<width>550</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
-								<textcolor>99white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<textcolor>white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="label">
 								<posx>40</posx>
 								<posy>23</posy>
 								<width>550</width>
 								<label>$INFO[ListItem.Property(Album)]</label>
-								<font>FontSize_18</font>
-								<textcolor>77white</textcolor>
-								<shadowcolor>99000000</shadowcolor>
+								<font>FontSize_20</font>
+								<textcolor>88white</textcolor>
+								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>575</posx>
+								<posx>585</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -849,11 +883,11 @@
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
-				        <include>GlobalSearchFocusAnimations</include>
+				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>741</width>
+									<width>746</width>
 									<height>252</height>
 						      <texture>dialogs/global_search/banner_panel.png</texture>
 								</control>
@@ -868,7 +902,7 @@
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>575</posx>
+									<posx>585</posx>
 									<posy>200</posy>
 									<width>128</width>
 									<height>22</height>
@@ -879,49 +913,56 @@
 									<posx>240</posx>
 									<posy>25</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Label]</label>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<posx>240</posx>
 									<posy>50</posy>
 									<width>470</width>
-									<label>$INFO[ListItem.Property(Album)] $INFO[ListItem.Property(Year), (,)]</label>
-									<font>FontSize_18</font>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+									<label>$INFO[ListItem.Property(Album)] $INFO[ListItem.Property(Year), (,)]</label>
 								</control>
 								<control type="textbox" id="4">
 									<posx>240</posx>
-									<posy>83</posy>
+									<posy>80</posy>
 									<width>470</width>
 									<height>105</height>
+									<font>FontSize_20</font>
+									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Comment)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-									<font>FontSize_18</font>
-									<textcolor>99white</textcolor>
 								</control>
 								<control type="label">
 									<posx>240</posx>
 									<posy>195</posy>
 									<width>470</width>
-                  <label>$INFO[ListItem.Property(Track),$LOCALIZE[554] #0,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
-									<font>FontSize_18</font>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+                  <label>$INFO[ListItem.Property(Track),$LOCALIZE[554] #0,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
 							    <visible>!IntegerGreaterThan(ListItem.Property(Track),9)</visible>
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>195</posy>
+									<posy>194</posy>
 									<width>470</width>
-                  <label>$INFO[ListItem.Property(Track),$LOCALIZE[554] #,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
-									<font>FontSize_18</font>
+									<height>35</height>
+									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
+						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
+                  <label>$INFO[ListItem.Property(Track),$LOCALIZE[554] #,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
 							    <visible>IntegerGreaterThan(ListItem.Property(Track),9)</visible>
 								</control>
 							</control>

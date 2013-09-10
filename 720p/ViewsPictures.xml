@@ -660,14 +660,6 @@
 	    <include>CommonSlideAnimations</include>
 		  <control type="group">
 				<control type="image">
-					<posx>-230</posx>
-					<posy>-88</posy>
-					<width>1700</width>
-					<height>860</height>
-					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture background="true">views/slide/shine.png</texture>
-				</control>
-				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
@@ -761,41 +753,44 @@
               <visible>!Container.HasFiles | IsEmpty(ListItem.FileName)</visible>
 							<bordersize>6</bordersize>
 						</control>
-						<control type="group">
-							<posy>105</posy>
-								<control type="image">
-									<posx>6</posx>
-									<posy>169</posy>
-									<width>663</width>
-									<height>100</height>
-									<texture>views/gallery/tile.png</texture>
-								</control>
-								<control type="label">
-									<posx>20</posx>
-									<posy>195</posy>
-									<height>30</height>
-									<width>640</width>
-									<textcolor>white</textcolor>
-					        <shadowcolor>99000000</shadowcolor>
-									<font>FontSize_38</font>
-						      <scroll>false</scroll>
-									<align>left</align>
-									<label>$INFO[ListItem.label]</label>
-	                <animation effect="slide" end="0,10" time="0" condition="IsEmpty(ListItem.FileName)">Conditional</animation>
-								</control>
-								<control type="label">
-									<posx>20</posx>
-									<posy>230</posy>
-									<height>30</height>
-									<width>640</width>
-									<textcolor>77white</textcolor>
-					        <shadowcolor>99000000</shadowcolor>
-									<font>FontSize_22</font>
-						      <scroll>false</scroll>
-									<align>left</align>
-									<label>$VAR[GlobalInfo]</label>
-								</control>
-						</control>
+					</control>
+					<control type="group">
+						  <posx>46</posx>
+						  <posy>105</posy>
+							<control type="image">
+								<posx>6</posx>
+								<posy>79</posy>
+								<width>663</width>
+								<height>190</height>
+							  <aspectratio>stretch</aspectratio>
+								<texture>views/gallery/title_overlay.png</texture>
+							</control>
+							<control type="label">
+								<posx>20</posx>
+								<posy>195</posy>
+								<height>30</height>
+								<width>640</width>
+								<textcolor>white</textcolor>
+				        <shadowcolor>99000000</shadowcolor>
+								<font>FontSize_38</font>
+					      <scroll>false</scroll>
+								<align>left</align>
+								<label>$INFO[ListItem.label]</label>
+                <animation effect="slide" end="0,30" time="0" condition="![Container.HasFiles + !IsEmpty(ListItem.FileName)]">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>20</posx>
+								<posy>230</posy>
+								<height>30</height>
+								<width>640</width>
+								<textcolor>77white</textcolor>
+				        <shadowcolor>99000000</shadowcolor>
+								<font>FontSize_22</font>
+					      <scroll>false</scroll>
+								<align>left</align>
+								<label fallback="195">$VAR[GlobalInfo]</label>
+                <visible>Container.HasFiles + !IsEmpty(ListItem.FileName)</visible>
+							</control>
 					</control>
 				</focusedlayout>
 			</control>

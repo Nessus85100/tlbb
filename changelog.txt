@@ -1,3 +1,12 @@
+[B][COLOR=FF56ADDA]v1.5.4 - Release Date 10/9/2013[/COLOR][/B]
+• Added non-focus UnWatched episodes numbers in Gallery View and List View for TV Shows.
+• Added UnWatched indicator in Gallery View for Movies.
+• Added UnWatched indicator in VideoWallFanart View for Movies and TV Shows.
+• Make more texts bigger.
+• Fixed some missing visible conditions.
+• Removed some unused textures.
+• Severall bug fixes and tweeks.
+
 [B][COLOR=FF56ADDA]v1.5.3 - Release Date 6/9/2013[/COLOR][/B]
 • Added new "VideoWall Fanart" view for Movies and TV Shows.
 • Added a viewtype option to choose between fanart/clearlogo/landscape in ListView and GalleryView for TV Shows.
