@@ -142,6 +142,25 @@
         <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" />
      </animation>
 	</include>
+
+	<include name="GlobalSearchSlideAnimations">
+	  <animation type="WindowOpen" reversible="false">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+	  </animation>
+	  <animation type="WindowClose" reversible="false">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
+	  </animation>
+	  <animation type="Visible" reversible="false">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+	  </animation>
+	  <animation type="Hidden" reversible="false">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+	  </animation>
+	</include>
 	
 	<include name="CommonSlideAnimations">
 	  <animation type="WindowOpen" reversible="false">
@@ -219,25 +238,6 @@
 	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
     </animation>
   </include>
-
-	<include name="GlobalSearchSlideAnimations">
-	  <animation type="WindowOpen" reversible="false">
-	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	      <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
-	  </animation>
-	  <animation type="WindowClose" reversible="false">
-	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
-	  </animation>
-	  <animation type="Visible" reversible="false">
-	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
-	  </animation>
-	  <animation type="Hidden" reversible="false">
-	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
-	  </animation>
-	</include>
 	
   <include name="BannerListFocusAnimation">
 	  <animation type="Conditional" condition="Control.HasFocus(9111) | !IsEmpty(Control.GetLabel(190)) | Window.IsActive(script-globalsearch-contextmenu.xml)">
