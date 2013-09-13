@@ -1190,25 +1190,35 @@
 		</control>	
 
 
+    <include>CommonDialogsFadeOutBG</include>
+
     <!-- ================== -->
     <!-- Top Buttons Labels -->
     <!-- ================== -->    
 	  <control type="group">
 			<posx>45</posx>
 			<posy>25</posy>
-			<include>ShutdownMenuAnimation</include>
 	    <animation type="WindowOpen" reversible="false">
-	        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	        <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+        <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
 	    </animation>
+		  <animation type="Visible" reversible="false">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+		  </animation>
 	    <animation type="WindowClose" condition="!Window.IsActive(shutdownmenu)" reversible="false">
-	        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	        <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
+        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+        <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
 	    </animation>
 	    <animation type="WindowClose" condition="Window.IsActive(shutdownmenu)" reversible="false">
-	        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	        <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
+        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+        <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
 	    </animation>
+	    <animation type="Hidden" reversible="false">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+	    </animation>
+			<!-- StarRating -->
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>6</posy>
@@ -1243,8 +1253,7 @@
 					<scroll>false</scroll>
 				  <label fallback="0.0">$INFO[Container(100).ListItem.Property(Rating)]</label>
 				</control>
-			</control>	    
-			<!-- StarRating -->
+			</control>
 			<control type="image">
 				<posx>1050</posx>
 				<posy>13</posy>
@@ -1290,14 +1299,6 @@
 			</control>
       <!-- Labels -->
 			<control type="grouplist">
-	      <animation type="Visible" reversible="false">
-	          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="out"  />
-	          <effect type="slide" start="0,35" end="0,0" time="350" tween="sine" easing="out" />
-	      </animation>
-	      <animation type="Hidden" reversible="false">
-	          <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	          <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
-	      </animation>
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>70</height>
@@ -1331,92 +1332,92 @@
 					<visible>Control.IsVisible(193)</visible>
 				</control>
 			</control>
-		</control>
 
-    <!-- ================ -->
-    <!-- Top Content Info -->
-    <!-- ================ -->
-		<control type="group">
-				<posx>47</posx>
-				<posy>70</posy>
-			<include>TopOptionsSlideAnimations</include>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>20342</label>
-				<visible>Control.IsVisible(110)</visible>
+	    <!-- ================ -->
+	    <!-- Top Content Info -->
+	    <!-- ================ -->
+			<control type="group">
+				<posx>1</posx>
+				<posy>45</posy>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20342</label>
+					<visible>Control.IsVisible(110)</visible>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>31002</label>
+					<visible>Control.IsVisible(120)</visible>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20360</label>
+					<visible>Control.IsVisible(140)</visible>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>20389</label>
+					<visible>Control.IsVisible(150)</visible>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>133</label>
+					<visible>Control.IsVisible(160)</visible>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>132</label>
+					<visible>Control.IsVisible(170)</visible>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>134</label>
+					<visible>Control.IsVisible(180)</visible>
+				</control>
 			</control>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>31002</label>
-				<visible>Control.IsVisible(120)</visible>
-			</control>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>20360</label>
-				<visible>Control.IsVisible(140)</visible>
-			</control>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>20389</label>
-				<visible>Control.IsVisible(150)</visible>
-			</control>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>133</label>
-				<visible>Control.IsVisible(160)</visible>
-			</control>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>132</label>
-				<visible>Control.IsVisible(170)</visible>
-			</control>
-			<control type="label">
-				<width>300</width>
-				<height>20</height>
-				<font>FontSize_18</font>
-				<textcolor>blue</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>134</label>
-				<visible>Control.IsVisible(180)</visible>
-			</control>
-		</control>		
+
+		</control>
 	</controls>
 </window>

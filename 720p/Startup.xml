@@ -1,12 +1,12 @@
 <window>
 	<defaultcontrol always="true">9999</defaultcontrol>
+	<include>BackgroundContent</include>
+	<include>BackgroundVignette</include>
 	<allowoverlay>no</allowoverlay>
   <backgroundcolor>0</backgroundcolor> 
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<controls>
-		<include>BackgroundContent</include>
-		<include>BackgroundVignette</include>
 		<control type="button" id="9999">
 			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ReplaceWindow(1111)</onfocus>
       <onfocus>SetFocus(50)</onfocus>

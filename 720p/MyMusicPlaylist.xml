@@ -1,8 +1,9 @@
 <window id="500">
-	<defaultcontrol always="true">50</defaultcontrol>
+	<defaultcontrol always="true">56</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
-	<views>50,51,56,57</views>
+	<views>56,50,51,57</views>
+  <onload condition="Skin.HasSetting(HideThumbnailsMusic)">SetFocus(50)</onload>
 	<controls>
 		<include>BackgroundItems</include>
 		<include>MusicPlaylistViews</include>

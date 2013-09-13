@@ -3,6 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
 	<views>56,50,51,52,57,59</views>
+  <onload condition="Skin.HasSetting(HideThumbnailsMusic)">SetFocus(50)</onload>
 	<controls>
 		<include>BackgroundItems</include>
 		<include>MusicLibraryViews</include>

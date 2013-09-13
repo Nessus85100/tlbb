@@ -136,7 +136,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
-						<height>380</height>
+						<height>385</height>
 						<label>$LOCALIZE[31421][CR][CR]TLBB Team</label>
 						<font>FontSize_20</font>
 						<align>justify</align>
@@ -149,7 +149,7 @@
 					<posx>1065</posx>
 					<posy>20</posy>
 					<width>8</width>
-					<height>380</height>
+					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -185,7 +185,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
-						<height>380</height>
+						<height>385</height>
 						<label>$LOCALIZE[31422][CR][CR]TLBB Team</label>
 						<font>FontSize_20</font>
 						<align>justify</align>
@@ -198,7 +198,7 @@
 					<posx>1065</posx>
 					<posy>20</posy>
 					<width>8</width>
-					<height>380</height>
+					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -234,7 +234,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
-						<height>390</height>
+						<height>385</height>
 						<label>$LOCALIZE[31423][CR][CR]TLBB Team</label>
 						<font>FontSize_20</font>
 						<align>justify</align>
@@ -247,7 +247,7 @@
 					<posx>1065</posx>
 					<posy>20</posy>
 					<width>8</width>
-					<height>390</height>
+					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -283,7 +283,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
-						<height>390</height>
+						<height>385</height>
 						<label>$LOCALIZE[31424][CR][CR]TLBB Team</label>
 						<font>FontSize_20</font>
 						<align>justify</align>
@@ -296,7 +296,7 @@
 					<posx>1065</posx>
 					<posy>20</posy>
 					<width>8</width>
-					<height>390</height>
+					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -333,7 +333,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
-						<height>390</height>
+						<height>385</height>
 						<label>$LOCALIZE[31425][CR][CR]TLBB Team</label>
 						<font>FontSize_20</font>
 						<align>justify</align>
@@ -346,7 +346,7 @@
 					<posx>1065</posx>
 					<posy>20</posy>
 					<width>8</width>
-					<height>390</height>
+					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
@@ -383,7 +383,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
-						<height>390</height>
+						<height>385</height>
 						<label>$LOCALIZE[31426][CR][CR]TLBB Team</label>
 						<font>FontSize_20</font>
 						<align>justify</align>
@@ -396,7 +396,7 @@
 					<posx>1065</posx>
 					<posy>20</posy>
 					<width>8</width>
-					<height>390</height>
+					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>

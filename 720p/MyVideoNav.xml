@@ -3,6 +3,7 @@
   <allowoverlay>yes</allowoverlay>
 	<views>56,50,51,52,53,54,58,580,55,560,561,57</views>
   <backgroundcolor>0</backgroundcolor>
+  <onload condition="Skin.HasSetting(HideThumbnailsVideos)">SetFocus(50)</onload>
 	<onload condition="![Library.HasContent(movies) | Library.HasContent(tvshows)] + !Window.Previous(Startup) + ![stringcompare(Container.FolderPath,addons://sources/video/) | substring(Container.FolderPath,plugin://plugin.video,left)]">ActivateWindow(1110)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
   <onload condition="System.HasAddon(script.tvtunes) + Library.HasContent(TVShows) + !Player.HasMedia + Skin.HasSetting(TVTunesEnabled)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>

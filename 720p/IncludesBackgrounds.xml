@@ -15,13 +15,12 @@
 	
 	<include name="BackgroundContent">
 		<control type="image">
-			<posx>-1</posx>
-			<posy>-1</posy>
-			<width>1282</width>
-			<height>722</height>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1300</width>
+			<height>740</height>
 			<aspectratio>stretch</aspectratio>
       <texture background="true">windows/bg/black.jpg</texture>
-			<visible>Player.HasAudio</visible>
 		</control>
 		<control type="image">
 			<description>Default Background Image</description>

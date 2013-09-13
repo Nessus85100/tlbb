@@ -693,7 +693,7 @@
 	      <preloaditems>2</preloaditems>
 	      <focusposition>5</focusposition>
 			  <pagecontrol>60</pagecontrol>
-        <visible>!Container.Content(addons)</visible>
+        <visible>Container.HasFiles + !Container.Content(addons)</visible>
 				<itemlayout width="58" height="380">
 					<control type="image">
 						<posx>35</posx>

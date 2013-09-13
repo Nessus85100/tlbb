@@ -1,3 +1,8 @@
+[B][COLOR=FF56ADDA]v1.5.5 - Release Date 14/9/2013[/COLOR][/B]
+• Fixed bug when Thumbnails view is hidden from skin settings.
+• Fixed some wrong visible conditions in file mode for Videos,Music,Add-ons and Pictures.
+• Removed more unnecessary code and textures.
+
 [B][COLOR=FF56ADDA]v1.5.4 - Release Date 10/9/2013[/COLOR][/B]
 • Added non-focus UnWatched episodes numbers in Gallery View and List View for TV Shows.
 • Added UnWatched indicator in Gallery View for Movies.
