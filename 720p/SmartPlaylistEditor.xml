@@ -4,12 +4,12 @@
 	<controls>
 
 		<control type="group">
-			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsVisible(smartplaylistrule) + !Window.IsActive(selectdialog)</visible>
+			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(smartplaylistrule) + !Window.IsActive(selectdialog)</visible>
 			<include>DialogAnimation</include>
 			<control type="image">
 				<description>background image</description>
 				<include>FullscreenDimensions</include>
-				<texture background="true">dialogs/playlist_editor/bg_playlisteditor.png</texture>
+				<texture background="true">dialogs/playlisteditor/bg_playlisteditor.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
@@ -39,7 +39,7 @@
 				<control type="image">
 					<description>background image</description>
 					<include>FullscreenDimensions</include>
-					<texture background="true">dialogs/playlist_editor/playlisteditor_top.png</texture>
+					<texture background="true">dialogs/playlisteditor/playlisteditor_top.png</texture>
 				</control>			
 				<control type="spincontrolex" id="22">
 					<description>Set Playlist type</description>
@@ -48,7 +48,7 @@
 					<width>624</width>
 					<height>45</height>
 					<label>467</label>
-					<onup>noop</onup>
+					<onup>10000</onup>
 					<ondown>12</ondown>
 					<onright>22</onright>
 					<onleft>22</onleft>
@@ -98,7 +98,7 @@
 				<control type="image">
 					<description>background image</description>
 					<include>FullscreenDimensions</include>
-					<texture background="true">dialogs/playlist_editor/playlisteditor_mid.png</texture>
+					<texture background="true">dialogs/playlisteditor/playlisteditor_mid.png</texture>
 				</control>						
 				<control type="label">
 					<description>rules label</description>
@@ -125,7 +125,6 @@
 						<onleft>9001</onleft>
 						<onright>9001</onright>
 						<scrolltime>200</scrolltime>
-						<include>VisibleFadeEffect</include>
 						<itemlayout height="51" width="460">
 							<control type="label">
 								<posx>10</posx>
@@ -148,7 +147,6 @@
 								<height>45</height>
 								<texture>buttons/settings_fo.png</texture>
 								<visible>Control.HasFocus(10)</visible>
-		            <include>FocusVisibleFadeEffect</include>
 						  </control>
 							<control type="label">
 								<posx>10</posx>
@@ -236,7 +234,7 @@
 				<control type="image">
 					<description>background image</description>
 					<include>FullscreenDimensions</include>
-					<texture background="true">dialogs/playlist_editor/playlisteditor_bottom.png</texture>
+					<texture background="true">dialogs/playlisteditor/playlisteditor_bottom.png</texture>
 				</control>
 				<control type="spincontrolex" id="16">
 					<posx>328</posx>
@@ -295,10 +293,10 @@
 	        <include>DialogsButton</include>
 				</control>
 			</control>
-
+	
 		  <control type="group" id="10000">
-				<posx>330</posx>
-				<posy>528</posy>
+				<posx>320</posx>
+				<posy>543</posy>
 	      <!-- Buttons -->
 				<control type="grouplist" id="10001">
 					<posx>0</posx>
@@ -314,53 +312,42 @@
 					<ondown>22</ondown>
 					<control type="button" id="20">
 						<description>Save</description>
+					  <width>150</width>
+					  <height>40</height>
+						<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
+						<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>110</textwidth>
+						<textoffsetx>40</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
 					  <label>190</label>
-					  <include>TopButton</include>
 					</control>
 					<control type="button" id="21">
 						<description>Cancel</description>
+					  <width>150</width>
+					  <height>40</height>
+						<texturefocus>dialogs/buttons/cancel_fo.png</texturefocus>
+						<texturenofocus>dialogs/buttons/cancel_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>110</textwidth>
+						<textoffsetx>40</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
 					  <label>222</label>
-					  <include>TopButton</include>
-					</control>
-					<control type="button." id="6">
-						<description>Playlist Options</description>
-					  <label>31285</label>
-					  <include>TopButton</include>
-					  <onclick>SetFocus(10020)</onclick>
-					</control>
-				</control>
-	      <!-- Buttons Labels -->
-				<control type="grouplist">
-					<posx>0</posx>
-					<posy>0</posy>
-					<height>70</height>
-					<width>552</width>
-					<itemgap>30</itemgap>
-					<align>left</align>
-					<orientation>horizontal</orientation>
-					<control type="label">
-						<description>Save Label</description>
-					  <include>DialogsButtonLabelNoFocus</include>
-            <label>$INFO[Control.GetLabel(20),․  ]</label>
-						<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(20)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(20)" reversible="true">Conditional</animation>
-					</control>
-					<control type="label">
-						<description>Cancel Label</description>
-					  <include>DialogsButtonLabelNoFocus</include>
-            <label>$INFO[Control.GetLabel(21),․  ]</label>
-						<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(21)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(21)" reversible="true">Conditional</animation>
-					</control>
-					<control type="label.">
-						<description>Playlist Options</description>
-					  <include>DialogsButtonLabelNoFocus</include>
-            <label>$INFO[Control.GetLabel(6),․  ]</label>
-						<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(6)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(6)" reversible="true">Conditional</animation>
 					</control>
 				</control>
 		  </control>
+	
 		</control>
+
 	</controls>
 </window>

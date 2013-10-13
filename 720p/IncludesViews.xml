@@ -7,62 +7,79 @@
 	  <include file="ViewsPVR.xml" />
 
     <include name="VideoViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Videos</include> <!-- id = 50 -->
       <include condition="!Skin.HasSetting(HideSlideViewVideos)">SlideView_Videos</include> <!-- id = 51 -->
       <include condition="!Skin.HasSetting(HideGalleryViewVideos)">GalleryView_Videos</include> <!-- id = 52 -->
-      <include condition="Skin.HasSetting(Show3DWallViewVideos)">3DWallView_Videos</include> <!-- id = 53 -->
-      <include condition="Skin.HasSetting(ShowWallViewVideos)">WallView_Videos</include> <!-- id = 54 -->
-      <include condition="Skin.HasSetting(ShowListWallViewVideos)">ListWallView_Videos</include> <!-- id = 58 -->
-      <include condition="!Skin.HasSetting(HideVideoWallFanartViewVideos)">VideoWallFanartView</include> <!-- id = 580 -->
-      <include condition="!Skin.HasSetting(HidePostersViewVideos)">PostersView_Videos</include> <!-- id = 55 -->
       <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView</include> <!-- id = 56 -->
       <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Posters</include> <!-- id = 560 -->
       <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Landscape</include> <!-- id = 561 -->
       <include condition="!Skin.HasSetting(HideBannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
+     </control>
     </include>
+
     
     <include name="MusicLibraryViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Music</include> <!-- id = 50 -->
       <include condition="!Skin.HasSetting(HideSlideViewMusic)">SlideView_Music</include> <!-- id = 51 -->
       <include condition="!Skin.HasSetting(HideGalleryViewMusic)">GalleryView_Music</include> <!-- id = 52 -->
       <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
       <include condition="!Skin.HasSetting(HideBannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
-      <include condition="Skin.HasSetting(Show3DWallViewMusic)">3DWallView_Music</include> <!-- id = 59 -->
+     </control>
     </include>
     
     <include name="MusicFilesViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Music</include> <!-- id = 50 -->
       <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
+     </control>
     </include>
 
     <include name="PicturesViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Pictures</include> <!-- id = 50 -->
       <include>GalleryView_Pictures</include> <!-- id = 52 -->
       <include>ThumbnailsView</include> <!-- id = 56 -->
+     </control>
     </include>
 
     <include name="ProgramsViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Addons</include> <!-- id = 50 -->
       <include>ThumbnailsView</include> <!-- id = 56 -->
+     </control>
     </include>
     
     <include name="AddonsViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Addons</include> <!-- id = 50 -->
       <include>ThumbnailsView</include> <!-- id = 56 -->
+     </control>
     </include>
     
     <include name="VideoPlaylistViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Videos</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Posters</include> <!-- id = 560 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Landscape</include> <!-- id = 561 -->
       <include condition="!Skin.HasSetting(HideBannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
+     </control>
     </include>
     
     <include name="MusicPlaylistViews">
+     <control type="group">
+      <include>OpenCloseSlideAnimation</include>
       <include>ListView_Music</include> <!-- id = 50 -->
       <include condition="!Skin.HasSetting(HideSlideViewMusic)">SlideView_Music</include> <!-- id = 51 -->
       <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
       <include condition="!Skin.HasSetting(HideBannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
+     </control>
     </include>
 
     <include name="PVRViews">

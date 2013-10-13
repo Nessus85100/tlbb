@@ -6,8 +6,9 @@
 	<include>BackgroundItems</include>
 
 			<control type="group">
-			  <visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(busy.xml)</visible>
-		    <include>Window_OpenClose_Animation</include>
+			  <visible>!Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(busy.xml)</visible>
+		    <include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 		    <include>DialogZoomInOutAnimation</include>
 				<control type="panel" id="7000">
 					<posx>34</posx>
@@ -21,30 +22,28 @@
 				  <scrolltime>200</scrolltime>
 					<viewtype label="536">icon</viewtype>
 				  <preloaditems>1</preloaditems>
-				  <include>Window_OpenClose_Animation</include>
 					<itemlayout height="200" width="200">
 						<control type="image">
-							<posx>0</posx>
 							<width>216</width>
 							<height>216</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="15">views/thumbnails/thumb_panel.png</texture>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>22</posx>
-							<posy>23</posy>
-							<width>167</width>
-							<height>142</height>
+							<posx>25</posx>
+							<posy>25</posy>
+							<width>166</width>
+							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>22</posx>
-							<posy>23</posy>
-							<width>167</width>
-							<height>142</height>
+							<posx>25</posx>
+							<posy>25</posy>
+							<width>166</width>
+							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
@@ -66,31 +65,38 @@
 					</itemlayout>
 					<focusedlayout height="200" width="200">
 						<control type="image">
-							<posx>0</posx>
 							<width>216</width>
 							<height>216</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="15">views/thumbnails/thumb_panel.png</texture>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>22</posx>
-							<posy>23</posy>
-							<width>167</width>
-							<height>142</height>
-							<colordiffuse>FF04aeda</colordiffuse>
+							<posx>25</posx>
+							<posy>25</posy>
+							<width>166</width>
+							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true">$INFO[ListItem.Thumb]</texture>
+						  <texture background="true">empty_icon.png</texture>
 							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>22</posx>
-							<posy>23</posy>
-							<width>167</width>
-							<height>142</height>
+							<posx>25</posx>
+							<posy>25</posy>
+							<width>166</width>
+							<height>136</height>
+							<colordiffuse>FF04aeda</colordiffuse>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true">$INFO[ListItem.Thumb]</texture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<posx>25</posx>
+							<posy>25</posy>
+							<width>166</width>
+							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
@@ -187,8 +193,14 @@
 						<item id="11">
 							<onclick>ActivateWindow(SkinSettings)</onclick>
 							<thumb>icons/Skin.png</thumb>
+							<label>20077</label>
+							<visible>!Container(7000).HasFocus(11)</visible>
+						</item>
+						<item id="11">
+							<onclick>ActivateWindow(SkinSettings)</onclick>
 							<icon>icons/Skin2.png</icon>
 							<label>20077</label>
+							<visible>Container(7000).HasFocus(11)</visible>
 						</item>
 						<item id="12">
 							<onclick>ActivateWindow(1111)</onclick>
@@ -199,8 +211,9 @@
 				</control>
 			</control>
 
-		<include>SettingsWeatherAndClock</include>
 		<include>CommonNowPlaying</include>
 		<include>SettingsCategoryContentInfo</include>
+		<include>CommonDialogsFadeOutBG</include>
+		<include>SettingsWeatherAndClock</include>
 	</controls>
 </window>		

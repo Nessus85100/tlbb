@@ -6,73 +6,63 @@
 	 <include>BackgroundItems</include>
 	 
 	 <control type="group">
-    <include>Window_OpenClose_Animation</include>
-		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(videos,sources://video/) + !Window.IsActive(MusicFiles) + !Window.IsActive(selectdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(screencalibration) + !Window.IsActive(1110) + !Window.IsActive(141)</visible>
-
-	  <control type="group">
-	    <include>Window_OpenClose_Animation</include>
-			<control type="image">
-			  <include>FullscreenDimensions</include>
-			  <texture background="true">windows/settings/bg_settings.png</texture>
-			</control>
+    <include>OpenCloseSlideAnimation</include>
+    <include>VisibleHiddenSlideAnimation</include>
+    <include>DialogZoomInOutAnimation</include>
+		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(videos,sources://video/) + !Window.IsActive(MusicFiles) + !Window.IsActive(selectdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(screencalibration) + !Window.IsActive(1110) + !Window.IsActive(141)</visible>
+		<control type="image">
+		  <include>FullscreenDimensions</include>
+		  <texture background="true">windows/settings/bg_help.png</texture>
 		</control>
 
 		<!-- ========================= -->
 		<!-- == Help Topics Buttons == -->
 		<!-- ========================= -->
 		<control type="group" id="4000">
-				<posx>100</posx>
-				<posy>166</posy>
-	      <include>Window_OpenClose_Animation</include>
+			<posx>98</posx>
+			<posy>166</posy>
 			<control type="list" id="4001">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>295</width>
-				<height>416</height>
-				<itemgap>2</itemgap>
-				<onleft>9000</onleft>
+				<height>399</height>
+				<itemgap>1</itemgap>
+				<onleft>10000</onleft>
 				<onright>5000</onright>
 				<onup>4001</onup>
 				<ondown>10000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="52" width="295">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>295</width>
-						<height>50</height>
-						<texture>buttons/catbullet_nf.png</texture>
-					</control>
+				<itemlayout height="50" width="295">
 					<control type="label">
-						<posx>40</posx>
+						<posx>280</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
+						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
-						<align>left</align>
+						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="52" width="295">
+				<focusedlayout height="50" width="295">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
-						<texture>buttons/catbullet_fo.png</texture>
+						<height>49</height>
+						<texture>windows/settings/settings_left_fo.png</texture>
 						<animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(4001)">Conditional</animation>
 					</control>
 					<control type="label">
-						<posx>40</posx>
+						<posx>280</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
+						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>white</textcolor>
-						<align>left</align>
+						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -86,31 +76,27 @@
 						<label>Screen Setup</label>
 					  <onclick>ActivateWindow(screencalibration)</onclick>
 				 	</item>
-					<!-- <item id="3">
-						<label>Settings</label>
-					  <onclick>ActivateWindow(Settings)</onclick>
-				 	</item>
-					<item id="4">
-						<label>Skin Settings</label>
-					  <onclick>ActivateWindow(SkinSettings)</onclick>
-				 	</item> -->
-					<item id="5">
+					<item id="3">
 						<label>WiFi Network</label>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(accesspoints)</onclick>
 					</item>
-					<item id="6">
+					<item id="4">
 						<label>Region Add-ons</label>
 					  <onclick>ActivateWindow(videos,plugin://plugin.video.tlbbwizard)</onclick>
 					</item>
-					<item id="7">
+					<item id="5">
 						<label>Video Library</label>
 					  <onclick>ActivateWindow(videos,sources://video/)</onclick>
 					</item>
-					<item id="8">
+					<item id="6">
 						<label>Music Library</label>
 					  <onclick>ActivateWindow(MusicFiles)</onclick>
 					</item>
+					<item id="7">
+						<label>Customization</label>
+					  <onclick>ActivateWindow(Settings)</onclick>
+				 	</item>
 				</content>
 			</control>
 
@@ -122,11 +108,11 @@
 				<control type="grouplist" id="5001">
 					<include>CloseAnimation</include>
 					<visible>Container(4001).Hasfocus(1)</visible>
-					<posx>312</posx>
-					<posy>12</posy>
+					<posx>316</posx>
+					<posy>10</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<onleft>4001</onleft>
 					<onright>9000</onright>
 					<onup>5001</onup>
@@ -146,8 +132,8 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="60">
-					<posx>1065</posx>
-					<posy>20</posy>
+					<posx>1070</posx>
+					<posy>15</posy>
 					<width>8</width>
 					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
@@ -161,6 +147,7 @@
 					<onup>60</onup>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
 					<visible>Container(4001).Hasfocus(1)</visible>
 			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
 				</control>
@@ -171,11 +158,11 @@
 				<control type="grouplist" id="5002">
 					<include>CloseAnimation</include>
 					<visible>Container(4001).Hasfocus(2)</visible>
-					<posx>312</posx>
-					<posy>12</posy>
+					<posx>316</posx>
+					<posy>10</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<onleft>4001</onleft>
 					<onright>9000</onright>
 					<onup>5002</onup>
@@ -191,12 +178,12 @@
 						<align>justify</align>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>60</pagecontrol>
+						<pagecontrol>62</pagecontrol>
 					</control>
 				</control>
-				<control type="scrollbar" id="60">
-					<posx>1065</posx>
-					<posy>20</posy>
+				<control type="scrollbar" id="62">
+					<posx>1070</posx>
+					<posy>15</posy>
 					<width>8</width>
 					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
@@ -206,12 +193,13 @@
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<onleft>4001</onleft>
 					<onright>4001</onright>
-					<ondown>60</ondown>
-					<onup>60</onup>
+					<ondown>62</ondown>
+					<onup>62</onup>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
 					<visible>Container(4001).Hasfocus(2)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(62)">Conditional</animation>
 				</control>
 
 				<!-- ================ -->
@@ -219,18 +207,18 @@
 				<!-- ================ -->
 				<control type="grouplist" id="5003">
 					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(5)</visible>
-					<posx>312</posx>
-					<posy>12</posy>
+					<visible>Container(4001).Hasfocus(3)</visible>
+					<posx>316</posx>
+					<posy>10</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<onleft>4001</onleft>
 					<onright>9000</onright>
 					<onup>5003</onup>
 					<ondown>5003</ondown>
 					<control type="textbox">
-						<description>Help Screen 5</description>
+						<description>Help Screen 3</description>
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
@@ -240,12 +228,12 @@
 						<align>justify</align>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>60</pagecontrol>
+						<pagecontrol>63</pagecontrol>
 					</control>
 				</control>
-				<control type="scrollbar" id="60">
-					<posx>1065</posx>
-					<posy>20</posy>
+				<control type="scrollbar" id="63">
+					<posx>1070</posx>
+					<posy>15</posy>
 					<width>8</width>
 					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
@@ -255,12 +243,13 @@
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<onleft>4001</onleft>
 					<onright>4001</onright>
-					<ondown>60</ondown>
-					<onup>60</onup>
+					<ondown>63</ondown>
+					<onup>63</onup>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>Container(4001).Hasfocus(5)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
+					<visible>Container(4001).Hasfocus(3)</visible>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(63)">Conditional</animation>
 				</control>
 
 				<!-- ============================= -->
@@ -268,18 +257,18 @@
 				<!-- ============================= -->
 				<control type="grouplist" id="5004">
 					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(6)</visible>
-					<posx>312</posx>
-					<posy>12</posy>
+					<visible>Container(4001).Hasfocus(4)</visible>
+					<posx>316</posx>
+					<posy>10</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<onleft>4001</onleft>
 					<onright>9000</onright>
 					<onup>5004</onup>
 					<ondown>5004</ondown>
 					<control type="textbox">
-						<description>Help Screen 6</description>
+						<description>Help Screen 4</description>
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
@@ -289,12 +278,12 @@
 						<align>justify</align>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>60</pagecontrol>
+						<pagecontrol>64</pagecontrol>
 					</control>
 				</control>
-				<control type="scrollbar" id="60">
-					<posx>1065</posx>
-					<posy>20</posy>
+				<control type="scrollbar" id="64">
+					<posx>1070</posx>
+					<posy>15</posy>
 					<width>8</width>
 					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
@@ -304,12 +293,13 @@
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<onleft>4001</onleft>
 					<onright>4001</onright>
-					<ondown>60</ondown>
-					<onup>60</onup>
+					<ondown>64</ondown>
+					<onup>64</onup>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>Container(4001).Hasfocus(6)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
+					<visible>Container(4001).Hasfocus(4)</visible>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(64)">Conditional</animation>
 				</control>
 
 
@@ -318,18 +308,18 @@
 				<!-- =================== -->
 				<control type="grouplist" id="5005">
 					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(7)</visible>
-					<posx>312</posx>
-					<posy>12</posy>
+					<visible>Container(4001).Hasfocus(5)</visible>
+					<posx>316</posx>
+					<posy>10</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<onleft>4001</onleft>
 					<onright>9000</onright>
 					<onup>5005</onup>
 					<ondown>5005</ondown>
 					<control type="textbox">
-						<description>Help Screen 7</description>
+						<description>Help Screen 5</description>
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
@@ -339,12 +329,12 @@
 						<align>justify</align>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>60</pagecontrol>
+						<pagecontrol>65</pagecontrol>
 					</control>
 				</control>
-				<control type="scrollbar" id="60">
-					<posx>1065</posx>
-					<posy>20</posy>
+				<control type="scrollbar" id="65">
+					<posx>1070</posx>
+					<posy>15</posy>
 					<width>8</width>
 					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
@@ -354,12 +344,13 @@
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<onleft>4001</onleft>
 					<onright>4001</onright>
-					<ondown>60</ondown>
-					<onup>60</onup>
+					<ondown>65</ondown>
+					<onup>65</onup>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>Container(4001).Hasfocus(7)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
+					<visible>Container(4001).Hasfocus(5)</visible>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(65)">Conditional</animation>
 				</control>
 
 
@@ -368,18 +359,18 @@
 				<!-- =================== -->
 				<control type="grouplist" id="5006">
 					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(8)</visible>
-					<posx>312</posx>
-					<posy>12</posy>
+					<visible>Container(4001).Hasfocus(6)</visible>
+					<posx>316</posx>
+					<posy>10</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<onleft>4001</onleft>
 					<onright>9000</onright>
 					<onup>5006</onup>
 					<ondown>5006</ondown>
 					<control type="textbox">
-						<description>Help Screen 8</description>
+						<description>Help Screen 6</description>
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>745</width>
@@ -389,12 +380,12 @@
 						<align>justify</align>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>60</pagecontrol>
+						<pagecontrol>66</pagecontrol>
 					</control>
 				</control>
-				<control type="scrollbar" id="60">
-					<posx>1065</posx>
-					<posy>20</posy>
+				<control type="scrollbar" id="66">
+					<posx>1070</posx>
+					<posy>15</posy>
 					<width>8</width>
 					<height>385</height>
 					<texturesliderbackground>-</texturesliderbackground>
@@ -404,13 +395,65 @@
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<onleft>4001</onleft>
 					<onright>4001</onright>
-					<ondown>60</ondown>
-					<onup>60</onup>
+					<ondown>66</ondown>
+					<onup>66</onup>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>Container(4001).Hasfocus(8)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
+					<visible>Container(4001).Hasfocus(6)</visible>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(66)">Conditional</animation>
 				</control>
+
+				<!-- =================== -->
+				<!-- == Customization == -->
+				<!-- =================== -->
+				<control type="grouplist" id="5007">
+					<include>CloseAnimation</include>
+					<visible>Container(4001).Hasfocus(7)</visible>
+					<posx>316</posx>
+					<posy>10</posy>
+					<width>782</width>
+					<height>399</height>
+					<itemgap>1</itemgap>
+					<onleft>4001</onleft>
+					<onright>9000</onright>
+					<onup>5004</onup>
+					<ondown>5004</ondown>
+					<control type="textbox">
+						<description>Help Screen 7</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>745</width>
+						<height>385</height>
+						<label>$LOCALIZE[31427][CR]TLBB Team</label>
+						<font>FontSize_20</font>
+						<align>justify</align>
+						<textcolor>99white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<pagecontrol>67</pagecontrol>
+					</control>
+				</control>
+				<control type="scrollbar" id="67">
+					<posx>1070</posx>
+					<posy>15</posy>
+					<width>8</width>
+					<height>385</height>
+					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<onleft>4001</onleft>
+					<onright>4001</onright>
+					<ondown>67</ondown>
+					<onup>67</onup>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+          <colordiffuse>AAFFFFFF</colordiffuse>
+					<visible>Container(4001).Hasfocus(7)</visible>
+			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(67)">Conditional</animation>
+				</control>
+
 
 			</control>
 		</control>
@@ -423,7 +466,6 @@
 			<posx>120</posx>
 			<posy>163</posy>
 			<visible>Window.IsVisible(Custom_FirstTimeHelp.xml)</visible>
-      <include>Window_OpenClose_Animation</include>
 			<control type="label">
 				<description>Header Category Label</description>
 				<posx>0</posx>
@@ -444,7 +486,6 @@
 			<posx>107</posx>
 			<posy>583</posy>
 			<visible>Window.IsVisible(Custom_FirstTimeHelp.xml)</visible>
-      <include>Window_OpenClose_Animation</include>
       <!-- Buttons -->
 			<control type="grouplist" id="10001">
 				<posx>0</posx>
@@ -521,8 +562,8 @@
 	 </control>
 
 	 <include>CommonNowPlaying</include>
-	 <include>CommonDialogsFadeOutBG</include>
 	 <include>SettingsCategoryContentInfo</include>
+	 <include>CommonDialogsFadeOutBG</include>
 	 <include>SettingsWeatherAndClock</include>
 	</controls>
 </window>

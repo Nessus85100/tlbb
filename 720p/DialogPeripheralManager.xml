@@ -86,7 +86,6 @@
 					<height>72</height>
 					<texture>buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(20)</visible>
-					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="label">
 					<posx>10</posx>

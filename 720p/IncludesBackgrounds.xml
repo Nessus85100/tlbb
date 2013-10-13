@@ -103,7 +103,7 @@
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
-		  <visible>![Control.IsVisible(55) + !Window.IsActive(movieinformation)] + !Control.IsVisible(580)</visible>
+		  <visible>![Control.IsVisible(55) + ![Window.IsActive(movieinformation) | Window.IsActive(PlayerControls)]] + !Control.IsVisible(580)</visible>
 		</control>
 		<control type="image">
 			<description>Pictures Fanart</description>
@@ -177,18 +177,15 @@
 		  <description>Vignette</description>
 			<include>FullscreenDimensions</include>
 			<texture background="true">windows/bg/bg_vignette.png</texture>
-			<include>BackgroundFade</include>
-			<fadetime>FanartCrossfadeTime</fadetime>
-<!--	<colordiffuse>FFCDCDCD</colordiffuse>
-      <colordiffuse>D5FFFFFF</colordiffuse> -->
+<!--	<colordiffuse>FFCDCDCD</colordiffuse> -->
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture background="true">windows/bg/bg_diffuse.png</texture>
+			<texture background="true">windows/bg/bg_overlay.png</texture>
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
-      <colordiffuse>D5FFFFFF</colordiffuse>
-			<visible>Control.IsVisible(57) | [Control.IsVisible(50) + !Window.IsActive(weather) + !Window.IsActive(musicplaylisteditor)] | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)]</visible>
+      <colordiffuse>ddFFFFFF</colordiffuse>
+			<visible>[Control.IsVisible(57) + !Window.IsVisible(profiles)] | [Control.IsVisible(50) + !Window.IsVisible(weather) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(profiles)] | Control.IsVisible(560) | Control.IsVisible(561) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)]</visible>
 	  </control>
 	</include>
 

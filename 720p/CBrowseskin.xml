@@ -58,7 +58,7 @@
     <!-- Browse/Edit/Save/Cancel Buttons -->
 		<control type="grouplist" id="100">
 			<posx>30</posx>
-			<posy>270</posy>
+			<posy>273</posy>
 			<width>650</width>
 			<height>55</height>
 			<itemgap>17</itemgap>

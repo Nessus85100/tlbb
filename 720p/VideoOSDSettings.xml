@@ -19,6 +19,7 @@
 				<description>background image</description>
 				<include>FullscreenDimensions</include>
 				<texture>osd/bg_osd_settings_lines.png</texture>
+				<colordiffuse>FAFFFFFF</colordiffuse>
 				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
 			  <visible>!Control.IsVisible(3)</visible>
 			</control>

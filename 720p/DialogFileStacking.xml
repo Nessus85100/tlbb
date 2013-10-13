@@ -3,7 +3,7 @@
 	<controls>
 		
 		<control type="group">
-	    <include>ContentInfoSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
       <control type="image">
         <posx>30</posx>
         <posy>13</posy>
@@ -105,7 +105,7 @@
 	  <control type="group">
 				<posx>105</posx>
 				<posy>25</posy>
-		    <include>ContentInfoSlideAnimations</include>
+		    <include>OpenCloseSlideAnimation</include>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>

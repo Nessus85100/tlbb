@@ -1,11 +1,21 @@
 <fonts>
 	<fontset id="Default" idloc="15109" unicode="true">
 	 	<font>
-			<name>BackFont</name>
+			<name>BackFont_22B</name>
 			<filename>OpenSans-Regular.ttf</filename>
 			<size>22</size>
 			<style>bold</style>
 		</font>
+		<font>
+			<name>BackFont_22</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>22</size>
+		</font>
+	 	<font>
+			<name>BackFont_34</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>34</size>
+		</font>		
 	 	<font>
 			<name>ClockFont</name>
 			<filename>OpenSans-Regular.ttf</filename>
@@ -13,10 +23,9 @@
 			<style>bold</style>
 		</font>
 	 	<font>
-			<name>Keyboard</name>
+			<name>NotificationsFont</name>
 			<filename>OpenSans-Regular.ttf</filename>
-			<size>15</size>
-			<style>bold</style>
+			<size>20</size>
 		</font>
 	 	<font>
 			<name>FontSize_12</name>
@@ -38,6 +47,12 @@
 			<name>FontSize_14B</name>
 			<filename>OpenSans-Regular.ttf</filename>
 			<size>14</size>
+			<style>bold</style>
+		</font>
+	 	<font>
+			<name>FontSize_15B</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>15</size>
 			<style>bold</style>
 		</font>
 	  <font>

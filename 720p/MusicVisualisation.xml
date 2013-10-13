@@ -219,7 +219,7 @@
 			</control>
 		  <control type="image">
 				<visible>[Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
-			  <visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
+			  <visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(favourites)</visible>
 				<description>Music bar</description>
 				<posx>0</posx>
 				<posy>410</posy>
@@ -255,13 +255,13 @@
 		        <effect type="fade" start="100" end="0" time="400" delay="0" tween="sine" easing="out" />
 		    </animation>
 				<visible>[Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
-			  <visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
+			  <visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(favourites)</visible>
 	       <control type="image">
-	         <posx>4</posx>
+	         <posx>3</posx>
 	         <posy>-50</posy>
 	         <width>155</width>
 	         <height>155</height>
-	         <texture fallback="osd/cd.png">$INFO[Player.FolderPath]cdart.png</texture>
+		       <texture fallback="osd/cd.png" diffuse="osd/cd_diffuse.png">$INFO[Player.FolderPath]cdart.png</texture>
 	         <aspectratio>keep</aspectratio>
 					 <include>CDImageAnim</include>
            <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Player.ShowInfo | Window.IsActive(MusicOSD)]" reversible="true">Conditional</animation>
@@ -293,7 +293,6 @@
 						<texture diffuse="thumbs/music_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -307,7 +306,6 @@
 						<texture diffuse="thumbs/music_diffuse.png">osd/ff-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Forwarding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -321,7 +319,6 @@
 						<texture diffuse="thumbs/music_diffuse.png">osd/rw-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Rewinding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>

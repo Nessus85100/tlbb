@@ -37,7 +37,7 @@
 				<height>220</height>
 				<texture>dialogs/busy/animation_1.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="360" center="auto" time="3500" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -47,7 +47,7 @@
 				<height>220</height>
 				<texture>dialogs/busy/animation_2.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="-360" center="auto" time="3500" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="label">
 				<description>Busy label</description>
@@ -58,8 +58,9 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[Control.GetLabel(10),,%]</label>
-				<font>FontSize_32</font>
+				<font>FontSize_26</font>
 				<textcolor>99white</textcolor>
+				<!-- <textcolor>FF9E64BD</textcolor> -->
 				<visible>IntegerGreaterThan(Control.GetLabel(10),0)</visible>
 			</control>
 			<control type="progress" id="10">

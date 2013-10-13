@@ -22,7 +22,7 @@
 		<control type="image" id="1">
 		  <description>Diffuse</description>
 			<include>FullscreenDimensions</include>
-		  <texture background="true">windows/bg/menus_overlay.png</texture>
+		  <texture background="true">windows/bg/PVROSD_overlay.png</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <visible>!Window.IsActive(SliderDialog)</visible>
@@ -42,12 +42,12 @@
 				<texture background="true">osd/tile.png</texture>
 			  <colordiffuse>D9FFFFFF</colordiffuse>
 				<include>FanartFade</include>
-        <visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
+        <visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
 		  </control>
 			<control type="group" id="1">
 				<posx>40</posx>
 				<posy>325</posy>
-        <visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
+        <visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
 		    <animation type="WindowOpen">
 	        <effect type="slide" start="-150,0" end="0,0" time="450" delay="0" tween="sine" easing="out" />
 	        <effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="out" />
@@ -103,9 +103,7 @@
 						<height>258</height>
 						<texture diffuse="thumbs/poster_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
-						<animation type="conditional" condition="Player.Paused" reversible="true">
+						<visible>Player.Paused</visible>						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
 				 </control>
@@ -118,7 +116,6 @@
 						<texture diffuse="thumbs/poster_diffuse.png">osd/ff-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Forwarding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -132,7 +129,6 @@
 						<texture diffuse="thumbs/poster_diffuse.png">osd/rw-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Rewinding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -179,7 +175,6 @@
 						<texture diffuse="thumbs/music_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -193,7 +188,6 @@
 						<texture diffuse="thumbs/music_diffuse.png">osd/ff-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Forwarding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -207,7 +201,6 @@
 						<texture diffuse="thumbs/music_diffuse.png">osd/rw-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Rewinding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -254,7 +247,6 @@
 						<texture diffuse="thumbs/video_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -268,7 +260,6 @@
 						<texture diffuse="thumbs/video_diffuse.png">osd/ff-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Forwarding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -282,7 +273,6 @@
 						<texture diffuse="thumbs/video_diffuse.png">osd/rw-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Rewinding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -573,7 +563,7 @@
 			</control>
 	    <!-- Media Flags -->
 			<control type="grouplist" id="1">
-        <visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
+        <visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsActive(SliderDialog) | Window.IsActive(SeekBar) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(SelectDialog) | Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(favourites) | Window.IsActive(NumericInput) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
 		    <animation type="WindowOpen" reversible="false">
 	        <effect type="slide" start="150,0" end="0,0" time="450" delay="0" tween="sine" easing="out" />
 	        <effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="out" />
@@ -619,7 +609,7 @@
 		<!-- ====== Seekbar Code ======= -->
 		<!-- =========================== -->
 		<control type="group" id="1">
-	    <visible>Window.IsActive(FullScreenVideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![Player.ShowInfo | Window.IsActive(VideoOSD)] + !Window.IsActive(script-XBMC-Subtitles-main.xml) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(NumericInput) + !Window.IsActive(PVROSDChannels) + !Window.IsActive(PVROSDGuide)</visible>
+	    <visible>Window.IsActive(FullScreenVideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![Player.ShowInfo | Window.IsActive(VideoOSD)] + !Window.IsActive(script-XBMC-Subtitles-main.xml) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(favourites) + !Window.IsActive(NumericInput) + !Window.IsActive(PVROSDChannels) + !Window.IsActive(PVROSDGuide)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" time="350" center="640,360" start="150" end="100" tween="cubic" easing="out"/>
 				<effect type="fade" time="350" start="0" easing="out" end="100"/>

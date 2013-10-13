@@ -13,9 +13,15 @@
 		</control>
 		
 		<control type="group">
-			<include>ShutdownMenuAnimation</include>
-			<include>DialogAnimation</include>
-
+			<include>OpenCloseSlideAnimation</include>
+	    <animation type="Conditional"  reversible="false" condition="!Window.IsActive(favourites)">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+	    </animation>
+	    <animation type="Conditional" reversible="false" condition="Window.IsActive(favourites)">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+	    </animation>
 			<!-- ================= -->
 			<!--  Main Lists Code  -->
 			<!-- ================= -->
@@ -936,7 +942,7 @@
 					<width>376</width>
 					<height>366</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture background="true"fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse_big.png">$INFO[Container(100).ListItem.Art(thumb)]</texture>
+					<texture background="true"fallback="thumbs/fallback_square_big.png" diffuse="thumbs/music_diffuse_big.png">$INFO[Container(100).ListItem.Art(thumb)]</texture>
 					<fadetime>300</fadetime>
 					<visible>Control.IsVisible(160) | Control.IsVisible(170) | Control.IsVisible(180)</visible>
 			 </control>
@@ -1198,23 +1204,13 @@
 	  <control type="group">
 			<posx>45</posx>
 			<posy>25</posy>
-	    <animation type="WindowOpen" reversible="false">
-        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-        <effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
-	    </animation>
-		  <animation type="Visible" reversible="false">
+			<include>ShutdownMenuAnimation</include>
+			<include>OpenCloseSlideAnimation</include>
+	    <animation type="Conditional"  reversible="false" condition="!Window.IsActive(favourites)">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
-		  </animation>
-	    <animation type="WindowClose" condition="!Window.IsActive(shutdownmenu)" reversible="false">
-        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-        <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
 	    </animation>
-	    <animation type="WindowClose" condition="Window.IsActive(shutdownmenu)" reversible="false">
-        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-        <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
-	    </animation>
-	    <animation type="Hidden" reversible="false">
+	    <animation type="Conditional" reversible="false" condition="Window.IsActive(favourites)">
 	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 	    </animation>

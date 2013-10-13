@@ -17,15 +17,17 @@
 		<include condition="!Skin.HasSetting(HideSettingsSubMenu)">HomeSubMenuSettings</include>
 		<include>SkinWidgetsLists</include>
 		<include>HomeSubMenusArrows</include>
-		<include>CommonDialogsFadeOutBG</include>
-		<include>ContentSkinWidgetsInfo</include>
 	  <!-- Home Now Playing -->
-		<include>HomeNowPlaying</include>
-	  <!-- Home TopMenu -->
+		<include>HomeNowPlaying</include>		
+	  <!-- RSS Feed -->
+    <include>RSSFeed</include> 		
+	  <!-- TLBB Logo -->
+		<include>CommonDialogsFadeOutBG</include>
+		<include>TLBBLogo</include>
+	  <!-- Home TopSection -->
+		<include>ContentSkinWidgetsInfo</include>
 		<include>TopHomeMenu</include>
 		<include>HomeWeatherAndClock</include>
-	  <!-- TLBB Logo -->
-		<include>TLBBLogo</include>
-    <include>RSSFeed</include> 
+
 	</controls>	
 </window>

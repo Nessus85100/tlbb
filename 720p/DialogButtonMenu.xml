@@ -1,6 +1,7 @@
 <window type="buttonMenu" id="111">
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>Dialog.Close(playercontrols)</onload>
+	<onload>Dialog.Close(favourites)</onload>
 	<include>OnLoadDialogsClose</include>
 	<coordinates>
 		<system>1</system>
@@ -12,7 +13,7 @@
 	 <control type="group" id="9000">
 		<posx>30</posx>
 		<posy>25</posy>
-	  <include>ContentInfoSlideAnimations</include>
+	  <include>OpenCloseSlideAnimation</include>
     <control type="image">
       <posx>0</posx>
       <posy>-12</posy>
@@ -25,7 +26,7 @@
 			<posx>0</posx>
 			<posy>63</posy>
 			<width>380</width>
-			<height>520</height>
+			<height>557</height>
 			<itemgap>0</itemgap>
 			<onleft>Close</onleft>
 			<onright>Close</onright>
@@ -137,6 +138,12 @@
 				<label>Reload Skin</label>
 			</control>
 			<control type="button" id="15">
+				<description>Update firmware button</description>
+			  <include>TopLeftMenusButton</include>
+		    <onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
+				<label>Check for Updates</label>
+			</control>
+			<control type="button" id="16">
 				<description>Bottom Texture</description>
 				<texturefocus>dialogs/menus/bottom.png</texturefocus>
 				<texturenofocus>dialogs/menus/bottom.png</texturenofocus>
@@ -179,6 +186,7 @@
 	 <control type="group">
 	  <posx>45</posx>
 		<posy>540</posy>
+    <visible>!Window.IsActive(fullscreenvideo)</visible>
     <animation type="WindowOpen" reversible="false">
       <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
       <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />

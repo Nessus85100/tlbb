@@ -24,9 +24,9 @@
 				<control type="image">
 				  <description>Vignette</description>
 				  <include>FullscreenDimensions</include>
-				  <texture background="true">windows/bg/bg_diffuse.png</texture>
+				  <texture background="true">windows/bg/bg_overlay.png</texture>
 					<fadetime>250</fadetime>
-		      <colordiffuse>D5FFFFFF</colordiffuse>
+          <colordiffuse>ddFFFFFF</colordiffuse>
 				  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 				</control>
 		 </control>
@@ -35,7 +35,7 @@
         <include>DialogZoomInOutAnimation</include>
 			  <visible>!Window.IsVisible(AddonSettings)</visible>
 			  <animation type="Conditional" condition="!IsEmpty(Control.GetLabel(190)) | Control.HasFocus(9111) | Window.IsActive(script-globalsearch-contextmenu.xml)">
-			     <effect type="slide" start="0" end="100" time="350" tween="sine" easing="inout"/>
+			     <effect type="slide" start="0" end="100" time="300" tween="sine" easing="out" />
 			  </animation>
 				<!-- Movies -->
 				<control type="group" id="119">
@@ -48,7 +48,7 @@
 					</control>
 					<control type="fixedlist" id="111">
 						<visible>Container(9111).HasFocus(1)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -82,7 +82,7 @@
 								<label>$INFO[ListItem.Property(Genre)]</label>
 							</control>
 							<control type="image">
-								<posx>585</posx>
+								<posx>583</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -91,21 +91,21 @@
 								<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 						</itemlayout>
-						<focusedlayout width="560" height="260">
+						<focusedlayout width="560" height="265">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+									<width>741</width>
+									<height>255</height>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
-									<posy>20</posy>
+									<posy>21</posy>
 									<width>150</width>
-									<height>212</height>
+									<height>213</height>
 									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Icon)]</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
@@ -113,17 +113,17 @@
 								</control>
 								<control type="image">
 									<posx>21</posx>
-									<posy>20</posy>
+									<posy>21</posy>
 									<width>150</width>
-									<height>212</height>
+									<height>213</height>
 									<texture>overlays/unwatched/thumbs/UnWatched_Poster.png</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordersize>6</bordersize>
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>585</posx>
-									<posy>200</posy>
+									<posx>583</posx>
+									<posy>207</posy>
 									<width>128</width>
 									<height>22</height>
 									<aspectratio align="right">keep</aspectratio>
@@ -131,7 +131,7 @@
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>22</posy>
+									<posy>25</posy>
 									<width>530</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
@@ -141,7 +141,7 @@
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>44</posy>
+									<posy>48</posy>
 									<width>520</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
@@ -151,7 +151,7 @@
 								</control>
 								<control type="textbox" id="4">
 									<posx>180</posx>
-									<posy>77</posy>
+									<posy>80</posy>
 									<width>530</width>
 									<height>110</height>
 									<font>FontSize_20</font>
@@ -163,7 +163,7 @@
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>380</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -188,7 +188,7 @@
 					</control>
 					<control type="fixedlist" id="121">
 						<visible>Container(9111).HasFocus(2)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -222,7 +222,7 @@
 								<label>$INFO[ListItem.Property(Genre)]</label>
 							</control>
 							<control type="image">
-								<posx>585</posx>
+								<posx>583</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -237,33 +237,33 @@
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+									<width>741</width>
+									<height>255</height>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
-									<posy>20</posy>
+									<posy>21</posy>
 									<width>150</width>
-									<height>212</height>
-									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Art(Poster))]</texture>
+									<height>213</height>
+									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Icon)]</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
 									<posx>21</posx>
-									<posy>20</posy>
+									<posy>21</posy>
 									<width>150</width>
-									<height>212</height>
+									<height>213</height>
 									<texture>overlays/unwatched/thumbs/UnWatched_Poster.png</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordersize>6</bordersize>
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>585</posx>
-									<posy>200</posy>
+									<posx>583</posx>
+									<posy>207</posy>
 									<width>128</width>
 									<height>22</height>
 									<aspectratio align="right">keep</aspectratio>
@@ -271,7 +271,7 @@
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>22</posy>
+									<posy>25</posy>
 									<width>530</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
@@ -281,7 +281,7 @@
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>44</posy>
+									<posy>48</posy>
 									<width>520</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
@@ -291,7 +291,7 @@
 								</control>
 								<control type="textbox" id="4">
 									<posx>180</posx>
-									<posy>77</posy>
+									<posy>80</posy>
 									<width>530</width>
 									<height>110</height>
 									<font>FontSize_20</font>
@@ -303,7 +303,7 @@
 								</control>
 								<control type="label">
 									<posx>180</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>380</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -342,7 +342,7 @@
 					</control>
 					<control type="fixedlist" id="141">
 						<visible>Container(9111).HasFocus(4)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -374,7 +374,7 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>585</posx>
+								<posx>582</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -391,7 +391,7 @@
 									<posy>0</posy>
 									<width>746</width>
 									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
@@ -414,8 +414,8 @@
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>585</posx>
-									<posy>200</posy>
+									<posx>582</posx>
+									<posy>205</posy>
 									<width>128</width>
 									<height>22</height>
 								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -455,7 +455,7 @@
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>470</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -480,7 +480,7 @@
 					</control>
 					<control type="fixedlist" id="151">
 						<visible>Container(9111).HasFocus(5)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -520,7 +520,7 @@
 									<posy>0</posy>
 									<width>746</width>
 									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
@@ -576,7 +576,7 @@
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>470</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -601,7 +601,7 @@
 					</control>
 					<control type="fixedlist" id="161">
 						<visible>Container(9111).HasFocus(6)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -641,7 +641,7 @@
 									<posy>0</posy>
 									<width>746</width>
 									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
@@ -687,7 +687,7 @@
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>470</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -712,7 +712,7 @@
 					</control>
 					<control type="fixedlist" id="171">
 						<visible>Container(9111).HasFocus(7)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -744,7 +744,7 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>585</posx>
+								<posx>582</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -761,7 +761,7 @@
 									<posy>0</posy>
 									<width>746</width>
 									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
@@ -774,8 +774,8 @@
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>585</posx>
-									<posy>200</posy>
+									<posx>582</posx>
+									<posy>205</posy>
 									<width>128</width>
 									<height>22</height>
 								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -815,7 +815,7 @@
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>470</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -840,7 +840,7 @@
 					</control>
 					<control type="fixedlist" id="181">
 						<visible>Container(9111).HasFocus(8)</visible>
-				    <include>GlobalSearchSlideAnimations</include>
+				    <include>OpenCloseSlideAnimation</include>
 						<posx>270</posx>
 						<posy>110</posy>
 						<width>750</width>
@@ -872,7 +872,7 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>585</posx>
+								<posx>582</posx>
 								<posy>15</posy>
 								<width>128</width>
 								<height>22</height>
@@ -889,7 +889,7 @@
 									<posy>0</posy>
 									<width>746</width>
 									<height>252</height>
-						      <texture>dialogs/global_search/banner_panel.png</texture>
+						      <texture background="true">views/banners/banner_panel.png</texture>
 								</control>
 								<control type="image">
 									<posx>21</posx>
@@ -902,8 +902,8 @@
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>585</posx>
-									<posy>200</posy>
+									<posx>582</posx>
+									<posy>205</posy>
 									<width>128</width>
 									<height>22</height>
 								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -943,7 +943,7 @@
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>195</posy>
+									<posy>198</posy>
 									<width>470</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -955,7 +955,7 @@
 								</control>
 								<control type="label">
 									<posx>240</posx>
-									<posy>194</posy>
+									<posy>198</posy>
 									<width>470</width>
 									<height>35</height>
 									<font>FontSize_20</font>
@@ -977,9 +977,10 @@
 		 <control type="group">
 				<posx>105</posx>
 				<posy>25</posy>
-		    <include>ShutdownMenuAnimation</include>
-			  <visible>![Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-globalsearch-contextmenu.xml)]</visible>
-		    <include>GlobalSearchSlideAnimations</include>
+		    <include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
+				<include>ShutdownMenuAnimation</include>
+			  <visible>![Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-globalsearch-contextmenu.xml) | Window.IsActive(favourites)]</visible>
 			  <animation type="Conditional" condition="!Control.HasFocus(9111) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">
 			     <effect type="slide" start="0" end="-60" time="350" tween="sine" easing="inout"/>
 			  </animation>  
@@ -1014,8 +1015,11 @@
 				</control>
 		 </control>
 
-	   <control type="group">
-				<include>GlobalSearchSlideAnimations</include>
+
+		 <include>CommonNowPlaying</include>
+		 <include>CommonDialogsFadeOutBG</include>
+		 <control type="group">
+				<include>OpenCloseSlideAnimation</include>
 	      <include>CommonWeatherAndClock</include>
 	   </control>
 		</control>
@@ -1025,7 +1029,7 @@
 	  <!-- Top Content Menu -->
 	  <!-- ================ -->
 		<control type="group">
-	    <include>GlobalSearchSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
 	    <include>ShutdownMenuAnimation</include>
 	    <visible>!Window.IsActive(script-globalsearch-contextmenu.xml)</visible>
 		  <animation type="Conditional" condition="!Control.HasFocus(9111) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">

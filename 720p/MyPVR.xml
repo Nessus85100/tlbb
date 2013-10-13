@@ -16,7 +16,8 @@
 	  <control type="group"  id="9000">
 			<posx>45</posx>
 			<posy>25</posy>
-      <include>CommonSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
       <!-- PVR Options -->
 			<control type="grouplist" id="9111">
 				<posx>0</posx>

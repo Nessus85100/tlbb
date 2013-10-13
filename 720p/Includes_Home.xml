@@ -4,238 +4,237 @@
 		<!-- ====================== -->
 		<include name="HomeMenuWraplist">
 			<control type="group">
-		    <visible allowhiddenfocus="true">!Window.IsActive(1110) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(busy.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
-		    <include>HomeSlideAnimations</include>
-			  <control type="group">
-		      <include>HomeSlideAnimations</include>
-				  <control type="image">
-		        <include>FullscreenDimensions</include>
-						<texture background="true">windows/bg/colors_pulse.png</texture>
-					</control>
-					<control type="wraplist" id="20">
-					 <description>Home Container</description>
-					 <posx>-95</posx>
-					 <posy>110</posy>
-					 <width>1500</width>
-					 <height>720</height>
-					 <align>center</align>
-				   <onup>SetFocus(21)</onup>
-					 <ondown condition="[Container(20).HasFocus(9) + !Skin.HasSetting(HideSettingsSubMenu)]
-														| [[Library.HasContent(movies) + Container(20).HasFocus(2)] + !Skin.HasSetting(HideMoviesSubMenu)]
-														| [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + !Skin.HasSetting(HideTVShowsSubMenu)]
-														| [[Library.HasContent(music) + Container(20).HasFocus(3)] + !Skin.HasSetting(HideMusicSubMenu)]">SetFocus(23)</ondown>
-					 <ondown condition="[[Library.HasContent(movies) + Container(20).HasFocus(2)] + Skin.HasSetting(HideMoviesSubMenu)]
-														| [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + Skin.HasSetting(HideTVShowsSubMenu)]
-														| [[Library.HasContent(music) + Container(20).HasFocus(3)] + Skin.HasSetting(HideMusicSubMenu)]">SetFocus(81)</ondown>
-					 <onleft>20</onleft>
-					 <onright>20</onright>
-					 <onback condition="Container(20).HasFocus(15)">Skin.SetString(CustomFavourite1.Label)</onback>
-					 <onback condition="Container(20).HasFocus(16)">Skin.SetString(CustomFavourite2.Label)</onback>
-					 <onback condition="Container(20).HasFocus(17)">Skin.SetString(CustomFavourite3.Label)</onback>
-					 <onback condition="Container(20).HasFocus(18)">Skin.SetString(CustomFavourite4.Label)</onback>
-					 <onback condition="Container(20).HasFocus(19)">Skin.SetString(CustomFavourite5.Label)</onback>
-					 <onback condition="Container(20).HasFocus(20)">Skin.SetString(CustomFavourite6.Label)</onback>
-					 <onback condition="Container(20).HasFocus(21)">Skin.SetString(CustomFavourite7.Label)</onback>
-					 <onback condition="Container(20).HasFocus(22)">Skin.SetString(CustomFavourite8.Label)</onback>
-					 <onback condition="Container(20).HasFocus(23)">Skin.SetString(CustomFavourite9.Label)</onback>
-					 <onback condition="Container(20).HasFocus(24)">Skin.SetString(CustomFavourite10.Label)</onback>
-					 <onback condition="Container(20).HasFocus(13)">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onback>
-					 <itemgap>0</itemgap>
-					 <orientation>horizontal</orientation>
-					 <focusposition>1</focusposition>
-           <scrolltime tween="Quadratic" easing="out">350</scrolltime>
-					 <itemlayout width="430">
-				    <control type="group">
-				     <animation type="Conditional" condition="true">
-				       <effect type="zoom" start="100" end="65" time="0" center="318,220" />
-				       <effect type="fade" start="100" end="45" time="0" />
-				     </animation>
-						 <control type="label">
-							  <posx>300</posx>
-								<posy>200</posy>
-								<width>590</width>
-			          <textcolor>white</textcolor>
-					      <shadowcolor>99000000</shadowcolor>
-								<font>FontSize_100</font>
-								<align>center</align>
-								<label>$INFO[ListItem.Label]</label>
-						 </control>
-					  </control>
-					 </itemlayout>
-					 <focusedlayout width="430">
-			       <control type="group">
-			        <animation type="Focus" reversible="false" condition="Container(20).OnNext | Container(20).OnPrevious">
-			         <effect type="zoom" start="65" end="100" time="300" tween="sine" easing="out" center="318,220" />
-			         <effect type="fade" start="45" end="100" time="300" tween="sine" easing="out" />
-			        </animation>
-			        <animation type="Unfocus" reversible="false" condition="Container(20).OnNext | Container(20).OnPrevious">
-			         <effect type="zoom" start="100" end="65" time="300" tween="sine" easing="out" center="318,220" />
-			          <effect type="fade" start="100" end="45" time="300" tween="sine" easing="out" />
-			        </animation>
-					    <animation type="Conditional" condition="true" reversible="false">
-			          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-			          <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
-					    </animation>
-			        <animation type="Conditional" reversible="false" condition="!ControlGroup(21).HasFocus">
-			         <effect type="fade" start="45" end="100" time="250" tween="sine" easing="out" />
-			        </animation>
-			        <animation type="Conditional" reversible="false" condition="ControlGroup(21).HasFocus">
-			          <effect type="fade" start="100" end="45" time="250" tween="sine" easing="out" />
-			        </animation>
-							<control type="label">
-							  <posx>300</posx>
-								<posy>200</posy>
-								<width>590</width>
-			          <textcolor>white</textcolor>
-					      <shadowcolor>99000000</shadowcolor>
-								<font>FontSize_100</font>
-								<align>center</align>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						 </control>
-					 </focusedlayout>
-					 <content>
-						 <item id="0">
-								<label>$LOCALIZE[3]</label>
-								<onclick>ActivateWindow(Videos,files,return)</onclick>
-								<visible>Skin.HasSetting(ShowHomeMenuVideosButton)</visible>
-						 </item>
-						 <item id="1">
-								<label>$LOCALIZE[31002]</label>
-	              <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
-	              <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuTVShowsButton)</visible>
-						 </item>
-						 <item id="50">
-								<label>$LOCALIZE[24069]</label>
-					      <onclick>XBMC.RunScript(script.tlbb)</onclick>
-								 <!-- <onclick>ActivateWindowAndFocus(SystemInfo, 200,0)</onclick> -->
-								<visible>!IsEmpty(Window(Home).Property(update.available))</visible>
-						 </item>
-						 <item id="2">
-								<label>$LOCALIZE[20342]</label>
-	              <onclick condition="!Library.HasContent(movies)">ActivateWindow(videos,files,return)</onclick>
-								<onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuMoviesButton)</visible>
-						 </item>
-						 <item id="51">
-								<label>19019</label>
-								<onclick>ActivateWindow(videos,addons,return)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuChannelsButton)</visible>
-						 </item>
-						 <item id="3">
-								<label>$LOCALIZE[2]</label>
-								<onclick condition="!Library.HasContent(music) | stringcompare(Skin.String(MusicName),files)">ActivateWindow(musicfiles)</onclick>
-								<onclick condition="Library.HasContent(music) + !stringcompare(Skin.String(MusicName),files)">ActivateWindow(musiclibrary,$INFO[Skin.String(MusicPath)],return)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuMusicButton)</visible>
-						 </item>
-						 <item id="4">
-								<label>$LOCALIZE[20389]</label>
-								<onclick>ActivateWindow(videos,musicvideotitles)</onclick>
-								<visible>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</visible>
-						 </item>
-						 <item id="5">
-								<label>$LOCALIZE[1]</label>
-								<onclick>ActivateWindow(Pictures)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuPicturesButton)</visible>
-						 </item>
-						 <item id="6">
-								<label>$LOCALIZE[0]</label>
-								<onclick>ActivateWindow(Programs,Addons,return)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuProgramsButton)</visible>
-						 </item>
-						 <item id="7">
-								<label>$LOCALIZE[24001]</label>
-								<onclick condition="IsEmpty(Skin.String(AddonsName))">ActivateWindow(videos,addons,return)</onclick>
-								<onclick condition="stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow(AddonBrowser)</onclick>
-								<onclick condition="!stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow($INFO[Skin.String(AddonsPath)],addons,return)</onclick>
-								<visible>Skin.HasSetting(ShowHomeMenuAddonsButton)</visible>
-						 </item>
-						 <item id="8">
-								<label>$LOCALIZE[8]</label>
-								<onclick>ActivateWindow(Weather)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuWeatherButton)</visible>
-						 </item>
-						 <item id="9">
-								<label>$LOCALIZE[5]</label>
-								<onclick>ActivateWindow(Settings)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
-						 </item>
-						 <item id="11">
-								<label>$LOCALIZE[31000]</label>
-	              <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
-							  <visible>System.GetBool(pvrmanager.enabled)</visible>
-						 </item>
-						 <item id="12">
-								<label>$LOCALIZE[137]</label>
-							  <onclick>XBMC.RunScript(script.globalsearch)</onclick>
-								<visible>Skin.HasSetting(ShowHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
-						 </item>
-						 <item id="13">
-								<label>$LOCALIZE[31018]</label>
-								<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuTrailersButton)</visible>
-						 </item>
-						 <item id="14">
-								<label>$LOCALIZE[1036]</label>
-				        <onclick>ActivateWindow(favourites)</onclick>
-								<visible>!Skin.HasSetting(HideHomeMenuFavoritesButton)</visible>
-						 </item>
-			
-			       <!-- Custom Panels -->
-						 <item id="15">
-								<label>$INFO[Skin.String(CustomFavourite1.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite1.Path))</visible>
-						 </item>
-						 <item id="16">
-								<label>$INFO[Skin.String(CustomFavourite2.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite2.Path))</visible>
-						 </item>
-						 <item id="17">
-								<label>$INFO[Skin.String(CustomFavourite3.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite3.Path))</visible>
-						 </item>
-						 <item id="18">
-								<label>$INFO[Skin.String(CustomFavourite4.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite4.Path))</visible>
-						 </item>
-						 <item id="19">
-								<label>$INFO[Skin.String(CustomFavourite5.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite5.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite5.Path))</visible>
-						 </item>
-						 <item id="20">
-								<label>$INFO[Skin.String(CustomFavourite6.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite6.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite6.Path))</visible>
-						 </item>
-						 <item id="21">
-								<label>$INFO[Skin.String(CustomFavourite7.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite7.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite7.Path))</visible>
-						 </item>
-						 <item id="22">
-								<label>$INFO[Skin.String(CustomFavourite8.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite8.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite8.Path))</visible>
-						 </item>
-						 <item id="23">
-								<label>$INFO[Skin.String(CustomFavourite9.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite9.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite9.Path))</visible>
-						 </item>
-						 <item id="24">
-								<label>$INFO[Skin.String(CustomFavourite10.Label)]</label>
-								<onclick>$INFO[Skin.String(CustomFavourite10.Path)]</onclick>
-								<visible>!IsEmpty(Skin.String(CustomFavourite10.Path))</visible>
-						 </item>
-					 </content>
+		    <visible allowhiddenfocus="true">!Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(busy.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+		    <include>VisibleHiddenSlideAnimation</include>		
+			  <control type="image">
+	        <include>FullscreenDimensions</include>
+					<texture background="true">windows/bg/colors_pulse.png</texture>
+		      <include>OpenCloseSlideAnimation</include>			
+				</control>
+				<control type="wraplist" id="20">
+				 <description>Home Container</description>
+				 <posx>-95</posx>
+				 <posy>110</posy>
+				 <width>1500</width>
+				 <height>720</height>
+				 <align>center</align>
+			   <onup>SetFocus(21)</onup>
+			   <include>OpenCloseSlideAnimation</include>
+				 <ondown condition="[Container(20).HasFocus(9) + !Skin.HasSetting(HideSettingsSubMenu)]
+													| [[Library.HasContent(movies) + Container(20).HasFocus(2)] + !Skin.HasSetting(HideMoviesSubMenu)]
+													| [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + !Skin.HasSetting(HideTVShowsSubMenu)]
+													| [[Library.HasContent(music) + Container(20).HasFocus(3)] + !Skin.HasSetting(HideMusicSubMenu)]">SetFocus(23)</ondown>
+				 <ondown condition="[[Library.HasContent(movies) + Container(20).HasFocus(2)] + Skin.HasSetting(HideMoviesSubMenu)]
+													| [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + Skin.HasSetting(HideTVShowsSubMenu)]
+													| [[Library.HasContent(music) + Container(20).HasFocus(3)] + Skin.HasSetting(HideMusicSubMenu)]">SetFocus(81)</ondown>
+				 <onleft>20</onleft>
+				 <onright>20</onright>
+				 <onback condition="Container(20).HasFocus(15)">Skin.SetString(CustomFavourite1.Label)</onback>
+				 <onback condition="Container(20).HasFocus(16)">Skin.SetString(CustomFavourite2.Label)</onback>
+				 <onback condition="Container(20).HasFocus(17)">Skin.SetString(CustomFavourite3.Label)</onback>
+				 <onback condition="Container(20).HasFocus(18)">Skin.SetString(CustomFavourite4.Label)</onback>
+				 <onback condition="Container(20).HasFocus(19)">Skin.SetString(CustomFavourite5.Label)</onback>
+				 <onback condition="Container(20).HasFocus(20)">Skin.SetString(CustomFavourite6.Label)</onback>
+				 <onback condition="Container(20).HasFocus(21)">Skin.SetString(CustomFavourite7.Label)</onback>
+				 <onback condition="Container(20).HasFocus(22)">Skin.SetString(CustomFavourite8.Label)</onback>
+				 <onback condition="Container(20).HasFocus(23)">Skin.SetString(CustomFavourite9.Label)</onback>
+				 <onback condition="Container(20).HasFocus(24)">Skin.SetString(CustomFavourite10.Label)</onback>
+				 <onback condition="Container(20).HasFocus(13)">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onback>
+				 <itemgap>0</itemgap>
+				 <orientation>horizontal</orientation>
+				 <focusposition>1</focusposition>
+         <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+				 <itemlayout width="430">
+			    <control type="group">
+			     <animation type="Conditional" condition="true">
+			       <effect type="zoom" start="100" end="65" time="0" center="318,220" />
+			       <effect type="fade" start="100" end="45" time="0" />
+			     </animation>
+					 <control type="label">
+						  <posx>300</posx>
+							<posy>200</posy>
+							<width>590</width>
+		          <textcolor>white</textcolor>
+				      <shadowcolor>99000000</shadowcolor>
+							<font>FontSize_100</font>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+					 </control>
 				  </control>
-			  </control>		  
+				 </itemlayout>
+				 <focusedlayout width="430">
+		       <control type="group">
+		        <animation type="Focus" reversible="false" condition="Container(20).OnNext | Container(20).OnPrevious">
+		         <effect type="zoom" start="65" end="100" time="300" tween="sine" easing="out" center="318,220" />
+		         <effect type="fade" start="45" end="100" time="300" tween="sine" easing="out" />
+		        </animation>
+		        <animation type="Unfocus" reversible="false" condition="Container(20).OnNext | Container(20).OnPrevious">
+		         <effect type="zoom" start="100" end="65" time="300" tween="sine" easing="out" center="318,220" />
+		          <effect type="fade" start="100" end="45" time="300" tween="sine" easing="out" />
+		        </animation>
+				    <animation type="Conditional" condition="true" reversible="false">
+		          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+		          <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
+				    </animation>
+		        <animation type="Conditional" reversible="false" condition="!ControlGroup(21).HasFocus">
+		         <effect type="fade" start="45" end="100" time="250" tween="sine" easing="out" />
+		        </animation>
+		        <animation type="Conditional" reversible="false" condition="ControlGroup(21).HasFocus">
+		          <effect type="fade" start="100" end="45" time="250" tween="sine" easing="out" />
+		        </animation>
+						<control type="label">
+						  <posx>300</posx>
+							<posy>200</posy>
+							<width>590</width>
+		          <textcolor>white</textcolor>
+				      <shadowcolor>99000000</shadowcolor>
+							<font>FontSize_100</font>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					 </control>
+				 </focusedlayout>
+				 <content>
+					 <item id="0">
+							<label>$LOCALIZE[3]</label>
+							<onclick>ActivateWindow(Videos,files,return)</onclick>
+							<visible>Skin.HasSetting(ShowHomeMenuVideosButton)</visible>
+					 </item>
+					 <item id="1">
+							<label>$LOCALIZE[31002]</label>
+              <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
+              <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuTVShowsButton)</visible>
+					 </item>
+					 <item id="50">
+							<label>$LOCALIZE[24069]</label>
+				      <onclick>XBMC.RunScript(script.tlbb)</onclick>
+							 <!-- <onclick>ActivateWindowAndFocus(SystemInfo, 200,0)</onclick> -->
+							<visible>!IsEmpty(Window(Home).Property(update.available))</visible>
+					 </item>
+					 <item id="2">
+							<label>$LOCALIZE[20342]</label>
+              <onclick condition="!Library.HasContent(movies)">ActivateWindow(videos,files,return)</onclick>
+							<onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuMoviesButton)</visible>
+					 </item>
+					 <item id="51">
+							<label>19019</label>
+							<onclick>ActivateWindow(videos,addons,return)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuChannelsButton)</visible>
+					 </item>
+					 <item id="3">
+							<label>$LOCALIZE[2]</label>
+							<onclick condition="!Library.HasContent(music) | stringcompare(Skin.String(MusicName),files)">ActivateWindow(musicfiles)</onclick>
+							<onclick condition="Library.HasContent(music) + !stringcompare(Skin.String(MusicName),files)">ActivateWindow(musiclibrary,$INFO[Skin.String(MusicPath)],return)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuMusicButton)</visible>
+					 </item>
+					 <item id="4">
+							<label>$LOCALIZE[20389]</label>
+							<onclick>ActivateWindow(videos,musicvideotitles)</onclick>
+							<visible>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</visible>
+					 </item>
+					 <item id="5">
+							<label>$LOCALIZE[1]</label>
+							<onclick>ActivateWindow(Pictures)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuPicturesButton)</visible>
+					 </item>
+					 <item id="6">
+							<label>$LOCALIZE[0]</label>
+							<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuProgramsButton)</visible>
+					 </item>
+					 <item id="7">
+							<label>$LOCALIZE[24001]</label>
+							<onclick condition="IsEmpty(Skin.String(AddonsName))">ActivateWindow(videos,addons,return)</onclick>
+							<onclick condition="stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow(AddonBrowser)</onclick>
+							<onclick condition="!stringcompare(Skin.String(AddonsName),addonbrowser)">ActivateWindow($INFO[Skin.String(AddonsPath)],addons,return)</onclick>
+							<visible>Skin.HasSetting(ShowHomeMenuAddonsButton)</visible>
+					 </item>
+					 <item id="8">
+							<label>$LOCALIZE[8]</label>
+							<onclick>ActivateWindow(Weather)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+					 </item>
+					 <item id="9">
+							<label>$LOCALIZE[5]</label>
+							<onclick>ActivateWindow(Settings)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
+					 </item>
+					 <item id="11">
+							<label>$LOCALIZE[31000]</label>
+              <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
+						  <visible>System.GetBool(pvrmanager.enabled)</visible>
+					 </item>
+					 <item id="12">
+							<label>$LOCALIZE[137]</label>
+						  <onclick>XBMC.RunScript(script.globalsearch)</onclick>
+							<visible>Skin.HasSetting(ShowHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
+					 </item>
+					 <item id="13">
+							<label>$LOCALIZE[31018]</label>
+							<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuTrailersButton)</visible>
+					 </item>
+					 <item id="14">
+							<label>$LOCALIZE[1036]</label>
+			        <onclick>ActivateWindow(favourites)</onclick>
+							<visible>!Skin.HasSetting(HideHomeMenuFavoritesButton)</visible>
+					 </item>
+		
+		       <!-- Custom Panels -->
+					 <item id="15">
+							<label>$INFO[Skin.String(CustomFavourite1.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite1.Path))</visible>
+					 </item>
+					 <item id="16">
+							<label>$INFO[Skin.String(CustomFavourite2.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite2.Path))</visible>
+					 </item>
+					 <item id="17">
+							<label>$INFO[Skin.String(CustomFavourite3.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite3.Path))</visible>
+					 </item>
+					 <item id="18">
+							<label>$INFO[Skin.String(CustomFavourite4.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite4.Path))</visible>
+					 </item>
+					 <item id="19">
+							<label>$INFO[Skin.String(CustomFavourite5.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite5.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite5.Path))</visible>
+					 </item>
+					 <item id="20">
+							<label>$INFO[Skin.String(CustomFavourite6.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite6.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite6.Path))</visible>
+					 </item>
+					 <item id="21">
+							<label>$INFO[Skin.String(CustomFavourite7.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite7.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite7.Path))</visible>
+					 </item>
+					 <item id="22">
+							<label>$INFO[Skin.String(CustomFavourite8.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite8.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite8.Path))</visible>
+					 </item>
+					 <item id="23">
+							<label>$INFO[Skin.String(CustomFavourite9.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite9.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite9.Path))</visible>
+					 </item>
+					 <item id="24">
+							<label>$INFO[Skin.String(CustomFavourite10.Label)]</label>
+							<onclick>$INFO[Skin.String(CustomFavourite10.Path)]</onclick>
+							<visible>!IsEmpty(Skin.String(CustomFavourite10.Path))</visible>
+					 </item>
+				 </content>
+			  </control> 
 			</control>
 	  </include>
 
@@ -291,11 +290,11 @@
 						 <angle>90</angle>
 					 </control>
 		       <control type="image">
-		         <posx>4</posx>
+		         <posx>3</posx>
 		         <posy>-50</posy>
 		         <width>155</width>
 		         <height>155</height>
-		         <texture fallback="osd/cd.png">$INFO[Player.FolderPath]cdart.png</texture>
+		         <texture fallback="osd/cd.png" diffuse="osd/cd_diffuse.png">$INFO[Player.FolderPath]cdart.png</texture>
 		         <aspectratio>keep</aspectratio>
 						 <include>CDImageAnim</include>
 		      </control>				
@@ -336,7 +335,6 @@
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/paused-overlay.png</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 							<visible>Player.Paused</visible>
-							<include>VisibleFadeEffect</include>
 							<animation type="conditional" condition="Player.Paused" reversible="true">
 								<effect type="fade" start="0" end="50" time="300" />
 							</animation>
@@ -350,7 +348,6 @@
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/ff-overlay.png</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 							<visible>Player.Forwarding</visible>
-							<include>VisibleFadeEffect</include>
 							<animation type="conditional" condition="Player.Forwarding" reversible="true">
 								<effect type="fade" start="0" end="50" time="300" />
 							</animation>
@@ -364,7 +361,6 @@
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/rw-overlay.png</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 							<visible>Player.Rewinding</visible>
-							<include>VisibleFadeEffect</include>
 							<animation type="conditional" condition="Player.Rewinding" reversible="true">
 								<effect type="fade" start="0" end="50" time="300" />
 							</animation>
@@ -399,7 +395,7 @@
 						<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -412,7 +408,7 @@
 						<label>$INFO[Player.Time(mm:ss)]$INFO[Player.Duration,[COLOR=purple] / [/COLOR]]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>purple</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -514,7 +510,6 @@
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -528,7 +523,6 @@
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">osd/ff-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Forwarding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -542,7 +536,6 @@
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">osd/rw-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Rewinding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -622,7 +615,6 @@
 						<texture background="true" diffuse="thumbs/video_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Paused</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -636,7 +628,6 @@
 						<texture background="true" diffuse="thumbs/video_diffuse.png">osd/ff-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Forwarding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Forwarding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -650,7 +641,6 @@
 						<texture background="true" diffuse="thumbs/video_diffuse.png">osd/rw-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>Player.Rewinding</visible>
-						<include>VisibleFadeEffect</include>
 						<animation type="conditional" condition="Player.Rewinding" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
@@ -688,7 +678,7 @@
 						<label>$INFO[VideoPlayer.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -701,7 +691,7 @@
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>purple</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -737,7 +727,7 @@
 						<label>$INFO[VideoPlayer.TVShowTitle] • $LOCALIZE[20373] $INFO[VideoPlayer.Season] • $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -750,7 +740,7 @@
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>purple</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -786,7 +776,7 @@
 						<label>$INFO[VideoPlayer.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -799,7 +789,7 @@
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_20</font>
+						<font>NotificationsFont</font>
 						<textcolor>purple</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					</control>
@@ -821,7 +811,6 @@
 						<itemgap>10</itemgap>
 						<align>left</align>
 						<orientation>horizontal</orientation>
-					  <include>OSDSlideAnimations</include>
 						<control type="label" id="1">
 						  <include>TopBigLabel</include>
 						  <label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</label>
@@ -869,8 +858,10 @@
 		  <control type="group">
 				<posx>45</posx>
 				<posy>25</posy>
-				<visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(Favourites)]</visible>
-		    <include>HomeSlideAnimations</include>
+		    <include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
+		    <include>ShutdownMenuAnimation</include>
+				<visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(Favourites)]</visible>
 				<control type="grouplist" id="21">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -883,7 +874,6 @@
 					<ondown>20</ondown>
 					<align>left</align>
 	        <orientation>horizontal</orientation>
-	        <include>HomeSlideAnimations</include>
 					<control type="button" id="210">
 						<description>Favorites</description>
 						<include>TopButton</include>
@@ -926,7 +916,6 @@
 					<itemgap>20</itemgap>
 					<align>left</align>
 					<orientation>horizontal</orientation>
-		      <include>HomeSlideAnimations</include>
 					<control type="label">
 					  <include>TopBigLabel</include>
 						<label>10000</label>
@@ -969,7 +958,6 @@
 					<posx>3</posx>
 					<posy>45</posy>
 	        <animation effect="slide" end="-3,3" reversible="false" condition="stringcompare(System.Language,Greek) | stringcompare(System.Language,Italian)">Conditional</animation>				
-		      <include>HomeSlideAnimations</include>
 					<control type="label">
 						<description>Library Totals: Movies</description>
 						<width>500</width>
@@ -1046,16 +1034,16 @@
 			  <include>TLBBSlideAnimations</include>
 				<control type="group">
 					<posx>188r</posx>
-				  <posy>590</posy>
+				  <posy>580</posy>
 					<control type="image">
 						<description>tlbb logo</description>
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>148</width>
-						<height>138</height>
+						<width>150</width>
+						<height>150</height>
 						<aspectratio>stretch</aspectratio>
 		        <texture>logo.png</texture>
-						<colordiffuse>99white</colordiffuse>
+						<colordiffuse>77white</colordiffuse>
 						<align>right</align>
 						<aligny>center</aligny>
 					</control>

@@ -6,6 +6,8 @@
 	<controls>
 		<include>BackgroundContent</include>
 		<include>BackgroundVignette</include>
+	  <include>CommonNowPlaying</include>
+    <include condition="Skin.HasSetting(EnableWeatherAlertsNotifications)">WeatherAlertsNotifications</include>
 
 		<control type="group" id="50">
 			<include>WeatherTopInfo</include>
@@ -13,6 +15,7 @@
 			<include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherUnderground</include>
 		</control>
 
+	  <include>CommonDialogsFadeOutBG</include>
 
 	  <!-- ============ -->
 	  <!-- Options Menu  -->
@@ -22,11 +25,11 @@
 			<posy>25</posy>
 	    <include>ShutdownMenuAnimation</include>
 	    <include>OptionsTopMenuAnimation</include>
-	    <animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Current.Condition))">
+	    <animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Current.Condition)) + !Window.IsActive(favourites)">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
 	    </animation>
-	    <animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Current.Condition))">
+	    <animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Current.Condition)) | Window.IsActive(favourites)">
 	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 	    </animation>
@@ -46,6 +49,7 @@
 					<height>22</height>
 					<texture>dialogs/menus/bottom.png</texture>
 	        <aspectratio>stretch</aspectratio>
+          <animation effect="slide" start="0,0" end="0,-37" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
           <animation effect="slide" start="0,0" end="0,-74" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
 	      </control>
 				<control type="label">
@@ -80,7 +84,7 @@
 			    <onclick condition="stringcompare(Skin.String(WeatherUnderground),2)">Skin.SetString(WeatherUnderground,3)</onclick>
 			    <onclick condition="stringcompare(Skin.String(WeatherUnderground),1)">Skin.SetString(WeatherUnderground,2)</onclick>
 			    <onclick condition="stringcompare(Skin.String(WeatherUnderground),4)">Skin.SetString(WeatherUnderground,1)</onclick>
-					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground) + !IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="togglebutton" id="262">
 					<description>Alerts Toggle</description>
@@ -118,9 +122,13 @@
 		  </control>
 		</control>
 
-	  <include>CommonNowPlaying</include>
-    <include condition="Skin.HasSetting(EnableWeatherAlertsNotifications)">WeatherAlertsNotifications</include>
-	  <include>CommonDialogsFadeOutBG</include>
+		<!-- Weather and Clock  -->
+	  <control type="group">
+		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
+	    <include>CommonWeatherAndClock</include>
+	  </control>
 
     <!-- ================ -->
     <!-- Top Content Info -->
@@ -128,10 +136,12 @@
 	  <control type="group">
 			<posx>45</posx>
 			<posy>25</posy>
-		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(ShutdownMenu)</visible>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
+			<include>ShutdownMenuAnimation</include>
+		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
 		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 		  <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
-		  <include>CommonSlideAnimations</include>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -140,40 +150,50 @@
 				<align>left</align>
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
-		    <include>CommonSlideAnimations</include>
 				<control type="label">
 				  <include>TopBigLabel</include>
 					<label fallback="N/A">$INFO[Window.Property(Location)]</label>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
+			    <label>There is not any specified location yet</label>
+			    <visible>IsEmpty(Window(Weather).Property(Location)) + !Weather.IsFetched</visible>
+				</control>
+				<control type="label">
+				  <include>TopZoomedSmallLabel</include>
 			    <label>$LOCALIZE[31235]</label>
 		      <visible>![Skin.String(WeatherUnderground,2) | Skin.String(WeatherUnderground,3) | Skin.String(WeatherUnderground,4)]</visible>
+			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 					<label>$LOCALIZE[31223]</label>
 		      <visible>Skin.String(WeatherUnderground,2)</visible>
+			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 					<label>$LOCALIZE[31224]</label>
 		      <visible>Skin.String(WeatherUnderground,3)</visible>
+			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 					<label>$LOCALIZE[31226]</label>
 		      <visible>Skin.String(WeatherUnderground,4)</visible>
+			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 			</control>
 	  </control>
 	  <control type="group">
 			<posx>45</posx>
 			<posy>25</posy>
-		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(ShutdownMenu)</visible>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
+			<include>ShutdownMenuAnimation</include>
+		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
 		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 		  <visible>!StringCompare(Weather.Plugin,weather.wunderground)</visible>
-		  <include>CommonSlideAnimations</include>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -182,10 +202,14 @@
 				<align>left</align>
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
-		    <include>CommonSlideAnimations</include>
 				<control type="label">
 				  <include>TopBigLabel</include>
 					<label fallback="N/A">$INFO[Window.Property(Location)]</label>
+				</control>
+				<control type="label">
+				  <include>TopZoomedSmallLabel</include>
+			    <label>There is not any specified location yet</label>
+			    <visible>IsEmpty(Window(Weather).Property(Location)) + !Weather.IsFetched</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
@@ -194,12 +218,7 @@
 			</control>
 	  </control>
 	  
-		<!-- Weather and Clock  -->
-	  <control type="group">
-		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-		  <include>CommonSlideAnimations</include>
-	    <include>CommonWeatherAndClock</include>
-	  </control>
+
 
     <control type="button" id="50">
 			<description>Get Focus Fake Button</description>
@@ -214,10 +233,10 @@
 		<!-- Fetching Info  -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture background="true">windows/bg/bg_diffuse.png</texture>
+			<texture background="true">windows/bg/bg_overlay.png</texture>
 			<include>FanartFade</include>
 			<fadetime>300</fadetime>
-      <colordiffuse>D5FFFFFF</colordiffuse>
+      <colordiffuse>ddFFFFFF</colordiffuse>
 	    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
 	  </control>
 		<control type="label">
@@ -233,7 +252,7 @@
 			<aligny>center</aligny>
 			<label>$LOCALIZE[31234]</label>
 	    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
-		  <include>Window_OpenClose_Animation</include>
+		  <include>VisibleHiddenSlideAnimation</include>
 	  </control>
 		<control type="label">
 			<description>fetching label</description>
@@ -248,7 +267,7 @@
 			<aligny>center</aligny>
 			<label>$INFO[Control.GetLabel(3)]</label>
 	    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
-		  <include>Window_OpenClose_Animation</include>
+		  <include>VisibleHiddenSlideAnimation</include>
 	  </control>
 	  <!-- Hidden SendClick Buttons -->
 		<control type="button" id="3">

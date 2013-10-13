@@ -3,56 +3,59 @@
 	<allowoverlay>no</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
 	<controls>
-		<include>BackgroundItems</include>
+	 <include>BackgroundItems</include>
 
 	 <control type="group">
-    <include>Window_OpenClose_Animation</include>
-		<visible>!Window.IsActive(ShutdownMenu) + !Window.IsActive(MediaSource)</visible>
-		
-		<control type="group">
-      <include>Window_OpenClose_Animation</include>
-			<control type="image">
-	      <include>FullscreenDimensions</include>
-				<texture>windows/filemanager/bg.png</texture>
-			</control>
-			<control type="image">
-	      <include>FullscreenDimensions</include>
-				<texture>windows/filemanager/seperators_left.png</texture>
-        <visible>!Window.IsActive(contextmenu) | Control.HasFocus(21)</visible>
-				<animation effect="fade" start="0" end="100" time="250" reversible="true">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
-			</control>
-			<control type="image">
-	      <include>FullscreenDimensions</include>
-				<texture>windows/filemanager/seperators_right.png</texture>
-        <visible>!Window.IsActive(contextmenu) | Control.HasFocus(20)</visible>
-				<animation effect="fade" start="0" end="100" time="250" reversible="true">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
-			</control>
-			<control type="fadelabel">
-				<posx>445</posx>
-				<posy>148r</posy>
-				<width>400</width>
-				<height>35</height>
-				<font>FontSize_18</font>
-				<align>center</align>
-				<textcolor>77white</textcolor>
-			  <shadowcolor>99000000</shadowcolor>
-				<label>$INFO[System.Totalspace,, $LOCALIZE[20182]]</label>
-				<label>$INFO[System.Freespace,, $LOCALIZE[20182]]</label>
-	      <scroll>false</scroll>
-	      <scrollout>false</scrollout>
-	      <scrollspeed>100</scrollspeed>
-	      <pauseatend>7000</pauseatend>
-		    <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="inout">Visible</animation>
-		    <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="inout">Hidden</animation>
-			</control>
+    <include>OpenCloseSlideAnimation</include>
+		<visible>!Window.IsActive(MediaSource)</visible>
+    <animation type="Conditional"  reversible="false" condition="!Window.IsActive(favourites)]">
+      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+    </animation>
+    <animation type="Conditional" reversible="false" condition="Window.IsActive(favourites)">
+      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+    </animation>
+		<control type="image">
+      <include>FullscreenDimensions</include>
+			<texture background="true">windows/filemanager/bg.png</texture>
+		</control>
+		<control type="image">
+      <include>FullscreenDimensions</include>
+			<texture>windows/filemanager/seperators_left.png</texture>
+      <visible>!Window.IsActive(contextmenu) | Control.HasFocus(21)</visible>
+			<animation effect="fade" start="0" end="100" time="250" reversible="true">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
+		</control>
+		<control type="image">
+      <include>FullscreenDimensions</include>
+			<texture>windows/filemanager/seperators_right.png</texture>
+      <visible>!Window.IsActive(contextmenu) | Control.HasFocus(20)</visible>
+			<animation effect="fade" start="0" end="100" time="250" reversible="true">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
+		</control>
+		<control type="fadelabel">
+			<posx>445</posx>
+			<posy>142r</posy>
+			<width>400</width>
+			<height>35</height>
+			<font>FontSize_18B</font>
+			<align>center</align>
+			<textcolor>77white</textcolor>
+		  <shadowcolor>99000000</shadowcolor>
+			<label>$INFO[System.Totalspace,, $LOCALIZE[20182]]</label>
+			<label>$INFO[System.Freespace,, $LOCALIZE[20182]]</label>
+      <scroll>false</scroll>
+      <scrollout>false</scrollout>
+      <scrollspeed>100</scrollspeed>
+      <pauseatend>7000</pauseatend>
+	    <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="inout">Visible</animation>
+	    <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="inout">Hidden</animation>
 		</control>
 
 		<control type="group">
 			<posx>0</posx>
 			<posy>-20</posy>
-      <include>Window_OpenClose_Animation</include>
 			<control type="label" id="101">
 				<posx>136</posx>
 				<posy>140</posy>
@@ -65,8 +68,8 @@
 				<aligny>center</aligny>
 			</control>
 			<control type="scrollbar" id="60">
-				<posx>638.5</posx>
-				<posy>183</posy>
+				<posx>639</posx>
+				<posy>184</posy>
 				<width>4</width>
 				<height>411</height>
 				<texturesliderbackground>-</texturesliderbackground>
@@ -78,7 +81,7 @@
 				<onright>21</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-			  <animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60)">Conditional</animation>
+			  <animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(60)">Conditional</animation>
 				<visible>Control.IsVisible(20)</visible>
 			</control>
 			<control type="list" id="20">
@@ -92,8 +95,8 @@
 				<ondown>20</ondown>
 				<viewtype>list</viewtype>
 				<pagecontrol>60</pagecontrol>
-			  <scrolltime tween="quadratic" easing="out">250</scrolltime>
-			  <animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(ContextMenu) + Control.HasFocus(20)" reversible="true">Conditional</animation>
+			  <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+			  <animation effect="fade" start="100" end="0" time="0" condition="Window.IsVisible(ContextMenu) + Control.HasFocus(20)">Conditional</animation>
 				<itemlayout height="45" width="515">
 					<control type="label">
 						<posx>13</posx>
@@ -130,7 +133,7 @@
 						<height>45</height>
 				    <texture>windows/filemanager/focus.png</texture>
 						<visible>!Control.HasFocus(20)</visible>
-			      <animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(20)">Conditional</animation>
+			      <animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -139,9 +142,7 @@
 						<height>45</height>
 				    <texture>windows/filemanager/focus.png</texture>
 						<visible>Control.HasFocus(20)</visible>
-			      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(20).OnPrevious">focus</animation>
-			      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(20).OnNext">focus</animation>
-			      <animation effect="fade" start="70" end="100" time="200" condition="Control.HasFocus(20)">Conditional</animation>
+	          <include>ListFocusAnimation</include>
 					</control>
 					<control type="label">
 						<posx>13</posx>
@@ -174,7 +175,7 @@
 			<control type="label">
 				<description>Items</description>
 				<posx>136</posx>
-				<posy>146r</posy>
+				<posy>140r</posy>
 				<width>410</width>
 				<font>FontSize_18</font>
 				<align>left</align>
@@ -186,10 +187,11 @@
 				<animation effect="fade" end="30" condition="true">Conditional</animation>
 			</control>			
 		</control>
+		
+		
 		<control type="group">
-			<posx>478</posx>
+			<posx>482</posx>
 			<posy>-20</posy>
-      <include>Window_OpenClose_Animation</include>
 			<control type="label" id="102">
 				<posx>664</posx>
 				<posy>140</posy>
@@ -202,8 +204,8 @@
 				<aligny>center</aligny>
 			</control>
 			<control type="scrollbar" id="61">
-				<posx>160.5</posx>
-				<posy>183</posy>
+				<posx>160</posx>
+				<posy>184</posy>
 				<width>4</width>
 				<height>411</height>
 				<texturesliderbackground>-</texturesliderbackground>
@@ -229,8 +231,8 @@
 				<ondown>21</ondown>
 				<viewtype>list</viewtype>
 				<pagecontrol>61</pagecontrol>
-			  <scrolltime tween="quadratic" easing="out">250</scrolltime>
-			  <animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(ContextMenu) + Control.HasFocus(21)" reversible="true">Conditional</animation>
+			  <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+			  <animation effect="fade" start="100" end="0" time="0" condition="Window.IsVisible(ContextMenu) + Control.HasFocus(21)" reversible="true">Conditional</animation>
 				<itemlayout height="45" width="515">
 					<control type="label">
 						<posx>13</posx>
@@ -267,7 +269,7 @@
 						<height>45</height>
 				    <texture>windows/filemanager/focus.png</texture>
 						<visible>!Control.HasFocus(21)</visible>
-			      <animation effect="fade" start="100" end="30" time="250" condition="!Control.HasFocus(21)" reversible="true">Conditional</animation>
+			      <animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(21)" reversible="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -276,9 +278,7 @@
 						<height>45</height>
 				    <texture>windows/filemanager/focus.png</texture>
 						<visible>Control.HasFocus(21)</visible>
-			      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(21).OnPrevious">focus</animation>
-			      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(21).OnNext">focus</animation>
-			      <animation effect="fade" start="70" end="100" time="200" condition="Control.HasFocus(21)" reversible="true">Conditional</animation>
+	          <include>ListFocusAnimation</include>
 					</control>
 					<control type="label">
 						<posx>13</posx>
@@ -311,7 +311,7 @@
 			<control type="label">
 				<description>Items</description>
 				<posx>665</posx>
-				<posy>146r</posy>
+				<posy>140r</posy>
 				<width>410</width>
 				<font>FontSize_18</font>
 				<align>right</align>
@@ -325,14 +325,19 @@
 		</control>
 	 </control>
 
-    <!-- ================ -->
-    <!-- Top Content Info -->
-    <!-- ================ -->
-	  <control type="group">
+	 <include>CommonItems</include>
+	 <include>CommonWeatherAndClock</include>
+
+   <!-- ================ -->
+   <!-- Top Content Info -->
+   <!-- ================ -->
+	 <control type="group">
 			<posx>45</posx>
 			<posy>25</posy>
-		  <visible>!Window.IsActive(ShutdownMenu)</visible>
-		  <include>CommonSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
+		  <include>ShutdownMenuAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
+			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -341,7 +346,6 @@
 				<align>left</align>
 				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
-		    <include>CommonSlideAnimations</include>
 				<control type="label">
 				  <include>TopBigLabel</include>
 					<label>$LOCALIZE[7]</label>
@@ -357,9 +361,7 @@
 			    <visible>Control.HasFocus(21)</visible>
 				</control>
 			</control>
-	  </control>
+	 </control>
 
-		<include>CommonWeatherAndClock</include>
-		<include>CommonItems</include>
 	</controls>
 </window>

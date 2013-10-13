@@ -22,7 +22,7 @@
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select_icon_osd.png</texture>
+			<texture background="true">dialogs/selectdialog/bg_select_icon.png</texture>
 			<visible>Control.IsVisible(6)</visible>
 			<colordiffuse>FAFFFFFF</colordiffuse>
 			<visible>Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)</visible>
@@ -43,7 +43,7 @@
 		<control type="list" id="3">
 			<posx>363</posx>
 			<posy>229</posy>
-			<width>552</width>
+			<width>555</width>
 			<height>306</height>
 			<onup>3</onup>
 			<ondown>3</ondown>
@@ -66,7 +66,7 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>552</width>
+					<width>555</width>
 					<height>47</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
@@ -79,11 +79,10 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>552</width>
+					<width>555</width>
 					<height>47</height>
 					<texture>buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(3)</visible>
-					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="label">
 					<posx>10</posx>
@@ -101,7 +100,7 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>552</width>
+					<width>555</width>
 					<height>47</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
@@ -112,15 +111,15 @@
 		<control type="list" id="6">
 			<posx>363</posx>
 			<posy>229</posy>
-			<width>553</width>
-			<height>305</height>
+			<width>555</width>
+			<height>306</height>
 			<onup>6</onup>
 			<ondown>6</ondown>
 			<onleft>10000</onleft>
 			<onright>10000</onright>
 			<pagecontrol>61</pagecontrol>
 			<scrolltime tween="quadratic" easing="out">250</scrolltime>
-			<itemlayout height="76" width="553">
+			<itemlayout height="76.5" width="553">
 				<control type="image">
 					<posx>1</posx>
 					<posy>1</posy>
@@ -159,24 +158,23 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>553</width>
+					<width>555</width>
 					<height>72</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout height="76" width="553">
+			<focusedlayout height="76.5" width="553">
 			 <control type="group">
 	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(6).OnPrevious">focus</animation>
 	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(6).OnNext">focus</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>553</width>
+					<width>555</width>
 					<height>72</height>
 					<texture>buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(6)</visible>
-					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
 					<posx>1</posx>
@@ -218,7 +216,7 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>553</width>
+					<width>555</width>
 					<height>72</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
     			<visible>ListItem.IsSelected</visible>
@@ -228,8 +226,8 @@
 		</control>
 
 	  <control type="group"  id="10000">
-			<posx>356</posx>
-			<posy>536</posy>
+			<posx>355</posx>
+			<posy>540</posy>
 			<control type="grouplist" id="10001">
 				<posx>0</posx>
 				<posy>0</posy>

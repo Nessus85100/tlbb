@@ -10,72 +10,68 @@
 	 <include>BackgroundItems</include>
 	 
 	 <control type="group">
-    <include>Window_OpenClose_Animation</include>
-		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml)</visible>
-
-	  <control type="group">
-	    <include>Window_OpenClose_Animation</include>
-			<control type="image">
-			  <include>FullscreenDimensions</include>
-			  <texture background="true">windows/settings/bg_settings.png</texture>
-			</control>
+    <include>OpenCloseSlideAnimation</include>
+    <include>VisibleHiddenSlideAnimation</include>
+		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(favourites)  + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml)</visible>
+		<control type="image">
+		  <include>FullscreenDimensions</include>
+		  <texture background="true">windows/settings/bg_settings.png</texture>
 		</control>
+
 
 		<!-- ======================== -->
 		<!-- == Categories Buttons == -->
 		<!-- ======================== -->
 		<control type="group" id="8000">
-				<posx>100</posx>
-				<posy>166</posy>
-	      <include>Window_OpenClose_Animation</include>
+			<posx>98</posx>
+			<posy>166</posy>
 			<control type="list" id="8800">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>295</width>
-				<height>414</height>
-				<itemgap>2</itemgap>
+				<height>399</height>
+				<itemgap>1</itemgap>
 				<onleft>9000</onleft>
 				<onright>8900</onright>
 				<onup>8800</onup>
 				<ondown>8800</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="52" width="295">
-					<control type="image">
+				<itemlayout height="50" width="295">
+					<control type="image.">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
+						<height>49</height>
 						<texture>buttons/catbullet_nf.png</texture>
 					</control>
 					<control type="label">
-						<posx>40</posx>
+						<posx>280</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
+						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
+						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="52" width="295">
+				<focusedlayout height="50" width="295">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
-						<texture>buttons/catbullet_fo.png</texture>
+						<height>49</height>
+						<texture>windows/settings/settings_left_fo.png</texture>
 					</control>
 					<control type="label">
-						<posx>40</posx>
+						<posx>280</posx>
 						<posy>0</posy>
 						<width>295</width>
-						<height>50</height>
+						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>white</textcolor>
-						<align>left</align>
+						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -113,6 +109,8 @@
 			</control>
 
 			<control type="group" id="8900">
+				<posx>302</posx>
+				<posy>0</posy>
 			
 				<!-- ============= -->
 				<!-- == General == -->
@@ -120,11 +118,9 @@
 				<control type="grouplist" id="8100">
 					<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(1)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -176,11 +172,9 @@
 				<control type="grouplist" id="8200">
 					<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(2)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -190,13 +184,13 @@
 					<control type="group" id="8201">
 						<description>Fake spin control</description>
 						<width>782</width>
-						<height>50</height>
+						<height>49</height>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>782</width>
-							<height>50</height>
-							<texture>buttons/settings_fo.png</texture>
+							<height>49</height>
+							<texture>windows/settings/settings_right_fo.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(8201).HasFocus</visible>
 						</control>
@@ -241,7 +235,7 @@
 						</control>
 						<control type="button">
 								<width>780</width>
-								<height>50</height>
+								<height>49</height>
 								<font>FontSize_20</font>
 								<textcolor>77white</textcolor>
 								<align>left</align>
@@ -255,7 +249,7 @@
 						</control>
 						<control type="button">
 								<width>780</width>
-								<height>50</height>
+								<height>49</height>
 								<font>FontSize_20</font>
 								<textcolor>white</textcolor>
 								<align>left</align>
@@ -272,13 +266,13 @@
 					<control type="group" id="8202">
 						<description>Fake spin control</description>
 						<width>782</width>
-						<height>50</height>
+						<height>49</height>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>782</width>
-							<height>50</height>
-							<texture>buttons/settings_fo.png</texture>
+							<height>49</height>
+							<texture>windows/settings/settings_right_fo.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(8202).HasFocus</visible>
 						</control>
@@ -303,7 +297,7 @@
 						</control>
 						<control type="button">
 								<width>780</width>
-								<height>50</height>
+								<height>49</height>
 								<font>FontSize_20</font>
 								<textcolor>77white</textcolor>
 								<align>left</align>
@@ -317,7 +311,7 @@
 						</control>
 						<control type="button">
 								<width>780</width>
-								<height>50</height>
+								<height>49</height>
 								<font>FontSize_20</font>
 								<textcolor>white</textcolor>
 								<align>left</align>
@@ -383,11 +377,9 @@
 				<control type="grouplist" id="8700">
 					<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(7)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -396,8 +388,8 @@
 				  <!-- Hide Home Menu Buttons -->
 					<control type="button" id="8250">
 						<description>Home Categories Buttonn</description>
-						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
 	          <include>SettingsButton</include>
 						<label>31100</label>
 						<onclick>Skin.ToggleSetting(HiddeHomeCategories)</onclick>
@@ -487,8 +479,8 @@
 				  <!-- Show Home Menu Buttons -->
 					<control type="button" id="8261">
 						<description>Home Categories Buttonn</description>
-						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
 	          <include>SettingsButton</include>
 						<label>31099</label>
 						<onclick>Skin.ToggleSetting(ShowHomeCategories)</onclick>
@@ -532,8 +524,8 @@
 				  <!-- Custom Home Menu Buttons -->
 					<control type="button" id="8280">
 						<description>Custom Home Buttons</description>
-						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
 	          <include>SettingsButton</include>
 						<label>31119</label>
 						<onclick>Skin.ToggleSetting(CustomHomeCategories)</onclick>
@@ -618,11 +610,9 @@
 				<control type="grouplist" id="8300">
 					<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(3)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -648,11 +638,9 @@
 				<control type="grouplist" id="8400">
 				<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(4)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -772,11 +760,9 @@
 				<control type="grouplist" id="8500">
 				<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(5)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -874,11 +860,9 @@
 				<control type="grouplist" id="8600">
 					<include>CloseAnimation</include>
 					<visible>Container(8800).Hasfocus(6)</visible>
-					<posx>297</posx>
-					<posy>0</posy>
 					<width>782</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
+					<height>399</height>
+					<itemgap>1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>8800</onleft>
 					<onright>9000</onright>
@@ -893,8 +877,8 @@
 					<!-- Hide Buttons -->
 					<control type="button" id="8610">
 						<description>Hide Buttons</description>
-						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
 	          <include>SettingsButton</include>
 						<label>$LOCALIZE[31393]</label>
 						<onclick>Skin.ToggleSetting(HideQuickNavButtons)</onclick>
@@ -976,8 +960,8 @@
 					<!-- Show Buttons -->
 					<control type="button" id="8630">
 						<description>Show Buttons</description>
-						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
 	          <include>SettingsButton</include>
 						<label>$LOCALIZE[31394]</label>
 						<onclick>Skin.ToggleSetting(ShowQuickNavButtons)</onclick>
@@ -1051,8 +1035,8 @@
 					<!-- Custom Buttons -->
 					<control type="button" id="8660">
 						<description>Custom Buttons</description>
-						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
 	          <include>SettingsButton</include>
 						<label>$LOCALIZE[31395]</label>
 						<onclick>Skin.ToggleSetting(CustomQuickNavButtons)</onclick>
@@ -1168,8 +1152,7 @@
 		<control type="group">
 			<posx>120</posx>
 			<posy>163</posy>
-			<visible>Window.IsVisible(SkinSettings)</visible>
-      <include>Window_OpenClose_Animation</include>
+		  <visible>Window.IsVisible(SkinSettings)</visible>
 			<control type="label">
 				<description>Header Category Label</description>
 				<posx>0</posx>

@@ -13,7 +13,7 @@
 			<itemgap>0</itemgap>
 			<onleft>Close</onleft>
 			<onright>Close</onright>
-	    <include>ContentInfoSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
       <include>ShutdownMenuAnimation</include>
 			<control type="image">
 				<width>360</width>
@@ -64,7 +64,8 @@
 	  <control type="group">
 			<posx>105</posx>
 			<posy>25</posy>
-	    <include>GlobalSearchSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
 	    <include>ShutdownMenuAnimation</include>
 			<control type="grouplist">
 				<posx>0</posx>

@@ -7,7 +7,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-14).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -15,7 +15,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -23,7 +23,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -31,7 +31,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -39,7 +39,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -47,7 +47,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -55,7 +55,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -63,7 +63,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -71,7 +71,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -79,7 +79,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -87,7 +87,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1804</posx>
@@ -95,7 +95,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -103,7 +103,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -111,7 +111,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -119,7 +119,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -127,7 +127,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -135,7 +135,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -143,7 +143,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -151,7 +151,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -159,7 +159,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -167,7 +167,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -175,7 +175,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -183,7 +183,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1804</posx>
@@ -191,7 +191,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -199,7 +199,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -207,7 +207,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -215,7 +215,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -223,7 +223,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -231,7 +231,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -239,7 +239,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -247,7 +247,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -255,7 +255,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -263,7 +263,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -271,7 +271,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -279,7 +279,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -287,7 +287,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -295,7 +295,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -303,7 +303,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -311,7 +311,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(15).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -319,7 +319,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(15).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -327,7 +327,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(16).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(16).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -335,7 +335,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(16).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(16).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -343,7 +343,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(17).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(17).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -351,7 +351,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(17).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(17).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -359,7 +359,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(18).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(18).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -367,7 +367,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(18).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(18).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1804</posx>
@@ -375,7 +375,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(19).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(19).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1804</posx>
@@ -383,7 +383,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(19).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(19).Icon]</texture>
 		</control>
 	</include>
 
@@ -395,7 +395,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -403,7 +403,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -411,7 +411,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -419,7 +419,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -427,7 +427,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -435,7 +435,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -443,7 +443,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -451,7 +451,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -459,7 +459,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -467,7 +467,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -475,7 +475,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -483,7 +483,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-164</posx>
@@ -491,7 +491,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -499,7 +499,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -507,7 +507,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -515,7 +515,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -523,7 +523,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -531,7 +531,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -539,7 +539,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -547,7 +547,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -555,7 +555,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -563,7 +563,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -571,7 +571,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -579,7 +579,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-164</posx>
@@ -587,7 +587,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-164</posx>
@@ -595,7 +595,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -603,7 +603,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -611,7 +611,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -619,7 +619,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -627,7 +627,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -635,7 +635,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -643,7 +643,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -651,7 +651,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -659,7 +659,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -667,7 +667,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -675,7 +675,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -683,7 +683,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(15).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -691,7 +691,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(15).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -699,7 +699,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(16).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(16).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -707,7 +707,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(16).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(16).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -715,7 +715,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(17).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(17).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -723,7 +723,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(17).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(17).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -731,7 +731,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(18).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(18).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -739,7 +739,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(18).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(18).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -747,7 +747,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(19).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(19).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -755,7 +755,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(19).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(19).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -763,7 +763,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(20).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(20).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -771,7 +771,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(20).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(20).Icon]</texture>
 		</control>
 	</include>
 
@@ -783,7 +783,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -791,7 +791,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -799,7 +799,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -807,7 +807,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -815,7 +815,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -823,7 +823,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -831,7 +831,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -839,7 +839,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -847,7 +847,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -855,7 +855,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -863,7 +863,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -872,7 +872,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -880,7 +880,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -888,7 +888,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -896,7 +896,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -904,7 +904,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -912,7 +912,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -920,7 +920,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -928,7 +928,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -936,7 +936,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -944,7 +944,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -952,7 +952,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -961,7 +961,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>				
 		<control type="image">
 			<posx>0</posx>
@@ -969,7 +969,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -977,7 +977,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -985,7 +985,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -993,7 +993,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1001,7 +1001,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1009,7 +1009,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1017,7 +1017,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1025,7 +1025,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1033,7 +1033,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1041,7 +1041,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1049,7 +1049,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1057,7 +1057,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(15).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1065,7 +1065,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(15).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1073,7 +1073,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(16).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(16).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1081,7 +1081,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(16).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(16).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -1089,7 +1089,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(17).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(17).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -1097,7 +1097,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(17).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(17).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -1105,7 +1105,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(18).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(18).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1476</posx>
@@ -1113,7 +1113,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(18).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(18).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -1121,7 +1121,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(19).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(19).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1640</posx>
@@ -1129,7 +1129,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true">$INFO[ListItem(19).Icon]</texture>
+			<texture flipy="true" diffuse="views/wall/poster3d_diffuse_reflection.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(19).Icon]</texture>
 		</control>
 	</include>
 
@@ -1145,7 +1145,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1153,7 +1153,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1161,7 +1161,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1169,7 +1169,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1177,7 +1177,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1185,7 +1185,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1193,7 +1193,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1201,7 +1201,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -1209,7 +1209,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1217,7 +1217,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1225,7 +1225,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1233,7 +1233,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -1242,7 +1242,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -1251,7 +1251,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1259,7 +1259,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1267,7 +1267,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1275,7 +1275,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -1283,7 +1283,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1291,7 +1291,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1299,7 +1299,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1307,7 +1307,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1315,7 +1315,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1323,7 +1323,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1331,7 +1331,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1339,7 +1339,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1347,7 +1347,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1312</posx>
@@ -1355,7 +1355,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 	</include>
 
@@ -1367,7 +1367,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1375,7 +1375,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1383,7 +1383,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1391,7 +1391,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1399,7 +1399,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1407,7 +1407,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1415,7 +1415,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1423,7 +1423,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1431,7 +1431,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-164</posx>
@@ -1439,7 +1439,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1447,7 +1447,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -1456,7 +1456,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -1465,7 +1465,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1473,7 +1473,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1481,7 +1481,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1489,7 +1489,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1497,7 +1497,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1505,7 +1505,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-164</posx>
@@ -1513,7 +1513,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1521,7 +1521,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1529,7 +1529,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1537,7 +1537,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1545,7 +1545,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1553,7 +1553,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1561,7 +1561,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1569,7 +1569,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1577,7 +1577,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 	</include>
 
@@ -1589,7 +1589,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1597,7 +1597,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1605,7 +1605,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1613,7 +1613,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1621,7 +1621,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1629,7 +1629,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1637,7 +1637,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1645,7 +1645,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -1654,7 +1654,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1662,7 +1662,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1670,7 +1670,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1678,7 +1678,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1686,7 +1686,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1694,7 +1694,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1702,7 +1702,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1710,7 +1710,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -1719,7 +1719,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>164</posx>
@@ -1727,7 +1727,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>328</posx>
@@ -1735,7 +1735,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>492</posx>
@@ -1743,7 +1743,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>656</posx>
@@ -1751,7 +1751,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>820</posx>
@@ -1759,7 +1759,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>984</posx>
@@ -1767,7 +1767,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1148</posx>
@@ -1775,7 +1775,7 @@
 			<width>164</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 	</include>
 
@@ -1791,7 +1791,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-14).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1799,7 +1799,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1807,7 +1807,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -1815,7 +1815,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -1824,7 +1824,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -1832,7 +1832,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -1840,7 +1840,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -1848,7 +1848,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -1857,7 +1857,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -1865,7 +1865,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -1873,7 +1873,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -1881,7 +1881,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -1890,7 +1890,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -1898,7 +1898,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -1906,7 +1906,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -1914,7 +1914,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 	
 		<control type="image">
@@ -1923,7 +1923,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -1931,7 +1931,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -1939,7 +1939,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -1947,7 +1947,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 	
 		<control type="image">
@@ -1956,7 +1956,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -1964,7 +1964,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -1972,7 +1972,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -1980,7 +1980,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>		
 	
 		<control type="image">
@@ -1989,7 +1989,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -1997,7 +1997,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2005,7 +2005,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2013,7 +2013,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>		
 	
 		<control type="image">
@@ -2022,7 +2022,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2030,7 +2030,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2038,7 +2038,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2046,7 +2046,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>		
 	</include>
 
@@ -2058,7 +2058,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2066,7 +2066,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2074,7 +2074,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2082,7 +2082,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -2091,7 +2091,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -2099,7 +2099,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -2107,7 +2107,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -2115,7 +2115,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -2124,7 +2124,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -2132,7 +2132,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -2140,7 +2140,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -2148,7 +2148,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2157,7 +2157,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -2165,7 +2165,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -2173,7 +2173,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -2181,7 +2181,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2190,7 +2190,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -2198,7 +2198,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -2206,7 +2206,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -2214,7 +2214,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2223,7 +2223,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -2231,7 +2231,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -2239,7 +2239,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -2247,7 +2247,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2256,7 +2256,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2264,7 +2264,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2272,7 +2272,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2280,7 +2280,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2289,7 +2289,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2297,7 +2297,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2305,7 +2305,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2313,7 +2313,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 	</include>
 
@@ -2325,7 +2325,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2333,7 +2333,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2341,7 +2341,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -2350,7 +2350,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -2358,7 +2358,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>160</posx>
@@ -2366,7 +2366,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -2375,7 +2375,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -2383,7 +2383,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>320</posx>
@@ -2391,7 +2391,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -2400,7 +2400,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -2408,7 +2408,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>480</posx>
@@ -2416,7 +2416,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		
 		<control type="image">
@@ -2425,7 +2425,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -2433,7 +2433,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>640</posx>
@@ -2441,7 +2441,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 	
 		<control type="image">
@@ -2450,7 +2450,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -2458,7 +2458,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>800</posx>
@@ -2466,7 +2466,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 	
 		<control type="image">
@@ -2475,7 +2475,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2483,7 +2483,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>960</posx>
@@ -2491,7 +2491,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 	
 		<control type="image">
@@ -2500,7 +2500,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2508,7 +2508,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1120</posx>
@@ -2516,7 +2516,7 @@
 			<width>162</width>
 			<height>242</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/poster3d_diffuse.png" background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem(10).Icon]</texture>
 		</control>		
 	</include>
 
@@ -2532,7 +2532,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-15).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-15).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-256</posx>
@@ -2540,7 +2540,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-14).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-256</posx>
@@ -2548,7 +2548,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>-256</posx>
@@ -2556,7 +2556,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>-256</posx>
@@ -2564,7 +2564,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2573,7 +2573,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2581,7 +2581,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2589,7 +2589,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>0</posx>
@@ -2597,7 +2597,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>0</posx>
@@ -2605,7 +2605,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2614,7 +2614,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>		
 		<control type="image">
 			<posx>256</posx>
@@ -2622,7 +2622,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>256</posx>
@@ -2630,7 +2630,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>256</posx>
@@ -2638,7 +2638,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>256</posx>
@@ -2646,7 +2646,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2655,7 +2655,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -2663,7 +2663,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -2671,7 +2671,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>512</posx>
@@ -2679,7 +2679,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>512</posx>
@@ -2687,7 +2687,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2696,7 +2696,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(1).Icon]</texture>
 		</control>		
 		<control type="image">
 			<posx>768</posx>
@@ -2704,7 +2704,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>768</posx>
@@ -2712,7 +2712,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>768</posx>
@@ -2720,7 +2720,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>768</posx>
@@ -2728,7 +2728,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2737,7 +2737,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -2745,7 +2745,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -2753,7 +2753,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>1024</posx>
@@ -2761,7 +2761,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>1024</posx>
@@ -2769,7 +2769,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -2778,7 +2778,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -2786,7 +2786,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -2794,7 +2794,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>1280</posx>
@@ -2802,7 +2802,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row -1-->
 			<posx>1280</posx>
@@ -2810,7 +2810,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 
 		<!-- Shadow 4 -->
@@ -2868,7 +2868,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-14).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-14).Icon]</texture>
 		</control>	
 		<control type="image">
 			<posx>-256</posx>
@@ -2876,7 +2876,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-256</posx>
@@ -2884,7 +2884,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-256</posx>
@@ -2892,7 +2892,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>-256</posx>
@@ -2900,7 +2900,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		
 		<control type="image"> <!-- row 6-->
@@ -2909,7 +2909,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2917,7 +2917,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2925,7 +2925,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -2933,7 +2933,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>0</posx>
@@ -2941,7 +2941,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 
 		<control type="image"> <!-- row 6-->
@@ -2950,7 +2950,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>256</posx>
@@ -2958,7 +2958,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>		
 		<control type="image">
 			<posx>256</posx>
@@ -2966,7 +2966,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>256</posx>
@@ -2974,7 +2974,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>256</posx>
@@ -2982,7 +2982,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 
 		<control type="image"> <!-- row 6-->
@@ -2991,7 +2991,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -2999,7 +2999,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -3007,7 +3007,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -3015,7 +3015,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>512</posx>
@@ -3023,7 +3023,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 
 		<control type="image"> <!-- row 6-->
@@ -3032,7 +3032,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>768</posx>
@@ -3040,7 +3040,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(3).Icon]</texture>
 		</control>		
 		<control type="image">
 			<posx>768</posx>
@@ -3048,7 +3048,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>768</posx>
@@ -3056,7 +3056,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>768</posx>
@@ -3064,7 +3064,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 
 		<control type="image"> <!-- row 6-->
@@ -3073,7 +3073,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -3081,7 +3081,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -3089,7 +3089,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -3097,7 +3097,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>1024</posx>
@@ -3105,7 +3105,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 
 		<control type="image"> <!-- row 6-->
@@ -3114,7 +3114,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -3122,7 +3122,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -3130,7 +3130,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -3138,7 +3138,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>1280</posx>
@@ -3146,7 +3146,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(14).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(14).Icon]</texture>
 		</control>
 
 		<!-- Shadow 4 -->
@@ -3186,7 +3186,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-14).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-14).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-256</posx>
@@ -3194,7 +3194,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-13).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>-256</posx>
@@ -3202,7 +3202,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-12).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>-256</posx>
@@ -3210,7 +3210,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-11).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -3219,7 +3219,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -3227,7 +3227,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-9).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -3235,7 +3235,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-8).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>0</posx>
@@ -3243,7 +3243,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-7).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -3252,7 +3252,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-6).Icon]</texture>
 		</control>		
 		<control type="image">
 			<posx>256</posx>
@@ -3260,7 +3260,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-5).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>256</posx>
@@ -3268,7 +3268,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-4).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>256</posx>
@@ -3276,7 +3276,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-3).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -3285,7 +3285,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -3293,7 +3293,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(-1).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>512</posx>
@@ -3301,7 +3301,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(0).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>512</posx>
@@ -3309,7 +3309,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(1).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -3318,7 +3318,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(2).Icon]</texture>
 		</control>		
 		<control type="image">
 			<posx>768</posx>
@@ -3326,7 +3326,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(3).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>768</posx>
@@ -3334,7 +3334,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(4).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>768</posx>
@@ -3342,7 +3342,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(5).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -3351,7 +3351,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(6).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -3359,7 +3359,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(7).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1024</posx>
@@ -3367,7 +3367,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(8).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>1024</posx>
@@ -3375,7 +3375,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(9).Icon]</texture>
 		</control>
 
 		<control type="image">
@@ -3384,7 +3384,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(10).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -3392,7 +3392,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(11).Icon]</texture>
 		</control>
 		<control type="image">
 			<posx>1280</posx>
@@ -3400,7 +3400,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(12).Icon]</texture>
 		</control>
 		<control type="image"> <!-- row 1-->
 			<posx>1280</posx>
@@ -3408,7 +3408,7 @@
 			<width>256</width>
 			<height>256</height>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
+			<texture diffuse="views/wall/square3d_diffuse.png" background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem(13).Icon]</texture>
 		</control>
 
 		<!-- Shadow 3 -->

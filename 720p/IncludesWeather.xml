@@ -5,16 +5,18 @@
 	<!-- ============================= -->
 	<include name="WeatherTopInfo">			
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
-		  <visible>!Window.IsActive(ShutdownMenu)</visible>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
 	    <include>DialogZoomInOutAnimation</include>
 
 			<control type="group">
-			  <include>Window_OpenClose_Animation</include>
+			  <include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 			  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 				<!-- Top Info Left -->
 				<control type="group">
 					<posy>65</posy>
+			    <visible>!IsEmpty(Window(Weather).Property(Location))</visible>
 					<control type="image">
 						<description>current weather icon</description>
 						<posx>230</posx>
@@ -162,6 +164,7 @@
 				<control type="group">
 					<posx>1236</posx>
 					<posy>195</posy>
+			    <visible>!IsEmpty(Window(Weather).Property(Location))</visible>
 					<control type="label">
 							<description>Sunrise-Sunset</description>
 							<posx>0</posx>
@@ -217,12 +220,14 @@
   <!-- ================================================================ -->
 	<include name="WeatherDefault">
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
-		  <visible>!Window.IsActive(ShutdownMenu)</visible>
+			<include>OpenCloseSlideAnimation</include>
+		  <include>VisibleHiddenSlideAnimation</include>
 	    <include>DialogZoomInOutAnimation</include>
+			<visible>!IsEmpty(Window(Weather).Property(Location))</visible>
 			<control type="group">
 				<visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-				<include>Window_OpenClose_Animation</include>
+				<include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 				<control type="list" id="52">
 					<posx>12</posx>
 					<posy>280</posy>
@@ -313,15 +318,14 @@
 							<texture border="25">windows/weather/day_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>14</posx>
-							<posy>0</posy>
-							<width>301</width>
-							<height>352</height>
+							<posx>10</posx>
+							<posy>-5</posy>
+							<width>305</width>
+							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="50">views/thumbnails/focus.png</texture>
+							<texture border="25">windows/weather/day_panel_focus.png</texture>
 							<animation effect="slide" start="70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
 							<animation effect="slide" start="-70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
-							<include>VisibleFadeEffect</include>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="label">
@@ -486,16 +490,18 @@
   <!-- ================================================================ -->
   <include name="WeatherUnderground">
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
-		  <visible>!Window.IsActive(ShutdownMenu)</visible>
+			<include>OpenCloseSlideAnimation</include>
+		  <include>VisibleHiddenSlideAnimation</include>
 	    <include>DialogZoomInOutAnimation</include>
+			<visible>!IsEmpty(Window(Weather).Property(Location))</visible>
 	
 	    <!-- Current Weather Conditions -->
 			<control type="group">
 				<description>Current Weather</description>
 				<visible>Skin.String(WeatherUnderground,1)</visible>
 				<visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-				<include>Window_OpenClose_Animation</include>
+				<include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 			 <control type="group">
 				<posx>0</posx>
 				<posy>300</posy>
@@ -725,7 +731,8 @@
 				<description>36Hours</description>
 				<visible>Skin.String(WeatherUnderground,2)</visible>
 				<visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-				<include>Window_OpenClose_Animation</include>
+				<include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 				<control type="group">
 					<posx>0</posx>
 					<posy>300</posy>
@@ -1124,7 +1131,8 @@
 				<description>Hourly</description>
 				<visible>Skin.String(WeatherUnderground,3)</visible>
 				<visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-				<include>Window_OpenClose_Animation</include>
+				<include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 				<control type="group">
 					<posx>0</posx>
 					<posy>300</posy>
@@ -2337,7 +2345,8 @@
 				<description>10Days</description>
 				<visible>Skin.String(WeatherUnderground,4)</visible>
 				<visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-				<include>Window_OpenClose_Animation</include>
+				<include>OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
 				<control type="list" id="51">
 					<posx>12</posx>
 					<posy>280</posy>
@@ -2464,15 +2473,14 @@
 							<texture border="25">windows/weather/day_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>14</posx>
-							<posy>0</posy>
-							<width>301</width>
-							<height>352</height>
+							<posx>10</posx>
+							<posy>-5</posy>
+							<width>305</width>
+							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="50">views/thumbnails/focus.png</texture>
+							<texture border="25">windows/weather/day_panel_focus.png</texture>
 							<animation effect="slide" start="70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(51).OnPrevious">Focus</animation>
 							<animation effect="slide" start="-70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(51).OnNext">Focus</animation>
-							<include>VisibleFadeEffect</include>
 							<visible>Control.HasFocus(51)</visible>
 						</control>
 						<control type="label">

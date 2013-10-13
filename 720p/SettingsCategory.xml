@@ -6,60 +6,62 @@
 	 <include>BackgroundItems</include>
 
 	 <control type="group">
-    <include>Window_OpenClose_Animation</include>
+    <include>OpenCloseSlideAnimation</include>
+    <include>VisibleHiddenSlideAnimation</include>
     <include>DialogZoomInOutAnimation</include>
-		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrgroupmanager)</visible>
+		<visible>!Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrgroupmanager)</visible>
+
+		<control type="image">
+		<include>FullscreenDimensions</include>
+		  <texture background="true">windows/settings/bg_settings.png</texture>
+		</control>
 		
-	  <control type="group">
-	    <include>Window_OpenClose_Animation</include>
-			<control type="image">
-			<include>FullscreenDimensions</include>
-			  <texture background="true">windows/settings/bg_settings.png</texture>
-			</control>
-			<control type="togglebutton" id="10">
-				<description>Default Category Button</description>
-				<width>295</width>
-				<height>50</height>
-				<font>FontSize_20</font>
-				<textcolor>77white</textcolor>
-				<focusedcolor>white</focusedcolor>
-			  <disabledcolor>33white</disabledcolor>
-				<texturefocus>buttons/catbullet_fo.png</texturefocus>
-				<texturenofocus>buttons/catbullet_nf.png</texturenofocus>
-				<alttexturefocus>buttons/catbullet_fo.png</alttexturefocus>
-				<alttexturenofocus>buttons/catbullet_nf.png</alttexturenofocus>
-				<align>left</align>
-				<aligny>center</aligny>
-			  <textwidth>250</textwidth>
-				<textoffsetx>40</textoffsetx>
-				<pulseonselect>false</pulseonselect>
-			</control>
-			<control type="button" id="7">
-				<description>Default Button</description>
-		    <include>SettingsButton</include>
-			</control>
-			<control type="radiobutton" id="8">
-				<description>Default RadioButton</description>
-		    <include>SettingsRadioButton</include>
-			</control>
-			<control type="spincontrolex" id="9">
-				<description>Default SpinControlex</description>
-		    <include>SettingsSpincontrolex</include>
-			</control>
-	  </control>
+		<control type="togglebutton" id="10">
+			<description>Default Category Button</description>
+			<width>295</width>
+			<height>49</height>
+			<font>FontSize_20</font>
+			<textcolor>77white</textcolor>
+			<focusedcolor>white</focusedcolor>
+		  <disabledcolor>33white</disabledcolor>
+			<texturefocus>windows/settings/settings_left_fo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<alttexturefocus>windows/settings/settings_left_fo.png</alttexturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<align>right</align>
+			<aligny>center</aligny>
+		  <textwidth>250</textwidth>
+			<textoffsetx>15</textoffsetx>
+			<textoffsety>11</textoffsety>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+	    <include>SettingsButton</include>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+	    <include>SettingsRadioButton</include>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+	    <include>SettingsSpincontrolex</include>
+		</control>
+		<control type="edit" id="12">
+			<description>Default edit</description>
+	    <include>SettingsButton</include>
+		</control>
 
 		<control type="group" id="9001">
-      <include>Window_OpenClose_Animation</include>
-			<posx>100</posx>
+			<posx>98</posx>
 			<posy>166</posy>
-			<height>40</height>
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>295</width>
-				<height>414</height>
-				<itemgap>2</itemgap>
+				<height>399</height>
+				<itemgap>1</itemgap>
 				<onleft>9000</onleft>
 				<onright>5</onright>
 				<onup>3</onup>
@@ -67,11 +69,11 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>298</posx>
+				<posx>302</posx>
 				<posy>0</posy>
 				<width>782</width>
-				<height>414</height>
-				<itemgap>2</itemgap>
+				<height>399</height>
+				<itemgap>1</itemgap>
 				<onleft>3</onleft>
 				<onright>9000</onright>
 				<onup>5</onup>
@@ -90,9 +92,8 @@
     <!-- == Header & Footer Labels == -->
 		<!-- ============================ -->
 		<control type="group">
-      <include>Window_OpenClose_Animation</include>
 			<posx>120</posx>
-			<posy>163</posy>
+			<posy>160</posy>
 			<height>40</height>
 			<control type="label">
 				<description>Header Category Label</description>
@@ -122,8 +123,8 @@
 		  </control>
 		</control>
 	 </control>
-	 
- 	 <include>CommonNowPlaying</include>
+
+	 <include>CommonNowPlaying</include>
 	 <include>CommonDialogsFadeOutBG</include>
 	 <include>SettingsCategoryContentInfo</include>
 	 <include>SettingsWeatherAndClock</include>

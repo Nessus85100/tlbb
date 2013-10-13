@@ -75,17 +75,17 @@
 				<posx>470</posx>
 				<posy>423</posy>
 				<width>160</width>
-				<height>40</height>
-				<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
-				<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+				<height>43</height>
+				<texturenofocus border="20,15,20,15">dialogs/keyboard/button_nf.png</texturenofocus>
+				<texturefocus border="20,15,20,15">dialogs/keyboard/button_fo.png</texturefocus>
 				<align>center</align>
 				<aligny>top</aligny>
 				<font>FontSize_22</font>
 				<textcolor>99grey</textcolor>
-				<focusedcolor>white</focusedcolor>
+				<focusedcolor>99white</focusedcolor>
 				<disabledcolor>44white</disabledcolor>
 				<shadowcolor>55000000</shadowcolor>
-				<textoffsety>4</textoffsety>
+				<textoffsety>6</textoffsety>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>11</onup>
@@ -96,17 +96,17 @@
 				<posx>650</posx>
 				<posy>423</posy>
 				<width>160</width>
-				<height>40</height>
-				<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
-				<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+				<height>43</height>
+				<texturenofocus border="20,15,20,15">dialogs/keyboard/button_nf.png</texturenofocus>
+				<texturefocus border="20,15,20,15">dialogs/keyboard/button_fo.png</texturefocus>
 				<align>center</align>
 				<aligny>top</aligny>
 				<font>FontSize_22</font>
 				<textcolor>99grey</textcolor>
-				<focusedcolor>white</focusedcolor>
+				<focusedcolor>99white</focusedcolor>
 				<disabledcolor>44white</disabledcolor>
 				<shadowcolor>55000000</shadowcolor>
-				<textoffsety>4</textoffsety>
+				<textoffsety>6</textoffsety>
 				<onleft>11</onleft>
 				<onright>11</onright>
 				<onup>10</onup>

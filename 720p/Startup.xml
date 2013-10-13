@@ -1,7 +1,5 @@
 <window>
 	<defaultcontrol always="true">9999</defaultcontrol>
-	<include>BackgroundContent</include>
-	<include>BackgroundVignette</include>
 	<allowoverlay>no</allowoverlay>
   <backgroundcolor>0</backgroundcolor> 
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
@@ -29,5 +27,7 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
+		<include>BackgroundContent</include>
+		<include>BackgroundVignette</include>
 	</controls>
 </window>

@@ -12,95 +12,79 @@
 	 <include>BackgroundItems</include>
 
 	 <control type="group">
-	  <include>Window_OpenClose_Animation</include>
-    <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(addonsettings)">
-      <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
-      <effect type="slide" start="0,0" end="0,35" time="350" tween="cubic" easing="inout" />
-    </animation>
-
-		<control type="group">
-			<include>FullscreenDimensions</include>
-	    <include>Window_OpenClose_Animation</include>
-		  <animation type="Conditional" reversible="false" condition="!ControlGroup(9000).HasFocus">
-	      <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout"  />
-	      <effect type="slide" start="0,55" end="0,0" time="250" tween="cubic" easing="inout" />
-		  </animation>
-		  <animation type="Conditional" reversible="false" condition="ControlGroup(9000).HasFocus">
-	      <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
-	      <effect type="slide" start="0,0" end="0,55" time="250" tween="cubic" easing="inout" />
-		  </animation>
-			<control type="image">
-				<description>background image</description>
-				<texture background="true">windows/tvguide/bg.png</texture>
-			  <visible>!Skin.HasSetting(HideExtraInfo)</visible>
-			</control>
-			<control type="image">
-				<description>background image</description>
-				<texture background="true">windows/tvguide/bg2.png</texture>
-			  <visible>Skin.HasSetting(HideExtraInfo)</visible>
-			</control>
+    <include>OpenCloseSlideAnimation</include>
+    <include>VisibleHiddenSlideAnimation</include>
+		<visible>!Window.IsActive(addonsettings)</visible>
+		<control type="image">
+			<description>background image</description>
+			<texture background="true">windows/tvguide/bg.png</texture>
+		  <visible>!Skin.HasSetting(HideExtraInfo)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<texture background="true">windows/tvguide/bg2.png</texture>
+		  <visible>Skin.HasSetting(HideExtraInfo)</visible>
 		</control>
 
 		<control type="group">
 			<description>Extra Info</description>
-			<posx>62</posx>
-			<posy>128</posy>
-	    <include>Window_OpenClose_Animation</include>
+			<posx>61</posx>
+			<posy>125</posy>
 		  <visible>!Skin.HasSetting(HideExtraInfo)</visible>
-		  <animation type="Conditional" reversible="false" condition="!ControlGroup(9000).HasFocus">
-	      <effect type="fade" start="0" end="100" time="200" tween="cubic" easing="in"  />
-	      <effect type="slide" start="0,55" end="0,0" time="250" tween="cubic" easing="out" />
-		  </animation>
-		  <animation type="Conditional" reversible="false" condition="ControlGroup(9000).HasFocus">
-	      <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="out" />
-	      <effect type="slide" start="0,0" end="0,55" time="250" tween="cubic" easing="out" />
-		  </animation>
-			<!-- Preview Thumbs -->
 			<control type="image">
-				<description>Preview Thumb</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>315</width>
-				<height>175</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
-				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuidePreviewThumb]</texture>
-				<bordertexture border="10">dialogs/other/iconborder_black.png</bordertexture>
-				<bordersize>7</bordersize>
-        <fadetime>200</fadetime>
-				<visible>!Stringcompare(Skin.String(PreviewThumb),3)</visible>
-			</control>
-			<control type="image">
-				<description>Preview Thumb</description>
+				<description>BlackBorder</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>315</width>
 				<height>175</height>
 				<aspectratio aligny="center" align="center">strecth</aspectratio>
 				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
-				<visible>Stringcompare(Skin.String(PreviewThumb),3)</visible>
-        <fadetime>200</fadetime>
+			</control>
+			<!-- Preview Thumbs -->
+			<control type="image">
+				<description>Landscape Preview Thumb</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>315</width>
+				<height>175</height>
+        <fadetime>100</fadetime>
+				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuideLandscape]</texture>
+				<bordersize>6</bordersize>
+				<visible>Stringcompare(Skin.String(PreviewThumb),1)</visible>
 			</control>
 			<control type="image">
-				<description>Preview Thumb</description>
-				<posx>12</posx>
+				<description>ClearLogo Preview Thumb</description>
+				<posx>23</posx>
 				<posy>35</posy>
-				<width>291</width>
-				<height>113</height>
+				<width>270</width>
+				<height>105</height>
+        <fadetime>100</fadetime>
 				<aspectratio aligny="center" align="center">keep</aspectratio>
-				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuidePreviewThumb]</texture>
-				<visible>Stringcompare(Skin.String(PreviewThumb),3)</visible>
-        <fadetime>200</fadetime>
+				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuideLogo]</texture>
+				<visible>Stringcompare(Skin.String(PreviewThumb),2)</visible>
 			</control>
 			<control type="image">
-				<description>Studio Border</description>
+				<description>Fanart Preview Thumb</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>315</width>
+				<height>175</height>
+        <fadetime>100</fadetime>
+				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuideFanart]</texture>
+				<bordersize>6</bordersize>
+				<visible>Stringcompare(Skin.String(PreviewThumb),3)</visible>
+			</control>
+			<control type="image">
+				<description>BlackBorder</description>
 				<posx>1020</posx>
 				<posy>0</posy>
 				<width>134</width>
 				<height>80</height>
 				<aspectratio aligny="center" align="center">strecth</aspectratio>
 				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
-        <fadetime>100</fadetime>
-				<visible>!Stringcompare(Skin.String(PreviewThumb),2)</visible>
+				<visible>!Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>
 			<control type="image">
 				<description>Studio</description>
@@ -108,13 +92,25 @@
 				<posy>0</posy>
 				<width>134</width>
 				<height>80</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
-				<texture background="true" fallback="flags/studio/fallbackstudio.png" border="6">$VAR[TVGuideStudio]</texture>
 				<colordiffuse>77ffffff</colordiffuse>
         <fadetime>100</fadetime>
-				<visible>!Stringcompare(Skin.String(PreviewThumb),2)</visible>
+				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<texture background="true" border="6" fallback="flags/studio/fallbackstudio.png">$VAR[TVGuideStudio]</texture>
+				<visible>!Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>
-			
+			<!-- ClearArt -->
+			<control type="image">
+				<description>clearart</description>
+				<posx>902</posx>
+				<posy>45</posy>
+				<width>250</width>
+				<height>140</height>
+        <fadetime>100</fadetime>
+				<colordiffuse>ddffffff</colordiffuse>
+				<aspectratio aligny="center" align="right">strecth</aspectratio>
+				<texture background="true">$VAR[TVGuideClearart]</texture>
+				<visible>Stringcompare(Skin.String(PreviewThumb),3)</visible>
+			</control>			
 			<!-- Extra Info Labels -->
 			<control type="label">
 				<posx>325</posx>
@@ -126,7 +122,6 @@
 				<aligny>center</aligny>
 				<font>FontSize_36</font>
 				<textcolor>white</textcolor>
-        <include>VisibleFadeEffect2</include>
 			</control>
 			<control type="label">
 				<posx>327</posx>
@@ -138,14 +133,13 @@
 				<aligny>center</aligny>
 				<font>FontSize_20</font>
 				<textcolor>77white</textcolor>
-        <include>VisibleFadeEffect2</include>
 			</control>
 			<control type="grouplist">
-					<posx>327</posx>
-					<posy>90</posy>
-					<width>650</width>
-	        <height>35</height>
-				  <orientation>horizontal</orientation>
+				<posx>327</posx>
+				<posy>90</posy>
+				<width>650</width>
+        <height>35</height>
+			  <orientation>horizontal</orientation>
 				<control type="label">
 					<width min="10" max="650">auto</width>
 					<height>35</height>
@@ -163,11 +157,11 @@
 				</control>
 			</control>
 			<control type="grouplist">
-					<posx>327</posx>
-					<posy>115</posy>
-					<width>650</width>
-	        <height>35</height>
-				  <orientation>horizontal</orientation>
+				<posx>327</posx>
+				<posy>115</posy>
+				<width>650</width>
+        <height>35</height>
+			  <orientation>horizontal</orientation>
 				<control type="label">
 					<width min="10" max="650">auto</width>
 					<height>35</height>
@@ -195,11 +189,11 @@
 				</control>
 			</control>
 			<control type="grouplist">
-					<posx>327</posx>
-					<posy>140</posy>
-					<width>650</width>
-	        <height>35</height>
-				  <orientation>horizontal</orientation>
+				<posx>327</posx>
+				<posy>140</posy>
+				<width>650</width>
+        <height>35</height>
+			  <orientation>horizontal</orientation>
 				<control type="label">
 					<width min="10" max="650">auto</width>
 					<height>35</height>
@@ -216,44 +210,14 @@
 				  <scroll>false</scroll>
 				</control>
 			</control>
-			<!-- ClearArt -->
-			<control type="image">
-				<description>clearart</description>
-				<posx>902</posx>
-				<posy>45</posy>
-				<width>250</width>
-				<height>140</height>
-				<aspectratio aligny="center" align="right">strecth</aspectratio>
-				<texture background="true">$VAR[TVGuideClearart]</texture>
-        <fadetime>100</fadetime>
-				<colordiffuse>ddffffff</colordiffuse>
-				<visible>Stringcompare(Skin.String(PreviewThumb),2)</visible>
-			</control>
+
 		</control>
 
 
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
-		  <animation type="Conditional" reversible="false" condition="!ControlGroup(9000).HasFocus">
-	      <effect type="slide" start="0,55" end="0,0" time="250" tween="cubic" easing="inout" />
-		  </animation>
-		  <animation type="Conditional" reversible="false" condition="ControlGroup(9000).HasFocus">
-	      <effect type="slide" start="0,55" end="0,0" time="250" tween="cubic" easing="inout" />
-		  </animation>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture background="true">windows/tvguide/bg2.png</texture>
-			  <animation type="Conditional" condition="ControlGroup(9000).HasFocus">
-		      <effect type="fade" start="0" end="100" time="200" tween="cubic" easing="inout" />
-		      <effect type="slide" start="0,55" end="0,0" time="250" tween="cubic" easing="inout" />
-			  </animation>
-			  <visible>ControlGroup(9000).HasFocus</visible>
-			</control>
-	
 			<control type="grouplist" id="2000">
 				<posx>68</posx>
-				<posy>317</posy>
+				<posy>314</posy>
 				<width>1150</width>
 				<height>660</height>
 				<orientation>horizontal</orientation>
@@ -270,7 +234,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(200)</visible>
-		        <include>VisibleFadeEffect2</include>
 			 <!-- <colordiffuse>90FFFFFF</colordiffuse> -->
 					</control>
 					<control type="label">
@@ -284,7 +247,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(200)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -297,7 +259,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(200)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="200">
 						<posx>0</posx>
@@ -340,7 +301,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(201)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -353,7 +313,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(201)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -366,7 +325,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(201)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="201">
 						<posx>0</posx>
@@ -409,7 +367,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(202)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -422,7 +379,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(202)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -435,7 +391,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(202)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="202">
 						<posx>0</posx>
@@ -478,7 +433,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(203)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -491,7 +445,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(203)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -504,7 +457,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(203)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="203">
 						<posx>0</posx>
@@ -547,7 +499,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(204)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -560,7 +511,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(204)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -573,7 +523,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(204)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="204">
 						<posx>0</posx>
@@ -616,7 +565,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(205)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -629,7 +577,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(205)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -642,7 +589,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(205)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="205">
 						<posx>0</posx>
@@ -685,7 +631,6 @@
 						<height>35</height>
 						<texture>buttons/settings_fo.png</texture>
 					  <visible>Control.HasFocus(206)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -698,7 +643,6 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 					  <visible>Control.HasFocus(206)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -711,7 +655,6 @@
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 					  <visible>!Control.HasFocus(206)</visible>
-		        <include>VisibleFadeEffect2</include>
 					</control>
 					<control type="panel" id="206">
 						<posx>0</posx>
@@ -770,7 +713,7 @@
    <!-- ==================== -->
    <!-- Top Options Controls -->
    <!-- ==================== -->
-		<control type="group" id="9000">
+	 <control type="group" id="9000">
 			<posx>30</posx>
 			<posy>25</posy>
 	    <include>ShutdownMenuAnimation</include>
@@ -827,7 +770,7 @@
 				</control>
 				<control type="button" id="9">
 					<description>Preview Thumb</description>
-	        <label>$LOCALIZE[31217]: $VAR[TVGuidePreviewThumbs]</label>
+	        <label>$LOCALIZE[31217]: $VAR[TVGuidePreviewThumbsLabels]</label>
 			    <onclick condition="Stringcompare(Skin.String(PreviewThumb),3)">Skin.SetString(PreviewThumb,1)</onclick>
 			    <onclick condition="Stringcompare(Skin.String(PreviewThumb),2)">Skin.SetString(PreviewThumb,3)</onclick>
 			    <onclick condition="Stringcompare(Skin.String(PreviewThumb),1)">Skin.SetString(PreviewThumb,2)</onclick>
@@ -848,7 +791,7 @@
 	        <aspectratio>stretch</aspectratio>
 			  </control>
 		  </control>
-		</control>
+	 </control>
 
    <include>CommonWeatherAndClock</include>
 
@@ -858,8 +801,10 @@
    <control type="group">
 		<posx>45</posx>
 		<posy>25</posy>
-	  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(ShutdownMenu)</visible>
-	  <include>CommonSlideAnimations</include>
+    <include>OpenCloseSlideAnimation</include>
+    <include>VisibleHiddenSlideAnimation</include>
+		<include>ShutdownMenuAnimation</include>
+	  <visible>!ControlGroup(9000).HasFocus</visible>
 		<control type="grouplist">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -868,7 +813,6 @@
 			<align>left</align>
 			<itemgap>20</itemgap>
 			<orientation>horizontal</orientation>
-	    <include>CommonSlideAnimations</include>
 			<control type="label">
 			  <include>TopBigLabel</include>
 				<label>4</label>
@@ -911,7 +855,8 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>$VAR[TVGuideNumItems]</label>
-	    <include>CommonSlideAnimations</include>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
 		</control>				
    </control>
 	</controls>

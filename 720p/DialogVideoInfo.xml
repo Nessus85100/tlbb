@@ -5,18 +5,18 @@
 
 		<control type="group">
 			<visible>!Window.IsActive(FileBrowser) + !Window.IsActive(SelectDialog) + !Window.IsActive(DialogSelect.xml)</visible>
-	    <include>DialogAnimation</include>
+	    <include>OpenCloseSlideAnimation</include>
+	    <include>VisibleHiddenSlideAnimation</include>
 
 			<control type="group">
 				<posx>45</posx>
 				<posy>143</posy>
-				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>308</width>
 					<height>453</height>
-					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_poster_big.png" diffuse="thumbs/poster_diffuse_big.png">$VAR[VideoInfoThumbs]</texture>
 				</control>
 				<control type="image">
@@ -25,7 +25,7 @@
 					<width>330</width>
 					<height>475</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
-				  <texture>thumbs/poster_overlay_big.png</texture>
+				  <texture background="true">thumbs/poster_overlay_big.png</texture>
 				</control>
 			 <control type="group">
 				<posx>330</posx>
@@ -524,7 +524,7 @@
 				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<itemlayout width="143.5" height="250">
+				<itemlayout width="143" height="250">
 					<control type="image">
 						<posx>10</posx>
 						<posy>10</posy>
@@ -550,7 +550,7 @@
 						<texture diffuse="thumbs/poster_diffuse.png">thumbs/poster_overlay_noglass.png</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout width="143.5" height="250">
+				<focusedlayout width="143" height="250">
 					<control type="group">
 						<animation reversible="false" effect="zoom" start="100" end="125" center="10,10" time="150">Focus</animation>
 						<animation reversible="false" effect="zoom" start="125" end="100" center="10,10" time="150">UnFocus</animation>

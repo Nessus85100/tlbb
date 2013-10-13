@@ -71,10 +71,10 @@
 				<texturenofocus>-</texturenofocus>
 			</control>
 	   </control>
-
+	   
 	  <control type="group" id="10000">
-			<posx>365</posx>
-			<posy>528</posy>
+			<posx>356</posx>
+			<posy>536</posy>
       <!-- Buttons -->
 			<control type="grouplist" id="10001">
 				<posx>0</posx>
@@ -89,38 +89,38 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<control type="button" id="28">
-					<description>Button</description>
+					<description>Save</description>
+				  <width>150</width>
+				  <height>40</height>
+					<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
+					<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>110</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
 				  <label>190</label>
-				  <include>TopButton</include>
 				</control>
 				<control type="button" id="27">
-					<description>Button</description>
+					<description>Clear</description>
+				  <width>150</width>
+				  <height>40</height>
+					<texturefocus>dialogs/buttons/cancel_fo.png</texturefocus>
+					<texturenofocus>dialogs/buttons/cancel_nf.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>110</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
 				  <label>192</label>
-				  <include>TopButton</include>
-				</control>
-			</control>
-      <!-- Buttons Labels -->
-			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>70</height>
-				<width>552</width>
-				<itemgap>25</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<control type="label">
-					<description>Button Label</description>
-					<include>DialogsButtonLabelNoFocus</include>
-          <label>$INFO[Control.GetLabel(28),․  ]</label>
-					<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(28)" reversible="true">Conditional</animation>
-          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(28)" reversible="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Button Label</description>
-					<include>DialogsButtonLabelNoFocus</include>
-          <label>$INFO[Control.GetLabel(27),․  ]</label>
-					<animation effect="fade" start="100" end="ButtonsLabelsFade" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(27)" reversible="true">Conditional</animation>
-          <animation effect="zoom" start="100" end="ButtonsLabelsZoom" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(27)" reversible="true">Conditional</animation>
 				</control>
 			</control>
 	  </control>

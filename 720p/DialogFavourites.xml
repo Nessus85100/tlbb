@@ -1,11 +1,13 @@
 <window type="dialog" id="134">
 	<defaultcontrol always="true">450</defaultcontrol>
+	<include>OnLoadDialogsClose</include>
 	<onload condition="!IntegerGreaterThan(Container(450).NumItems,0)">ActivateWindow(1110)</onload>
 	<controls>
 
 		<control type="group">
-	    <include>GlobalSearchSlideAnimations</include>
-      <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard) | Window.IsActive(filebrowser) | Window.IsActive(playercontrols)">
+      <include>OpenCloseSlideAnimation</include>
+      <include>VisibleHiddenSlideAnimation</include>
+      <animation type="Conditional" reversible="true" condition="Window.IsActive(virtualkeyboard) | Window.IsActive(filebrowser) | Window.IsActive(playercontrols)">
         <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout"/>
         <effect type="slide" start="0,0" end="0,35" time="300" tween="sine" easing="inout"/>
       </animation>
@@ -13,9 +15,9 @@
         <effect type="slide" start="0,0" end="0,100" time="270" tween="sine" easing="inout"/>
       </animation>
 			<control type="panel" id="450">
-				<posx>25</posx>
+				<posx>28</posx>
 				<posy>200</posy>
-				<width>1230</width>
+				<width>1227</width>
 				<height>360</height>
 				<onleft>450</onleft>
 				<onright>450</onright>
@@ -23,37 +25,40 @@
 				<ondown>close</ondown>
 	      <orientation>horizontal</orientation>
 				<viewtype label="31085">list</viewtype>
-	      <scrolltime tween="Cubic" easing="out">500</scrolltime>
+        <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 				<itemlayout height="265" width="244">
 					<control type="image">
+						<posx>-5</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="25">views/thumbnails/thumb_panel.png</texture>
+						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
 					<control type="image">
 						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-					  <texture background="true">empty_icon.png</texture>
+						<posy>30</posy>
+						<width>200</width>
+						<height>190</height>
+						<aspectratio align="center" aligny="top">scale</aspectratio>
+					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
 						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Thumb]</texture>
-					  <bordersize>6</bordersize>
+						<posy>30</posy>
+						<width>200</width>
+						<height>190</height>
+					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<bordersize>6</bordersize>
+            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 					<control type="label">
 						<posx>128</posx>
 						<posy>220</posy>
 						<width>210</width>
-						<height>35</height>
+						<height>40</height>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<font>FontSize_20</font>
@@ -65,34 +70,37 @@
 				</itemlayout>
 				<focusedlayout height="265" width="244">
 					<control type="image">
+						<posx>-5</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="25">views/thumbnails/thumb_panel.png</texture>
+						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
 					<control type="image">
 						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-					  <texture background="true">empty_icon.png</texture>
+						<posy>30</posy>
+						<width>200</width>
+						<height>190</height>
+						<aspectratio align="center" aligny="top">scale</aspectratio>
+					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
 						<posx>25</posx>
-						<posy>24</posy>
-						<width>206</width>
-						<height>200</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Thumb]</texture>
-					  <bordersize>6</bordersize>
+						<posy>30</posy>
+						<width>200</width>
+						<height>190</height>
+					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<bordersize>6</bordersize>
+            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 					<control type="label">
 						<posx>128</posx>
 						<posy>220</posy>
 						<width>210</width>
-						<height>35</height>
+						<height>40</height>
 						<textcolor>blue</textcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<font>FontSize_20</font>
@@ -102,17 +110,13 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
+						<posx>-5</posx>
 						<width>260</width>
 						<height>280</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="25">views/thumbnails/focus.png</texture>
+						<texture border="30">views/thumbnails/focus.png</texture>
             <animation type="Focus">
-              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-            </animation>
-            <animation type="Unfocus">
-              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+              <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
             </animation>
 					</control>
 				</focusedlayout>
@@ -122,8 +126,8 @@
 	 <control type="group">
 		  <posx>45</posx>
 		  <posy>25</posy>
-	    <include>GlobalSearchSlideAnimations</include>
-      <animation type="Conditional" reversible="true" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)">
+      <include>OpenCloseSlideAnimation</include>
+      <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu)">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="inout" />
       </animation>
