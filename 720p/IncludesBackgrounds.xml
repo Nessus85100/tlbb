@@ -161,13 +161,31 @@
 			<visible>Control.HasFocus(35)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- HomeWidget RecentMovies fanart -->
+		<!-- HomeWidget RecentTVShows fanart -->
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(45).ListItem.Property(FanartImage)]</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>Control.HasFocus(45)</visible>
+		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+		</control>
+		<!-- HomeWidget RecentMusic fanart -->
+	  <control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Container(15).ListItem.Property(FanartImage)]</texture>
+			<include>BackgroundFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Control.HasFocus(15)</visible>
+		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+		</control>
+		<!-- HomeWidget CustomAddons fanart -->
+	  <control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Container(25).ListItem.Property(FanartImage)]</texture>
+			<include>BackgroundFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Control.HasFocus(25)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
 	</include>
@@ -185,7 +203,7 @@
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <colordiffuse>ddFFFFFF</colordiffuse>
-			<visible>[Control.IsVisible(57) + !Window.IsVisible(profiles)] | [Control.IsVisible(50) + !Window.IsVisible(weather) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(profiles)] | Control.IsVisible(560) | Control.IsVisible(561) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)]</visible>
+			<visible>Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | [Control.IsVisible(57) + !Window.IsVisible(profiles)] | [Control.IsVisible(50) + !Window.IsVisible(weather) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(profiles)] | Control.IsVisible(560) | Control.IsVisible(561) | Window.IsActive(PlayerControls) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)]</visible>
 	  </control>
 	</include>
 

@@ -82,11 +82,11 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="2">
-						<label>513</label>
+						<label>31010</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="7">
-						<label>31098</label>
+						<label>31100</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
@@ -180,8 +180,423 @@
 					<onright>9000</onright>
 					<onup>8200</onup>
 					<ondown>8200</ondown>
-				  <!-- Customize Music Button -->
-					<control type="group" id="8201">
+
+				  <!-- Hide Now Playing Video -->
+					<control type="radiobutton" id="8203">
+						<description>Hide Home NP VideoInfo</description>
+	          <include>SettingsRadioButton</include>
+						<label>31102</label>
+						<onclick>Skin.ToggleSetting(HideHomeNPVideoInfo)</onclick>
+						<selected>Skin.HasSetting(HideHomeNPVideoInfo)</selected>
+					</control>
+				  <!-- Hide Now Playing Music -->
+					<control type="radiobutton" id="8204">
+						<description>Hide Home NP MusicInfo</description>
+	          <include>SettingsRadioButton</include>
+						<label>31103</label>
+						<onclick>Skin.ToggleSetting(HideHomeNPMusicInfo)</onclick>
+						<selected>Skin.HasSetting(HideHomeNPMusicInfo)</selected>
+					</control>
+				  <!-- Show Home Widgets Items -->
+					<control type="radiobutton" id="8205">
+						<description>Show Home RecentlyAdded Movies Widget</description>
+	          <include>SettingsRadioButton</include>
+						<label>31167</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetRecentlyAddedMovies)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)</selected>
+					</control>
+					<control type="radiobutton" id="8206">
+						<description>Show Home RecentlyAdded TVShows Widget</description>
+	          <include>SettingsRadioButton</include>
+						<label>31168</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetRecentlyAddedTVShows)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)</selected>
+					</control>
+					<control type="radiobutton" id="8207">
+						<description>Show Home RecentlyAdded Albums Widget</description>
+	          <include>SettingsRadioButton</include>
+						<label>31169</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetRecentlyAddedAlbums)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)</selected>
+					</control>
+
+				  <!-- Custom Home VideoAddons -->
+					<control type="radiobutton" id="8210">
+						<description>Show Home Custom Video Addons</description>
+	          <include>SettingsRadioButton</include>
+						<label>31170</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetCustomVideoAddons)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</selected>
+					</control>
+					<control type="button" id="8211">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 1</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon1))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon1,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8212">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 2</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon2))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon2,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8213">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 3</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon3))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon3,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8214">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 4</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon4))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon4,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8215">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 5</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon5))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon5,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8216">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 6</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon6))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon6,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8217">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 7</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon7))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon7,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8218">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 8</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon8))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon8,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8219">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 9</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon9))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon9,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					<control type="button" id="8220">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31191] 10</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(CustomVideoAddon10))][/COLOR]</label2>
+						<onclick>Skin.SetAddon(CustomVideoAddon10,xbmc.addon.video)</onclick>
+						<visible>Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)</visible>
+					</control>
+					
+					<control type="radiobutton" id="8221">
+						<description>Show Home Favourites Widget</description>
+	          <include>SettingsRadioButton</include>
+						<label>31174</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetFavourites)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetFavourites)</selected>
+					</control>
+					<control type="radiobutton" id="8222">
+						<description>Show Home Weather Widget</description>
+	          <include>SettingsRadioButton</include>
+						<label>31175</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetWeather)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetWeather)</selected>
+					</control>
+					<control type="radiobutton" id="8223">
+						<description>Show Home Settings Widget</description>
+	          <include>SettingsRadioButton</include>
+						<label>31176</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetSettings)</onclick>
+						<selected>Skin.HasSetting(ShowHomeWidgetSettings)</selected>
+					</control>
+				</control>
+				
+				<!-- =============== -->
+				<!-- == Home Menu == -->
+				<!-- =============== -->
+				<control type="grouplist" id="8700">
+					<include>CloseAnimation</include>
+					<visible>Container(8800).Hasfocus(7)</visible>
+					<width>782</width>
+					<height>399</height>
+					<itemgap>1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>8800</onleft>
+					<onright>9000</onright>
+					<onup>8700</onup>
+					<ondown>8700</ondown>
+					
+				  <!-- Hide Submenus -->
+					<control type="button" id="8701">
+						<description>Custom Home Buttons</description>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
+	          <include>SettingsButton</include>
+						<label>31119</label>
+						<onclick>Skin.ToggleSetting(HomeSubMenus)</onclick>
+						<selected>Skin.HasSetting(HomeSubMenus)</selected>
+					</control>
+					<control type="radiobutton" id="8702">
+						<description>Hide Movies SubMenu</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31120]</label>
+						<onclick>Skin.ToggleSetting(HideMoviesSubMenu)</onclick>
+						<selected>Skin.HasSetting(HideMoviesSubMenu)</selected>
+						<visible>!Skin.HasSetting(HomeSubMenus)</visible>
+					</control>
+					<control type="radiobutton" id="8703">
+						<description>Hide TV Shows SubMenu</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31121]</label>
+						<onclick>Skin.ToggleSetting(HideTVShowsSubMenu)</onclick>
+						<selected>Skin.HasSetting(HideTVShowsSubMenu)</selected>
+						<visible>!Skin.HasSetting(HomeSubMenus)</visible>
+					</control>
+					<control type="radiobutton" id="8704">
+						<description>Hide Music SubMenu</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31122]</label>
+						<onclick>Skin.ToggleSetting(HideMusicSubMenu)</onclick>
+						<selected>Skin.HasSetting(HideMusicSubMenu)</selected>
+						<visible>!Skin.HasSetting(HomeSubMenus)</visible>
+					</control>
+					<control type="radiobutton" id="8705">
+						<description>Hide Settings SubMenu</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31123]</label>
+						<onclick>Skin.ToggleSetting(HideSettingsSubMenu)</onclick>
+						<selected>Skin.HasSetting(HideSettingsSubMenu)</selected>
+						<visible>!Skin.HasSetting(HomeSubMenus)</visible>
+					</control>
+										
+				  <!-- Hide Home Menu Buttons -->
+					<control type="button" id="8706">
+						<description>Home Categories Buttonn</description>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
+	          <include>SettingsButton</include>
+						<label>31171</label>
+						<onclick>Skin.ToggleSetting(HiddeHomeCategories)</onclick>
+						<selected>Skin.HasSetting(HiddeHomeCategories)</selected>
+					</control>
+					<control type="radiobutton" id="8707">
+						<description>Hide Movies Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31106]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuMoviesButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuMoviesButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8708">
+						<description>Hide TV Shows Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31107]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuTVShowsButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuTVShowsButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8709">
+						<description>Hide Music Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31108]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuMusicButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuMusicButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8710">
+						<description>Hide Pictures Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31109]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuPicturesButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuPicturesButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8711">
+						<description>Hide Programs Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31110]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuProgramsButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuProgramsButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8712">
+						<description>Hide Channels Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31111]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuChannelsButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuChannelsButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8713">
+						<description>Hide Weather Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31112]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuWeatherButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuWeatherButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8715">
+						<description>Hide Favorites Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31166]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuFavoritesButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuFavoritesButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8716">
+						<description>Hide Settings Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31113]</label>
+						<onclick>Skin.ToggleSetting(HideHomeMenuSettingsButton)</onclick>
+						<selected>Skin.HasSetting(HideHomeMenuSettingsButton)</selected>
+						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
+					</control>
+
+				  <!-- Show Home Menu Buttons -->
+					<control type="button" id="8717">
+						<description>Home Categories Buttonn</description>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
+	          <include>SettingsButton</include>
+						<label>31172</label>
+						<onclick>Skin.ToggleSetting(ShowHomeCategories)</onclick>
+						<selected>Skin.HasSetting(ShowHomeCategories)</selected>
+					</control>
+					<control type="radiobutton" id="8718">
+						<description>Show Videos Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31114]</label>
+						<onclick>Skin.ToggleSetting(ShowHomeMenuVideosButton)</onclick>
+						<selected>Skin.HasSetting(ShowHomeMenuVideosButton)</selected>
+						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8719">
+						<description>Show MusicVideos Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31116]</label>
+						<onclick>Skin.ToggleSetting(ShowHomeMenuMusicVideosButton)</onclick>
+						<selected>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</selected>
+						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8720">
+						<description>Show Addons Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31165]</label>
+						<onclick>Skin.ToggleSetting(ShowHomeMenuAddonsButton)</onclick>
+						<selected>Skin.HasSetting(ShowHomeMenuAddonsButton)</selected>
+						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8721">
+						<description>Show Search Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31104]</label>
+						<onclick>Skin.ToggleSetting(ShowHomeMenuSearchButton)</onclick>
+						<selected>Skin.HasSetting(ShowHomeMenuSearchButton)</selected>
+						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
+					</control>
+					<control type="radiobutton" id="8714">
+						<description>Show Trailers Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31105]</label>
+						<onclick>Skin.ToggleSetting(ShowHomeMenuTrailersButton)</onclick>
+						<selected>Skin.HasSetting(ShowHomeMenuTrailersButton)</selected>
+						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
+					</control>
+
+				  <!-- Custom Home Menu Buttons -->
+					<control type="button" id="8722">
+						<description>Custom Home Buttons</description>
+						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
+	          <include>SettingsButton</include>
+						<label>31173</label>
+						<onclick>Skin.ToggleSetting(CustomHomeCategories)</onclick>
+						<selected>Skin.HasSetting(CustomHomeCategories)</selected>
+					</control>
+					<control type="button" id="8723">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 1</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite1.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite1)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8724">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 2</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite2.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite2)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8725">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 3</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite3.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite3)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8726">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 4</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite4.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite4)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8727">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 5</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite5.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite5)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8728">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 6</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite6.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite6)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8729">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 7</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite7.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite7)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8730">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 8</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite8.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite8)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8731">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 9</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite9.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite9)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+					<control type="button" id="8732">
+            <include>SettingsButton</include>
+						<label> • $LOCALIZE[31190] 10</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite10.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomFavourite10)</onclick>
+						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
+					</control>
+
+				  <!-- Customize Home Menu Music Button -->
+					<control type="group" id="8740">
 						<description>Fake spin control</description>
 						<width>782</width>
 						<height>49</height>
@@ -192,13 +607,13 @@
 							<height>49</height>
 							<texture>windows/settings/settings_right_fo.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<visible>ControlGroup(8201).HasFocus</visible>
+							<visible>ControlGroup(8740).HasFocus</visible>
 						</control>
-					  <control type="button" id="82011">
+					  <control type="button" id="87401">
 								<onleft>8800</onleft>
 								<onright>9000</onright>
-								<onup>8209</onup>
-								<ondown>8202</ondown>
+								<onup>8732</onup>
+								<ondown>8750</ondown>
 						    <enable>!Skin.HasSetting(HideHomeMenuMusicButton)</enable>
 								<texturefocus>-</texturefocus>
 								<texturenofocus>-</texturenofocus>
@@ -244,7 +659,7 @@
 								<textoffsety>10</textoffsety>
 								<label>$LOCALIZE[31117]</label>
 								<label2>[COLOR=selected]$VAR[HomeMusicButtonMusicName][/COLOR]</label2>
-						    <visible>!ControlGroup(8201).HasFocus</visible>
+						    <visible>!ControlGroup(8740).HasFocus</visible>
 						    <enable>!Skin.HasSetting(HideHomeMenuMusicButton)</enable>
 						</control>
 						<control type="button">
@@ -258,12 +673,13 @@
 								<textoffsety>10</textoffsety>
 								<label>$LOCALIZE[31117]</label>
 								<label2>[COLOR=selected]$VAR[HomeMusicButtonMusicName][/COLOR]</label2>
-						    <visible>ControlGroup(8201).HasFocus</visible>
+						    <visible>ControlGroup(8740).HasFocus</visible>
 						    <enable>!Skin.HasSetting(HideHomeMenuMusicButton)</enable>
 						</control>
 				  </control>
-				  <!-- Customize Addons Button -->
-					<control type="group" id="8202">
+				  
+				  <!-- Customize Home Menu Addons Button -->
+					<control type="group" id="8750">
 						<description>Fake spin control</description>
 						<width>782</width>
 						<height>49</height>
@@ -274,13 +690,13 @@
 							<height>49</height>
 							<texture>windows/settings/settings_right_fo.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<visible>ControlGroup(8202).HasFocus</visible>
+							<visible>ControlGroup(8750).HasFocus</visible>
 						</control>
-					  <control type="button" id="82012">
+					  <control type="button" id="87501">
 								<onleft>8800</onleft>
 								<onright>9000</onright>
-								<onup>8201</onup>
-								<ondown>8203</ondown>
+								<onup>8740</onup>
+								<ondown>8701</ondown>
 						    <enable>Skin.HasSetting(ShowHomeMenuAddonsButton)</enable>
 								<texturefocus>-</texturefocus>
 								<texturenofocus>-</texturenofocus>
@@ -304,9 +720,9 @@
 								<aligny>top</aligny>
 								<textoffsetx>15</textoffsetx>
 								<textoffsety>10</textoffsety>
-								<label>$LOCALIZE[31155]</label>
+								<label>$LOCALIZE[31118]</label>
 								<label2>[COLOR=selected]$VAR[HomeAddonsButtonAddonsName][/COLOR]</label2>
-						    <visible>!ControlGroup(8202).HasFocus</visible>
+						    <visible>!ControlGroup(8750).HasFocus</visible>
 						    <enable>Skin.HasSetting(ShowHomeMenuAddonsButton)</enable>
 						</control>
 						<control type="button">
@@ -318,289 +734,13 @@
 								<aligny>top</aligny>
 								<textoffsetx>15</textoffsetx>
 								<textoffsety>10</textoffsety>
-								<label>$LOCALIZE[31155]</label>
+								<label>$LOCALIZE[31118]</label>
 								<label2>[COLOR=selected]$VAR[HomeAddonsButtonAddonsName][/COLOR]</label2>
-						    <visible>ControlGroup(8202).HasFocus</visible>
+						    <visible>ControlGroup(8750).HasFocus</visible>
 						    <enable>Skin.HasSetting(ShowHomeMenuAddonsButton)</enable>
 						</control>
 				  </control>
-				  <!-- Hide Now Playing -->
-					<control type="radiobutton" id="8203">
-						<description>Hide Home NP VideoInfo</description>
-	          <include>SettingsRadioButton</include>
-						<label>31102</label>
-						<onclick>Skin.ToggleSetting(HideHomeNPVideoInfo)</onclick>
-						<selected>Skin.HasSetting(HideHomeNPVideoInfo)</selected>
-					</control>
-					<control type="radiobutton" id="8204">
-						<description>Hide Home NP MusicInfo</description>
-	          <include>SettingsRadioButton</include>
-						<label>31103</label>
-						<onclick>Skin.ToggleSetting(HideHomeNPMusicInfo)</onclick>
-						<selected>Skin.HasSetting(HideHomeNPMusicInfo)</selected>
-					</control>
 
-				  <!-- Hide Submenus -->
-					<control type="radiobutton" id="8206">
-						<description>Hide Movies SubMenu</description>
-	          <include>SettingsRadioButton</include>
-						<label>31120</label>
-						<onclick>Skin.ToggleSetting(HideMoviesSubMenu)</onclick>
-						<selected>Skin.HasSetting(HideMoviesSubMenu)</selected>
-					</control>
-					<control type="radiobutton" id="8207">
-						<description>Hide TV Shows SubMenu</description>
-	          <include>SettingsRadioButton</include>
-						<label>31121</label>
-						<onclick>Skin.ToggleSetting(HideTVShowsSubMenu)</onclick>
-						<selected>Skin.HasSetting(HideTVShowsSubMenu)</selected>
-					</control>
-					<control type="radiobutton" id="8208">
-						<description>Hide Music SubMenu</description>
-	          <include>SettingsRadioButton</include>
-						<label>31122</label>
-						<onclick>Skin.ToggleSetting(HideMusicSubMenu)</onclick>
-						<selected>Skin.HasSetting(HideMusicSubMenu)</selected>
-					</control>
-					<control type="radiobutton" id="8209">
-						<description>Hide Settings SubMenu</description>
-	          <include>SettingsRadioButton</include>
-						<label>31123</label>
-						<onclick>Skin.ToggleSetting(HideSettingsSubMenu)</onclick>
-						<selected>Skin.HasSetting(HideSettingsSubMenu)</selected>
-					</control>
-				</control>
-				
-				<!-- ================= -->
-				<!-- == Home Menu == -->
-				<!-- ================= -->
-				<control type="grouplist" id="8700">
-					<include>CloseAnimation</include>
-					<visible>Container(8800).Hasfocus(7)</visible>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<pagecontrol>60</pagecontrol>
-					<onleft>8800</onleft>
-					<onright>9000</onright>
-					<onup>8700</onup>
-					<ondown>8700</ondown>
-				  <!-- Hide Home Menu Buttons -->
-					<control type="button" id="8250">
-						<description>Home Categories Buttonn</description>
-						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
-	          <include>SettingsButton</include>
-						<label>31100</label>
-						<onclick>Skin.ToggleSetting(HiddeHomeCategories)</onclick>
-						<selected>Skin.HasSetting(HiddeHomeCategories)</selected>
-					</control>
-					<control type="radiobutton" id="8251">
-						<description>Hide Movies Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31106]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuMoviesButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuMoviesButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8252">
-						<description>Hide TV Shows Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31107]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuTVShowsButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuTVShowsButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8253">
-						<description>Hide Music Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31108]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuMusicButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuMusicButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8254">
-						<description>Hide Pictures Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31109]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuPicturesButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuPicturesButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8255">
-						<description>Hide Programs Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31110]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuProgramsButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuProgramsButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8256">
-						<description>Hide Channels Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31111]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuChannelsButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuChannelsButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8257">
-						<description>Hide Weather Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31112]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuWeatherButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuWeatherButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8258">
-						<description>Hide Trailers Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31105]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuTrailersButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuTrailersButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8259">
-						<description>Hide Favorites Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31166]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuFavoritesButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuFavoritesButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8260">
-						<description>Hide Settings Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31113]</label>
-						<onclick>Skin.ToggleSetting(HideHomeMenuSettingsButton)</onclick>
-						<selected>Skin.HasSetting(HideHomeMenuSettingsButton)</selected>
-						<visible>!Skin.HasSetting(HiddeHomeCategories)</visible>
-					</control>
-
-				  <!-- Show Home Menu Buttons -->
-					<control type="button" id="8261">
-						<description>Home Categories Buttonn</description>
-						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
-	          <include>SettingsButton</include>
-						<label>31099</label>
-						<onclick>Skin.ToggleSetting(ShowHomeCategories)</onclick>
-						<selected>Skin.HasSetting(ShowHomeCategories)</selected>
-					</control>
-					<control type="radiobutton" id="8262">
-						<description>Show Videos Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31114]</label>
-						<onclick>Skin.ToggleSetting(ShowHomeMenuVideosButton)</onclick>
-						<selected>Skin.HasSetting(ShowHomeMenuVideosButton)</selected>
-						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8263">
-						<description>Show MusicVideos Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31116]</label>
-						<onclick>Skin.ToggleSetting(ShowHomeMenuMusicVideosButton)</onclick>
-						<selected>Skin.HasSetting(ShowHomeMenuMusicVideosButton)</selected>
-						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8264">
-						<description>Show Addons Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31165]</label>
-						<onclick>Skin.ToggleSetting(ShowHomeMenuAddonsButton)</onclick>
-						<selected>Skin.HasSetting(ShowHomeMenuAddonsButton)</selected>
-						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
-					</control>
-					<control type="radiobutton" id="8265">
-						<description>Show Search Button</description>
-	          <include>SettingsRadioButton</include>
-						<label> • $LOCALIZE[31104]</label>
-						<onclick>Skin.ToggleSetting(ShowHomeMenuSearchButton)</onclick>
-						<selected>Skin.HasSetting(ShowHomeMenuSearchButton)</selected>
-						<visible>!Skin.HasSetting(ShowHomeCategories)</visible>
-					</control>
-					
-
-
-				  <!-- Custom Home Menu Buttons -->
-					<control type="button" id="8280">
-						<description>Custom Home Buttons</description>
-						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
-						<texturenofocus border="100,2,100,2">windows/settings/settings_bt_nf.png</texturenofocus>
-	          <include>SettingsButton</include>
-						<label>31119</label>
-						<onclick>Skin.ToggleSetting(CustomHomeCategories)</onclick>
-						<selected>Skin.HasSetting(CustomHomeCategories)</selected>
-					</control>
-					<control type="button" id="8281">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 1</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite1.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite1)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8282">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 2</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite2.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite2)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8283">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 3</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite3.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite3)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8284">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 4</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite4.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite4)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8285">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 5</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite5.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite5)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8286">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 6</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite6.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite6)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8287">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 7</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite7.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite7)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8288">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 8</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite8.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite8)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8289">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 9</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite9.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite9)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
-					<control type="button" id="8290">
-            <include>SettingsButton</include>
-						<label> • $LOCALIZE[31118] 10</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomFavourite10.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomFavourite10)</onclick>
-						<visible>!Skin.HasSetting(CustomHomeCategories)</visible>
-					</control>
 				</control>
 
 
@@ -694,44 +834,44 @@
             <include>SettingsButton</include>
 						<label> • $LOCALIZE[1045]</label>
             <onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="radiobutton" id="8407">
 	          <include>SettingsRadioButton</include>
 						<label> • $LOCALIZE[31137]</label>
 						<onclick>Skin.ToggleSetting(EnableNextAiredNotifications)</onclick>
 						<selected>Skin.HasSetting(EnableNextAiredNotifications)</selected>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="button" id="8408">
 	          <include>SettingsButton</include>
 						<label> • $LOCALIZE[31146]</label>
             <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="button" id="8409">
 	          <include>SettingsButton</include>
 						<label> • $LOCALIZE[31147]</label>
             <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearart)</onclick>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="button" id="8410">
 	          <include>SettingsButton</include>
 						<label> • $LOCALIZE[31148]</label>
             <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape)</onclick>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="button" id="8411">
 	          <include>SettingsButton</include>
 						<label> • $LOCALIZE[31149]</label>
             <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,banner)</onclick>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="button" id="8412">
 	          <include>SettingsButton</include>
 						<label> • $LOCALIZE[31150]</label>
             <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,poster)</onclick>
-            <visible>Skin.HasSetting(NextAiredEnabled)</visible>
+            <visible>Skin.HasSetting(NextAiredEnabled) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="radiobutton" id="8413">
 	          <include>SettingsRadioButton</include>
@@ -744,13 +884,13 @@
             <include>SettingsButton</include>
 						<label> • $LOCALIZE[1045]</label>
             <onclick>Addon.OpenSettings(script.tvtunes)</onclick>
-            <visible>Skin.HasSetting(TVTunesEnabled)</visible>
+            <visible>Skin.HasSetting(TVTunesEnabled) + System.HasAddon(script.tvtunes)</visible>
 					</control>
 					<control type="button" id="8415">
             <include>SettingsButton</include>
 						<label> • $LOCALIZE[31145]</label>
             <onclick>XBMC.RunScript(script.tvtunes)</onclick>
-            <visible>Skin.HasSetting(TVTunesEnabled)</visible>
+            <visible>Skin.HasSetting(TVTunesEnabled) + System.HasAddon(script.tvtunes)</visible>
 					</control>
 				</control>
 
@@ -768,6 +908,7 @@
 					<onright>9000</onright>
 					<onup>8500</onup>
 					<ondown>8500</ondown>
+				  <!-- Hide Views -->
 					<control type="radiobutton" id="8501">
 	          <include>SettingsRadioButton</include>
 						<label>$LOCALIZE[31156] ($LOCALIZE[3])</label>
@@ -824,10 +965,12 @@
 					</control>
 					<control type="radiobutton" id="8514">
 	          <include>SettingsRadioButton</include>
-						<label>$LOCALIZE[31167] ($LOCALIZE[3])</label>
+						<label>$LOCALIZE[31155] ($LOCALIZE[3])</label>
 						<onclick>Skin.ToggleSetting(HideVideoWallFanartViewVideos)</onclick>
 						<selected>Skin.HasSetting(HideVideoWallFanartViewVideos)</selected>
 					</control>
+					
+				  <!-- Show Views -->
 					<control type="radiobutton" id="8510">
 	          <include>SettingsRadioButton</include>
 						<label>$LOCALIZE[31158] ($LOCALIZE[3])</label>
@@ -868,13 +1011,14 @@
 					<onright>9000</onright>
 					<onup>8600</onup>
 					<ondown>8600</ondown>
+					<!-- Disable QuickNav -->
 					<control type="radiobutton" id="8601">
 	          <include>SettingsRadioButton</include>
 						<label>31375</label>
 						<onclick>Skin.ToggleSetting(DisableQuickNav)</onclick>
 						<selected>Skin.HasSetting(DisableQuickNav)</selected>
 					</control>
-					<!-- Hide Buttons -->
+					<!-- Hide QuickNav Buttons -->
 					<control type="button" id="8610">
 						<description>Hide Buttons</description>
 						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
@@ -888,76 +1032,85 @@
 					<control type="radiobutton" id="8611">
 						<description>Hide Movies Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31383]</label>
-						<onclick>Skin.ToggleSetting(HideMoviesButton)</onclick>
-						<selected>Skin.HasSetting(HideMoviesButton)</selected>
+						<label> • $LOCALIZE[31106]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavMoviesButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavMoviesButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8612">
 						<description>Hide TVShows Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31384]</label>
-						<onclick>Skin.ToggleSetting(HideTVShowsButton)</onclick>
-						<selected>Skin.HasSetting(HideTVShowsButton)</selected>
+						<label> • $LOCALIZE[31107]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavTVShowsButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavTVShowsButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8613">
 						<description>Hide Music Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31385]</label>
-						<onclick>Skin.ToggleSetting(HideMusicButton)</onclick>
-						<selected>Skin.HasSetting(HideMusicButton)</selected>
+						<label> • $LOCALIZE[31108]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavMusicButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavMusicButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8614">
 						<description>Hide Pictures Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31386]</label>
-						<onclick>Skin.ToggleSetting(HidePicturesButton)</onclick>
-						<selected>Skin.HasSetting(HidePicturesButton)</selected>
+						<label> • $LOCALIZE[31109]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavPicturesButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavPicturesButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8615">
 						<description>Hide Add-ons Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31387]</label>
-						<onclick>Skin.ToggleSetting(HideAddonsButton)</onclick>
-						<selected>Skin.HasSetting(HideAddonsButton)</selected>
+						<label> • $LOCALIZE[31387]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavAddonsButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavAddonsButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8616">
 						<description>Hide NewMovies Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31388]</label>
-						<onclick>Skin.ToggleSetting(HideNewMoviesButton)</onclick>
-						<selected>Skin.HasSetting(HideNewMoviesButton)</selected>
+						<label> • $LOCALIZE[31388]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavNewMoviesButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavNewMoviesButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8617">
 						<description>Hide NewTVShows Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31389]</label>
-						<onclick>Skin.ToggleSetting(HideNewTVShowsButton)</onclick>
-						<selected>Skin.HasSetting(HideNewTVShowsButton)</selected>
+						<label> • $LOCALIZE[31389]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavNewTVShowsButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavNewTVShowsButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8618">
 						<description>Hide NewMusic Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31390]</label>
-						<onclick>Skin.ToggleSetting(HideNewMusicButton)</onclick>
-						<selected>Skin.HasSetting(HideNewMusicButton)</selected>
+						<label> • $LOCALIZE[31390]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavNewMusicButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavNewMusicButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8619">
 						<description>Hide Settings Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31391]</label>
-						<onclick>Skin.ToggleSetting(HideSettingsButton)</onclick>
-						<selected>Skin.HasSetting(HideSettingsButton)</selected>
+						<label> • $LOCALIZE[31113]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavSettingsButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavSettingsButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
 					</control>
-					<!-- Show Buttons -->
+					<control type="radiobutton" id="8620">
+						<description>Hide Favourites Button</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31166]</label>
+						<onclick>Skin.ToggleSetting(HideQuickNavFavouritesButton)</onclick>
+						<selected>Skin.HasSetting(HideQuickNavFavouritesButton)</selected>
+						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(HideQuickNavButtons)</visible>
+					</control>
+					
+					<!-- Show QuickNav Buttons -->
 					<control type="button" id="8630">
 						<description>Show Buttons</description>
 						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
@@ -971,68 +1124,69 @@
 					<control type="radiobutton" id="8631">
 						<description>Show Videos Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31392]</label>
-						<onclick>Skin.ToggleSetting(ShowVideosButton)</onclick>
-						<selected>Skin.HasSetting(ShowVideosButton)</selected>
+						<label> • $LOCALIZE[31392]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavVideosButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavVideosButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8632">
 						<description>Show UpdateVideoLibrary Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31376]</label>
-						<onclick>Skin.ToggleSetting(ShowUpdateVideoLibraryButton)</onclick>
-						<selected>Skin.HasSetting(ShowUpdateVideoLibraryButton)</selected>
+						<label> • $LOCALIZE[31376]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavUpdateVideoLibraryButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavUpdateVideoLibraryButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8633">
 						<description>Show UpdateMusicLibrary Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31377]</label>
-						<onclick>Skin.ToggleSetting(ShowUpdateMusicLibraryButton)</onclick>
-						<selected>Skin.HasSetting(ShowUpdateMusicLibraryButton)</selected>
+						<label> • $LOCALIZE[31377]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavUpdateMusicLibraryButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavUpdateMusicLibraryButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8634">
 						<description>Show CleanVideoLibrary Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31378]</label>
-						<onclick>Skin.ToggleSetting(ShowCleanVideoLibraryButton)</onclick>
-						<selected>Skin.HasSetting(ShowCleanVideoLibraryButton)</selected>
+						<label> • $LOCALIZE[31378]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavCleanVideoLibraryButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavCleanVideoLibraryButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8635">
 						<description>Show CleanMusicLibrary Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31379]</label>
-						<onclick>Skin.ToggleSetting(ShowCleanMusicLibraryButton)</onclick>
-						<selected>Skin.HasSetting(ShowCleanMusicLibraryButton)</selected>
+						<label> • $LOCALIZE[31379]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavCleanMusicLibraryButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavCleanMusicLibraryButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8636">
 						<description>Show PartyMode Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31380]</label>
-						<onclick>Skin.ToggleSetting(ShowPartyModeButton)</onclick>
-						<selected>Skin.HasSetting(ShowPartyModeButton)</selected>
+						<label> • $LOCALIZE[31380]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavPartyModeButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavPartyModeButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8637">
 						<description>Show FileManager Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31382]</label>
-						<onclick>Skin.ToggleSetting(ShowFileManagerButton)</onclick>
-						<selected>Skin.HasSetting(ShowFileManagerButton)</selected>
+						<label> • $LOCALIZE[31382]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavFileManagerButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavFileManagerButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
 					<control type="radiobutton" id="8638">
 						<description>Show Shutdown Button</description>
 	          <include>SettingsRadioButton</include>
-						<label>   • $LOCALIZE[31381]</label>
-						<onclick>Skin.ToggleSetting(ShowShutdownButton)</onclick>
-						<selected>Skin.HasSetting(ShowShutdownButton)</selected>
+						<label> • $LOCALIZE[31381]</label>
+						<onclick>Skin.ToggleSetting(ShowQuickNavShutdownButton)</onclick>
+						<selected>Skin.HasSetting(ShowQuickNavShutdownButton)</selected>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(ShowQuickNavButtons)</visible>
 					</control>
-					<!-- Custom Buttons -->
+					
+					<!-- Custom QuickNav Buttons -->
 					<control type="button" id="8660">
 						<description>Custom Buttons</description>
 						<texturefocus border="100,2,100,2">windows/settings/settings_bt_fo.png</texturefocus>
@@ -1046,81 +1200,81 @@
 					<control type="button" id="8661">
 						<description>Custom QuickNav Button 1</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 1</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn1.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn1)</onclick>
+						<label> • $LOCALIZE[31190] 1</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton1.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton1)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8662">
 						<description>Custom QuickNav Button 2</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 2</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn2.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn2)</onclick>
+						<label> • $LOCALIZE[31190] 2</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton2.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton2)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8663">
 						<description>Custom QuickNav Button 3</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 3</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn3.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn3)</onclick>
+						<label> • $LOCALIZE[31190] 3</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton3.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton3)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8664">
 						<description>Custom QuickNav Button 4</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 4</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn4.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn4)</onclick>
+						<label> • $LOCALIZE[31190] 4</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton4.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton4)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8665">
 						<description>Custom QuickNav Button 5</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 5</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn5.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn5)</onclick>
+						<label> • $LOCALIZE[31190] 5</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton5.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton5)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8666">
 						<description>Custom QuickNav Button 6</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 6</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn6.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn6)</onclick>
+						<label> • $LOCALIZE[31190] 6</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton6.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton6)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8667">
 						<description>Custom QuickNav Button 7</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 7</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn7.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn7)</onclick>
+						<label> • $LOCALIZE[31190] 7</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton7.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton7)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8668">
 						<description>Custom QuickNav Button 8</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 8</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn8.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn8)</onclick>
+						<label> • $LOCALIZE[31190] 8</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton8.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton8)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8669">
 						<description>Custom QuickNav Button 9</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 9</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn9.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn9)</onclick>
+						<label> • $LOCALIZE[31190] 9</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton9.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton9)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 					<control type="button" id="8670">
 						<description>Custom QuickNav Button 10</description>
             <include>SettingsButton</include>
-						<label>   • $LOCALIZE[31396] 10</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavBtn10.Label)][/COLOR]</label2>
-						<onclick>RunScript(script.favourites,property=CustomQuickNavBtn10)</onclick>
+						<label> • $LOCALIZE[31190] 10</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton10.Label)][/COLOR]</label2>
+						<onclick>RunScript(script.favourites,property=CustomQuickNavButton10)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav) + !Skin.HasSetting(CustomQuickNavButtons)</visible>
 					</control>
 				</control>

@@ -59,8 +59,8 @@
 						<control type="label">
 					    <description>Second Line</description>
 							<posx>0</posx>
-							<posy>20</posy>
-							<height>36</height>
+							<posy>0</posy>
+							<height>78</height>
 							<width>640</width>
 							<font>NotificationsFont</font>
 							<textcolor>99white</textcolor>
@@ -129,8 +129,8 @@
 						<control type="label">
 					    <description>Second Line</description>
 							<posx>0</posx>
-							<posy>20</posy>
-							<height>36</height>
+							<posy>0</posy>
+							<height>78</height>
 							<width>640</width>
 							<font>NotificationsFont</font>
 							<textcolor>77white</textcolor>
@@ -205,8 +205,8 @@
 						<control type="label">
 					    <description>Second Line</description>
 							<posx>0</posx>
-							<posy>20</posy>
-							<height>36</height>
+							<posy>0</posy>
+							<height>78</height>
 							<width>640</width>
 							<font>NotificationsFont</font>
 							<textcolor>77white</textcolor>
@@ -263,8 +263,8 @@
 						<control type="label">
 					    <description>Second Line</description>
 							<posx>0</posx>
-							<posy>20</posy>
-							<height>36</height>
+							<posy>0</posy>
+							<height>78</height>
 							<width>640</width>
 							<font>NotificationsFont</font>
 							<textcolor>77white</textcolor>
@@ -355,8 +355,8 @@
 						<control type="label">
 					    <description>Second Line</description>
 							<posx>0</posx>
-							<posy>20</posy>
-							<height>36</height>
+							<posy>0</posy>
+							<height>78</height>
 							<width>640</width>
 							<font>NotificationsFont</font>
 							<textcolor>77white</textcolor>

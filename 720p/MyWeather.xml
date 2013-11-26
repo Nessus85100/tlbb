@@ -142,8 +142,16 @@
 		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
 		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 		  <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+	    <control type="image">
+	    	<posy>9</posy>
+	    	<width>46</width>
+	    	<height>35</height>
+			  <colordiffuse>bbwhite</colordiffuse>
+		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+	    	<texture>icons/tlbb.png</texture>
+	    </control>
 			<control type="grouplist">
-				<posx>0</posx>
+				<posx>55</posx>
 				<posy>0</posy>
 				<height>70</height>
 				<width>1000</width>
@@ -256,7 +264,7 @@
 	  </control>
 		<control type="label">
 			<description>fetching label</description>
-			<posx>45</posx>
+			<posx>30</posx>
 			<posy>325</posy>
 			<width>1200</width>
 			<height>120</height>

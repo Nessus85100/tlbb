@@ -1,3 +1,22 @@
+[B][COLOR=FF56ADDA]v2.3.0 - Release Date 26/11/2013[/COLOR][/B]
+• Added ReccentlyAdded Movies,TVShows and Music items in QuickNav.
+• Addded TLBB icon on top left ContentInfo in all sections except Home screen.
+• Re-Organized Skin Settings (WIP needs more work).
+• Various other small fixes and code optimisations.
+
+[B][COLOR=FF56ADDA]v2.2.0 - Release Date 16/11/2013[/COLOR][/B]
+• New layout for Favourites.
+• Added a "Favourites" button to QuickNav to access favourites in whole skin.
+• Added Add-ons status in Thumbnails view.
+• Fixed bug for OSD pause visible condition when viewing online content.
+• Fixed bug for NextAired addon not updated automatically in the background.
+
+[B][COLOR=FF56ADDA]v2.1.0 - Release Date 9/11/2013[/COLOR][/B]
+• New widgets in Home screen for ReccentlyAdded Movies,TVShows and Music.
+• New widgets in Home screen for Settings, Favourites and Weather with new weather icons.
+• New widgets in Home screen for Custom Video Add-ons.
+• Added new layout for selecting and setting artwork in VideoInfo dialog.
+
 [B][COLOR=FF56ADDA]v2.0.0 - Release Date 14/10/2013[/COLOR][/B]
 • Recoded and tweaked all animations.
 • New textures for all windows and dialogs.
@@ -5,7 +24,6 @@
 • Added some missing default icons.
 • Removed more unused textures and code cleanup.
 • Severall other small fixes and tweeks.
-
 
 [B][COLOR=FF56ADDA]v1.5.5 - Release Date 13/9/2013[/COLOR][/B]
 • Fixed bug when Thumbnails view is hidden from skin settings.

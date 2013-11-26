@@ -137,7 +137,7 @@
 		    <onclick>XBMC.ReloadSkin()</onclick>
 				<label>Reload Skin</label>
 			</control>
-			<control type="button" id="15">
+			<control type="button" id="17">
 				<description>Update firmware button</description>
 			  <include>TopLeftMenusButton</include>
 		    <onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>

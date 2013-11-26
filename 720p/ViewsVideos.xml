@@ -318,8 +318,8 @@
 				<fadetime>100</fadetime>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="20">views/list/panel2.png</bordertexture>
-				<bordersize>20</bordersize>
+				<bordertexture border="17">views/list/panel2.png</bordertexture>
+				<bordersize>17</bordersize>
 			</control>
 		</control>
 	
@@ -603,7 +603,7 @@
 				    <colordiffuse>55ffffff</colordiffuse>
 				    <aspectratio align="center" aligny="center">sretch</aspectratio>
 						<texture>flags/empty.png</texture>
-						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(unWatchedEpisodes))</visible>
 					</control>
 					<control type="label">
 						<posx>557</posx>
@@ -742,7 +742,7 @@
 					    <colordiffuse>ffcccccc</colordiffuse>
 				      <aspectratio align="center" aligny="center">sretch</aspectratio>
 							<texture>flags/empty.png</texture>
-							<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(unWatchedEpisodes))</visible>
 						</control>
 						<control type="label">
 							<posx>557</posx>
@@ -2543,8 +2543,8 @@
 	    <include>DialogZoomInOutAnimation</include>
 			<control type="panel" id="560">
 				<posx>25</posx>
-				<posy>100</posy>
-				<height>710</height>
+				<posy>110</posy>
+				<height>520</height>
         <include condition="Skin.HasSetting(ThumbnailShowInfo)">VideoThumbnailsInfoWidth</include>
         <include condition="!Skin.HasSetting(ThumbnailShowInfo)">VideoThumbnailsNoInfoWidth</include>
 				<onleft>560</onleft>
@@ -2557,10 +2557,10 @@
         <scrolltime tween="Quadratic" easing="out">200</scrolltime>
 				<preloaditems>2</preloaditems>
 			  <visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
-				<itemlayout height="240" width="174">
+				<itemlayout height="235" width="174">
 					<control type="image">
 						<width>186</width>
-						<height>255</height>
+						<height>250</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
@@ -2568,7 +2568,7 @@
 						<posx>23</posx>
 						<posy>23</posy>
 						<width>140</width>
-						<height>209</height>
+						<height>204</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterThumbs]</texture>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
@@ -2578,17 +2578,17 @@
 						<posx>23</posx>
 						<posy>23</posy>
 						<width>140</width>
-						<height>209</height>
+						<height>204</height>
 						<texture background="true">overlays/unwatched/thumbs/UnWatched_Poster.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="240" width="174">
+				<focusedlayout height="235" width="174">
 					<control type="image">
 						<width>186</width>
-						<height>255</height>
+						<height>250</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
@@ -2596,7 +2596,7 @@
 						<posx>23</posx>
 						<posy>23</posy>
 						<width>140</width>
-						<height>209</height>
+						<height>204</height>
 						<aspectratio align="center" aligny="top">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterThumbs]</texture>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
@@ -2606,7 +2606,7 @@
 						<posx>23</posx>
 						<posy>23</posy>
 						<width>140</width>
-						<height>209</height>
+						<height>204</height>
 						<texture background="true">overlays/unwatched/thumbs/UnWatched_Poster.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
@@ -2614,7 +2614,7 @@
 					</control>
 					<control type="image">
 						<width>186</width>
-						<height>255</height>
+						<height>250</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="30">views/thumbnails/focus.png</texture>
             <animation type="Focus">
@@ -2631,7 +2631,7 @@
 
 			<control type="group">
 				<posx>25</posx>
-			  <posy>585</posy>
+			  <posy>590</posy>
 			  <visible>Control.IsVisible(560)</visible>
 			  <visible>!Skin.HasSetting(ThumbnailShowInfo)</visible>
 				<control type="label">
@@ -2701,12 +2701,12 @@
 
 			<control type="group">
 				<posx>892</posx>
-				<posy>100</posy>
+				<posy>110</posy>
 			  <visible>Control.IsVisible(560)</visible>
 			  <visible>Skin.HasSetting(ThumbnailShowInfo)</visible>
 				<control type="image">
 					<width>365</width>
-					<height>495</height>
+					<height>485</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<texture border="30">views/thumbnails/thumb_panel.png</texture>
 				</control>
@@ -2744,7 +2744,7 @@
 				<!-- Small Down Info -->
 			  <control type="group">
 					<posx>33</posx>
-					<posy>440</posy>
+					<posy>432</posy>
 					<visible>!stringcompare(ListItem.Label,..)</visible>
 					<control type="image">
 						<posx>0</posx>
@@ -2796,7 +2796,7 @@
 				<control type="textbox">
 					<description>Plot</description>
 					<posx>33</posx>
-					<posy>92</posy>
+					<posy>90</posy>
 					<width>298</width>
 					<height>330</height>
 					<font>FontSize_20</font>
@@ -2810,7 +2810,7 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<posx>40</posx>
-				<posy>620</posy>
+				<posy>625</posy>
 				<width>1196</width>
 				<height>11</height>
 				<texturesliderbackground>-</texturesliderbackground>

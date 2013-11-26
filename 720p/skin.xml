@@ -62,10 +62,11 @@
 					<posy>162</posy>
 	        <width>300</width>
 	        <height>440</height>
-					<aspectratio align="right" aligny="top">keep</aspectratio>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
 				  <texture background="true">$INFO[Control.GetLabel(105)]</texture>
-					<bordertexture border="20">views/list/panel2.png</bordertexture>
-					<bordersize>20</bordersize>
+					<bordertexture border="17">views/list/panel2.png</bordertexture>
+					<bordersize>17</bordersize>
 				</control>
 		    <control type="image" id="126">
 		      <description>rating stars image</description>

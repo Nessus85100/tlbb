@@ -33,9 +33,9 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<posx>737</posx>
-				<posy>178</posy>
-				<width>484</width>
+				<posx>733</posx>
+				<posy>174</posy>
+				<width>492</width>
 				<height>280</height>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture background="true" border="20">empty_icon.png</texture>
@@ -43,13 +43,14 @@
 				<bordersize>6</bordersize>
 			</control>
 			<control type="image">
-				<posx>743</posx>
-				<posy>184</posy>
-				<width>472</width>
-				<height>268</height>
+				<posx>733</posx>
+				<posy>174</posy>
+				<width>492</width>
+				<height>280</height>
 				<fadetime>100</fadetime>
 				<aspectratio align="center" aligny="top">scale</aspectratio>
 		    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$INFO[ListItem.FileNameAndPath]</texture>
+				<bordersize>6</bordersize>
 			</control>
 			<control type="label.">
 				<posx>725</posx>
@@ -64,7 +65,7 @@
 			</control>
 			<control type="grouplist">
 				<posx>725</posx>
-				<posy>539</posy>
+				<posy>540</posy>
 				<width>550</width>
         <height>400</height>
         <itemgap>10</itemgap>
@@ -113,11 +114,11 @@
 				<posy>162</posy>
 				<width>500</width>
 				<height>276</height>
+				<fadetime>100</fadetime>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<fadetime>150</fadetime>
 				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="20">views/list/panel2.png</bordertexture>
-				<bordersize>20</bordersize>
+				<bordertexture border="17">views/list/panel2.png</bordertexture>
+				<bordersize>17</bordersize>
 			</control>
 		</control>
 
@@ -320,11 +321,11 @@
 				<posy>162</posy>
 				<width>500</width>
 				<height>276</height>
+				<fadetime>100</fadetime>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<fadetime>150</fadetime>
 				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="20">views/list/panel2.png</bordertexture>
-				<bordersize>20</bordersize>
+				<bordertexture border="17">views/list/panel2.png</bordertexture>
+				<bordersize>17</bordersize>
 			</control>
 		</control>
 

@@ -210,11 +210,11 @@
 				<posy>162</posy>
 				<width>500</width>
 				<height>276</height>
+				<fadetime>100</fadetime>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<fadetime>150</fadetime>
 				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="20">views/list/panel2.png</bordertexture>
-				<bordersize>20</bordersize>
+				<bordertexture border="17">views/list/panel2.png</bordertexture>
+				<bordersize>17</bordersize>
 			</control>
 		</control>
 
@@ -305,9 +305,9 @@
 		      <control type="group">
 						<control type="image">
 							<posx>7</posx>
-							<posy>3</posy>
+							<posy>5</posy>
 			        <width>586</width>
-							<height>40</height>	
+							<height>36</height>	
 					    <aspectratio align="center" aligny="center">strecth</aspectratio>
 				      <colordiffuse>22ffffff</colordiffuse>
 				      <texture background="true">views/list/list_fo.png</texture>
@@ -355,7 +355,7 @@
 							<posx>585</posx>
 							<posy>0</posy>
 							<width>300</width>
-							<height>45</height>
+							<height>44</height>
 							<font>FontSize_22</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>77000000</shadowcolor>
@@ -369,7 +369,7 @@
 							<posx>585</posx>
 							<posy>0</posy>
 							<width>300</width>
-							<height>45</height>
+							<height>44</height>
 							<font>FontSize_22</font>
 							<textcolor>red</textcolor>
 							<shadowcolor>77000000</shadowcolor>
@@ -470,6 +470,15 @@
 						<bordersize>6</bordersize>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
+					<control type="image">
+						<posx>25</posx>
+						<posy>30</posy>
+						<width>200</width>
+						<height>190</height>
+					  <texture background="true">$VAR[AddonStatus]</texture>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<bordersize>6</bordersize>
+					</control>
 					<control type="label">
 						<posx>128</posx>
 						<posy>220</posy>
@@ -545,6 +554,15 @@
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					</control>
+					<control type="image">
+						<posx>25</posx>
+						<posy>30</posy>
+						<width>200</width>
+						<height>190</height>
+					  <texture background="true">$VAR[AddonStatus]</texture>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<bordersize>6</bordersize>
 					</control>
 					<control type="label">
 						<posx>128</posx>

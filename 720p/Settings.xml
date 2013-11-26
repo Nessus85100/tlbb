@@ -11,18 +11,15 @@
 		    <include>VisibleHiddenSlideAnimation</include>
 		    <include>DialogZoomInOutAnimation</include>
 				<control type="panel" id="7000">
-					<posx>34</posx>
+					<posx>27</posx>
 					<posy>150</posy>
-					<width>1210</width>
-					<height>500</height>
+					<width>1220</width>
+					<height>420</height>
 					<onleft>7000</onleft>
 					<onright>7000</onright>
 					<ondown>7000</ondown>
 					<onup>7000</onup>
-				  <scrolltime>200</scrolltime>
-					<viewtype label="536">icon</viewtype>
-				  <preloaditems>1</preloaditems>
-					<itemlayout height="200" width="200">
+					<itemlayout height="202" width="202">
 						<control type="image">
 							<width>216</width>
 							<height>216</height>
@@ -63,7 +60,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="200" width="200">
+					<focusedlayout height="202" width="202">
 						<control type="image">
 							<width>216</width>
 							<height>216</height>
@@ -99,7 +96,7 @@
 						  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						  <bordersize>6</bordersize>
 						</control>
-						<control type="label">
+						<control type="label.">
 							<posx>108</posx>
 							<posy>160</posy>
 							<width>162</width>
@@ -125,7 +122,6 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(7000)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -136,7 +132,6 @@
 	            <animation type="Focus">
                 <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
 	            </animation>
-							<visible>Control.HasFocus(7000)</visible>
 						</control>
 					</focusedlayout>
 					<content>

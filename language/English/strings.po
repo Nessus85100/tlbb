@@ -59,7 +59,7 @@ msgid "Context Menu"
 msgstr ""
 
 msgctxt "#31010"
-msgid "-"
+msgid "Home Window"
 msgstr ""
 
 msgctxt "#31011"
@@ -223,31 +223,23 @@ msgctxt "#31088"
 msgid "List Wall"
 msgstr ""
 
-#empty strings from id 31089 to 31097
+#empty strings from id 31089 to 31099
 #Skin Settings labels
 
-msgctxt "#31098"
+msgctxt "#31100"
 msgid "Home Menu"
 msgstr ""
 
-msgctxt "#31099"
-msgid "Show Home Menu Buttons"
-msgstr ""
-
-msgctxt "#31100"
-msgid "Hide Home Menu Buttons"
-msgstr ""
-
 msgctxt "#31101"
-msgid "Show Weather Info"
+msgid "Show Home Weather Info"
 msgstr ""
 
 msgctxt "#31102"
-msgid "Hide Now Playing Video Info"
+msgid "Hide Home NowPlaying Video Info"
 msgstr ""
 
 msgctxt "#31103"
-msgid "Hide Now Playing Music Info"
+msgid "Hide Home NowPlaying Music Info"
 msgstr ""
 
 msgctxt "#31104"
@@ -255,7 +247,7 @@ msgid "Show Search Button"
 msgstr ""
 
 msgctxt "#31105"
-msgid "Hide Trailers Button"
+msgid "Show Trailers Button"
 msgstr ""
 
 msgctxt "#31106"
@@ -303,15 +295,15 @@ msgid "Show Music Videos Button"
 msgstr ""
 
 msgctxt "#31117"
-msgid "Music Button opens..."
+msgid "Home Menu Music Button opens..."
 msgstr ""
 
 msgctxt "#31118"
-msgid "Custom Button"
+msgid "Home Menu Add-ons Button opens..."
 msgstr ""
 
 msgctxt "#31119"
-msgid "Custom Home Menu Buttons"
+msgid "Hide Home Menu SubMenus"
 msgstr ""
 
 msgctxt "#31120"
@@ -455,7 +447,7 @@ msgid "Choose Trailers Add-on"
 msgstr ""
 
 msgctxt "#31155"
-msgid "Add-ons Button opens..."
+msgid "Hide VideoWall Fanart View"
 msgstr ""
 
 msgctxt "#31156"
@@ -503,11 +495,58 @@ msgid "Hide Favourites Button"
 msgstr ""
 
 msgctxt "#31167"
-msgid "Hide VideoWall Fanart View"
+msgid "Show Home RecentlyAdded Movies Widget"
+msgstr ""
+
+msgctxt "#31168"
+msgid "Show Home RecentlyAdded TV Shows Widget"
+msgstr ""
+
+msgctxt "#31169"
+msgid "Show Home RecentlyAdded Albums Widget"
+msgstr ""
+
+msgctxt "#31170"
+msgid "Show Home Custom Video Add-ons Widget"
+msgstr ""
+
+msgctxt "#31171"
+msgid "Hide Home Menu Buttons"
+msgstr ""
+
+msgctxt "#31172"
+msgid "Show Home Menu Buttons"
+msgstr ""
+
+msgctxt "#31173"
+msgid "Custom Home Menu Buttons"
+msgstr ""
+
+msgctxt "#31174"
+msgid "Show Home Favourites Widget"
+msgstr ""
+
+msgctxt "#31175"
+msgid "Show Home Weather Widget"
+msgstr ""
+
+msgctxt "#31176"
+msgid "Show Home Settings Widget"
 msgstr ""
 
 
-#empty strings from id 31168 to 31199
+#empty strings from id 31177 to 31189
+
+msgctxt "#31190"
+msgid "Custom Button"
+msgstr ""
+
+msgctxt "#31191"
+msgid "Custom Add-on"
+msgstr ""
+
+#empty strings from id 31192 to 31199
+
 #Scripts labels
 
 msgctxt "#31200"
@@ -890,21 +929,7 @@ msgctxt "#31382"
 msgid "Show File Manager Button"
 msgstr ""
 
-msgctxt "#31383"
-msgid "Hide Movies Button"
-msgstr ""
-
-msgctxt "#31384"
-msgid "Hide TV Shows Button"
-msgstr ""
-
-msgctxt "#31385"
-msgid "Hide Music Button"
-msgstr ""
-
-msgctxt "#31386"
-msgid "Hide Pictures Button"
-msgstr ""
+#empty strings from id 31383 to 31386
 
 msgctxt "#31387"
 msgid "Hide Add-ons Button"
@@ -922,9 +947,7 @@ msgctxt "#31390"
 msgid "Hide New Music Button"
 msgstr ""
 
-msgctxt "#31391"
-msgid "Hide Settings Button"
-msgstr ""
+#empty string 31391
 
 msgctxt "#31392"
 msgid "Show Videos Button"
@@ -942,11 +965,8 @@ msgctxt "#31395"
 msgid "Custom QuickNav Buttons"
 msgstr ""
 
-msgctxt "#31396"
-msgid "Custom Button"
-msgstr ""
 
-#empty strings from id 31397 to 31400
+#empty strings from id 31396 to 31400
 #Settings Category Description & Header Labels
 
 msgctxt "#31401"

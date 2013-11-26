@@ -3,6 +3,9 @@
   <allowoverlay>yes</allowoverlay>
   <backgroundcolor>0</backgroundcolor>
   <onload condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetString(TrailersAddon_Path,plugin.video.hdtrailers_net)</onload>
+  <onload condition="!Skin.HasSetting(HideHomeMenuFavoritesButton)">RunScript(script.favourites)</onload>
+<!--	<onload>RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(CustomHomeFeedURL)],imagecaching=false,limit=10)</onload>
+	<onload condition="IsEmpty(Skin.String(CustomHomeFeedURL))">RunScript(script.rssclient,guiless,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=4677eed472058f27c407989f58fb12fd&_render=rss,imagecaching=false,limit=10)</onload> -->
 	<controls>
 		<!-- Background Includes -->
 		<include>BackgroundContent</include>
@@ -10,6 +13,14 @@
 		<include>BackgroundVignette</include>
 		<!-- Main Home Menu Wraplist -->
 		<include>HomeMenuWraplist</include>
+	  <!-- Home Widgets -->
+		<include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)">HomeWidgetRecentMovies</include>
+		<include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)">HomeWidgetRecentTVShows</include>
+		<include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)">HomeWidgetRecentAlbums</include>
+		<include condition="Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)">HomeWidgetCustomVideoAddons</include>
+		<include condition="Skin.HasSetting(ShowHomeWidgetFavourites)">HomeWidgetFavourites</include>
+		<include condition="Skin.HasSetting(ShowHomeWidgetSettings)">HomeWidgetSettings</include>
+		<include condition="Skin.HasSetting(ShowHomeWidgetWeather)">HomeWidgetWeather</include>
 	  <!-- Home Widgets -->
 		<include condition="!Skin.HasSetting(HideMoviesSubMenu)">HomeSubMenuMovies</include>
 		<include condition="!Skin.HasSetting(HideTVShowsSubMenu)">HomeSubMenuTVShows</include>
@@ -25,7 +36,7 @@
 		<include>CommonDialogsFadeOutBG</include>
 		<include>TLBBLogo</include>
 	  <!-- Home TopSection -->
-		<include>ContentSkinWidgetsInfo</include>
+		<include>SkinWidgetsContentInfo</include>
 		<include>TopHomeMenu</include>
 		<include>HomeWeatherAndClock</include>
 

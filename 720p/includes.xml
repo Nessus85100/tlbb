@@ -2,11 +2,12 @@
 	<include file="defaults.xml" />
 	<include file="IncludesAnimations.xml" />
 	<include file="IncludesBackgrounds.xml" />
-  <include file="Includes_Home.xml" />
+  <include file="IncludesHome.xml" />
   <include file="IncludesViews.xml" />
 	<include file="IncludesWalls.xml" />
 	<include file="IncludesFlags.xml" />
 	<include file="IncludesMenus.xml" />
+  <include file="IncludesContents.xml" />
 	<include file="IncludesNextAiredInfo.xml" />
 	<include file="IncludesNotifications.xml" />
 	<include file="IncludesSkinWidgets.xml" />
@@ -55,9 +56,10 @@
 			| Window.IsActive(filestackingdialog) 
 			| Window.IsActive(busydialog) 
 			| Window.IsActive(progressdialog) 
-			| Window.IsActive(okdialog) 
+			| Window.IsActive(okdialog)
 			| Window.IsActive(yesnodialog) 
-			| Window.IsActive(busy.xml)</visible>
+			| Window.IsActive(busy.xml)
+			| Window.IsActive(3001)</visible>
 		</control>
 	</include>
 
@@ -126,8 +128,16 @@
       <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
       <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
     </animation>
+    <control type="image">
+    	<posy>9</posy>
+    	<width>46</width>
+    	<height>35</height>
+		  <colordiffuse>bbwhite</colordiffuse>
+	    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+    	<texture>icons/tlbb.png</texture>
+    </control>
 		<control type="grouplist">
-			<posx>0</posx>
+			<posx>55</posx>
 			<posy>0</posy>
 			<height>70</height>
 			<width>1000</width>
@@ -539,7 +549,7 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>20</posy>
-							<width>740</width>
+							<width>640</width>
 							<height>35</height>
 							<label>$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Artist, - ] $INFO[MusicPlayer.Album, (,) ]</label>
 							<align>left</align>
@@ -601,7 +611,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>20</posy>
-						<width>740</width>
+						<width>640</width>
 						<height>35</height>
 				    <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,) ]</label>
 						<align>left</align>
@@ -631,7 +641,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>20</posy>
-						<width>740</width>
+						<width>640</width>
 						<height>35</height>
 						<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.TVShowTitle, (,] $INFO[VideoPlayer.Season,]$INFO[VideoPlayer.Episode,x, )]</label>
 						<align>left</align>
@@ -661,7 +671,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>20</posy>
-						<width>740</width>
+						<width>640</width>
 						<height>35</height>
 				    <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Genre, (,) ]</label>
 						<align>left</align>
@@ -697,7 +707,7 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>20</posy>
-							<width>740</width>
+							<width>640</width>
 							<height>35</height>
 							<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Title,: ]</label>
 							<align>left</align>
@@ -728,7 +738,7 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>20</posy>
-							<width>740</width>
+							<width>640</width>
 							<height>35</height>
 							<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.NextTitle,: ]</label>
 							<align>left</align>
@@ -744,24 +754,33 @@
 	</include>
 
 	<include name="CommonPageCount">
-		<control type="label">
-			<description>Page Count Label</description>
+		<control type="group">
 			<posx>45</posx>
-			<posy>70</posy>
-			<width>300</width>
-			<height>20</height>
-			<font>FontSize_18</font>
-			<textcolor>blue</textcolor>
-		  <shadowcolor>55000000</shadowcolor>
-			<scroll>false</scroll>
-			<align>left</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container.NumItems,, $LOCALIZE[31025]]$INFO[Control.GetLabel(3), • ]</label>
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 		  <include>ShutdownMenuAnimation</include>			
 			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(musicplaylisteditor) + !Window.IsActive(script-globalsearch-main.xml)</visible>
-
+	    <control type="image">
+	    	<posy>33</posy>
+	    	<width>46</width>
+	    	<height>35</height>
+			  <colordiffuse>bbwhite</colordiffuse>
+		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+	    	<texture>icons/tlbb.png</texture>
+	    </control>	
+			<control type="label">
+				<description>Page Count Label</description>
+				<posy>70</posy>
+				<width>300</width>
+				<height>20</height>
+				<font>FontSize_18</font>
+				<textcolor>blue</textcolor>
+			  <shadowcolor>55000000</shadowcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container.NumItems,, $LOCALIZE[31025]]$INFO[Control.GetLabel(3), • ]</label>
+			</control>
 		</control>
 	</include>	
 
@@ -884,7 +903,7 @@
 					<width>30</width>
 			    <align>right</align>
 					<aligny>center</aligny>
-				  <texture>$INFO[Window(Weather).Property(Current.FanartCode),weather/,.png]</texture>
+				  <texture>$INFO[Window(Weather).Property(Current.FanartCode),weather/icons/,.png]</texture>
 					<visible>Weather.IsFetched</visible>		
 				</control>
 				<control type="label" id="1">
@@ -1036,7 +1055,13 @@
 		<value condition="stringcompare(Skin.String(WeatherUnderground),3)">$LOCALIZE[31224]</value>
 		<value condition="stringcompare(Skin.String(WeatherUnderground),4)">$LOCALIZE[31226]</value>
 	</variable>
-
+    
+  <variable name="AddonStatus">
+    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons_status/status_broken.png</value>
+    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
+    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
+  </variable>
+    
 	<variable name="FlattenButtonOnOff">
 		<value condition="!SubString(Control.GetLabel(17),*)">$LOCALIZE[31012]</value>
 		<value condition="SubString(Control.GetLabel(17),*)">$LOCALIZE[31011]</value>
@@ -1165,7 +1190,7 @@
 		<value condition="Substring(ListItem.Path,videodb://1/7,left) + ListItem.IsFolder + !IsEmpty(ListItem.Title)">$LOCALIZE[342] $LOCALIZE[20141]</value>
 		<value condition="Container.Content(Movies) + IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Year]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(Movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</value>
-		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Year,, • ,]$INFO[ListItem.Rating,, • ,]$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Year,, • ,]$INFO[ListItem.Rating,, • ,]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,$LOCALIZE[31003] ]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 	</variable>
 	
@@ -1240,6 +1265,18 @@
 		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Property(FanartImage)]</value>
 	</variable>
+
+	<variable name="HomeWidgetsHeadLabels">
+		<value condition="Container(20).HasFocus(1)">$LOCALIZE[31242]</value>
+		<value condition="Container(20).HasFocus(2)">$LOCALIZE[31241]</value>
+		<value condition="Container(20).HasFocus(3)">$LOCALIZE[31243]</value>
+		<value condition="Container(20).HasFocus(7)">$INFO[System.ProfileName] $LOCALIZE[1037]</value>
+		<value condition="Container(20).HasFocus(51)">$INFO[System.ProfileName] $LOCALIZE[19019]</value>
+		<value condition="Container(20).HasFocus(14)">$INFO[System.ProfileName] $LOCALIZE[1036]</value>
+		<value condition="Container(20).HasFocus(9)">$LOCALIZE[5]</value>
+		<value condition="Container(20).HasFocus(8)">$INFO[Window(Weather).Property(Current.Location)]</value>
+	</variable>
+
 
   <variable name="VideoInfoStarRating">
     <value condition="!IsEmpty(ListItem.Rating) | !Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_full.png</value>

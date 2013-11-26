@@ -425,8 +425,8 @@
 				<fadetime>100</fadetime>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture background="true">$INFO[Listitem.Icon]</texture>
-				<bordertexture border="20">views/list/panel2.png</bordertexture>
-				<bordersize>20</bordersize>
+				<bordertexture border="17">views/list/panel2.png</bordertexture>
+				<bordersize>17</bordersize>
 			</control>
 		</control>
 

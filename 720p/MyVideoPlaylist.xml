@@ -156,7 +156,7 @@
 			<include>ShutdownMenuAnimation</include>
 	    <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(AddonInformation)</visible>
 			<control type="grouplist">
-				<posx>0</posx>
+				<posx>55</posx>
 				<posy>0</posy>
 			  <height>70</height>
 				<width>1000</width>
