@@ -1,3 +1,6 @@
+[B][COLOR=FF56ADDA]v2.3.1 - Release Date 26/11/2013[/COLOR][/B]
+• Fixed misaligned list in AccessPoints dialog.
+
 [B][COLOR=FF56ADDA]v2.3.0 - Release Date 26/11/2013[/COLOR][/B]
 • Added ReccentlyAdded Movies,TVShows and Music items in QuickNav.
 • Addded TLBB icon on top left ContentInfo in all sections except Home screen.
