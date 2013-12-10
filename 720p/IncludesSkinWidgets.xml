@@ -47,12 +47,13 @@
 				<visible>Control.HasFocus(81)</visible>
 	      <include>VisibleFadeEffectRecent</include>
 		    <control type="image">
-		    	<posy>9</posy>
-		    	<width>46</width>
-		    	<height>35</height>
-				  <colordiffuse>bbwhite</colordiffuse>
+					<posx>-3</posx>
+		    	<posy>6</posy>
+		    	<width>56</width>
+		    	<height>40</height>
+					<colordiffuse>ddwhite</colordiffuse>
 			    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
-		    	<texture>icons/tlbb.png</texture>
+		    	<texture background="true">icons/tlbb.png</texture>
 		    </control>
 				<control type="label">
 					<description>Page Count Label</description>
@@ -100,12 +101,13 @@
 				<visible>Control.HasFocus(82)</visible>
 	      <include>VisibleFadeEffectRecommended</include>
 		    <control type="image">
-		    	<posy>9</posy>
-		    	<width>46</width>
-		    	<height>35</height>
-				  <colordiffuse>bbwhite</colordiffuse>
+					<posx>-3</posx>
+		    	<posy>6</posy>
+		    	<width>56</width>
+		    	<height>40</height>
+					<colordiffuse>ddwhite</colordiffuse>
 			    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
-		    	<texture>icons/tlbb.png</texture>
+		    	<texture background="true">icons/tlbb.png</texture>
 		    </control>
 				<control type="label">
 					<description>Page Count Label</description>
@@ -153,12 +155,13 @@
 				<visible>Control.HasFocus(83)</visible>
 	      <include>VisibleFadeEffectRandom</include>
 		    <control type="image">
-		    	<posy>9</posy>
-		    	<width>46</width>
-		    	<height>35</height>
-				  <colordiffuse>bbwhite</colordiffuse>
+					<posx>-3</posx>
+		    	<posy>6</posy>
+		    	<width>56</width>
+		    	<height>40</height>
+					<colordiffuse>ddwhite</colordiffuse>
 			    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
-		    	<texture>icons/tlbb.png</texture>
+		    	<texture background="true">icons/tlbb.png</texture>
 		    </control>
 				<control type="label">
 					<description>Page Count Label</description>

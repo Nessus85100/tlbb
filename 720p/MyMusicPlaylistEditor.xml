@@ -322,12 +322,13 @@
 			<include>ShutdownMenuAnimation</include>
 		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation)</visible>
 	    <control type="image">
-	    	<posy>9</posy>
-	    	<width>46</width>
-	    	<height>35</height>
-			  <colordiffuse>bbwhite</colordiffuse>
+				<posx>-3</posx>
+	    	<posy>6</posy>
+	    	<width>56</width>
+	    	<height>40</height>
+				<colordiffuse>ddwhite</colordiffuse>
 		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
-	    	<texture>icons/tlbb.png</texture>
+	    	<texture background="true">icons/tlbb.png</texture>
 	    </control>
 			<control type="grouplist">
 				<posx>55</posx>
