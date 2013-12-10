@@ -1,3 +1,7 @@
+[B][COLOR=FF56ADDA]v2.3.2 - Release Date 10/12/2013[/COLOR][/B]
+• Revert of all TLBB icons and logos to black tint.
+• Fixed some wrong animations in the home screen widgets.
+
 [B][COLOR=FF56ADDA]v2.3.1 - Release Date 26/11/2013[/COLOR][/B]
 • Fixed misaligned list in AccessPoints dialog.
 

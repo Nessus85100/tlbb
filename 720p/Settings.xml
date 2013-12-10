@@ -7,7 +7,6 @@
 
 			<control type="group">
 			  <visible>!Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(busy.xml)</visible>
-		    <include>OpenCloseSlideAnimation</include>
 		    <include>VisibleHiddenSlideAnimation</include>
 		    <include>DialogZoomInOutAnimation</include>
 				<control type="panel" id="7000">
@@ -19,6 +18,7 @@
 					<onright>7000</onright>
 					<ondown>7000</ondown>
 					<onup>7000</onup>
+					<include>OpenCloseSlideAnimation</include>
 					<itemlayout height="202" width="202">
 						<control type="image">
 							<width>216</width>

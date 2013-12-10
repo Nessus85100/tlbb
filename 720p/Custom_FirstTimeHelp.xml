@@ -562,8 +562,8 @@
 	 </control>
 
 	 <include>CommonNowPlaying</include>
-	 <include>SettingsCategoryContentInfo</include>
 	 <include>CommonDialogsFadeOutBG</include>
+	 <include>SettingsCategoryContentInfo</include>
 	 <include>SettingsWeatherAndClock</include>
 	</controls>
 </window>

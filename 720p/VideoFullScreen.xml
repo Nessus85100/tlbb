@@ -103,7 +103,8 @@
 						<height>258</height>
 						<texture diffuse="thumbs/poster_diffuse.png">osd/paused-overlay.png</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<visible>Player.Paused</visible>						<animation type="conditional" condition="Player.Paused" reversible="true">
+						<visible>Player.Paused</visible>
+						<animation type="conditional" condition="Player.Paused" reversible="true">
 							<effect type="fade" start="0" end="50" time="300" />
 						</animation>
 				 </control>

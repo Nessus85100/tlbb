@@ -761,12 +761,13 @@
 		  <include>ShutdownMenuAnimation</include>			
 			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(musicplaylisteditor) + !Window.IsActive(script-globalsearch-main.xml)</visible>
 	    <control type="image">
-	    	<posy>33</posy>
-	    	<width>46</width>
-	    	<height>35</height>
-			  <colordiffuse>bbwhite</colordiffuse>
+			  <posx>-3</posx>
+	    	<posy>30</posy>
+	    	<width>56</width>
+	    	<height>40</height>
+			  <colordiffuse>ddwhite</colordiffuse>
 		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
-	    	<texture>icons/tlbb.png</texture>
+	    	<texture background="true">icons/tlbb.png</texture>
 	    </control>	
 			<control type="label">
 				<description>Page Count Label</description>

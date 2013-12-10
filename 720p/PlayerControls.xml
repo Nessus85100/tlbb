@@ -66,7 +66,7 @@
 							<width>175</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="8">osd/quicknav/nofocus_square.png</texture>
+							<texture background="true" border="8">osd/quicknav/nofocus_square.png</texture>
 						</control>
 						<control type="image">
 							<posx>35</posx>
@@ -85,7 +85,7 @@
 							<width>175</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="8">osd/quicknav/nofocus_square.png</texture>
+							<texture background="true" border="8">osd/quicknav/nofocus_square.png</texture>
 						</control>
 						<control type="image">
 							<posx>35</posx>
@@ -124,7 +124,7 @@
 							<width>175</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture>osd/quicknav/focus_square.png</texture>
+							<texture background="true">osd/quicknav/focus_square.png</texture>
 	            <animation type="Focus">
 	              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
 	              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -150,6 +150,7 @@
 					  <effect type="fade" start="0" end="100" delay="1000" time="1000"  />
 						<effect type="slide" start="0,0" end="0,4" tween="sine" easing="inout" delay="1000" time="1000" />
 					</animation>
+					<visible>IntegerGreaterThan(Container(200).NumItems,0) | IntegerGreaterThan(Container(250).NumItems,0) | IntegerGreaterThan(Container(300).NumItems,0)</visible>
 			  </control>
 			</control>
 
@@ -287,6 +288,7 @@
 					  <effect type="fade" start="0" end="100" delay="1000" time="1000"  />
 						<effect type="slide" start="0,0" end="0,4" tween="sine" easing="inout" delay="1000" time="1000" />
 					</animation>
+					<visible>IntegerGreaterThan(Container(250).NumItems,0) | IntegerGreaterThan(Container(300).NumItems,0)</visible>
 			  </control>
 			</control>
 
@@ -424,6 +426,7 @@
 					  <effect type="fade" start="0" end="100" delay="1000" time="1000"  />
 						<effect type="slide" start="0,0" end="0,4" tween="sine" easing="inout" delay="1000" time="1000" />
 					</animation>
+					<visible>IntegerGreaterThan(Container(300).NumItems,0)</visible>
 			  </control>
 			</control>
 
@@ -583,6 +586,7 @@
 					  <effect type="fade" start="0" end="100" delay="1000" time="1000"  />
 						<effect type="slide" start="0,0" end="0,4" tween="sine" easing="inout" delay="1000" time="1000" />
 					</animation>
+					<visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
 			  </control>
 			</control>
 
