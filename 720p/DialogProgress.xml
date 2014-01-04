@@ -4,7 +4,7 @@
 
    <control type="group">
 	  <include>DialogAnimation</include>
-    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>
+    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(1111)</visible>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>

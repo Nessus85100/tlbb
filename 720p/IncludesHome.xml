@@ -1975,8 +1975,7 @@
 
 		    <!-- Videos Cover -->
 			  <control type="group">
-				 <posy>-25</posy>
-				 <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
+				 <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
 				 <animation effect="slide" start="0,0" end="-310,0" time="320" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
 				 <control type="image">
 					 <posx>-190</posx>
@@ -1990,7 +1989,7 @@
 				 <control type="label">
 					 <description>NP label</description>
 					 <posx>-37</posx>
-					 <posy>180</posy>
+					 <posy>157</posy>
 					 <width>300</width>
 					 <height>30</height>
 					 <label>$LOCALIZE[13350]</label>
@@ -2079,6 +2078,110 @@
 				 </control>
 			  </control>
 
+				<!-- LiveTV Cover -->
+				<control type="group">
+				   <visible>VideoPlayer.Content(LiveTV)</visible>
+					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					 <control type="image">
+						 <posx>-130</posx>
+						 <posy>-130</posy>
+						 <width>400</width>
+						 <height>400</height>
+						 <aspectratio align="center" aligny="center">stretch</aspectratio>
+				     <texture background="true">views/list/shine.png</texture>
+				     <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+					 </control>
+					 <control type="label">
+						 <description>NP label</description>
+						 <posx>-37</posx>
+						 <posy>157</posy>
+						 <width>300</width>
+						 <height>30</height>
+						 <label>$LOCALIZE[13350]</label>
+						 <align>left</align>
+						 <aligny>left</aligny>
+						 <font>FontSize_22</font>
+						 <textcolor>purple</textcolor>
+						 <shadowcolor>77000000</shadowcolor>
+						 <angle>90</angle>
+					 </control>
+					 <control type="image">
+						 <posx>0</posx>
+						 <posy>0</posy>
+						 <width>160</width>
+						 <height>160</height>
+						 <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+						 <texture background="true" diffuse="thumbs/music_diffuse.png">thumbs/thumb_back.png</texture>
+						 <fadetime>800</fadetime>
+					</control>
+					<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>160</width>
+							<height>160</height>
+							<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
+					    <texture background="true" fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+							<fadetime>800</fadetime>
+					</control>
+					<control type="image">
+							<posx>-7</posx>
+							<posy>-7</posy>
+							<width>174</width>
+							<height>174</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture background="true">thumbs/music_overlay.png</texture>
+							<fadetime>800</fadetime>
+					</control>
+					<control type="image">
+							<posx>0</posx>
+							<posy>162</posy>
+							<width>160</width>
+							<height>160</height>
+							<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
+					    <texture background="true" fallback="thumbs/fallback_square.png" flipy="true" diffuse="thumbs/music_reflection_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+							<fadetime>800</fadetime>
+							<colordiffuse>a0ffffff</colordiffuse>
+					</control>
+					<control type="image">
+							<description>paused indicator</description>
+							<posx>-1</posx>
+							<posy>-1</posy>
+							<width>162</width>
+							<height>162</height>
+							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/paused-overlay.png</texture>
+							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+							<visible>Player.Paused</visible>
+							<animation type="conditional" condition="Player.Paused" reversible="true">
+								<effect type="fade" start="0" end="50" time="300" />
+							</animation>
+					</control>
+					<control type="image">
+							<description>ff indicator</description>
+							<posx>-1</posx>
+							<posy>-1</posy>
+							<width>162</width>
+							<height>162</height>
+							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/ff-overlay.png</texture>
+							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+							<visible>Player.Forwarding</visible>
+							<animation type="conditional" condition="Player.Forwarding" reversible="true">
+								<effect type="fade" start="0" end="50" time="300" />
+							</animation>
+					</control>
+					<control type="image">
+							<description>rw indicator</description>
+							<posx>-1</posx>
+							<posy>-1</posy>
+							<width>162</width>
+							<height>162</height>
+							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/rw-overlay.png</texture>
+							<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+							<visible>Player.Rewinding</visible>
+							<animation type="conditional" condition="Player.Rewinding" reversible="true">
+								<effect type="fade" start="0" end="50" time="300" />
+							</animation>
+					</control>
+				</control>
 
 				<!-- Movie Info -->
 				<control type="group">
@@ -2226,14 +2329,14 @@
 
 			  <!-- LiveTV Info -->
 				<control type="group">
-		      <posx>275</posx>
+		      <posx>173</posx>
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
 				  <visible>VideoPlayer.Content(LiveTV)</visible>
-					<animation effect="slide" start="0,0" end="-270,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
 					<control type="grouplist" id="1">
 						<posx>0</posx>
-						<posy>75</posy>
+						<posy>65</posy>
 						<height>70</height>
 						<width>1000</width>
 						<itemgap>10</itemgap>
@@ -2360,14 +2463,14 @@
 						<label>$LOCALIZE[5]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
 	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
-								<visible>Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
+						<visible>Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
 						<label>$LOCALIZE[137]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
 	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
-								<visible>!Skin.HasSetting(ShowHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
+						<visible>!Skin.HasSetting(ShowHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>

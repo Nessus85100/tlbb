@@ -1,3 +1,8 @@
+[B][COLOR=FF56ADDA]v2.3.3 - Release Date 4/1/2014[/COLOR][/B]
+• Added PVR channels group name on top left next to items label.
+• Fixed several misaligned elements in PVR section.
+• Fixed misaligned list in PictureInfo and MediaFilter dialogs.
+
 [B][COLOR=FF56ADDA]v2.3.2 - Release Date 10/12/2013[/COLOR][/B]
 • Revert of all TLBB icons and logos to black tint.
 • Fixed some wrong animations in the home screen widgets.

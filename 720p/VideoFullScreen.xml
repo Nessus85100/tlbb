@@ -154,7 +154,7 @@
 						<posy>8</posy>
 						<width>199</width>
 						<height>199</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 						<texture fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$INFO[Player.Art(thumb)]</texture>
 						<fadetime>800</fadetime>
 				  </control>
@@ -226,7 +226,7 @@
 						<posy>8</posy>
 						<width>294</width>
 						<height>199</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 						<texture fallback="thumbs/fallback_episode.png" diffuse="thumbs/video_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 						<fadetime>800</fadetime>
 				  </control>
@@ -504,7 +504,8 @@
 					<posy>240</posy>
 	        <include>OSDPlotAnimation</include>
 	        <visible>[IsEmpty(Window(VideoOSD).Property(ShowPlot)) | IsEmpty(VideoPlayer.Plot)]</visible>
-				  <animation effect="slide" start="0,0" end="110,0" condition="![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)]">Conditional</animation>
+				  <animation effect="slide" start="0,0" end="110,0" condition="![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(LiveTV)]">Conditional</animation>
+				  <animation effect="slide" start="0,0" end="15,0" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
 					<control type="label" id="1">
 						<posx>543</posx>
 						<posy>509r</posy>
@@ -914,7 +915,7 @@
 					<height>45</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>white</textcolor>
 				  <shadowcolor>22000000</shadowcolor>
 					<font>FontSize_18B</font>
 					<scroll>false</scroll>
@@ -927,7 +928,7 @@
 					<height>45</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>white</textcolor>
 				  <shadowcolor>22000000</shadowcolor>
 					<font>FontSize_18B</font>
 					<scroll>false</scroll>
@@ -940,7 +941,7 @@
 					<height>80</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>white</textcolor>
 				  <shadowcolor>22000000</shadowcolor>
 					<font>FontSize_18B</font>
 					<scroll>false</scroll>

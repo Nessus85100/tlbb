@@ -708,7 +708,7 @@
 	<!-- ========================== -->
 	<include name="PVROSDContentInfo">
 	  <control type="group">
-			<posx>105</posx>
+			<posx>45</posx>
 			<posy>25</posy>
 	    <include>OpenCloseSlideAnimation</include>
 			<control type="grouplist">

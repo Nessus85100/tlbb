@@ -18,9 +18,27 @@
 			<posy>25</posy>
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
+	    <visible allowhiddenfocus="true">!Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu)</visible>
+      <animation type="Visible"  reversible="false">
+        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+        <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+      </animation>
+      <animation type="Hidden" reversible="false">
+        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+        <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+      </animation>
+	    <control type="image">
+				<posx>-3</posx>
+	    	<posy>6</posy>
+	    	<width>56</width>
+	    	<height>40</height>
+				<colordiffuse>ddwhite</colordiffuse>
+		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+	    	<texture background="true">icons/tlbb.png</texture>
+	    </control>
       <!-- PVR Options -->
 			<control type="grouplist" id="9111">
-				<posx>0</posx>
+				<posx>55</posx>
 				<posy>0</posy>
 				<width>0</width>
 				<height>0</height>
@@ -67,18 +85,18 @@
 			<control type="grouplist">
 		    <visible allowhiddenfocus="true">!Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu)</visible>
 	      <animation type="Visible"  reversible="false">
-	          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	          <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+          <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
 	      </animation>
 	      <animation type="Hidden" reversible="false">
-	          <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	          <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+          <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+          <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 	      </animation>
-				<posx>0</posx>
+				<posx>55</posx>
 				<posy>0</posy>
 				<height>70</height>
 				<width>1190</width>
-				<itemgap>15</itemgap>
+				<itemgap>10</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
 				<control type="label">
@@ -148,7 +166,7 @@
 				<scroll>false</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[Container.NumItems,, $LOCALIZE[31025]]</label>
+				<label>$INFO[Container.NumItems,, $LOCALIZE[31025]]$INFO[Control.GetLabel(30), • ]</label>
 			</control>
 	  </control>
 

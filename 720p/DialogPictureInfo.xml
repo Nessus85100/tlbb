@@ -15,8 +15,8 @@
 		</control>		
 		<control type="label">
 			<description>header label</description>
-			<posx>341</posx>
-			<posy>185</posy>
+			<posx>340</posx>
+			<posy>170</posy>
 			<width>600</width>
 			<font>FontSize_36</font>
 			<textcolor>white</textcolor>
@@ -28,8 +28,8 @@
 		</control>
 		<control type="list" id="5">
 			<posx>363</posx>
-			<posy>229</posy>
-			<width>552</width>
+			<posy>214</posy>
+			<width>555</width>
 			<height>306</height>
 			<onup>5</onup>
 			<ondown>5</ondown>
@@ -109,7 +109,7 @@
 			<control type="label">
 				<description>Page Count Label</description>
 				<width>300</width>
-				<height>57</height>
+				<height>40</height>
 				<font>FontSize_18</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>99000000</shadowcolor>

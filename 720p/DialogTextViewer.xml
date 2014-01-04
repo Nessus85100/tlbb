@@ -24,7 +24,7 @@
 			</control>
 			<control type="group">
 				<posx>232</posx>
-				<posy>218</posy>
+				<posy>210</posy>
 				<control type="textbox" id="5">
 					<description>textarea</description>
 					<posx>0</posx>
@@ -37,6 +37,7 @@
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<pagecontrol>61</pagecontrol>
+			    <autoscroll delay="8000" time="2000" repeat="8000"/>
 				</control>
 				<control type="scrollbar" id="61">
 					<posx>0</posx>

@@ -17,8 +17,8 @@
 		</control>
 		<control type="label" id="2">
 			<description>header label</description>
-			<posx>341</posx>
-			<posy>185</posy>
+			<posx>340</posx>
+			<posy>170</posy>
 			<width>600</width>
 			<font>FontSize_36</font>
 			<align>center</align>
@@ -31,7 +31,7 @@
 
 	   <control type="group" id="9000">
 			<posx>363</posx>
-			<posy>229</posy>
+			<posy>214</posy>
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<posx>0</posx>
@@ -39,8 +39,8 @@
 				<width>553</width>
 				<height>302</height>
 				<itemgap>4</itemgap>
-				<onup>10000</onup>
-				<ondown>10000</ondown>
+				<onup>5</onup>
+				<ondown>5</ondown>
 				<onleft>10000</onleft>
 				<onright>10000</onright>
 			</control>
@@ -73,8 +73,8 @@
 	   </control>
 	   
 	  <control type="group" id="10000">
-			<posx>356</posx>
-			<posy>536</posy>
+			<posx>355</posx>
+			<posy>525</posy>
       <!-- Buttons -->
 			<control type="grouplist" id="10001">
 				<posx>0</posx>

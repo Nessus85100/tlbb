@@ -32,7 +32,7 @@
       <texture background="true">special://skin/extras/bg/default.jpg</texture>
 			<include>BackgroundFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
-			<visible>![Player.HasVideo + !Skin.HasSetting(HideBGVideo)]</visible>
+			<visible>![Player.HasVideo + ![Skin.HasSetting(HideBGVideo) | Window.IsVisible(1111)]]</visible>
 			<visible>![Player.HasAudio + [[Skin.HasSetting(Vis-Fanart) + !IsEmpty(Player.Art(fanart))] | Skin.HasSetting(Vis-CustomSlideshow) | Skin.HasSetting(Vis-ArtistSlideshow)]]</visible>
 		</control>
 		<control type="image">
@@ -46,7 +46,7 @@
 		<control type="videowindow">
 			<description>Video</description>
 			<include>FullscreenDimensions</include>
-		  <visible>Player.HasVideo + !Skin.HasSetting(HideBGVideo)</visible>
+		  <visible>Player.HasVideo + ![Skin.HasSetting(HideBGVideo) | Window.IsVisible(1111)]</visible>
 		</control>
 		<control type="visualisation">
 			<posx>0</posx>

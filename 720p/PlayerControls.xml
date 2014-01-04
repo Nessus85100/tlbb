@@ -1,6 +1,7 @@
 <window type="dialog" id="114">
   <defaultcontrol always="true">150</defaultcontrol>
-  <onload condition="Player.HasMedia">SetFocus(602)</onload>
+  <onload condition="[Player.HasMedia + !VideoPlayer.Content(LiveTV)]">SetFocus(602)</onload>
+  <onload condition="[Player.HasMedia + VideoPlayer.Content(LiveTV)]">SetFocus(601)</onload>
   <zorder>3</zorder>
 	<include>OnLoadDialogsClose</include>
 	<visible>[Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
@@ -689,6 +690,7 @@
 						<texture background="true" fallback="thumbs/fallback_square.png">$INFO[VideoPlayer.Cover]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordersize>6</bordersize>
 					  <visible>Player.HasVideo</visible>
 					</control>
 					<control type="image">
@@ -700,7 +702,7 @@
 						<texture background="true" fallback="thumbs/fallback_square.png">$INFO[Player.Art(thumb)]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					  <bordersize>7</bordersize>
+					  <bordersize>6</bordersize>
 					  <visible>Player.HasAudio</visible>
 					</control>
 					<control type="image">
@@ -1174,7 +1176,7 @@
 				</control>
 		
 		    <!-- Buttons Controls Live TV -->
-				<control type="group" id="100">
+				<control type="grouplist" id="100">
 					<posx>541</posx>
 					<posy>398</posy>
           <width>505</width>
