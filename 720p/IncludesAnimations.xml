@@ -21,6 +21,17 @@
       <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
     </animation>
 	</include>
+	
+	<include name="VisibleHiddenSlideAnimationReverse">
+	  <animation type="Visible" reversible="false">
+      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+      <effect type="slide" start="0,0" end="0,55" time="350" tween="cubic" easing="out" />
+	  </animation>
+    <animation type="Hidden" reversible="false">
+      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+      <effect type="slide" start="0,55" end="0,0" time="350" tween="sine" easing="out" />
+    </animation>
+	</include>
 
 	<include name="DialogAnimation">
     <animation type="WindowOpen" reversible="false">
@@ -121,7 +132,6 @@
 		<animation type="Conditional" reversible="false" condition="
     Window.IsActive(favourites)
     | Window.IsActive(1110)
-		| Window.IsActive(accesspoints)
 		| Control.HasFocus(122)
 		| Control.HasFocus(127)
 		| Window.IsActive(CBrowseskin.xml)
@@ -162,7 +172,6 @@
 		<animation type="Conditional" reversible="false" condition="
     !Window.IsActive(favourites)
     + !Window.IsActive(1110)
-		+ !Window.IsActive(accesspoints)
 		+ !Control.HasFocus(122)
     + !Control.HasFocus(127)
 		+ !Window.IsActive(CBrowseskin.xml)
@@ -206,7 +215,6 @@
 		<animation type="Conditional" reversible="false" condition="
     Window.IsActive(favourites)
 		| Window.IsActive(1110)
-		| Window.IsActive(accesspoints) 
 		| Window.IsActive(MovieInformation) 
 		| Window.IsActive(MusicInformation) 
 		| Window.IsActive(SongInformation) 
@@ -237,7 +245,6 @@
 		<animation type="Conditional" reversible="false" condition="
     !Window.IsActive(favourites)
 		+ !Window.IsActive(1110)
-		+ !Window.IsActive(accesspoints) 
 		+ !Window.IsActive(MovieInformation) 
 		+ !Window.IsActive(MusicInformation) 
 		+ !Window.IsActive(SongInformation) 
@@ -327,12 +334,12 @@
 	      <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
 	  </animation>
 	  <animation type="Visible" reversible="false">
-	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	      <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
+	      <effect type="fade" start="0" end="100" time="600" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,55" end="0,0" time="650" tween="cubic" easing="out" />
 	  </animation>
 	  <animation type="Hidden" reversible="false">
-	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
+	      <effect type="fade" start="100" end="0" time="600" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,55" time="650" tween="sine" easing="out" />
 	  </animation>
 	</include>
 

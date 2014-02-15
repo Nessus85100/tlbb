@@ -15,11 +15,21 @@
 			<texture>debug/debuggrid.png</texture>
 		</control>
 
+		<control type="image">
+			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>debug/skin_area.png</texture>
+		</control>
+
+
 		<!-- Window/Dialog debug -->
 
 		<control type="grouplist">
-			<posx>15</posx>
-			<posy>15</posy>
+			<posx>5</posx>
+			<posy>5</posy>
 			<width>780</width>
 			<height>450</height>
 			<itemgap>12</itemgap>
@@ -974,13 +984,57 @@
 				<label>script-NextAired-TVGuide.xml</label>
 				<visible>Window.IsVisible(script-NextAired-TVGuide.xml)</visible>
 			</control>
+			
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<font>FontSize_22B</font>
+				<align>left</align>
+				<label>script-Actors-Browser.xml</label>
+				<visible>Window.IsVisible(script-Actors-Browser.xml)</visible>
+			</control>
+						
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<font>FontSize_22B</font>
+				<align>left</align>
+				<label>script-Actors-ContextMenu.xml</label>
+				<visible>Window.IsVisible(script-Actors-ContextMenu.xml)</visible>
+			</control>
+
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<font>FontSize_22B</font>
+				<align>left</align>
+				<label>script-Actors-DialogInfo.xml</label>
+				<visible>Window.IsVisible(script-Actors-DialogInfo.xml)</visible>
+			</control>
+
+			<control type="label">
+				<width>780</width>
+				<height>21</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<font>FontSize_22B</font>
+				<align>left</align>
+				<label>script-Actors-DialogVideoInfo.xml</label>
+				<visible>Window.IsVisible(script-Actors-DialogVideoInfo.xml)</visible>
+			</control>
 		</control>
 
 		<!-- Control label -->
 
 		<control type="label">
-			<posx>15r</posx>
-			<posy>15</posy>
+			<posx>5r</posx>
+			<posy>5</posy>
 			<width>780</width>
 			<height>21</height>
 			<textcolor>FF0000FF</textcolor>
@@ -994,8 +1048,8 @@
 		<!-- Path label -->
 
 		<control type="label">
-			<posx>15r</posx>
-			<posy>48</posy>
+			<posx>5r</posx>
+			<posy>30</posy>
 			<width>780</width>
 			<height>21</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1013,11 +1067,11 @@
 			<posy>695</posy>
 			<width>780</width>
 			<height>21</height>
-			<textcolor>FFFF0000</textcolor>
+			<textcolor>FFFFFF40</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<font>FontSize_22B</font>
 			<align>right</align>
-			<label>[COLOR=FFFFFF40]Container.HasFolders[/COLOR]</label>
+			<label>Container.HasFolders</label>
 			<visible>Container.HasFolders</visible>
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>
@@ -1026,13 +1080,46 @@
 			<posy>695</posy>
 			<width>780</width>
 			<height>21</height>
-			<textcolor>FFFF0000</textcolor>
+			<textcolor>FFFFFF40</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<font>FontSize_22B</font>
 			<align>left</align>
-			<label>[COLOR=FFFFFF40] | Container.HasFiles[/COLOR]</label>
+			<label> | Container.HasFiles</label>
 			<visible>Container.HasFiles</visible>
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
-		</control>		
+		</control>
+
+
+		<!-- CPU & RAM label -->
+		
+		<control type="label" id="1">
+			<posx>0</posx>
+			<posy>695</posy>
+			<height>25</height>
+			<width>1190</width>
+			<font>FontSize_20B</font>
+			<textcolor>purple</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+	    <align>left</align>
+	    <aligny>center</aligny>
+			<scroll>false</scroll>
+			<label>$INFO[System.CPUUsage, CPU: ]</label>
+			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
+		</control>
+
+		<control type="label" id="1">
+			<posx>1277</posx>
+			<posy>695</posy>
+			<height>25</height>
+			<width>1190</width>
+			<font>FontSize_20B</font>
+			<textcolor>purple</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+	    <align>right</align>
+	    <aligny>center</aligny>
+			<scroll>false</scroll>
+			<label>$INFO[System.Memory(used.percent), RAM: ]</label>
+			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
+		</control>				
 	</controls>
 </window>

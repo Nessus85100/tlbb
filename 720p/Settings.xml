@@ -200,7 +200,7 @@
 						<item id="12">
 							<onclick>ActivateWindow(1111)</onclick>
 							<thumb>icons/Help.png</thumb>
-							<label>Help</label>
+							<label>$LOCALIZE[31430]</label>
 						</item>
 					</content>
 				</control>

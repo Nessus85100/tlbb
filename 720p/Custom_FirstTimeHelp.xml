@@ -79,7 +79,7 @@
 					<item id="3">
 						<label>WiFi Network</label>
 					  <onclick>Control.Move(4001,1)</onclick>
-					  <onclick>ActivateWindow(accesspoints)</onclick>
+					  <onclick>RunScript(script.linux.nm)</onclick>
 					</item>
 					<item id="4">
 						<label>Region Add-ons</label>

@@ -179,7 +179,7 @@
 					  <label>222</label>
 					</control>
 					<control type="button" id="12">
-						<description>Cancel</description>
+						<description>Defaults</description>
 					  <width>150</width>
 					  <height>40</height>
 						<texturefocus>dialogs/buttons/settings_fo.png</texturefocus>

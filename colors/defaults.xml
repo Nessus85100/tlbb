@@ -12,6 +12,7 @@
 	<color name="blue3">FF44AAF3</color>
 	<color name="purple">FFA939FF</color>
 	<color name="purple1">FFBB19B9</color>
+	<color name="purple2">FFAB3DC7</color>
 	<color name="selected">FF56ADDA</color>
 	<color name="osdinfo">FFd0d0d0</color>
   <color name="OSDColorsDiffuse">BBFFFFFF</color>  
@@ -41,4 +42,5 @@
 	<color name="44grey">44DDDDDD</color>
 	<color name="33grey">33DDDDDD</color>
 	<color name="22grey">22DDDDDD</color>
+  <color name="BackgroundColor">FF000000</color>
 </colors>

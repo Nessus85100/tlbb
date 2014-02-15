@@ -2436,7 +2436,7 @@
 						<description>Network</description>
 				    <include>TopButton</include>
 				    <onclick>SetFocus(20)</onclick>
-				    <onclick>ActivateWindow(accesspoints)</onclick>
+					  <onclick>RunScript(script.linux.nm)</onclick>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -2483,6 +2483,18 @@
 						<label>$LOCALIZE[705]</label>
 						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
 	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
+					</control>
+					<control type="group">
+						<visible>Control.IsVisible(214)</visible>
+	          <animation effect="zoom"  start="100" end="80" time="200" tween="sine" easing="in" center="-12,37" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
+			      <control type="image">
+			      	<posx>-22</posx>
+			      	<posy>21</posy>
+			      	<width>26</width>
+			      	<height>26</height>
+					    <aspectratio align="left" aligny="center">keep</aspectratio>
+					    <texture background="true">$VAR[InternetState]</texture>
+			      </control>
 					</control>
 				</control>
 				<control type="group">

@@ -1045,6 +1045,12 @@
 		</control>
 	</include>
 
+  <variable name="InternetState">
+    <value condition="stringcompare(System.InternetState,$LOCALIZE[13296])">windows/home/internet_state/connected.png</value>
+    <value condition="!stringcompare(System.InternetState,$LOCALIZE[13296]) + !stringcompare(System.InternetState,$LOCALIZE[13297])">windows/home/internet_state/no_internet.png</value>
+    <value condition="stringcompare(System.InternetState,$LOCALIZE[13297])">windows/home/internet_state/not_connected.png</value>
+  </variable>
+
 	<variable name="TVGuidePreviewThumbsLabels">
 		<value condition="Stringcompare(Skin.String(PreviewThumb),1)">$LOCALIZE[31218]</value>
 		<value condition="Stringcompare(Skin.String(PreviewThumb),2)">$LOCALIZE[31219]</value>

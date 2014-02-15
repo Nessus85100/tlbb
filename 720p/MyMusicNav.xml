@@ -97,14 +97,15 @@
 					<label>587</label>
 				  <include>TopLeftMenusButton</include>
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-	        <onclick>SetFocus(50)</onclick>
+					<onclick>right</onclick>
 				</control>
 				<control type="button" id="20">
-					<description>Filter</description>
-					<label>587</label>
-				  <include>TopLeftMenusButton</include>
 					<visible>Container.CanFilterAdvanced</visible>
-	        <onclick>SetFocus(50)</onclick>
+					<description>Filter</description>
+					<include>TopLeftMenusButton</include>
+					<label>587</label>
+					<selected>Container.Filtered</selected>
+					<onclick>Action(right)</onclick>
 					<onclick>Filter</onclick>
 				</control>
 				<control type="button" id="8">
