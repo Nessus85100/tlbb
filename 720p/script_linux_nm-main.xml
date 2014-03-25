@@ -1,0 +1,384 @@
+<window type="dialog" id="129">
+	<defaultcontrol>14</defaultcontrol>
+  <zorder>4</zorder>
+	<controls>
+		<control type="group">
+	    <include>DialogAnimation</include>
+		  <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsVisible(busydialog)</visible>
+			<control type="image">
+				<posx>281</posx>
+				<posy>158</posy>
+				<width>718</width>
+				<height>409</height>
+				<texture border="39">dialogs/accesspoints/bg.png</texture>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">dialogs/accesspoints/text_area.png</texture>
+			</control>
+			<control type="label" id="2">
+				<description>header label</description>
+				<posx>305</posx>
+				<posy>196</posy>
+				<width>670</width>
+				<height>50</height>
+				<font>FontSize_36</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+				<label>$ADDON[script.linux.nm 626]</label>
+			</control>
+			<control type="label" id="100">
+				<description>status label</description>
+				<posx>328</posx>
+				<posy>250</posy>
+				<width>630</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>FontSize_16B</font>
+				<label>-</label>
+				<scroll>false</scroll>
+				<textcolor>44white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+			</control>
+			<control type="button.">
+				<posx>320</posx>
+				<posy>250</posy>
+	    	<width>640</width>
+				<height>30</height>
+				<font>FontSize_16B</font>
+				<textcolor>44white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>
+				<aligny>center</aligny>
+			  <label>-</label>
+	    	<label2>-</label2>
+				<visible>IsEmpty(Control.GetLabel(100))</visible>
+			</control>
+			<control type="group" id="8000">
+				<control type="list" id="10">
+					<posx>328</posx>
+					<posy>283</posy>
+					<width>625</width>
+					<height>205</height>
+					<onup>10000</onup>
+					<onleft>noop</onleft>
+					<onright>8001</onright>
+					<ondown>10000</ondown>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="51" width="624">
+						<control type="image">
+							<posx>0</posx>
+							<posy>4</posy>
+							<width>40</width>
+							<height>40</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+					    <texture background="true">$VAR[WiFiState]</texture>
+						</control>
+						<control type="label">
+							<posx>40</posx>
+							<posy>0</posy>
+							<width>330</width>
+							<height>50</height>
+							<font>FontSize_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>77white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+					    <label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>415</posx>
+							<posy>0</posy>
+							<width>130</width>
+							<height>50</height>
+							<font>FontSize_20</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>77white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+					    <label>$INFO[ListItem.Property(encryption)]</label>
+							<visible>!IsEmpty(ListItem.Property(encryption))</visible>
+						</control>
+						<control type="image">
+							<posx>425</posx>
+							<posy>10</posy>
+							<width>26</width>
+							<height>26</height>
+							<colordiffuse>55ffffff</colordiffuse>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture background="true">dialogs/accesspoints/lock.png</texture>
+							<visible>!IsEmpty(ListItem.Property(encryption))</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="51" width="624">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>459</width>
+							<height>47</height>
+							<texture>buttons/settings_fo.png</texture>
+					    <visible>Control.HasFocus(10) | Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>4</posy>
+							<width>40</width>
+							<height>40</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+				      <texture background="true">$VAR[WiFiState]</texture>
+						</control>
+						<control type="group">
+              <animation type="Conditional" condition="![Control.HasFocus(10) | Control.HasFocus(11)]">
+                <effect type="fade" start="100" end="40" time="150" tween="sine" easing="out" />
+              </animation>
+							<control type="label">
+								<posx>40</posx>
+								<posy>0</posy>
+								<width>360</width>
+								<height>50</height>
+								<font>FontSize_20</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>white</textcolor>
+					      <label>$INFO[ListItem.Label2]</label>
+							</control>
+							<control type="label">
+								<posx>415</posx>
+								<posy>0</posy>
+								<width>130</width>
+								<height>50</height>
+								<font>FontSize_20</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>white</textcolor>
+						    <label>$INFO[ListItem.Property(encryption)]</label>
+								<visible>!IsEmpty(ListItem.Property(encryption))</visible>
+							</control>
+							<control type="image">
+								<posx>425</posx>
+								<posy>10</posy>
+								<width>26</width>
+								<height>26</height>
+								<colordiffuse>ffcccccc</colordiffuse>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture background="true">dialogs/accesspoints/lock.png</texture>
+								<visible>!IsEmpty(ListItem.Property(encryption))</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="group" id="8001">
+					<posx>792</posx>
+					<posy>283</posy>
+					<control type="button" id="14">
+						<description>Add Connection Button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<textoffsetx>35</textoffsetx>
+						<textwidth>130</textwidth>
+						<texturefocus>dialogs/accesspoints/add_fo.png</texturefocus>
+						<texturenofocus>dialogs/accesspoints/add_nf.png</texturenofocus>
+		        <include>DialogsButton</include>
+						<onup>10000</onup>
+						<ondown>11</ondown>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<label>$ADDON[script.linux.nm 621]</label>
+					</control>
+					<control type="button" id="11">
+						<description>Delete Button</description>
+						<posx>0</posx>
+						<posy>51</posy>
+						<width>160</width>
+						<textoffsetx>35</textoffsetx>
+						<textwidth>130</textwidth>
+						<texturefocus>dialogs/accesspoints/delete_fo.png</texturefocus>
+						<texturenofocus>dialogs/accesspoints/delete_nf.png</texturenofocus>
+		        <include>DialogsButton</include>
+						<onup>14</onup>
+						<ondown>13</ondown>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<label>$ADDON[script.linux.nm 622]</label>
+					</control>
+					<control type="button" id="13">
+						<description>Disconnect Button</description>
+						<posx>0</posx>
+						<posy>102</posy>
+						<width>160</width>
+						<textoffsetx>35</textoffsetx>
+						<textwidth>130</textwidth>
+						<texturefocus>dialogs/accesspoints/disconect_fo.png</texturefocus>
+						<texturenofocus>dialogs/accesspoints/disconect_nf.png</texturenofocus>
+		        <disabledcolor>77white</disabledcolor>
+		        <include>DialogsButton</include>
+						<onup>11</onup>
+						<ondown>15</ondown>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<label>$ADDON[script.linux.nm 612]</label>
+						<enable>stringcompare(Container(10).ListItem.Label,>)</enable>
+            <animation effect="fade"  start="100" end="40" time="0" condition="!Control.IsEnabled(13)">Conditional</animation>
+					</control>
+					<control type="button" id="15">
+				    <description>Check Status Button</description>
+						<posx>0</posx>
+						<posy>153</posy>
+						<width>160</width>
+						<textoffsetx>35</textoffsetx>
+						<textwidth>130</textwidth>
+						<texturefocus>dialogs/accesspoints/status_fo.png</texturefocus>
+						<texturenofocus>dialogs/accesspoints/status_nf.png</texturenofocus>
+		        <include>DialogsButton</include>
+						<onup>13</onup>
+						<ondown>10000</ondown>
+						<onleft>10</onleft>
+						<onright>noop</onright>
+						<label>$ADDON[script.linux.nm 628]</label>
+					</control>
+				</control>
+			</control>
+
+		  <control type="group" id="10000">
+				<posx>320</posx>
+				<posy>495</posy>
+	      <!-- Buttons -->
+				<control type="grouplist" id="10001">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>0</width>
+					<height>0</height>
+					<itemgap>2</itemgap>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<onleft>10001</onleft>
+					<onright>10001</onright>
+					<onup>8000</onup>
+					<ondown>8000</ondown>
+					<control type="button." id="14">  <!-- Hidden -->
+						<description>Add Connection Button</description>
+					  <width>100</width>
+					  <height>40</height>
+						<texturefocus border="39,3,39,39">dialogs/buttons/default_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/default_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>80</textwidth>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<label>$ADDON[script.linux.nm 621]</label>
+					</control>
+					<control type="button." id="11">  <!-- Hidden -->
+						<description>Delete Button</description>
+					  <width>120</width>
+					  <height>40</height>
+						<texturefocus border="39,3,39,39">dialogs/buttons/default_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/default_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>100</textwidth>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<label>$ADDON[script.linux.nm 622]</label>
+					</control>
+					<control type="button." id="13">  <!-- Hidden -->
+						<description>Disconnect Button</description>
+					  <width>160</width>
+					  <height>40</height>
+						<texturefocus border="39,3,39,39">dialogs/buttons/default_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/default_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>130</textwidth>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<label>$ADDON[script.linux.nm 612]</label>
+						<visible>!stringcompare(Container(10).ListItem.Label,>)</visible>
+					</control>
+					<control type="button." id="15">  <!-- Hidden -->
+				    <description>Check Status Button</description>
+					  <width>175</width>
+					  <height>40</height>
+						<texturefocus border="39,3,39,39">dialogs/buttons/default_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/default_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>100</textwidth>
+						<textoffsetx>35</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<label>$ADDON[script.linux.nm 628]</label>
+					</control>
+					<control type="button" id="19">
+						<description>Done Button</description>
+					  <width>150</width>
+					  <height>40</height>
+						<texturefocus border="39,3,39,39">dialogs/buttons/cancel_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/cancel_nf.png</texturenofocus>
+						<align>left</align>
+						<aligny>top</aligny>
+						<font>FontSize_20</font>
+						<textwidth>110</textwidth>
+						<textoffsetx>40</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<textcolor>99grey</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<shadowcolor>99000000</shadowcolor>
+					  <label>20177</label>
+					</control>
+				</control>
+				<control type="fadelabel">
+					<posx>103</posx>
+					<posy>10</posy>
+					<width>530</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>77white</textcolor>
+				  <shadowcolor>99000000</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+				  <label>$INFO[Network.LinkState]$INFO[Network.IPAddress, (,)]</label>
+		    	<label>$INFO[System.InternetState, $LOCALIZE[443]: ]</label>
+          <scroll>false</scroll>
+          <scrollout>false</scrollout>
+          <scrollspeed>100</scrollspeed>
+          <pauseatend>8000</pauseatend>
+				</control>
+		  </control>
+		</control>
+	
+
+		<control type="button" id="18">
+      <description>Install Button</description>
+      <label>$ADDON[script.linux.nm 618]</label>
+		  <visible>false</visible>
+		</control>
+		<control type="label" id="3">
+		  <description>List label</description>
+		  <visible>false</visible>
+		</control>
+	</controls>
+</window>

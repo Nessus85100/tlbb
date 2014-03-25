@@ -1,9 +1,13 @@
+[B][COLOR=FF56ADDA]v2.3.5 - Release Date 25/3/2014[/COLOR][/B]
+• Added Skin support for the WiFi Network Manager script.
+• Fixed some misaligned elements in Home screen (rss & weather).
+
 [B][COLOR=FF56ADDA]v2.3.4 - Release Date 15/2/2014[/COLOR][/B]
 • Network setup now uses the WiFi Network Manager script (Skin support is WIP).
 • Added network/internet connection state icon on home top menu.
 • Fixed more misaligned stuff in dialogs (Peripherals and SmartPlaylist Editor).
 • Fixed scroll bug in Music ListView.
-• Removed mome unused textures and code.
+• Removed more unused textures and code.
 
 [B][COLOR=FF56ADDA]v2.3.3 - Release Date 4/1/2014[/COLOR][/B]
 • Added PVR channels group name on top left next to items label.
