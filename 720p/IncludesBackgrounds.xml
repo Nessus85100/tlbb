@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
 	<include name="BackgroundWeather">
 		<control type="multiimage">
@@ -41,7 +42,7 @@
 			<texture background="true">$VAR[MediaBackground]</texture>
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
-		  <visible>Skin.HasSetting(HideBGFanart)</visible>
+		  <visible>Skin.HasSetting(HideBGFanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="videowindow">
 			<description>Video</description>
@@ -53,7 +54,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-		  <visible>!Skin.HasSetting(Vis-Visualization) + !SubString(Window(Videos).Property(TvTunesIsAlive),True)</visible>
+		  <visible>Player.HasAudio + !Skin.HasSetting(Vis-Visualization) + !SubString(Window(Videos).Property(TvTunesIsAlive),True)</visible>
 		</control>
 		<control type="image">
 	    <include>FullscreenDimensions</include>
@@ -125,7 +126,15 @@
 	</include>
 
 	<include name="RecentAndSkinWidgetsFanart">
-		<!-- Recent list fanart -->
+	  <control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$VAR[HomeWidgetsFanart]</texture>
+			<include>BackgroundFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
+		</control>
+<!-- *NOT USED*
+		Recent list fanart
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(81).ListItem.Property(FanartImage)]</texture>
@@ -134,7 +143,7 @@
 			<visible>Control.HasFocus(81)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- Recommended fanart -->
+		Recommended fanart
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(82).ListItem.Property(FanartImage)]</texture>
@@ -143,7 +152,7 @@
 			<visible>Control.HasFocus(82)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- Random fanart -->
+		Random fanart
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(83).ListItem.Property(FanartImage)]</texture>
@@ -152,7 +161,7 @@
 			<visible>Control.HasFocus(83)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- HomeWidget RecentMovies fanart -->
+		HomeWidget RecentMovies fanart
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(35).ListItem.Property(FanartImage)]</texture>
@@ -161,7 +170,7 @@
 			<visible>Control.HasFocus(35)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- HomeWidget RecentTVShows fanart -->
+		HomeWidget RecentTVShows fanart
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(45).ListItem.Property(FanartImage)]</texture>
@@ -170,7 +179,7 @@
 			<visible>Control.HasFocus(45)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- HomeWidget RecentMusic fanart -->
+		HomeWidget RecentMusic fanart 
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(15).ListItem.Property(FanartImage)]</texture>
@@ -179,7 +188,7 @@
 			<visible>Control.HasFocus(15)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
-		<!-- HomeWidget CustomAddons fanart -->
+		HomeWidget CustomAddons fanart
 	  <control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(25).ListItem.Property(FanartImage)]</texture>
@@ -188,6 +197,7 @@
 			<visible>Control.HasFocus(25)</visible>
 		  <visible>!Skin.HasSetting(HideBGFanart)</visible>
 		</control>
+-->
 	</include>
 
 	<include name="BackgroundVignette">
@@ -203,7 +213,14 @@
 			<include>FanartFade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
       <colordiffuse>ddFFFFFF</colordiffuse>
-			<visible>Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | [Control.IsVisible(57) + !Window.IsVisible(profiles)] | [Control.IsVisible(50) + !Window.IsVisible(weather) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(profiles)] | Control.IsVisible(560) | Control.IsVisible(561) | Window.IsActive(PlayerControls) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)]</visible>
+			<visible>Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | [Control.HasFocus(95) + !Window.IsVisible(systeminfo)] | Control.HasFocus(125) | [Control.IsVisible(57) + !Window.IsVisible(profiles)] | [Control.IsVisible(50) + !Window.IsVisible(weather) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(profiles)] | Control.IsVisible(560) | Control.IsVisible(561) | [Window.IsActive(PlayerControls) + !Window.IsActive(1111)] | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation) | [Window.IsActive(script-globalsearch-main.xml) + Skin.HasSetting(HideBGFanart)] | [Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(movieinformation)] | [Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(movieinformation)]</visible>
+	  </control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">windows/bg/bg_overlay.png</texture>
+			<include>FanartFade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+      <visible>[Window.IsActive(1111) + !Window.IsActive(busy.xml)]</visible>
 	  </control>
 	</include>
 

@@ -1,4 +1,5 @@
-<window id="10140">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="10140">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<controls>
   <control type="button" id="100">
@@ -9,6 +10,14 @@
 	 <control type="group">
 	  <include>DialogAnimation</include>
 		<visible>!Window.IsActive(PeripheralSettings)</visible>
+		<control type="image">
+			<posx>316</posx>
+			<posy>122</posy>
+			<width>647</width>
+			<height>472</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -175,6 +184,22 @@
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
 				  <label>5</label>
+				</control>
+			</control>
+			<control type="group">
+				<posx>262</posx>
+				<posy>0</posy>
+				<control type="label">
+					<description>Page Count Label</description>
+					<width>300</width>
+					<height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>44white</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(20).NumItems,, $LOCALIZE[31025]]</label>
+				  <visible>IntegerGreaterThan(Container(20).NumItems,0)</visible>
 				</control>
 			</control>
 	  </control>

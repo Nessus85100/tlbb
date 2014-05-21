@@ -1,5 +1,6 @@
-<window>
-  <backgroundcolor>0</backgroundcolor>
+<?xml version="1.0" encoding="UTF-8"?>
+<window >
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<onload>ClearProperty(TVGuide.MondayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.TuesdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.WednesdayList,Home)</onload>
@@ -14,49 +15,50 @@
 	 <control type="group">
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
+    <include>DialogZoomInOutAnimation</include>
 		<visible>!Window.IsActive(addonsettings)</visible>
 		<control type="image">
 			<description>background image</description>
-			<texture background="true">windows/tvguide/bg.png</texture>
+			<texture background="true">windows/tvguide/bg_half.png</texture>
 		  <visible>!Skin.HasSetting(HideExtraInfo)</visible>
 		</control>
 		<control type="image">
 			<description>background image</description>
-			<texture background="true">windows/tvguide/bg2.png</texture>
+			<texture background="true">windows/tvguide/bg_full.png</texture>
 		  <visible>Skin.HasSetting(HideExtraInfo)</visible>
 		</control>
 
 		<control type="group">
 			<description>Extra Info</description>
-			<posx>61</posx>
-			<posy>125</posy>
+			<left>61</left>
+			<top>137</top>
 		  <visible>!Skin.HasSetting(HideExtraInfo)</visible>
-			<control type="image">
-				<description>BlackBorder</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>315</width>
-				<height>175</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
-				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
-			</control>
 			<!-- Preview Thumbs -->
 			<control type="image">
+				<description>BlackBorder</description>
+				<left>0</left>
+				<top>0</top>
+				<width>295</width>
+				<height>165</height>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
+				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
+			</control>
+			<control type="image">
 				<description>Landscape Preview Thumb</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>315</width>
-				<height>175</height>
+				<left>0</left>
+				<top>0</top>
+				<width>295</width>
+				<height>165</height>
         <fadetime>100</fadetime>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuideLandscape]</texture>
 				<bordersize>6</bordersize>
 				<visible>Stringcompare(Skin.String(PreviewThumb),1)</visible>
 			</control>
 			<control type="image">
 				<description>ClearLogo Preview Thumb</description>
-				<posx>23</posx>
-				<posy>35</posy>
+				<left>14</left>
+				<top>34</top>
 				<width>270</width>
 				<height>105</height>
         <fadetime>100</fadetime>
@@ -66,55 +68,56 @@
 			</control>
 			<control type="image">
 				<description>Fanart Preview Thumb</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>315</width>
-				<height>175</height>
+				<left>0</left>
+				<top>0</top>
+				<width>295</width>
+				<height>165</height>
         <fadetime>100</fadetime>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[TVGuideFanart]</texture>
 				<bordersize>6</bordersize>
 				<visible>Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>
+			<!-- Studio -->
 			<control type="image">
 				<description>BlackBorder</description>
-				<posx>1020</posx>
-				<posy>0</posy>
+				<left>1023</left>
+				<top>0</top>
 				<width>134</width>
 				<height>80</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
 				<visible>!Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>
 			<control type="image">
 				<description>Studio</description>
-				<posx>1020</posx>
-				<posy>0</posy>
+				<left>1023</left>
+				<top>0</top>
 				<width>134</width>
 				<height>80</height>
 				<colordiffuse>77ffffff</colordiffuse>
         <fadetime>100</fadetime>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
-				<texture background="true" border="6" fallback="flags/studio/fallbackstudio.png">$VAR[TVGuideStudio]</texture>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
+				<texture background="true" border="6" fallback="flags/studios/fallbackstudio.png">$VAR[TVGuideStudio]</texture>
 				<visible>!Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>
 			<!-- ClearArt -->
 			<control type="image">
 				<description>clearart</description>
-				<posx>902</posx>
-				<posy>45</posy>
+				<left>902</left>
+				<top>33</top>
 				<width>250</width>
 				<height>140</height>
         <fadetime>100</fadetime>
 				<colordiffuse>ddffffff</colordiffuse>
-				<aspectratio aligny="center" align="right">strecth</aspectratio>
+				<aspectratio aligny="center" align="right">stretch</aspectratio>
 				<texture background="true">$VAR[TVGuideClearart]</texture>
 				<visible>Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>			
 			<!-- Extra Info Labels -->
 			<control type="label">
-				<posx>325</posx>
-				<posy>5</posy>
+				<left>305</left>
+				<top>5</top>
 				<width>650</width>
 				<height>35</height>
 				<label>$VAR[NextAiredLabel]</label>
@@ -124,8 +127,8 @@
 				<textcolor>white</textcolor>
 			</control>
 			<control type="label">
-				<posx>327</posx>
-				<posy>35</posy>
+				<left>307</left>
+				<top>35</top>
 				<width>650</width>
 				<height>35</height>
 				<label>$VAR[NextAiredGenre]</label>
@@ -135,8 +138,8 @@
 				<textcolor>77white</textcolor>
 			</control>
 			<control type="grouplist">
-				<posx>327</posx>
-				<posy>90</posy>
+				<left>307</left>
+				<top>82</top>
 				<width>650</width>
         <height>35</height>
 			  <orientation>horizontal</orientation>
@@ -157,8 +160,8 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<posx>327</posx>
-				<posy>115</posy>
+				<left>307</left>
+				<top>107</top>
 				<width>650</width>
         <height>35</height>
 			  <orientation>horizontal</orientation>
@@ -189,8 +192,8 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<posx>327</posx>
-				<posy>140</posy>
+				<left>307</left>
+				<top>132</top>
 				<width>650</width>
         <height>35</height>
 			  <orientation>horizontal</orientation>
@@ -213,499 +216,512 @@
 
 		</control>
 
-
-		<control type="group">
-			<control type="grouplist" id="2000">
-				<posx>68</posx>
-				<posy>314</posy>
-				<width>1150</width>
-				<height>660</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>4</itemgap>
-				<control type="group">
-					<description>Monday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(200)</visible>
-			 <!-- <colordiffuse>90FFFFFF</colordiffuse> -->
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[11]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(200)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[11]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(200)</visible>
-					</control>
-					<control type="panel" id="200">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>200</ondown>
-						<onleft>200</onleft>
-						<onright>201</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(200)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(200)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(200).HasNext</visible>
-				  </control>
-				</control>
-				<control type="group">
-					<description>Tuesday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(201)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[12]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(201)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[12]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(201)</visible>
-					</control>
-					<control type="panel" id="201">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>201</ondown>
-						<onleft>200</onleft>
-						<onright>202</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(201)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(201)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(201).HasNext</visible>
-				  </control>
-				</control>
-				<control type="group">
-					<description>Wednesday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(202)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[13]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(202)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[13]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(202)</visible>
-					</control>
-					<control type="panel" id="202">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>202</ondown>
-						<onleft>201</onleft>
-						<onright>203</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(202)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(202)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(202).HasNext</visible>
-				  </control>
-				</control>
-				<control type="group">
-					<description>Thursday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(203)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[14]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(203)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[14]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(203)</visible>
-					</control>
-					<control type="panel" id="203">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>203</ondown>
-						<onleft>202</onleft>
-						<onright>204</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(203)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(203)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(203).HasNext</visible>
-				  </control>
-				</control>
-				<control type="group">
-					<description>Friday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(204)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[15]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(204)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[15]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(204)</visible>
-					</control>
-					<control type="panel" id="204">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>204</ondown>
-						<onleft>203</onleft>
-						<onright>205</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(204)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(204)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(204).HasNext</visible>
-				  </control>
-				</control>
-				<control type="group">
-					<description>Saturday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(205)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[16]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(205)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[16]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(205)</visible>
-					</control>
-					<control type="panel" id="205">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>205</ondown>
-						<onleft>204</onleft>
-						<onright>206</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(205)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(205)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(205).HasNext</visible>
-				  </control>
-				</control>
-				<control type="group">
-					<description>Sunday</description>
-					<width>160</width>
-					<height>320</height>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<texture>buttons/settings_fo.png</texture>
-					  <visible>Control.HasFocus(206)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[17]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-					  <visible>Control.HasFocus(206)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>160</width>
-						<height>35</height>
-						<label>$LOCALIZE[17]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-					  <visible>!Control.HasFocus(206)</visible>
-					</control>
-					<control type="panel" id="206">
-						<posx>0</posx>
-						<posy>39</posy>
-						<width>160</width>
-						<height>252</height>
-				    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
-						<onup>9000</onup>
-						<ondown>206</ondown>
-						<onleft>205</onleft>
-						<onright>206</onright>
-						<include>TVGuideLayout</include>
-					</control>
-					<control type="image">
-						<posx>70</posx>
-						<posy>290</posy>
-						<width>21</width>
-						<height>18</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<texture flipy="true">views/scrollbar/arrow.png</texture>
-						<animation type="Conditional" reversible="false" condition="!Control.HasFocus(206)">
-						  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
-						</animation>
-						<animation type="Conditional" reversible="false" condition="Control.HasFocus(206)" pulse="true">
-						  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
-							<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
-						</animation>
-					  <visible>Container(206).HasNext</visible>
-				  </control>
-				</control>
-			</control>
+		<control type="grouplist" id="2000">
+			<left>68</left>
+			<top>314</top>
+			<width>1145</width>
+			<height>660</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>4</itemgap>
+			<animation effect="slide" start="0,0" end="0,-168" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
 			<control type="group">
-	      <description>Current weekday image</description>
-	      <posx>68</posx>
-	      <posy>317</posy>
-	      <animation effect="slide" end="164,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[12])">Conditional</animation>
-	      <animation effect="slide" end="328,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[13])">Conditional</animation>
-	      <animation effect="slide" end="492,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[14])">Conditional</animation>
-	      <animation effect="slide" end="656,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[15])">Conditional</animation>
-	      <animation effect="slide" end="820,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[16])">Conditional</animation>
-	      <animation effect="slide" end="984,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[17])">Conditional</animation>
+				<description>Monday</description>
+				<width>160</width>
+				<height>320</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(200)</visible>
+		 <!-- <colordiffuse>90FFFFFF</colordiffuse> -->
 				</control>
-	    </control>
-	  </control>	    
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[11]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(200)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[11]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(200)</visible>
+				</control>
+				<control type="panel" id="200">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>200</ondown>
+					<onleft>200</onleft>
+					<onright>201</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(200)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(200)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(200).HasNext</visible>
+			  </control>
+			</control>
+			<control type="group">
+				<description>Tuesday</description>
+				<width>160</width>
+				<height>320</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(201)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[12]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(201)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[12]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(201)</visible>
+				</control>
+				<control type="panel" id="201">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>201</ondown>
+					<onleft>200</onleft>
+					<onright>202</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(201)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(201)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(201).HasNext</visible>
+			  </control>
+			</control>
+			<control type="group">
+				<description>Wednesday</description>
+				<width>160</width>
+				<height>320</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(202)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[13]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(202)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[13]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(202)</visible>
+				</control>
+				<control type="panel" id="202">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>202</ondown>
+					<onleft>201</onleft>
+					<onright>203</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(202)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(202)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(202).HasNext</visible>
+			  </control>
+			</control>
+			<control type="group">
+				<description>Thursday</description>
+				<width>160</width>
+				<height>320</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(203)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[14]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(203)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[14]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(203)</visible>
+				</control>
+				<control type="panel" id="203">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>203</ondown>
+					<onleft>202</onleft>
+					<onright>204</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(203)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(203)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(203).HasNext</visible>
+			  </control>
+			</control>
+			<control type="group">
+				<description>Friday</description>
+				<width>160</width>
+				<height>320</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(204)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[15]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(204)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[15]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(204)</visible>
+				</control>
+				<control type="panel" id="204">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>204</ondown>
+					<onleft>203</onleft>
+					<onright>205</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(204)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(204)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(204).HasNext</visible>
+			  </control>
+			</control>
+			<control type="group">
+				<description>Saturday</description>
+				<width>160</width>
+				<height>320</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(205)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[16]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(205)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[16]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(205)</visible>
+				</control>
+				<control type="panel" id="205">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>205</ondown>
+					<onleft>204</onleft>
+					<onright>206</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(205)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(205)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(205).HasNext</visible>
+			  </control>
+			</control>
+			<control type="group">
+				<description>Sunday</description>
+				<width>160</width>
+				<height>320</height>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<texture>buttons/settings_fo.png</texture>
+				  <visible>Control.HasFocus(206)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[17]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+				  <visible>Control.HasFocus(206)</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>160</width>
+					<height>35</height>
+					<label>$LOCALIZE[17]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+				  <visible>!Control.HasFocus(206)</visible>
+				</control>
+				<control type="panel" id="206">
+					<left>0</left>
+					<top>39</top>
+					<width>160</width>
+	        <include condition="!Skin.HasSetting(HideExtraInfo)">TVGuideLayoutHalf</include>
+	        <include condition="Skin.HasSetting(HideExtraInfo)">TVGuideLayoutFull</include>
+			    <scrolltime tween="Cubic" easing="Out">350</scrolltime>
+					<onup>9000</onup>
+					<ondown>206</ondown>
+					<onleft>205</onleft>
+					<onright>206</onright>
+					<include>TVGuideLayout</include>
+				</control>
+				<control type="image">
+					<left>70</left>
+					<top>290</top>
+					<width>21</width>
+					<height>18</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture flipy="true">views/scrollbar/arrow.png</texture>
+			    <animation effect="slide" start="0,0" end="0,167" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+					<animation type="Conditional" reversible="false" condition="!Control.HasFocus(206)">
+					  <effect type="fade" start="100" end="30" tween="sine" easing="inout" time="300"/>
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Control.HasFocus(206)" pulse="true">
+					  <effect type="fade" start="30" end="100" tween="sine" easing="inout" time="1200"/>
+						<effect type="slide" start="0,0" end="0,3" tween="sine" easing="inout" time="1200"/>
+					</animation>
+				  <visible>Container(206).HasNext</visible>
+			  </control>
+			</control>
+		</control>
+
+		<control type="group">
+      <description>Current weekday image</description>
+      <left>68</left>
+      <top>314</top>
+      <animation effect="slide" start="0,0" end="0,-168" condition="Skin.HasSetting(HideExtraInfo)">Conditional</animation>
+      <animation effect="slide" end="164,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[12])">Conditional</animation>
+      <animation effect="slide" end="328,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[13])">Conditional</animation>
+      <animation effect="slide" end="492,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[14])">Conditional</animation>
+      <animation effect="slide" end="656,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[15])">Conditional</animation>
+      <animation effect="slide" end="820,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[16])">Conditional</animation>
+      <animation effect="slide" end="984,0" time="0" condition="stringcompare(System.Date(DDD),$LOCALIZE[17])">Conditional</animation>
+			<control type="image">
+				<width>160</width>
+				<height>35</height>
+				<texture>dialogs/selectdialog/selected.png</texture>
+			</control>
+    </control>
+
 	 </control>
 
 	 <include>CommonItems</include>
@@ -714,22 +730,30 @@
    <!-- Top Options Controls -->
    <!-- ==================== -->
 	 <control type="group" id="9000">
-			<posx>30</posx>
-			<posy>25</posy>
+			<left>30</left>
+			<top>25</top>
 	    <include>ShutdownMenuAnimation</include>
 	    <include>OptionsTopMenuAnimation</include>
+	    <animation type="Conditional"  reversible="false" condition="!Window.IsActive(favourites)">
+	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
+	    </animation>
+	    <animation type="Conditional" reversible="false" condition="Window.IsActive(favourites)">
+	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
+	    </animation>
 	    <control type="group">
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>-12</posy>
+	        <left>0</left>
+	        <top>-12</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_options.png</texture>
 	        <aspectratio>stretch</aspectratio>
 	      </control>
 	      <control type="image.">
-	        <posx>0</posx>
-	        <posy>285</posy>
+	        <left>0</left>
+	        <top>285</top>
 					<width>380</width>
 					<height>22</height>
 					<texture>dialogs/menus/bottom.png</texture>
@@ -737,14 +761,14 @@
           <animation effect="slide" start="0,0" end="0,-74" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
 	      </control>
 				<control type="label">
-	        <posx>75</posx>
+	        <left>75</left>
 				  <label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
 				  <include>TopBigLabel</include>
 				</control>      
 	    </control>
 		  <control type="grouplist" id="9111">
-				<posx>0</posx>
-				<posy>63</posy>
+				<left>0</left>
+				<top>63</top>
 				<width>380</width>
 				<height>222</height>
 				<itemgap>0</itemgap>
@@ -766,6 +790,7 @@
 					<label>$LOCALIZE[31220]: $LOCALIZE[31011]</label>
 					<altlabel>$LOCALIZE[31220]: $LOCALIZE[31012]</altlabel>
 					<onclick>Skin.ToggleSetting(HideExtraInfo)</onclick>
+			    <onclick>Reloadskin</onclick>
 					<selected>Skin.HasSetting(HideExtraInfo)</selected>
 				</control>
 				<control type="button" id="9">
@@ -799,15 +824,15 @@
    <!-- Top Content Info -->
    <!-- ================ -->
    <control type="group">
-		<posx>45</posx>
-		<posy>25</posy>
+		<left>45</left>
+		<top>25</top>
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
 		<include>ShutdownMenuAnimation</include>
-	  <visible>!ControlGroup(9000).HasFocus</visible>
+	  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
 		<control type="grouplist">
-			<posx>55</posx>
-			<posy>0</posy>
+			<left>55</left>
+			<top>0</top>
 			<height>70</height>
 			<width>1000</width>
 			<align>left</align>
@@ -845,8 +870,8 @@
 			</control>
 		</control>
 		<control type="label">
-			<posx>2</posx>
-			<posy>45</posy>
+			<left>2</left>
+			<top>45</top>
 			<width>300</width>
 			<height>20</height>
 			<font>FontSize_18</font>

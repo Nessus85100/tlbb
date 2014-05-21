@@ -1,4 +1,5 @@
-<window id="123">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="123">
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
@@ -9,6 +10,15 @@
 		<control type="group">
 	    <include>DialogAnimation</include>
 			<visible>!Window.IsActive(SliderDialog) + !Window.IsVisible(FileBrowser)</visible>
+			<control type="image">
+				<posx>316</posx>
+				<posy>117</posy>
+				<width>649</width>
+				<height>494</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
+				<colordiffuse>FAFFFFFF</colordiffuse>
+				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
+			</control>
 			<control type="image">
 				<description>background image</description>
 				<include>FullscreenDimensions</include>

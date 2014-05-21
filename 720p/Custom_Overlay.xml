@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="50">
+<window  type="dialog" id="50">
 	<zorder>2</zorder>
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
@@ -970,8 +970,8 @@
 				<shadowcolor>99000000</shadowcolor>
 				<font>FontSize_22B</font>
 				<align>left</align>
-				<label>script-XBMC-Subtitles-main.xml</label>
-				<visible>Window.IsVisible(script-XBMC-Subtitles-main.xml)</visible>
+				<label>SubtitleSearch</label>
+				<visible>Window.IsVisible(SubtitleSearch)</visible>
 			</control>
 
 			<control type="label">
@@ -1035,7 +1035,7 @@
 		<control type="label">
 			<posx>5r</posx>
 			<posy>5</posy>
-			<width>780</width>
+			<width>1000</width>
 			<height>21</height>
 			<textcolor>FF0000FF</textcolor>
 			<shadowcolor>99000000</shadowcolor>
@@ -1050,7 +1050,7 @@
 		<control type="label">
 			<posx>5r</posx>
 			<posy>30</posy>
-			<width>780</width>
+			<width>1000</width>
 			<height>21</height>
 			<textcolor>FFFF0000</textcolor>
 			<shadowcolor>99000000</shadowcolor>

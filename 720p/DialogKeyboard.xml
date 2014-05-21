@@ -1,4 +1,5 @@
-<window id="103">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="103">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<controls>
 
@@ -6,10 +7,17 @@
 			<include>DialogAnimation</include>
 			<visible>!Window.IsVisible(NumericInput)</visible>
 			<control type="image">
+				<posx>243</posx>
+				<posy>155</posy>
+				<width>794</width>
+				<height>414</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
+			</control>
+			<control type="image">
 				<description>background image</description>
 				<include>FullscreenDimensions</include>
 				<texture>dialogs/keyboard/keyboard-bg.png</texture>
-			</control>				
+			</control>
 
 			<control type="label" id="311">
 				<description>Heading</description>

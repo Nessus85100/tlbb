@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
  <!-- ======================= -->
  <!-- ======= Live TV ======= -->
@@ -787,10 +788,12 @@
 					<onright>9000</onright>
 					<onup>10</onup>
 					<ondown>10</ondown>
+					<onback>9000</onback>
 					<pagecontrol>10</pagecontrol>
 					<scrolltime>250</scrolltime>
 					<timeblocks>40</timeblocks>
 					<rulerunit>6</rulerunit>
+				  <progresstexture border="0,59,19,19">windows/pvr/EPGProgressIndicator.png</progresstexture>
 					<rulerlayout height="50" width="40">
 						<control type="label" id="2">
 							<posx>10</posx>
@@ -1274,39 +1277,39 @@
 
  <include name="EPGTimelineInfo">  
 	  <control type="group">
-			<posx>378</posx>
-			<posy>630</posy>
+			<left>47</left>
+			<top>630</top>
 		  <animation effect="fade" end="100" time="350" tween="sine" easing="inout" condition="Control.HasFocus(10)">Visible</animation>
 		  <animation effect="fade" end="0" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(10)">Hidden</animation>
       <visible>Control.HasFocus(10)</visible>
-			<control type="image.">
-		    <posx>-108</posx>
-		    <posy>5</posy>
-		    <width>96</width>
-		    <height>96</height>
-		    <texture background="true" fallback="windows/pvr/DefaultTV.png">$INFO[Container(10).ListItem.Icon]</texture>
-		    <aspectratio align="right" aligny="top">keep</aspectratio>
+			<control type="image">
+		    <left>0</left>
+		    <top>0</top>
+		    <width>107</width>
+		    <height>84</height>
+		    <texture background="true" fallback="windows/pvr/LiveTV.png">$INFO[Container(10).ListItem.Icon]</texture>
+		    <aspectratio align="left" aligny="center">keep</aspectratio>
 			</control>
 			<control type="button">
 				<description>Time/Date</description>
-      	<posx>0</posx>
-      	<posy>0</posy>
-      	<width>890</width>
-        <font>FontSize_20</font>
-				<textcolor>white</textcolor>
+      	<left>128</left>
+      	<top>0</top>
+      	<width>1095</width>
+        <font>FontSize_20B</font>
+				<textcolor>99white</textcolor>
 				<shadowcolor>99000000</shadowcolor>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<align>left</align>
 				<aligny>top</aligny>
 				<textoffsetx>0</textoffsetx>
-      	<label>[B]$INFO[ListItem.Title][/B]</label>
+      	<label>$INFO[ListItem.Title]</label>
       	<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Genre, • ]</label2>
 			</control>
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>25</posy>
-				<width>890</width>
+				<left>128</left>
+				<top>25</top>
+				<width>1095</width>
 				<height>55</height>
         <font>FontSize_20</font>
 				<textcolor>99white</textcolor>
@@ -2311,7 +2314,7 @@
 								<height>45</height>
 								<align>center</align>
 								<aligny>center</aligny>
-	              <aspectratio>strecth</aspectratio>
+	              <aspectratio>stretch</aspectratio>
 							  <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 								<texture border="20">overlays/unwatched/thumbs/UnWatched_Banner.png</texture>
 							</control>
@@ -2405,7 +2408,7 @@
 								<height>45</height>
 								<align>center</align>
 								<aligny>center</aligny>
-	              <aspectratio>strecth</aspectratio>
+	              <aspectratio>stretch</aspectratio>
 							  <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 								<texture border="20">overlays/unwatched/thumbs/UnWatched_Banner.png</texture>
 							</control>
@@ -3163,7 +3166,7 @@
    </control>
  </include>
 
-
+<!-- *NOT USED*
 	<include name="LiveTV_EmptyLayout">
 		<control type="image">
       <description>Title Sep</description>
@@ -3193,6 +3196,6 @@
       <include>VisibleFadeEffect2</include>
 		</control>
 	</include>
-
+-->
 
 </includes>

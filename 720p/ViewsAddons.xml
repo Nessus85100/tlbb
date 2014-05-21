@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
 	<!-- ======================== -->
 	<!-- ==== List View "50" ==== -->
@@ -38,7 +39,7 @@
 				<posy>172</posy>
 				<width>223</width>
 				<height>222</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true">thumbs/thumb_back2.png</texture>
 				<bordersize>5</bordersize>
 			</control>
@@ -68,7 +69,7 @@
 				<posy>172</posy>
 				<width>374</width>
 				<height>222</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true">thumbs/thumb_back2.png</texture>
 				<bordersize>5</bordersize>
 			</control>
@@ -308,7 +309,7 @@
 							<posy>5</posy>
 			        <width>586</width>
 							<height>36</height>	
-					    <aspectratio align="center" aligny="center">strecth</aspectratio>
+					    <aspectratio align="center" aligny="center">stretch</aspectratio>
 				      <colordiffuse>22ffffff</colordiffuse>
 				      <texture background="true">views/list/list_fo.png</texture>
 						</control>
@@ -441,7 +442,7 @@
 				<pagecontrol>60</pagecontrol>
         <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 				<preloaditems>2</preloaditems>
-			  <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)]</visible>
+			  <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] + !substring(Container.FolderPath,plugin://plugin.video.youtube)</visible>
 				<itemlayout height="265" width="244">
 					<control type="image">
 						<posx>-5</posx>
@@ -451,38 +452,38 @@
 						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 					  <texture background="true">$VAR[AddonStatus]</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
 					</control>
 					<control type="label">
-						<posx>128</posx>
+						<posx>125</posx>
 						<posy>220</posy>
-						<width>210</width>
+						<width>200</width>
 						<height>40</height>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
@@ -490,13 +491,13 @@
 						<scroll>false</scroll>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[BannersListMusicLabel]</label>
 		        <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<posx>90</posx>
 						<posy>220</posy>
-						<width>210</width>
+						<width>200</width>
 						<height>40</height>
 						<font>BackFont_22</font>
 						<textcolor>99white</textcolor>
@@ -515,20 +516,20 @@
 						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true">empty_icon.png</texture>
 						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 						<colordiffuse>FF04aeda</colordiffuse>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
@@ -536,38 +537,38 @@
 					  <visible>![SubString(Container.FolderPath,addons://sources,left) | SubString(Container.FolderPath,plugin://plugin,left) | Container.Content(Files) | [Container.HasFolders + !IsEmpty(ListItem.FolderName)] | [Container.HasFiles + !IsEmpty(ListItem.FolderName)] | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Actors) | Container.Content(Genres) | Window.IsVisible(addonbrowser)] | IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
 					  <bordersize>6</bordersize>
-					  <visible>[SubString(Container.FolderPath,addons://sources,left) | SubString(Container.FolderPath,plugin://plugin,left) | Container.Content(Files) | [Container.HasFolders + !IsEmpty(ListItem.FolderName)]] | [Container.HasFiles + !IsEmpty(ListItem.FolderName)] | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Actors) | Container.Content(Genres) | Window.IsVisible(addonbrowser)] + !IsEmpty(ListItem.Thumb)</visible>
+					  <visible>[SubString(Container.FolderPath,addons://sources,left) | SubString(Container.FolderPath,plugin://plugin,left) | Container.Content(Files) | [Container.HasFolders + !IsEmpty(ListItem.FolderName)] | [Container.HasFiles + !IsEmpty(ListItem.FolderName)] | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Actors) | Container.Content(Genres) | Window.IsVisible(addonbrowser)] + !IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
+						<posx>20</posx>
+						<posy>25</posy>
+						<width>210</width>
+						<height>200</height>
 					  <texture background="true">$VAR[AddonStatus]</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<bordersize>6</bordersize>
 					</control>
 					<control type="label">
-						<posx>128</posx>
+						<posx>125</posx>
 						<posy>220</posy>
-						<width>210</width>
+						<width>200</width>
 						<height>40</height>
 						<textcolor>blue</textcolor>
 						<shadowcolor>99000000</shadowcolor>
@@ -575,12 +576,13 @@
 						<scrollspeed>35</scrollspeed>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[BannersListMusicLabel]</label>
+		        <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<posx>90</posx>
 						<posy>220</posy>
-						<width>210</width>
+						<width>200</width>
 						<height>40</height>
 						<font>BackFont_22</font>
 						<textcolor>blue</textcolor>

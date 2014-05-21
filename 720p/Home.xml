@@ -1,42 +1,87 @@
-<window id="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="0">
 	<defaultcontrol always="true">20</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
   <onload condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetString(TrailersAddon_Path,plugin.video.hdtrailers_net)</onload>
-  <onload condition="!Skin.HasSetting(HideHomeMenuFavoritesButton)">RunScript(script.favourites)</onload>
-<!--	<onload>RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(CustomHomeFeedURL)],imagecaching=false,limit=10)</onload>
-	<onload condition="IsEmpty(Skin.String(CustomHomeFeedURL))">RunScript(script.rssclient,guiless,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=4677eed472058f27c407989f58fb12fd&_render=rss,imagecaching=false,limit=10)</onload> -->
+  <onload condition="[System.HasAddon(script.favourites) + !Skin.HasSetting(HideHomeMenuFavouritesButton)]">RunScript(script.favourites)</onload>
+  <!-- Rotten Tomatoes -->
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetInTheatersMovies)]">RunScript(script.extendedinfo,info=intheaters)</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetComingSoonMovies)]">RunScript(script.extendedinfo,info=comingsoon)</onload>
+  <!-- The Movie Database -->
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetTopRatedMovies)]">RunScript(script.extendedinfo,info=topratedmovies)</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetPopularMovies)]">RunScript(script.extendedinfo,info=popularmovies)</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetTopRatedTVShows)]">RunScript(script.extendedinfo,info=topratedtvshows)</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetPopularTVShows)]">RunScript(script.extendedinfo,info=populartvshows)</onload>
+  <!-- Trakt Utilities -->
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetTrendingMovies)]">RunScript(script.extendedinfo,info=trendingmovies)</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetTrendingTVShows)]">RunScript(script.extendedinfo,info=trendingshows)</onload>
+
+  <!-- Various Info -->
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetTopArtists)]">RunScript(script.extendedinfo,info=topartists)</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowHomeWidgetNearConcerts)]">RunScript(script.extendedinfo,info=nearevents)</onload>
+  <onload condition="IsEmpty(Skin.String(RSSVideoFeedName))">Skin.SetString(RSSVideoFeedName,Default (TLBB))</onload>
+  <onload condition="IsEmpty(Skin.String(RSSVideoFeedURL))">Skin.SetString(RSSVideoFeedURL,Default (TLBB))</onload>
+  <onload condition="[System.HasAddon(script.extendedinfo) + [Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnVideos)] | [Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMovies)] | [Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMusic)] | [Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnChannels)]]">RunScript(script.extendedinfo,info=json,feed=$VAR[RSSVideoFeedURL])</onload>
+  
+<!-- *NOT USED*
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,backend=true)</onload>
+Rotten Tomatoes
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=intheaters)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=comingsoon)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=boxoffice)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=opening)</onload>
+The Movie Database
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=incinemas)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=upcoming)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=popularmovies)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=topratedmovies)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=populartvshows)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=topratedtvshows)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=similarmovies)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=onairtvshows)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=airingtodaytvshows)</onload>
+Trakt Utilities
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingmovies)</onload>
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingshows)</onload>	
+  <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=airingshows)</onload>	
+
+
+  <onload>RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(CustomHomeFeedURL)],imagecaching=false,limit=10)</onload>
+	<onload condition="IsEmpty(Skin.String(CustomHomeFeedURL))">RunScript(script.rssclient,guiless,feed=http://pipes.yahoo.com/pipes/pipe.run?_id=4677eed472058f27c407989f58fb12fd&_render=rss,imagecaching=false,limit=10)</onload>
+-->
+
 	<controls>
 		<!-- Background Includes -->
 		<include>BackgroundContent</include>
 		<include>RecentAndSkinWidgetsFanart</include>
 		<include>BackgroundVignette</include>
-		<!-- Main Home Menu Wraplist -->
-		<include>HomeMenuWraplist</include>
-	  <!-- Home Widgets -->
 	  <control type="group">
 	    <include>OpenCloseSlideAnimation</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)">HomeWidgetRecentMovies</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)">HomeWidgetRecentTVShows</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)">HomeWidgetRecentAlbums</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)">HomeWidgetCustomVideoAddons</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetFavourites)">HomeWidgetFavourites</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetSettings)">HomeWidgetSettings</include>
-			<include condition="Skin.HasSetting(ShowHomeWidgetWeather)">HomeWidgetWeather</include>
+			<!-- Main Home Menu Wraplist -->
+			<include>HomeMenuWraplist</include>
+	    <!-- Home Widgets -->
+			<include>HomeWidgetRSSVideoFeeds</include>
+			<include>HomeWidgetsMovies</include>
+			<include>HomeWidgetsTVShows</include>
+			<include>HomeWidgetsMusic</include>
+			<include>HomeWidgetsCustomAddons</include>
+			<include>HomeWidgetFavourites</include>
+			<include>HomeWidgetSettings</include>
+			<include>HomeWidgetWeather</include>
 			<include condition="!Skin.HasSetting(HideMoviesSubMenu)">HomeSubMenuMovies</include>
 			<include condition="!Skin.HasSetting(HideTVShowsSubMenu)">HomeSubMenuTVShows</include>
 			<include condition="!Skin.HasSetting(HideMusicSubMenu)">HomeSubMenuMusic</include>
 			<include condition="!Skin.HasSetting(HideSettingsSubMenu)">HomeSubMenuSettings</include>
+			<include condition="!Skin.HasSetting(HideAddonsSubMenu)">HomeSubMenuAddons</include>
+			<include condition="!Skin.HasSetting(HideLiveTVSubMenu)">HomeSubMenuLiveTV</include>
 			<include>SkinWidgetsLists</include>
-			<include>HomeSubMenusArrows</include>
 	  </control>
 	  <!-- Home Now Playing -->
 		<include>HomeNowPlaying</include>		
 	  <!-- RSS Feed -->
     <include>RSSFeed</include> 		
-	  <!-- TLBB Logo -->
 		<include>CommonDialogsFadeOutBG</include>
-		<include>TLBBLogo</include>
 	  <!-- Home TopSection -->
 		<include>SkinWidgetsContentInfo</include>
 		<include>TopHomeMenu</include>

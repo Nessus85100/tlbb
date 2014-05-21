@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
 	<include name="OpenCloseSlideAnimation">
     <animation type="WindowOpen" reversible="false">
@@ -115,7 +116,7 @@
       <effect type="fade" start="20" end="100" time="250" delay="100" tween="sine" easing="out" />
     </animation>
   </include>
-
+<!-- *NOT USED*
 	<include name="MediaInfoAnimation">
 		<animation type="Conditional" reversible="false" condition="!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(script-globalsearch-infodialog.xml) ">
       <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -126,7 +127,7 @@
       <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
     </animation>
   </include>
-
+-->
 
 	<include name="DialogZoomInOutAnimation">
 		<animation type="Conditional" reversible="false" condition="
@@ -165,7 +166,9 @@
 		| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
 		| Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		| Window.IsActive(script-RSS_Editor-rssEditor.xml) 
-		| Window.IsActive(script-RSS_Editor-setEditor.xml)">
+		| Window.IsActive(script-RSS_Editor-setEditor.xml)
+		| Window.IsActive(script-Actors-DialogInfo.xml)
+		| Window.IsActive(script-Actors-DialogVideoInfo.xml)">
       <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
       <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
 		</animation>
@@ -205,7 +208,9 @@
 		+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
 		+ !Window.IsActive(script-XBMC_Lyrics-settings.xml) 
 		+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) 
-		+ !Window.IsActive(script-RSS_Editor-setEditor.xml)">
+		+ !Window.IsActive(script-RSS_Editor-setEditor.xml)
+		+ !Window.IsActive(script-Actors-DialogInfo.xml)
+		+ !Window.IsActive(script-Actors-DialogVideoInfo.xml)">
       <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
       <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
 		</animation>
@@ -414,11 +419,11 @@
 	  </animation>
 	  <animation type="Visible" reversible="false">
       <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-      <effect type="slide" start="0,-35" end="0,0" time="350" tween="cubic" easing="out" />
+      <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
 	  </animation>
 	  <animation type="Hidden" reversible="false">
       <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-      <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+      <effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
 	  </animation>
 	</include>
 
@@ -531,7 +536,7 @@
     <animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(83) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
     <animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(83) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
 	</include>
-
+<!-- *NOT USED*
 	<include name="VisibleFadeEffectRecentAlt">
     <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
     <animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
@@ -561,7 +566,7 @@
     <animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="Control.HasFocus(82)" reversible="false">Conditional</animation>
     <animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81)" reversible="false">Conditional</animation>
 	</include>	
-
+-->
 	<include name="BackgroundFade">
 		<animation effect="fade" time="300" tween="sine" easing="out">Visible</animation>
 		<animation effect="fade" time="300" tween="sine" easing="in">Hidden</animation>	

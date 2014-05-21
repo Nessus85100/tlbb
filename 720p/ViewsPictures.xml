@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
 	<!-- ======================== -->
 	<!-- ==== List View "50" ==== -->
@@ -149,7 +150,7 @@
 				<posy>172</posy>
 				<width>223</width>
 				<height>222</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true">thumbs/thumb_back2.png</texture>
 				<bordersize>5</bordersize>
 			</control>
@@ -179,7 +180,7 @@
 				<posy>172</posy>
 				<width>374</width>
 				<height>222</height>
-				<aspectratio aligny="center" align="center">strecth</aspectratio>
+				<aspectratio aligny="center" align="center">stretch</aspectratio>
 				<texture background="true">thumbs/thumb_back2.png</texture>
 				<bordersize>5</bordersize>
 			</control>
@@ -408,7 +409,7 @@
 							<posy>3</posy>
 							<width>686</width>
 							<height>40</height>	
-							<aspectratio align="center" aligny="center">strecth</aspectratio>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<colordiffuse>22ffffff</colordiffuse>
 							<texture background="true" border="20,0,20,0">views/list/list_fo.png</texture>
 						</control>
@@ -547,7 +548,7 @@
 							<posy>3</posy>
 			        <width>586</width>
 							<height>40</height>	
-					    <aspectratio align="center" aligny="center">strecth</aspectratio>
+					    <aspectratio align="center" aligny="center">stretch</aspectratio>
 				      <colordiffuse>22ffffff</colordiffuse>
 				      <texture background="true">views/list/list_fo.png</texture>
 						</control>

@@ -1,33 +1,36 @@
-<window>
-	<defaultcontrol always="true">9999</defaultcontrol>
+<?xml version="1.0" encoding="UTF-8"?>
+<window >
+	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor> 
-	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)">RunScript(script.tv.show.next.aired,silent=True)</onload>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<onload condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
+  <animation type="WindowOpen" reversible="false">
+    <effect type="fade" end="100" delay="600" time="640" />
+  </animation>
 	<controls>
-		<control type="button" id="9999">
-			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ReplaceWindow(1111)</onfocus>
-      <onfocus>SetFocus(50)</onfocus>
-			<onfocus>SetFocus(100)</onfocus>
-			<onfocus>Action(left)</onfocus>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-		<control type="button" id="100">
-			<description>trigger</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
-		</control>
-		<control type="button" id="100">
-			<description>trigger with startup Playlist</description>
-			<onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
-		</control>
 		<include>BackgroundContent</include>
 		<include>BackgroundVignette</include>
+		<control type="button" id="10">
+		  <include>TopButton</include>
+			<onfocus condition="!Skin.HasSetting(FirstTimeRemoteSync)">ReplaceWindow(1113)</onfocus>
+			<onfocus condition="Skin.HasSetting(FirstTimeRemoteSync)">SetFocus(11)</onfocus>
+		</control>
+		<control type="button" id="11">
+		  <include>TopButton</include>
+			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ReplaceWindow(1111)</onfocus>
+			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">12</onfocus>
+			<onfocus condition="Skin.HasSetting(FirstTimeRun)">SetFocus(12)</onfocus>
+		</control>
+		<control type="button" id="12">
+		  <include>TopButton</include>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<animation effect="fade" delay="3900" end="100" time="350">Focus</animation>
+		</control>
+		<control type="group" id="9333">
+			<left>545</left>
+			<top>245</top>
+		  <include>BusyAnimation</include>
+			<visible>![Window.IsActive(busydialog) | Window.IsActive(1113) | Window.IsActive(busy.xml)]</visible>
+		</control>
 	</controls>
 </window>

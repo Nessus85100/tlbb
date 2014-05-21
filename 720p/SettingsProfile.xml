@@ -1,7 +1,8 @@
-<window id="34">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="34">
 	<defaultcontrol always="true">9001</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<controls>
 	 <include>BackgroundItems</include>
 
@@ -9,16 +10,17 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <include>DialogZoomInOutAnimation</include>
+		<visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(selectdialog) + !Window.IsActive(busy.xml)</visible>
 		<control type="image">
 		  <include>FullscreenDimensions</include>
 		  <texture background="true">windows/settings/bg_settings.png</texture>
 		</control>
 		<control type="group" id="9001">
-			<posx>98</posx>
-			<posy>166</posy>
+			<left>98</left>
+			<top>166</top>
 			<control type="list" id="9010">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>295</width>
 				<height>399</height>
 				<itemgap>1</itemgap>
@@ -29,16 +31,9 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="50" width="295">
-					<control type="image.">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>295</width>
-						<height>49</height>
-						<texture>buttons/catbullet_nf.png</texture>
-					</control>
 					<control type="label">
-						<posx>280</posx>
-						<posy>0</posy>
+						<left>280</left>
+						<top>0</top>
 						<width>295</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
@@ -49,15 +44,16 @@
 				</itemlayout>
 				<focusedlayout height="50" width="295">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>295</width>
 						<height>49</height>
 						<texture>windows/settings/settings_left_fo.png</texture>
+            <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9010)">Conditional</animation>
 					</control>
 					<control type="label">
-						<posx>280</posx>
-						<posy>0</posy>
+						<left>280</left>
+						<top>0</top>
 						<width>295</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
@@ -69,24 +65,22 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<label>20096</label>
+						<label>$LOCALIZE[20096]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="2">
-						<label>13200</label>
+						<label>$LOCALIZE[13200]</label>
 						<onclick>noop</onclick>
 					</item>
 				</content>
 			</control>
 
-
 			<control type="group" id="9002">
-
 				<control type="grouplist" id="9020">
 					<include>CloseAnimation</include>
 					<visible>Container(9010).Hasfocus(1)</visible>
-					<posx>302</posx>
-					<posy>0</posy>
+					<left>302</left>
+					<top>0</top>
 					<width>782</width>
 					<height>399</height>
 					<itemgap>1</itemgap>
@@ -97,16 +91,22 @@
 					<ondown>9020</ondown>
 					<control type="radiobutton" id="4">
 	          <include>SettingsRadioButton</include>
-						<label>31153</label>
+						<label>$LOCALIZE[31153]</label>
+					</control>
+					<control type="button" id="5">
+	          <include>SettingsButton</include>
+						<label>$LOCALIZE[33084]</label>
+					  <label2>$INFO[System.ProfileAutoLogin]</label2>
+					  <enable>!System.HasLoginScreen</enable>
 					</control>
 				</control>
 
 				<control type="group" id="9030">
 					<include>CloseAnimation</include>
 					<visible>Container(9010).Hasfocus(2)</visible>
-					<control type="list" id="2">
-						<posx>302</posx>
-						<posy>0</posy>
+					<control type="panel" id="2">
+						<left>302</left>
+						<top>0</top>
 						<width>782</width>
 						<height>399</height>
 						<itemgap>1</itemgap>
@@ -118,8 +118,8 @@
 						<scrolltime>300</scrolltime>
 						<itemlayout height="50" width="782">
 							<control type="label">
-								<posx>15</posx>
-								<posy>0</posy>
+								<left>15</left>
+								<top>0</top>
 								<width>782</width>
 								<height>49</height>
 						    <font>FontSize_20</font>
@@ -131,16 +131,15 @@
 						</itemlayout>
 						<focusedlayout height="50" width="782">
 							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
+								<left>0</left>
+								<top>0</top>
 								<width>782</width>
 								<height>49</height>
 						    <texture>windows/settings/settings_right_fo.png</texture>
-								<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(2)">Conditional</animation>
 							</control>
 							<control type="label">
-								<posx>15</posx>
-								<posy>0</posy>
+								<left>15</left>
+								<top>0</top>
 								<width>782</width>
 								<height>49</height>
 						    <font>FontSize_20</font>
@@ -151,8 +150,8 @@
 	              <visible>!Control.HasFocus(2)</visible>
 							</control>
 							<control type="label">
-								<posx>15</posx>
-								<posy>0</posy>
+								<left>15</left>
+								<top>0</top>
 								<width>782</width>
 								<height>49</height>
 						    <font>FontSize_20</font>
@@ -165,23 +164,20 @@
 						</focusedlayout>
 					</control>
 				</control>
-				
 			</control>
-
-
 		</control>
 
 		<!-- ============================ -->
     <!-- == Header & Footer Labels == -->
 		<!-- ============================ -->
 		<control type="group">
-			<posx>120</posx>
-			<posy>163</posy>
+			<left>120</left>
+			<top>163</top>
 			<visible>Window.IsVisible(Profiles)</visible>
 			<control type="label">
 				<description>Header Category Label</description>
-				<posx>0</posx>
-				<posy>-50</posy>
+				<left>0</left>
+				<top>-50</top>
 				<width>1075</width>
 				<height>50</height>
 				<font>FontSize_36</font>
@@ -193,12 +189,11 @@
 			</control>
 		  <control type="textbox">
 				<description>Category Description</description>
-				<posx>0</posx>
-				<posy>425</posy>
+				<left>0</left>
+				<top>425</top>
 				<width>1045</width>
 				<height>30</height>
 				<textcolor>33white</textcolor>
-				<shadowcolor>44333333</shadowcolor>
 				<font>FontSize_20</font>
 				<align>left</align>
 				<scroll>false</scroll>

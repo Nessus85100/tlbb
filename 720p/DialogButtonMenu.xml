@@ -1,4 +1,5 @@
-<window type="buttonMenu" id="111">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="buttonMenu" id="111">
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>Dialog.Close(playercontrols)</onload>
 	<onload>Dialog.Close(favourites)</onload>
@@ -136,7 +137,7 @@
 		    <onclick>Dialog.Close(all,true)</onclick>
 		    <onclick>Action(reloadkeymaps)</onclick>
 		    <onclick>XBMC.ReloadSkin()</onclick>
-				<label>Reload Skin</label>
+				<label>$LOCALIZE[20183]</label>
 			</control>
 			<control type="button" id="17">
 				<description>Update firmware button</description>

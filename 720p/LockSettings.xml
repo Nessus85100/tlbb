@@ -1,10 +1,19 @@
-<window id="131">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="131">
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
 	
 	 <control type="group">
 		<include>DialogAnimation</include>
 		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(DialogGamepad.xml) + !Window.IsVisible(busydialog) + !Window.IsActive(okdialog)</visible>
+		<control type="image">
+			<left>316</left>
+			<top>122</top>
+			<width>647</width>
+			<height>472</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -19,8 +28,8 @@
 		</control>
 		<control type="label">
 			<description>Head Label</description>
-			<posx>340</posx>
-			<posy>185</posy>
+			<left>340</left>
+			<top>170</top>
 			<width>600</width>
 			<font>FontSize_36</font>
 			<textcolor>white</textcolor>
@@ -31,10 +40,10 @@
 		</control>
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
-			<posx>363</posx>
-			<posy>229</posy>
-			<width>555</width>
-			<height>302.2</height>
+			<left>363</left>
+			<top>214</top>
+			<width>553</width>
+			<height>302</height>
 			<itemgap>4</itemgap>
 			<onleft>10000</onleft>
 			<onright>10000</onright>
@@ -62,12 +71,12 @@
 		</control>
 
 	  <control type="group" id="10000">
-			<posx>356</posx>
-			<posy>540</posy>
+			<left>356</left>
+			<top>525</top>
       <!-- Buttons -->
 			<control type="grouplist" id="10001">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>0</width>
 				<height>0</height>
 				<itemgap>0</itemgap>

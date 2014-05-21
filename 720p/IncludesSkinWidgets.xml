@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
 	<include name="SkinWidgetsContentInfo">
 	 <control type="group">
@@ -52,7 +53,7 @@
 		    	<width>56</width>
 		    	<height>40</height>
 					<colordiffuse>ddwhite</colordiffuse>
-			    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+			    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
 		    	<texture background="true">icons/tlbb.png</texture>
 		    </control>
 				<control type="label">
@@ -106,7 +107,7 @@
 		    	<width>56</width>
 		    	<height>40</height>
 					<colordiffuse>ddwhite</colordiffuse>
-			    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+			    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
 		    	<texture background="true">icons/tlbb.png</texture>
 		    </control>
 				<control type="label">
@@ -160,7 +161,7 @@
 		    	<width>56</width>
 		    	<height>40</height>
 					<colordiffuse>ddwhite</colordiffuse>
-			    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+			    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
 		    	<texture background="true">icons/tlbb.png</texture>
 		    </control>
 				<control type="label">
@@ -1318,7 +1319,6 @@
 		        <colordiffuse>FFbbbbbb</colordiffuse>
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
 						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(RandomAlbum1)]</texture>
-						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
 						<posy>120</posy>
@@ -1461,12 +1461,12 @@
 		</control>
 	 </control>
 	</include>
-
+<!-- *NOT USED*
 	<include name="HomeSubMenusArrows">
 	 <control type="group">
 		<posx>629</posx>
 		<posy>295r</posy>
-    <!-- <animation effect="slide" start="0,0" end="0,55" time="250" tween="Quadratic" easing="out" condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedTVShows)] | [Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedMovies)] | [Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedAlbums)]">Conditional</animation> -->
+<animation effect="slide" start="0,0" end="0,55" time="250" tween="Quadratic" easing="out" condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedTVShows)] | [Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedMovies)] | [Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedAlbums)]">Conditional</animation>
 		<control type="group">
      <animation type="WindowOpen">
         <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -1500,4 +1500,5 @@
 		</control>
 	 </control>
   </include>
+-->
 </includes>

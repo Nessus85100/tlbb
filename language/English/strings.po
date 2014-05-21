@@ -243,63 +243,63 @@ msgid "Hide Home NowPlaying Music Info"
 msgstr ""
 
 msgctxt "#31104"
-msgid "Show Search Button"
+msgid "Show Search Section"
 msgstr ""
 
 msgctxt "#31105"
-msgid "Show Trailers Button"
+msgid "Show Trailers Section"
 msgstr ""
 
 msgctxt "#31106"
-msgid "Hide Movies Button"
+msgid "Show Movies Section"
 msgstr ""
 
 msgctxt "#31107"
-msgid "Hide TV Shows Button"
+msgid "Show TV Shows Section"
 msgstr ""
 
 msgctxt "#31108"
-msgid "Hide Music Button"
+msgid "Show Music Section"
 msgstr ""
 
 msgctxt "#31109"
-msgid "Hide Pictures Button"
+msgid "Show Pictures Section"
 msgstr ""
 
 msgctxt "#31110"
-msgid "Hide Programs Button"
+msgid "Show Programs Section"
 msgstr ""
 
 msgctxt "#31111"
-msgid "Hide Channels Button"
+msgid "Show Channels Section"
 msgstr ""
 
 msgctxt "#31112"
-msgid "Hide Weather Button"
+msgid "Show Weather Section"
 msgstr ""
 
 msgctxt "#31113"
-msgid "Hide Settings Button"
+msgid "Show Settings Section"
 msgstr ""
 
 msgctxt "#31114"
-msgid "Show Videos Button"
+msgid "Show Videos Section"
 msgstr ""
 
 msgctxt "#31115"
-msgid "Show DVD Button"
+msgid "Show Live TV Section"
 msgstr ""
 
 msgctxt "#31116"
-msgid "Show Music Videos Button"
+msgid "Show Music Videos Section"
 msgstr ""
 
 msgctxt "#31117"
-msgid "Home Menu Music Button opens..."
+msgid "Music Button opens..."
 msgstr ""
 
 msgctxt "#31118"
-msgid "Home Menu Add-ons Button opens..."
+msgid "Add-ons Button opens..."
 msgstr ""
 
 msgctxt "#31119"
@@ -327,7 +327,7 @@ msgid "Flashing Lights"
 msgstr ""
 
 msgctxt "#31125"
-msgid "Edit Info"
+msgid "Edit DB Info"
 msgstr ""
 
 msgctxt "#31126"
@@ -363,7 +363,7 @@ msgid "Custom Background"
 msgstr ""
 
 msgctxt "#31134"
-msgid "Edit Background for Media Type"
+msgid "Customize Home Menu"
 msgstr ""
 
 msgctxt "#31135"
@@ -435,11 +435,11 @@ msgid "Show RSS feed in whole skin"
 msgstr ""
 
 msgctxt "#31152"
-msgid "Hide Flagging read from video filenames [COLOR=55white](Blu-ray, HD-DVD)[/COLOR]"
+msgid "Download [COLOR=selected]logo.png[/COLOR] for all Movies"
 msgstr ""
 
 msgctxt "#31153"
-msgid "Enable Login Screen"
+msgid "Enable login screen"
 msgstr ""
 
 msgctxt "#31154"
@@ -487,11 +487,11 @@ msgid "Views"
 msgstr ""
 
 msgctxt "#31165"
-msgid "Show Add-ons Button"
+msgid "Show Add-ons Section"
 msgstr ""
 
 msgctxt "#31166"
-msgid "Hide Favourites Button"
+msgid "Show Favourites Section"
 msgstr ""
 
 msgctxt "#31167"
@@ -507,7 +507,7 @@ msgid "Show Home RecentlyAdded Albums Widget"
 msgstr ""
 
 msgctxt "#31170"
-msgid "Show Home Custom Video Add-ons Widget"
+msgid "Custom Video Add-ons Widget"
 msgstr ""
 
 msgctxt "#31171"
@@ -523,19 +523,68 @@ msgid "Custom Home Menu Buttons"
 msgstr ""
 
 msgctxt "#31174"
-msgid "Show Home Favourites Widget"
+msgid "Favourites Widget"
 msgstr ""
 
 msgctxt "#31175"
-msgid "Show Home Weather Widget"
+msgid "Weather Widget"
 msgstr ""
 
 msgctxt "#31176"
-msgid "Show Home Settings Widget"
+msgid "Settings Widget"
 msgstr ""
 
+msgctxt "#31177"
+msgid "Cast Info"
+msgstr ""
 
-#empty strings from id 31177 to 31189
+msgctxt "#31178"
+msgid "Press DOWN for more info"
+msgstr ""
+
+msgctxt "#31179"
+msgid "Show Library Totals"
+msgstr ""
+
+msgctxt "#31180"
+msgid "Search on YouTube"
+msgstr ""
+
+msgctxt "#31181"
+msgid "RecentlyAdded Widget"
+msgstr ""
+
+msgctxt "#31182"
+msgid "Download [COLOR=selected]disc.png[/COLOR] for all Movies"
+msgstr ""
+
+msgctxt "#31183"
+msgid "SubMenu"
+msgstr ""
+
+msgctxt "#31184"
+msgid "Custom Program Add-ons Widget"
+msgstr ""
+
+msgctxt "#31185"
+msgid "Settings Level:"
+msgstr ""
+
+msgctxt "#31186"
+msgid "Reset Level"
+msgstr ""
+
+msgctxt "#31187"
+msgid "Reset Skin"
+msgstr ""
+
+msgctxt "#31188"
+msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
+msgstr ""
+
+msgctxt "#31189"
+msgid "Button"
+msgstr ""
 
 msgctxt "#31190"
 msgid "Custom Button"
@@ -546,7 +595,6 @@ msgid "Custom Add-on"
 msgstr ""
 
 #empty strings from id 31192 to 31199
-
 #Scripts labels
 
 msgctxt "#31200"
@@ -566,7 +614,7 @@ msgid "New Search"
 msgstr ""
 
 msgctxt "#31204"
-msgid "-"
+msgid "Please check your weather settings"
 msgstr ""
 
 msgctxt "#31205"
@@ -634,11 +682,11 @@ msgid "Extra Info"
 msgstr ""
 
 msgctxt "#31221"
-msgid "Get Extra Art"
+msgid "Extra Art"
 msgstr ""
 
 msgctxt "#31222"
-msgid "Get TV Tune"
+msgid "TV Tunes"
 msgstr ""
 
 msgctxt "#31223"
@@ -685,9 +733,7 @@ msgctxt "#31233"
 msgid "Chance of Precipitation"
 msgstr ""
 
-msgctxt "#31234"
-msgid "Fetching Forecast Info for..."
-msgstr ""
+#empty string 31234
 
 msgctxt "#31235"
 msgid "Current Forecast"
@@ -761,7 +807,11 @@ msgctxt "#31252"
 msgid "All Music"
 msgstr ""
 
-#empty strings from id 31253 to 31279
+msgctxt "#31253"
+msgid "Local subtitle available"
+msgstr ""
+
+#empty strings from id 31254 to 31279
 #Playlist Editor labels
 
 msgctxt "#31280"
@@ -855,7 +905,11 @@ msgctxt "#31315"
 msgid "Hide Scrolling Titles"
 msgstr ""
 
-#empty strings from id 31316 to 31349
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr ""
+
+#empty strings from id 31317 to 31349
 #PVR
 
 msgctxt "#31350"
@@ -875,98 +929,42 @@ msgid "Delete Group"
 msgstr ""
 
 #empty strings from id 31354 to 31369
-#Quick Navigation labels
+#Quick Navigation
 
 msgctxt "#31370"
-msgid "Update Video Library"
-msgstr ""
-
-msgctxt "#31371"
-msgid "Update Music Library"
-msgstr ""
-
-msgctxt "#31372"
-msgid "Clean Video Library"
-msgstr ""
-
-msgctxt "#31373"
-msgid "Clean Music Library"
-msgstr ""
-
-msgctxt "#31374"
 msgid "Quick Navigation"
 msgstr ""
 
-msgctxt "#31375"
+msgctxt "#31371"
 msgid "Disable Quick Navigation"
 msgstr ""
 
-msgctxt "#31376"
-msgid "Show Update Video Library Button"
+msgctxt "#31372"
+msgid "Manage QuickNav Buttons"
 msgstr ""
 
-msgctxt "#31377"
-msgid "Show Update Music Library Button"
-msgstr ""
-
-msgctxt "#31378"
-msgid "Show Clean Video Library Button"
-msgstr ""
-
-msgctxt "#31379"
-msgid "Show Clean Music Library Button"
-msgstr ""
-
-msgctxt "#31380"
-msgid "Show Party Mode Button"
-msgstr ""
-
-msgctxt "#31381"
-msgid "Show Shutdown Button"
-msgstr ""
-
-msgctxt "#31382"
-msgid "Show File Manager Button"
-msgstr ""
-
-#empty strings from id 31383 to 31386
-
-msgctxt "#31387"
-msgid "Hide Add-ons Button"
-msgstr ""
-
-msgctxt "#31388"
-msgid "Hide New Movies Button"
-msgstr ""
-
-msgctxt "#31389"
-msgid "Hide New TV Shows Button"
-msgstr ""
-
-msgctxt "#31390"
-msgid "Hide New Music Button"
-msgstr ""
-
-#empty string 31391
-
-msgctxt "#31392"
-msgid "Show Videos Button"
-msgstr ""
-
-msgctxt "#31393"
-msgid "Hide QuickNav Buttons"
-msgstr ""
-
-msgctxt "#31394"
-msgid "Show QuickNav Buttons"
-msgstr ""
-
-msgctxt "#31395"
+msgctxt "#31373"
 msgid "Custom QuickNav Buttons"
 msgstr ""
 
+msgctxt "#31374"
+msgid "Update Video Library"
+msgstr ""
 
-#empty strings from id 31396 to 31400
+msgctxt "#31375"
+msgid "Update Music Library"
+msgstr ""
+
+msgctxt "#31376"
+msgid "Clean Video Library"
+msgstr ""
+
+msgctxt "#31377"
+msgid "Clean Music Library"
+msgstr ""
+
+
+#empty strings from id 31378 to 31400
 #Settings Category Description & Header Labels
 
 msgctxt "#31401"
@@ -1006,7 +1004,7 @@ msgid "Choose from a variety of settings and customization options to make \"The
 msgstr ""
 
 msgctxt "#31410"
-msgid "With XBMC you can have several profiles, even a logon screen for controlled access."
+msgid "With XBMC you can have several profiles and the auto login option if the login screen is disabled."
 msgstr ""
 
 msgctxt "#31411"
@@ -1104,28 +1102,12 @@ msgid "[COLOR=selected][B]Add and Scan your Music to the Library[/B][/COLOR][CR]
 msgstr ""
 
 msgctxt "#31427"
-msgid "Now you are ready to use your "Little Black Box", but before you do that please take a minute to customize your UI in order to maximize the unique entertainment experience of [COLOR=blue][B]The Little Black Box.[/B][/COLOR][CR][CR]"
-"[B]TLBB UI Futures[/B][CR]"
-"• SkinWidgets (Recent, Random, InProgress) for Movies, TV Shows and Music.[CR]"
-"• Custom Home Menu Buttons (up to 10 custom items).[CR]"
-"• Quick Navigation Menu full customisable (up to 10 custom items).[CR]"
-"• Support for Next Aired Addon with TV Guide.[CR]"
-"• Support for CU LRC Lyrics Addon.[CR]"
-"• Support for XBMC Subtitles Addon.[CR]"
-"• Support for Artwork Downloader Addon.[CR]"
-"• Support for Artist Slideshow script.[CR]"
-"• Support for Global Search Addon.[CR]"
-"• Support for Weather Underground extended futures.[CR]"
-"• Support for TVTunes Addon.[CR]"
-"• Support for Library Editor script.[CR]"
-"• Notifications for TV Shows NextAired Info, Weather Alerts and Add-ons state.[CR][CR]"
-"[B]XBMC Settings[/B] (applicable for all skins)[CR]"
-"• [B]Appearance:[/B] Set your language and region, character set and file listing options.[CR]"
-"• [B]Video:[/B] Manage video library, set video playback options and subtitles fonts.[CR]"
-"• [B]Music:[/B] Manage music library, set music playback options and music listing options.[CR]"
-"• [B]Pictures:[/B] Set picture listing options and configure slideshows.[CR]"
-"• [B]Weather:[/B] Set up to five cities to collect weather information.[CR]"
-"• [B]System:[/B] Configure the audio/video output, power saving and lock options.[CR]"
+msgid "In the next step you can customize your UI in order to maximize the unique entertainment experience of [COLOR=blue][B]The Little Black Box.[/B][/COLOR][CR]Your can set your language/region and character set in the [B]Appearance[/B] section and set the video playback options and subtitles fonts in [B]Video[/B] section. Audio/Video output and power saving options can be configured in [B]System[/B] section.[CR]Also you can further customize your UI, by using some of the many and different settings for all sections that are available in [B]Skin Settings[/B]."
+msgstr ""
+
+
+msgctxt "#31428"
+msgid "Now you are ready to use your "Little Black Box" but before you do that please take a minute to check for any firmware updates. Click [B]"OK"[/B] on your remote. If the there is an update you will be asked if you want to download it. Click "Yes" to start the download. After the download is complete the device will automatically reboot to apply the update.[CR][CR]When you log back in, you will see this Help Guide again. Press the [B]"Don't show this guide again"[/B] button and it will not appear again. You can always open this guide, by going to [B]Settings[/B] and select [B]Help[/B]."
 msgstr ""
 
 msgctxt "#31430"
@@ -1147,3 +1129,11 @@ msgstr ""
 msgctxt "#31434"
 msgid "You haven't added any music to Library yet. Please select "Add Source" to add your music sources and then select "Scan item to library" from the context menu."
 msgstr ""
+
+msgctxt "#31435"
+msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
+msgstr ""
+
+
+
+

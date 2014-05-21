@@ -1,3 +1,28 @@
+[B][COLOR=FF56ADDA]v3.0.0 - Release Date 21/5/2014[/COLOR][/B]
+• Full Gotham support. For details check http://wiki.xbmc.org.
+• Added new Home Menu Customizer accesible also from Home window (press the Options icon).
+• Added severall optional Home Menu widgets (check Home Menu Customizer).
+• Added Skin support for the Cinema Experience script.
+• Added Skin support for the Metadata Actors script.
+• Added Skin support for the Video Language script (Audio and Subtitles).
+• Added Skin support for the new NextAired script futures.
+• Added new dialog in startup to sync TLBB Remote (press OK once to disable).
+• Added new Help Guide layout with video tutorials (WIP).
+• Added new manage Quick Navigation buttons dialog.
+• Added progress indicator to PVR EPG Timeline.
+• Added channel icon to PVR EPG Timeline.
+• Added support for cdArt in ListWall View.
+• Added support for accessing favourites from everywhere in UI.
+• Added Reset Skin Settings button.
+• Fixed network indicator bug not showing correct state in some languages.
+• Fixed weather screen bug when no weather data are available. 
+• Unified all dialogs textures for navigation speed improvement and reducing skin size.
+• Updated skin's dependencies.
+• Several other cleanups, tweaks and code fixes across the whole skin.).
+
+[B][COLOR=FF56ADDA]v3.0.0 Beta 1 - Release Date 9/5/2014[/COLOR][/B]
+• Gotham Beta. Detailed changelog will added in v3.0.0 Final.
+
 [B][COLOR=FF56ADDA]v2.3.5 - Release Date 25/3/2014[/COLOR][/B]
 • Added Skin support for the WiFi Network Manager script.
 • Fixed some misaligned elements in Home screen (rss & weather).
@@ -7,7 +32,7 @@
 • Added network/internet connection state icon on home top menu.
 • Fixed more misaligned stuff in dialogs (Peripherals and SmartPlaylist Editor).
 • Fixed scroll bug in Music ListView.
-• Removed more unused textures and code.
+• Removed mome unused textures and code.
 
 [B][COLOR=FF56ADDA]v2.3.3 - Release Date 4/1/2014[/COLOR][/B]
 • Added PVR channels group name on top left next to items label.

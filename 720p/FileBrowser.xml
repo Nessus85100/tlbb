@@ -1,4 +1,5 @@
-<window id="126">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="126">
 	<defaultcontrol always="true">450</defaultcontrol>
 	  <zorder>3</zorder>
 	  <onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1,home)</onload>
@@ -9,6 +10,23 @@
 		<control type="group">
 	    <include>DialogAnimation</include>
 			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsVisible(busydialog) + !Window.IsActive(locksettings) + ![Window.IsActive(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
+				<control type="image">
+					<posx>281</posx>
+					<posy>137</posy>
+					<width>718</width>
+					<height>455</height>
+					<texture background="true" border="39">dialogs/other/default.png</texture>
+					<visible>!Window.IsActive(musicosd) + !Window.IsActive(videoosd)</visible>
+				</control>
+				<control type="image">
+					<posx>281</posx>
+					<posy>137</posy>
+					<width>718</width>
+					<height>455</height>
+					<texture background="true" border="39">dialogs/other/default.png</texture>
+					<colordiffuse>FAFFFFFF</colordiffuse>
+					<visible>Window.IsActive(musicosd) | Window.IsActive(videoosd)</visible>
+				</control>
 		    <control type="image">
 			    <description>background image</description>
 			    <include>FullscreenDimensions</include>
@@ -21,7 +39,7 @@
 					<texture background="true">dialogs/other/bg_filebrowser.png</texture>
 					<colordiffuse>FAFFFFFF</colordiffuse>
 					<visible>Window.IsActive(musicosd) | Window.IsActive(videoosd)</visible>
-			  </control>
+			  </control>		  
 				<control type="label" id="411">
 					<description>header label</description>
 					<posx>305</posx>
@@ -59,7 +77,7 @@
 					<height>249</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<bordersize>6</bordersize>
+					<bordersize>1</bordersize>
 				</control>
 					
 			<!-- List -->
@@ -203,15 +221,14 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>635</posx>
+					<posx>332</posx>
 					<posy>0</posy>
 					<control type="label">
 						<description>Page Count Label</description>
 						<width>300</width>
 						<height>40</height>
 						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
+						<textcolor>44white</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 						<aligny>center</aligny>

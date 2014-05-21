@@ -1,7 +1,8 @@
-<window id="12">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="12">
 	<defaultcontrol>3</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<controls>
 	 <include>BackgroundItems</include>
 
@@ -9,31 +10,17 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <include>DialogZoomInOutAnimation</include>
-		<visible>!Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrgroupmanager)</visible>
+	  <visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(busy.xml) + !Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrgroupmanager)</visible>
+
 
 		<control type="image">
 		<include>FullscreenDimensions</include>
 		  <texture background="true">windows/settings/bg_settings.png</texture>
 		</control>
 		
-		<control type="togglebutton" id="10">
+		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<width>295</width>
-			<height>49</height>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<texturefocus>windows/settings/settings_left_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<alttexturefocus>windows/settings/settings_left_fo.png</alttexturefocus>
-			<alttexturenofocus>-</alttexturenofocus>
-			<align>right</align>
-			<aligny>center</aligny>
-		  <textwidth>250</textwidth>
-			<textoffsetx>15</textoffsetx>
-			<textoffsety>11</textoffsety>
-			<pulseonselect>false</pulseonselect>
+	    <include>SettingsButtonLeft</include>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
@@ -53,12 +40,12 @@
 		</control>
 
 		<control type="group" id="9001">
-			<posx>98</posx>
-			<posy>166</posy>
+			<left>98</left>
+			<top>166</top>
 			<control type="grouplist" id="3">
 				<description>button area</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>295</width>
 				<height>399</height>
 				<itemgap>1</itemgap>
@@ -69,8 +56,8 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>302</posx>
-				<posy>0</posy>
+				<left>302</left>
+				<top>0</top>
 				<width>782</width>
 				<height>399</height>
 				<itemgap>1</itemgap>
@@ -82,6 +69,10 @@
 		</control>
 
 
+		<control type="button" id="20">
+			<description>Settings Level Button</description>
+			<visible>false</visible>
+		</control>
 		<control type="label" id="2">
 			<description>Hidden label to get the values</description>
 			<visible>false</visible>
@@ -92,13 +83,13 @@
     <!-- == Header & Footer Labels == -->
 		<!-- ============================ -->
 		<control type="group">
-			<posx>120</posx>
-			<posy>160</posy>
+			<left>120</left>
+			<top>160</top>
 			<height>40</height>
 			<control type="label">
 				<description>Header Category Label</description>
-				<posx>0</posx>
-				<posy>-50</posy>
+				<left>0</left>
+				<top>-50</top>
 				<width>1075</width>
 				<height>50</height>
 				<font>FontSize_36</font>
@@ -108,18 +99,17 @@
 				<shadowcolor>99000000</shadowcolor>
 				<label>$VAR[SettingsCategoryHeadLabels]</label>
 			</control>
-		  <control type="textbox">
-				<description>Category Description</description>
-				<posx>0</posx>
-				<posy>425</posy>
+		  <control type="textbox" id="6">
+				<description>Description Area</description>
+				<left>0</left>
+				<top>425</top>
 				<width>1045</width>
 				<height>30</height>
+				<textcolor>33white</textcolor>
 				<font>FontSize_20</font>
 				<align>left</align>
 				<scroll>false</scroll>
-				<textcolor>33white</textcolor>
-				<shadowcolor>44333333</shadowcolor>
-				<label>$VAR[SettingsCategoryDescription]</label>
+				<label>-</label>
 		  </control>
 		</control>
 	 </control>

@@ -1,45 +1,62 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
+<!-- *NOT USED*
+<onup condition="[Container(20).HasFocus(2) + IntegerGreaterThan(Container(135).NumItems,0) + Skin.HasSetting(ShowHomeWidgetInTheatersMovies)]">SetFocus(135)</onup>
+| [Container(20).HasFocus(2) + ![[IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)] | [IntegerGreaterThan(Container(135).NumItems,0) + Skin.HasSetting(ShowHomeWidgetInTheatersMovies)]]]
+-->
 		<!-- ====================== -->
 		<!-- Main Home List Buttons -->
 		<!-- ====================== -->
 		<include name="HomeMenuWraplist">
 			<control type="group">
         <!-- <animation effect="slide" start="0,0" end="0,55" time="250" tween="Quadratic" easing="out" condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedTVShows)] | [Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedMovies)] | [Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedAlbums)]">Conditional</animation> -->
-		    <visible allowhiddenfocus="true">!Control.HasFocus(15) + !Control.HasFocus(25) + !Control.HasFocus(35) + !Control.HasFocus(45) + !Control.HasFocus(65) + !Control.HasFocus(75) + !Control.HasFocus(85) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(busy.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+		    <visible allowhiddenfocus="true">!Control.HasFocus(15) + !Control.HasFocus(25) + !Control.HasFocus(35) + !Control.HasFocus(45) + !Control.HasFocus(65) + !Control.HasFocus(75) + !Control.HasFocus(85) + !Control.HasFocus(95) + !Control.HasFocus(125) + !Window.IsActive(1110) + !Window.IsActive(1115) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(busy.xml) + !Window.IsActive(ProgressDialog) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 		    <include>VisibleHiddenSlideAnimation</include>
 			  <control type="image">
-				  <posy>55</posy>
+				  <top>55</top>
 	        <include>FullscreenDimensions</include>
 					<texture background="true">windows/bg/colors_pulse.png</texture>
-		      <include>OpenCloseSlideAnimation</include>
 				</control>
 				<control type="wraplist" id="20">
 				 <description>Home Container</description>
-				 <posx>-95</posx>
-				 <posy>165</posy>
+				 <left>-95</left>
+				 <top>165</top>
 				 <width>1500</width>
 				 <height>720</height>
 				 <align>center</align>
-			   <include>OpenCloseSlideAnimation</include>
-				   <onup condition="![Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(7) | Container(20).HasFocus(51) | Container(20).HasFocus(3) | Container(20).HasFocus(14) | Container(20).HasFocus(9) | Container(20).HasFocus(8)]">SetFocus(21)</onup>
-				   <onup condition="[Container(20).HasFocus(8) + IntegerGreaterThan(Container(85).NumItems,0) + Skin.HasSetting(ShowHomeWidgetWeather)]">SetFocus(85)</onup>
+				   <!-- OnUp - SetFocus to Widgets -->
+				   <onup condition="![Container(20).HasFocus(0) | Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(7) | Container(20).HasFocus(51) | Container(20).HasFocus(3) | Container(20).HasFocus(14) | Container(20).HasFocus(9) | Container(20).HasFocus(8)]">SetFocus(21)</onup>
+				   <onup condition="[Container(20).HasFocus(8) + StringCompare(Weather.Plugin,weather.wunderground) + !SubString(Window(Weather).Property(Current.ConditionIcon),na) + Skin.HasSetting(ShowHomeWidgetWeather)]">SetFocus(85)</onup>
 				   <onup condition="[Container(20).HasFocus(9) + IntegerGreaterThan(Container(75).NumItems,0) + Skin.HasSetting(ShowHomeWidgetSettings)]">SetFocus(75)</onup>
 				   <onup condition="[Container(20).HasFocus(14) + IntegerGreaterThan(Container(65).NumItems,0) + Skin.HasSetting(ShowHomeWidgetFavourites)]">SetFocus(65)</onup>
-				   <onup condition="[Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)]">SetFocus(25)</onup>
-				   <onup condition="[Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddons)]">SetFocus(25)</onup>
-				   <onup condition="[Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)]">SetFocus(15)</onup>
-				   <onup condition="[Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)]">SetFocus(35)</onup>
-				   <onup condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)]">SetFocus(45)</onup>
-				   <onup condition="[[Container(20).HasFocus(1) + !IntegerGreaterThan(Container(45).NumItems,0)]
-				                   | [Container(20).HasFocus(2) + !IntegerGreaterThan(Container(35).NumItems,0)]
-				                   | [Container(20).HasFocus(7) + !IntegerGreaterThan(Container(25).NumItems,0)]
-				                   | [Container(20).HasFocus(51) + !IntegerGreaterThan(Container(25).NumItems,0)]
-				                   | [Container(20).HasFocus(3) + !IntegerGreaterThan(Container(15).NumItems,0)]
-				                   | [Container(20).HasFocus(14) + !IntegerGreaterThan(Container(65).NumItems,0)]
-				                   | [Container(20).HasFocus(9) + !IntegerGreaterThan(Container(75).NumItems,0)]
-				                   | [Container(20).HasFocus(8) + !IntegerGreaterThan(Container(85).NumItems,0)]]">SetFocus(21)</onup>
-					 <ondown condition="[Container(20).HasFocus(9) + !Skin.HasSetting(HideSettingsSubMenu)]
+				   <onup condition="[Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnChannels)]">SetFocus(25)</onup>
+				   <onup condition="[Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnAddons)]">SetFocus(25)</onup>
+				   <onup condition="[Container(20).HasFocus(6) + IntegerGreaterThan(Container(125).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomProgramAddonsOnPrograms)]">SetFocus(125)</onup>
+				   <onup condition="[Container(20).HasFocus(0) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnVideos)]">SetFocus(25)</onup>
+				   <onup condition="[Container(20).HasFocus(2) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnMovies)]">SetFocus(25)</onup>
+				   <onup condition="[Container(20).HasFocus(0) + IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnVideos)]">SetFocus(95)</onup>
+				   <onup condition="[Container(20).HasFocus(2) + IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMovies)]">SetFocus(95)</onup>
+				   <onup condition="[Container(20).HasFocus(3) + IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMusic)]">SetFocus(95)</onup>
+				   <onup condition="[Container(20).HasFocus(51) + IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnChannels)]">SetFocus(95)</onup>
+				   <onup condition="[Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums) | Skin.HasSetting(ShowHomeWidgetInProgressAlbums) | Skin.HasSetting(ShowHomeWidgetNearConcerts) | Skin.HasSetting(ShowHomeWidgetTopArtists)]]">SetFocus(15)</onup>
+				   <onup condition="[Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies) | Skin.HasSetting(ShowHomeWidgetInTheatersMovies) | Skin.HasSetting(ShowHomeWidgetTrendingMovies) | Skin.HasSetting(ShowHomeWidgetComingSoonMovies) | Skin.HasSetting(ShowHomeWidgetTopRatedMovies) | Skin.HasSetting(ShowHomeWidgetPopularMovies)]]">SetFocus(35)</onup>
+				   <onup condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows) | Skin.HasSetting(ShowHomeWidgetInProgressTVShows) | Skin.HasSetting(ShowHomeWidgetOnAirTVShows) | Skin.HasSetting(ShowHomeWidgetAiringTodayTVShows) | Skin.HasSetting(ShowHomeWidgetTrendingTVShows) | Skin.HasSetting(ShowHomeWidgetTopRatedTVShows) | Skin.HasSetting(ShowHomeWidgetPopularTVShows)]]">SetFocus(45)</onup>
+				   <!-- OnUp - SetFocus to TopMenu -->
+				   <onup condition="[[Container(20).HasFocus(1) + ![IntegerGreaterThan(Container(45).NumItems,0) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows) | Skin.HasSetting(ShowHomeWidgetInProgressTVShows) | Skin.HasSetting(ShowHomeWidgetOnAirTVShows) | Skin.HasSetting(ShowHomeWidgetAiringTodayTVShows) | Skin.HasSetting(ShowHomeWidgetTrendingTVShows) | Skin.HasSetting(ShowHomeWidgetTopRatedTVShows) | Skin.HasSetting(ShowHomeWidgetPopularTVShows)]]]
+				                   | [Container(20).HasFocus(2) + ![IntegerGreaterThan(Container(35).NumItems,0) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies) | Skin.HasSetting(ShowHomeWidgetInTheatersMovies) | Skin.HasSetting(ShowHomeWidgetTrendingMovies) | Skin.HasSetting(ShowHomeWidgetComingSoonMovies) | Skin.HasSetting(ShowHomeWidgetTopRatedMovies) | Skin.HasSetting(ShowHomeWidgetPopularMovies)]] + ![IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMovies)] + ![IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnMovies)]]
+				                   | [Container(20).HasFocus(6) + ![IntegerGreaterThan(Container(125).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomProgramAddonsOnPrograms)]]
+				                   | [Container(20).HasFocus(7) + ![IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnAddons)]]
+				                   | [Container(20).HasFocus(0) + ![[IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnVideos)] | [IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnVideos)]]]
+				                   | [Container(20).HasFocus(51) + ![IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnChannels)] + ![IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnChannels)]]
+				                   | [Container(20).HasFocus(3) + ![IntegerGreaterThan(Container(15).NumItems,0) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums) | Skin.HasSetting(ShowHomeWidgetInProgressAlbums) | Skin.HasSetting(ShowHomeWidgetNearConcerts) | Skin.HasSetting(ShowHomeWidgetTopArtists)]] + ![IntegerGreaterThan(Container(95).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMusic)]]
+				                   | [Container(20).HasFocus(14) + ![IntegerGreaterThan(Container(65).NumItems,0) + Skin.HasSetting(ShowHomeWidgetFavourites)]]
+				                   | [Container(20).HasFocus(9) + ![IntegerGreaterThan(Container(75).NumItems,0) + Skin.HasSetting(ShowHomeWidgetSettings)]]
+				                   | [[Container(20).HasFocus(8) + !StringCompare(Weather.Plugin,weather.wunderground)] | [Container(20).HasFocus(8) + !Skin.HasSetting(ShowHomeWidgetWeather)] | [Container(20).HasFocus(8) + SubString(Window(Weather).Property(Current.ConditionIcon),na)] | [Container(20).HasFocus(8) + IsEmpty(Weather.Plugin)] + Skin.HasSetting(ShowHomeWidgetWeather)]]">SetFocus(21)</onup>
+				   <!-- OnDown - SetFocus to SubMenus -->
+					 <ondown condition="[Container(20).HasFocus(11) + !Skin.HasSetting(HideLiveTVSubMenu)]
+					                  | [Container(20).HasFocus(9) + !Skin.HasSetting(HideSettingsSubMenu)]
+					                  | [Container(20).HasFocus(7) + !Skin.HasSetting(HideAddonsSubMenu)]
 														| [[Library.HasContent(movies) + Container(20).HasFocus(2)] + !Skin.HasSetting(HideMoviesSubMenu)]
 														| [[Library.HasContent(tvshows) + Container(20).HasFocus(1)] + !Skin.HasSetting(HideTVShowsSubMenu)]
 														| [[Library.HasContent(music) + Container(20).HasFocus(3)] + !Skin.HasSetting(HideMusicSubMenu)]">SetFocus(23)</ondown>
@@ -48,17 +65,17 @@
 														| [[Library.HasContent(music) + Container(20).HasFocus(3)] + Skin.HasSetting(HideMusicSubMenu)]">SetFocus(81)</ondown>
 				 <onleft>20</onleft>
 				 <onright>20</onright>
-				 <onback condition="Container(20).HasFocus(15)">Skin.SetString(CustomFavourite1.Label)</onback>
-				 <onback condition="Container(20).HasFocus(16)">Skin.SetString(CustomFavourite2.Label)</onback>
-				 <onback condition="Container(20).HasFocus(17)">Skin.SetString(CustomFavourite3.Label)</onback>
-				 <onback condition="Container(20).HasFocus(18)">Skin.SetString(CustomFavourite4.Label)</onback>
-				 <onback condition="Container(20).HasFocus(19)">Skin.SetString(CustomFavourite5.Label)</onback>
-				 <onback condition="Container(20).HasFocus(20)">Skin.SetString(CustomFavourite6.Label)</onback>
-				 <onback condition="Container(20).HasFocus(21)">Skin.SetString(CustomFavourite7.Label)</onback>
-				 <onback condition="Container(20).HasFocus(22)">Skin.SetString(CustomFavourite8.Label)</onback>
-				 <onback condition="Container(20).HasFocus(23)">Skin.SetString(CustomFavourite9.Label)</onback>
-				 <onback condition="Container(20).HasFocus(24)">Skin.SetString(CustomFavourite10.Label)</onback>
-				 <onback condition="Container(20).HasFocus(13)">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onback>
+				 <ondown condition="Container(20).HasFocus(15)">Skin.SetString(CustomFavourite1.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(16)">Skin.SetString(CustomFavourite2.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(17)">Skin.SetString(CustomFavourite3.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(18)">Skin.SetString(CustomFavourite4.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(19)">Skin.SetString(CustomFavourite5.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(20)">Skin.SetString(CustomFavourite6.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(21)">Skin.SetString(CustomFavourite7.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(22)">Skin.SetString(CustomFavourite8.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(23)">Skin.SetString(CustomFavourite9.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(24)">Skin.SetString(CustomFavourite10.Label)</ondown>
+				 <ondown condition="Container(20).HasFocus(13)">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</ondown>
 				 <itemgap>0</itemgap>
 				 <orientation>horizontal</orientation>
 				 <focusposition>1</focusposition>
@@ -67,11 +84,11 @@
 			    <control type="group">
 			     <animation type="Conditional" condition="true">
 			       <effect type="zoom" start="100" end="65" time="0" center="318,220" />
-			       <effect type="fade" start="100" end="45" time="0" />
+			       <effect type="fade" start="100" end="35" time="0" />
 			     </animation>
 					 <control type="label">
-						  <posx>300</posx>
-							<posy>200</posy>
+						  <left>300</left>
+							<top>200</top>
 							<width>590</width>
 		          <textcolor>white</textcolor>
 				      <shadowcolor>99000000</shadowcolor>
@@ -85,23 +102,23 @@
 		       <control type="group">
 		        <animation type="Focus" reversible="false" condition="Container(20).OnNext | Container(20).OnPrevious">
 		         <effect type="zoom" start="65" end="100" time="300" tween="sine" easing="out" center="318,220" />
-		         <effect type="fade" start="45" end="100" time="300" tween="sine" easing="out" />
+		         <effect type="fade" start="35" end="100" time="300" tween="sine" easing="out" />
 		        </animation>
 		        <animation type="Unfocus" reversible="false" condition="Container(20).OnNext | Container(20).OnPrevious">
 		         <effect type="zoom" start="100" end="65" time="300" tween="sine" easing="out" center="318,220" />
-		          <effect type="fade" start="100" end="45" time="300" tween="sine" easing="out" />
+		          <effect type="fade" start="100" end="35" time="300" tween="sine" easing="out" />
 		        </animation>
-				    <animation type="Conditional" condition="true" reversible="false">
+				    <animation type="Conditional" reversible="false" condition="true">
 		          <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 		          <effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
 				    </animation>
-		        <animation type="Conditional" condition="!ControlGroup(21).HasFocus + !Control.HasFocus(15) + !Control.HasFocus(25) + !Control.HasFocus(35) + !Control.HasFocus(45) + !Control.HasFocus(65) + !Control.HasFocus(75) + !Control.HasFocus(85)">
+		        <animation type="Conditional" condition="!ControlGroup(21).HasFocus">
 		          <effect type="zoom" start="80" end="100" time="250" tween="sine" easing="out" center="318,200" />
-		          <effect type="fade" start="45" end="100" time="250" tween="sine" easing="out" />
+		          <effect type="fade" start="35" end="100" time="250" tween="sine" easing="out" />
 		        </animation>
 						<control type="label">
-						  <posx>300</posx>
-							<posy>200</posy>
+						  <left>300</left>
+							<top>200</top>
 							<width>590</width>
 		          <textcolor>white</textcolor>
 				      <shadowcolor>99000000</shadowcolor>
@@ -109,6 +126,18 @@
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
+						<control type="image">
+						  <left>295</left>
+							<top>265</top>
+							<width>21</width>
+							<height>18</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+              <colordiffuse>CCFFFFFF</colordiffuse>
+		          <visible>!ControlGroup(21).HasFocus + !Control.HasFocus(23)</visible>
+		          <visible>[Container(20).HasFocus(1) + [Library.HasContent(tvshows) + !Skin.HasSetting(HideTVShowsSubMenu)]] | [Container(20).HasFocus(2) + [Library.HasContent(movies) + !Skin.HasSetting(HideMoviesSubMenu)]] | [Container(20).HasFocus(3) + !Skin.HasSetting(HideMusicSubMenu)] | [Container(20).HasFocus(9) + !Skin.HasSetting(HideSettingsSubMenu)] | [Container(20).HasFocus(7) + !Skin.HasSetting(HideAddonsSubMenu)] | [Container(20).HasFocus(11) + !Skin.HasSetting(HideLiveTVSubMenu)]</visible>
+							<animation effect="fade" time="200" reversible="false">Visible</animation>
+							<animation effect="fade" time="200" reversible="false">Hidden</animation>
+						</control>						
 					 </control>
 				 </focusedlayout>
 	      <content>
@@ -121,95 +150,127 @@
 		<!-- ====================== -->
 		<!-- HomeWidget Video Feeds -->
 		<!-- ====================== -->
-		<include name="HomeWidgetVideoFeeds-DISABLED">
+		<include name="HomeWidgetRSSVideoFeeds">
 			<control type="group">
-        <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(00)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(00) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+        <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(95)">Conditional</animation>
+        <visible allowhiddenfocus="true">[[Container(20).HasFocus(0) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnVideos)] | [Container(20).HasFocus(2) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMovies)] | [Container(20).HasFocus(3) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMusic)] | [Container(20).HasFocus(51) + Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnChannels)]] + !Window.IsActive(1110) + !Window.IsActive(1115) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
-				<control type="list" id="00">
-					<posx>100</posx>
-					<posy>150</posy>
+				<control type="panel" id="95">
+				  <animation effect="slide" start="0,0" end="395,0" time="0" condition="StringCompare(Container(95).NumItems,1)">conditional</animation>
+				  <animation effect="slide" start="0,0" end="265,0" time="0" condition="StringCompare(Container(95).NumItems,2)">conditional</animation>
+				  <animation effect="slide" start="0,0" end="130,0" time="0" condition="StringCompare(Container(95).NumItems,3)">conditional</animation>
+					<left>100</left>
+					<top>170</top>
 					<width>1080</width>
-					<height>220</height>
-					<onleft>00</onleft>
-					<onright>00</onright>
+					<height>256</height>
+					<onleft>95</onleft>
+					<onright>95</onright>
 					<ondown>20</ondown>
 					<onup>21</onup>
 					<onback>20</onback>
+				  <preloaditems>2</preloaditems>
           <scrolltime tween="Quadratic" easing="out">250</scrolltime>
-					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<viewtype label="536">icon</viewtype>
 					<pagecontrol>-</pagecontrol>
-					<itemlayout height="180" width="270">
+					<itemlayout condition="!Control.HasFocus(95)" height="190" width="270">
 						<control type="image">
-							<posx>-2</posx>
-							<width>260</width>
-							<height>200</height>
+							<width>276</width>
+							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>24</posy>
-							<width>206</width>
-							<height>121</height>
+							<left>23</left>
+							<top>23</top>
+							<width>230</width>
+							<height>134</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true">empty_icon.png</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>230</width>
+							<height>134</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Thumb]</texture>
-							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<itemlayout condition="Control.HasFocus(95)" height="190" width="270">
+						<control type="image">
+							<width>276</width>
+							<height>206</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>230</width>
+							<height>134</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true">empty_icon.png</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>230</width>
+							<height>134</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Thumb]</texture>
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>126</posx>
-							<posy>141</posy>
-							<width>210</width>
-							<height>35</height>
+							<left>138</left>
+							<top>150</top>
+							<width>230</width>
+							<height>40</height>
 							<textcolor>99white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<font>FontSize_20</font>
-							<scroll>false</scroll>
+							<scrollspeed>35</scrollspeed>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="180" width="270">
+					<focusedlayout height="190" width="270">
 						<control type="image">
-							<posx>-2</posx>
-							<width>260</width>
-							<height>200</height>
+							<width>276</width>
+							<height>206</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>24</posy>
-							<width>206</width>
-							<height>121</height>
+							<left>23</left>
+							<top>23</top>
+							<width>230</width>
+							<height>134</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true">empty_icon.png</texture>
+							<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>230</width>
+							<height>134</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Thumb]</texture>
-							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>126</posx>
-							<posy>141</posy>
-							<width>210</width>
-							<height>35</height>
-							<textcolor>99white</textcolor>
-							<shadowcolor>99000000</shadowcolor>
-							<font>FontSize_20</font>
-							<scroll>false</scroll>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(00)</visible>
-						</control>
-						<control type="label">
-							<posx>126</posx>
-							<posy>141</posy>
-							<width>210</width>
-							<height>35</height>
+							<left>138</left>
+							<top>150</top>
+							<width>230</width>
+							<height>40</height>
 							<textcolor>blue</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<font>FontSize_20</font>
@@ -217,12 +278,10 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(0)</visible>
 						</control>
 						<control type="image">
-							<posx>-2</posx>
-							<width>260</width>
-							<height>200</height>
+							<width>276</width>
+							<height>206</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="30">views/thumbnails/focus.png</texture>
 	            <animation type="Focus">
@@ -233,76 +292,73 @@
 	              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
 	              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 	            </animation>
-							<visible>Control.HasFocus(00)</visible>
 						</control>
 					</focusedlayout>
-					<content>
-						<item id="1">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.1.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.1.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.1.Image.1)]</thumb>
-						</item>
-						<item id="2">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.2.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.2.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.2.Image.1)]</thumb>
-						</item>
-						<item id="3">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.3.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.3.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.3.Image.1)]</thumb>
-						</item>
-						<item id="4">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.4.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.4.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.4.Image.1)]</thumb>
-						</item>
-						<item id="5">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.5.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.5.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.5.Image.1)]</thumb>
-						</item>
-						<item id="6">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.6.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.6.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.6.Image.1)]</thumb>
-						</item>
-						<item id="7">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.7.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.7.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.7.Image.1)]</thumb>
-						</item>
-						<item id="8">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.8.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.8.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.8.Image.1)]</thumb>
-						</item>
-						<item id="9">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.9.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.9.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.9.Image.1)]</thumb>
-						</item>
-						<item id="10">
-							<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.10.Media)])</onclick>
-							<label>$INFO[Window.Property(RSS.10.Title)]</label>
-							<thumb>$INFO[Window.Property(RSS.10.Image.1)]</thumb>
-						</item>
-					</content>
+		      <content>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnVideos)">HomeWidget_RSSVideoFeedsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMovies)">HomeWidget_RSSVideoFeedsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnMusic)">HomeWidget_RSSVideoFeedsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRSSVideoFeedsOnChannels)">HomeWidget_RSSVideoFeedsContent</include>
+		      </content>
+				</control>
+				<control type="group">
+					<left>100</left>
+				  <top>345</top>
+					<visible>Control.HasFocus(95)</visible>
+				  <animation type="Visible" reversible="false">
+			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				  </animation>
+			    <animation type="Hidden" reversible="false">
+			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			    </animation>
+					<control type="label">
+						<left>20</left>
+						<top>-235</top>
+						<height>50</height>
+						<width>1050</width>
+						<font>FontSize_60</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+				    <align>center</align>
+				    <aligny>center</aligny>
+						<scroll>false</scroll>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
+					</control>
+					<control type="image">
+						<left>-23</left>
+						<top>-90</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_left.png</texture>
+					  <visible>Control.HasFocus(95) + Container(95).HasPrevious</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				  <control type="image">
+						<left>1084</left>
+						<top>-90</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_right.png</texture>
+					  <visible>Control.HasFocus(95) + Container(95).HasNext</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
 				</control>
 			</control>
 	  </include>
 
-		<!-- ======================== -->
-		<!-- HomeWidget Recent Movies -->
-		<!-- ======================== -->
-		<include name="HomeWidgetRecentMovies">
+		<!-- ================== -->
+		<!-- HomeWidgets Movies -->
+		<!-- ================== -->
+		<include name="HomeWidgetsMovies">
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(35)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(2) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(2) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies) | Skin.HasSetting(ShowHomeWidgetInTheatersMovies) | Skin.HasSetting(ShowHomeWidgetComingSoonMovies) | Skin.HasSetting(ShowHomeWidgetTrendingMovies) | Skin.HasSetting(ShowHomeWidgetTopRatedMovies) | Skin.HasSetting(ShowHomeWidgetPopularMovies)]] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="panel" id="35">
-					<posx>95</posx>
-					<posy>105</posy>
+					<left>95</left>
+					<top>105</top>
 					<width>1080</width>
 					<height>256</height>
 					<onleft>35</onleft>
@@ -323,8 +379,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>140</width>
 							<height>200</height>
 							<aspectratio align="center" aligny="top">stretch</aspectratio>
@@ -341,8 +397,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>140</width>
 							<height>200</height>
 							<aspectratio align="center" aligny="top">stretch</aspectratio>
@@ -366,12 +422,25 @@
 						</control>
 					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_RecentMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)">HomeWidget_RecentMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetInTheatersMovies)">HomeWidget_InTheatersMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetComingSoonMovies)">HomeWidget_ComingSoonMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetTrendingMovies)">HomeWidget_TrendingMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetTopRatedMovies)">HomeWidget_TopRatedMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetPopularMovies)">HomeWidget_PopularMoviesContent</include>
 		      </content>
 				</control>
+<!-- *NOT USED*
+		        <include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)">HomeWidget_RecentMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetInTheatersMovies)">HomeWidget_InTheatersMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetComingSoonMovies)">HomeWidget_ComingSoonMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetTrendingMovies)">HomeWidget_TrendingMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetTopRatedMovies)">HomeWidget_TopRatedMoviesContent</include>
+		        <include condition="Skin.HasSetting(ShowHomeWidgetPopularMovies)">HomeWidget_PopularMoviesContent</include>
+-->
 				<control type="group">
-					<posx>95</posx>
-				  <posy>345</posy>
+					<left>95</left>
+				  <top>340</top>
 					<visible>Control.HasFocus(35)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -380,8 +449,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-290</posy>
+						<left>20</left>
+						<top>-290</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_60</font>
@@ -390,36 +459,50 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
 					</control>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<height>30</height>
-						<width>800</width>
+						<width>700</width>
 						<textcolor>bbwhite</textcolor>
 		        <shadowcolor>99000000</shadowcolor>
-						<font>FontSize_34B</font>
+						<font>FontSize_32B</font>
 			      <scroll>false</scroll>
 						<align>left</align>
 						<label>$INFO[Container(35).ListItem.label]</label>
 					</control>
-					<control type="label">
-						<posx>1068</posx>
-						<posy>10</posy>
-						<height>20</height>
-						<width>300</width>
-						<textcolor>bbwhite</textcolor>
-		        <shadowcolor>99000000</shadowcolor>
-						<font>FontSize_20B</font>
-			      <scroll>false</scroll>
+					<control type="grouplist">
+						<left>-123</left>
+						<top>8</top>
+						<height>0</height>
+						<width>1190</width>
+						<itemgap>3</itemgap>
 						<align>right</align>
-						<aligy>center</aligy>
-	          <label>$INFO[Container(35).ListItem.label2]</label>
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<width>23</width>
+							<height>23</height>
+							<aspectratio aligny="center" align="right">stretch</aspectratio>
+							<texture background="true">rating/star_full.png</texture>
+		          <visible>!Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)</visible>
+						</control>
+						<control type="label">
+							<height>25</height>
+							<width min="10" max="400">auto</width>
+							<font>FontSize_22B</font>
+							<textcolor>bbwhite</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+					    <align>left</align>
+					    <aligny>center</aligny>
+							<scroll>false</scroll>
+						  <label fallback="0.0">$INFO[Container(35).ListItem.label2]</label>
+						</control>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-130</posy>
+						<left>-23</left>
+						<top>-130</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -428,8 +511,8 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				  <control type="image">
-						<posx>1084</posx>
-						<posy>-130</posy>
+						<left>1084</left>
+						<top>-130</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -439,19 +522,342 @@
 				  </control>
 				</control>
 			</control>
+<!-- *NOT USED*
+			<control type="group">
+        <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(135)">Conditional</animation>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(2) + Skin.HasSetting(ShowHomeWidgetInTheatersMovies)] + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+	      <include>VisibleHiddenSlideAnimation</include>
+				<control type="panel" id="135">
+					<left>95</left>
+					<top>105</top>
+					<width>1080</width>
+					<height>256</height>
+					<onleft>135</onleft>
+					<onright>135</onright>
+					<ondown>20</ondown>
+					<onup>21</onup>
+					<onback>20</onback>
+				  <preloaditems>2</preloaditems>
+          <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+					<orientation>horizontal</orientation>
+					<viewtype label="536">icon</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<itemlayout height="256" width="180">
+						<control type="image">
+							<width>186</width>
+							<height>246</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>140</width>
+							<height>200</height>
+							<aspectratio align="center" aligny="top">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="256" width="180">
+						<control type="image">
+							<width>186</width>
+							<height>245</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>140</width>
+							<height>200</height>
+							<aspectratio align="center" aligny="top">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<width>186</width>
+							<height>246</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/focus.png</texture>
+	            <animation type="Focus">
+	              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+	            </animation>
+	            <animation type="Unfocus">
+	              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+	            </animation>
+						</control>
+					</focusedlayout>
+		      <content>
+
+		      </content>
+				</control>
+				<control type="group">
+					<left>95</left>
+				  <top>345</top>
+					<visible>Control.HasFocus(135)</visible>
+				  <animation type="Visible" reversible="false">
+			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				  </animation>
+			    <animation type="Hidden" reversible="false">
+			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			    </animation>
+					<control type="label">
+						<left>20</left>
+						<top>-290</top>
+						<height>50</height>
+						<width>1050</width>
+						<font>FontSize_60</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+				    <align>center</align>
+				    <aligny>center</aligny>
+						<scroll>false</scroll>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>bbwhite</textcolor>
+		        <shadowcolor>99000000</shadowcolor>
+						<font>FontSize_34B</font>
+			      <scroll>false</scroll>
+						<align>left</align>
+						<label>$INFO[Container(135).ListItem.label]</label>
+					</control>
+					<control type="image">
+						<left>1000</left>
+						<top>8</top>
+						<width>22</width>
+						<height>22</height>
+						<aspectratio aligny="center" align="right">stretch</aspectratio>
+					  <texture background="true">rating/star_full.png</texture>
+            <visible>IntegerGreaterThan(Container(135).ListItem.label2,0)</visible>
+					</control>
+					<control type="label">
+						<left>1065</left>
+						<top>10</top>
+						<height>20</height>
+						<width>300</width>
+						<textcolor>bbwhite</textcolor>
+		        <shadowcolor>99000000</shadowcolor>
+						<font>FontSize_24B</font>
+			      <scroll>false</scroll>
+						<align>right</align>
+						<aligy>center</aligy>
+	          <label>$INFO[Container(135).ListItem.label2]</label>
+            <visible>IntegerGreaterThan(Container(135).ListItem.label2,0)</visible>
+					</control>
+					<control type="image">
+						<left>-23</left>
+						<top>-130</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_left.png</texture>
+					  <visible>Control.HasFocus(135) + Container(135).HasPrevious</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				  <control type="image">
+						<left>1084</left>
+						<top>-130</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_right.png</texture>
+					  <visible>Control.HasFocus(135) + Container(135).HasNext</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				</control>
+			</control>
+-->
 	  </include>
 
-		<!-- ========================= -->
-		<!-- HomeWidget Recent TVShows -->
-		<!-- ========================= -->
-		<include name="HomeWidgetRecentTVShows">
+		<!-- =================== -->
+		<!-- HomeWidgets TVShows -->
+		<!-- =================== -->
+		<include name="HomeWidgetsTVShows">
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(45)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(1) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(1) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows) | Skin.HasSetting(ShowHomeWidgetInProgressTVShows) | Skin.HasSetting(ShowHomeWidgetOnAirTVShows) | Skin.HasSetting(ShowHomeWidgetAiringTodayTVShows) | Skin.HasSetting(ShowHomeWidgetTrendingTVShows) | Skin.HasSetting(ShowHomeWidgetTopRatedTVShows) | Skin.HasSetting(ShowHomeWidgetPopularTVShows)]] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="panel" id="45">
-					<posx>95</posx>
-					<posy>160</posy>
+					<left>95</left>
+					<top>105</top>
+					<width>1080</width>
+					<height>256</height>
+					<onleft>45</onleft>
+					<onright>45</onright>
+					<ondown>20</ondown>
+					<onup>21</onup>
+					<onback>20</onback>
+				  <preloaditems>2</preloaditems>
+          <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+					<orientation>horizontal</orientation>
+					<viewtype label="536">icon</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<itemlayout height="256" width="180">
+						<control type="image">
+							<width>186</width>
+							<height>246</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>140</width>
+							<height>200</height>
+							<aspectratio align="center" aligny="top">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="256" width="180">
+						<control type="image">
+							<width>186</width>
+							<height>245</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>140</width>
+							<height>200</height>
+							<aspectratio align="center" aligny="top">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<width>186</width>
+							<height>246</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/focus.png</texture>
+	            <animation type="Focus">
+	              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+	            </animation>
+	            <animation type="Unfocus">
+	              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+	            </animation>
+						</control>
+					</focusedlayout>
+		      <content>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)">HomeWidget_RecentTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetInProgressTVShows)">HomeWidget_InProgressTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetTrendingTVShows)">HomeWidget_TrendingTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetTopRatedTVShows)">HomeWidget_TopRatedTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetPopularTVShows)">HomeWidget_PopularTVShowsContent</include>
+		      </content>
+				</control>
+<!-- *NOT USED*
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)">HomeWidget_RecentTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetInProgressTVShows)">HomeWidget_InProgressTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetTrendingTVShows)">HomeWidget_TrendingTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetTopRatedTVShows)">HomeWidget_TopRatedTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetPopularTVShows)">HomeWidget_PopularTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetOnAirTVShows)">HomeWidget_OnAirTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetAiringTodayTVShows)">HomeWidget_AiringTodayTVShowsContent</include>
+-->
+				<control type="group">
+					<left>95</left>
+				  <top>340</top>
+					<visible>Control.HasFocus(45)</visible>
+				  <animation type="Visible" reversible="false">
+			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				  </animation>
+			    <animation type="Hidden" reversible="false">
+			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			    </animation>
+					<control type="label">
+						<left>20</left>
+						<top>-290</top>
+						<height>50</height>
+						<width>1050</width>
+						<font>FontSize_60</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+				    <align>center</align>
+				    <aligny>center</aligny>
+						<scroll>false</scroll>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<height>30</height>
+						<width>600</width>
+						<textcolor>bbwhite</textcolor>
+		        <shadowcolor>99000000</shadowcolor>
+						<font>FontSize_32B</font>
+			      <scroll>false</scroll>
+						<align>left</align>
+						<label>$INFO[Container(45).ListItem.label]</label>
+					</control>
+					<control type="grouplist">
+						<left>-123</left>
+						<top>8</top>
+						<height>0</height>
+						<width>1190</width>
+						<itemgap>3</itemgap>
+						<align>right</align>
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<width>23</width>
+							<height>23</height>
+							<aspectratio aligny="center" align="right">stretch</aspectratio>
+							<texture background="true">rating/star_full.png</texture>
+		          <visible>![Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows) | Skin.HasSetting(ShowHomeWidgetInProgressTVShows)]</visible>
+						</control>
+						<control type="label">
+							<height>25</height>
+							<width min="10" max="500">auto</width>
+							<font>FontSize_22B</font>
+							<textcolor>bbwhite</textcolor>
+							<shadowcolor>99000000</shadowcolor>
+					    <align>left</align>
+					    <aligny>center</aligny>
+							<scroll>false</scroll>
+						  <label fallback="0.0">$INFO[Container(45).ListItem.label2]</label>
+						</control>
+					</control>
+					<control type="image">
+						<left>-23</left>
+						<top>-130</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_left.png</texture>
+					  <visible>Control.HasFocus(45) + Container(45).HasPrevious</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				  <control type="image">
+						<left>1084</left>
+						<top>-130</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_right.png</texture>
+					  <visible>Control.HasFocus(45) + Container(45).HasNext</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				</control>
+			</control>
+<!-- *NOT USED*
+   TV Shows WIDE LAYOUT
+				<control type="panel" id="45">
+					<left>95</left>
+					<top>160</top>
 					<width>1080</width>
 					<height>256</height>
 					<onleft>45</onleft>
@@ -472,8 +878,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -490,8 +896,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -515,12 +921,14 @@
 						</control>
 					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_RecentTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)">HomeWidget_RecentTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetTopRatedTVShows)">HomeWidget_TopRatedTVShowsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetPopularTVShows)">HomeWidget_PopularTVShowsContent</include>
 		      </content>
 				</control>
 				<control type="group">
-					<posx>95</posx>
-				  <posy>345</posy>
+					<left>95</left>
+				  <top>345</top>
 					<visible>Control.HasFocus(45)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -529,8 +937,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-235</posy>
+						<left>20</left>
+						<top>-235</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_60</font>
@@ -539,11 +947,11 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
 					</control>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<height>30</height>
 						<width>500</width>
 						<textcolor>bbwhite</textcolor>
@@ -554,8 +962,8 @@
 						<label>$INFO[Container(45).ListItem.label]</label>
 					</control>
 					<control type="label">
-						<posx>1067</posx>
-						<posy>10</posy>
+						<left>1067</left>
+						<top>10</top>
 						<height>20</height>
 						<width>600</width>
 						<textcolor>bbwhite</textcolor>
@@ -567,8 +975,8 @@
 	          <label>$INFO[Container(45).ListItem.label2]</label>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-102</posy>
+						<left>-23</left>
+						<top>-102</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -577,8 +985,8 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				  <control type="image">
-						<posx>1084</posx>
-						<posy>-102</posy>
+						<left>1084</left>
+						<top>-102</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -587,20 +995,21 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				</control>
-			</control>
+-->
 	  </include>
 
-		<!-- ======================= -->
-		<!-- HomeWidget Recent Music -->
-		<!-- ======================= -->
-		<include name="HomeWidgetRecentAlbums">
+		<!-- ================= -->
+		<!-- HomeWidgets Music -->
+		<!-- ================= -->
+		<include name="HomeWidgetsMusic">
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(15)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(3) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(3) + [Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums) | Skin.HasSetting(ShowHomeWidgetInProgressAlbums) | Skin.HasSetting(ShowHomeWidgetNearConcerts) | Skin.HasSetting(ShowHomeWidgetTopArtists)]] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="panel" id="15">
-					<posx>95</posx>
-					<posy>140</posy>
+				  <animation effect="slide" start="0,0" end="0,30" time="0" condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)">conditional</animation>
+					<left>95</left>
+					<top>130</top>
 					<width>1080</width>
 					<height>256</height>
 					<onleft>15</onleft>
@@ -613,24 +1022,43 @@
 					<orientation>horizontal</orientation>
 					<viewtype label="536">icon</viewtype>
 					<pagecontrol>-</pagecontrol>
-					<itemlayout condition="!Control.HasFocus(15)" height="256" width="216">
+					<itemlayout condition="!Skin.HasSetting(ShowHomeWidgetNearConcerts)" height="256" width="216">
 						<control type="image">
 							<width>220</width>
-							<height>210</height>
+							<height>220</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
-							<height>164</height>
-							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<height>174</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[HomeWidgetsThumbs]</texture>
 							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
 						  <bordersize>6</bordersize>
 						</control>
 					</itemlayout>
+					<itemlayout condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)" height="256" width="216">
+						<control type="image">
+							<width>230</width>
+							<height>190</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>184</width>
+							<height>144</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+<!-- *NOT USED*
 					<itemlayout condition="Control.HasFocus(15)" height="256" width="216">
 						<control type="image">
 							<width>220</width>
@@ -639,8 +1067,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -649,8 +1077,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>99white</textcolor>
@@ -670,8 +1098,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -680,8 +1108,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>blue</textcolor>
@@ -702,13 +1130,71 @@
 	            </animation>
 						</control>
 					</focusedlayout>
+-->
+					<focusedlayout condition="!Skin.HasSetting(ShowHomeWidgetNearConcerts)" height="256" width="216">
+						<control type="image">
+							<width>220</width>
+							<height>220</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>174</width>
+							<height>174</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<width>220</width>
+							<height>220</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/focus.png</texture>
+	            <animation type="Focus">
+                <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
+	            </animation>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)" height="256" width="216">
+						<control type="image">
+							<width>230</width>
+							<height>190</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>184</width>
+							<height>144</height>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[HomeWidgetsThumbs]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<width>230</width>
+							<height>190</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/focus.png</texture>
+	            <animation type="Focus">
+                <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
+	            </animation>
+						</control>
+					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_RecentMusicContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)">HomeWidget_RecentMusicContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetInProgressAlbums)">HomeWidget_InProgressMusicContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)">HomeWidget_NearConcertsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetTopArtists)">HomeWidget_TopArtistsContent</include>
 		      </content>
 				</control>
 				<control type="group">
-					<posx>95</posx>
-				  <posy>355</posy>
+					<left>95</left>
+				  <top>340</top>
 					<visible>Control.HasFocus(15)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -717,8 +1203,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-265</posy>
+						<left>20</left>
+						<top>-265</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_60</font>
@@ -727,44 +1213,98 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
+				    <animation effect="slide" start="0,0" end="0,30" time="0" condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)">conditional</animation>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<height>30</height>
+						<width>1050</width>
+						<textcolor>bbwhite</textcolor>
+		        <shadowcolor>99000000</shadowcolor>
+						<font>FontSize_32B</font>
+			      <scroll>false</scroll>
+						<align>left</align>
+						<label>$INFO[Container(15).ListItem.label]</label>
+					</control>
+					<control type="label">
+						<left>22</left>
+						<top>34</top>
+						<height>25</height>
+						<width>1050</width>
+						<font>FontSize_24</font>
+						<textcolor>bbwhite</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<scroll>false</scroll>
+				    <align>left</align>
+					  <label>$INFO[Container(15).ListItem.Property(Name)]$INFO[Container(15).ListItem.Property(City),$COMMA ]</label>
+					</control>
+					<control type="label">
+						<left>22</left>
+						<top>60</top>
+						<height>25</height>
+						<width>1050</width>
+						<font>FontSize_22</font>
+						<textcolor>bbwhite</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<scroll>false</scroll>
+				    <align>left</align>
+					  <label>$INFO[Container(15).ListItem.label2]</label>
+					  <visible>Skin.HasSetting(ShowHomeWidgetNearConcerts)</visible>
+					</control>
+					<control type="label">
+						<left>565</left>
+						<top>5</top>
+						<height>25</height>
+						<width>500</width>
+						<font>FontSize_22B</font>
+						<textcolor>bbwhite</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<scroll>false</scroll>
+				    <align>right</align>
+					  <label>$INFO[Container(15).ListItem.label2]</label>
+					  <visible>!Skin.HasSetting(ShowHomeWidgetNearConcerts)</visible>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-118</posy>
+						<left>-23</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
 						<texture>buttons/arrow_left.png</texture>
 					  <visible>Control.HasFocus(15) + Container(15).HasPrevious</visible>
 					  <include>VisibleFadeEffect</include>
+				    <animation effect="slide" start="0,0" end="0,30" time="0" condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)">conditional</animation>
 				  </control>
 				  <control type="image">
-						<posx>1083</posx>
-						<posy>-118</posy>
+						<left>1083</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
 						<texture>buttons/arrow_right.png</texture>
 					  <visible>Control.HasFocus(15) + Container(15).HasNext</visible>
 					  <include>VisibleFadeEffect</include>
+				    <animation effect="slide" start="0,0" end="10,30" time="0" condition="Skin.HasSetting(ShowHomeWidgetNearConcerts)">conditional</animation>
 				  </control>
 				</control>
 			</control>
 	  </include>
 
-		<!-- ============================== -->
-		<!-- HomeWidget Custom Video Addons -->
-		<!-- ============================== -->
-		<include name="HomeWidgetCustomVideoAddons">
+		<!-- ======================== -->
+		<!-- HomeWidget Custom Addons -->
+		<!-- ======================== -->
+		<include name="HomeWidgetsCustomAddons">
+		  <!-- Custom Video Addons -->
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(25)">Conditional</animation>
-			  <visible allowhiddenfocus="true">[Container(20).HasFocus(7) | Container(20).HasFocus(51)] + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+			  <visible allowhiddenfocus="true">[[Container(20).HasFocus(0) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnVideos)] | [Container(20).HasFocus(2) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnMovies)] | [Container(20).HasFocus(7) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnAddons)] | [Container(20).HasFocus(51) + Skin.HasSetting(ShowHomeWidgetCustomVideoAddonsOnChannels)]] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="fixedlist" id="25">
 				  <animation effect="slide" start="0,0" end="-105,0" time="0" condition="StringCompare(Container(25).NumItems,2) | StringCompare(Container(25).NumItems,4)">conditional</animation>
-					<posx>95</posx>
-					<posy>140</posy>
+					<left>95</left>
+					<top>140</top>
 					<width>1080</width>
 					<height>256</height>
 					<pagecontrol>-</pagecontrol>
@@ -786,8 +1326,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -804,8 +1344,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -814,8 +1354,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>99white</textcolor>
@@ -835,8 +1375,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -853,8 +1393,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -863,8 +1403,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>112</posx>
-							<posy>160</posy>
+							<left>112</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>99white</textcolor>
@@ -877,8 +1417,8 @@
 							<visible>Control.HasFocus(20) | ControlGroup(21).HasFocus</visible>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>blue</textcolor>
@@ -907,12 +1447,12 @@
 						</control>
 					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_CustomVideoAddonsContent</include>
+			      <include>HomeWidget_CustomVideoAddonsContent</include>
 		      </content>
 				</control>
 				<control type="group">
-					<posx>95</posx>
-				  <posy>355</posy>
+					<left>95</left>
+				  <top>355</top>
 					<visible>Control.HasFocus(25)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -921,8 +1461,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-265</posy>
+						<left>20</left>
+						<top>-265</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_60</font>
@@ -931,11 +1471,11 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-118</posy>
+						<left>-23</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -944,13 +1484,212 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				  <control type="image">
-						<posx>1083</posx>
-						<posy>-118</posy>
+						<left>1083</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
 						<texture>buttons/arrow_right.png</texture>
 					  <visible>Control.HasFocus(25) + Container(25).HasNext</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				</control>
+			</control>
+		  <!-- Custom Program Addons -->
+			<control type="group">
+        <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(125)">Conditional</animation>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(6) + Skin.HasSetting(ShowHomeWidgetCustomProgramAddonsOnPrograms)] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+	      <include>VisibleHiddenSlideAnimation</include>
+				<control type="fixedlist" id="125">
+				  <animation effect="slide" start="0,0" end="-105,0" time="0" condition="StringCompare(Container(125).NumItems,2) | StringCompare(Container(125).NumItems,4)">conditional</animation>
+					<left>95</left>
+					<top>140</top>
+					<width>1080</width>
+					<height>256</height>
+					<pagecontrol>-</pagecontrol>
+					<focusposition>2</focusposition>
+					<movement>2</movement>
+					<preloaditems>2</preloaditems>
+					<onleft>125</onleft>
+					<onright>125</onright>
+					<ondown>20</ondown>
+					<onup>21</onup>
+					<onback>20</onback>
+					<orientation>Horizontal</orientation>
+          <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+					<itemlayout condition="!Control.HasFocus(125)" height="256" width="216">
+						<control type="image">
+							<width>220</width>
+							<height>210</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>174</width>
+							<height>164</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<itemlayout condition="Control.HasFocus(125)" height="256" width="216">
+						<control type="image">
+							<width>220</width>
+							<height>236</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>174</width>
+							<height>164</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>160</top>
+							<width>165</width>
+							<height>80</height>
+							<textcolor>99white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<font>FontSize_20</font>
+							<scroll>false</scroll>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="!Control.HasFocus(125)" height="256" width="216">
+						<control type="image">
+							<width>220</width>
+							<height>210</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>174</width>
+							<height>164</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="Control.HasFocus(125)" height="256" width="216">
+						<control type="image">
+							<width>220</width>
+							<height>236</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/thumb_panel.png</texture>
+						</control>
+						<control type="image">
+							<left>23</left>
+							<top>23</top>
+							<width>174</width>
+							<height>164</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						  <bordersize>6</bordersize>
+						</control>
+						<control type="label">
+							<left>112</left>
+							<top>160</top>
+							<width>165</width>
+							<height>80</height>
+							<textcolor>99white</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<font>FontSize_20</font>
+							<scroll>false</scroll>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(20) | ControlGroup(21).HasFocus</visible>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>160</top>
+							<width>165</width>
+							<height>80</height>
+							<textcolor>blue</textcolor>
+							<shadowcolor>77000000</shadowcolor>
+							<font>FontSize_20</font>
+							<scroll>false</scroll>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(20) + !ControlGroup(21).HasFocus</visible>
+						</control>
+						<control type="image">
+							<width>220</width>
+							<height>236</height>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<texture border="30">views/thumbnails/focus.png</texture>
+	            <animation type="Focus">
+	              <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+	            </animation>
+	            <animation type="Unfocus">
+	              <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
+	              <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+	            </animation>
+							<visible>!Control.HasFocus(20)</visible>
+						</control>
+					</focusedlayout>
+		      <content>
+			      <include>HomeWidget_CustomProgramAddonsContent</include>
+		      </content>
+				</control>
+				<control type="group">
+					<left>95</left>
+				  <top>355</top>
+					<visible>Control.HasFocus(125)</visible>
+				  <animation type="Visible" reversible="false">
+			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				  </animation>
+			    <animation type="Hidden" reversible="false">
+			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+			    </animation>
+					<control type="label">
+						<left>20</left>
+						<top>-265</top>
+						<height>50</height>
+						<width>1050</width>
+						<font>FontSize_60</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+				    <align>center</align>
+				    <aligny>center</aligny>
+						<scroll>false</scroll>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
+					</control>
+					<control type="image">
+						<left>-23</left>
+						<top>-118</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_left.png</texture>
+					  <visible>Control.HasFocus(125) + Container(125).HasPrevious</visible>
+					  <include>VisibleFadeEffect</include>
+				  </control>
+				  <control type="image">
+						<left>1083</left>
+						<top>-118</top>
+						<width>25</width>
+						<height>25</height>
+					  <colordiffuse>99ffffff</colordiffuse>
+						<texture>buttons/arrow_right.png</texture>
+					  <visible>Control.HasFocus(125) + Container(125).HasNext</visible>
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				</control>
@@ -963,12 +1702,12 @@
 		<include name="HomeWidgetFavourites">
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(65)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(14) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(14) + Skin.HasSetting(ShowHomeWidgetFavourites)] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="fixedlist" id="65">
 				  <animation effect="slide" start="0,0" end="-105,0" time="0" condition="StringCompare(Container(65).NumItems,2) | StringCompare(Container(65).NumItems,4)">conditional</animation>
-					<posx>95</posx>
-					<posy>140</posy>
+					<left>95</left>
+					<top>140</top>
 					<width>1080</width>
 					<height>256</height>
 					<pagecontrol>-</pagecontrol>
@@ -990,8 +1729,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1008,8 +1747,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1018,8 +1757,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>99white</textcolor>
@@ -1039,8 +1778,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1057,8 +1796,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>164</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1067,8 +1806,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>99white</textcolor>
@@ -1081,8 +1820,8 @@
 							<visible>Control.HasFocus(20) | ControlGroup(21).HasFocus</visible>
 						</control>
 						<control type="label">
-							<posx>110</posx>
-							<posy>160</posy>
+							<left>110</left>
+							<top>160</top>
 							<width>165</width>
 							<height>80</height>
 							<textcolor>blue</textcolor>
@@ -1111,12 +1850,12 @@
 						</control>
 					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_FavouritesContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetFavourites)">HomeWidget_FavouritesContent</include>
 		      </content>
 				</control>
 				<control type="group">
-					<posx>95</posx>
-				  <posy>355</posy>
+					<left>95</left>
+				  <top>355</top>
 					<visible>Control.HasFocus(65)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -1125,8 +1864,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-265</posy>
+						<left>20</left>
+						<top>-265</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_60</font>
@@ -1135,11 +1874,11 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-118</posy>
+						<left>-23</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -1148,8 +1887,8 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				  <control type="image">
-						<posx>1083</posx>
-						<posy>-118</posy>
+						<left>1083</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -1167,11 +1906,11 @@
 		<include name="HomeWidgetSettings">
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(75)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(9) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(9) + Skin.HasSetting(ShowHomeWidgetSettings)] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="panel" id="75">
-					<posx>95</posx>
-					<posy>160</posy>
+					<left>95</left>
+					<top>160</top>
 					<width>1080</width>
 					<height>256</height>
 					<onleft>75</onleft>
@@ -1192,8 +1931,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1202,8 +1941,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1220,8 +1959,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1230,8 +1969,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1240,8 +1979,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>108</posx>
-							<posy>160</posy>
+							<left>108</left>
+							<top>160</top>
 							<width>162</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
@@ -1261,8 +2000,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1271,8 +2010,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<colordiffuse>FF04aeda</colordiffuse>
@@ -1281,8 +2020,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>174</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1290,8 +2029,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>108</posx>
-							<posy>160</posy>
+							<left>108</left>
+							<top>160</top>
 							<width>162</width>
 							<height>40</height>
 							<textcolor>blue</textcolor>
@@ -1313,12 +2052,12 @@
 						</control>
 					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_SettingsContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetSettings)">HomeWidget_SettingsContent</include>
 		      </content>
 				</control>
 				<control type="group">
-					<posx>95</posx>
-				  <posy>370</posy>
+					<left>95</left>
+				  <top>370</top>
 					<visible>Control.HasFocus(75)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -1327,8 +2066,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-265</posy>
+						<left>20</left>
+						<top>-265</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_70</font>
@@ -1337,11 +2076,11 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-118</posy>
+						<left>-23</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -1350,8 +2089,8 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				  <control type="image">
-						<posx>1083</posx>
-						<posy>-118</posy>
+						<left>1083</left>
+						<top>-118</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -1369,11 +2108,12 @@
 		<include name="HomeWidgetWeather">
 			<control type="group">
         <animation effect="slide" start="0,0" end="0,90" time="250" tween="sine" easing="out" condition="Control.HasFocus(85)">Conditional</animation>
-			  <visible allowhiddenfocus="true">Container(20).HasFocus(8) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+	      <visible>StringCompare(Weather.Plugin,weather.wunderground) + !SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
+			  <visible allowhiddenfocus="true">[Container(20).HasFocus(8) + Skin.HasSetting(ShowHomeWidgetWeather)] + !Window.IsActive(1115) + !Window.IsActive(1110) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 	      <include>VisibleHiddenSlideAnimation</include>
 				<control type="panel" id="85">
-					<posx>100</posx>
-					<posy>160</posy>
+					<left>100</left>
+					<top>160</top>
 					<width>1080</width>
 					<height>256</height>
 					<onleft>85</onleft>
@@ -1394,8 +2134,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1404,8 +2144,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1413,9 +2153,9 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>142</posx>
-							<posy>125</posy>
-							<width>210</width>
+							<left>138</left>
+							<top>125</top>
+							<width>217</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -1434,8 +2174,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1444,8 +2184,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1453,8 +2193,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image.">
-							<posx>132</posx>
-							<posy>20</posy>
+							<left>132</left>
+							<top>20</top>
 							<width>120</width>
 							<height>120</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1462,8 +2202,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label.">
-							<posx>35</posx>
-							<posy>65</posy>
+							<left>35</left>
+							<top>65</top>
 							<width>162</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
@@ -1475,8 +2215,8 @@
 							<label>$INFO[ListItem.Property(HighTemperature)]</label>
 						</control>
 						<control type="label.">
-							<posx>35</posx>
-							<posy>85</posy>
+							<left>35</left>
+							<top>85</top>
 							<width>162</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
@@ -1488,9 +2228,9 @@
 							<label>$INFO[ListItem.Property(LowTemperature)]</label>
 						</control>
 						<control type="label">
-							<posx>142</posx>
-							<posy>125</posy>
-							<width>210</width>
+							<left>138</left>
+							<top>125</top>
+							<width>217</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -1501,9 +2241,9 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<posx>142</posx>
-							<posy>160</posy>
-							<width>210</width>
+							<left>138</left>
+							<top>160</top>
+							<width>230</width>
 							<height>40</height>
 							<textcolor>99white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -1522,8 +2262,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1532,8 +2272,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>23</posy>
+							<left>23</left>
+							<top>23</top>
 							<width>230</width>
 							<height>144</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -1541,8 +2281,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image.">
-							<posx>132</posx>
-							<posy>20</posy>
+							<left>132</left>
+							<top>20</top>
 							<width>120</width>
 							<height>120</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1550,8 +2290,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label.">
-							<posx>35</posx>
-							<posy>65</posy>
+							<left>35</left>
+							<top>65</top>
 							<width>162</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
@@ -1563,8 +2303,8 @@
 							<label>$INFO[ListItem.Property(HighTemperature)]</label>
 						</control>
 						<control type="label.">
-							<posx>35</posx>
-							<posy>85</posy>
+							<left>35</left>
+							<top>85</top>
 							<width>162</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
@@ -1576,9 +2316,9 @@
 							<label>$INFO[ListItem.Property(LowTemperature)]</label>
 						</control>
 						<control type="label">
-							<posx>142</posx>
-							<posy>125</posy>
-							<width>210</width>
+							<left>138</left>
+							<top>125</top>
+							<width>217</width>
 							<height>40</height>
 							<textcolor>white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -1589,9 +2329,9 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<posx>142</posx>
-							<posy>160</posy>
-							<width>210</width>
+							<left>138</left>
+							<top>160</top>
+							<width>230</width>
 							<height>40</height>
 							<textcolor>blue</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -1617,12 +2357,12 @@
 						</control>
 					</focusedlayout>
 		      <content>
-		        <include>HomeWidget_WeatherContent</include>
+			      <include condition="Skin.HasSetting(ShowHomeWidgetWeather)">HomeWidget_WeatherContent</include>
 		      </content>
 				</control>
 				<control type="group">
-					<posx>100</posx>
-				  <posy>345</posy>
+					<left>100</left>
+				  <top>345</top>
 					<visible>Control.HasFocus(85)</visible>
 				  <animation type="Visible" reversible="false">
 			      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -1631,8 +2371,8 @@
 			      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 			    </animation>
 					<control type="label">
-						<posx>20</posx>
-						<posy>-235</posy>
+						<left>20</left>
+						<top>-235</top>
 						<height>50</height>
 						<width>1050</width>
 						<font>FontSize_60</font>
@@ -1641,11 +2381,11 @@
 				    <align>center</align>
 				    <aligny>center</aligny>
 						<scroll>false</scroll>
-						<label>$VAR[HomeWidgetsHeadLabels]</label>
+						<label>$VAR[HomeWidgetsHeaderLabels]</label>
 					</control>
 					<control type="image">
-						<posx>-23</posx>
-						<posy>-90</posy>
+						<left>-23</left>
+						<top>-90</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -1654,8 +2394,8 @@
 					  <include>VisibleFadeEffect</include>
 				  </control>
 				  <control type="image">
-						<posx>1084</posx>
-						<posy>-90</posy>
+						<left>1084</left>
+						<top>-90</top>
 						<width>25</width>
 						<height>25</height>
 					  <colordiffuse>99ffffff</colordiffuse>
@@ -1675,9 +2415,9 @@
 		<include name="HomeNowPlaying">
 		  <!-- Music NP -->
 		  <control type="group">
-				<posx>45</posx>
-				<posy>530</posy>
-				<visible>Player.HasAudio + !Skin.HasSetting(ShowHomeScreenNPMusic) + !Window.IsVisible(script-globalsearch-main.xml)</visible>
+				<left>45</left>
+				<top>520</top>
+				<visible>Player.HasAudio + !Skin.HasSetting(ShowHomeScreenNPMusic) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml)</visible>
 		    <animation type="WindowOpen">
 		        <effect type="slide" start="-150,0" end="0,0" time="450" delay="0" tween="cubic" easing="out" />
 		        <effect type="fade" start="0" end="100" time="250" delay="0" tween="cubic" easing="out" />
@@ -1696,23 +2436,23 @@
 		    </animation>
 				<!-- Music Cover -->
 				<control type="group">
-					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					 <control type="image">
-						 <posx>-130</posx>
-						 <posy>-130</posy>
+						 <left>-120</left>
+						 <top>-120</top>
 						 <width>400</width>
 						 <height>400</height>
 						 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				     <texture background="true">views/list/shine.png</texture>
-				     <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				     <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)]</visible>
 					 </control>
 					 <control type="label">
 						 <description>NP label</description>
-						 <posx>-37</posx>
-						 <posy>157</posy>
+						 <left>-37</left>
+						 <top>157</top>
 						 <width>300</width>
 						 <height>30</height>
-						 <label>$LOCALIZE[13350]</label>
+						 <label>$LOCALIZE[31316]...</label>
 						 <align>left</align>
 						 <aligny>left</aligny>
 						 <font>FontSize_22</font>
@@ -1721,8 +2461,8 @@
 						 <angle>90</angle>
 					 </control>
 		       <control type="image">
-		         <posx>3</posx>
-		         <posy>-50</posy>
+		         <left>3</left>
+		         <top>-50</top>
 		         <width>155</width>
 		         <height>155</height>
              <texture diffuse="osd/cd_diffuse.png" background="true" fallback="osd/cd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
@@ -1730,37 +2470,37 @@
 						 <include>CDImageAnim</include>
 		      </control>
 					<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>160</width>
 							<height>160</height>
 							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					    <texture background="true" fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$INFO[Player.Art(thumb)]</texture>
-							<fadetime>800</fadetime>
+							<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-							<posx>-7</posx>
-							<posy>-7</posy>
+							<left>-7</left>
+							<top>-7</top>
 							<width>174</width>
 							<height>174</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture background="true">thumbs/music_overlay.png</texture>
-							<fadetime>800</fadetime>
+							<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-							<posx>0</posx>
-							<posy>162</posy>
+							<left>0</left>
+							<top>162</top>
 							<width>160</width>
 							<height>160</height>
 							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					    <texture background="true" fallback="thumbs/fallback_square.png" flipy="true" diffuse="thumbs/music_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
-							<fadetime>800</fadetime>
+							<fadetime>300</fadetime>
 							<colordiffuse>a0ffffff</colordiffuse>
 					</control>
 					<control type="image">
 							<description>paused indicator</description>
-							<posx>-1</posx>
-							<posy>-1</posy>
+							<left>-1</left>
+							<top>-1</top>
 							<width>162</width>
 							<height>162</height>
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/paused-overlay.png</texture>
@@ -1772,8 +2512,8 @@
 					</control>
 					<control type="image">
 							<description>ff indicator</description>
-							<posx>-1</posx>
-							<posy>-1</posy>
+							<left>-1</left>
+							<top>-1</top>
 							<width>162</width>
 							<height>162</height>
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/ff-overlay.png</texture>
@@ -1785,8 +2525,8 @@
 					</control>
 					<control type="image">
 							<description>rw indicator</description>
-							<posx>-1</posx>
-							<posy>-1</posy>
+							<left>-1</left>
+							<top>-1</top>
 							<width>162</width>
 							<height>162</height>
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/rw-overlay.png</texture>
@@ -1800,14 +2540,15 @@
 
 				<!-- Music Info -->
 				<control type="group">
-					<posx>173</posx>
+					<left>173</left>
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
-					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>75</posy>
+						<left>0</left>
+						<top>64</top>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[MusicPlayer.Title]</label>
@@ -1815,12 +2556,12 @@
 						<aligny>center</aligny>
 						<font>FontSize_36</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Album Label</description>
-						<posx>0</posx>
-						<posy>105</posy>
+						<left>0</left>
+						<top>94</top>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
@@ -1828,14 +2569,14 @@
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>0</posx>
-						<posy>133</posy>
+						<left>0</left>
+						<top>124</top>
 						<height>30</height>
-						<width>1000</width>
+						<width>300</width>
 						<label>$INFO[Player.Time(mm:ss)]$INFO[Player.Duration,[COLOR=purple] / [/COLOR]]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -1847,9 +2588,9 @@
 		  </control>
 		  <!-- Video NP -->
 		  <control type="group">
-				<posx>45</posx>
-				<posy>530</posy>
-				<visible>Player.HasVideo + !Skin.HasSetting(ShowHomeScreenNPVideo) + !Window.IsVisible(script-globalsearch-main.xml)</visible>
+				<left>45</left>
+				<top>520</top>
+				<visible>Player.HasVideo + !Skin.HasSetting(ShowHomeScreenNPVideo) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml)</visible>
 		    <animation type="WindowOpen">
 		        <effect type="slide" start="-150,0" end="0,0" time="450" delay="0" tween="cubic" easing="out" />
 		        <effect type="fade" start="0" end="100" time="250" delay="0" tween="cubic" easing="out" />
@@ -1868,25 +2609,25 @@
 		    </animation>
 		    <!-- Movies & Episodes Cover -->
 			  <control type="group">
-				 <posy>-25</posy>
+				 <top>-25</top>
 				 <visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
-				 <animation effect="slide" start="0,0" end="-180,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+				 <animation effect="slide" start="0,0" end="-180,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 				 <control type="image">
-					 <posx>-130</posx>
-					 <posy>-130</posy>
+					 <left>-120</left>
+					 <top>-120</top>
 					 <width>400</width>
 					 <height>400</height>
 					 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				   <texture background="true">views/list/shine.png</texture>
-				   <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				   <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)]</visible>
 				 </control>
 				 <control type="label">
 					 <description>NP label</description>
-					 <posx>-37</posx>
-					 <posy>180</posy>
+					 <left>-37</left>
+					 <top>182</top>
 					 <width>300</width>
 					 <height>30</height>
-					 <label>$LOCALIZE[13350]</label>
+					 <label>$LOCALIZE[31316]...</label>
 					 <align>left</align>
 					 <aligny>left</aligny>
 					 <font>FontSize_22</font>
@@ -1895,47 +2636,47 @@
 					 <angle>90</angle>
 				 </control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>130</width>
 						<height>185</height>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">thumbs/thumb_back.png</texture>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 				 <control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>130</width>
 						<height>185</height>
 						<texture background="true" fallback="thumbs/fallback_poster.png" diffuse="thumbs/poster_diffuse.png">$VAR[PlayerThumbs]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 				 </control>
 				 <control type="image">
-						<posx>-7</posx>
-						<posy>-7</posy>
+						<left>-7</left>
+						<top>-7</top>
 						<width>145</width>
 						<height>200</height>
 						<texture background="true">thumbs/poster_overlay.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 				 </control>
 				 <control type="image">
-						<posx>0</posx>
-						<posy>187</posy>
+						<left>0</left>
+						<top>187</top>
 						<width>130</width>
 						<height>185</height>
 						<texture background="true" fallback="thumbs/fallback_poster.png" flipy="true" diffuse="thumbs/poster_reflection_diffuse.png">$VAR[PlayerThumbs]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 						<colordiffuse>A0FFFFFF</colordiffuse>
 						<!-- <colordiffuse>33FDFDFD</colordiffuse> -->
 				 </control>
 				 <control type="image">
 						<description>paused indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>130</width>
 						<height>185</height>
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">osd/paused-overlay.png</texture>
@@ -1947,8 +2688,8 @@
 				 </control>
 				 <control type="image">
 						<description>ff indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>130</width>
 						<height>185</height>
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">osd/ff-overlay.png</texture>
@@ -1960,8 +2701,8 @@
 				 </control>
 				 <control type="image">
 						<description>rw indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>130</width>
 						<height>185</height>
 						<texture background="true" diffuse="thumbs/poster_diffuse.png">osd/rw-overlay.png</texture>
@@ -1976,23 +2717,23 @@
 		    <!-- Videos Cover -->
 			  <control type="group">
 				 <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
-				 <animation effect="slide" start="0,0" end="-310,0" time="320" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+				 <animation effect="slide" start="0,0" end="-310,0" time="320" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 				 <control type="image">
-					 <posx>-190</posx>
-					 <posy>-140</posy>
-					 <width>610</width>
+					 <left>-180</left>
+					 <top>-140</top>
+					 <width>650</width>
 					 <height>400</height>
 					 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				   <texture background="true">views/list/shine.png</texture>
-				   <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				   <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)]</visible>
 				 </control>
 				 <control type="label">
 					 <description>NP label</description>
-					 <posx>-37</posx>
-					 <posy>157</posy>
+					 <left>-37</left>
+					 <top>157</top>
 					 <width>300</width>
 					 <height>30</height>
-					 <label>$LOCALIZE[13350]</label>
+					 <label>$LOCALIZE[31316]...</label>
 					 <align>left</align>
 					 <aligny>left</aligny>
 					 <font>FontSize_22</font>
@@ -2001,46 +2742,46 @@
 					 <angle>90</angle>
 				 </control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>260</width>
 						<height>160</height>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<texture background="true" diffuse="thumbs/video_diffuse.png">thumbs/thumb_back.png</texture>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>260</width>
 						<height>160</height>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				    <texture background="true" fallback="thumbs/fallback_episode.png" diffuse="thumbs/video_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-						<posx>-7</posx>
-						<posy>-7</posy>
+						<left>-7</left>
+						<top>-7</top>
 						<width>273</width>
 						<height>173</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture background="true">thumbs/video_overlay.png</texture>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>162</posy>
+						<left>0</left>
+						<top>162</top>
 						<width>260</width>
 						<height>160</height>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				    <texture background="true" fallback="thumbs/fallback_episode.png" flipy="true" diffuse="thumbs/video_reflection_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
-						<fadetime>800</fadetime>
+						<fadetime>300</fadetime>
 						<colordiffuse>A0ffffff</colordiffuse>
 					</control>
 				 <control type="image">
 						<description>paused indicator</description>
-						<posx>-1</posx>
-						<posy>-1</posy>
+						<left>-1</left>
+						<top>-1</top>
 						<width>261</width>
 						<height>161</height>
 						<texture background="true" diffuse="thumbs/video_diffuse.png">osd/paused-overlay.png</texture>
@@ -2052,8 +2793,8 @@
 				 </control>
 				 <control type="image">
 						<description>ff indicator</description>
-						<posx>-1</posx>
-						<posy>-1</posy>
+						<left>-1</left>
+						<top>-1</top>
 						<width>261</width>
 						<height>161</height>
 						<texture background="true" diffuse="thumbs/video_diffuse.png">osd/ff-overlay.png</texture>
@@ -2065,8 +2806,8 @@
 				 </control>
 				 <control type="image">
 						<description>rw indicator</description>
-						<posx>-1</posx>
-						<posy>-1</posy>
+						<left>-1</left>
+						<top>-1</top>
 						<width>261</width>
 						<height>161</height>
 						<texture background="true" diffuse="thumbs/video_diffuse.png">osd/rw-overlay.png</texture>
@@ -2081,23 +2822,23 @@
 				<!-- LiveTV Cover -->
 				<control type="group">
 				   <visible>VideoPlayer.Content(LiveTV)</visible>
-					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					 <animation effect="slide" start="0,0" end="-210,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					 <control type="image">
-						 <posx>-130</posx>
-						 <posy>-130</posy>
+						 <left>-120</left>
+						 <top>-120</top>
 						 <width>400</width>
 						 <height>400</height>
 						 <aspectratio align="center" aligny="center">stretch</aspectratio>
 				     <texture background="true">views/list/shine.png</texture>
-				     <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+				     <visible>![Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)]</visible>
 					 </control>
 					 <control type="label">
 						 <description>NP label</description>
-						 <posx>-37</posx>
-						 <posy>157</posy>
+						 <left>-37</left>
+						 <top>157</top>
 						 <width>300</width>
 						 <height>30</height>
-						 <label>$LOCALIZE[13350]</label>
+						 <label>$LOCALIZE[31316]...</label>
 						 <align>left</align>
 						 <aligny>left</aligny>
 						 <font>FontSize_22</font>
@@ -2106,46 +2847,46 @@
 						 <angle>90</angle>
 					 </control>
 					 <control type="image">
-						 <posx>0</posx>
-						 <posy>0</posy>
+						 <left>0</left>
+						 <top>0</top>
 						 <width>160</width>
 						 <height>160</height>
 						 <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						 <texture background="true" diffuse="thumbs/music_diffuse.png">thumbs/thumb_back.png</texture>
-						 <fadetime>800</fadetime>
+						 <fadetime>300</fadetime>
 					</control>
 					<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>160</width>
 							<height>160</height>
-							<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture background="true" fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
-							<fadetime>800</fadetime>
+							<aspectratio align="center" aligny="top" scalediffuse="false">keep</aspectratio>
+					    <texture background="true" fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$INFO[Player.Art(thumb)]</texture>
+							<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-							<posx>-7</posx>
-							<posy>-7</posy>
+							<left>-7</left>
+							<top>-7</top>
 							<width>174</width>
 							<height>174</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture background="true">thumbs/music_overlay.png</texture>
-							<fadetime>800</fadetime>
+							<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-							<posx>0</posx>
-							<posy>162</posy>
+							<left>0</left>
+							<top>162</top>
 							<width>160</width>
 							<height>160</height>
-							<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture background="true" fallback="thumbs/fallback_square.png" flipy="true" diffuse="thumbs/music_reflection_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
-							<fadetime>800</fadetime>
+							<aspectratio align="center" aligny="top" scalediffuse="false">keep</aspectratio>
+					    <texture background="true" fallback="thumbs/fallback_square.png" flipy="true" diffuse="thumbs/music_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
+							<fadetime>300</fadetime>
 							<colordiffuse>a0ffffff</colordiffuse>
 					</control>
 					<control type="image">
 							<description>paused indicator</description>
-							<posx>-1</posx>
-							<posy>-1</posy>
+							<left>-1</left>
+							<top>-1</top>
 							<width>162</width>
 							<height>162</height>
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/paused-overlay.png</texture>
@@ -2157,8 +2898,8 @@
 					</control>
 					<control type="image">
 							<description>ff indicator</description>
-							<posx>-1</posx>
-							<posy>-1</posy>
+							<left>-1</left>
+							<top>-1</top>
 							<width>162</width>
 							<height>162</height>
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/ff-overlay.png</texture>
@@ -2170,8 +2911,8 @@
 					</control>
 					<control type="image">
 							<description>rw indicator</description>
-							<posx>-1</posx>
-							<posy>-1</posy>
+							<left>-1</left>
+							<top>-1</top>
 							<width>162</width>
 							<height>162</height>
 							<texture background="true" diffuse="thumbs/music_diffuse.png">osd/rw-overlay.png</texture>
@@ -2185,43 +2926,45 @@
 
 				<!-- Movie Info -->
 				<control type="group">
-					<posx>145</posx>
-					<visible>VideoPlayer.Content(Movies)</visible>
+					<left>145</left>
+					<top>-7</top>
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
-					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<visible>VideoPlayer.Content(Movies)</visible>
+					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>75</posy>
-						<height>30</height>
+						<left>0</left>
+						<top>65</top>
 						<width>1000</width>
+						<height>30</height>
 						<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,) ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_32</font>
+						<font>FontSize_36</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Genre label</description>
-						<posx>0</posx>
-						<posy>105</posy>
-						<height>30</height>
+						<left>0</left>
+						<top>98</top>
+						<height>25</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>0</posx>
-						<posy>133</posy>
+						<left>0</left>
+						<top>130</top>
+						<width>300</width>
 						<height>30</height>
-						<width>1000</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -2233,43 +2976,45 @@
 
 			  <!-- Episode Info -->
 				<control type="group">
-			    <posx>145</posx>
-					<visible>VideoPlayer.Content(Episodes)</visible>
+			    <left>145</left>
+					<top>-7</top>
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
-					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<visible>VideoPlayer.Content(Episodes)</visible>
+					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>75</posy>
+						<left>0</left>
+						<top>65</top>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_32</font>
+						<font>FontSize_36</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>TV Show Season Ep Label</description>
-						<posx>0</posx>
-						<posy>105</posy>
-						<height>30</height>
+						<left>0</left>
+						<top>98</top>
+						<height>25</height>
 						<width>1000</width>
-						<label>$INFO[VideoPlayer.TVShowTitle] • $LOCALIZE[20373] $INFO[VideoPlayer.Season] • $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+						<label>$INFO[VideoPlayer.TVShowTitle] â€¢ $LOCALIZE[20373] $INFO[VideoPlayer.Season] â€¢ $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>0</posx>
-						<posy>133</posy>
+						<left>0</left>
+						<top>130</top>
 						<height>30</height>
-						<width>1000</width>
+						<width>300</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -2281,43 +3026,45 @@
 
 			  <!-- Videos Info -->
 				<control type="group">
-		      <posx>275</posx>
+		      <left>275</left>
+					<top>-7</top>
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
 				  <visible>![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(LiveTV)]</visible>
-					<animation effect="slide" start="0,0" end="-140,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-270,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>75</posy>
+						<left>0</left>
+						<top>65</top>
 						<height>30</height>
-						<width>1000</width>
+						<width>740</width>
 						<label>$INFO[VideoPlayer.Title]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>FontSize_32</font>
+						<font>FontSize_36</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Genre label</description>
-						<posx>0</posx>
-						<posy>105</posy>
-						<height>30</height>
-						<width>1000</width>
+						<left>0</left>
+						<top>98</top>
+						<height>25</height>
+						<width>740</width>
 						<label>$INFO[VideoPlayer.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>0</posx>
-						<posy>133</posy>
+						<left>0</left>
+						<top>130</top>
+						<width>640</width>
 						<height>30</height>
-						<width>1000</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -2329,16 +3076,18 @@
 
 			  <!-- LiveTV Info -->
 				<control type="group">
-		      <posx>173</posx>
+		      <left>173</left>
+					<top>-7</top>
 		      <include>KaiToastSlideAnimations</include>
 		      <include>ScanSlideAnimations</include>
 				  <visible>VideoPlayer.Content(LiveTV)</visible>
-					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-170,0" time="300" reversible="true" tween="sine" easing="inout" condition="Control.HasFocus(15) | Control.HasFocus(25) | Control.HasFocus(35) | Control.HasFocus(45) | Control.HasFocus(65) | Control.HasFocus(75) | Control.HasFocus(85) | Control.HasFocus(95) | Control.HasFocus(125) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(1115)">Conditional</animation>
 					<control type="grouplist" id="1">
-						<posx>0</posx>
-						<posy>65</posy>
+						<left>0</left>
+						<top>53</top>
 						<height>70</height>
-						<width>1000</width>
+						<width>970</width>
 						<itemgap>10</itemgap>
 						<align>left</align>
 						<orientation>horizontal</orientation>
@@ -2354,23 +3103,23 @@
 					</control>
 					<control type="label">
 						<description>Genre label</description>
-						<posx>0</posx>
-						<posy>105</posy>
-						<height>30</height>
-						<width>1000</width>
+						<left>0</left>
+						<top>98</top>
+						<height>25</height>
+						<width>740</width>
 						<label>$INFO[VideoPlayer.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
 						<textcolor>99white</textcolor>
-						<shadowcolor>77000000</shadowcolor>
+						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>0</posx>
-						<posy>133</posy>
+						<left>0</left>
+						<top>130</top>
+						<width>640</width>
 						<height>30</height>
-						<width>1000</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -2387,15 +3136,15 @@
 	  <!-- =========== -->
 		<include name="TopHomeMenu">
 		  <control type="group">
-				<posx>45</posx>
-				<posy>25</posy>
+				<left>45</left>
+				<top>25</top>
 		    <include>OpenCloseSlideAnimation</include>
 		    <include>VisibleHiddenSlideAnimation</include>
 		    <include>ShutdownMenuAnimation</include>
-				<visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(Favourites)]</visible>
+				<visible>![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(script-Actors-DialogInfo.xml) | Window.IsActive(script-Actors-DialogVideoInfo.xml) | Window.IsActive(Favourites)]</visible>
 				<control type="grouplist" id="21">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<height>0</height>
 					<width>0</width>
 					<itemgap>0</itemgap>
@@ -2433,15 +3182,15 @@
 				    <onclick>ActivateWindow(shutdownmenu)</onclick>
 					</control>
 					<control type="button" id="214">
-						<description>Network</description>
+						<description>Help</description>
 				    <include>TopButton</include>
 				    <onclick>SetFocus(20)</onclick>
-					  <onclick>RunScript(script.linux.nm)</onclick>
+						<onclick>ActivateWindow(1111)</onclick>
 					</control>
 				</control>
 				<control type="grouplist">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<height>70</height>
 					<width>1190</width>
 					<itemgap>20</itemgap>
@@ -2454,53 +3203,74 @@
           <control type="label">
            <include>TopSmallLabel</include>
            <label>$LOCALIZE[1036]</label>
-           <animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
-           <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
+           <animation effect="fade" start="100" end="70" time="150" tween="sine" easing="in" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
+           <animation effect="zoom"  start="100" end="95" time="150" tween="sine" easing="in" center="15,0" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
 						<visible>Skin.HasSetting(HideHomeMenuFavoritesButton)</visible>
           </control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
 						<label>$LOCALIZE[5]</label>
-						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
+						<animation effect="fade" start="100" end="70" time="150" tween="sine" easing="in" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="95" time="150" tween="sine" easing="in" center="15,0" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
 						<visible>Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
 						<label>$LOCALIZE[137]</label>
-						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
+						<animation effect="fade" start="100" end="70" time="150" tween="sine" easing="in" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="95" time="150" tween="sine" easing="in" center="15,0" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
 						<visible>!Skin.HasSetting(ShowHomeMenuSearchButton) + System.HasAddon(script.globalsearch)</visible>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
 						<label>$LOCALIZE[33060]</label>
-						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
+						<animation effect="fade" start="100" end="70" time="150" tween="sine" easing="in" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="95" time="150" tween="sine" easing="in" center="15,0" condition="!Control.HasFocus(213)" reversible="true">Conditional</animation>
 					</control>
 					<control type="label">
 					  <include>TopSmallLabel</include>
-						<label>$LOCALIZE[705]</label>
-						<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
-	          <animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
+						<label>$LOCALIZE[31430]</label>
+						<animation effect="fade" start="100" end="70" time="150" tween="sine" easing="in" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
+	          <animation effect="zoom"  start="100" end="95" time="150" tween="sine" easing="in" center="15,0" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
 					</control>
+<!--  *NOT USED*
 					<control type="group">
 						<visible>Control.IsVisible(214)</visible>
 	          <animation effect="zoom"  start="100" end="80" time="200" tween="sine" easing="in" center="-12,37" condition="!Control.HasFocus(214)" reversible="true">Conditional</animation>
-			      <control type="image">
-			      	<posx>-22</posx>
-			      	<posy>21</posy>
+	          <control type="image">
+			      	<left>-22</left>
+			      	<top>21</top>
 			      	<width>26</width>
 			      	<height>26</height>
 					    <aspectratio align="left" aligny="center">keep</aspectratio>
-					    <texture background="true">$VAR[InternetState]</texture>
+					    <texture background="true">$VAR[InternetStateIcons]</texture>
 			      </control>
 					</control>
+-->
 				</control>
 				<control type="group">
-					<posx>3</posx>
-					<posy>45</posy>
-	        <animation effect="slide" end="-3,3" reversible="false" condition="stringcompare(System.Language,Greek) | stringcompare(System.Language,Italian)">Conditional</animation>				
+				  <visible>Skin.HasSetting(ShowLibraryTotals)</visible>
+	        <animation effect="slide" end="-3,3" reversible="false" condition="stringcompare(System.Language,Greek) | stringcompare(System.Language,Italian)">Conditional</animation>
+					<control type="fadelabel">
+						<left>3</left>
+						<top>45</top>
+						<width>500</width>
+						<height>20</height>
+						<font>FontSize_18</font>
+						<textcolor>blue</textcolor>
+			      <shadowcolor>55000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window(Home).Property(Movies.Count),$LOCALIZE[20342]: ]</label>
+						<label>$INFO[Window(Home).Property(TVShows.Count),$LOCALIZE[31002]: ]</label>
+						<label>$INFO[Window(Home).Property(Music.AlbumsCount),$LOCALIZE[132]: ]</label>
+						<label>$INFO[Window(Home).Property(Music.SongsCount),$LOCALIZE[134]: ]</label>
+            <scroll>false</scroll>
+            <scrollout>false</scrollout>
+            <scrollspeed>100</scrollspeed>
+            <pauseatend>8000</pauseatend>
+					</control>
+<!-- *NOT USED*
 					<control type="label">
 						<description>Library Totals: Movies</description>
 						<width>500</width>
@@ -2564,33 +3334,63 @@
 							<effect type="fade" start="100" end="0" delay="40900" time="300" />
 						</animation>
 					</control>
+-->
 		    </control>
 		  </control>
 	  </include>
 
-    <!-- ========= -->
-	  <!-- TLBB Logo -->
-	  <!-- ========= -->
-    <include name="TLBBLogo">
-			<control type="group">
-		    <visible>!Window.IsActive(InfoDialog) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(ShutdownMenu)</visible>
+	  <include name="RSSFeed">
+	    <!-- RSS Feed -->
+		  <control type="group">
+				<left>0</left>
+				<top>30r</top>
 			  <include>TLBBSlideAnimations</include>
-				<control type="group">
-					<posx>188r</posx>
-				  <posy>583</posy>
-					<control type="image">
-						<description>tlbb logo</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>150</width>
-						<height>150</height>
-						<aspectratio>stretch</aspectratio>
-		        <texture background="true">logo.png</texture>
-						<align>right</align>
-						<aligny>center</aligny>
-					</control>
-			  </control>
+	      <visible>System.Getbool(lookandfeel.enablerssfeeds)</visible>
+				<control type="rss">
+					<description>RSS feed</description>
+					<height>30</height>
+					<width>1250</width>
+					<font>FontSize_20</font>
+					<urlset>1</urlset>
+					<textcolor>99white</textcolor>
+					<titlecolor>blue</titlecolor>
+					<headlinecolor>99white</headlinecolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<description>RSS Icon</description>
+					<left>1250</left>
+					<top>2</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>rss_icon.png</texture>
+				</control>
 			</control>
-	  </include>
+	    <!-- TLBB Logo -->
+			<control type="group">
+			  <include>TLBBSlideAnimations</include>
+		    <visible>!Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml)</visible>
+				<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
+			  <animation type="Conditional" reversible="false" condition="![Window.IsActive(InfoDialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(ShutdownMenu)]">
+		      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+		      <effect type="slide" start="0,-35" end="0,0" time="350" tween="cubic" easing="out" />
+			  </animation>
+			  <animation type="Conditional" reversible="false" condition="[Window.IsActive(InfoDialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(ShutdownMenu)]">
+		      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+		      <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			  </animation>
+				<control type="image">
+					<description>tlbb logo</description>
+					<left>188r</left>
+				  <top>583</top>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio>stretch</aspectratio>
+	        <texture background="true">logo.png</texture>
+					<align>right</align>
+					<aligny>center</aligny>
+				</control>
+			</control>
+		</include>
 
 </includes>

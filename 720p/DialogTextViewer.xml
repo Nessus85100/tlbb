@@ -1,8 +1,16 @@
-<window id="147">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="147">
 	<defaultcontrol>61</defaultcontrol>
 	<controls>
 		<control type="group">
 		  <include>DialogAnimation</include>
+			<control type="image">
+				<posx>178</posx>
+				<posy>113</posy>
+				<width>924</width>
+				<height>514</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
+			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 			  <texture background="true">dialogs/other/bg_textviewer.png</texture>

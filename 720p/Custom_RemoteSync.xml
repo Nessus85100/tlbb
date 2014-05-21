@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="1113">
+	<defaultcontrol always="true">13</defaultcontrol>
+  <onunload condition="Window.IsVisible(startup) + !Skin.HasSetting(FirstTimeRun)">SetFocus(11)</onunload>
+  <onunload condition="Window.IsVisible(startup) + Skin.HasSetting(FirstTimeRun)">SetFocus(12)</onunload>
+	<controls>
+		<control type="group">
+		  <visible>!Window.IsActive(yesnodialog) + !Window.IsActive(busy.xml)</visible>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" time="800" center="640,360" start="0" end="100" delay="500" tween="cubic" easing="out" />
+				<effect type="fade" time="700" start="0" easing="out" end="100" delay="500" />
+			</animation>			
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" time="600" center="640,360" start="100" end="150" tween="cubic" easing="in" />
+				<effect type="fade" time="500" start="100" easing="in" end="0" />
+			</animation>
+      <include>VisibleHiddenSlideAnimation</include>
+			<control type="image">
+				<posx>245</posx>
+				<posy>175</posy>
+				<width>790</width>
+				<height>370</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
+			</control>
+			<control type="image">
+				<posx>610</posx>
+				<posy>265</posy>
+				<width>383</width>
+				<height>205</height>
+				<texture border="79">dialogs/other/default_content.png</texture>
+			</control>
+			<control type="label">
+				<description>Heding Label</description>
+				<posx>268</posx>
+				<posy>195</posy>
+				<width>743</width>
+				<height>80</height>
+				<label>Remote Control Sync</label>
+				<font>FontSize_40</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+			</control>
+			<control type="group">
+				<posx>287</posx>
+				<posy>195</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>315</width>
+					<height>205</height>
+					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<texture background="true">windows/help/remote_keys.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>315</width>
+					<height>205</height>
+					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<texture background="true">windows/help/remote_sync_keys.png</texture>
+					<animation type="Conditional" condition="true" loop="true">
+			      <effect type="slide" start="0,0" end="0,1" tween="sine" easing="inout" delay="300" time="500" />
+						<effect type="fade" start="0" end="100" delay="300" time="400"/>
+						<effect type="fade" start="100" end="0" delay="10000" time="500"/>
+					</animation>
+				</control>
+				<control type="textbox">
+					<posx>336</posx>
+					<posy>75</posy>
+					<width>357</width>
+					<height>250</height>
+					<label>If your unit is not responding, make sure batteries are in the remote. Hold the remote within a few inches from the box and press digits [COLOR=red][B]1[/B][/COLOR] and [COLOR=red][B]9[/B][/COLOR] until the LED stops flashes to sync the remote. When you done press "OK" to close this dialog and it will not appear again.</label>
+					<font>FontSize_20</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+			</control>
+			<control type="grouplist" id="10001">
+				<posx>283</posx>
+				<posy>475</posy>
+				<width>0</width>
+				<height>0</height>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<onleft>10001</onleft>
+				<onright>10001</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>		
+				<control type="button" id="13">
+					<description>OK</description>
+					<width>100</width>
+					<height>40</height>
+					<texturefocus border="39,3,39,39">dialogs/buttons/save_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">dialogs/buttons/save_nf.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>310</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<label>OK</label>
+					<onclick>Skin.Setbool(FirstTimeRemoteSync)</onclick>
+			    <onclick>Action(back)</onclick>
+				</control>
+				<control type="button" id="14">
+					<description>Cancel</description>
+					<width>100</width>
+					<height>40</height>
+					<texturefocus border="39,3,39,39">dialogs/buttons/cancel_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">dialogs/buttons/cancel_nf.png</texturenofocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>310</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>6</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<label>Cancel</label>
+			    <onclick>Action(back)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
+
+
+
+
+
+
+
+
+<!-- *NOT USED*
+  TEST Alt Dialog version
+	<control type="group">
+	  <visible>!Window.IsActive(1114)</visible>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" time="800" center="640,360" start="0" end="100" delay="500" tween="cubic" easing="out" />
+			<effect type="fade" time="700" start="0" easing="out" end="100" delay="500" />
+		</animation>			
+		<animation type="WindowClose" reversible="false">
+			<effect type="zoom" time="600" center="640,360" start="100" end="150" tween="cubic" easing="in" />
+			<effect type="fade" time="500" start="100" easing="in" end="0" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="zoom" time="800" center="640,360" start="0" end="100" delay="500" tween="cubic" easing="out" />
+			<effect type="fade" time="800" start="0" easing="out" end="100" delay="500" />
+		</animation>			
+		<animation type="Hidden" reversible="false">
+			<effect type="zoom" time="800" center="640,360" start="100" end="200" tween="cubic" easing="in" />
+			<effect type="fade" time="800" start="100" easing="in" end="0" />
+		</animation>
+		<control type="image">
+			<posx>250</posx>
+			<posy>195</posy>
+			<width>750</width>
+			<height>355</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
+		<control type="image">
+			<posx>290</posx>
+			<posy>285</posy>
+			<width>670</width>
+			<height>165</height>
+			<texture  border="79">dialogs/other/default_content.png</texture>
+		</control>
+		<control type="label">
+			<description>Heding Label</description>
+			<posx>275</posx>
+			<posy>215</posy>
+			<width>700</width>
+			<height>80</height>
+			<label>Remote Control Sync</label>
+			<font>FontSize_36</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<scroll>true</scroll>
+			<scrollspeed>20</scrollspeed>
+		</control>
+		<control type="group">
+			<posx>295</posx>
+			<posy>292</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>234</width>
+				<height>150</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture background="true">windows/help/remote_keys.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>234</width>
+				<height>150</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture background="true">windows/help/remote_sync.png</texture>
+				<animation type="Conditional" condition="true" loop="true">
+		      <effect type="slide" start="0,0" end="0,1" tween="sine" easing="inout" delay="1200" time="500" />
+					<effect type="fade" start="0" end="100" delay="1200" time="400"/>
+					<effect type="fade" start="100" end="0" delay="10000" time="500"/>
+				</animation>
+			</control>
+			<control type="textbox">
+				<description>Help Screen 1</description>
+				<posx>240</posx>
+				<posy>5</posy>
+				<width>410</width>
+				<height>150</height>
+				<label>If your unit is not responding, make sure batteries are in the remote. Hold and press digits [COLOR=FFAB3DC7][B]1[/B][/COLOR] and [COLOR=FFAB3DC7][B]9[/B][/COLOR] until the LED stops flashes to sync the remote. When you done press "OK" to close this dialog and it will not appear again.</label>
+				<font>FontSize_20</font>
+				<align>justify</align>
+				<textcolor>99white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+			</control>
+		</control>
+		<control type="button" id="813">
+			<description>OK button</description>
+			<posx>560</posx>
+			<posy>465</posy>
+			<width>150</width>
+			<height>43</height>
+			<texturenofocus border="20,15,20,15">dialogs/keyboard/button_nf.png</texturenofocus>
+			<texturefocus border="20,15,20,15">dialogs/keyboard/button_fo.png</texturefocus>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>FontSize_22</font>
+			<textcolor>99grey</textcolor>
+			<focusedcolor>99white</focusedcolor>
+			<disabledcolor>44white</disabledcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<textoffsety>6</textoffsety>
+			<label>OK</label>
+		  <onclick>Action(close)</onclick>
+			<onclick>ReplaceWindow(1114)</onclick>
+      <onclick>Skin.Setbool(FirstTimeRemoteSync)</onclick>
+		</control>
+	</control>
+-->

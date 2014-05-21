@@ -1,4 +1,5 @@
-<window id="136">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="136">
 	<defaultcontrol always="true">22</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -7,9 +8,11 @@
 			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(smartplaylistrule) + !Window.IsActive(selectdialog)</visible>
 			<include>DialogAnimation</include>
 			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture background="true">dialogs/playlisteditor/bg_playlisteditor.png</texture>
+				<posx>281</posx>
+				<posy>130</posy>
+				<width>718</width>
+				<height>481</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>

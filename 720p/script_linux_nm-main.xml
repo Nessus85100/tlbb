@@ -1,4 +1,5 @@
-<window type="dialog" id="129">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="129">
 	<defaultcontrol>14</defaultcontrol>
   <zorder>4</zorder>
 	<controls>
@@ -79,7 +80,7 @@
 							<width>40</width>
 							<height>40</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
-					    <texture background="true">$VAR[WiFiState]</texture>
+					    <texture background="true">$VAR[WiFiStateIcons]</texture>
 						</control>
 						<control type="label">
 							<posx>40</posx>
@@ -132,7 +133,7 @@
 							<width>40</width>
 							<height>40</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
-				      <texture background="true">$VAR[WiFiState]</texture>
+				      <texture background="true">$VAR[WiFiStateIcons]</texture>
 						</control>
 						<control type="group">
               <animation type="Conditional" condition="![Control.HasFocus(10) | Control.HasFocus(11)]">
@@ -250,7 +251,6 @@
 		  <control type="group" id="10000">
 				<posx>320</posx>
 				<posy>495</posy>
-	      <!-- Buttons -->
 				<control type="grouplist" id="10001">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -263,7 +263,8 @@
 					<onright>10001</onright>
 					<onup>8000</onup>
 					<ondown>8000</ondown>
-					<control type="button." id="14">  <!-- Hidden -->
+					<!--
+					<control type="button." id="14">
 						<description>Add Connection Button</description>
 					  <width>100</width>
 					  <height>40</height>
@@ -280,7 +281,7 @@
 						<shadowcolor>99000000</shadowcolor>
 						<label>$ADDON[script.linux.nm 621]</label>
 					</control>
-					<control type="button." id="11">  <!-- Hidden -->
+					<control type="button." id="11">
 						<description>Delete Button</description>
 					  <width>120</width>
 					  <height>40</height>
@@ -297,7 +298,7 @@
 						<shadowcolor>99000000</shadowcolor>
 						<label>$ADDON[script.linux.nm 622]</label>
 					</control>
-					<control type="button." id="13">  <!-- Hidden -->
+					<control type="button." id="13">
 						<description>Disconnect Button</description>
 					  <width>160</width>
 					  <height>40</height>
@@ -315,7 +316,7 @@
 						<label>$ADDON[script.linux.nm 612]</label>
 						<visible>!stringcompare(Container(10).ListItem.Label,>)</visible>
 					</control>
-					<control type="button." id="15">  <!-- Hidden -->
+					<control type="button." id="15"> 
 				    <description>Check Status Button</description>
 					  <width>175</width>
 					  <height>40</height>
@@ -332,6 +333,7 @@
 						<shadowcolor>99000000</shadowcolor>
 						<label>$ADDON[script.linux.nm 628]</label>
 					</control>
+					-->
 					<control type="button" id="19">
 						<description>Done Button</description>
 					  <width>150</width>

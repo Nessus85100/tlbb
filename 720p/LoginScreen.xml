@@ -1,7 +1,8 @@
-<window id="29">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="29">
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<controls>
 
 	 <control type="image">
@@ -19,12 +20,12 @@
     <animation type="WindowClose" reversible="false">
       <effect type="fade" start="100" end="0" time="350" delay="200" tween="sine" easing="out" />
     </animation>
-		<posx>455</posx>
-		<posy>0</posy>
+		<left>455</left>
+		<top>0</top>
 		<control type="wraplist" id="52">
 			<description>Profiles Area</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>405</width>
 			<height>450</height>
 			<focusposition>1</focusposition>
@@ -35,24 +36,24 @@
 			<ondown>52</ondown>
 			<itemlayout width="135">
 				<control type="image">
-					<posx>7</posx>
-					<posy>297</posy>
+					<left>7</left>
+					<top>297</top>
 					<width>93</width>
 					<height>93</height>
 			    <aspectratio align="center" aligny="center">stretch</aspectratio>
 					<texture diffuse="windows/logon/profile_icon_diffuse.png">thumbs/thumb_back.png</texture>
 				</control>
 				<control type="image">
-					<posx>7</posx>
-					<posy>297</posy>
+					<left>7</left>
+					<top>297</top>
 					<width>93</width>
 					<height>93</height>
 			    <aspectratio align="center" aligny="center">scale</aspectratio>
 					<texture fallback="dialogs/profiles/unknown_user.png" diffuse="windows/logon/profile_icon_diffuse.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>290</posy>
+					<left>0</left>
+					<top>290</top>
 					<width>107</width>
 					<height>107</height>
 			    <aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -61,8 +62,8 @@
 			</itemlayout>
 			<focusedlayout width="135">
 				<control type="image">
-					<posx>7</posx>
-					<posy>297</posy>
+					<left>7</left>
+					<top>297</top>
 					<width>93</width>
 					<height>93</height>
 			    <aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -71,8 +72,8 @@
 					<animation reversible="false" effect="zoom" start="150" end="100" center="auto" time="200">unfocus</animation>
 				</control>
 				<control type="image">
-					<posx>7</posx>
-					<posy>297</posy>
+					<left>7</left>
+					<top>297</top>
 					<width>93</width>
 					<height>93</height>
 			    <aspectratio align="center" aligny="center">scale</aspectratio>
@@ -81,8 +82,8 @@
 					<animation reversible="false" effect="zoom" start="150" end="100" center="auto" time="200">unfocus</animation>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>290</posy>
+					<left>0</left>
+					<top>290</top>
 					<width>107</width>
 					<height>107</height>
 			    <aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -91,8 +92,8 @@
 					<animation reversible="false" effect="zoom" start="150" end="100" center="auto" time="200">unfocus</animation>
 				</control>
 			  <control type="label.">
-					<posx>55</posx>
-					<posy>220</posy>
+					<left>55</left>
+					<top>220</top>
 					<width>405</width>
 					<height>40</height>
 					<font>FontSize_38</font>
@@ -113,8 +114,8 @@
 	 <include>CommonDialogsFadeOutBG</include>
 
 	 <control type="group">
-		<posx>25</posx>
-		<posy>45</posy>
+		<left>25</left>
+		<top>45</top>
     <include>WeatherAndClock</include>
     <animation type="WindowOpen" reversible="false">
       <effect type="fade" start="0" end="100" time="350" delay="200" tween="sine" easing="in"  />
@@ -128,8 +129,8 @@
    <!-- Top Content Info -->
    <!-- ================ -->
    <control type="group">
-		<posx>45</posx>
-		<posy>25</posy>
+		<left>45</left>
+		<top>25</top>
     <animation type="WindowOpen" reversible="false">
       <effect type="fade" start="0" end="100" time="350" delay="200" tween="sine" easing="in"  />
     </animation>
@@ -138,8 +139,8 @@
     </animation>
 	  <include>ShutdownMenuAnimation</include>
 		<control type="grouplist">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<height>70</height>
 			<width>1000</width>
 			<align>left</align>
@@ -159,8 +160,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>3</posx>
-			<posy>46</posy>
+			<left>3</left>
+			<top>46</top>
 			<control type="label">
 				<description>User last login</description>
 				<width>500</width>
@@ -175,64 +176,67 @@
 		</control>
    </control>
 
+   <!-- =============== -->
+   <!-- == Date Info == -->
+   <!-- =============== -->
 	 <control type="group">
-		<posx>1112</posx>
-		<posy>510</posy>
+		<left>748</left>
+		<top>510</top>
     <include>NowPlaying</include>
-		<visible>!Window.IsActive(ShutdownMenu)</visible>
+	  <visible>!Window.IsActive(ShutdownMenu)</visible>
 		<control type="label">
-				<description>Date</description>
-				<posx>98</posx>
-				<posy>110</posy>
-				<width>365</width>
-				<height>50</height>
-				<font>FontSize_85</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[System.Date(dd)]</label>
-				<textcolor>white</textcolor>
-				<shadowcolor>ff0d0d0d</shadowcolor>
+			<description>Date</description>
+			<left>98</left>
+			<top>110</top>
+			<width>365</width>
+			<height>50</height>
+			<font>FontSize_85</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[System.Date(dd)]</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>ff0d0d0d</shadowcolor>
 		</control>
 		<control type="label">
-				<description>Year</description>
-				<posx>156</posx>
-				<posy>140</posy>
-				<width>100</width>
-				<height>30</height>
-				<font>FontSize_28</font>
-				<textcolor>white</textcolor>
-				<align>right</align>
-				<aligny>top</aligny>
-				<label>$INFO[System.Date(yyyy)]</label>
-			 <animation effect="rotate" start="0" end="90" center="auto" time="0">WindowOpen</animation>
-			 <animation effect="rotate" start="0" end="90" center="auto" time="0">WindowClose</animation>
-				<shadowcolor>ff0d0d0d</shadowcolor>
+			<description>Year</description>
+			<left>420</left>
+			<top>140</top>
+			<width>100</width>
+			<height>30</height>
+			<font>FontSize_28</font>
+			<textcolor>white</textcolor>
+			<align>right</align>
+			<aligny>top</aligny>
+			<label>$INFO[System.Date(yyyy)]</label>
+		 <animation effect="rotate" start="0" end="90" center="auto" time="0">WindowOpen</animation>
+		 <animation effect="rotate" start="0" end="90" center="auto" time="0">WindowClose</animation>
+			<shadowcolor>ff0d0d0d</shadowcolor>
 		</control>
 		<control type="label">
-				<description>Weekday</description>
-				<posx>4</posx>
-				<posy>105</posy>
-				<width>350</width>
-				<height>30</height>
-				<font>FontSize_34</font>
-				<textcolor>white</textcolor>
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[System.Date(DDD)]</label>
-				<shadowcolor>ff0d0d0d</shadowcolor>
+			<description>Weekday</description>
+			<left>18</left>
+			<top>105</top>
+			<width>350</width>
+			<height>30</height>
+			<font>FontSize_34</font>
+			<textcolor>white</textcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[System.Date(DDD)]</label>
+			<shadowcolor>ff0d0d0d</shadowcolor>
 		</control>
 		<control type="label">
-				<description>Month</description>
-				<posx>4</posx>
-				<posy>139</posy>
-				<width>350</width>
-				<height>30</height>
-				<font>FontSize_34</font>
-				<textcolor>white</textcolor>
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[System.Date(MMM)]</label>
-				<shadowcolor>ff0d0d0d</shadowcolor>
+			<description>Month</description>
+			<left>18</left>
+			<top>139</top>
+			<width>350</width>
+			<height>30</height>
+			<font>FontSize_34</font>
+			<textcolor>white</textcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[System.Date(MMM)]</label>
+			<shadowcolor>ff0d0d0d</shadowcolor>
 		</control>
 	 </control>
 

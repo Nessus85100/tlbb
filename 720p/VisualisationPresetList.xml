@@ -1,4 +1,5 @@
-<window id="122">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="122">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<controls>
 	<control type="button" id="100">
@@ -9,15 +10,25 @@
 		<control type="group">
   		<include>DialogAnimation</include>
 			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture>osd/bg_osd_settings.png</texture>
+				<posx>316</posx>
+				<posy>117</posy>
+				<width>649</width>
+				<height>494</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
+				<colordiffuse>FAFFFFFF</colordiffuse>
 				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
 			</control>
 			<control type="image">
 				<description>background image</description>
 				<include>FullscreenDimensions</include>
+				<texture>osd/bg_osd_settings.png</texture>
+				<colordiffuse>FAFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<include>FullscreenDimensions</include>
 				<texture>osd/bg_osd_settings_lines.png</texture>
+				<colordiffuse>FAFFFFFF</colordiffuse>
 				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
 			  <visible>!Control.IsVisible(4)</visible>
 			</control>

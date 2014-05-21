@@ -1,4 +1,5 @@
-<window type="dialog" id="114">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="114">
   <defaultcontrol always="true">150</defaultcontrol>
   <onload condition="[Player.HasMedia + !VideoPlayer.Content(LiveTV)]">SetFocus(602)</onload>
   <onload condition="[Player.HasMedia + VideoPlayer.Content(LiveTV)]">SetFocus(601)</onload>
@@ -23,8 +24,8 @@
 				</animation>
 				<control type="label">
 			    <description>header label</description>
-					<posx>290</posx>
-					<posy>185</posy>
+					<left>290</left>
+					<top>185</top>
 					<height>50</height>
 					<width>705</width>
 					<font>FontSize_40</font>
@@ -33,20 +34,20 @@
 			    <align>center</align>
 			    <aligny>center</aligny>
 					<scroll>false</scroll>
-					<label>31374</label>
+					<label>$LOCALIZE[31370]</label>
 				</control>
 				<control type="image">
 			    <description>background image</description>
-					<posx>268</posx>
-					<posy>230</posy>
+					<left>268</left>
+					<top>230</top>
 					<width>745</width>
 					<height>256</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 		      <texture background="true">osd/quicknav/bg_quicknav.png</texture>
 				</control>
 				<control type="wraplist" id="150">
-					<posx>288</posx>
-					<posy>265</posy>
+					<left>288</left>
+					<top>265</top>
 					<width>705</width>
 					<height>360</height>
 					<onleft>150</onleft>
@@ -62,16 +63,16 @@
 		      <scrolltime tween="Cubic" easing="out">300</scrolltime>
 					<itemlayout height="235" width="235">
 						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
+							<left>30</left>
+							<top>0</top>
 							<width>175</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture background="true" border="8">osd/quicknav/nofocus_square.png</texture>
 						</control>
 						<control type="image">
-							<posx>35</posx>
-							<posy>5</posy>
+							<left>35</left>
+							<top>5</top>
 							<width>165</width>
 							<height>155</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -81,16 +82,16 @@
 					</itemlayout>
 					<focusedlayout height="235" width="235">
 						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
+							<left>30</left>
+							<top>0</top>
 							<width>175</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture background="true" border="8">osd/quicknav/nofocus_square.png</texture>
 						</control>
 						<control type="image">
-							<posx>35</posx>
-							<posy>5</posy>
+							<left>35</left>
+							<top>5</top>
 							<width>165</width>
 							<height>155</height>
 							<colordiffuse>FF04aeda</colordiffuse>
@@ -99,8 +100,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>118</posx>
-							<posy>168</posy>
+							<left>118</left>
+							<top>168</top>
 							<width>275</width>
 							<height>35</height>
 							<textcolor>blue</textcolor>
@@ -120,8 +121,8 @@
 	            </animation>
 						</control>
 						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
+							<left>30</left>
+							<top>0</top>
 							<width>175</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -141,8 +142,8 @@
 		      </content>
 				</control>
 				<control type="image">
-					<posx>629</posx>
-					<posy>482</posy>
+					<left>629</left>
+					<top>482</top>
 					<width>25</width>
 					<height>22</height>
 				  <colordiffuse>99ffffff</colordiffuse>
@@ -168,8 +169,8 @@
 				</animation>
 				<control type="label">
 			    <description>header label</description>
-					<posx>275</posx>
-					<posy>185</posy>
+					<left>275</left>
+					<top>185</top>
 					<height>50</height>
 					<width>730</width>
 					<font>FontSize_40</font>
@@ -182,16 +183,16 @@
 				</control>
 				<control type="image">
 			    <description>background image</description>
-					<posx>250</posx>
-					<posy>230</posy>
+					<left>250</left>
+					<top>230</top>
 					<width>781</width>
 					<height>272</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 		      <texture border="30" background="true">osd/quicknav/bg_quicknav.png</texture>
 				</control>
 				<control type="button">
-					<posx>288</posx>
-					<posy>448</posy>
+					<left>288</left>
+					<top>448</top>
         	<width>705</width>
 					<height>35</height>
 					<font>FontSize_24</font>
@@ -207,8 +208,8 @@
 					<label2>$INFO[Container(200).ListItem.Label2]</label2>
 				</control>
 				<control type="fixedlist" id="200">
-					<posx>271</posx>
-					<posy>262</posy>
+					<left>271</left>
+					<top>262</top>
 					<width>738</width>
 					<height>360</height>
 					<onleft>200</onleft>
@@ -222,44 +223,44 @@
           <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 					<itemlayout height="200" width="144">
 						<control type="image">
-							<posx>19</posx>
-							<posy>0</posy>
+							<left>19</left>
+							<top>0</top>
 							<width>125</width>
 							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="3,2,3,2">osd/quicknav/nofocus_poster.png</texture>
 						</control>
 						<control type="image">
-							<posx>24</posx>
-							<posy>5</posy>
+							<left>24</left>
+							<top>5</top>
 							<width>115</width>
 							<height>170</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Icon]</texture>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Thumb]</texture>
 						  <bordersize>5</bordersize>
 						</control>
 					</itemlayout>
 					<focusedlayout height="200" width="144">
 						<control type="image">
-							<posx>19</posx>
-							<posy>0</posy>
+							<left>19</left>
+							<top>0</top>
 							<width>125</width>
 							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="3,2,3,2">osd/quicknav/nofocus_poster.png</texture>
 						</control>
 						<control type="image">
-							<posx>24</posx>
-							<posy>5</posy>
+							<left>24</left>
+							<top>5</top>
 							<width>115</width>
 							<height>170</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Icon]</texture>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Thumb]</texture>
 						  <bordersize>5</bordersize>
 						</control>
 						<control type="image">
-							<posx>19</posx>
-							<posy>0</posy>
+							<left>19</left>
+							<top>0</top>
 							<width>125</width>
 							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -279,8 +280,8 @@
 		      </content>
 				</control>
 				<control type="image">
-					<posx>629</posx>
-					<posy>498</posy>
+					<left>629</left>
+					<top>498</top>
 					<width>25</width>
 					<height>22</height>
 				  <colordiffuse>99ffffff</colordiffuse>
@@ -306,8 +307,8 @@
 				</animation>
 				<control type="label">
 			    <description>header label</description>
-					<posx>275</posx>
-					<posy>185</posy>
+					<left>275</left>
+					<top>185</top>
 					<height>50</height>
 					<width>730</width>
 					<font>FontSize_40</font>
@@ -320,16 +321,16 @@
 				</control>
 				<control type="image">
 			    <description>background image</description>
-					<posx>250</posx>
-					<posy>230</posy>
+					<left>250</left>
+					<top>230</top>
 					<width>781</width>
 					<height>272</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 		      <texture border="30" background="true">osd/quicknav/bg_quicknav.png</texture>
 				</control>
 				<control type="button">
-					<posx>288</posx>
-					<posy>448</posy>
+					<left>288</left>
+					<top>448</top>
         	<width>705</width>
 					<height>35</height>
 					<font>FontSize_24</font>
@@ -345,8 +346,8 @@
 					<label2>$INFO[Container(250).ListItem.Label2]</label2>
 				</control>
 				<control type="fixedlist" id="250">
-					<posx>271</posx>
-					<posy>262</posy>
+					<left>271</left>
+					<top>262</top>
 					<width>738</width>
 					<height>360</height>
 					<onleft>250</onleft>
@@ -360,44 +361,44 @@
           <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 					<itemlayout height="200" width="144">
 						<control type="image">
-							<posx>19</posx>
-							<posy>0</posy>
+							<left>19</left>
+							<top>0</top>
 							<width>125</width>
 							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="3,2,3,2">osd/quicknav/nofocus_poster.png</texture>
 						</control>
 						<control type="image">
-							<posx>24</posx>
-							<posy>5</posy>
+							<left>24</left>
+							<top>5</top>
 							<width>115</width>
 							<height>170</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Property(Poster)]</texture>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Thumb]</texture>
 						  <bordersize>5</bordersize>
 						</control>
 					</itemlayout>
 					<focusedlayout height="200" width="144">
 						<control type="image">
-							<posx>19</posx>
-							<posy>0</posy>
+							<left>19</left>
+							<top>0</top>
 							<width>125</width>
 							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="3,2,3,2">osd/quicknav/nofocus_poster.png</texture>
 						</control>
 						<control type="image">
-							<posx>24</posx>
-							<posy>5</posy>
+							<left>24</left>
+							<top>5</top>
 							<width>115</width>
 							<height>170</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Property(Poster)]</texture>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Thumb]</texture>
 						  <bordersize>5</bordersize>
 						</control>
 						<control type="image">
-							<posx>19</posx>
-							<posy>0</posy>
+							<left>19</left>
+							<top>0</top>
 							<width>125</width>
 							<height>180</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -417,8 +418,8 @@
 		      </content>
 				</control>
 				<control type="image">
-					<posx>629</posx>
-					<posy>498</posy>
+					<left>629</left>
+					<top>498</top>
 					<width>25</width>
 					<height>22</height>
 				  <colordiffuse>99ffffff</colordiffuse>
@@ -444,8 +445,8 @@
 				</animation>
 				<control type="label">
 			    <description>header label</description>
-					<posx>270</posx>
-					<posy>185</posy>
+					<left>270</left>
+					<top>185</top>
 					<height>50</height>
 					<width>745</width>
 					<font>FontSize_40</font>
@@ -458,16 +459,16 @@
 				</control>
 				<control type="image">
 			    <description>background image</description>
-					<posx>240</posx>
-					<posy>230</posy>
+					<left>240</left>
+					<top>230</top>
 					<width>800</width>
 					<height>256</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 		      <texture border="30" background="true">osd/quicknav/bg_quicknav.png</texture>
 				</control>
 				<control type="button">
-					<posx>280</posx>
-					<posy>433</posy>
+					<left>280</left>
+					<top>433</top>
         	<width>718</width>
 					<height>35</height>
 					<font>FontSize_24</font>
@@ -483,8 +484,8 @@
 					<label2>$INFO[Container(300).ListItem.Label2]</label2>
 				</control>
 				<control type="fixedlist" id="300">
-					<posx>261</posx>
-					<posy>263</posy>
+					<left>261</left>
+					<top>263</top>
 					<width>745</width>
 					<height>360</height>
 					<onleft>300</onleft>
@@ -499,16 +500,16 @@
           <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 					<itemlayout height="200" width="184">
 						<control type="image">
-							<posx>20</posx>
-							<posy>0</posy>
+							<left>20</left>
+							<top>0</top>
 							<width>165</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="3,0,3,0">osd/quicknav/nofocus_square.png</texture>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>5</posy>
+							<left>25</left>
+							<top>5</top>
 							<width>155</width>
 							<height>155</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -518,16 +519,16 @@
 					</itemlayout>
 					<focusedlayout height="200" width="184">
 						<control type="image">
-							<posx>20</posx>
-							<posy>0</posy>
+							<left>20</left>
+							<top>0</top>
 							<width>165</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture border="3,2,3,2">osd/quicknav/nofocus_square.png</texture>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>5</posy>
+							<left>25</left>
+							<top>5</top>
 							<width>155</width>
 							<height>155</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -535,8 +536,8 @@
 						  <bordersize>5</bordersize>
 						</control>
 						<control type="label.">
-							<posx>118</posx>
-							<posy>168</posy>
+							<left>118</left>
+							<top>168</top>
 							<width>275</width>
 							<height>35</height>
 							<textcolor>blue</textcolor>
@@ -556,8 +557,8 @@
 	            </animation>
 						</control>
 						<control type="image">
-							<posx>20</posx>
-							<posy>0</posy>
+							<left>20</left>
+							<top>0</top>
 							<width>165</width>
 							<height>165</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -577,8 +578,8 @@
 		      </content>
 				</control>
 				<control type="image">
-					<posx>629</posx>
-					<posy>482</posy>
+					<left>629</left>
+					<top>482</top>
 					<width>25</width>
 					<height>22</height>
 				  <colordiffuse>99ffffff</colordiffuse>
@@ -603,8 +604,8 @@
 	        <effect type="zoom" start="100" end="80" time="400" center="auto" tween="back" easing="out" />
 				</animation>
 				<control type="image">
-					<posx>268</posx>
-					<posy>230</posy>
+					<left>268</left>
+					<top>230</top>
 					<width>745</width>
 					<height>256</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -612,8 +613,8 @@
 					<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="image">
-					<posx>268</posx>
-					<posy>230</posy>
+					<left>268</left>
+					<top>230</top>
 					<width>745</width>
 					<height>256</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -621,15 +622,15 @@
 					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="group">
-					<posx>296</posx>
-					<posy>258</posy>
+					<left>296</left>
+					<top>258</top>
 		     <!-- Cover Movies & Episodes -->
 				 <control type="group">
 					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
 					<control type="image">
 						<description>Cover image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>140</width>
 						<height>200</height>
 						<texture background="true" fallback="thumbs/fallback_poster.png">$VAR[PlayerThumbs]</texture>
@@ -639,8 +640,8 @@
 					</control>
 					<control type="image">
 						<description>paused indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>140</width>
 						<height>200</height>
 						<texture background="true">osd/paused-overlay_two.png</texture>
@@ -652,8 +653,8 @@
 					</control>
 					<control type="image">
 						<description>ff indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>140</width>
 						<height>200</height>
 						<texture background="true">osd/ff-overlay_two.png</texture>
@@ -665,8 +666,8 @@
 					</control>
 					<control type="image">
 						<description>rw indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>140</width>
 						<height>200</height>
 						<texture background="true">osd/rw-overlay_two.png</texture>
@@ -683,8 +684,8 @@
 					<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
 					<control type="image">
 						<description>Cover image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>200</width>
 						<height>200</height>
 						<texture background="true" fallback="thumbs/fallback_square.png">$INFO[VideoPlayer.Cover]</texture>
@@ -695,8 +696,8 @@
 					</control>
 					<control type="image">
 						<description>Cover image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>200</width>
 						<height>200</height>
 						<texture background="true" fallback="thumbs/fallback_square.png">$INFO[Player.Art(thumb)]</texture>
@@ -707,8 +708,8 @@
 					</control>
 					<control type="image">
 						<description>paused indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>200</width>
 						<height>200</height>
 						<texture background="true">osd/paused-overlay_two.png</texture>
@@ -720,8 +721,8 @@
 					</control>
 					<control type="image">
 						<description>ff indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>200</width>
 						<height>200</height>
 						<texture background="true">osd/ff-overlay_two.png</texture>
@@ -733,8 +734,8 @@
 					</control>
 					<control type="image">
 						<description>rw indicator</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>200</width>
 						<height>200</height>
 						<texture background="true">osd/rw-overlay_two.png</texture>
@@ -749,15 +750,15 @@
 		
 		    <!-- Info Movies & Episodes -->
 				<control type="group">
-				 <posx>476</posx>
-				 <posy>245</posy>
+				 <left>476</left>
+				 <top>245</top>
 				 <visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
 				 <control type="group">
 						<visible>VideoPlayer.Content(Movies)</visible>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>15</posy>
+						<left>0</left>
+						<top>15</top>
 						<height>30</height>
 						<width>510</width>
 						<label>$INFO[VideoPlayer.Title,, ]$INFO[VideoPlayer.Year, (,) ]</label>
@@ -768,8 +769,8 @@
 						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>45</posy>
+						<left>0</left>
+						<top>45</top>
 						<height>30</height>
 						<width>510</width>
 						<label>$INFO[VideoPlayer.Genre,,]</label>
@@ -784,8 +785,8 @@
 					<visible>VideoPlayer.Content(Episodes)</visible>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>15</posy>
+						<left>0</left>
+						<top>15</top>
 						<height>30</height>
 						<width>510</width>
 		        <label>$INFO[VideoPlayer.Title]</label>
@@ -797,8 +798,8 @@
 					</control>
 					<control type="label">
 						<description>Label</description>
-						<posx>0</posx>
-						<posy>45</posy>
+						<left>0</left>
+						<top>45</top>
 						<height>30</height>
 						<width>510</width>
 		        <label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season,  •  $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode,  •  $LOCALIZE[20359] ,]</label>
@@ -810,11 +811,11 @@
 					</control>
 				 </control>
 				 <control type="group">
-					<posx>0</posx>
-					<posy>115</posy>
+					<left>0</left>
+					<top>115</top>
 					<control type="fadelabel">
-						<posx>3</posx>
-						<posy>0</posy>
+						<left>3</left>
+						<top>0</top>
 						<width>365</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -833,8 +834,8 @@
 						<visible>VideoPlayer.Content(Movies)</visible>
 					</control>
 					<control type="fadelabel">
-						<posx>3</posx>
-						<posy>0</posy>
+						<left>3</left>
+						<top>0</top>
 						<width>400</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -853,8 +854,8 @@
 						<visible>VideoPlayer.Content(Episodes)</visible>
 					</control>
 					<control type="label">
-						<posx>502</posx>
-						<posy>0</posy>
+						<right>290</right>
+						<top>0</top>
 						<width>300</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -867,8 +868,8 @@
 				 </control>
 				 <control type="image">
 						<description>Rating image</description>
-						<posx>0</posx>
-						<posy>77</posy>
+						<left>0</left>
+						<top>77</top>
 						<width>125</width>
 						<height>25</height>
 						<aspectratio align="left">keep</aspectratio>
@@ -878,16 +879,16 @@
 		
 		    <!-- Info Music & Videos -->
 				<control type="group">
-				 <posx>536</posx>
-				 <posy>0</posy>
+				 <left>536</left>
+				 <top>0</top>
 				 <visible>![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(LiveTV)]</visible>
 				 <control type="group">
-						<posx>0</posx>
-						<posy>245</posy>	
+						<left>0</left>
+						<top>245</top>	
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>15</posy>
+						<left>0</left>
+						<top>15</top>
 						<height>30</height>
 						<width>460</width>
 					  <label>$INFO[MusicPlayer.Title]</label>
@@ -899,8 +900,8 @@
 					</control>	
 					<control type="label">
 						<description>Album Label</description>
-						<posx>0</posx>
-						<posy>45</posy>
+						<left>0</left>
+						<top>45</top>
 						<height>30</height>
 						<width>460</width>
 						<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]:]</label>
@@ -912,8 +913,8 @@
 					</control>
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>15</posy>
+						<left>0</left>
+						<top>15</top>
 						<height>30</height>
 						<width>460</width>
 					  <label>$INFO[VideoPlayer.Title]</label>
@@ -925,8 +926,8 @@
 					</control>
 					<control type="label">
 						<description>Album Label</description>
-						<posx>0</posx>
-						<posy>45</posy>
+						<left>0</left>
+						<top>45</top>
 						<height>30</height>
 						<width>460</width>
 					  <label>$INFO[VideoPlayer.Genre]</label>
@@ -938,8 +939,8 @@
 					</control>
 					<control type="image">
 						<description>Rating image</description>
-						<posx>0</posx>
-						<posy>77</posy>
+						<left>0</left>
+						<top>77</top>
 						<width>125</width>
 						<height>25</height>
 						<aspectratio align="left">keep</aspectratio>
@@ -947,11 +948,11 @@
 					</control>
 				 </control>
 				 <control type="group">
-						<posx>3</posx>
-						<posy>360</posy>
+						<left>3</left>
+						<top>360</top>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>340</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -967,8 +968,8 @@
 						</animation>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>340</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -984,8 +985,8 @@
 					  <visible>MusicPlayer.HasNext</visible>
 					</control>
 					<control type="label">
-						<posx>438</posx>
-						<posy>0</posy>
+					  <right>301</right>
+						<top>0</top>
 						<width>350</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -1000,16 +1001,16 @@
 		
 		    <!-- Info LiveTV -->
 				<control type="group">
-				 <posx>536</posx>
-				 <posy>0</posy>
+				 <left>536</left>
+				 <top>0</top>
 				 <visible>VideoPlayer.Content(LiveTV)</visible>
 				 <control type="group">
-					<posx>0</posx>
-					<posy>245</posy>	
+					<left>0</left>
+					<top>245</top>	
 					<control type="label">
 						<description>Title label</description>
-						<posx>0</posx>
-						<posy>15</posy>
+						<left>0</left>
+						<top>15</top>
 						<height>30</height>
 						<width>460</width>
 						<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</label>
@@ -1021,8 +1022,8 @@
 					</control>
 					<control type="label">
 						<description>Album Label</description>
-						<posx>0</posx>
-						<posy>45</posy>
+						<left>0</left>
+						<top>45</top>
 						<height>30</height>
 						<width>460</width>
 					  <label>$INFO[VideoPlayer.Title]</label>
@@ -1034,11 +1035,11 @@
 					</control>
 				 </control>
 				 <control type="group">
-						<posx>3</posx>
-						<posy>360</posy>
+						<left>3</left>
+						<top>360</top>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>340</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -1054,8 +1055,8 @@
 						</animation>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>340</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -1071,8 +1072,8 @@
 					  <visible>Pvr.IsPlayingTv</visible>
 					</control>
 					<control type="label">
-						<posx>438</posx>
-						<posy>0</posy>
+					  <right>301</right>
+						<top>0</top>
 						<width>350</width>
 						<height>40</height>
 						<font>FontSize_16</font>
@@ -1088,8 +1089,8 @@
 		
 		    <!-- Buttons Controls -->
 				<control type="grouplist" id="100">
-					<posx>541</posx>
-					<posy>398</posy>
+					<left>541</left>
+					<top>398</top>
           <width>505</width>
           <height>50</height>
 					<onleft>100</onleft>
@@ -1153,7 +1154,7 @@
 						<texturenofocus>osd/miniplayer/next_nf.png</texturenofocus>
 						<onclick>XBMC.PlayerControl(Next)</onclick>
 					</control>
-					<control type="togglebutton" id="606">
+					<control type="togglebutton" id="608">
 						<width>62</width>
 						<height>50</height>
 						<label>-</label>
@@ -1163,6 +1164,7 @@
 						<alttexturefocus>osd/miniplayer/random_ON_fo.png</alttexturefocus>
 						<alttexturenofocus>osd/miniplayer/random_ON_nf.png</alttexturenofocus>
 						<onclick>XBMC.PlayerControl(Random)</onclick>
+					  <visible>Player.HasAudio | [Player.HasVideo + [VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)]]</visible>
 					</control>
 					<control type="button" id="607">
 						<width>61</width>
@@ -1170,15 +1172,15 @@
 						<label>-</label>
 						<texturefocus>osd/miniplayer/fullscreen_fo.png</texturefocus>
 						<texturenofocus>osd/miniplayer/fullscreen_nf.png</texturenofocus>
-						<onclick>fullscreen</onclick>
+						<onclick>FullScreen</onclick>
 					  <visible>Player.HasVideo</visible>
 					</control>
 				</control>
 		
 		    <!-- Buttons Controls Live TV -->
 				<control type="grouplist" id="100">
-					<posx>541</posx>
-					<posy>398</posy>
+					<left>541</left>
+					<top>398</top>
           <width>505</width>
           <height>50</height>
 					<onleft>100</onleft>
@@ -1258,8 +1260,8 @@
 					</control>
 				</control>
 				<control type="image">
-					<posx>629</posx>
-					<posy>482</posy>
+					<left>629</left>
+					<top>482</top>
 					<width>25</width>
 					<height>22</height>
 				  <colordiffuse>99ffffff</colordiffuse>

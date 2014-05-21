@@ -1,4 +1,5 @@
-<window type="dialog" id="129">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="129">
 	<defaultcontrol>11</defaultcontrol>
   <zorder>4</zorder>
 	<controls>
@@ -79,7 +80,7 @@
 							<width>40</width>
 							<height>40</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
-					    <texture background="true">$VAR[WiFiState]</texture>
+					    <texture background="true">$VAR[WiFiStateIcons]</texture>
 						</control>
 						<control type="label">
 							<posx>40</posx>
@@ -122,7 +123,7 @@
 							<width>40</width>
 							<height>18</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
-					    <texture background="true">$VAR[WiFiSignal]</texture>
+					    <texture background="true">$VAR[WiFiSignalIcons]</texture>
               <animation effect="slide"  start="0" end="35" time="200" tween="cubic" easing="inout" condition="stringcompare(ListItem.Property(encryption),NONE)">Conditional</animation>
 						</control>
 						<control type="label."> <!-- Signal - Disabled -->
@@ -153,7 +154,7 @@
 							<width>40</width>
 							<height>40</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
-					    <texture background="true">$VAR[WiFiState]</texture>
+					    <texture background="true">$VAR[WiFiStateIcons]</texture>
 						</control>
 						<control type="group">
               <animation type="Conditional" condition="!Control.HasFocus(10)">
@@ -211,7 +212,7 @@
 							<width>40</width>
 							<height>18</height>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
-					    <texture background="true">$VAR[WiFiSignal]</texture>
+					    <texture background="true">$VAR[WiFiSignalIcons]</texture>
               <animation effect="slide"  start="0" end="35" time="200" tween="cubic" easing="inout" condition="stringcompare(ListItem.Property(encryption),NONE)">Conditional</animation>
 						</control>
 					</focusedlayout>

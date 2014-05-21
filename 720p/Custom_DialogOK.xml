@@ -1,10 +1,19 @@
-<window id="1110" type="dialog">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="1110">
 	<defaultcontrol always="true">10</defaultcontrol>
   <zorder>5</zorder>
 	<controls>
 
    <control type="group">
 	  <include>DialogAnimation</include>
+		<control type="image">
+			<posx>316</posx>
+			<posy>220</posy>
+			<width>649</width>
+			<height>296</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -26,19 +35,19 @@
 		<control type="textbox">
 			<description>Help Tip</description>
 			<posx>365</posx>
-			<posy>312</posy>
+			<posy>313</posy>
       <width>550</width>
 			<height>90</height>
-	    <label>$VAR[CustomDialogOKMessage]</label>
-			<font>FontSize_20</font>
+			<font>FontSize_22</font>
 		  <align>center</align>
 			<textcolor>99white</textcolor>
 			<shadowcolor>99000000</shadowcolor>
+	    <label>$VAR[CustomDialogOKMessage]</label>
 		</control>
 		<control type="button" id="10">
 			<description>OK button</description>
 			<posx>575</posx>
-			<posy>423</posy>
+			<posy>433</posy>
 			<width>150</width>
 			<height>40</height>
 			<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
@@ -59,7 +68,32 @@
 		  <onclick>Action(Close)</onclick>
 			<onclick condition="!IntegerGreaterThan(Container(450).NumItems,0)">Dialog.Close(favourites)</onclick>
 			<onback condition="!IntegerGreaterThan(Container(450).NumItems,0)">Dialog.Close(favourites)</onback>
+	    <onclick condition="Window.IsActive(Weather)">ReplaceWindow(WeatherSettings)</onclick>
 		</control>
+		<control type="button." id="11">
+			<description>No button</description>
+			<posx>650</posx>
+			<posy>433</posy>
+			<width>160</width>
+			<height>43</height>
+			<texturenofocus border="10,0,10,0">dialogs/keyboard/button_nf.png</texturenofocus>
+			<texturefocus border="10,0,10,0">dialogs/keyboard/button_fo.png</texturefocus>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>FontSize_22</font>
+			<textcolor>99grey</textcolor>
+			<focusedcolor>99white</focusedcolor>
+			<disabledcolor>44white</disabledcolor>
+			<shadowcolor>55000000</shadowcolor>
+			<textoffsety>5</textoffsety>
+		  <label>222</label>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+		  <onclick>Action(Close)</onclick>
+	    <onclick condition="Window.IsActive(Weather)">ReplaceWindow(Home)</onclick>
+		</control>		
 	 </control>
 	</controls>
 </window>

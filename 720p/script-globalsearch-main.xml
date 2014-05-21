@@ -1,7 +1,8 @@
-<window type="dialog">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog">
 	<defaultcontrol>101</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<controls>
 
 		<control type="group" id="100">
@@ -1030,8 +1031,9 @@
 	  <!-- ================ -->
 		<control type="group">
 	    <include>OpenCloseSlideAnimation</include>
+		  <include>VisibleHiddenSlideAnimation</include>
 	    <include>ShutdownMenuAnimation</include>
-	    <visible>!Window.IsActive(script-globalsearch-contextmenu.xml)</visible>
+	    <visible>!Window.IsActive(script-globalsearch-contextmenu.xml) + !Window.IsActive(favourites)</visible>
 		  <animation type="Conditional" condition="!Control.HasFocus(9111) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">
 	      <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
 	      <effect type="slide" start="0,0" end="0,-55" time="300" tween="sine" easing="inout" />

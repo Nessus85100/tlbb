@@ -1,7 +1,9 @@
-<window id="2600">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="2600">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
+	<onload condition="SubString(Window(Weather).Property(Current.ConditionIcon),na) | [IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] + IsEmpty(Control.GetLabel(3))">ActivateWindow(1110)</onload>
 	<onload condition="IsEmpty(Skin.String(WeatherUnderground))">Skin.SetString(WeatherUnderground,1)</onload>
 	<controls>
 		<include>BackgroundContent</include>
@@ -9,58 +11,58 @@
 	  <include>CommonNowPlaying</include>
     <include condition="Skin.HasSetting(EnableWeatherAlertsNotifications)">WeatherAlertsNotifications</include>
 
-		<control type="group" id="50">
+    <control type="group">
 			<include>WeatherTopInfo</include>
 			<include condition="!StringCompare(Weather.Plugin,weather.wunderground)">WeatherDefault</include>
 			<include condition="StringCompare(Weather.Plugin,weather.wunderground)">WeatherUnderground</include>
 		</control>
-
+		
 	  <include>CommonDialogsFadeOutBG</include>
 
-	  <!-- ============ -->
-	  <!-- Options Menu  -->
-	  <!-- ============ -->
+    <!-- ================= -->
+    <!-- Top Options Menus -->
+    <!-- ================= -->
 		<control type="group" id="9000">
-			<posx>30</posx>
-			<posy>25</posy>
+			<left>30</left>
+			<top>25</top>
 	    <include>ShutdownMenuAnimation</include>
 	    <include>OptionsTopMenuAnimation</include>
-	    <animation type="Conditional" reversible="false" condition="!IsEmpty(Window.Property(Current.Condition)) + !Window.IsActive(favourites)">
+	    <animation type="Conditional" reversible="false" condition="!IsEmpty(Window(Weather).Property(Current.Condition)) + !Window.IsActive(favourites)">
 	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
 	    </animation>
-	    <animation type="Conditional" reversible="false" condition="IsEmpty(Window.Property(Current.Condition)) | Window.IsActive(favourites)">
+	    <animation type="Conditional" reversible="false" condition="IsEmpty(Window(Weather).Property(Current.Condition)) | Window.IsActive(favourites)">
 	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 	    </animation>
 	    <control type="group">
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>-12</posy>
+	        <left>0</left>
+	        <top>-12</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_options.png</texture>
 	        <aspectratio>stretch</aspectratio>
 	      </control>
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>285</posy>
+	        <left>0</left>
+	        <top>285</top>
 					<width>380</width>
 					<height>22</height>
 					<texture>dialogs/menus/bottom.png</texture>
 	        <aspectratio>stretch</aspectratio>
-          <animation effect="slide" start="0,0" end="0,-37" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
+          <animation effect="slide" start="0,0" end="0,-37" time="0" condition="[StringCompare(Weather.Plugin,weather.wunderground) + IsEmpty(Control.GetLabel(3))]">Conditional</animation>
           <animation effect="slide" start="0,0" end="0,-74" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
 	      </control>
 				<control type="label">
-	        <posx>75</posx>
+	        <left>75</left>
 				  <label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
 				  <include>TopBigLabel</include>
 				</control>      
 	    </control>
 		  <control type="grouplist" id="9111">
-				<posx>0</posx>
-				<posy>63</posy>
+				<left>0</left>
+				<top>63</top>
 				<width>380</width>
 				<height>222</height>
 				<itemgap>0</itemgap>
@@ -68,6 +70,7 @@
 				<onright>50</onright>
 				<onup>9111</onup>
 				<ondown>9111</ondown>
+			  <onback>50</onback>
 				<control type="button" id="260">
 					<description>Select Location</description>
 	        <label>$LOCALIZE[35500]: [B]$INFO[Control.GetLabel(3)][/B]</label>
@@ -92,19 +95,20 @@
 	        <altlabel>$LOCALIZE[33050]: $LOCALIZE[31012]</altlabel>
 				  <include>TopLeftMenusButton</include>
 					<onclick>Skin.ToggleSetting(EnableWeatherAlertsNotifications)</onclick>
-			    <onclick>Reloadskin</onclick>
+			    <onclick condition="Skin.HasSetting(EnableWeatherAlertsNotifications)">ReplaceWindow(Weather)</onclick>
 					<selected>Skin.HasSetting(EnableWeatherAlertsNotifications)</selected>
 					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 				</control>
 				<control type="togglebutton" id="263">
 					<description>Fanart Toggle</description>
-	        <label>$LOCALIZE[20445]: $LOCALIZE[31011]</label>
-	        <altlabel>$LOCALIZE[20445]: $LOCALIZE[31012]</altlabel>
+	        <label>$LOCALIZE[20445]: $LOCALIZE[31012]</label>
+	        <altlabel>$LOCALIZE[20445]: $LOCALIZE[31011]</altlabel>
 				  <include>TopLeftMenusButton</include>
 					<onclick>SetFocus(50)</onclick>
 					<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
-					<onclick condition="Skin.HasSetting(ShowWeatherFanart)">Skin.SetPath(WeatherFanartDir)</onclick>
-					<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
+					<onclick condition="!Skin.HasSetting(ShowWeatherFanart)">Skin.SetPath(WeatherFanartDir)</onclick>
+					<onclick condition="!IsEmpty(Skin.String(WeatherFanartDir)) + !Skin.HasSetting(ShowWeatherFanart)">ReplaceWindow(Weather)</onclick>
+					<selected>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</selected>
 				</control>
 				<control type="button" id="2">
 					<description>Refresh</description>
@@ -122,9 +126,16 @@
 		  </control>
 		</control>
 
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">windows/bg/bg_overlay.png</texture>
+			<include>FanartFade</include>
+			<fadetime>300</fadetime>
+      <colordiffuse>ddFFFFFF</colordiffuse>
+	    <visible>[IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] + !IsEmpty(Control.GetLabel(3)) + !SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
+	  </control>
 		<!-- Weather and Clock  -->
 	  <control type="group">
-		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 	    <include>CommonWeatherAndClock</include>
@@ -134,124 +145,79 @@
     <!-- Top Content Info -->
     <!-- ================ -->
 	  <control type="group">
-			<posx>45</posx>
-			<posy>25</posy>
+			<left>45</left>
+			<top>25</top>
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 			<include>ShutdownMenuAnimation</include>
 		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
-		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-		  <visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
 	    <control type="image">
-				<posx>-3</posx>
-	    	<posy>6</posy>
+				<left>-3</left>
+	    	<top>6</top>
 	    	<width>56</width>
 	    	<height>40</height>
 				<colordiffuse>ddwhite</colordiffuse>
-		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+		    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
 	    	<texture background="true">icons/tlbb.png</texture>
+	      <include>OpenCloseSlideAnimation</include>
 	    </control>
 			<control type="grouplist">
-				<posx>55</posx>
-				<posy>0</posy>
+				<left>55</left>
+				<top>0</top>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>OpenCloseSlideAnimation</include>
+			  <visible>![IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] + !IsEmpty(Control.GetLabel(3)) + !SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
 				<control type="label">
 				  <include>TopBigLabel</include>
-					<label fallback="N/A">$INFO[Window.Property(Location)]</label>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-			    <label>There is not any specified location yet</label>
-			    <visible>IsEmpty(Window(Weather).Property(Location)) + !Weather.IsFetched</visible>
+					<label fallback="8">$INFO[Window.Property(Location)]</label>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 			    <label>$LOCALIZE[31235]</label>
 		      <visible>![Skin.String(WeatherUnderground,2) | Skin.String(WeatherUnderground,3) | Skin.String(WeatherUnderground,4)]</visible>
-			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 					<label>$LOCALIZE[31223]</label>
 		      <visible>Skin.String(WeatherUnderground,2)</visible>
-			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 					<label>$LOCALIZE[31224]</label>
 		      <visible>Skin.String(WeatherUnderground,3)</visible>
-			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="label">
 				  <include>TopZoomedSmallLabel</include>
 					<label>$LOCALIZE[31226]</label>
 		      <visible>Skin.String(WeatherUnderground,4)</visible>
-			    <visible>!IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 			</control>
-	  </control>
-	  <control type="group">
-			<posx>45</posx>
-			<posy>25</posy>
-	    <include>OpenCloseSlideAnimation</include>
-	    <include>VisibleHiddenSlideAnimation</include>
-			<include>ShutdownMenuAnimation</include>
-		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
-		  <visible>!IsEmpty(Window.Property(Current.Condition))</visible>
-		  <visible>!StringCompare(Weather.Plugin,weather.wunderground)</visible>
 			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>55</left>
+				<top>0</top>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>OpenCloseSlideAnimation</include>
+			  <visible>[IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] | IsEmpty(Control.GetLabel(3)) | SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
 				<control type="label">
 				  <include>TopBigLabel</include>
-					<label fallback="N/A">$INFO[Window.Property(Location)]</label>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-			    <label>There is not any specified location yet</label>
-			    <visible>IsEmpty(Window(Weather).Property(Location)) + !Weather.IsFetched</visible>
-				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-			    <label>$LOCALIZE[31235]</label>
+					<label>$INFO[Control.GetLabel(3)]...</label>
 				</control>
 			</control>
 	  </control>
-	  
 
-
-    <control type="button" id="50">
-			<description>Get Focus Fake Button</description>
-			<onup>9000</onup>
-			<ondown>9000</ondown>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<onfocus condition="Skin.String(WeatherUnderground,4)">SetFocus(51)</onfocus>
-			<onfocus condition="!StringCompare(Weather.Plugin,weather.wunderground)">SetFocus(52)</onfocus>
-			<visible allowhiddenfocus="true">false</visible>
-    </control>
 		<!-- Fetching Info  -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture background="true">windows/bg/bg_overlay.png</texture>
-			<include>FanartFade</include>
-			<fadetime>300</fadetime>
-      <colordiffuse>ddFFFFFF</colordiffuse>
-	    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
-	  </control>
 		<control type="label">
 			<description>fetching label</description>
-			<posx>45</posx>
-			<posy>275</posy>
+			<left>45</left>
+			<top>235</top>
 			<width>1200</width>
 			<height>40</height>
 			<font>FontSize_48</font>
@@ -259,14 +225,15 @@
 			<shadowcolor>99000000</shadowcolor>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31234]</label>
-	    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
-		  <include>VisibleHiddenSlideAnimation</include>
+			<label>$LOCALIZE[411]</label>
+	    <visible>[IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] + !IsEmpty(Control.GetLabel(3)) + !SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
+	    <include>OpenCloseSlideAnimation</include>
+		  <include>VisibleHiddenSlideAnimationReverse</include>
 	  </control>
 		<control type="label">
-			<description>fetching label</description>
-			<posx>30</posx>
-			<posy>325</posy>
+			<description>location label</description>
+			<left>30</left>
+			<top>270</top>
 			<width>1200</width>
 			<height>120</height>
 			<font>FontSize_80</font>
@@ -275,8 +242,9 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<label>$INFO[Control.GetLabel(3)]</label>
-	    <visible>IsEmpty(Window.Property(Current.Condition))</visible>
-		  <include>VisibleHiddenSlideAnimation</include>
+	    <visible>[IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] + !SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
+	    <include>OpenCloseSlideAnimation</include>
+		  <include>VisibleHiddenSlideAnimationReverse</include>
 	  </control>
 	  <!-- Hidden SendClick Buttons -->
 		<control type="button" id="3">

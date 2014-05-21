@@ -1,4 +1,5 @@
-<window>
+<?xml version="1.0" encoding="UTF-8"?>
+<window >
 	<defaultcontrol>100</defaultcontrol>
 	<controls>
   <control type="button" id="100">
@@ -14,6 +15,13 @@
 		<control type="group">
 			<visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)</visible>
 			<include>DialogAnimation</include>
+			<control type="image">
+				<posx>281</posx>
+				<posy>225</posy>
+				<width>718</width>
+				<height>320</height>
+				<texture background="true" border="39">dialogs/other/default.png</texture>
+			</control>
 			<control type="image">
 				<description>background image</description>
 				<include>FullscreenDimensions</include>

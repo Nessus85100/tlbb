@@ -1,7 +1,8 @@
-<window id="7">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="7">
 	<defaultcontrol always="true">95</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<controls>
 		<include>BackgroundItems</include>
 
@@ -9,17 +10,18 @@
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 	    <include>DialogZoomInOutAnimation</include>
+			<visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(busy.xml)</visible>
 			<control type="image">
 			  <include>FullscreenDimensions</include>
 			  <texture background="true">windows/settings/bg_settings.png</texture>
 			</control>
 
 			<control type="group">
-				<posx>98</posx>
-				<posy>166</posy>
+				<left>98</left>
+				<top>166</top>
 				<control type="grouplist" id="9001">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>295</width>
 					<height>399</height>
 					<itemgap>1</itemgap>
@@ -165,8 +167,8 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<posx>317</posx>
-					<posy>0</posy>
+					<left>317</left>
+					<top>0</top>
 					<width>782</width>
 					<height>399</height>
 					<itemgap>1</itemgap>
@@ -278,16 +280,16 @@
       <!-- == Header & Footer Labels == -->
 		  <!-- ============================ -->
 			<control type="group">
-				<posx>120</posx>
-				<posy>163</posy>
+				<left>120</left>
+				<top>163</top>
 				<control type="label" id="40">
 					<description>Hidden label to get the values</description>
 					<visible>false</visible>
 				</control>
 				<control type="label">
 					<description>Header Label</description>
-					<posx>0</posx>
-					<posy>-50</posy>
+					<left>0</left>
+					<top>-50</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_36</font>
@@ -299,8 +301,8 @@
 				</control>
 				<control type="label" id="52">
 					<description>XBMC BUILD Version</description>
-					<posx>0</posx>
-					<posy>390</posy>
+					<left>0</left>
+					<top>390</top>
 					<width>1050</width>
 					<height>100</height>
 					<textcolor>44white</textcolor>
@@ -309,8 +311,8 @@
 				</control>
 				<control type="label.">
 					<description>CPU Text</description>
-					<posx>1040</posx>
-					<posy>420</posy>
+					<left>1040</left>
+					<top>420</top>
 					<width>350</width>
 					<height>25</height>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
@@ -322,16 +324,16 @@
 				</control>
 				<control type="progress.">
 					<description>CPU BAR</description>
-					<posx>790</posx>
-					<posy>425</posy>
+					<left>790</left>
+					<top>425</top>
 					<width>250</width>
 					<height>16</height>
 					<info>System.CPUUsage</info>
 				</control>
 				<control type="label.">
 					<description>Memory Text</description>
-					<posx>1040</posx>
-					<posy>440</posy>
+					<left>1040</left>
+					<top>440</top>
 					<width>350</width>
 					<height>25</height>
 					<label>$LOCALIZE[31027] $INFO[system.memory(used.percent)]</label>
@@ -343,16 +345,16 @@
 				</control>
 				<control type="progress.">
 					<description>Memory BAR</description>
-					<posx>790</posx>
-					<posy>445</posy>
+					<left>790</left>
+					<top>445</top>
 					<width>250</width>
 					<height>16</height>
 					<info>system.memory(used)</info>
 				</control>
 				<control type="image">
 					<description>tlbb logo</description>
-					<posx>893</posx>
-					<posy>338</posy>
+					<left>893</left>
+					<top>338</top>
 					<width>148</width>
 					<height>148</height>
 					<aspectratio>stretch</aspectratio>

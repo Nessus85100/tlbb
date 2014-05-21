@@ -1,23 +1,24 @@
-<window id="4">
-	<defaultcontrol>7000</defaultcontrol>
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="4">
+	<defaultcontrol>9001</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<controls>
 	<include>BackgroundItems</include>
 
 			<control type="group">
-			  <visible>!Window.IsActive(Favourites) + !Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(PlayerControls) + !Window.IsActive(busy.xml)</visible>
+			  <visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(busy.xml)</visible>
 		    <include>VisibleHiddenSlideAnimation</include>
 		    <include>DialogZoomInOutAnimation</include>
-				<control type="panel" id="7000">
-					<posx>27</posx>
-					<posy>150</posy>
+				<control type="panel" id="9001">
+					<left>27</left>
+					<top>150</top>
 					<width>1220</width>
 					<height>420</height>
-					<onleft>7000</onleft>
-					<onright>7000</onright>
-					<ondown>7000</ondown>
-					<onup>7000</onup>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<ondown>9000</ondown>
+					<onup>9000</onup>
 					<include>OpenCloseSlideAnimation</include>
 					<itemlayout height="202" width="202">
 						<control type="image">
@@ -27,8 +28,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
+							<left>25</left>
+							<top>25</top>
 							<width>166</width>
 							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -37,8 +38,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
+							<left>25</left>
+							<top>25</top>
 							<width>166</width>
 							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -47,8 +48,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<posx>108</posx>
-							<posy>160</posy>
+							<left>108</left>
+							<top>160</top>
 							<width>162</width>
 							<height>35</height>
 							<textcolor>white</textcolor>
@@ -68,8 +69,8 @@
 							<texture border="30">views/thumbnails/thumb_panel.png</texture>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
+							<left>25</left>
+							<top>25</top>
 							<width>166</width>
 							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -78,8 +79,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
+							<left>25</left>
+							<top>25</top>
 							<width>166</width>
 							<height>136</height>
 							<colordiffuse>FF04aeda</colordiffuse>
@@ -88,8 +89,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
+							<left>25</left>
+							<top>25</top>
 							<width>166</width>
 							<height>136</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -97,8 +98,8 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label.">
-							<posx>108</posx>
-							<posy>160</posy>
+							<left>108</left>
+							<top>160</top>
 							<width>162</width>
 							<height>35</height>
 							<textcolor>white</textcolor>
@@ -111,8 +112,8 @@
 							<visible>!Control.HasFocus(7000)</visible>
 						</control>
 						<control type="label">
-							<posx>108</posx>
-							<posy>160</posy>
+							<left>108</left>
+							<top>160</top>
 							<width>162</width>
 							<height>35</height>
 							<textcolor>blue</textcolor>
@@ -124,7 +125,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="image">
-							<posx>0</posx>
+							<left>0</left>
 							<width>216</width>
 							<height>216</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -135,80 +136,14 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item id="1">
-							<onclick>ActivateWindow(AppearanceSettings)</onclick>
-							<thumb>icons/Appearance.png</thumb>
-							<label>480</label>
-						</item>
-						<item id="2">
-							<onclick>ActivateWindow(VideosSettings)</onclick>
-							<thumb>DefaultVideo.png</thumb>
-							<label>157</label>
-						</item>
-						<item id="3">
-							<onclick>ActivateWindow(PVRSettings)</onclick>
-							<thumb>icons/LiveTV.png</thumb>
-							<label>31000</label>
-						</item>
-						<item id="4">
-							<onclick>ActivateWindow(MusicSettings)</onclick>
-							<thumb>DefaultAudio.png</thumb>
-							<label>2</label>
-						</item>
-						<item id="5">
-							<onclick>ActivateWindow(PicturesSettings)</onclick>
-							<thumb>DefaultPicture.png</thumb>
-							<label>1</label>
-						</item>
-						<item id="6">
-							<onclick>ActivateWindow(WeatherSettings)</onclick>
-							<thumb>icons/Weather.png</thumb>
-							<label>8</label>
-						</item>
-						<item id="7">
-							<onclick>ActivateWindow(AddonBrowser)</onclick>
-							<thumb>DefaultAddon.png</thumb>
-							<label>24001</label>
-						</item>
-						<item id="8">
-							<onclick>ActivateWindow(NetworkSettings)</onclick>
-							<thumb>DefaultNetwork.png</thumb>
-							<label>14036</label>
-						</item>
-						<item id="9">
-							<onclick>ActivateWindow(SystemSettings)</onclick>
-							<thumb>icons/System.png</thumb>
-							<label>13000</label>
-						</item>
-						<item id="10">
-							<onclick>ActivateWindow(SystemInfo)</onclick>
-							<thumb>icons/SystemInfo.png</thumb>
-							<label>130</label>
-						</item>
-						<item id="11">
-							<onclick>ActivateWindow(SkinSettings)</onclick>
-							<thumb>icons/Skin.png</thumb>
-							<label>20077</label>
-							<visible>!Container(7000).HasFocus(11)</visible>
-						</item>
-						<item id="11">
-							<onclick>ActivateWindow(SkinSettings)</onclick>
-							<icon>icons/Skin2.png</icon>
-							<label>20077</label>
-							<visible>Container(7000).HasFocus(11)</visible>
-						</item>
-						<item id="12">
-							<onclick>ActivateWindow(1111)</onclick>
-							<thumb>icons/Help.png</thumb>
-							<label>$LOCALIZE[31430]</label>
-						</item>
+			      <include>HomeWidget_SettingsContent</include>
 					</content>
 				</control>
 			</control>
 
 		<include>CommonNowPlaying</include>
-		<include>SettingsCategoryContentInfo</include>
 		<include>CommonDialogsFadeOutBG</include>
+		<include>SettingsCategoryContentInfo</include>
 		<include>SettingsWeatherAndClock</include>
 	</controls>
 </window>		

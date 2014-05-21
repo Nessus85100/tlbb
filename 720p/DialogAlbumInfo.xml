@@ -1,4 +1,5 @@
-<window id="2001">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="2001">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -426,8 +427,8 @@
 						<texture diffuse="thumbs/music_diffuse.png">thumbs/music_overlay_noglass.png</texture>
 					</control>
 					<control type="image">
-						<posx>-6</posx>
-						<posy>-5</posy>
+						<posx>-8</posx>
+						<posy>-8</posy>
 						<width>176</width>
 						<height>176</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -435,41 +436,41 @@
 						<visible>Control.HasFocus(50) | Control.HasFocus(150)</visible>
 					</control>
 					<control type="group">
-						<posx>12</posx>
+						<posx>10</posx>
 						<posy>150</posy>
 						<animation effect="fade" start="0" end="100" time="400" reversible="false" condition="Control.HasFocus(50) | Control.HasFocus(150)">Conditional</animation>
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![Control.HasFocus(50) | Control.HasFocus(150)]">Conditional</animation>
 					  <control type="label">
-							<width>590</width>
-							<height>40</height>
+							<width>780</width>
+							<height>35</height>
 							<font>FontSize_22</font>
 							<align>left</align>
 							<aligny>center</aligny>
-					    <textcolor>blue</textcolor>
+					    <textcolor>99white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,) ]</label>
 						  <visible>Container.Content(Artists)</visible>
 					  </control>
 					  <control type="label">
-							<width>590</width>
-							<height>40</height>
+							<width>780</width>
+							<height>35</height>
 							<font>FontSize_22</font>
 							<align>left</align>
 							<aligny>center</aligny>
-					    <textcolor>blue</textcolor>
+					    <textcolor>99white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Label,. ]$INFO[ListItem.Duration, (,) ]</label>
 						  <visible>IntegerGreaterThan(ListItem.TrackNumber,9) + Container.Content(Albums)</visible>
 					  </control>
 					  <control type="label">
-							<width>590</width>
-							<height>40</height>
+							<width>780</width>
+							<height>35</height>
 							<font>FontSize_22</font>
 							<align>left</align>
 							<aligny>center</aligny>
-					    <textcolor>blue</textcolor>
+					    <textcolor>99white</textcolor>
 							<shadowcolor>99000000</shadowcolor>
 							<scroll>false</scroll>
 							<label>0$INFO[ListItem.TrackNumber]$INFO[ListItem.Label,. ]$INFO[ListItem.Duration, (,) ]</label>

@@ -1,7 +1,8 @@
-<window id="502">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="502">
 	<defaultcontrol always="true">56</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+  <backgroundcolor>BackgroundColor</backgroundcolor>
 	<views>56,50,51,52,57,59</views>
   <onload condition="Skin.HasSetting(HideThumbnailsMusic)">SetFocus(50)</onload>
 	<controls>
@@ -14,8 +15,8 @@
 	  <!-- Options Menu  -->
 	  <!-- ============ -->
 		<control type="group" id="9000">
-			<posx>30</posx>
-			<posy>25</posy>
+			<left>30</left>
+			<top>25</top>
 	    <include>ShutdownMenuAnimation</include>
 	    <include>OptionsTopMenuAnimation</include>
 	    <animation type="Conditional"  reversible="false" condition="![Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) | Window.IsActive(favourites)]">
@@ -30,16 +31,16 @@
 	    <control type="group">
 	      <include>GeneralOptionsTopMenuAnimation</include>
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>-12</posy>
+	        <left>0</left>
+	        <top>-12</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_options.png</texture>
 	        <aspectratio>stretch</aspectratio>
 	      </control>
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>359</posy>
+	        <left>0</left>
+	        <top>396</top>
 					<width>380</width>
 					<height>22</height>
 					<texture>dialogs/menus/bottom.png</texture>
@@ -47,14 +48,14 @@
           <animation effect="slide" start="0,0" end="0,-37" time="0" condition="!Control.IsVisible(95)">Conditional</animation>
 	      </control>
 				<control type="label">
-	        <posx>75</posx>
+	        <left>75</left>
 				  <label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
 				  <include>TopBigLabel</include>
 				</control>      
 	    </control>
 		  <control type="grouplist" id="9111">
-				<posx>0</posx>
-				<posy>63</posy>
+				<left>0</left>
+				<top>63</top>
 				<width>380</width>
 				<height>520</height>
 				<itemgap>0</itemgap>
@@ -62,6 +63,7 @@
 				<onright>50</onright>
 				<onup>9111</onup>
 				<ondown>9111</ondown>
+			  <onback>50</onback>
 	      <include>GeneralOptionsTopMenuAnimation</include>
 				<control type="button" id="2">
 					<description>View as</description>
@@ -99,7 +101,7 @@
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 					<onclick>right</onclick>
 				</control>
-				<control type="button" id="20">
+				<control type="button" id="98">
 					<visible>Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
 					<include>TopLeftMenusButton</include>
@@ -119,36 +121,44 @@
 	        <altlabel>$LOCALIZE[589]: $LOCALIZE[31011]</altlabel>
 				  <include>TopLeftMenusButton</include>
 				</control>
+				<control type="togglebutton" id="20">
+					<description>Update Library</description>
+					<label>653</label>
+					<altlabel>13353</altlabel>
+					<usealttexture>Library.IsScanningMusic</usealttexture>
+					<onclick>Action(right)</onclick>
+				  <include>TopLeftMenusButton</include>
+				</control>
 		  </control>
 	
 	    <!-- Viewtype Options -->
 	    <control type="group">
 	      <include>ViewtypeOptionsTopMenuAnimation</include>
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>-12</posy>
+	        <left>0</left>
+	        <top>-12</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_options.png</texture>
 	        <aspectratio>stretch</aspectratio>
 	      </control>
 	      <control type="image">
-	        <posx>0</posx>
-	        <posy>100</posy>
+	        <left>0</left>
+	        <top>100</top>
 					<width>380</width>
 					<height>22</height>
 					<texture>dialogs/menus/bottom.png</texture>
 	        <aspectratio>stretch</aspectratio> 
 	      </control>
 				<control type="label">
-	        <posx>75</posx>
+	        <left>75</left>
 				  <label>$LOCALIZE[31014]</label>
 				  <include>TopBigLabel</include>
 				</control>      
 	    </control>
 			<control type="grouplist" id="9222">
-				<posx>0</posx>
-				<posy>63</posy>
+				<left>0</left>
+				<top>63</top>
 				<width>380</width>
 				<height>520</height>
 				<itemgap>0</itemgap>
@@ -170,15 +180,15 @@
     <!-- Top Content Info -->
     <!-- ================ -->
 	  <control type="group">
-			<posx>45</posx>
-			<posy>25</posy>
+			<left>45</left>
+			<top>25</top>
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 			<include>ShutdownMenuAnimation</include>
 		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation)</visible>
 			<control type="grouplist">
-				<posx>55</posx>
-				<posy>0</posy>
+				<left>55</left>
+				<top>0</top>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>

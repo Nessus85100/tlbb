@@ -1,4 +1,5 @@
-<window type="dialog" id="1112">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="1112">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<controls>
 	<control type="button" id="100">
@@ -11,15 +12,26 @@
 		<include>DialogAnimation</include>
 	  <visible>Player.HasAudio</visible>
 		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture>osd/bg_osd_settings.png</texture>
+			<posx>316</posx>
+			<posy>117</posy>
+			<width>649</width>
+			<height>494</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+			<colordiffuse>FAFFFFFF</colordiffuse>
 			<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
 		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
+			<texture>osd/bg_osd_settings.png</texture>
+			<colordiffuse>FAFFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<include>FullscreenDimensions</include>
 			<texture>osd/bg_osd_settings_lines.png</texture>
+			<colordiffuse>FAFFFFFF</colordiffuse>
 			<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
 		</control>
 		<control type="label">

@@ -1,4 +1,5 @@
-<includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes> 
 
 <!-- =================== -->
 <!-- Home Window SubMenu -->
@@ -9,8 +10,8 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <!-- <animation effect="slide" start="0,0" end="0,55" time="250" tween="Quadratic" easing="out" condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedTVShows)] | [Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedMovies)] | [Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedAlbums)]">Conditional</animation> -->
-		<posx>283</posx>
-		<posy>430</posy>
+		<left>283</left>
+		<top>430</top>
 		<width>700</width>
 		<height>155</height>
 		<onup>23</onup>
@@ -33,8 +34,8 @@
 
 <!-- Item Layout Vars -->
 	<include name="SubMenuItemLayoutVarsDown">
-		<posx>350</posx>
-		<posy>0</posy>
+		<left>350</left>
+		<top>0</top>
 		<width>700</width>
 		<height>50</height>
 		<align>center</align>
@@ -52,8 +53,8 @@
 
 <!-- Focused Layout Vars -->
 	<include name="SubMenuFocusedLayoutVarsDown">
-		<posx>350</posx>
-		<posy>0</posy>
+		<left>350</left>
+		<top>0</top>
 		<width>700</width>
 		<height>50</height>
 		<align>center</align>
@@ -78,7 +79,7 @@
 
 		<control type="wraplist" id="23">
 			<description>SubMenu Container Movies</description>
-			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(2)</visible>
+			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(2)</visible>
 			<include>SubMenuWraplistVarsDown</include>
 			<itemlayout height="46">
 				<control type="label">
@@ -161,7 +162,7 @@
 
 		<control type="wraplist" id="23">
 			<description>SubMenu Container TVShows</description>
-			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(1)</visible>
+			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(1)</visible>
 			<include>SubMenuWraplistVarsDown</include>
 			<itemlayout height="46">
 				<control type="label">
@@ -235,7 +236,7 @@
 
 		<control type="wraplist" id="23">
 			<description>SubMenu Container Music</description>
-			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(3)</visible>
+			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(3)</visible>
 			<include>SubMenuWraplistVarsDown</include>
 			<itemlayout height="46">
 				<control type="label">
@@ -322,7 +323,7 @@
 	<include name="HomeSubMenuSettings">
 		<control type="wraplist" id="23">
 			<description>SubMenu Container Settings</description>
-			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(9)</visible>
+			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(9)</visible>
 			<include>SubMenuWraplistVarsDown</include>
 			<itemlayout height="46">
 				<control type="label">
@@ -387,7 +388,11 @@
 					<label>$LOCALIZE[130]</label>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 				</item>
-    		<!-- <item id="13">
+				<item id="13">
+					<label>$LOCALIZE[31430]</label>
+					<onclick>ActivateWindow(1111)</onclick>
+				</item>
+    		<!-- <item id="14">
 					<label>13013</label>
 			    <onclick>Dialog.Close(all,true)</onclick>
 				  <onclick>XBMC.Reset()</onclick>
@@ -397,6 +402,96 @@
 	</include>
 
 
+<!-- Home SubMenu Addons -->
+	<include name="HomeSubMenuAddons">
+		<control type="wraplist" id="23">
+			<description>SubMenu Container Addons</description>
+			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(7)</visible>
+			<include>SubMenuWraplistVarsDown</include>
+			<itemlayout height="46">
+				<control type="label">
+					<include>SubMenuItemLayoutVarsDown</include>
+				</control>
+			</itemlayout>
+			<focusedlayout height="55">
+				<control type="label">
+					<include>SubMenuFocusedLayoutVarsDown</include>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="0">
+					<label>$LOCALIZE[3]</label>
+          <onclick>ActivateWindow(videos,addons,return)</onclick>
+				</item>
+				<item id="1">
+					<label>$LOCALIZE[2]</label>
+          <onclick>ActivateWindow(music,addons,return)</onclick>
+				</item>
+				<item id="2">
+					<label>$LOCALIZE[1]</label>
+          <onclick>ActivateWindow(pictures,addons,return)</onclick>
+				</item>
+				<item id="3">
+					<label>$LOCALIZE[0]</label>
+          <onclick>ActivateWindow(Programs,addons,return)</onclick>
+				</item>
+				<item id="4">
+					<label>$LOCALIZE[24033]</label>
+					<onclick>ActivateWindow(AddonBrowser,addons://all/,return)</onclick>
+				</item>
+				<item id="5">
+					<label>$LOCALIZE[24043]</label>
+					<onclick>ActivateWindow(AddonBrowser,addons://outdated/,return)</onclick>
+				</item>
+			</content>
+		</control>
+	</include>
+
+
+<!-- Home SubMenu LiveTV -->
+	<include name="HomeSubMenuLiveTV">
+		<control type="wraplist" id="23">
+			<description>SubMenu Container LiveTV</description>
+			<visible>![Window.IsActive(ShutdownMenu) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(11)</visible>
+			<include>SubMenuWraplistVarsDown</include>
+			<itemlayout height="46">
+				<control type="label">
+					<include>SubMenuItemLayoutVarsDown</include>
+				</control>
+			</itemlayout>
+			<focusedlayout height="55">
+				<control type="label">
+					<include>SubMenuFocusedLayoutVarsDown</include>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="0">
+					<label>$LOCALIZE[19023]</label>
+          <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
+				</item>
+				<item id="1">
+					<label>$LOCALIZE[19163]</label>
+          <onclick>ActivateWindowAndFocus(PVR, 34,0, 13,0)</onclick>
+				</item>
+				<item id="2">
+					<label>$LOCALIZE[19040]</label>
+          <onclick>ActivateWindowAndFocus(PVR, 35,0, 14,0)</onclick>
+				</item>
+				<item id="3">
+					<label>$LOCALIZE[19069]</label>
+          <onclick>ActivateWindowAndFocus(PVR, 31,0, 10,0)</onclick>
+				</item>
+				<item id="4">
+					<label>$LOCALIZE[137]</label>
+          <onclick>ActivateWindowAndFocus(PVR, 36,0, 17,0)</onclick>
+				</item>
+				<item id="5">
+					<label>$LOCALIZE[19024]</label>
+          <onclick>ActivateWindowAndFocus(PVR, 33,0, 12,0)</onclick>
+				</item>
+			</content>
+		</control>
+	</include>
 	
 
 	<!-- =============================== -->
@@ -404,13 +499,13 @@
 	<!-- =============================== -->
 	<include name="ContextMenuContentInfo">
 	  <control type="group">
-			<posx>105</posx>
-			<posy>25</posy>
+			<left>105</left>
+			<top>25</top>
 	    <include>OpenCloseSlideAnimation</include>
       <visible>!Window.IsVisible(LockSettings) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LoginScreen) + !Window.IsVisible(Profiles)</visible>
 			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>
@@ -472,24 +567,19 @@
           <visible>Window.IsVisible(AddonInformation)</visible>
 	        <visible>Substring(Container.FolderPath,addons://) + !Window.IsVisible(MusicLibrary) + !Window.IsVisible(MusicFiles)</visible>
 				</control>
-				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-			    <label>1036</label>
-	        <visible>Window.IsVisible(Favourites)</visible>
-				</control>
 			</control>
 	  </control>
 	</include> 
 
 	<include name="ContextMenuContentInfoWindows">
 	  <control type="group">
-			<posx>105</posx>
-			<posy>25</posy>
+			<left>105</left>
+			<top>25</top>
 	    <include>OpenCloseSlideAnimation</include>
       <visible>!Window.IsVisible(LockSettings)</visible>
 			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>
@@ -514,6 +604,31 @@
 	  </control>
 	</include>
 
+	<include name="ContextMenuContentInfoFavourites">
+	  <control type="group">
+			<left>105</left>
+			<top>25</top>
+	    <include>OpenCloseSlideAnimation</include>
+			<control type="grouplist">
+				<left>0</left>
+				<top>0</top>
+				<height>70</height>
+				<width>1000</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="label">
+				  <include>TopBigLabel</include>
+					<label>31009</label>
+				</control>
+				<control type="label">
+				  <include>TopZoomedSmallLabel</include>
+			    <label>1036</label>
+				</control>
+			</control>
+	  </control>
+	</include> 	
 
 
 	<!-- ================== -->
@@ -521,8 +636,8 @@
 	<!-- ================== -->
   <include name="ContextCoordinates">
     <coordinates>
-      <posx>0</posx>
-      <posy>0</posy>
+      <left>0</left>
+      <top>0</top>
       <origin x="0" y="0">true</origin>
     </coordinates>
   </include>
@@ -530,8 +645,8 @@
 	<include name="ContextMenuDefault">
       <control type="image" id="999">
         <description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
         <width>480</width>
         <height>409</height>
         <texture>-</texture>
@@ -539,8 +654,8 @@
         <visible>false</visible>
       </control>
 			<control type="grouplist" id="996">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>480</width>
 				<height max="405">auto</height>
 				<itemgap>0</itemgap>
@@ -571,11 +686,11 @@
 
 	<include name="ContextMenuOnTopLeft">
 	    <control type="group">
-				<posx>30</posx>
+				<left>30</left>
 	      <include>OpenCloseSlideAnimation</include>
 	      <control type="image" id="997">
-	        <posx>0</posx>
-	        <posy>13</posy>
+	        <left>0</left>
+	        <top>13</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_context.png</texture>
@@ -596,14 +711,15 @@
 	      </control>
 	    </control>      
 		  <control type="grouplist" id="996">
-				<posx>30</posx>
-				<posy>88</posy>
+				<left>30</left>
+				<top>88</top>
 				<width>380</width>
 				<height max="520">auto</height>
 				<itemgap>0</itemgap>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
 	      <include>OpenCloseSlideAnimation</include>
+<!--
 				<control type="button" id="980">
 			    <description>Play Trailer</description>
 					<label>$LOCALIZE[208] $LOCALIZE[20410]</label>
@@ -618,8 +734,9 @@
 				  <include>TopLeftMenusButton</include>
 	        <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 					<visible>!substring(Container.FolderPath,plugin://plugin.video,left)</visible>
-	        <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + System.HasAddon(script.libraryeditor)</visible>
+	        <visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
+-->
 		  </control>
 			<control type="button" id="1000">
 			  <description>button template</description>
@@ -629,11 +746,11 @@
 
 	<include name="ContextMenuFavourites">
 	    <control type="group">
-				<posx>30</posx>
+				<left>30</left>
 	      <include>OpenCloseSlideAnimation</include>
 	      <control type="image" id="997">
-	        <posx>0</posx>
-	        <posy>13</posy>
+	        <left>0</left>
+	        <top>13</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_context.png</texture>
@@ -654,8 +771,8 @@
 	      </control>
 	    </control>
 			<control type="grouplist" id="996">
-				<posx>30</posx>
-				<posy>88</posy>
+				<left>30</left>
+				<top>88</top>
 				<width>380</width>
 				<height max="520">auto</height>
 				<itemgap>0</itemgap>
@@ -708,12 +825,12 @@
 	<!-- ========================== -->
 	<include name="PVROSDContentInfo">
 	  <control type="group">
-			<posx>45</posx>
-			<posy>25</posy>
+			<left>45</left>
+			<top>25</top>
 	    <include>OpenCloseSlideAnimation</include>
 			<control type="grouplist">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<height>70</height>
 				<width>1000</width>
 				<align>left</align>
@@ -766,8 +883,8 @@
 	        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 	        <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
 		    </animation>
-				<posx>45</posx>
-				<posy>75</posy>
+				<left>45</left>
+				<top>75</top>
 				<width>480</width>
 				<height>530</height>
 				<itemgap>0</itemgap>
@@ -778,8 +895,8 @@
 			  <scrolltime tween="cubic" easing="out">250</scrolltime>
 				<itemlayout height="58" width="480">
 					<control type="label">
-						<posx>5</posx>
-						<posy>0</posy>
+						<left>5</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -790,8 +907,8 @@
 						<label>․</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>0</posy>
+						<left>30</left>
+						<top>0</top>
 						<width>400</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -802,8 +919,8 @@
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>25</posy>
+						<left>30</left>
+						<top>25</top>
 						<width>400</width>
 						<height>40</height>
 						<font>FontSize_20</font>
@@ -815,24 +932,24 @@
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>30</width>
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>20</width>
 						<height>20</height>
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 					<control type="label.">
-						<posx>400</posx>
-						<posy>0</posy>
+						<left>400</left>
+						<top>0</top>
 						<width>130</width>
 						<height>40</height>
 						<font>FontSize_22</font>
@@ -846,8 +963,8 @@
 				</itemlayout>
 				<focusedlayout height="58" width="480">
 					<control type="label">
-						<posx>5</posx>
-						<posy>0</posy>
+						<left>5</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -858,8 +975,8 @@
 						<label>․</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>0</posy>
+						<left>30</left>
+						<top>0</top>
 						<width>400</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -870,8 +987,8 @@
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>25</posy>
+						<left>30</left>
+						<top>25</top>
 						<width>400</width>
 						<height>40</height>
 						<font>FontSize_20</font>
@@ -883,24 +1000,24 @@
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>30</width>
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>20</width>
 						<height>20</height>
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 					<control type="label.">
-						<posx>400</posx>
-						<posy>0</posy>
+						<left>400</left>
+						<top>0</top>
 						<width>130</width>
 						<height>40</height>
 						<font>FontSize_22</font>
@@ -929,8 +1046,8 @@
 	        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 	        <effect type="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="out" />
 		    </animation>		    
-				<posx>45</posx>
-				<posy>75</posy>
+				<left>45</left>
+				<top>75</top>
 				<width>480</width>
 				<height>530</height>
 				<itemgap>0</itemgap>
@@ -941,8 +1058,8 @@
 			  <scrolltime tween="cubic" easing="out">250</scrolltime>
 				<itemlayout height="58" width="480">
 					<control type="label">
-						<posx>5</posx>
-						<posy>0</posy>
+						<left>5</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -953,8 +1070,8 @@
 						<label>․</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>0</posy>
+						<left>30</left>
+						<top>0</top>
 						<width>400</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -965,8 +1082,8 @@
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>25</posy>
+						<left>30</left>
+						<top>25</top>
 						<width>400</width>
 						<height>40</height>
 						<font>FontSize_20</font>
@@ -978,24 +1095,24 @@
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>30</width>
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>20</width>
 						<height>20</height>
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 					<control type="label.">
-						<posx>400</posx>
-						<posy>0</posy>
+						<left>400</left>
+						<top>0</top>
 						<width>130</width>
 						<height>40</height>
 						<font>FontSize_22</font>
@@ -1009,8 +1126,8 @@
 				</itemlayout>
 				<focusedlayout height="58" width="480">
 					<control type="label">
-						<posx>5</posx>
-						<posy>0</posy>
+						<left>5</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -1021,8 +1138,8 @@
 						<label>․</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>0</posy>
+						<left>30</left>
+						<top>0</top>
 						<width>400</width>
 						<height>45</height>
 						<font>FontSize_24B</font>
@@ -1033,8 +1150,8 @@
 						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>25</posy>
+						<left>30</left>
+						<top>25</top>
 						<width>400</width>
 						<height>40</height>
 						<font>FontSize_20</font>
@@ -1046,24 +1163,24 @@
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>30</width>
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
 					<control type="image.">
-						<posx>120</posx>
-						<posy>5</posy>
+						<left>120</left>
+						<top>5</top>
 						<width>20</width>
 						<height>20</height>
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
 					<control type="label.">
-						<posx>400</posx>
-						<posy>0</posy>
+						<left>400</left>
+						<top>0</top>
 						<width>130</width>
 						<height>40</height>
 						<font>FontSize_22</font>
@@ -1084,8 +1201,8 @@
 	<include name="ContextMenuPVRChannelManager">
       <control type="image" id="999">
         <description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
         <width>350</width>
         <height>304</height>
         <texture>-</texture>
@@ -1093,8 +1210,8 @@
         <visible>false</visible>
       </control>
 			<control type="grouplist" id="996">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>350</width>
 				<height max="294">auto</height>
 				<itemgap>0</itemgap>
@@ -1131,7 +1248,15 @@
 	<include name="DialogSelect">
 	 <control type="group">
 	  <include>DialogAnimation</include>
-		<visible>!Window.IsActive(yesnodialog)</visible>
+		<visible>![Window.IsActive(yesnodialog) | Window.IsActive(okdialog)]</visible>
+		<control type="image">
+			<left>316</left>
+			<top>122</top>
+			<width>647</width>
+			<height>472</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -1155,8 +1280,8 @@
 		</control>
 		<control type="label" id="1">
 			<description>header label</description>
-			<posx>340</posx>
-			<posy>170</posy>
+			<left>340</left>
+			<top>170</top>
 			<width>600</width>
 			<font>FontSize_36</font>
 			<textcolor>white</textcolor>
@@ -1167,9 +1292,9 @@
 			<label>-</label>
 		</control>
 		<control type="list" id="3">
-			<posx>363</posx>
-			<posy>214</posy>
-			<width>555</width>
+			<left>363</left>
+			<top>214</top>
+			<width>553</width>
 			<height>306</height>
 			<onup>3</onup>
 			<ondown>3</ondown>
@@ -1178,8 +1303,8 @@
 			<scrolltime tween="quadratic" easing="out">250</scrolltime>
 			<itemlayout height="51" width="553">
 				<control type="label">
-					<posx>10</posx>
-					<posy>0</posy>
+					<left>10</left>
+					<top>0</top>
 					<width>540</width>
 					<height>47</height>
 					<font>FontSize_20</font>
@@ -1190,8 +1315,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>47</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
@@ -1203,16 +1328,16 @@
 	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnPrevious">focus</animation>
 	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnNext">focus</animation>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>47</height>
 					<texture>buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(3)</visible>
 				</control>
 				<control type="label">
-					<posx>10</posx>
-					<posy>0</posy>
+					<left>10</left>
+					<top>0</top>
 					<width>540</width>
 					<height>47</height>
 					<font>FontSize_20</font>
@@ -1224,8 +1349,8 @@
           <scroll>true</scroll>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>47</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
@@ -1235,8 +1360,8 @@
 			</focusedlayout>
 		</control>
 		<control type="list" id="6">
-			<posx>363</posx>
-			<posy>214</posy>
+			<left>363</left>
+			<top>214</top>
 			<width>555</width>
 			<height>306</height>
 			<onup>6</onup>
@@ -1247,8 +1372,8 @@
 			<scrolltime tween="quadratic" easing="out">250</scrolltime>
 			<itemlayout height="76.5" width="553">
 				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
+					<left>1</left>
+					<top>1</top>
 					<width>70</width>
 					<height>70</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1257,8 +1382,8 @@
 					<bordersize>6</bordersize>
 				</control>
 				<control type="label">
-					<posx>80</posx>
-					<posy>8</posy>
+					<left>80</left>
+					<top>8</top>
 					<width>470</width>
 					<height>30</height>
 					<font>FontSize_20</font>
@@ -1270,8 +1395,8 @@
 		      <animation effect="slide" start="0,35" end="0,10" time="0" reversible="false" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>80</posx>
-					<posy>32</posy>
+					<left>80</left>
+					<top>32</top>
 					<width>470</width>
 					<height>30</height>
 					<font>FontSize_20</font>
@@ -1282,8 +1407,8 @@
 					<label>$INFO[ListItem.Label2]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31040] ]</label>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>72</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
@@ -1295,16 +1420,16 @@
 	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(6).OnPrevious">focus</animation>
 	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(6).OnNext">focus</animation>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>72</height>
 					<texture>buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(6)</visible>
 				</control>
 				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
+					<left>1</left>
+					<top>1</top>
 					<width>70</width>
 					<height>70</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1313,8 +1438,8 @@
 					<bordersize>6</bordersize>
 				</control>
 				<control type="label">
-					<posx>80</posx>
-					<posy>8</posy>
+					<left>80</left>
+					<top>8</top>
 					<width>470</width>
 					<height>30</height>
 					<font>FontSize_20</font>
@@ -1327,8 +1452,8 @@
 		      <animation effect="slide" start="0,0" end="0,10" time="0" reversible="false" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>80</posx>
-					<posy>32</posy>
+					<left>80</left>
+					<top>32</top>
 					<width>470</width>
 					<height>30</height>
 					<font>FontSize_20</font>
@@ -1340,8 +1465,8 @@
 					<label>$INFO[ListItem.Label2]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31040] ]</label>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>72</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
@@ -1352,11 +1477,11 @@
 		</control>
 
 	  <control type="group"  id="10000">
-			<posx>355</posx>
-			<posy>525</posy>
+			<left>355</left>
+			<top>525</top>
 			<control type="grouplist" id="10001">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>0</width>
 				<height>0</height>
 				<itemgap>0</itemgap>
@@ -1375,7 +1500,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
+					<textwidth>200</textwidth>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>6</textoffsety>
 					<textcolor>99grey</textcolor>
@@ -1385,16 +1510,14 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>560</posx>
-				<posy>0</posy>
-				<animation effect="fade" end="30" condition="true">Conditional</animation>
+				<left>262</left>
+				<top>0</top>
 				<control type="label">
 					<description>Page Count Label</description>
 					<width>300</width>
 					<height>40</height>
-					<font>FontSize_18</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
+					<font>FontSize_20</font>
+					<textcolor>44white</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -1405,9 +1528,8 @@
 					<description>Page Count Label</description>
 					<width>300</width>
 					<height>40</height>
-					<font>FontSize_18</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
+					<font>FontSize_20</font>
+					<textcolor>44white</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -1430,21 +1552,34 @@
 	  <include>DialogAnimation</include>
 		<visible>!Window.IsActive(yesnodialog)</visible>
 		<control type="image">
+			<left>316</left>
+			<top>122</top>
+			<width>647</width>
+			<height>472</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+			<visible>Control.IsVisible(3)</visible>
+		</control>
+		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
 			<texture background="true">dialogs/selectdialog/bg_select.png</texture>
 			<visible>Control.IsVisible(3)</visible>
 		</control>
 		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select_artwork.png</texture>
+			<left>253</left>
+			<top>122</top>
+			<width>776</width>
+			<height>500</height>
+			<colordiffuse>EEFFFFFF</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
 			<visible>Control.IsVisible(6)</visible>
-		</control>
+		</control>		
 		<control type="label" id="1">
 			<description>header label</description>
-			<posx>305</posx>
-			<posy>170</posy>
+			<left>305</left>
+			<top>170</top>
 			<width>670</width>
 			<font>FontSize_34</font>
 			<textcolor>white</textcolor>
@@ -1455,8 +1590,8 @@
 			<label>-</label>
 		</control>
 		<control type="button.">
-			<posx>295</posx>
-			<posy>165</posy>
+			<left>295</left>
+			<top>165</top>
 			<width>698</width>
 			<font>FontSize_32</font>
 			<textcolor>99FFFFFF</textcolor>
@@ -1471,8 +1606,8 @@
 			<visible>Control.IsVisible(6)</visible>
 		</control>
 		<control type="list" id="3">
-			<posx>363</posx>
-			<posy>214</posy>
+			<left>363</left>
+			<top>214</top>
 			<width>555</width>
 			<height>306</height>
 			<onup>3</onup>
@@ -1482,8 +1617,8 @@
 			<scrolltime tween="quadratic" easing="out">250</scrolltime>
 			<itemlayout height="51" width="553">
 				<control type="label">
-					<posx>10</posx>
-					<posy>0</posy>
+					<left>10</left>
+					<top>0</top>
 					<width>540</width>
 					<height>47</height>
 					<font>FontSize_20</font>
@@ -1494,8 +1629,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>47</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
@@ -1507,16 +1642,16 @@
 	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnPrevious">focus</animation>
 	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnNext">focus</animation>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>47</height>
 					<texture>buttons/settings_fo.png</texture>
 					<visible>Control.HasFocus(3)</visible>
 				</control>
 				<control type="label">
-					<posx>10</posx>
-					<posy>0</posy>
+					<left>10</left>
+					<top>0</top>
 					<width>540</width>
 					<height>47</height>
 					<font>FontSize_20</font>
@@ -1528,8 +1663,8 @@
           <scroll>true</scroll>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>553</width>
 					<height>47</height>
 					<texture>dialogs/selectdialog/selected.png</texture>
@@ -1540,8 +1675,8 @@
 		</control>
 
 		<control type="panel" id="6">
-			<posx>276</posx>
-			<posy>211</posy>
+			<left>276</left>
+			<top>211</top>
 			<width>710</width>
 			<height>350</height>
 			<onleft>1000</onleft>
@@ -1553,16 +1688,16 @@
       <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 			<itemlayout height="175" width="175">
 				<control type="image">
-					<posx>20</posx>
-					<posy>0</posy>
+					<left>20</left>
+					<top>0</top>
 					<width>165</width>
 					<height>165</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<texture border="3,0,3,0">osd/quicknav/nofocus_square.png</texture>
 				</control>
 				<control type="image">
-					<posx>25</posx>
-					<posy>5</posy>
+					<left>25</left>
+					<top>5</top>
 					<width>155</width>
 					<height>155</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1572,16 +1707,16 @@
 			</itemlayout>
 			<focusedlayout height="175" width="175">
 				<control type="image">
-					<posx>20</posx>
-					<posy>0</posy>
+					<left>20</left>
+					<top>0</top>
 					<width>165</width>
 					<height>165</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<texture border="3,0,3,0">osd/quicknav/nofocus_square.png</texture>
 				</control>
 				<control type="image">
-					<posx>25</posx>
-					<posy>5</posy>
+					<left>25</left>
+					<top>5</top>
 					<width>155</width>
 					<height>155</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -1589,8 +1724,8 @@
 				  <bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>0</posy>
+					<left>20</left>
+					<top>0</top>
 					<width>165</width>
 					<height>165</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1609,11 +1744,11 @@
 
 		<control type="label">
 			<description>Label</description>
-			<posx>303</posx>
-			<posy>553</posy>
+			<left>300</left>
+			<top>553</top>
 			<width>590</width>
 			<height>40</height>
-			<font>FontSize_22</font>
+			<font>FontSize_20</font>
 			<textcolor>99grey</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<scroll>false</scroll>
@@ -1624,11 +1759,11 @@
 		</control>
 		<control type="label">
 			<description>Label</description>
-			<posx>303</posx>
-			<posy>553</posy>
+			<left>300</left>
+			<top>553</top>
 			<width>590</width>
 			<height>40</height>
-			<font>FontSize_22</font>
+			<font>FontSize_20</font>
 			<textcolor>99grey</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<scroll>false</scroll>
@@ -1639,11 +1774,11 @@
 		</control>
 		<control type="label">
 			<description>Label</description>
-			<posx>303</posx>
-			<posy>553</posy>
+			<left>300</left>
+			<top>553</top>
 			<width>590</width>
 			<height>40</height>
-			<font>FontSize_22</font>
+			<font>FontSize_20</font>
 			<textcolor>99grey</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<scroll>false</scroll>
@@ -1654,13 +1789,12 @@
 		</control>
 		<control type="label">
 			<description>Page Count Label</description>
-			<posx>980</posx>
-			<posy>555</posy>
+			<right>295</right>
+			<top>553</top>
 			<width>300</width>
 			<height>40</height>
-			<font>FontSize_18</font>
-			<textcolor>77white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
+			<font>FontSize_20</font>
+			<textcolor>44white</textcolor>
 			<scroll>false</scroll>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -1669,13 +1803,12 @@
 		</control>
 		<control type="label">
 			<description>Page Count Label</description>
-			<posx>915</posx>
-			<posy>525</posy>
+			<right>360</right>
+			<top>525</top>
 			<width>300</width>
 			<height>40</height>
-			<font>FontSize_18</font>
-			<textcolor>77white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
+			<font>FontSize_20</font>
+			<textcolor>44white</textcolor>
 			<scroll>false</scroll>
 			<align>right</align>
 			<aligny>center</aligny>

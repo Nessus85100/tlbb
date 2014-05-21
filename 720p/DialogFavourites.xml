@@ -1,4 +1,5 @@
-<window type="dialog" id="134">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="134">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<include>OnLoadDialogsClose</include>
 	<onload condition="!IntegerGreaterThan(Container(450).NumItems,0)">ActivateWindow(1110)</onload>
@@ -12,7 +13,7 @@
         <effect type="slide" start="0,0" end="0,55" time="300" tween="sine" easing="inout"/>
       </animation>
       <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu)">
-        <effect type="slide" start="0,0" end="0,140" time="270" tween="sine" easing="inout"/>
+        <effect type="slide" start="0,0" end="0,135" time="280" tween="sine" easing="inout"/>
       </animation>
 
 			<control type="panel" id="450">
@@ -117,7 +118,7 @@
 	    	<width>56</width>
 	    	<height>40</height>
 				<colordiffuse>ddwhite</colordiffuse>
-		    <aspectratio align="left" aligny="bottom">sretch</aspectratio>
+		    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
 	    	<texture background="true">icons/tlbb.png</texture>
 	    </control>
 		  <!--  Content Info  -->
@@ -164,8 +165,8 @@
 
 
 
-
-			<control type="panel." id="450">
+<!-- *NOT USED*
+			<control type="panel" id="450">
 				<posx>28</posx>
 				<posy>200</posy>
 				<width>1227</width>
@@ -272,3 +273,4 @@
 					</control>
 				</focusedlayout>
 			</control>
+-->

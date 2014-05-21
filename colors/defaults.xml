@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color name="white">FFF1F1F1</color>
 	<color name="grey">FFb4b4b4</color>
@@ -14,6 +15,7 @@
 	<color name="purple1">FFBB19B9</color>
 	<color name="purple2">FFAB3DC7</color>
 	<color name="selected">FF56ADDA</color>
+	<color name="invalid">FFCE2221</color>
 	<color name="osdinfo">FFd0d0d0</color>
   <color name="OSDColorsDiffuse">BBFFFFFF</color>  
   <color name="FanartDiffuse">22FFFFFF</color>

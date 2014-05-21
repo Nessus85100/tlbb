@@ -1,4 +1,5 @@
-<window id="1111">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="1111">
 	<defaultcontrol always="true">4000</defaultcontrol>
   <allowoverlay>no</allowoverlay>
 	<controls>
@@ -9,502 +10,779 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <include>DialogZoomInOutAnimation</include>
-		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(videos,sources://video/) + !Window.IsActive(MusicFiles) + !Window.IsActive(selectdialog) + !Window.IsActive(progressdialog) + !Window.IsActive(screencalibration) + !Window.IsActive(1110) + !Window.IsActive(141)</visible>
-		<control type="image">
-		  <include>FullscreenDimensions</include>
-		  <texture background="true">windows/settings/bg_help.png</texture>
-		</control>
-
+		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(videos,sources://video/) + !Window.IsActive(MusicFiles) + !Window.IsActive(selectdialog) + !Window.IsActive(screencalibration) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(busy.xml) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(1110) + !Window.IsActive(141)</visible>
 		<!-- ========================= -->
 		<!-- == Help Topics Buttons == -->
 		<!-- ========================= -->
 		<control type="group" id="4000">
-			<posx>98</posx>
-			<posy>166</posy>
+			<posx>45</posx>
+			<posy>90</posy>
+      <animation effect="fade"  start="100" end="65" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
 			<control type="list" id="4001">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>295</width>
-				<height>399</height>
-				<itemgap>1</itemgap>
+				<width>0</width>
+				<height>0</height>
 				<onleft>10000</onleft>
-				<onright>5000</onright>
-				<onup>4001</onup>
+				<onright condition="!Player.HasMedia">5</onright>
+				<onright condition="Player.HasMedia">PlayerControl(Stop)</onright>
 				<ondown>10000</ondown>
-				<pagecontrol>-</pagecontrol>
-				<scrolltime>300</scrolltime>
-				<itemlayout height="50" width="295">
-					<control type="label">
-						<posx>280</posx>
-						<posy>0</posy>
-						<width>295</width>
-						<height>49</height>
-				    <font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="50" width="295">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>295</width>
-						<height>49</height>
-						<texture>windows/settings/settings_left_fo.png</texture>
-						<animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(4001)">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>280</posx>
-						<posy>0</posy>
-						<width>295</width>
-						<height>49</height>
-				    <font>FontSize_20</font>
-						<textcolor>white</textcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</focusedlayout>
+				<onup>10000</onup>
+				<itemlayout/>
+				<focusedlayout/>
 				<content>
 					<item id="1">
 						<label>Welcome</label>
+						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					</item>
 					<item id="2">
-						<label>Screen Setup</label>
+						<label>Screen Calibration</label>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(screencalibration)</onclick>
 				 	</item>
 					<item id="3">
-						<label>WiFi Network</label>
+						<label>WiFi Setup</label>
+						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>RunScript(script.linux.nm)</onclick>
 					</item>
 					<item id="4">
 						<label>Region Add-ons</label>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(videos,plugin://plugin.video.tlbbwizard)</onclick>
 					</item>
 					<item id="5">
 						<label>Video Library</label>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(videos,sources://video/)</onclick>
+					  <onclick>Action(down)</onclick>
+					  <onclick condition="!Library.HasContent(Movies) + !Library.HasContent(TVShows)">Action(select)</onclick>
 					</item>
 					<item id="6">
 						<label>Music Library</label>
-					  <onclick>ActivateWindow(MusicFiles)</onclick>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>Control.Move(4001,1)</onclick>
+					  <onclick>ActivateWindow(musicfiles)</onclick>
+					  <onclick>Action(down)</onclick>
+					  <onclick condition="!Library.HasContent(Music)">Action(select)</onclick>
 					</item>
 					<item id="7">
-						<label>Customization</label>
+						<label>Customize UI</label>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(Settings)</onclick>
+				 	</item>
+					<item id="8">
+				    <label>Check for Updates</label>
+						<onclick>PlayerControl(Stop)</onclick>
+		        <onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
 				 	</item>
 				</content>
 			</control>
 
-			<control type="group" id="5000">
-
-				<!-- ============= -->
-				<!-- == Welcome == -->
-				<!-- ============= -->
-				<control type="grouplist" id="5001">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(1)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5001</onup>
-					<ondown>5001</ondown>
-					<control type="textbox">
-						<description>Help Screen 1</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31421][CR][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>60</pagecontrol>
-					</control>
+		  <!-- Welcome -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(1)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Help Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
 				</control>
-				<control type="scrollbar" id="60">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>60</ondown>
-					<onup>60</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(1)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+				<control type="textbox">
+					<description>Welcome</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>430</height>
+					<label>Thank you for purchasing[B][COLOR=selected] The Little Black Box[/COLOR][/B]. The revolution in Home Media Entertainment.[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR]TLBB Team</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
 				</control>
-
-				<!-- ======================== -->
-				<!-- == Screen Calibration == -->
-				<!-- ======================== -->
-				<control type="grouplist" id="5002">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(2)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5002</onup>
-					<ondown>5002</ondown>
-					<control type="textbox">
-						<description>Help Screen 2</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31422][CR][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>62</pagecontrol>
-					</control>
+				<control type="image">
+					<posx>690</posx>
+					<posy>55</posy>
+					<width>506</width>
+					<height>360</height>
+					<texture>windows/help/1.png</texture>
+				  <visible>!Player.HasMedia</visible>
 				</control>
-				<control type="scrollbar" id="62">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>62</ondown>
-					<onup>62</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(2)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(62)">Conditional</animation>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=Um22ddbbwDI,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
-
-				<!-- ================ -->
-				<!-- == WiFi Setup == -->
-				<!-- ================ -->
-				<control type="grouplist" id="5003">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(3)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5003</onup>
-					<ondown>5003</ondown>
-					<control type="textbox">
-						<description>Help Screen 3</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31423][CR][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>63</pagecontrol>
-					</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
 				</control>
-				<control type="scrollbar" id="63">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>63</ondown>
-					<onup>63</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(3)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(63)">Conditional</animation>
+				<control type="textbox">
+					<description>Help Tip</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of the[B][COLOR=99white] The Little Black Box.[/COLOR][/B]</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
 				</control>
-
-				<!-- ============================= -->
-				<!-- == Region Addons Installer == -->
-				<!-- ============================= -->
-				<control type="grouplist" id="5004">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(4)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5004</onup>
-					<ondown>5004</ondown>
-					<control type="textbox">
-						<description>Help Screen 4</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31424][CR][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>64</pagecontrol>
-					</control>
-				</control>
-				<control type="scrollbar" id="64">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>64</ondown>
-					<onup>64</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(4)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(64)">Conditional</animation>
-				</control>
-
-
-				<!-- =================== -->
-				<!-- == Video Library == -->
-				<!-- =================== -->
-				<control type="grouplist" id="5005">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(5)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5005</onup>
-					<ondown>5005</ondown>
-					<control type="textbox">
-						<description>Help Screen 5</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31425][CR][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>65</pagecontrol>
-					</control>
-				</control>
-				<control type="scrollbar" id="65">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>65</ondown>
-					<onup>65</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(5)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(65)">Conditional</animation>
-				</control>
-
-
-				<!-- =================== -->
-				<!-- == Music Library == -->
-				<!-- =================== -->
-				<control type="grouplist" id="5006">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(6)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5006</onup>
-					<ondown>5006</ondown>
-					<control type="textbox">
-						<description>Help Screen 6</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31426][CR][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>66</pagecontrol>
-					</control>
-				</control>
-				<control type="scrollbar" id="66">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>66</ondown>
-					<onup>66</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(6)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(66)">Conditional</animation>
-				</control>
-
-				<!-- =================== -->
-				<!-- == Customization == -->
-				<!-- =================== -->
-				<control type="grouplist" id="5007">
-					<include>CloseAnimation</include>
-					<visible>Container(4001).Hasfocus(7)</visible>
-					<posx>316</posx>
-					<posy>10</posy>
-					<width>782</width>
-					<height>399</height>
-					<itemgap>1</itemgap>
-					<onleft>4001</onleft>
-					<onright>9000</onright>
-					<onup>5004</onup>
-					<ondown>5004</ondown>
-					<control type="textbox">
-						<description>Help Screen 7</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>745</width>
-						<height>385</height>
-						<label>$LOCALIZE[31427][CR]TLBB Team</label>
-						<font>FontSize_20</font>
-						<align>justify</align>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<pagecontrol>67</pagecontrol>
-					</control>
-				</control>
-				<control type="scrollbar" id="67">
-					<posx>1070</posx>
-					<posy>15</posy>
-					<width>8</width>
-					<height>385</height>
-					<texturesliderbackground>-</texturesliderbackground>
-					<texturesliderbar border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,16,0,16">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
-					<onleft>4001</onleft>
-					<onright>4001</onright>
-					<ondown>67</ondown>
-					<onup>67</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-          <colordiffuse>AAFFFFFF</colordiffuse>
-					<visible>Container(4001).Hasfocus(7)</visible>
-			    <animation effect="fade" start="100" end="0" time="150" condition="!Control.HasFocus(67)">Conditional</animation>
-				</control>
-
-
 			</control>
+
+		  <!-- Calibration -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(2)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Calibration Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Calibration</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>In the next step you can adjust the screen to your display devise. Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your display device.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>62</posy>
+					<width>565</width>
+					<height>325</height>
+					<texture>windows/help/2.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=xLggcsNzPeM,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Help Tip</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] If you need more help, press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- WiFi -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(3)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>WiFi Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>WiFi</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>In the next step you can setup your network. Click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window. Press the [B]"Add"[/B] button, navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [B]Wired[/B] connections are configured automatically via DHCP on boot.[CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>601</posx>
+					<posy>40</posy>
+					<width>605</width>
+					<height>345</height>
+					<texture>windows/help/3.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Region Addons -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(4)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Region Addons Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Region Addons</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>In the next step you can install the Add-ons pack for your region. Click [B]"OK"[/B] on your remote to bring up the [B]Add-ons Region[/B] selection and select the [B]region[/B] you are based in.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>WARNING</description>
+					<posx>0</posx>
+					<posy>265</posy>
+					<width>600</width>
+					<height>80</height>
+					<label>[COLOR=red]WARNING:[/COLOR] Selecting the wrong region may contain content that may not be legal in your country. The Little Black Box is not liable for any content or add-ons played and installed on this device.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>77white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>62</posy>
+					<width>565</width>
+					<height>325</height>
+					<texture>windows/help/4.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Video Library -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(5)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Video Library Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Video Library</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>In the next step you can add and scan your Videos to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell XBMC what type of media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button when you done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>601</posx>
+					<posy>40</posy>
+					<width>605</width>
+					<height>385</height>
+					<texture>windows/help/5.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Music Library -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(6)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Music Library Category Label</description>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Music Library</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>In the next step you can add and scan your Music to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Music source"[/B] dialog. [B]"Browse"[/B] to where you keep your music stored and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button. Highlight the added [B]Music Source[/B] item and bring up the [B]"Context Menu".[/B] Select the option labeled [B]"Scan Item to Library"[/B] to scan the selected music source into the library database.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>601</posx>
+					<posy>40</posy>
+					<width>605</width>
+					<height>385</height>
+					<texture>windows/help/6.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Cutomize UI -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(7)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Cutomize UI Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Cutomize UI</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>$LOCALIZE[31427][CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>62</posy>
+					<width>565</width>
+					<height>325</height>
+					<texture>windows/help/7.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Check for Updates -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(8)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Check for Updates Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Check for Updates</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>$LOCALIZE[31428]</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>62</posy>
+					<width>565</width>
+					<height>325</height>
+					<texture>windows/help/8.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+
+		  <!-- Head Labels & Video Window -->
+			<control type="group">
+				<include>VisibleHiddenSlideAnimation</include>			
+				<control type="image.">
+					<posy>55</posy>
+					<width>1188</width>
+					<height>1</height>
+			    <colordiffuse>55FFFFFF</colordiffuse>
+					<texture>windows/help/line1.png</texture>
+				</control>
+				<control type="image">
+					<posy>495</posy>
+					<width>1187</width>
+					<height>1</height>
+			    <colordiffuse>55FFFFFF</colordiffuse>
+					<texture>windows/help/line1.png</texture>
+				</control>
+				<control type="label">
+					<description>Category Labels</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>70</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="label" id="70">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>70</height>
+					<font>FontSize_24</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				  <label>Step $INFO[Container(4001).CurrentPage] of $INFO[Container(4001).NumPages]</label>
+				</control>
+			  <control type="videowindow">
+					<posx>610</posx>
+					<posy>65</posy>
+					<width>580</width>
+					<height>325</height>
+					<visible>Player.HasMedia</visible>
+					<include>VisibleHiddenSlideAnimation</include>
+			  </control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>611</posx>
+					<posy>385</posy>
+					<width>580</width>
+					<height>17</height>
+					<info>Player.Progress</info>
+	        <reveal>true</reveal>
+					<texturebg border="10">osd/osd_bg_progress_cache_big.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>osd/osd_center_progress.png</midtexture>
+					<righttexture>-</righttexture>
+	        <overlaytexture>-</overlaytexture>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>611</posx>
+					<posy>385</posy>
+					<width>580</width>
+					<height>17</height>
+					<info>Player.CacheLevel</info>
+					<texturebg border="10">osd/osd_bg_progress_cache_big.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>osd/osd_center_progress_cache.png</midtexture>
+					<righttexture>-</righttexture>
+	        <overlaytexture>-</overlaytexture>
+	        <colordiffuse>11FFFFFF</colordiffuse>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>611</posx>
+					<posy>385</posy>
+					<width>580</width>
+					<height>17</height>
+					<info>Player.ProgressCache</info>
+	        <reveal>true</reveal>
+					<texturebg border="10">osd/osd_bg_progress_cache_big.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>osd/osd_center_progress.png</midtexture>
+					<righttexture>-</righttexture>
+	        <overlaytexture>-</overlaytexture>
+	        <colordiffuse>44FFFFFF</colordiffuse>
+				</control>
+			</control>
+
 		</control>
 
 
-		<!-- ============================ -->
-    <!-- == Header & Footer Labels == -->
-		<!-- ============================ -->
-		<control type="group">
-			<posx>120</posx>
-			<posy>163</posy>
-			<visible>Window.IsVisible(Custom_FirstTimeHelp.xml)</visible>
-			<control type="label">
-				<description>Header Category Label</description>
-				<posx>0</posx>
-				<posy>-50</posy>
-				<width>1075</width>
-				<height>50</height>
-				<font>FontSize_36</font>
-				<label>The Little Black Box - Help Guide</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>99000000</shadowcolor>
-			</control>
-		</control>
 
-
+		<!-- ===================== -->
+		<!-- == Control Buttons == -->
+		<!-- ===================== -->
 	  <control type="group" id="10000">
-			<posx>107</posx>
-			<posy>583</posy>
+			<posx>35</posx>
+			<posy>590</posy>
+		  <width>1210</width>
 			<visible>Window.IsVisible(Custom_FirstTimeHelp.xml)</visible>
-      <!-- Buttons -->
 			<control type="grouplist" id="10001">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>0</width>
-				<height>0</height>
-				<itemgap>0</itemgap>
 				<align>left</align>
 				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
+				<onleft>10002</onleft>
+				<onright>10002</onright>
 				<onup>4000</onup>
 				<ondown>4000</ondown>
-				<control type="button" id="20">
-					<description>Cancel</description>
-				  <width>250</width>
+				<control type="button" id="200">
+					<description>Next</description>
+				  <width>140</width>
 				  <height>40</height>
-					<texturefocus border="100,0,100,0">dialogs/buttons/cancel_fo.png</texturefocus>
-					<texturenofocus border="100,0,100,0">dialogs/buttons/cancel_nf.png</texturenofocus>
+					<texturefocus border="39,3,39,39">windows/help/next_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">windows/help/next_nf.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>FontSize_20</font>
@@ -514,39 +792,66 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>13009</label>
-			    <onclick>Action(back)</onclick>
-			    <visible>!Window.Previous(Startup)</visible>
+				  <label>Next</label>
+					<onclick>Control.Move(4001,1)</onclick>
+					<!-- <visible>Container(4001).HasNext</visible> -->
 				</control>
-				<control type="button" id="20">
-					<description>Cancel</description>
-				  <width>250</width>
+				<control type="button" id="201">
+					<description>Previous</description>
+				  <width>140</width>
 				  <height>40</height>
-					<texturefocus border="100,0,100,0">dialogs/buttons/save_fo.png</texturefocus>
-					<texturenofocus border="100,0,100,0">dialogs/buttons/save_nf.png</texturenofocus>
+					<texturefocus border="39,3,39,39">windows/help/previous_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">windows/help/previous_nf.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>FontSize_20</font>
 					<textwidth>310</textwidth>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>6</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
+				  <label>Previous</label>
+					<onclick>Control.Move(4001,-1)</onclick>
+					<!-- <visible>Container(4001).HasPrevious</visible> -->
+				</control>
+			</control>
+			<control type="grouplist" id="10002">
+				<orientation>horizontal</orientation>
+				<align>right</align>
+				<onleft>10001</onleft>
+				<onright>10001</onright>
+				<onup>4000</onup>
+				<ondown>4000</ondown>
+				<control type="button" id="202">
+					<description>Skip</description>
+				  <width>310</width>
+				  <height>40</height>
+					<texturefocus border="39,3,39,39">windows/help/save_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">windows/help/save_nf.png</texturenofocus>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>260</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>5</textoffsety>
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
 				  <label>Skip this guide</label>
 			    <onclick>Action(back)</onclick>
-			    <visible>Window.Previous(Startup)</visible>
+			    <visible>![Window.Previous(Settings) | Window.Previous(Home)]</visible>
 				</control>
-				<control type="button" id="30">
-					<description>Save</description>
-				  <width>250</width>
+				<control type="button" id="203">
+					<description>Don't show again</description>
+				  <width>310</width>
 				  <height>40</height>
-					<texturefocus border="100,0,100,0">dialogs/buttons/cancel_fo.png</texturefocus>
-					<texturenofocus border="100,0,100,0">dialogs/buttons/cancel_nf.png</texturenofocus>
-					<align>left</align>
+					<texturefocus border="39,3,39,39">windows/help/cancel_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">windows/help/cancel_nf.png</texturenofocus>
+					<align>right</align>
 					<aligny>top</aligny>
 					<font>FontSize_20</font>
-					<textwidth>310</textwidth>
+					<textwidth>260</textwidth>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>5</textoffsety>
 					<textcolor>99grey</textcolor>
@@ -555,12 +860,30 @@
 				  <label>Don't show this guide again</label>
 					<onclick>Skin.Setbool(FirstTimeRun)</onclick>
 			    <onclick>Action(back)</onclick>
-			    <visible>Window.Previous(Startup)</visible>
+			    <visible>![Window.Previous(Settings) | Window.Previous(Home)]</visible>
+				</control>
+				<control type="button" id="204">
+					<description>Quit</description>
+				  <width>260</width>
+				  <height>40</height>
+					<texturefocus border="39,3,39,39">windows/help/cancel_fo.png</texturefocus>
+					<texturenofocus border="39,3,39,39">windows/help/cancel_nf.png</texturenofocus>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>FontSize_20</font>
+					<textwidth>310</textwidth>
+					<textoffsetx>40</textoffsetx>
+					<textoffsety>5</textoffsety>
+					<textcolor>99grey</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<shadowcolor>99000000</shadowcolor>
+				  <label>13009</label>
+			    <onclick>Action(back)</onclick>
+			    <visible>Window.Previous(Settings) | Window.Previous(Home)</visible>
 				</control>
 			</control>
 	  </control>
 	 </control>
-
 	 <include>CommonNowPlaying</include>
 	 <include>CommonDialogsFadeOutBG</include>
 	 <include>SettingsCategoryContentInfo</include>

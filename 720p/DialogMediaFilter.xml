@@ -1,4 +1,5 @@
-<window>
+<?xml version="1.0" encoding="UTF-8"?>
+<window >
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
@@ -10,6 +11,14 @@
 	 <control type="group">
 	  <include>DialogAnimation</include>
 		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(selectdialog)</visible>
+		<control type="image">
+			<posx>316</posx>
+			<posy>122</posy>
+			<width>647</width>
+			<height>472</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>

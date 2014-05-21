@@ -1,9 +1,18 @@
-<window id="128">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  id="128">
 	<defaultcontrol>10</defaultcontrol>
 	<controls>
 	 <control type="group">
 		<include>DialogAnimation</include>
     <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsVisible(busydialog) + !Window.IsActive(okdialog) + ![Window.IsActive(filebrowser) + !IsEmpty(Window(home).Property(ShowDialog))]</visible>
+		<control type="image">
+			<posx>316</posx>
+			<posy>122</posy>
+			<width>647</width>
+			<height>472</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="39">dialogs/other/default.png</texture>
+		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -12,7 +21,7 @@
 		<control type="label" id="2">
 			<description>Head Label</description>
 			<posx>340</posx>
-			<posy>185</posy>
+			<posy>170</posy>
 			<width>600</width>
 			<font>FontSize_36</font>
 			<textcolor>white</textcolor>
@@ -24,7 +33,7 @@
 		<control type="spincontrolex" id="10">
 			<description>Protocol SpinControl</description>
 			<posx>363</posx>
-			<posy>229</posy>
+			<posy>214</posy>
 			<width>555</width>
 			<label>1008</label>
 			<onup>18</onup>
@@ -36,7 +45,7 @@
 		<control type="button" id="11">
 			<description>Server Address Button</description>
 			<posx>363</posx>
-			<posy>280</posy>
+			<posy>265</posy>
 			<width>389</width>
 			<label>-</label>
 			<onup>10</onup>
@@ -48,7 +57,7 @@
 		<control type="button" id="12">
 			<description>Server Browse Button</description>
 			<posx>756</posx>
-			<posy>280</posy>
+			<posy>265</posy>
 			<width>162</width>
 			<label>1024</label>
 			<onup>10</onup>
@@ -61,7 +70,7 @@
 		<control type="button" id="16">
 			<description>Remote path Button</description>
 			<posx>363</posx>
-			<posy>331</posy>
+			<posy>316</posy>
 			<width>555</width>
 			<label>-</label>
 			<onup>11</onup>
@@ -73,7 +82,7 @@
 		<control type="button" id="13">
 			<description>Port Button</description>
 			<posx>363</posx>
-			<posy>382</posy>
+			<posy>367</posy>
 			<width>555</width>
 			<label>1013</label>
 			<onup>16</onup>
@@ -85,7 +94,7 @@
 		<control type="button" id="14">
 			<description>Username Button</description>
 			<posx>363</posx>
-			<posy>433</posy>
+			<posy>418</posy>
 			<width>555</width>
 			<label>1014</label>
 			<onup>13</onup>
@@ -97,7 +106,7 @@
 		<control type="button" id="15">
 			<description>Password Button</description>
 			<posx>363</posx>
-			<posy>484</posy>
+			<posy>469</posy>
 			<width>555</width>
 			<label>15052</label>
 			<onup>14</onup>
@@ -109,7 +118,7 @@
 
 	  <control type="group" id="10000">
 			<posx>355</posx>
-			<posy>538</posy>
+			<posy>525</posy>
       <!-- Buttons -->
 			<control type="grouplist" id="10001">
 				<posx>0</posx>

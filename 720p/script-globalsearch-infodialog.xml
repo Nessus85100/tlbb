@@ -1,4 +1,5 @@
-<window type="dialog">
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog">
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -942,7 +943,7 @@
 					<width>376</width>
 					<height>366</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture background="true"fallback="thumbs/fallback_square_big.png" diffuse="thumbs/music_diffuse_big.png">$INFO[Container(100).ListItem.Art(thumb)]</texture>
+					<texture background="true" fallback="thumbs/fallback_square_big.png" diffuse="thumbs/music_diffuse_big.png">$INFO[Container(100).ListItem.Art(thumb)]</texture>
 					<fadetime>300</fadetime>
 					<visible>Control.IsVisible(160) | Control.IsVisible(170) | Control.IsVisible(180)</visible>
 			 </control>
