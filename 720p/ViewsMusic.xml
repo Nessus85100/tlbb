@@ -78,7 +78,7 @@
 				<posy>172</posy>
 				<width>374</width>
 				<height>222</height>
-				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<fadetime>100</fadetime>
 		    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[FanartThumbs]</texture>
 				<bordersize>6</bordersize>

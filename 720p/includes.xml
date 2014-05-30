@@ -107,8 +107,10 @@
 			<font>-</font>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>-</textureradiofocus>
-			<textureradionofocus>-</textureradionofocus>
+			<textureradioonfocus>-</textureradioonfocus>
+			<textureradioonnofocus>-</textureradioonnofocus>
+			<textureradioofffocus>-</textureradioofffocus>
+			<textureradiooffnofocus>-</textureradiooffnofocus>
 			<textureup>-</textureup>
 			<texturedown>-</texturedown>
 			<textureupfocus>-</textureupfocus>
@@ -297,8 +299,10 @@
 			<shadowcolor>99000000</shadowcolor>
 			<texturefocus>windows/settings/settings_right_fo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
-			<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
+			<textureradioonfocus>buttons/radio_button_on.png</textureradioonfocus>
+			<textureradioonnofocus>buttons/radio_button_on.png</textureradioonnofocus>
+			<textureradioofffocus>buttons/radio_button_off.png</textureradioofffocus>
+			<textureradiooffnofocus>buttons/radio_button_off.png</textureradiooffnofocus>
 			<align>left</align>
 			<aligny>top</aligny>
 			<radioposx>578</radioposx>
@@ -354,8 +358,10 @@
 			<shadowcolor>99000000</shadowcolor>
 			<texturefocus>windows/settings/settings_right_fo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
-			<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
+			<textureradioonfocus>buttons/radio_button_on.png</textureradioonfocus>
+			<textureradioonnofocus>buttons/radio_button_on.png</textureradioonnofocus>
+			<textureradioofffocus>buttons/radio_button_off.png</textureradioofffocus>
+			<textureradiooffnofocus>buttons/radio_button_off.png</textureradiooffnofocus>
 			<align>left</align>
 			<aligny>top</aligny>
 			<radioposx>715</radioposx>
@@ -441,8 +447,10 @@
 			<shadowcolor>99000000</shadowcolor>
 			<texturefocus>buttons/settings_fo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
-			<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
+			<textureradioonfocus>buttons/radio_button_on.png</textureradioonfocus>
+			<textureradioonnofocus>buttons/radio_button_on.png</textureradioonnofocus>
+			<textureradioofffocus>buttons/radio_button_off.png</textureradioofffocus>
+			<textureradiooffnofocus>buttons/radio_button_off.png</textureradiooffnofocus>
 			<align>left</align>
 			<aligny>top</aligny>
 			<radioposx>490</radioposx>
@@ -524,8 +532,10 @@
 			<texturenofocus>dialogs/menus/topmenus_nf.png</texturenofocus>
 			<alttexturefocus>dialogs/menus/topmenus_fo.png</alttexturefocus>
 			<alttexturenofocus>dialogs/menus/topmenus_nf.png</alttexturenofocus>
-			<textureradiofocus>-</textureradiofocus>
-			<textureradionofocus>-</textureradionofocus>
+			<textureradioonfocus>-</textureradioonfocus>
+			<textureradioonnofocus>-</textureradioonnofocus>
+			<textureradioofffocus>-</textureradioofffocus>
+			<textureradiooffnofocus>-</textureradiooffnofocus>
 	</include>
 	<include name="TopLeftViewtypeOptionsButton">
 			<width>380</width>
@@ -1300,8 +1310,8 @@
 	</variable>
     
   <variable name="AddonStatus">
-    <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons_status/status_broken.png</value>
     <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
+    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098]) | stringcompare(ListItem.Label2,$LOCALIZE[24049])">overlays/addons_status/status_broken.png</value>
     <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
   </variable>
 
@@ -1492,12 +1502,6 @@
     <value>$INFO[ListItem.Icon]</value>
   </variable>
 
-	<variable name="PlayerThumbs">
-		<value condition="!IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
-		<value condition="VideoPlayer.Content(Episodes) + !IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
-		<value>$INFO[Player.Art(thumb)]</value>
-	</variable>
-
 	<variable name="FanartThumbsOptionsLabels">
 		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),1)">$LOCALIZE[20445]</value>
 		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">$LOCALIZE[31218]</value>
@@ -1542,7 +1546,7 @@
 		<value condition="stringcompare(Skin.String(RSSVideoFeedURL),Funny Or Die)">http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcfbab046f1d81011c59&amp;youtubeid=FunnyorDie&amp;_render=json</value>
 	  <value condition="stringcompare(Skin.String(RSSVideoFeedURL),GameTrailers)">http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcfbab046f1d81011c59&amp;youtubeid=gametrailers&amp;_render=json</value>
     <value condition="stringcompare(Skin.String(RSSVideoFeedURL),NBA)">http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcfbab046f1d81011c59&amp;youtubeid=NBA&amp;_render=json</value>
-    <value condition="stringcompare(Skin.String(RSSVideoFeedURL),Custom)">http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcfbab046f1d81011c59&amp;_render=json&amp;youtubeid=$INFO[Skin.String(SearchStringURL)]</value>
+    <value condition="stringcompare(Skin.String(RSSVideoFeedURL),Custom)">http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcfbab046f1d81011c59&amp;youtubeid=$INFO[Skin.String(SearchStringURL)]&amp;_render=json</value>
 	</variable>
 <!-- *NOT USED*
 Default (TLBB) 				 http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcfbab046f1d81011c59&amp;_render=json
@@ -1649,6 +1653,39 @@ Custom by YouTube ID   http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcf
 		<value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Description)]</value>
 		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[Container.ShowPlot]</value>
 		<value>$INFO[ListItem.Plot]</value>
+	</variable>
+
+	<variable name="VideoPlayerThumb">
+		<value condition="!IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+		<value condition="VideoPlayer.Content(Episodes) + !IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
+		<value>$INFO[Player.Art(thumb)]</value>
+	</variable>
+	
+  <include name="OSDProgressWidth">
+    <width>590</width>
+  </include>
+  <include name="OSDProgressWidthSmall">
+    <width>545</width>
+  </include>
+
+	<variable name="OSDInfoTitleLabel">
+		<value condition="VideoPlayer.Content(Movies)">$INFO[VideoPlayer.Title,, ]$INFO[VideoPlayer.Year, (,) ]</value>
+		<value>$INFO[VideoPlayer.Title]</value>
+	</variable>
+
+	<variable name="OSDInfoUnderTitleLabel">
+		<value condition="VideoPlayer.Content(Movies)">$INFO[VideoPlayer.Genre]</value>
+		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, · $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, · $LOCALIZE[20359] ,]</value>
+		<value condition="![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)] + !IsEmpty(VideoPlayer.Genre)">$INFO[VideoPlayer.Genre]</value>
+		<value>$INFO[Player.FolderPath]</value>
+	</variable>
+
+	<variable name="OSDInfoPremieredFadeLabel">
+		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.Premiered,[COLOR=white]$LOCALIZE[20416]:[/COLOR] ]</value>
+	</variable>
+
+	<variable name="OSDInfoChapterFadeLabel">
+		<value condition="Player.ChapterCount">$LOCALIZE[21396]: [COLOR=white]$INFO[Player.Chapter]$INFO[Player.ChapterCount, / ][/COLOR]</value>
 	</variable>
 
 	<variable name="DialogSeekBarLabel">

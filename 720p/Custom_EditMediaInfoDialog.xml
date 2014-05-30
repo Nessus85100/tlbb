@@ -128,8 +128,8 @@
               <item id="6">
 								<description>TV Tune</description>
                 <label>$LOCALIZE[31222]</label>
-			          <onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-								<visible>Skin.HasSetting(TVTunesEnabled) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+							  <onclick>RunScript(script.tvtunes,mode=solo)</onclick>
+								<visible>System.HasAddon(script.tvtunes) + Skin.HasSetting(TVTunesEnabled) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]</visible>
               </item>
             </content>
 				</control>

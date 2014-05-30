@@ -48,7 +48,7 @@
 				<posy>172</posy>
 				<width>223</width>
 				<height>222</height>
-				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<fadetime>100</fadetime>
 				<texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[PosterThumbs]</texture>
 				<bordersize>6</bordersize>
@@ -78,7 +78,7 @@
 				<posy>172</posy>
 				<width>374</width>
 				<height>222</height>
-				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<fadetime>100</fadetime>
 		    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[FanartThumbs]</texture>
 				<bordersize>6</bordersize>
@@ -443,18 +443,18 @@
         <scrolltime tween="Quadratic" easing="out">250</scrolltime>
 				<preloaditems>2</preloaditems>
 			  <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] + !substring(Container.FolderPath,plugin://plugin.video.youtube)</visible>
-				<itemlayout height="265" width="244">
+				<itemlayout height="264" width="244">
 					<control type="image">
 						<posx>-5</posx>
-						<width>260</width>
-						<height>280</height>
+						<width>255</width>
+						<height>275</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
@@ -464,7 +464,7 @@
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -474,7 +474,7 @@
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 					  <texture background="true">$VAR[AddonStatus]</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -482,8 +482,8 @@
 					</control>
 					<control type="label">
 						<posx>125</posx>
-						<posy>220</posy>
-						<width>200</width>
+						<posy>218</posy>
+						<width>195</width>
 						<height>40</height>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
@@ -496,8 +496,8 @@
 					</control>
 					<control type="label">
 						<posx>90</posx>
-						<posy>220</posy>
-						<width>200</width>
+						<posy>218</posy>
+						<width>195</width>
 						<height>40</height>
 						<font>BackFont_22</font>
 						<textcolor>99white</textcolor>
@@ -507,18 +507,18 @@
 		        <visible>Stringcompare(ListItem.Label,..)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="265" width="244">
+				<focusedlayout height="264" width="244">
 					<control type="image">
 						<posx>-5</posx>
-						<width>260</width>
-						<height>280</height>
+						<width>255</width>
+						<height>275</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="30">views/thumbnails/thumb_panel.png</texture>
 					</control>
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true">empty_icon.png</texture>
@@ -528,7 +528,7 @@
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 						<colordiffuse>FF04aeda</colordiffuse>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -539,7 +539,7 @@
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
@@ -549,7 +549,7 @@
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -559,7 +559,7 @@
 					<control type="image">
 						<posx>20</posx>
 						<posy>25</posy>
-						<width>210</width>
+						<width>205</width>
 						<height>200</height>
 					  <texture background="true">$VAR[AddonStatus]</texture>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -567,8 +567,8 @@
 					</control>
 					<control type="label">
 						<posx>125</posx>
-						<posy>220</posy>
-						<width>200</width>
+						<posy>218</posy>
+						<width>195</width>
 						<height>40</height>
 						<textcolor>blue</textcolor>
 						<shadowcolor>99000000</shadowcolor>
@@ -581,8 +581,8 @@
 					</control>
 					<control type="label">
 						<posx>90</posx>
-						<posy>220</posy>
-						<width>200</width>
+						<posy>218</posy>
+						<width>195</width>
 						<height>40</height>
 						<font>BackFont_22</font>
 						<textcolor>blue</textcolor>
@@ -593,8 +593,8 @@
 					</control>
 					<control type="image">
 						<posx>-5</posx>
-						<width>260</width>
-						<height>280</height>
+						<width>255</width>
+						<height>275</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="30">views/thumbnails/focus.png</texture>
             <animation type="Focus">
@@ -606,7 +606,7 @@
 			<control type="scrollbar" id="60">
 				<posx>40</posx>
 				<posy>625</posy>
-				<width>1200</width>
+				<width>1195</width>
 				<height>11</height>
 				<texturesliderbackground>-</texturesliderbackground>
 				<texturesliderbar border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>

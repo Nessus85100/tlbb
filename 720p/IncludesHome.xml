@@ -2649,7 +2649,7 @@
 						<top>0</top>
 						<width>130</width>
 						<height>185</height>
-						<texture background="true" fallback="thumbs/fallback_poster.png" diffuse="thumbs/poster_diffuse.png">$VAR[PlayerThumbs]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster.png" diffuse="thumbs/poster_diffuse.png">$VAR[VideoPlayerThumb]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<fadetime>300</fadetime>
 				 </control>
@@ -2667,7 +2667,7 @@
 						<top>187</top>
 						<width>130</width>
 						<height>185</height>
-						<texture background="true" fallback="thumbs/fallback_poster.png" flipy="true" diffuse="thumbs/poster_reflection_diffuse.png">$VAR[PlayerThumbs]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster.png" flipy="true" diffuse="thumbs/poster_reflection_diffuse.png">$VAR[VideoPlayerThumb]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 						<fadetime>300</fadetime>
 						<colordiffuse>A0FFFFFF</colordiffuse>
@@ -2756,7 +2756,7 @@
 						<width>260</width>
 						<height>160</height>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-				    <texture background="true" fallback="thumbs/fallback_episode.png" diffuse="thumbs/video_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+				    <texture background="true" diffuse="thumbs/video_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
@@ -2774,7 +2774,7 @@
 						<width>260</width>
 						<height>160</height>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-				    <texture background="true" fallback="thumbs/fallback_episode.png" flipy="true" diffuse="thumbs/video_reflection_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
+				    <texture background="true" flipy="true" diffuse="thumbs/video_reflection_diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 						<fadetime>300</fadetime>
 						<colordiffuse>A0ffffff</colordiffuse>
 					</control>
@@ -2861,7 +2861,7 @@
 							<width>160</width>
 							<height>160</height>
 							<aspectratio align="center" aligny="top" scalediffuse="false">keep</aspectratio>
-					    <texture background="true" fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$INFO[Player.Art(thumb)]</texture>
+					    <texture background="true" fallback="thumbs/fallback_square.png" diffuse="thumbs/music_diffuse.png">$VAR[VideoPlayerThumb]</texture>
 							<fadetime>300</fadetime>
 					</control>
 					<control type="image">
@@ -2879,7 +2879,7 @@
 							<width>160</width>
 							<height>160</height>
 							<aspectratio align="center" aligny="top" scalediffuse="false">keep</aspectratio>
-					    <texture background="true" fallback="thumbs/fallback_square.png" flipy="true" diffuse="thumbs/music_reflection_diffuse.png">$INFO[Player.Art(thumb)]</texture>
+					    <texture background="true" fallback="thumbs/fallback_square.png" flipy="true" diffuse="thumbs/music_reflection_diffuse.png">$VAR[VideoPlayerThumb]</texture>
 							<fadetime>300</fadetime>
 							<colordiffuse>a0ffffff</colordiffuse>
 					</control>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="101">
+  <zorder>3</zorder>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<controls>
 

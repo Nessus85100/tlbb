@@ -474,8 +474,6 @@
 						<visible>Skin.HasSetting(CustomProgramAddonsWidget)</visible>
 					</control>
 
-
-
 					<control type="group" id="304">
 						<description>Fake spin control</description>
 						<width>645</width>
@@ -563,8 +561,10 @@
 						<onclick>Skin.Reset(SearchStringURL)</onclick>
 						<onclick>Skin.SetString(SearchStringURL)</onclick>
 						<onclick>Skin.SetString(SearchStringName)</onclick>
-						<onclick condition="[stringcompare(Skin.String(RSSVideoFeedName),Custom) + IsEmpty(Skin.String(SearchStringURL))]">Skin.SetString(RSSVideoFeedName,Default (TLBB))</onclick>
-						<onclick condition="[stringcompare(Skin.String(RSSVideoFeedName),Custom) + IsEmpty(Skin.String(SearchStringURL))]">Skin.Reset(RSSVideoFeedURL)</onclick>
+<!-- *NOT USED*
+						<onclick condition="!IsEmpty(Skin.String(SearchStringName))">Skin.SetString(RSSVideoFeedName,Default (TLBB))</onclick>
+						<onclick condition="!IsEmpty(Skin.String(SearchStringURL))">Skin.Reset(RSSVideoFeedURL)</onclick>
+-->
 				    <visible>stringcompare(Skin.String(RSSVideoFeedName),Custom)</visible>
 					</control>					
 				</control>

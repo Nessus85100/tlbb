@@ -8,8 +8,8 @@
 
 		<control type="image">
 			<visible>Skin.HasSetting(ShowDebugGrid)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<texture>debug/debuggrid.png</texture>
@@ -17,8 +17,8 @@
 
 		<control type="image">
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<texture>debug/skin_area.png</texture>
@@ -28,8 +28,8 @@
 		<!-- Window/Dialog debug -->
 
 		<control type="grouplist">
-			<posx>5</posx>
-			<posy>5</posy>
+			<left>5</left>
+			<top>5</top>
 			<width>780</width>
 			<height>450</height>
 			<itemgap>12</itemgap>
@@ -1033,8 +1033,8 @@
 		<!-- Control label -->
 
 		<control type="label">
-			<posx>5r</posx>
-			<posy>5</posy>
+			<right>5</right>
+			<top>5</top>
 			<width>1000</width>
 			<height>21</height>
 			<textcolor>FF0000FF</textcolor>
@@ -1048,8 +1048,8 @@
 		<!-- Path label -->
 
 		<control type="label">
-			<posx>5r</posx>
-			<posy>30</posy>
+			<right>5</right>
+			<top>30</top>
 			<width>1000</width>
 			<height>21</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1063,9 +1063,9 @@
 		<!-- Container label -->
 
 		<control type="label">
-			<posx>640r</posx>
-			<posy>695</posy>
-			<width>780</width>
+			<left>0</left>
+			<top>695</top>
+			<width>640</width>
 			<height>21</height>
 			<textcolor>FFFFFF40</textcolor>
 			<shadowcolor>99000000</shadowcolor>
@@ -1076,9 +1076,9 @@
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>
 		<control type="label">
-			<posx>640</posx>
-			<posy>695</posy>
-			<width>780</width>
+			<left>640</left>
+			<top>695</top>
+			<width>640</width>
 			<height>21</height>
 			<textcolor>FFFFFF40</textcolor>
 			<shadowcolor>99000000</shadowcolor>
@@ -1093,8 +1093,8 @@
 		<!-- CPU & RAM label -->
 		
 		<control type="label" id="1">
-			<posx>0</posx>
-			<posy>695</posy>
+			<left>5</left>
+			<top>690</top>
 			<height>25</height>
 			<width>1190</width>
 			<font>FontSize_20B</font>
@@ -1103,13 +1103,13 @@
 	    <align>left</align>
 	    <aligny>center</aligny>
 			<scroll>false</scroll>
-			<label>$INFO[System.CPUUsage, CPU: ]</label>
+			<label>$INFO[System.CPUUsage,CPU: ]</label>
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>
 
 		<control type="label" id="1">
-			<posx>1277</posx>
-			<posy>695</posy>
+			<right>5</right>
+			<top>690</top>
 			<height>25</height>
 			<width>1190</width>
 			<font>FontSize_20B</font>
@@ -1118,7 +1118,7 @@
 	    <align>right</align>
 	    <aligny>center</aligny>
 			<scroll>false</scroll>
-			<label>$INFO[System.Memory(used.percent), RAM: ]</label>
+			<label>$INFO[System.Memory(used.percent),RAM: ]</label>
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>				
 	</controls>

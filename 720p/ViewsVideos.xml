@@ -47,7 +47,7 @@
 				<top>167</top>
 				<width>175</width>
 				<height>242</height>
-				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<fadetime>100</fadetime>
 				<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterThumbs]</texture>
 				<bordersize>6</bordersize>
@@ -77,7 +77,7 @@
 				<top>167</top>
 				<width>422</width>
 				<height>242</height>
-				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<fadetime>100</fadetime>
 		    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[FanartThumbs]</texture>
 				<bordersize>6</bordersize>
@@ -604,7 +604,7 @@
 				    <colordiffuse>55ffffff</colordiffuse>
 				    <aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture>flags/empty.png</texture>
-						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(unWatchedEpisodes))</visible>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 					</control>
 					<control type="label">
 						<left>557</left>
@@ -743,7 +743,7 @@
 					    <colordiffuse>ffcccccc</colordiffuse>
 				      <aspectratio align="center" aligny="center">stretch</aspectratio>
 							<texture>flags/empty.png</texture>
-						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(unWatchedEpisodes))</visible>
+						  <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 						</control>
 						<control type="label">
 							<left>557</left>
@@ -1000,7 +1000,7 @@
 									<font>FontSize_22</font>
 						      <scroll>false</scroll>
 									<align>left</align>
-									<aligy>center</aligy>
+									<aligny>center</aligny>
 				          <label>$VAR[SmallGlobalInfo]</label>
 				          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
 				          <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
@@ -1226,7 +1226,7 @@
 								<font>FontSize_22</font>
 					      <scroll>false</scroll>
 								<align>left</align>
-								<aligy>center</aligy>
+								<aligny>center</aligny>
 			          <label>$VAR[SmallGlobalInfo]</label>
 			          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
 			          <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
@@ -1566,7 +1566,7 @@
 							<font>FontSize_22</font>
 				      <scroll>false</scroll>
 							<align>left</align>
-							<aligy>center</aligy>
+							<aligny>center</aligny>
 		          <label>$VAR[SmallGlobalInfo]</label>
 		          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
 		          <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
@@ -1871,7 +1871,7 @@
 							<font>FontSize_22</font>
 				      <scroll>false</scroll>
 							<align>left</align>
-							<aligy>center</aligy>
+							<aligny>center</aligny>
 		          <label>$VAR[SmallGlobalInfo]</label>
 		          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
 		          <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
@@ -2207,7 +2207,7 @@
 					<viewtype label="31088">Multiple Walls</viewtype>
 					<pagecontrol>60</pagecontrol>
 			    <scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible>
+					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
 					<itemlayout height="45" width="710">
 						<control type="label">
 							<left>14</left>
@@ -2770,7 +2770,7 @@
 						<font>FontSize_20B</font>
 			      <scroll>false</scroll>
 						<align>right</align>
-						<aligy>center</aligy>
+						<aligny>center</aligny>
 	          <label>$VAR[SmallGlobalInfo]</label>
 	          <animation effect="slide" start="0,0" end="50,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
             <animation effect="slide" start="0,0" end="-5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>	          
@@ -2864,7 +2864,7 @@
 						<font>FontSize_20</font>
 			      <scroll>false</scroll>
 						<align>left</align>
-						<aligy>center</aligy>
+						<aligny>center</aligny>
 	          <label>$VAR[SmallGlobalInfo]</label>
 	          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
 	          <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
@@ -3295,7 +3295,7 @@
 				        <selectedcolor>99white</selectedcolor>
 					      <scroll>false</scroll>
 								<align>left</align>
-								<aligy>center</aligy>
+								<aligny>center</aligny>
 			          <label>$VAR[SmallGlobalInfo]</label>
 			          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
 			          <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
@@ -3411,7 +3411,7 @@
 				        <shadowcolor>99000000</shadowcolor>
 					      <scroll>false</scroll>
 								<align>left</align>
-								<aligy>center</aligy>
+								<aligny>center</aligny>
 			          <label>$VAR[SmallGlobalInfo]</label>
 			          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution)">Conditional</animation>
 							</control>
@@ -3524,7 +3524,7 @@
 				        <shadowcolor>99000000</shadowcolor>
 					      <scroll>false</scroll>
 								<align>left</align>
-								<aligy>center</aligy>
+								<aligny>center</aligny>
 			          <label>$VAR[SmallGlobalInfo]</label>
 			          <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution)">Conditional</animation>
 							</control>
@@ -3718,7 +3718,7 @@
 					<font>FontSize_22</font>
 		      <scroll>false</scroll>
 					<align>left</align>
-					<aligy>center</aligy>
+					<aligny>center</aligny>
           <label>$VAR[SmallGlobalInfo]</label>
           <animation effect="slide" start="0,0" end="-45,0" time="0" tween="sine" easing="inout" condition="IsEmpty(ListItem.VideoResolution) + !Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>
           <animation effect="slide" start="0,0" end="5,0" time="0" tween="sine" easing="inout" condition="Substring(ListItem.Path,videodb://movies/sets/)">Conditional</animation>

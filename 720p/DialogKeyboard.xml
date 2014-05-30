@@ -322,8 +322,10 @@
 					<radioposy>-2</radioposy>
 					<radiowidth>28</radiowidth>
 					<radioheight>28</radioheight>
-					<textureradioon>dialogs/keyboard/radio-on.png</textureradioon>
-					<textureradiooff>dialogs/keyboard/radio-off.png</textureradiooff>
+					<textureradioonfocus>dialogs/keyboard/radio-on.png</textureradioonfocus>
+					<textureradioonnofocus>dialogs/keyboard/radio-on.png</textureradioonnofocus>
+					<textureradioofffocus>dialogs/keyboard/radio-off.png</textureradioofffocus>
+					<textureradiooffnofocus>dialogs/keyboard/radio-off.png</textureradiooffnofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>FontSize_14B</font>
@@ -560,8 +562,10 @@
 					<radioposy>-2</radioposy>
 					<radiowidth>28</radiowidth>
 					<radioheight>28</radioheight>
-					<textureradioon>dialogs/keyboard/radio-on.png</textureradioon>
-					<textureradiooff>dialogs/keyboard/radio-off.png</textureradiooff>
+					<textureradioonfocus>dialogs/keyboard/radio-on.png</textureradioonfocus>
+					<textureradioonnofocus>dialogs/keyboard/radio-on.png</textureradioonnofocus>
+					<textureradioofffocus>dialogs/keyboard/radio-off.png</textureradioofffocus>
+					<textureradiooffnofocus>dialogs/keyboard/radio-off.png</textureradiooffnofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>FontSize_14B</font>
@@ -589,8 +593,10 @@
 					<radioposy>-2</radioposy>
 					<radiowidth>28</radiowidth>
 					<radioheight>28</radioheight>
-					<textureradioon>dialogs/keyboard/radio-on.png</textureradioon>
-					<textureradiooff>dialogs/keyboard/radio-off.png</textureradiooff>
+					<textureradioonfocus>dialogs/keyboard/radio-on.png</textureradioonfocus>
+					<textureradioonnofocus>dialogs/keyboard/radio-on.png</textureradioonnofocus>
+					<textureradioofffocus>dialogs/keyboard/radio-off.png</textureradioofffocus>
+					<textureradiooffnofocus>dialogs/keyboard/radio-off.png</textureradiooffnofocus>
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>FontSize_14B</font>
