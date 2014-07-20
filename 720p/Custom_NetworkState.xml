@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1120">
-  <zorder>3</zorder>
+  <zorder>5</zorder>
   <allowoverlay>no</allowoverlay>
-  <visible>!Window.IsVisible(startup) + !Window.IsVisible(loginscreen) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(slideshow)</visible>
+  <visible>!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(slideshow)</visible>
   <controls>
 	  <control type="group">
 			<left>0</left>
@@ -23,7 +23,7 @@
         <effect type="slide" start="0,0" end="-150,0" time="450" delay="250" tween="cubic" easing="out" />
         <effect type="fade" start="100" end="0" time="350" tween="cubic" easing="out" />
 	    </animation>
-		  <animation type="Conditional" condition="SubString(System.InternetState,$LOCALIZE[13297])" reversible="true">
+		  <animation type="Conditional" condition="!SubString(System.InternetState,$LOCALIZE[13296],left)" reversible="true">
 			  <effect type="slide" end="145,0" time="400" tween="back" easing="out" />
 		  </animation>
       <control type="image">

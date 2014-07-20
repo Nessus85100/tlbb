@@ -1047,93 +1047,143 @@ msgctxt "#31420"
 msgid "Configure Skin Settings"
 msgstr ""
 
-#First time helper screens
+
+
+#Help Screen strings
+
+#Welecome
 msgctxt "#31421"
-msgid "Thank you for purchasing [B] [COLOR=selected]The Little Black Box[/COLOR][/B]. The revolution in Home Media Entertainment.[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR][COLOR=selected]Important Notice:[/COLOR] If your unit is not responding, make sure batteries are in the remote. Hold and press digits [B]1[/B] and [B]9[/B] until the LED stops flashes to sync the remote."
+msgid "Thank you for purchasing[B][COLOR=selected] The Little Black Box[/COLOR][/B]. The revolution in Home Media Entertainment.[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR]TLBB Team"
 msgstr ""
 
+#Screen Calibration
 msgctxt "#31422"
-msgid "[COLOR=selected][B]Setting up your Screen Settings[/B][/COLOR][CR]"
-"• Click [B]OK[/B] button on your remote to bring up the [B]Calibration[/B] setup screen.[CR]"
-"• Follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your[CR]  display device.[CR]"
-"• Click the [B]"Back"[/B] button on your remote when you finish.[CR][CR]"
-"When you finish you will be automatically redirected to the next screen where you can setup your Network."
+msgid "In the next step you can adjust the screen to your display devise. Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your display device.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
 msgstr ""
 
+#Network Setup
 msgctxt "#31423"
-msgid "[COLOR=selected][B]Setting up your Network[/B][/COLOR][CR]"
-"• Click [B]OK[/B] on your remote to bring up the [B]WiFi[/B] setup window.[CR]"
-"• Navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary.[CR]"
-"• Select [B]Wired[/B] if you are using an [B]ethernet[/B] cable.[CR][CR]"
-"When you finish you will be automatically redirected to the next screen where you can install your [B]Regional Channels Add-ons[/B]. If not, please click the [B]"Back"[/B] button on your remote."
+msgid "In the next step you can setup your network. Click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window. Press the [B]"Add"[/B] button, navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [B]Wired[/B] connections are configured automatically via DHCP on boot.[CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
 msgstr ""
 
+#Region Addons
 msgctxt "#31424"
-msgid "[COLOR=selected][B]Selecting your Region for installing Channels[/B][/COLOR][CR]"
-"• Click [B]OK[/B] on your remote to bring up the [B]Add-ons Region[/B] selection.[CR]"
-"• Select the [B]region[/B] you are based in.[CR]"
-"• When finished select [B]"Back"[/B] on your remote.[CR][CR]"
-"[COLOR=selected][B]WARNING:[/B][/COLOR] Selecting the wrong region may contain content that may not be legal in your country. The Little Black Box is not liable for any content or add-ons played and installed on this device.[CR][CR]"
-"When you finish you will be automatically redirected to the next screen where you can [B]add and scan your media[/B]. If not, please click the [B]"Back"[/B] button on your remote."
+msgid "In the next step you can install the Add-ons pack for your region. Click [B]"OK"[/B] on your remote to bring up the [B]Add-ons Region[/B] selection and select the [B]region[/B] you are based in.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
 msgstr ""
 
+#Region Addons WARNING
 msgctxt "#31425"
-msgid "[COLOR=selected][B]Add and scan your Videos to the Library[/B][/COLOR][CR]"
-"• Click [B]OK[/B] on your remote to add your [B]videos sources.[/B][CR]"
-"• Click the [B]"Add Videos..."[/B] button.[CR]"
-"• The [B]"Add Video Source"[/B] screen will be displayed. Click the [B]"Browse"[/B] button.[CR]"
-"• Now browse to where you keep your videos stored. Once you have found[CR]   the folder you keep your videos in, click the [B]"Save"[/B] button.[CR]"
-"• Name this [B]Video Source[/B] however you like. If it is a TV Show folder then you will[CR]   probably want to name it [B]"TV Shows"[/B]. Click the [B]"Save"[/B] button when you.re done.[CR]"
-"• The .Set Content. window will display. This is where you tell XBMC what type of[CR]   media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach[CR]   the correct type (e.g TV Shows). Click the [B]"Save"[/B] button when you.re done.[CR]"
-"• Select [B]"Yes"[/B] in the next dialog to start scanning the folder contents to the[CR]   library. If "No" is pressed, it can be scanned later via the [B]"Context Menu"[/B].[CR][CR]"
-"When you finish click the [B]"Back"[/B] button on your remote to go to the next screen where you can [B]add and scan your music[/B]."
+msgid "[COLOR=red]WARNING:[/COLOR] Selecting the wrong region may contain content that may not be legal in your country. The Little Black Box is not liable for any content or add-ons played and installed on this device."
 msgstr ""
 
+#Import Video Library
 msgctxt "#31426"
-msgid "[COLOR=selected][B]Add and Scan your Music to the Library[/B][/COLOR][CR]"
-"• Click [B]OK[/B] on your remote to add your [B]music sources.[/B][CR]"
-"• Click the [B]"Add Source"[/B] button.[CR]"
-"• The [B]"Add Music Source"[/B] screen will be displayed. Click the [B]"Browse"[/B] button.[CR]"
-"• Now browse to where you keep your music stored. Once you have found[CR]   the folder you keep your music in, click the [B]"Save"[/B] button.[CR]"
-"• Name this [B]Music Source[/B] however you like and click the [B]"Save"[/B] button when[CR]   your done.[CR]"
-"• Highlight the added [B]Music Source[/B] item and bring up the [B]"Context Menu".[/B][CR]   Select the option labeled [B]"Scan Item to Library".[/B][CR]"
-"• XBMC will then scan the selected music source into the library database.[CR][CR]"
-"When you finish click the [B]"Back"[/B] button on your remote to go back to the [B]"First Use Help Guide"[/B]. If you want to have this procedure handy while you add and scrap your Media, [B]open the manual[/B] included in your box."
+msgid "In the next step you can add and scan your Videos to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell XBMC what type of media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button when you done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
 msgstr ""
 
+#Import Music Library
 msgctxt "#31427"
-msgid "In the next step you can customize your UI in order to maximize the unique entertainment experience of [COLOR=blue][B]The Little Black Box.[/B][/COLOR][CR]Your can set your language/region and character set in the [B]Appearance[/B] section and set the video playback options and subtitles fonts in [B]Video[/B] section. Audio/Video output and power saving options can be configured in [B]System[/B] section.[CR]Also you can further customize your UI, by using some of the many and different settings for all sections that are available in [B]Skin Settings[/B]."
+msgid "In the next step you can add and scan your Music to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Music source"[/B] dialog. [B]"Browse"[/B] to where you keep your music stored and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button. Highlight the added [B]Music Source[/B] item and bring up the [B]"Context Menu".[/B] Select the option labeled [B]"Scan Item to Library"[/B] to scan the selected music source into the library database.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
 msgstr ""
 
-
+#Customize UI
 msgctxt "#31428"
+msgid "In the next step you can customize your UI in order to maximize the unique entertainment experience of [COLOR=blue][B]The Little Black Box.[/B][/COLOR][CR]Your can set your language/region and character set in the [B]Appearance[/B] section and set the video playback options and subtitles fonts in [B]Video[/B] section. Audio/Video output and power saving options can be configured in [B]System[/B] section.[CR]Also you can further customize your UI, by using some of the many and different settings for all sections that are available in [B]Skin Settings[/B].[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
+msgstr ""
+
+#Check for Updates
+msgctxt "#31429"
 msgid "Now you are ready to use your "Little Black Box" but before you do that please take a minute to check for any firmware updates. Click [B]"OK"[/B] on your remote. If the there is an update you will be asked if you want to download it. Click "Yes" to start the download. After the download is complete the device will automatically reboot to apply the update.[CR][CR]When you log back in, you will see this Help Guide again. Press the [B]"Don't show this guide again"[/B] button and it will not appear again. You can always open this guide, by going to [B]Settings[/B] and select [B]Help[/B]."
 msgstr ""
 
 msgctxt "#31430"
-msgid "Help"
+msgid "Before making any adjustments here you can define the language we'll use in the UI.[CR][CR]If you have already set the language select option 2, otherwise choose option 1.[CR][CR]After choosing option 2 this warning does not appear again.[CR][CR]Enjoy!"
 msgstr ""
 
+
+
+#Remote Sync
 msgctxt "#31431"
-msgid "You haven't added any items to Favorites yet. Highlight an item, and choose "Add to favorites" from the context menu."
+msgid "Remote Control Sync"
 msgstr ""
 
 msgctxt "#31432"
-msgid "Mouse usage is not supported. Please disable it from Settings>System>Input Devices>"Enable mouse and Touch Screen support"."
+msgid "If your unit is not responding, make sure batteries are in the remote. Hold the remote within a few inches from the box and press digits [COLOR=red][B]1[/B][/COLOR] and [COLOR=red][B]9[/B][/COLOR] until the LED stops flashes to sync the remote. When you done press "OK" to close this dialog and it will not appear again."
 msgstr ""
 
-msgctxt "#31433"
+
+#empty strings from id 31433 to 31439
+
+
+#NOTICE1
+msgctxt "#31440"
+msgid "[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video."
+msgstr ""
+
+#NOTICE2
+msgctxt "#31441"
+msgid "[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of the[B][COLOR=99white] The Little Black Box.[/COLOR][/B]"
+msgstr ""
+
+
+#Various Help Screen labels
+
+msgctxt "#31442"
+msgid "Welcome"
+msgstr ""
+
+msgctxt "#31443"
+msgid "Screen Calibration"
+msgstr ""
+
+msgctxt "#31444"
+msgid "WiFi Setup"
+msgstr ""
+
+msgctxt "#31445"
+msgid "Region Add-ons"
+msgstr ""
+
+msgctxt "#31446"
+msgid "Customize UI"
+msgstr ""
+
+msgctxt "#31447"
+msgid "Check for Updates"
+msgstr ""
+
+
+#empty strings from id 31448 to 31450
+
+msgctxt "#31451"
+msgid "Skip this guide"
+msgstr ""
+
+msgctxt "#31452"
+msgid "Don't show this guide again"
+msgstr ""
+
+
+
+#END of Help screen strings
+
+#empty strings from id 31453 to 31459
+
+
+msgctxt "#31460"
+msgid "You haven't added any items to Favorites yet.[CR]Highlight an item, and choose "Add to favorites" from the context menu."
+msgstr ""
+
+msgctxt "#31461"
 msgid "You haven't added any videos to Library yet. Please select "Add videos..." to add your video sources and then choose the content type to scrap the items in the library."
 msgstr ""
 
-msgctxt "#31434"
+msgctxt "#31462"
 msgid "You haven't added any music to Library yet. Please select "Add Source" to add your music sources and then select "Scan item to library" from the context menu."
 msgstr ""
 
-msgctxt "#31435"
+msgctxt "#31463"
 msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
 msgstr ""
-
-
 
 

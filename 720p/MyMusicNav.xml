@@ -40,11 +40,12 @@
 	      </control>
 	      <control type="image">
 	        <left>0</left>
-	        <top>396</top>
+	        <top>433</top>
 					<width>380</width>
 					<height>22</height>
 					<texture>dialogs/menus/bottom.png</texture>
 	        <aspectratio>stretch</aspectratio>
+          <animation effect="slide" start="0,0" end="0,-37" time="0" condition="!Control.IsVisible(97)">Conditional</animation>
           <animation effect="slide" start="0,0" end="0,-37" time="0" condition="!Control.IsVisible(95)">Conditional</animation>
 	      </control>
 				<control type="label">
@@ -121,6 +122,13 @@
 	        <altlabel>$LOCALIZE[589]: $LOCALIZE[31011]</altlabel>
 				  <include>TopLeftMenusButton</include>
 				</control>
+  			<control type="button" id="97">
+  				<description>Current Playlist</description>
+  				<label>13350</label>
+  			  <include>TopLeftMenusButton</include>
+    			<onclick>$VAR[CurrentPlayList]</onclick>
+    			<visible>!StringCompare(Playlist.Length(music),0)</visible>
+  			</control>
 				<control type="togglebutton" id="20">
 					<description>Update Library</description>
 					<label>653</label>
@@ -185,7 +193,7 @@
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 			<include>ShutdownMenuAnimation</include>
-		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation)</visible>
+		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(contextmenu.xml)</visible>
 			<control type="grouplist">
 				<left>55</left>
 				<top>0</top>

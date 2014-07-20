@@ -1027,7 +1027,7 @@
 	          <include>AddonSettingsRadioButton</include>
 						<label> • $LOCALIZE[31181]</label>
 						<onclick>Skin.ToggleSetting(ShowHomeWidgetRecentlyAddedAlbums)</onclick>
-						<onclick>Skin.Reset(ShowHomeWidgetInProgressAlbums)</onclick>
+						<onclick>Skin.Reset(ShowHomeWidgetRandomAlbums)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetNearConcerts)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetTopArtists)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRSSVideoFeedsOnMusic)</onclick>
@@ -1037,13 +1037,13 @@
 					<control type="radiobutton" id="305">
 						<description>Show InProgress Music Widget (Albums)</description>
 	          <include>AddonSettingsRadioButton</include>
-						<label> • Music InProgress Widget</label>
-						<onclick>Skin.ToggleSetting(ShowHomeWidgetInProgressAlbums)</onclick>
+						<label> • Random Music Widget</label>
+						<onclick>Skin.ToggleSetting(ShowHomeWidgetRandomAlbums)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRecentlyAddedAlbums)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetNearConcerts)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetTopArtists)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRSSVideoFeedsOnMusic)</onclick>
-						<selected>Skin.HasSetting(ShowHomeWidgetInProgressAlbums)</selected>
+						<selected>Skin.HasSetting(ShowHomeWidgetRandomAlbums)</selected>
 						<enable>!Skin.HasSetting(HomeMenuMusicButton)</enable>
 					</control>
 					<control type="radiobutton" id="306">
@@ -1052,7 +1052,7 @@
 						<label> • Near Concerts Widget</label>
 						<onclick>Skin.ToggleSetting(ShowHomeWidgetNearConcerts)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRecentlyAddedAlbums)</onclick>
-						<onclick>Skin.Reset(ShowHomeWidgetInProgressAlbums)</onclick>
+						<onclick>Skin.Reset(ShowHomeWidgetRandomAlbums)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetTopArtists)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRSSVideoFeedsOnMusic)</onclick>
 						<selected>Skin.HasSetting(ShowHomeWidgetNearConcerts)</selected>
@@ -1064,7 +1064,7 @@
 						<label> • Top Artists Widget</label>
 						<onclick>Skin.ToggleSetting(ShowHomeWidgetTopArtists)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRecentlyAddedAlbums)</onclick>
-						<onclick>Skin.Reset(ShowHomeWidgetInProgressAlbums)</onclick>
+						<onclick>Skin.Reset(ShowHomeWidgetRandomAlbums)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetNearConcerts)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRSSVideoFeedsOnMusic)</onclick>
 						<selected>Skin.HasSetting(ShowHomeWidgetTopArtists)</selected>
@@ -1076,7 +1076,7 @@
 						<label> • RSS Video Feeds Widget</label>
 						<onclick>Skin.ToggleSetting(ShowHomeWidgetRSSVideoFeedsOnMusic)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRecentlyAddedAlbums)</onclick>
-						<onclick>Skin.Reset(ShowHomeWidgetInProgressAlbums)</onclick>
+						<onclick>Skin.Reset(ShowHomeWidgetRandomAlbums)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetNearConcerts)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetTopArtists)</onclick>
 						<onclick>Skin.Reset(ShowHomeWidgetRSSVideoFeedsOnVideos)</onclick>

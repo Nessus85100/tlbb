@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  type="dialog" id="129">
 	<defaultcontrol>14</defaultcontrol>
+	<onunload condition="[Window.IsVisible(startup) + !Skin.HasSetting(UpdateCheck)]">SetFocus(13)</onunload>
+	<onunload condition="[Window.IsVisible(startup) + Skin.HasSetting(UpdateCheck)]">SetFocus(12)</onunload>
+
   <zorder>4</zorder>
 	<controls>
 		<control type="group">
@@ -263,6 +266,7 @@
 					<onright>10001</onright>
 					<onup>8000</onup>
 					<ondown>8000</ondown>
+					<onback>SetFocus(12)</onback>
 					<!--
 					<control type="button." id="14">
 						<description>Add Connection Button</description>
@@ -334,7 +338,7 @@
 						<label>$ADDON[script.linux.nm 628]</label>
 					</control>
 					-->
-					<control type="button" id="19">
+					<control type="button">
 						<description>Done Button</description>
 					  <width>150</width>
 					  <height>40</height>
@@ -350,6 +354,8 @@
 						<focusedcolor>white</focusedcolor>
 						<shadowcolor>99000000</shadowcolor>
 					  <label>20177</label>
+					  <onclick>SetFocus(12)</onclick>
+					  <onclick>SendClick(19)</onclick>
 					</control>
 				</control>
 				<control type="fadelabel">
@@ -376,6 +382,10 @@
 		<control type="button" id="18">
       <description>Install Button</description>
       <label>$ADDON[script.linux.nm 618]</label>
+		  <visible>false</visible>
+		</control>
+		<control type="button" id="19">
+      <description>Done Button</description>
 		  <visible>false</visible>
 		</control>
 		<control type="label" id="3">

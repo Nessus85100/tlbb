@@ -205,7 +205,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
         	<label>$INFO[Container(200).ListItem.Label]</label>
-					<label2>$INFO[Container(200).ListItem.Label2]</label2>
+					<label2>$INFO[Container(200).ListItem.Year]$INFO[Container(200).ListItem.Rating, • ]$INFO[Container(200).ListItem.Duration, • , $LOCALIZE[12391]]</label2>
 				</control>
 				<control type="fixedlist" id="200">
 					<left>271</left>
@@ -275,9 +275,7 @@
 	            </animation>
 						</control>
 					</focusedlayout>
-		      <content>
-		        <include>HomeWidget_RecentMoviesContent</include>
-		      </content>
+		      <content>plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</content>
 				</control>
 				<control type="image">
 					<left>629</left>
@@ -342,8 +340,8 @@
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
-        	<label>$INFO[Container(250).ListItem.Label]</label>
-					<label2>$INFO[Container(250).ListItem.Label2]</label2>
+        	<label>$INFO[Container(250).ListItem.TVShowTitle]</label>
+					<label2>$INFO[Container(250).ListItem.Season]$INFO[Container(250).ListItem.Episode,x,. ]$INFO[Container(250).ListItem.Title]</label2>
 				</control>
 				<control type="fixedlist" id="250">
 					<left>271</left>
@@ -374,7 +372,7 @@
 							<width>115</width>
 							<height>170</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Thumb]</texture>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
 						  <bordersize>5</bordersize>
 						</control>
 					</itemlayout>
@@ -393,7 +391,7 @@
 							<width>115</width>
 							<height>170</height>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Thumb]</texture>
+						  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
 						  <bordersize>5</bordersize>
 						</control>
 						<control type="image">
@@ -413,9 +411,7 @@
 	            </animation>
 						</control>
 					</focusedlayout>
-		      <content>
-		        <include>HomeWidget_RecentTVShowsContent</include>
-		      </content>
+		      <content>plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window(Home).Property(recentepisodes)]</content>
 				</control>
 				<control type="image">
 					<left>629</left>
@@ -481,7 +477,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
         	<label>$INFO[Container(300).ListItem.Label]</label>
-					<label2>$INFO[Container(300).ListItem.Label2]</label2>
+					<label2>$INFO[Container(300).ListItem.Artist]</label2>
 				</control>
 				<control type="fixedlist" id="300">
 					<left>261</left>
@@ -573,9 +569,7 @@
 	            </animation>
 						</control>
 					</focusedlayout>
-		      <content>
-		        <include>HomeWidget_RecentMusicContent</include>
-		      </content>
+		      <content>plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window(Home).Property(recentalbums)]</content>
 				</control>
 				<control type="image">
 					<left>629</left>

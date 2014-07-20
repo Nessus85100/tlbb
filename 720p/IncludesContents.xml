@@ -6,10 +6,11 @@
 			<label>$LOCALIZE[3]</label>
 			<onclick>ActivateWindow(videos,sources://video/)</onclick>
 			<visible>!Skin.HasSetting(HomeMenuVideosButton)</visible>
-	 </item><!--
+	 </item>
+<!--
 	 <item id="99">
 			<label>TEST</label>
-			<onclick>ActivateWindow(1115)</onclick>
+			<onclick>ActivateWindow(1119)</onclick>
 	 </item> -->
 	 <item id="1">
 			<label>$LOCALIZE[31002]</label>
@@ -1205,501 +1206,6 @@
 			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.10.Fanart)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.10.Title))</visible>
 	    <visible>Container(20).HasFocus(3)</visible>
-		</item>
-  </include>
-
-  <include name="HomeWidget_RecentMoviesContent">
-		<item id="1">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.1.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.1.Year)]$INFO[Window(Home).Property(RecentMovie.1.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.1.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.1.Title))</visible>
-		</item>
-		<item id="2">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.2.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.2.Year)]$INFO[Window(Home).Property(RecentMovie.2.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.2.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.2.Title))</visible>
-		</item>
-		<item id="3">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.3.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.3.Year)]$INFO[Window(Home).Property(RecentMovie.3.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.3.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.3.Title))</visible>
-		</item>
-		<item id="4">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.4.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.4.Year)]$INFO[Window(Home).Property(RecentMovie.4.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.4.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.4.Title))</visible>
-		</item>
-		<item id="5">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.5.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.5.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.5.Year)]$INFO[Window(Home).Property(RecentMovie.5.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.5.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.5.Title))</visible>
-		</item>
-		<item id="6">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.6.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.6.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.6.Year)]$INFO[Window(Home).Property(RecentMovie.6.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.6.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.6.Title))</visible>
-		</item>
-		<item id="7">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.7.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.7.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.7.Year)]$INFO[Window(Home).Property(RecentMovie.7.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.7.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.7.Title))</visible>
-		</item>
-		<item id="8">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.8.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.8.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.8.Year)]$INFO[Window(Home).Property(RecentMovie.8.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.8.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.8.Title))</visible>
-		</item>
-		<item id="9">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.9.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.9.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.9.Year)]$INFO[Window(Home).Property(RecentMovie.9.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.9.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.9.Title))</visible>
-		</item>
-		<item id="10">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentMovie.10.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentMovie.10.Art(poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentMovie.10.Year)]$INFO[Window(Home).Property(RecentMovie.10.Rating), • ,]$INFO[Window(Home).Property(RecentMovie.10.Runtime), • , $LOCALIZE[12391]]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentMovie.10.Title))</visible>
-		</item>
-  </include>
-	
-  <include name="HomeWidget_RecentTVShowsContent">
-		<item id="1">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.1.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.1.Season),]$INFO[Window(Home).Property(RecentEpisode.1.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.1.TVshowTitle))</visible>
-		</item>
-		<item id="2">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.2.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.2.Season),]$INFO[Window(Home).Property(RecentEpisode.2.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.2.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.2.TVshowTitle))</visible>
-		</item>
-		<item id="3">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.3.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.3.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.3.Season),]$INFO[Window(Home).Property(RecentEpisode.3.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.3.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.3.TVshowTitle))</visible>
-		</item>
-		<item id="4">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.4.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.4.Season),]$INFO[Window(Home).Property(RecentEpisode.4.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.4.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.4.TVshowTitle))</visible>
-		</item>
-		<item id="5">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.5.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.5.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.5.Season),]$INFO[Window(Home).Property(RecentEpisode.5.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.5.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.5.TVshowTitle))</visible>
-		</item>
-		<item id="6">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.6.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.6.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.6.Season),]$INFO[Window(Home).Property(RecentEpisode.6.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.6.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.6.TVshowTitle))</visible>
-		</item>
-		<item id="7">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.7.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.7.Season),]$INFO[Window(Home).Property(RecentEpisode.7.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.7.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.7.TVshowTitle))</visible>
-		</item>
-		<item id="8">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.8.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.8.Season),]$INFO[Window(Home).Property(RecentEpisode.8.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.8.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.8.TVshowTitle))</visible>
-		</item>
-		<item id="9">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.9.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.9.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.9.Season),]$INFO[Window(Home).Property(RecentEpisode.9.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.9.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.9.TVshowTitle))</visible>
-		</item>
-		<item id="10">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentEpisode.10.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window(Home).Property(RecentEpisode.10.TVshowTitle)]</label>
-	    <label2>$INFO[Window(Home).Property(RecentEpisode.10.Season),]$INFO[Window(Home).Property(RecentEpisode.10.Episode),x,. ]$INFO[Window(Home).Property(RecentEpisode.10.Title)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window(Home).Property(RecentEpisode.10.TVshowTitle))</visible>
-		</item>
-  </include>
-
-  <include name="HomeWidget_RecentMusicContent">
-		<item id="1">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.1.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.1.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.1.Title))</visible>
-		</item>
-		<item id="2">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.2.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.2.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.2.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.2.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.2.Title))</visible>
-		</item>
-		<item id="3">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.3.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.3.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.3.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.3.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.3.Title))</visible>
-		</item>
-		<item id="4">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.4.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.4.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.4.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.4.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.4.Title))</visible>
-		</item>
-		<item id="5">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.5.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.5.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.5.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.5.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.5.Title))</visible>
-		</item>
-		<item id="6">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.6.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.6.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.6.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.6.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.6.Title))</visible>
-		</item>
-		<item id="7">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.7.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.7.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.7.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.7.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.7.Title))</visible>
-		</item>
-		<item id="8">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.8.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.8.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.8.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.8.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.8.Title))</visible>
-		</item>
-		<item id="9">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.9.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.9.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.9.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.9.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.9.Title))</visible>
-		</item>
-		<item id="10">
-			<include>OnClickDialogsClose</include>
-			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-			<onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
-			<thumb>$INFO[Window(Home).Property(RecentAlbum.10.Thumb)]</thumb>
-			<label>$INFO[Window(Home).Property(RecentAlbum.10.Title)]</label>
-			<label2>$INFO[Window(Home).Property(RecentAlbum.10.Artist)]</label2>
-	    <property name="FanartImage">$INFO[Window(Home).Property(RecentAlbum.10.Fanart)]</property>
-	    <visible>!IsEmpty(Window(Home).Property(RecentAlbum.10.Title))</visible>
-		</item>
-  </include>
-
-  <include name="HomeWidget_InProgressTVShowsContent">
-		<item id="1">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.1.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.1.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.1.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.1.Season),]$INFO[Window.Property(RecommendedEpisode.1.Episode),x,. ]$INFO[Window.Property(RecommendedEpisode.1.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.TVShowTitle))</visible>
-		</item>
-		<item id="2">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.2.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.2.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.2.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.2.Season),]$INFO[Window.Property(RecommendedEpisode.2.Episode),x,. ]$INFO[Window.Property(RecommendedEpisode.2.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.TVShowTitle))</visible>
-		</item>
-		<item id="3">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.3.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.3.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.3.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.3.Season),]$INFO[Window.Property(RecommendedEpisode.3.Episode),x,. ]$INFO[Window.Property(RecommendedEpisode.3.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.TVShowTitle))</visible>
-		</item>
-		<item id="4">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.4.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.4.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.4.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.4.Season),]$INFO[Window.Property(RecommendedEpisode.4.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.4.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.TVShowTitle))</visible>
-		</item>
-		<item id="5">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.5.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.5.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.5.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.5.Season),]$INFO[Window.Property(RecommendedEpisode.5.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.5.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.TVShowTitle))</visible>
-		</item>
-		<item id="6">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.6.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.6.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.6.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.6.Season),]$INFO[Window.Property(RecommendedEpisode.6.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.6.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.TVShowTitle))</visible>
-		</item>
-		<item id="7">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.7.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.7.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.7.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.7.Season),]$INFO[Window.Property(RecommendedEpisode.7.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.7.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.TVShowTitle))</visible>
-		</item>
-		<item id="8">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.8.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.8.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.8.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.8.Season),]$INFO[Window.Property(RecommendedEpisode.8.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.8.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.TVShowTitle))</visible>
-		</item>
-		<item id="9">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.9.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.9.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.9.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.9.Season),]$INFO[Window.Property(RecommendedEpisode.9.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.9.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.TVShowTitle))</visible>
-		</item>
-		<item id="10">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedEpisode.10.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedEpisode.10.Art(tvshow.poster))]</thumb>
-			<label>$INFO[Window.Property(RecommendedEpisode.10.TVShowTitle)]</label>
-			<label2>$INFO[Window.Property(RecommendedEpisode.10.Season),]$INFO[Window.Property(RecommendedEpisode.10.Episode),x,. ] $INFO[Window.Property(RecommendedEpisode.10.Title)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedEpisode.10.TVShowTitle))</visible>
-		</item>
-  </include>
-
-  <include name="HomeWidget_InProgressMusicContent">
-		<item id="1">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.1.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.1.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.1.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.1.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.2.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.2.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.2.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.2.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.2.Title))</visible>
-		</item>
-		<item id="34">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.3.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.3.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.3.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.3.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.3.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.4.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.4.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.4.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.4.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.4.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.5.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.5.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.5.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.5.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.5.Title))</visible>
-		</item>	
-		<item id="6">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.6.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.6.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.6.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.6.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.6.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.6.Title))</visible>
-		</item>
-		<item id="7">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.7.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.7.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.7.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.7.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.7.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.7.Title))</visible>
-		</item>
-		<item id="8">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.8.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.8.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.8.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.8.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.8.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.8.Title))</visible>
-		</item>
-		<item id="9">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.9.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.9.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.9.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.9.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.9.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.9.Title))</visible>
-		</item>
-		<item id="10">
-			<onclick>SetFocus(20)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.10.Play)]</onclick>
-			<thumb>$INFO[window.property(RecommendedAlbum.10.Thumb)]</thumb>
-			<label>$INFO[Window.Property(RecommendedAlbum.10.Title)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.10.Artist)]</label2>
-			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.10.Fanart)]</property>
-			<visible>!IsEmpty(Window.Property(RecommendedAlbum.10.Title))</visible>
 		</item>
   </include>
 
@@ -3925,5 +3431,515 @@
 			<visible>!IsEmpty(Window.Property(TopArtists.10.Title))</visible>
 		</item>
   </include>
+
+
+
+  <include name="LangaugeSelectionContent">
+	  <item>
+			<label>Afrikaans</label>
+			<icon>osd/xbmcsubs/flags/za.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Albanian</label>
+			<icon>osd/xbmcsubs/flags/al.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Amharic</label>
+			<icon>osd/xbmcsubs/flags/et.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Azerbaijani</label>
+			<icon>osd/xbmcsubs/flags/az.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Basque</label>
+			<icon>osd/xbmcsubs/flags/bq.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Belarusian</label>
+			<icon>osd/xbmcsubs/flags/by.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Bosnian</label>
+			<icon>osd/xbmcsubs/flags/ba.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Bulgarian</label>
+			<icon>osd/xbmcsubs/flags/bg.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Burmese</label>
+			<icon>osd/xbmcsubs/flags/mm.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Catalan</label>
+			<icon>osd/xbmcsubs/flags/ca.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Chinese (Simple)</label>
+			<icon>osd/xbmcsubs/flags/cn.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Chinese (Traditional)</label>
+			<icon>osd/xbmcsubs/flags/cn.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Croatian</label>
+			<icon>osd/xbmcsubs/flags/hr.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Czech</label>
+			<icon>osd/xbmcsubs/flags/cz.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Danish</label>
+			<icon>osd/xbmcsubs/flags/dk.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Dutch</label>
+			<icon>osd/xbmcsubs/flags/nl.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Dutch)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>English</label>
+			<icon>osd/xbmcsubs/flags/en.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,English)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>English (Australia)</label>
+			<icon>osd/xbmcsubs/flags/en.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>English (New Zealand)</label>
+			<icon>osd/xbmcsubs/flags/en.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>English (United Kingdom)</label>
+			<icon>osd/xbmcsubs/flags/en.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>English (US)</label>
+			<icon>osd/xbmcsubs/flags/en.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Esperanto</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Estonian</label>
+			<icon>osd/xbmcsubs/flags/ee.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Faroese</label>
+			<icon>osd/xbmcsubs/flags/fo.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Finnish</label>
+			<icon>osd/xbmcsubs/flags/fi.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>French</label>
+			<icon>osd/xbmcsubs/flags/fr.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,French)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>	  
+	  <item>
+			<label>French (Canada)</label>
+			<icon>osd/xbmcsubs/flags/fr.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,French)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Galician</label>
+			<icon>osd/xbmcsubs/flags/ga.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>German</label>
+			<icon>osd/xbmcsubs/flags/de.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,German)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Greek</label>
+			<icon>osd/xbmcsubs/flags/gr.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Greek)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Hebrew</label>
+			<icon>osd/xbmcsubs/flags/he.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Hindi (Devanagiri)</label>
+			<icon>osd/xbmcsubs/flags/hi.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Hungarian</label>
+			<icon>osd/xbmcsubs/flags/hu.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Icelandic</label>
+			<icon>osd/xbmcsubs/flags/is.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Indonesian</label>
+			<icon>osd/xbmcsubs/flags/id.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Italian</label>
+			<icon>osd/xbmcsubs/flags/it.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Italian)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Japanese</label>
+			<icon>osd/xbmcsubs/flags/ja.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Korean</label>
+			<icon>osd/xbmcsubs/flags/kr.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Latvian</label>
+			<icon>osd/xbmcsubs/flags/lv.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Lithuanian</label>
+			<icon>osd/xbmcsubs/flags/lt.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Macedonian</label>
+			<icon>osd/xbmcsubs/flags/mk.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Malay</label>
+			<icon>osd/xbmcsubs/flags/my.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Malayalam</label>
+			<icon>osd/xbmcsubs/flags/hi.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Maltese</label>
+			<icon>osd/xbmcsubs/flags/mt.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Maori</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Norwegian</label>
+			<icon>osd/xbmcsubs/flags/no.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Ossetic</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Persian</label>
+			<icon>osd/xbmcsubs/flags/ir.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Persian (Iran)</label>
+			<icon>osd/xbmcsubs/flags/ir.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Polish</label>
+			<icon>osd/xbmcsubs/flags/pl.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Portuguese</label>
+			<icon>osd/xbmcsubs/flags/pt.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Portuguese (Brazil)</label>
+			<icon>osd/xbmcsubs/flags/br.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Romanian</label>
+			<icon>osd/xbmcsubs/flags/ro.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Russian</label>
+			<icon>osd/xbmcsubs/flags/ru.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Serbian</label>
+			<icon>osd/xbmcsubs/flags/rs.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Serbian (Cyrillic)</label>
+			<icon>osd/xbmcsubs/flags/rs.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Slovak</label>
+			<icon>osd/xbmcsubs/flags/sk.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Slovenian</label>
+			<icon>osd/xbmcsubs/flags/sl.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Spanish</label>
+			<icon>osd/xbmcsubs/flags/es.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Spanish)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Spanish (Argentina)</label>
+			<icon>osd/xbmcsubs/flags/es.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Spanish)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Spanish (Mexico)</label>
+			<icon>osd/xbmcsubs/flags/es.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Spanish)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Swedish</label>
+			<icon>osd/xbmcsubs/flags/sv.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Tajik</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Tamil (India)</label>
+			<icon>osd/xbmcsubs/flags/hi.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Telugu</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Thai</label>
+			<icon>osd/xbmcsubs/flags/th.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Turkish</label>
+			<icon>osd/xbmcsubs/flags/tr.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Ukrainian</label>
+			<icon>osd/xbmcsubs/flags/ua.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Uzbek</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Vietnamese</label>
+			<icon>osd/xbmcsubs/flags/vi.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Vietnamese (Viet Nam)</label>
+			<icon>osd/xbmcsubs/flags/vi.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+	  <item>
+			<label>Welsh</label>
+			<icon>osd/xbmcsubs/flags/un.png</icon>
+			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,)</onclick>
+      <onclick>Skin.SetBool(LanguageSet)</onclick>
+      <onclick>Dialog.Close(1119)</onclick>
+	  </item>
+  </include>
+
 
 </includes>

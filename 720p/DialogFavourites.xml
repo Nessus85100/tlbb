@@ -12,7 +12,7 @@
         <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout"/>
         <effect type="slide" start="0,0" end="0,55" time="300" tween="sine" easing="inout"/>
       </animation>
-      <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu)">
+      <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu) | Window.IsActive(contextmenu.xml)">
         <effect type="slide" start="0,0" end="0,135" time="280" tween="sine" easing="inout"/>
       </animation>
 
@@ -108,7 +108,7 @@
 		  <posx>45</posx>
 		  <posy>25</posy>
       <include>OpenCloseSlideAnimation</include>
-      <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu)">
+      <animation type="Conditional" reversible="true" condition="Window.IsActive(ContextMenu) | Window.IsActive(contextmenu.xml)">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="inout" />
       </animation>

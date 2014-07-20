@@ -5,7 +5,7 @@
 	 <control type="group">
 	  <left>40</left>
 		<top>645</top>
-		<visible>!Window.IsActive(ShutdownMenu) + !Window.IsVisible(startup) + !Window.IsVisible(loginscreen)</visible>
+		<visible>!Window.IsActive(ShutdownMenu) + !Window.IsVisible(loginscreen)</visible>
 		<animation effect="slide" start="0,0" end="0,150" time="260" tween="sine" easing="inout" condition="[Window.IsActive(Favourites) + Window.IsActive(ContextMenu)]">Conditional</animation>
 	  <include>NowPlaying</include>
 		<control type="grouplist">

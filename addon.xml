@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.tlbb" version="3.0.1" name="The Little Black Box" provider-name="Nessus">
+<addon id="skin.tlbb" version="3.0.4" name="The Little Black Box" provider-name="Nessus">
   <requires>
 		<import addon="xbmc.gui" version="5.0.1"/>
 		<import addon="service.skin.widgets" version="0.0.29"/>
@@ -11,6 +11,7 @@
 		<import addon="script.artistslideshow" version="1.6.5"/>
 		<import addon="script.playalbum" version="1.0.1"/>
 		<import addon="script.videolanguage" version="0.1.0"/>
+    <import addon="service.library.data.provider" version="0.0.1"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.50" debugging="false">
 	    <res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>

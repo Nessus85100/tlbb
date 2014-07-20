@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="1111">
 	<defaultcontrol always="true">4000</defaultcontrol>
+  <onload condition="!Skin.HasSetting(LanguageSet)">ActivateWindow(1119)</onload>
   <allowoverlay>no</allowoverlay>
 	<controls>
 
@@ -15,12 +16,12 @@
 		<!-- == Help Topics Buttons == -->
 		<!-- ========================= -->
 		<control type="group" id="4000">
-			<posx>45</posx>
-			<posy>90</posy>
-      <animation effect="fade"  start="100" end="65" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
+			<left>45</left>
+			<top>90</top>
+      <animation effect="fade"  start="100" end="50" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
 			<control type="list" id="4001">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>0</width>
 				<height>0</height>
 				<onleft>10000</onleft>
@@ -31,31 +32,40 @@
 				<itemlayout/>
 				<focusedlayout/>
 				<content>
+<!--
+					<item id="0">
+						<label>$LOCALIZE[10043]</label>
+						<onclick>PlayerControl(Stop)</onclick>
+	          <onclick>ActivateWindowAndFocus(AppearanceSettings, -99,0, -80,0)</onclick>
+					  <onclick>Action(select)</onclick>
+	          <visible>Skin.HasSetting(ChooseLanguage)</visible>
+					</item>
+-->
 					<item id="1">
-						<label>Welcome</label>
+						<label>$LOCALIZE[31442]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					</item>
 					<item id="2">
-						<label>Screen Calibration</label>
+						<label>$LOCALIZE[31443]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(screencalibration)</onclick>
 				 	</item>
 					<item id="3">
-						<label>WiFi Setup</label>
+						<label>$LOCALIZE[31444]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>RunScript(script.linux.nm)</onclick>
 					</item>
 					<item id="4">
-						<label>Region Add-ons</label>
+						<label>$LOCALIZE[31445]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(videos,plugin://plugin.video.tlbbwizard)</onclick>
 					</item>
 					<item id="5">
-						<label>Video Library</label>
+						<label>$LOCALIZE[648]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(videos,sources://video/)</onclick>
@@ -63,7 +73,7 @@
 					  <onclick condition="!Library.HasContent(Movies) + !Library.HasContent(TVShows)">Action(select)</onclick>
 					</item>
 					<item id="6">
-						<label>Music Library</label>
+						<label>$LOCALIZE[20197]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(musicfiles)</onclick>
@@ -71,13 +81,13 @@
 					  <onclick condition="!Library.HasContent(Music)">Action(select)</onclick>
 					</item>
 					<item id="7">
-						<label>Customize UI</label>
+						<label>$LOCALIZE[31446]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(Settings)</onclick>
 				 	</item>
 					<item id="8">
-				    <label>Check for Updates</label>
+						<label>$LOCALIZE[31447]</label>
 						<onclick>PlayerControl(Stop)</onclick>
 		        <onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
 				 	</item>
@@ -86,13 +96,13 @@
 
 		  <!-- Welcome -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(1)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>Help Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -104,19 +114,19 @@
 				</control>
 				<control type="textbox">
 					<description>Welcome</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>430</height>
-					<label>Thank you for purchasing[B][COLOR=selected] The Little Black Box[/COLOR][/B]. The revolution in Home Media Entertainment.[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR]TLBB Team</label>
+					<label>$LOCALIZE[31421]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>690</posx>
-					<posy>55</posy>
+					<left>690</left>
+					<top>55</top>
 					<width>506</width>
 					<height>360</height>
 					<texture>windows/help/1.png</texture>
@@ -128,8 +138,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -141,11 +151,11 @@
 				</control>
 				<control type="textbox">
 					<description>Help Tip</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of the[B][COLOR=99white] The Little Black Box.[/COLOR][/B]</label>
+					<label>$LOCALIZE[31441]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -157,13 +167,13 @@
 
 		  <!-- Calibration -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(2)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>Calibration Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -175,19 +185,19 @@
 				</control>
 				<control type="textbox">
 					<description>Calibration</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can adjust the screen to your display devise. Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your display device.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<label>$LOCALIZE[31422]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>622</posx>
-					<posy>62</posy>
+					<left>622</left>
+					<top>62</top>
 					<width>565</width>
 					<height>325</height>
 					<texture>windows/help/2.png</texture>
@@ -199,8 +209,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -212,11 +222,11 @@
 				</control>
 				<control type="textbox">
 					<description>Help Tip</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] If you need more help, press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -228,13 +238,13 @@
 
 		  <!-- WiFi -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(3)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>WiFi Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -246,19 +256,19 @@
 				</control>
 				<control type="textbox">
 					<description>WiFi</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can setup your network. Click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window. Press the [B]"Add"[/B] button, navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [B]Wired[/B] connections are configured automatically via DHCP on boot.[CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<label>$LOCALIZE[31423]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>601</posx>
-					<posy>40</posy>
+					<left>601</left>
+					<top>40</top>
 					<width>605</width>
 					<height>345</height>
 					<texture>windows/help/3.png</texture>
@@ -270,8 +280,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -283,11 +293,11 @@
 				</control>
 				<control type="textbox">
 					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -299,13 +309,13 @@
 
 		  <!-- Region Addons -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(4)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>Region Addons Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -317,11 +327,11 @@
 				</control>
 				<control type="textbox">
 					<description>Region Addons</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can install the Add-ons pack for your region. Click [B]"OK"[/B] on your remote to bring up the [B]Add-ons Region[/B] selection and select the [B]region[/B] you are based in.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<label>$LOCALIZE[31424]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -329,19 +339,19 @@
 				</control>
 				<control type="textbox">
 					<description>WARNING</description>
-					<posx>0</posx>
-					<posy>265</posy>
+					<left>0</left>
+					<top>265</top>
 					<width>600</width>
 					<height>80</height>
-					<label>[COLOR=red]WARNING:[/COLOR] Selecting the wrong region may contain content that may not be legal in your country. The Little Black Box is not liable for any content or add-ons played and installed on this device.</label>
+					<label>$LOCALIZE[31425]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>77white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>622</posx>
-					<posy>62</posy>
+					<left>622</left>
+					<top>62</top>
 					<width>565</width>
 					<height>325</height>
 					<texture>windows/help/4.png</texture>
@@ -353,8 +363,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -366,11 +376,11 @@
 				</control>
 				<control type="textbox">
 					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -382,13 +392,13 @@
 
 		  <!-- Video Library -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(5)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>Video Library Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -400,19 +410,19 @@
 				</control>
 				<control type="textbox">
 					<description>Video Library</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can add and scan your Videos to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell XBMC what type of media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button when you done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<label>$LOCALIZE[31426]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>601</posx>
-					<posy>40</posy>
+					<left>601</left>
+					<top>40</top>
 					<width>605</width>
 					<height>385</height>
 					<texture>windows/help/5.png</texture>
@@ -424,8 +434,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -437,11 +447,11 @@
 				</control>
 				<control type="textbox">
 					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -453,7 +463,7 @@
 
 		  <!-- Music Library -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(6)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
@@ -469,19 +479,19 @@
 				</control>
 				<control type="textbox">
 					<description>Music Library</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can add and scan your Music to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Music source"[/B] dialog. [B]"Browse"[/B] to where you keep your music stored and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button. Highlight the added [B]Music Source[/B] item and bring up the [B]"Context Menu".[/B] Select the option labeled [B]"Scan Item to Library"[/B] to scan the selected music source into the library database.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<label>$LOCALIZE[31427]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>601</posx>
-					<posy>40</posy>
+					<left>601</left>
+					<top>40</top>
 					<width>605</width>
 					<height>385</height>
 					<texture>windows/help/6.png</texture>
@@ -493,8 +503,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -506,11 +516,11 @@
 				</control>
 				<control type="textbox">
 					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -522,13 +532,13 @@
 
 		  <!-- Cutomize UI -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(7)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>Cutomize UI Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -540,19 +550,19 @@
 				</control>
 				<control type="textbox">
 					<description>Cutomize UI</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>$LOCALIZE[31427][CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+					<label>$LOCALIZE[31428]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>622</posx>
-					<posy>62</posy>
+					<left>622</left>
+					<top>62</top>
 					<width>565</width>
 					<height>325</height>
 					<texture>windows/help/7.png</texture>
@@ -564,8 +574,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -577,11 +587,11 @@
 				</control>
 				<control type="textbox">
 					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -593,13 +603,13 @@
 
 		  <!-- Check for Updates -->
 			<control type="group">
-				<posy>10</posy>
+				<top>10</top>
 				<visible>Container(4001).Hasfocus(8)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
 					<description>Check for Updates Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_42</font>
@@ -611,19 +621,19 @@
 				</control>
 				<control type="textbox">
 					<description>Check for Updates</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>600</width>
 					<height>400</height>
-					<label>$LOCALIZE[31428]</label>
+					<label>$LOCALIZE[31429]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
-					<posx>622</posx>
-					<posy>62</posy>
+					<left>622</left>
+					<top>62</top>
 					<width>565</width>
 					<height>325</height>
 					<texture>windows/help/8.png</texture>
@@ -635,8 +645,8 @@
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<left>1188</left>
+					<top>7</top>
 					<width>1075</width>
 					<height>50</height>
 					<font>FontSize_24</font>
@@ -648,11 +658,11 @@
 				</control>
 				<control type="textbox">
 					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
+					<left>627</left>
+					<top>420</top>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>$LOCALIZE[31440]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -667,23 +677,22 @@
 			<control type="group">
 				<include>VisibleHiddenSlideAnimation</include>			
 				<control type="image.">
-					<posy>55</posy>
+					<top>55</top>
 					<width>1188</width>
 					<height>1</height>
 			    <colordiffuse>55FFFFFF</colordiffuse>
 					<texture>windows/help/line1.png</texture>
 				</control>
 				<control type="image">
-					<posy>495</posy>
-					<width>1187</width>
-					<height>1</height>
-			    <colordiffuse>55FFFFFF</colordiffuse>
-					<texture>windows/help/line1.png</texture>
+					<top>493</top>
+					<width>1190</width>
+					<height>4</height>
+					<texture>windows/home/submenus_line.png</texture>
 				</control>
 				<control type="label">
 					<description>Category Labels</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1075</width>
 					<height>70</height>
 					<font>FontSize_42</font>
@@ -694,8 +703,8 @@
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="label" id="70">
-					<posx>1188</posx>
-					<posy>7</posy>
+					<right>45</right>
+					<top>7</top>
 					<width>1075</width>
 					<height>70</height>
 					<font>FontSize_24</font>
@@ -706,8 +715,8 @@
 				  <label>Step $INFO[Container(4001).CurrentPage] of $INFO[Container(4001).NumPages]</label>
 				</control>
 			  <control type="videowindow">
-					<posx>610</posx>
-					<posy>65</posy>
+					<left>610</left>
+					<top>65</top>
 					<width>580</width>
 					<height>325</height>
 					<visible>Player.HasMedia</visible>
@@ -715,8 +724,8 @@
 			  </control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>611</posx>
-					<posy>385</posy>
+					<left>611</left>
+					<top>385</top>
 					<width>580</width>
 					<height>17</height>
 					<info>Player.Progress</info>
@@ -729,8 +738,8 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>611</posx>
-					<posy>385</posy>
+					<left>611</left>
+					<top>385</top>
 					<width>580</width>
 					<height>17</height>
 					<info>Player.CacheLevel</info>
@@ -743,8 +752,8 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>611</posx>
-					<posy>385</posy>
+					<left>611</left>
+					<top>385</top>
 					<width>580</width>
 					<height>17</height>
 					<info>Player.ProgressCache</info>
@@ -766,8 +775,8 @@
 		<!-- == Control Buttons == -->
 		<!-- ===================== -->
 	  <control type="group" id="10000">
-			<posx>35</posx>
-			<posy>590</posy>
+			<left>35</left>
+			<top>590</top>
 		  <width>1210</width>
 			<visible>Window.IsVisible(Custom_FirstTimeHelp.xml)</visible>
 			<control type="grouplist" id="10001">
@@ -792,7 +801,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>Next</label>
+				  <label>$LOCALIZE[19031]</label>
 					<onclick>Control.Move(4001,1)</onclick>
 					<!-- <visible>Container(4001).HasNext</visible> -->
 				</control>
@@ -811,7 +820,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>Previous</label>
+				  <label>$LOCALIZE[210]</label>
 					<onclick>Control.Move(4001,-1)</onclick>
 					<!-- <visible>Container(4001).HasPrevious</visible> -->
 				</control>
@@ -838,7 +847,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>Skip this guide</label>
+				  <label>$LOCALIZE[31451]</label>
 			    <onclick>Action(back)</onclick>
 			    <visible>![Window.Previous(Settings) | Window.Previous(Home)]</visible>
 				</control>
@@ -857,7 +866,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>Don't show this guide again</label>
+				  <label>$LOCALIZE[31452]</label>
 					<onclick>Skin.Setbool(FirstTimeRun)</onclick>
 			    <onclick>Action(back)</onclick>
 			    <visible>![Window.Previous(Settings) | Window.Previous(Home)]</visible>
@@ -877,7 +886,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>13009</label>
+				  <label>$LOCALIZE[13009]</label>
 			    <onclick>Action(back)</onclick>
 			    <visible>Window.Previous(Settings) | Window.Previous(Home)</visible>
 				</control>

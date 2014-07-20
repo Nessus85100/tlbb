@@ -59,6 +59,7 @@
 			| Window.IsActive(progressdialog) 
 			| Window.IsActive(okdialog)
 			| Window.IsActive(1117)
+			| Window.IsActive(contextmenu.xml)
 			| [Window.IsActive(yesnodialog) + !Window.IsActive(1111)]] + !Window.IsActive(movieinformation)</visible>
 		</control>
 	</include>
@@ -151,6 +152,12 @@
 			<control type="label">
 			  <include>TopBigLabel</include>
 				<label>$LOCALIZE[5]</label>
+				<visible>!Window.IsActive(1111)</visible>
+			</control>
+			<control type="label">
+			  <include>TopBigLabel</include>
+				<label>$LOCALIZE[10043]</label>
+				<visible>Window.IsActive(1111)</visible>
 			</control>
 	    <control type="label">
 			  <include>TopZoomedSmallLabel</include>
@@ -819,7 +826,7 @@
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 		  <include>ShutdownMenuAnimation</include>			
-			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(musicplaylisteditor) + !Window.IsActive(script-globalsearch-main.xml)</visible>
+			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(musicplaylisteditor) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(contextmenu.xml)</visible>
 	    <control type="image">
 			  <left>-3</left>
 	    	<top>30</top>
@@ -1267,6 +1274,10 @@
 	  </control>
 -->
 
+	<variable name="CurrentPlayList">
+		<value condition="Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
+		<value condition="[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>
+	</variable>
 
 	<variable name="ManageDialogHeader">
 		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),quicknav)">$LOCALIZE[31372]</value>
@@ -1291,6 +1302,11 @@
   </variable>
 
   <variable name="InternetStateIcons">
+    <value condition="SubString(System.InternetState,$LOCALIZE[13296],left)">dialogs/accesspoints/connected.png</value>
+    <value condition="!SubString(System.InternetState,$LOCALIZE[13296],left)">dialogs/accesspoints/disconnected.png</value>
+    <value>dialogs/accesspoints/busy.png</value>
+  </variable>
+  <variable name="InternetStateIconsOLD-NOT-USED">
     <value condition="[SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">dialogs/accesspoints/connected.png</value>
     <value condition="[SubString(System.InternetState,$LOCALIZE[13297]) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">dialogs/accesspoints/disconnected.png</value>
     <value condition="[!Stringcompare(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">dialogs/accesspoints/busy.png</value>
@@ -1318,16 +1334,16 @@
 	<variable name="CustomDialogOKHeadLabel">
 		<value condition="Window.IsVisible(SkinSettings)">Reset Skin Settings</value>
 		<value condition="Window.IsVisible(SubtitleSearch)">XBMC $LOCALIZE[24012]</value>
-		<value>$LOCALIZE[31430]</value>
+		<value>$LOCALIZE[10043]</value>
 	</variable>
 	
 	<variable name="CustomDialogOKMessage">
-		<value condition="Window.IsVisible(favourites)">$LOCALIZE[31431]</value>
+		<value condition="Window.IsVisible(favourites)">$LOCALIZE[31460]</value>
 		<value condition="Window.IsVisible(Weather)">$LOCALIZE[412][CR]$LOCALIZE[31204]</value>
-		<value condition="Window.IsVisible(videos)">$LOCALIZE[31433]</value>
-		<value condition="Window.IsVisible(musicfiles)">$LOCALIZE[31434]</value>
-		<value condition="Window.IsVisible(SkinSettings)">$LOCALIZE[31435]</value>
-		<value condition="Window.IsVisible(SubtitleSearch)">$LOCALIZE[24109][CR]Try another service</value>
+		<value condition="Window.IsVisible(videos)">$LOCALIZE[31461]</value>
+		<value condition="Window.IsVisible(musicfiles)">$LOCALIZE[31462]</value>
+		<value condition="Window.IsVisible(SkinSettings)">$LOCALIZE[31463]</value>
+		<value condition="Window.IsVisible(SubtitleSearch)">$LOCALIZE[24109]</value>
 	</variable>
 
 	<variable name="HomeAddonsButtonAddonsName">
@@ -1527,6 +1543,42 @@
 		<value condition="![IsEmpty(ListItem.Art(fanart)) + [substring(Container.FolderPath,plugin,left) + Container.HasFiles]]">$INFO[ListItem.Art(fanart)]</value>
 		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
 	</variable>
+
+
+
+	<variable name="HomeWidgets_ListContentMovies">
+		<value condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</value>
+	</variable>
+	<variable name="HomeWidgets_ListContentTVShows">
+		<value condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window(Home).Property(recentepisodes)]</value>
+		<value condition="Skin.HasSetting(ShowHomeWidgetInProgressTVShows)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window(Home).Property(recommendedepisodes)]</value>
+
+	</variable>
+	<variable name="HomeWidgets_ListContentMusic">
+		<value condition="Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window(Home).Property(recentalbums)]</value>
+		<value condition="Skin.HasSetting(ShowHomeWidgetRandomAlbums)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window(Home).Property(randomalbums)]</value>
+	</variable>
+
+	<variable name="HomeWidgetsListItemLabel">
+		<value condition="Control.HasFocus(35) + !IsEmpty(Container(35).ListItem.Label)">$INFO[Container(35).ListItem.Label]</value>
+		<value condition="Control.HasFocus(45) + !IsEmpty(Container(45).ListItem.TVShowTitle)">$INFO[Container(45).ListItem.TVShowTitle]</value>
+		<value condition="Control.HasFocus(45) + !IsEmpty(Container(45).ListItem.Label)">$INFO[Container(45).ListItem.Label]</value>
+		<value condition="Control.HasFocus(15) + !IsEmpty(Container(15).ListItem.Label)">$INFO[Container(15).ListItem.Label]</value>
+	</variable>
+
+	<variable name="HomeWidgetsListItemLabel2">
+		<value condition="Control.HasFocus(35) + ![IsEmpty(Container(35).ListItem.Year) + IsEmpty(Container(35).ListItem.Rating) + IsEmpty(Container(35).ListItem.Duration)]">$INFO[Container(35).ListItem.Year]$INFO[Container(35).ListItem.Rating, • ]$INFO[Container(35).ListItem.Duration, • , $LOCALIZE[12391]]</value>
+		<value condition="Control.HasFocus(35)">$INFO[Container(35).ListItem.Label2]</value>
+		<value condition="Control.HasFocus(45) + !IsEmpty(Container(45).ListItem.Title)">$INFO[Container(45).ListItem.Season]$INFO[Container(45).ListItem.Episode,x,. ]$INFO[Container(45).ListItem.Title]</value>
+		<value condition="Control.HasFocus(45)">$INFO[Container(45).ListItem.Label2]</value>
+		<value condition="Control.HasFocus(15) + !IsEmpty(Container(15).ListItem.Artist)">$INFO[Container(15).ListItem.Artist]</value>
+		<value condition="Control.HasFocus(15)">$INFO[Container(15).ListItem.Label2]</value>
+	</variable>
+
+	<variable name="HomeWidgetsTVShowsThumbs">
+    <value condition="![Skin.HasSetting(ShowHomeWidgetRecentlyAddedTVShows) | Skin.HasSetting(ShowHomeWidgetInProgressTVShows)]">$INFO[ListItem.Icon]</value>
+    <value>$INFO[ListItem.Art(tvshow.poster)]</value>
+	</variable>
 	
 	<variable name="HomeWidgetsThumbs">
 		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
@@ -1582,7 +1634,7 @@ Custom by YouTube ID   http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcf
 		<value condition="[Container(20).HasFocus(2) + Skin.HasSetting(ShowHomeWidgetTopRatedMovies)]">Top Rated Movies</value>
 		<value condition="[Container(20).HasFocus(2) + Skin.HasSetting(ShowHomeWidgetPopularMovies)]">Popular Movies</value>
 		<value condition="[Container(20).HasFocus(3) + Skin.HasSetting(ShowHomeWidgetRecentlyAddedAlbums)]">$LOCALIZE[31243]</value>
-		<value condition="[Container(20).HasFocus(3) + Skin.HasSetting(ShowHomeWidgetInProgressAlbums)]">$LOCALIZE[2] $LOCALIZE[575]</value>
+		<value condition="[Container(20).HasFocus(3) + Skin.HasSetting(ShowHomeWidgetRandomAlbums)]">$LOCALIZE[590] $LOCALIZE[2]</value>
 		<value condition="[Container(20).HasFocus(3) + Skin.HasSetting(ShowHomeWidgetNearConcerts)]">Near Concerts</value>
 		<value condition="[Container(20).HasFocus(3) + Skin.HasSetting(ShowHomeWidgetTopArtists)]">Top Artists</value>
 		<value condition="Container(20).HasFocus(6)">$INFO[System.ProfileName] $LOCALIZE[1043]</value>
@@ -1592,7 +1644,6 @@ Custom by YouTube ID   http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcf
 		<value condition="Container(20).HasFocus(9)">$LOCALIZE[5]</value>
 		<value condition="Container(20).HasFocus(8)">$INFO[Window(Weather).Property(Current.Location)]</value>
 	</variable>
-
 
 	<variable name="HomeWidgetsFanart">
 		<value condition="Control.HasFocus(81)">$INFO[Container(81).ListItem.Property(FanartImage)]</value>

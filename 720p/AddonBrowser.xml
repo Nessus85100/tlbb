@@ -150,7 +150,7 @@
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 		  <include>ShutdownMenuAnimation</include>
-			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(AddonInformation)</visible>
+			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(AddonInformation) + !Window.IsActive(contextmenu.xml)</visible>
 			<control type="grouplist">
 				<left>55</left>
 				<top>0</top>

@@ -10,27 +10,71 @@
 	<controls>
 		<include>BackgroundContent</include>
 		<include>BackgroundVignette</include>
+
 		<control type="button" id="10">
+          			<top>0</top>
+          			<width>1000</width>
+        			  <font>FontSize_28</font>
+        			  <textcolor>-</textcolor>
+			          <focusedcolor>-</focusedcolor>
+        				<label>LanguageSet</label>
 		  <include>TopButton</include>
-			<onfocus condition="!Skin.HasSetting(FirstTimeRemoteSync)">ReplaceWindow(1113)</onfocus>
-			<onfocus condition="Skin.HasSetting(FirstTimeRemoteSync)">SetFocus(11)</onfocus>
+			<onfocus condition="!Skin.HasSetting(LanguageSet)">ReplaceWindow(1119)</onfocus>
+			<onfocus condition="[Skin.HasSetting(LanguageSet) + !SubString(System.InternetState,$LOCALIZE[13296],left)]">SetFocus(11)</onfocus>
+			<onfocus condition="[Skin.HasSetting(LanguageSet) + SubString(System.InternetState,$LOCALIZE[13296],left) + !Skin.HasSetting(UpdateCheck)]">SetFocus(13)</onfocus>
+			<onfocus condition="[Skin.HasSetting(LanguageSet) + SubString(System.InternetState,$LOCALIZE[13296],left) + Skin.HasSetting(UpdateCheck)]">SetFocus(12)</onfocus>
+			<animation effect="fade" delay="1000" end="100" time="350">Focus</animation>
 		</control>
+
 		<control type="button" id="11">
+          			<top>30</top>
+          			<width>1000</width>
+        			  <font>FontSize_28</font>
+        			  <textcolor>-</textcolor>
+			          <focusedcolor>-</focusedcolor>
+        				<label>WIFI</label>
 		  <include>TopButton</include>
-			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">ReplaceWindow(1111)</onfocus>
-			<onfocus condition="!Skin.HasSetting(FirstTimeRun)">12</onfocus>
-			<onfocus condition="Skin.HasSetting(FirstTimeRun)">SetFocus(12)</onfocus>
+			<onfocus condition="!SubString(System.InternetState,$LOCALIZE[13296],left)">RunScript(script.linux.nm)</onfocus>
+			<onfocus condition="[SubString(System.InternetState,$LOCALIZE[13296],left) + !Skin.HasSetting(UpdateCheck)]">SetFocus(13)</onfocus>
+			<onfocus condition="[SubString(System.InternetState,$LOCALIZE[13296],left) + Skin.HasSetting(UpdateCheck)]">SetFocus(12)</onfocus>
+			<animation effect="fade" delay="400" end="100" time="350">Focus</animation>
 		</control>
+
+		<control type="button" id="13">
+          			<top>60</top>
+          			<width>1000</width>
+        			  <font>FontSize_28</font>
+        			  <textcolor>-</textcolor>
+			          <focusedcolor>-</focusedcolor>
+        				<label>UpdateCheck</label>
+		  <include>TopButton</include>
+			<onfocus condition="Skin.HasSetting(UpdateCheck)">SetFocus(12)</onfocus>
+		  <onfocus condition="!Skin.HasSetting(UpdateCheck)">RunScript(special://skin/extras/scripts/update.py)</onfocus>
+      <onfocus condition="!Skin.HasSetting(UpdateCheck)">Skin.SetBool(UpdateCheck)</onfocus>
+			<onfocus>SetFocus(12)</onfocus>
+			<animation effect="fade" delay="1000" end="100" time="350">Focus</animation>
+		</control>
+
+
+
 		<control type="button" id="12">
 		  <include>TopButton</include>
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-			<animation effect="fade" delay="3900" end="100" time="350">Focus</animation>
+			<animation effect="fade" delay="1000" end="100" time="350">Focus</animation>
 		</control>
-		<control type="group" id="9333">
+
+		<control type="group." id="9333">
 			<left>545</left>
 			<top>245</top>
 		  <include>BusyAnimation</include>
-			<visible>![Window.IsActive(busydialog) | Window.IsActive(1113) | Window.IsActive(busy.xml)]</visible>
+			<visible>![Window.IsActive(1119) | Window.IsActive(busydialog) | Window.IsActive(yesnodialog) | Window.IsActive(busy.xml) | Window.IsActive(script_linux_nm-main.xml)]</visible>
 		</control>
 	</controls>
 </window>
+
+
+
+	<!-- <onload condition="!Skin.HasSetting(LanguageSet)">ActivateWindow(1119)</onload>
+			<onfocus condition="![SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">RunScript(script.tv.show.next.aired)</onfocus>
+			<onfocus condition="![SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">12</onfocus>
+			<onfocus condition="[SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">SetFocus(12)</onfocus>

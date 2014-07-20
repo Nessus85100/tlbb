@@ -35,7 +35,7 @@
 				<posy>195</posy>
 				<width>743</width>
 				<height>80</height>
-				<label>Remote Control Sync</label>
+				<label>$LOCALIZE[31431]</label>
 				<font>FontSize_40</font>
 				<textcolor>white</textcolor>
 				<align>center</align>
@@ -71,7 +71,7 @@
 					<posy>75</posy>
 					<width>357</width>
 					<height>250</height>
-					<label>If your unit is not responding, make sure batteries are in the remote. Hold the remote within a few inches from the box and press digits [COLOR=red][B]1[/B][/COLOR] and [COLOR=red][B]9[/B][/COLOR] until the LED stops flashes to sync the remote. When you done press "OK" to close this dialog and it will not appear again.</label>
+					<label>$LOCALIZE[31432]</label>
 					<font>FontSize_20</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -104,7 +104,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<label>OK</label>
+					<label>$LOCALIZE[186]</label>
 					<onclick>Skin.Setbool(FirstTimeRemoteSync)</onclick>
 			    <onclick>Action(back)</onclick>
 				</control>
@@ -123,11 +123,14 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<label>Cancel</label>
+					<label>$LOCALIZE[222]</label>
 			    <onclick>Action(back)</onclick>
 				</control>
 			</control>
 		</control>
+
+
+
 	</controls>
 </window>
 

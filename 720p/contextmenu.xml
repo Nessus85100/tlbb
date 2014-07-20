@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+ <controls>
+  <control type="group">
+    <left>30</left>
+    <top>13</top>
+    <include>OpenCloseSlideAnimation</include>
+    <include>ShutdownMenuAnimation</include>
+    <control type="image">
+      <top>0</top>
+			<width>380</width>
+			<height>75</height>
+			<texture>dialogs/menus/topmenus_context.png</texture>
+      <aspectratio aligny="center">stretch</aspectratio>
+    </control>
+    <control type="image">
+      <top>223</top>
+			<width>380</width>
+			<height>22</height>
+			<texture>dialogs/menus/bottom.png</texture>
+      <aspectratio aligny="center">stretch</aspectratio>
+    </control>
+  </control>      
+  <control type="list" id="3000">
+		<left>30</left>
+		<top>88</top>
+		<width>380</width>
+		<height>152</height>
+		<itemgap>0</itemgap>
+		<onleft>Close</onleft>
+		<onright>Close</onright>
+    <include>OpenCloseSlideAnimation</include>
+    <include>ShutdownMenuAnimation</include>
+    <itemlayout width="380" height="37">
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>380</width>
+        <height>37</height>
+        <texture>dialogs/menus/topmenus_nf.png</texture>
+      </control>
+      <control type="label">
+        <left>50</left>
+        <top>0</top>
+		    <width>380</width>
+  	    <height>37</height>
+        <font>FontSize_22</font>
+        <textcolor>77white</textcolor>
+        <align>left</align>
+        <aligny>center</aligny>
+        <info>ListItem.Label</info>
+      </control>
+   </itemlayout>
+   <focusedlayout width="380" height="37">
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>380</width>
+        <height>37</height>
+        <texture>dialogs/menus/topmenus_fo.png</texture>
+      </control>
+      <control type="label">
+        <left>50</left>
+        <top>0</top>
+		    <width>300</width>
+  	    <height>37</height>
+        <font>FontSize_22</font>
+        <textcolor>white</textcolor>
+        <align>left</align>
+        <aligny>center</aligny>
+        <info>ListItem.Label</info>
+      </control>
+    </focusedlayout>
+  </control>
+
+
+  <!-- ================ -->
+  <!-- Top Content Info -->
+  <!-- ================ -->
+  <control type="group">
+		<left>105</left>
+		<top>25</top>
+    <include>ShutdownMenuAnimation</include>
+    <include>OpenCloseSlideAnimation</include>
+		<control type="grouplist">
+			<left>0</left>
+			<top>0</top>
+			<height>70</height>
+			<width>1000</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="label">
+			  <include>TopBigLabel</include>
+				<label>SF $LOCALIZE[31009]</label>
+			</control>
+		</control>
+  </control>
+
+
+  <control type="image" id="5001">
+    <visible>false</visible>
+  </control>
+  <control type="image" id="5002">
+    <visible>false</visible>
+  </control>
+  <control type="image" id="5003">
+    <visible>false</visible>
+  </control>
+  <control type="image" id="5004">
+    <visible>false</visible>
+  </control>
+ </controls>
+</window>

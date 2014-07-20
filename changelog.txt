@@ -1,3 +1,15 @@
+[B][COLOR=FF56ADDA]v3.0.4 - Release Date 17/7/2014[/COLOR][/B]
+• Added Quick Start Wizard for first time use.
+• Added new Select Language dialog on Quick Start Wizard.
+
+[B][COLOR=FF56ADDA]v3.0.3 - Release Date 3/7/2014[/COLOR][/B]
+• Added Current Playlist button on Options Menu.
+• Added selected color diffuse for ListView unwatched indicators.
+
+[B][COLOR=FF56ADDA]v3.0.2 - Release Date 21/6/2014[/COLOR][/B]
+• Moved Recent/InProgress/Random content to service.library.data.provider Addon.
+• Lots of code cleaning due to use of service.library.data.provider.
+
 [B][COLOR=FF56ADDA]v3.0.1 - Release Date 31/5/2014[/COLOR][/B]
 • Fixed search youtube bug in some home widgtes.
 • Fixed some misaligned elements in some cases in VideoOSD screen.

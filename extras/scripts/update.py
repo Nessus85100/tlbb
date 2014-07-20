@@ -1,5 +1,3 @@
-# script by Mikey1234
-
 import xbmc, xbmcgui
 import os
 import xbmcaddon
@@ -9,7 +7,7 @@ cmd += ',0'
 
 
 dialog = xbmcgui.Dialog()
-if dialog.yesno('TLBB UPDATE','', 'Do You Want To Check For Updates'):
+if dialog.yesno('TLBB UPDATE','', 'Do you want to check for Firmware update'):
 
 
   xbmc.executebuiltin("XBMC.RunScript(%s)"%cmd)

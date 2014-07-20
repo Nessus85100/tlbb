@@ -156,6 +156,14 @@
 		</control>				
 	</include>
 
+<!--
+        <content target="video">plugin://plugin.program.super.favourites/?label=Movies&amp;mode=400&amp;path=C%3A%5CUsers%5CThomas%5CAppData%5CRoaming%5CXBMC%5Cuserdata%5Caddon_data%5Cplugin.program.super.favourites%5CSuper%20Favourites%5CKids&amp;</content>
+        <content target="video">plugin://plugin.program.super.favourites/</content>
+        <content>plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</content>
+        <content target="video">addons://sources/video/</content>
+        <content target="video">special://profile/favourites.xml</content> 
+        <content target="video">special://profile/addon_data/plugin.program.super.favourites/Super Favourites/Genre</content>
+-->
 
 <!-- Home SubMenu TVShows -->
 	<include name="HomeSubMenuTVShows">
@@ -389,7 +397,7 @@
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 				</item>
 				<item id="13">
-					<label>$LOCALIZE[31430]</label>
+					<label>$LOCALIZE[10043]</label>
 					<onclick>ActivateWindow(1111)</onclick>
 				</item>
     		<!-- <item id="14">

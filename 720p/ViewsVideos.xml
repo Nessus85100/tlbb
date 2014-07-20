@@ -568,10 +568,20 @@
 						<top>16</top>
 		        <width>14</width>
 						<height>14</height>
-		        <colordiffuse>77white</colordiffuse>
 		        <aspectratio align="left" aligny="center">stretch</aspectratio>
-            <texture>overlays/unwatched/list/unwatched.png</texture>
+            <texture background="true" colordiffuse="selected">overlays/unwatched/list/unwatched.png</texture>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+    			  <visible>ListItem.IsPlaying</visible>
+					</control>
+					<control type="image">
+						<left>72</left>
+						<top>16</top>
+		        <width>14</width>
+						<height>14</height>
+		        <aspectratio align="left" aligny="center">stretch</aspectratio>
+            <texture background="true" colordiffuse="77white">overlays/unwatched/list/unwatched.png</texture>
+            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+    			  <visible>!ListItem.IsPlaying</visible>
 					</control>
 					<control type="label">
 						<left>95</left>
@@ -709,8 +719,19 @@
 			        <width>14</width>
 							<height>14</height>
 			        <aspectratio align="left" aligny="center">stretch</aspectratio>
-	            <texture>overlays/unwatched/list/unwatched.png</texture>
+	            <texture background="true" colordiffuse="selected">overlays/unwatched/list/unwatched.png</texture>
 	            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+	    			  <visible>ListItem.IsPlaying</visible>
+						</control>
+						<control type="image">
+							<left>72</left>
+							<top>16</top>
+			        <width>14</width>
+							<height>14</height>
+			        <aspectratio align="left" aligny="center">stretch</aspectratio>
+	            <texture background="true">overlays/unwatched/list/unwatched.png</texture>
+	            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+	    			  <visible>!ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
 							<left>95</left>

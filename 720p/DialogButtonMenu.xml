@@ -254,7 +254,7 @@
 		    <align>right</align>
 		    <aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[System.InternetState], $INFO[Network.IPAddress,$LOCALIZE[150]: ]</label>
+				<label>$INFO[System.InternetState]$INFO[Network.IPAddress,$COMMA $LOCALIZE[150]: ]</label>
 			</control>
 			<control type="label" id="1">
 				<height>25</height>
@@ -265,7 +265,7 @@
 		    <align>right</align>
 		    <aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[System.Memory(used.percent),$LOCALIZE[31027] ], $INFO[System.CPUUsage,$LOCALIZE[13271] ]</label>
+				<label>$INFO[System.Memory(used.percent),$LOCALIZE[31027] ]$INFO[System.CPUUsage,$COMMA $LOCALIZE[13271] ]</label>
 			</control>
 	    <control type="fadelabel.">
 				<height>25</height>

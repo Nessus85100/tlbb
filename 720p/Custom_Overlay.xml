@@ -1051,44 +1051,46 @@
 			<right>5</right>
 			<top>30</top>
 			<width>1000</width>
-			<height>21</height>
+			<height>42</height>
 			<textcolor>FFFF0000</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<font>FontSize_22B</font>
 			<align>right</align>
+			<wrapmultiline>true</wrapmultiline>
 			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>
 
 		<!-- Container label -->
-
-		<control type="label">
+		
+		<control type="grouplist">
 			<left>0</left>
 			<top>695</top>
-			<width>640</width>
-			<height>21</height>
-			<textcolor>FFFFFF40</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<font>FontSize_22B</font>
-			<align>right</align>
-			<label>Container.HasFolders</label>
-			<visible>Container.HasFolders</visible>
+			<width>1280</width>
+			<height>450</height>
+			<align>center</align>
+      <orientation>horizontal</orientation>
+			<itemgap>15</itemgap>
 			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
+			<control type="label">
+        <width min="0" max="1280">auto</width>
+				<height>21</height>
+				<textcolor>FFFFFF40</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<font>FontSize_22B</font>
+				<label>Container.HasFolders</label>
+				<visible>Container.HasFolders</visible>
+			</control>
+			<control type="label">
+        <width min="0" max="1280">auto</width>
+				<height>21</height>
+				<textcolor>FFFFFF40</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<font>FontSize_22B</font>
+				<label>Container.HasFiles</label>
+				<visible>Container.HasFiles</visible>
+			</control>
 		</control>
-		<control type="label">
-			<left>640</left>
-			<top>695</top>
-			<width>640</width>
-			<height>21</height>
-			<textcolor>FFFFFF40</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<font>FontSize_22B</font>
-			<align>left</align>
-			<label> | Container.HasFiles</label>
-			<visible>Container.HasFiles</visible>
-			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
-		</control>
-
 
 		<!-- CPU & RAM label -->
 		
