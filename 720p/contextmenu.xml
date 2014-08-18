@@ -20,59 +20,57 @@
 			<texture>dialogs/menus/bottom.png</texture>
       <aspectratio aligny="center">stretch</aspectratio>
     </control>
-  </control>      
-  <control type="list" id="3000">
-		<left>30</left>
-		<top>88</top>
-		<width>380</width>
-		<height>152</height>
-		<itemgap>0</itemgap>
-		<onleft>Close</onleft>
-		<onright>Close</onright>
-    <include>OpenCloseSlideAnimation</include>
-    <include>ShutdownMenuAnimation</include>
-    <itemlayout width="380" height="37">
-      <control type="image">
-        <left>0</left>
-        <top>0</top>
-        <width>380</width>
-        <height>37</height>
-        <texture>dialogs/menus/topmenus_nf.png</texture>
-      </control>
-      <control type="label">
-        <left>50</left>
-        <top>0</top>
-		    <width>380</width>
-  	    <height>37</height>
-        <font>FontSize_22</font>
-        <textcolor>77white</textcolor>
-        <align>left</align>
-        <aligny>center</aligny>
-        <info>ListItem.Label</info>
-      </control>
-   </itemlayout>
-   <focusedlayout width="380" height="37">
-      <control type="image">
-        <left>0</left>
-        <top>0</top>
-        <width>380</width>
-        <height>37</height>
-        <texture>dialogs/menus/topmenus_fo.png</texture>
-      </control>
-      <control type="label">
-        <left>50</left>
-        <top>0</top>
-		    <width>300</width>
-  	    <height>37</height>
-        <font>FontSize_22</font>
-        <textcolor>white</textcolor>
-        <align>left</align>
-        <aligny>center</aligny>
-        <info>ListItem.Label</info>
-      </control>
-    </focusedlayout>
-  </control>
+    <control type="list" id="3000">
+  		<left>0</left>
+  		<top>75</top>
+  		<width>380</width>
+  		<height>152</height>
+  		<itemgap>0</itemgap>
+  		<onleft>Close</onleft>
+  		<onright>Close</onright>
+      <itemlayout width="380" height="37">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>380</width>
+          <height>37</height>
+          <texture>dialogs/menus/topmenus_nf.png</texture>
+        </control>
+        <control type="label">
+          <left>50</left>
+          <top>0</top>
+  		    <width>380</width>
+    	    <height>37</height>
+          <font>FontSize_22</font>
+          <textcolor>77white</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>ListItem.Label</info>
+        </control>
+     </itemlayout>
+     <focusedlayout width="380" height="37">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>380</width>
+          <height>37</height>
+          <texture>dialogs/menus/topmenus_fo.png</texture>
+        </control>
+        <control type="label">
+          <left>50</left>
+          <top>0</top>
+  		    <width>300</width>
+    	    <height>37</height>
+          <font>FontSize_22</font>
+          <textcolor>white</textcolor>
+          <align>left</align>
+          <aligny>center</aligny>
+          <info>ListItem.Label</info>
+        </control>
+      </focusedlayout>
+    </control>
 
+  </control>      
 
   <!-- ================ -->
   <!-- Top Content Info -->

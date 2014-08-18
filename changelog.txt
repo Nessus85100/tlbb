@@ -1,3 +1,7 @@
+[B][COLOR=FF56ADDA]v3.0.5 - Release Date 18/8/2014[/COLOR][/B]
+• Added network type icons (wired/wifi).
+• Bug fixes
+
 [B][COLOR=FF56ADDA]v3.0.4 - Release Date 17/7/2014[/COLOR][/B]
 • Added Quick Start Wizard for first time use.
 • Added new Select Language dialog on Quick Start Wizard.

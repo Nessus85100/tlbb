@@ -23,7 +23,8 @@
         <effect type="slide" start="0,0" end="-150,0" time="450" delay="250" tween="cubic" easing="out" />
         <effect type="fade" start="100" end="0" time="350" tween="cubic" easing="out" />
 	    </animation>
-		  <animation type="Conditional" condition="!SubString(System.InternetState,$LOCALIZE[13296],left)" reversible="true">
+		  <!-- <animation type="Conditional" condition="SubString(System.InternetState,$LOCALIZE[13297])" reversible="true"> -->
+		  <animation type="Conditional" condition="![SubString(System.InternetState,$LOCALIZE[13296],left) | SubString(System.InternetState,$LOCALIZE[503],left)]" reversible="true">
 			  <effect type="slide" end="145,0" time="400" tween="back" easing="out" />
 		  </animation>
       <control type="image">

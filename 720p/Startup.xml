@@ -77,4 +77,4 @@
 	<!-- <onload condition="!Skin.HasSetting(LanguageSet)">ActivateWindow(1119)</onload>
 			<onfocus condition="![SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">RunScript(script.tv.show.next.aired)</onfocus>
 			<onfocus condition="![SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">12</onfocus>
-			<onfocus condition="[SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">SetFocus(12)</onfocus>
+			<onfocus condition="[SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">SetFocus(12)</onfocus> -->

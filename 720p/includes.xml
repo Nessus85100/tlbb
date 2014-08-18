@@ -1302,15 +1302,15 @@
   </variable>
 
   <variable name="InternetStateIcons">
+    <value condition="SubString(System.InternetState,$LOCALIZE[503],left)">dialogs/accesspoints/busy.png</value>
     <value condition="SubString(System.InternetState,$LOCALIZE[13296],left)">dialogs/accesspoints/connected.png</value>
-    <value condition="!SubString(System.InternetState,$LOCALIZE[13296],left)">dialogs/accesspoints/disconnected.png</value>
-    <value>dialogs/accesspoints/busy.png</value>
+    <value>dialogs/accesspoints/disconnected.png</value>
   </variable>
-  <variable name="InternetStateIconsOLD-NOT-USED">
-    <value condition="[SubString(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">dialogs/accesspoints/connected.png</value>
-    <value condition="[SubString(System.InternetState,$LOCALIZE[13297]) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">dialogs/accesspoints/disconnected.png</value>
-    <value condition="[!Stringcompare(System.InternetState,$LOCALIZE[13296]) + !Stringcompare(System.InternetState,$LOCALIZE[13297])]">dialogs/accesspoints/busy.png</value>
-  </variable>
+
+	<variable name="NetworkTypeIcons">
+		<value condition="System.HasNetwork">windows/home/network_state/net_wired.png</value>
+		<value>windows/home/network_state/net_wifi.png</value>
+	</variable>
 
 	<variable name="TVGuidePreviewThumbsLabels">
 		<value condition="Stringcompare(Skin.String(PreviewThumb),1)">$LOCALIZE[31218]</value>
@@ -1649,11 +1649,15 @@ Custom by YouTube ID   http://pipes.yahoo.com/pipes/pipe.run?_id=982db1802450dcf
 		<value condition="Control.HasFocus(81)">$INFO[Container(81).ListItem.Property(FanartImage)]</value>
 		<value condition="Control.HasFocus(82)">$INFO[Container(82).ListItem.Property(FanartImage)]</value>
 		<value condition="Control.HasFocus(83)">$INFO[Container(83).ListItem.Property(FanartImage)]</value>
-		<value condition="Control.HasFocus(35)">$INFO[Container(35).ListItem.Property(FanartImage)]</value>
-		<value condition="Control.HasFocus(125)">$INFO[Container(125).ListItem.Property(FanartImage)]</value>
-		<value condition="Control.HasFocus(45)">$INFO[Container(45).ListItem.Property(FanartImage)]</value>
-		<value condition="Control.HasFocus(15) + !Skin.HasSetting(ShowHomeWidgetNearConcerts)">$INFO[Container(15).ListItem.Property(FanartImage)]</value>
+		<value condition="Control.HasFocus(35) + !IsEmpty(Container(35).ListItem.Property(FanartImage))">$INFO[Container(35).ListItem.Property(FanartImage)]</value>
+		<value condition="Control.HasFocus(35)">$INFO[Container(35).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(45) + !IsEmpty(Container(45).ListItem.Property(FanartImage))">$INFO[Container(45).ListItem.Property(FanartImage)]</value>
+		<value condition="Control.HasFocus(45)">$INFO[Container(45).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(15) + !IsEmpty(Container(15).ListItem.Property(FanartImage)) + !Skin.HasSetting(ShowHomeWidgetNearConcerts)">$INFO[Container(15).ListItem.Property(FanartImage)]</value>
+		<value condition="Control.HasFocus(15)">$INFO[Container(15).ListItem.Art(fanart)]</value>
 		<value condition="Control.HasFocus(25)">$INFO[Container(25).ListItem.Property(FanartImage)]</value>
+		<value condition="Control.HasFocus(125)">$INFO[Container(125).ListItem.Property(FanartImage)]</value>
+		<value condition="Control.HasFocus(135)">$INFO[Container(135).ListItem.Property(FanartImage)]</value>
 	</variable>
 
   <variable name="VideoInfoStarRating">

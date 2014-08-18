@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes> 
 
-<!-- *NOT USED*
-<onup condition="[Container(20).HasFocus(2) + IntegerGreaterThan(Container(135).NumItems,0) + Skin.HasSetting(ShowHomeWidgetInTheatersMovies)]">SetFocus(135)</onup>
-| [Container(20).HasFocus(2) + ![[IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeWidgetRecentlyAddedMovies)] | [IntegerGreaterThan(Container(135).NumItems,0) + Skin.HasSetting(ShowHomeWidgetInTheatersMovies)]]]
--->
 		<!-- ====================== -->
 		<!-- Main Home List Buttons -->
 		<!-- ====================== -->
 		<include name="HomeMenuWraplist">
 			<control type="group">
-        <!-- <animation effect="slide" start="0,0" end="0,55" time="250" tween="Quadratic" easing="out" condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedTVShows)] | [Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedMovies)] | [Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedAlbums)]">Conditional</animation> -->
 		    <visible allowhiddenfocus="true">!Control.HasFocus(15) + !Control.HasFocus(25) + !Control.HasFocus(35) + !Control.HasFocus(45) + !Control.HasFocus(65) + !Control.HasFocus(75) + !Control.HasFocus(85) + !Control.HasFocus(95) + !Control.HasFocus(125) + !Window.IsActive(1110) + !Window.IsActive(1115) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(busy.xml) + !Window.IsActive(ProgressDialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 		    <include>VisibleHiddenSlideAnimation</include>
 			  <control type="image">
