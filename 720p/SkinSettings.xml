@@ -184,7 +184,8 @@
 	          <include>SettingsRadioButton</include>
 				    <label>$ADDON[script.skinshortcuts 32071]</label>
             <!-- <onclick>ActivateWindow(1115)</onclick> -->
-						<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick> -->
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
+					  <visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 					</control>
 				  <!-- Hide Home NowPlaying Video -->
 					<control type="radiobutton" id="8202">

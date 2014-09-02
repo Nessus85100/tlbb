@@ -152,8 +152,8 @@
 		<defaultID>search</defaultID>
 		<icon>DefaultMusicSearch.png</icon>
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>RunAddon(script.globalsearch)</action>
+		<visible>Skin.HasSetting(ExpertSkinSettings) + System.HasAddon(script.globalsearch)</visible>
+		<action>RunScript(script.globalsearch)</action>
 	</shortcut>
 	
 	
