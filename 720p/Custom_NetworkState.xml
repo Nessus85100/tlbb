@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1120">
   <zorder>5</zorder>
-  <allowoverlay>no</allowoverlay>
+  
   <visible>!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(slideshow)</visible>
   <controls>
 	  <control type="group">

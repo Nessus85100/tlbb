@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="136">
 	<defaultcontrol always="true">22</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
 	<controls>
 
 		<control type="group">
@@ -81,7 +81,7 @@
 					<font>FontSize_20</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>-</label>
 					<onup>22</onup>
@@ -148,7 +148,7 @@
 								<posy>0</posy>
 								<width>460</width>
 								<height>45</height>
-								<texture>buttons/settings_fo.png</texture>
+								<texture>buttons/focus.png</texture>
 								<visible>Control.HasFocus(10)</visible>
 						  </control>
 							<control type="label">
@@ -285,7 +285,7 @@
 					<height>45</height>
 					<label>21431</label>
 					<altlabel>21430</altlabel>
-					<alttexturefocus>buttons/settings_fo.png</alttexturefocus>
+					<alttexturefocus>buttons/focus.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 			    <align>center</align>
 					<onright>18</onright>

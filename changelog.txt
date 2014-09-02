@@ -1,3 +1,10 @@
+[B][COLOR=FF56ADDA]v3.1.0 - Release Date 2/9/2014[/COLOR][/B]
+• Added skin support for Skinshortcuts script.
+• Major code re-work and optimizations across the whole skin.   
+• Removed TVTunes script.
+• Removed SkinWidgets script
+• Removed unused textures and code.
+
 [B][COLOR=FF56ADDA]v3.0.5 - Release Date 18/8/2014[/COLOR][/B]
 • Added network type icons (wired/wifi).
 • Bug fixes

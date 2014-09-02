@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="25">
 	<defaultcontrol always="true">56</defaultcontrol>
-  <allowoverlay>yes</allowoverlay>
+  
 	<views>56,50,51,52,53,54,58,580,55,560,561,57</views>
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+  
   <onload condition="SubString(Container.FolderPath,plugin://plugin.video.youtube)">Container.SetViewMode(561)</onload>
   <onload condition="Skin.HasSetting(HideThumbnailsVideos)">SetFocus(50)</onload>
 	<onload condition="System.HasAddon(script.videolanguage) + Container.Content(movies)">RunScript(script.videolanguage,backend=True)</onload>
 	<!-- <onload condition="![Library.HasContent(movies) | Library.HasContent(tvshows)] + !Window.Previous(Startup) + ![stringcompare(Container.FolderPath,addons://sources/video/) | substring(Container.FolderPath,plugin://plugin.video,left)]">ActivateWindow(1110)</onload> -->
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-  <onload condition="System.HasAddon(script.tvtunes) + [Library.HasContent(Movies) | Library.HasContent(TVShows)] + Skin.HasSetting(TVTunesEnabled) + !Player.HasMedia">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="IsEmpty(Skin.String(ListViewWideThumbTVShows))">Skin.SetString(ListViewWideThumbTVShows,1)</onload>
 	<onload condition="IsEmpty(Skin.String(GalleryViewWideThumbTVShows))">Skin.SetString(GalleryViewWideThumbTVShows,1)</onload>
   <onunload condition="!IsEmpty(Window(Home).Property(YouTubeSearch))">ClearProperty(YouTubeSearch,Home)</onunload>
@@ -429,7 +428,37 @@
 		    <label>$INFO[Container.FolderName]</label>
 	      <visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 			</control>
-<!-- *NOT USED*			
+			<control type="label">
+			  <include>TopZoomedSmallLabel</include>
+				<label>$LOCALIZE[31002]</label>
+	      <visible>substring(Container.FolderPath,special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/TV Shows)</visible>
+			</control>
+			<control type="label">
+			  <include>TopZoomedSmallLabel</include>
+				<label>$LOCALIZE[20342]</label>
+	      <visible>substring(Container.FolderPath,special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Movies)</visible>
+			</control>
+			<control type="label">
+			  <include>TopZoomedSmallLabel</include>
+				<label>$LOCALIZE[10005]</label>
+	      <visible>substring(Container.FolderPath,special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Music)</visible>
+			</control>
+			<control type="label">
+			  <include>TopZoomedSmallLabel</include>
+				<label>Family</label>
+	      <visible>substring(Container.FolderPath,special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Family)</visible>
+			</control>
+			<control type="label">
+			  <include>TopZoomedSmallLabel</include>
+				<label>Sports</label>
+	      <visible>substring(Container.FolderPath,special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Sports)</visible>
+			</control>
+			<control type="label">
+			  <include>TopZoomedSmallLabel</include>
+				<label>$LOCALIZE[31000]</label>
+	      <visible>substring(Container.FolderPath,special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Live TV)</visible>
+			</control>
+<!-- *NOT USED*
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
 		    <label>$INFO[Skin.String(SearchStringName)]</label>

@@ -295,31 +295,31 @@ msgid "Show Music Videos Section"
 msgstr ""
 
 msgctxt "#31117"
-msgid "Music Button opens..."
+msgid "Music button opens..."
 msgstr ""
 
 msgctxt "#31118"
-msgid "Add-ons Button opens..."
+msgid "Add-ons button opens..."
 msgstr ""
 
 msgctxt "#31119"
-msgid "Hide Home Menu SubMenus"
+msgid "Videos button opens..."
 msgstr ""
 
 msgctxt "#31120"
-msgid "Hide Movies Submenu"
+msgid "Movies button opens..."
 msgstr ""
 
 msgctxt "#31121"
-msgid "Hide TV Shows Submenu"
+msgid "TV Shows button opens..."
 msgstr ""
 
 msgctxt "#31122"
-msgid "Hide Music Submenu"
+msgid "Pictures button opens..."
 msgstr ""
 
 msgctxt "#31123"
-msgid "Hide Settings Submenu"
+msgid "Programs button opens..."
 msgstr ""
 
 msgctxt "#31124"
@@ -351,27 +351,27 @@ msgid "Disable Fanart in all sections"
 msgstr ""
 
 msgctxt "#31131"
-msgid "Show Only on Home Screen"
-msgstr ""
-
-msgctxt "#31132"
 msgid "Hide Background Video"
 msgstr ""
 
+msgctxt "#31132"
+msgid "Near Concerts"
+msgstr ""
+
 msgctxt "#31133"
-msgid "Custom Background"
+msgid "Top Artists"
 msgstr ""
 
 msgctxt "#31134"
-msgid "Customize Home Menu"
+msgid "Trending TV Shows"
 msgstr ""
 
 msgctxt "#31135"
-msgid "Single Image"
+msgid "Top Rated TV Shows"
 msgstr ""
 
 msgctxt "#31136"
-msgid "Multi Image"
+msgid "Popular TV Shows"
 msgstr ""
 
 msgctxt "#31137"
@@ -395,7 +395,7 @@ msgid "Choose Lyrics Add-on"
 msgstr ""
 
 msgctxt "#31142"
-msgid "Choose Subtitles Add-on"
+msgid "Video Stream"
 msgstr ""
 
 msgctxt "#31143"
@@ -431,7 +431,7 @@ msgid "Download [COLOR=selected]poster.jpg[/COLOR] for all TV Shows"
 msgstr ""
 
 msgctxt "#31151"
-msgid "Show RSS feed in whole skin"
+msgid "Download [COLOR=selected]disc.png[/COLOR] for all Movies"
 msgstr ""
 
 msgctxt "#31152"
@@ -495,15 +495,15 @@ msgid "Show Favourites Section"
 msgstr ""
 
 msgctxt "#31167"
-msgid "Show Home RecentlyAdded Movies Widget"
+msgid "Top Rated Movies"
 msgstr ""
 
 msgctxt "#31168"
-msgid "Show Home RecentlyAdded TV Shows Widget"
+msgid "Popular Movies"
 msgstr ""
 
 msgctxt "#31169"
-msgid "Show Home RecentlyAdded Albums Widget"
+msgid "In Cinemas"
 msgstr ""
 
 msgctxt "#31170"
@@ -511,11 +511,11 @@ msgid "Custom Video Add-ons Widget"
 msgstr ""
 
 msgctxt "#31171"
-msgid "Hide Home Menu Buttons"
+msgid "Coming Soon"
 msgstr ""
 
 msgctxt "#31172"
-msgid "Show Home Menu Buttons"
+msgid "Trending Movies"
 msgstr ""
 
 msgctxt "#31173"
@@ -551,15 +551,15 @@ msgid "Search on YouTube"
 msgstr ""
 
 msgctxt "#31181"
-msgid "RecentlyAdded Widget"
+msgid "Movies In Progress"
 msgstr ""
 
 msgctxt "#31182"
-msgid "Download [COLOR=selected]disc.png[/COLOR] for all Movies"
+msgid "TV Shows In Progress"
 msgstr ""
 
 msgctxt "#31183"
-msgid "SubMenu"
+msgid "Music In Progress"
 msgstr ""
 
 msgctxt "#31184"
@@ -594,7 +594,23 @@ msgctxt "#31191"
 msgid "Custom Add-on"
 msgstr ""
 
-#empty strings from id 31192 to 31199
+msgctxt "#31192"
+msgid "RSS Video Feed Widget"
+msgstr ""
+
+msgctxt "#31193"
+msgid "Add YouTube UserID"
+msgstr ""
+
+msgctxt "#31194"
+msgid "Reset All"
+msgstr ""
+
+msgctxt "#31195"
+msgid "Customize Home Menu"
+msgstr ""
+
+#empty strings from id 31196 to 31199
 #Scripts labels
 
 msgctxt "#31200"
@@ -811,7 +827,19 @@ msgctxt "#31253"
 msgid "Local subtitle available"
 msgstr ""
 
-#empty strings from id 31254 to 31279
+msgctxt "#31254"
+msgid "Unwatched Movies"
+msgstr ""
+
+msgctxt "#31255"
+msgid "Unwatched TV Shows"
+msgstr ""
+
+msgctxt "#31256"
+msgid "Unwatched Episodes"
+msgstr ""
+
+#empty strings from id 31257 to 31279
 #Playlist Editor labels
 
 msgctxt "#31280"
@@ -1110,6 +1138,9 @@ msgstr ""
 msgctxt "#31432"
 msgid "If your unit is not responding, make sure batteries are in the remote. Hold the remote within a few inches from the box and press digits [COLOR=red][B]1[/B][/COLOR] and [COLOR=red][B]9[/B][/COLOR] until the LED stops flashes to sync the remote. When you done press "OK" to close this dialog and it will not appear again."
 msgstr ""
+
+
+
 
 
 #empty strings from id 31433 to 31439

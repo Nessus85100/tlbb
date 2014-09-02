@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="500">
 	<defaultcontrol always="true">56</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+	
+  
 	<views>56,50,51,57</views>
   <onload condition="Skin.HasSetting(HideThumbnailsMusic)">SetFocus(50)</onload>
 	<controls>

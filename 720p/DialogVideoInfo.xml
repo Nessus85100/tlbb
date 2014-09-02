@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="2003">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
   <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID],type=movie)</onload>
 	<onload condition="StringCompare(Window(movieinformation).Property(similarmovies),show)">ClearProperty(similarmovies)</onload>
   <onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies) + !substring(Container.FolderPath,plugin://plugin.video,left)">RunScript(script.extendedinfo,info=similarlocal,dbid=$INFO[ListItem.DBID],type=movie)</onload>

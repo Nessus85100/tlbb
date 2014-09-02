@@ -94,7 +94,7 @@
 				<focusedcolor>white</focusedcolor>
 			  <disabledcolor>33white</disabledcolor>
 				<shadowcolor>99000000</shadowcolor>
-				<texturefocus>buttons/settings_fo.png</texturefocus>
+				<texturefocus>buttons/focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>
 

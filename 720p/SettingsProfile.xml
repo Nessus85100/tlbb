@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="34">
 	<defaultcontrol always="true">9001</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+  
+  
 	<controls>
 	 <include>BackgroundItems</include>
 

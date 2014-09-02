@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="3003">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
 	<onload>SetProperty(MetadataActors.Type,actor,movieinformation)</onload>
 	<onload condition="Window.IsActive(movieinformation) + IsEmpty(Window(Home).Property(script.metadata.actors.push))">ClearProperty(MetadataActors.Type,movieinformation)</onload>
 	<controls>

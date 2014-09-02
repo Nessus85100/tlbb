@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="3000">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
 	<controls>
 		<control type="list" id="50">
 			<description>container actor properties</description>

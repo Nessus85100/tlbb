@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window >
 	<defaultcontrol always="true">20</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
 	<controls>
 	
 	 <control type="group">
@@ -158,7 +158,7 @@
 							<top>0</top>
 							<width>400</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
+							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(20)">conditional</animation>
 						</control>
 						<control type="image">
@@ -238,7 +238,7 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>33white</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>buttons/settings_fo.png</texturefocus>
+						<texturefocus>buttons/focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -261,7 +261,7 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>33white</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>buttons/settings_fo.png</texturefocus>
+						<texturefocus>buttons/focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -284,7 +284,7 @@
 						<focusedcolor>white</focusedcolor>
 					  <disabledcolor>33white</disabledcolor>
 						<shadowcolor>99000000</shadowcolor>
-						<texturefocus>buttons/settings_fo.png</texturefocus>
+						<texturefocus>buttons/focus.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -313,7 +313,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -339,7 +339,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -362,7 +362,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -394,7 +394,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -420,7 +420,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -446,7 +446,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -472,7 +472,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>
@@ -497,7 +497,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
@@ -521,7 +521,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
@@ -546,7 +546,7 @@
 					<focusedcolor>white</focusedcolor>
 				  <disabledcolor>33white</disabledcolor>
 					<shadowcolor>99000000</shadowcolor>
-					<texturefocus>buttons/settings_fo.png</texturefocus>
+					<texturefocus>buttons/focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<align>center</align>
 					<aligny>top</aligny>
@@ -614,7 +614,7 @@
 					<description>Apply Changes</description>
 				  <width>220</width>
 				  <height>40</height>
-					<texturefocus border="39,3,39,39">dialogs/buttons/settings_fo.png</texturefocus>
+					<texturefocus border="39,3,39,39">dialogs/buttons/focus.png</texturefocus>
 					<texturenofocus border="39,3,39,39">dialogs/buttons/settings_nf.png</texturenofocus>
 					<align>left</align>
 					<aligny>top</aligny>

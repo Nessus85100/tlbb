@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<allowoverlay>no</allowoverlay>
+	
   <controls>
 
 
@@ -153,7 +153,7 @@
 	          <control type="image">
 	            <width>765</width>
 	            <height>47</height>
-	            <texture>buttons/settings_fo.png</texture>
+	            <texture>buttons/focus.png</texture>
 							<animation effect="slide" start="0,35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(120).OnPrevious">focus</animation>
 							<animation effect="slide" start="0,-35" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(120).OnNext">focus</animation>
 	          </control>

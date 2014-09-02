@@ -44,7 +44,7 @@
 				<top>0</top>
 				<width>160</width>
 				<height>80</height>
-				<texture border="20">buttons/settings_fo.png</texture>
+				<texture border="20">buttons/focus.png</texture>
 	      <include>VisibleFadeEffect2</include>
 			</control>
 			<control type="image">

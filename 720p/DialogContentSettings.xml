@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="132">
 	<defaultcontrol always="true">3</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
 	<controls>
 		<control type="group">
 	    <include>DialogAnimation</include>
@@ -95,7 +95,7 @@
 						<top>0</top>
 						<width>403</width>
 						<height>47</height>
-						<texture>buttons/settings_fo.png</texture>
+						<texture>buttons/focus.png</texture>
 						<visible>Control.HasFocus(4)</visible>
 					</control>
 					<control type="image">
@@ -193,7 +193,7 @@
 						<description>Defaults</description>
 					  <width>150</width>
 					  <height>40</height>
-						<texturefocus>dialogs/buttons/settings_fo.png</texturefocus>
+						<texturefocus>dialogs/buttons/focus.png</texturefocus>
 						<texturenofocus>dialogs/buttons/settings_nf.png</texturenofocus>
 						<align>left</align>
 						<aligny>top</aligny>

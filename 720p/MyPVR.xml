@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="600">
 	<defaultcontrol>32</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
   <onload condition="Control.IsVisible(10)">SetFocus(10)</onload>	
 	<controls>
 		<include>BackgroundItems</include>
@@ -28,15 +28,7 @@
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
       </animation>
-	    <control type="image">
-				<left>-3</left>
-	    	<top>6</top>
-	    	<width>56</width>
-	    	<height>40</height>
-				<colordiffuse>ddwhite</colordiffuse>
-		    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
-	    	<texture background="true">icons/tlbb.png</texture>
-	    </control>
+      <include>TLBBIco</include>
       <!-- PVR Options -->
 			<control type="grouplist" id="9111">
 				<left>55</left>
@@ -50,7 +42,6 @@
 				<onright>9111</onright>
 				<onup>noop</onup>
 				<ondown>50</ondown>
-				<onback>50</onback>
 				<control type="button" id="32">
 					<description>TV Channels</description>
           <label>$LOCALIZE[19023]</label>

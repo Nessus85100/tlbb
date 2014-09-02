@@ -14,7 +14,7 @@
       <aspectratio aligny="center">stretch</aspectratio>
     </control>
     <control type="image">
-      <top>223</top>
+      <top>260</top>
 			<width>380</width>
 			<height>22</height>
 			<texture>dialogs/menus/bottom.png</texture>
@@ -24,7 +24,7 @@
   		<left>0</left>
   		<top>75</top>
   		<width>380</width>
-  		<height>152</height>
+  		<height>189</height>
   		<itemgap>0</itemgap>
   		<onleft>Close</onleft>
   		<onright>Close</onright>
@@ -78,8 +78,8 @@
   <control type="group">
 		<left>105</left>
 		<top>25</top>
-    <include>ShutdownMenuAnimation</include>
     <include>OpenCloseSlideAnimation</include>
+    <include>ShutdownMenuAnimation</include>
 		<control type="grouplist">
 			<left>0</left>
 			<top>0</top>
@@ -107,6 +107,9 @@
     <visible>false</visible>
   </control>
   <control type="image" id="5004">
+    <visible>false</visible>
+  </control>
+  <control type="image" id="5005">
     <visible>false</visible>
   </control>
  </controls>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+	<groupings>
+
+    <!-- ====== -->
+    <!-- Common -->
+    <!-- ====== -->
+		<node label="32029">
+			<content>common</content>
+		</node>
+
+    <!-- ============= -->
+    <!-- Video Library -->
+    <!-- ============= -->
+		<node label="32030">
+			<content>movie</content>
+			<content>tvshow</content>
+      <!-- Custom for TVShows -->
+			<content>musicvideo</content>
+      <!-- Video Addons -->
+			<node label="32010">
+				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+      <!-- Video Playlists -->
+			<node label="::SCRIPT::32040">
+				<shortcut label="::LOCAL::136" type="::SCRIPT::32014" icon="DefaultVideoPlaylists.png">ActivateWindow(Videos,Playlists,return)</shortcut>
+				<content>playlist-video</content>
+			</node>
+      <!-- Video sources -->
+			<node label="::SCRIPT::32075">
+				<content>videosources</content>
+				<content>upnp-video</content>
+			</node>
+      <!-- Video Files -->
+			<shortcut label="::LOCAL::1214" type="::SCRIPT::32014" icon="DefaultVideo.png">ActivateWindow(Videos,Files,return)</shortcut>
+			<content>customvideonode</content>
+		</node>
+
+    <!-- Music Library -->
+		<node label="32031">
+			<content>music</content>
+			<node label="32040">
+				<content>playlist-audio</content>
+			</node>
+			<node label="32011">
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="32075">
+				<content>musicsources</content>
+				<content>upnp-music</content>
+			</node>
+		</node>
+
+    <!-- PVR -->
+		<node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
+			<content>pvr</content>
+			<node label="19023">
+				<content>pvr-tv</content>
+			</node>
+			<node label="19024">
+				<content>pvr-radio</content>
+			</node>
+		</node>
+
+    <!-- Pictures -->
+		<node label="32020">
+			<content>picturesources</content>
+		</node>
+
+    <!-- Add-On -->
+		<node label="32007">
+			<node label="32009">
+				<shortcut label="10001" type="32021" icon="DefaultAddonProgram.png">ActivateWindow(Programs,Addons,return)</shortcut>
+				<content>addon-program</content>
+			</node>
+			<node label="32010">
+				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="32011">
+				<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="32012">
+				<shortcut label="1039" type="32020" icon="DefaultAddonPicture.png">ActivateWindow(Pictures,Addons,return)</shortcut>
+				<content>addon-image</content>
+			</node>
+		</node>
+
+    <!-- Favourites -->
+		<node label="32006">
+			<content>favourite</content>
+		</node>
+
+    <!-- Settings -->
+		<node label="10004">
+			<content>settings</content>
+		</node>
+
+    <!-- XBMC Commands -->
+		<node label="32054">
+			<content>commands</content>
+		</node>
+	</groupings>
+
+
+  <!-- Custom Shortcuts -->
+	<shortcut label="::LOCAL::31256" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/Episodes_Unwatched.xsp,return)</shortcut>
+	<shortcut label="::LOCAL::31255" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/TVShows_Unwatched.xsp,return)</shortcut>
+	<shortcut label="::LOCAL::31254" grouping="customvideonode" icon="DefaultMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_Unwatched.xsp,return)</shortcut>
+	<shortcut label="::LOCAL::31182" grouping="customvideonode" icon="DefaultInProgressShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/TVShows_InProgress.xsp,return)</shortcut>
+	<shortcut label="::LOCAL::31181" grouping="customvideonode" icon="DefaultInProgressMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_InProgress.xsp,return)</shortcut>
+	<shortcut label="::LOCAL::31242" grouping="customvideonode" icon="DefaultRecentlyAddedEpisodes.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,RecentlyAddedEpisodes,return)</shortcut>
+	<shortcut label="::LOCAL::31241" grouping="customvideonode" icon="DefaultRecentlyAddedMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,RecentlyAddedMovies,return)</shortcut>
+
+	<shortcut label="Virgin TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/VirginTV.strm")</shortcut>
+	<shortcut label="Radio105 TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/Radio105TV.strm")</shortcut>
+	<shortcut label="Radio Montecarlo TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/RadioMontecarloTV.strm")</shortcut>
+	<shortcut label="::LOCAL::31001" type="::LOCAL::31002" grouping="tvshow" icon="DefaultTVShows.png" condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)">RunAddon(script.tv.show.next.aired)</shortcut>
+	<shortcut label="137" type="::SCRIPT::32034" grouping="common" icon="DefaultMusicSearch.png" condition="System.HasAddon(script.globalsearch)">RunAddon(script.globalsearch)</shortcut>
+
+
+	<widget label="31241" type="movies">RecentlyAddedMovies</widget>
+	<widget label="31181" type="movies">InProgressMovies</widget>
+	<widget label="31242" type="tvshows">RecentlyAddedTVShows</widget>
+	<widget label="31182" type="tvshows">InProgressTVShows</widget>
+	<widget label="31243" type="music">RecentlyAddedAlbums</widget>
+	<widget label="31249" type="music">RandomAlbums</widget>
+
+	
+</overrides>

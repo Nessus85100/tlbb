@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="2">
 	<defaultcontrol always="true">56</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+	
+  
 	<views>56,50,52</views>
 	<controls>
 	 <include>BackgroundItems</include>

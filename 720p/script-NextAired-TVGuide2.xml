@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window >
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+  
 	<onload>ClearProperty(TVGuide.MondayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.TuesdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.WednesdayList,Home)</onload>
@@ -236,7 +236,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(200)</visible>
 	        <include>VisibleFadeEffect2</include>
 		 <!-- <colordiffuse>90FFFFFF</colordiffuse> -->
@@ -309,7 +309,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(201)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -381,7 +381,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(202)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -453,7 +453,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(203)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -525,7 +525,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(204)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -597,7 +597,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(205)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -669,7 +669,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(206)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -742,7 +742,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(207)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -814,7 +814,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(208)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -886,7 +886,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(209)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -958,7 +958,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(210)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -1030,7 +1030,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(211)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -1102,7 +1102,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(212)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -1174,7 +1174,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(213)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -1246,7 +1246,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(214)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>
@@ -1318,7 +1318,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(215)</visible>
 	        <include>VisibleFadeEffect2</include>
 				</control>

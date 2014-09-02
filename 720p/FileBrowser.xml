@@ -114,7 +114,7 @@
 						<height>47</height>
 						<align>left</align>
 						<aligny>center</aligny>
-					  <texture>buttons/settings_fo.png</texture>
+					  <texture>buttons/focus.png</texture>
 			      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(450).OnPrevious">focus</animation>
 			      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(450).OnNext">focus</animation>
             <visible>Control.HasFocus(450)</visible>

@@ -76,7 +76,7 @@
 				<textcolor>77white</textcolor>
 				<focusedcolor>white</focusedcolor>
 			  <disabledcolor>33white</disabledcolor>
-				<texturefocus>buttons/settings_fo.png</texturefocus>
+				<texturefocus>buttons/focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>
 	   </control>

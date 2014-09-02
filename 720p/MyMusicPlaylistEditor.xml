@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="503">
 	<defaultcontrol allways="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+	
+  
 	<controls>
 		<include>BackgroundItems</include>
 
@@ -317,15 +317,7 @@
 	    <include>VisibleHiddenSlideAnimation</include>
 			<include>ShutdownMenuAnimation</include>
 		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation)</visible>
-	    <control type="image">
-				<left>-3</left>
-	    	<top>6</top>
-	    	<width>56</width>
-	    	<height>40</height>
-				<colordiffuse>ddwhite</colordiffuse>
-		    <aspectratio align="left" aligny="bottom">stretch</aspectratio>
-	    	<texture background="true">icons/tlbb.png</texture>
-	    </control>
+      <include>TLBBIco</include>
 			<control type="grouplist">
 				<left>55</left>
 				<top>0</top>

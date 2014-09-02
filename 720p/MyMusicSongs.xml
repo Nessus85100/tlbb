@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="501">
 	<defaultcontrol always="true">56</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+	
+  
 	<views>56,50</views>
   <onload condition="Skin.HasSetting(HideThumbnailsMusic)">SetFocus(50)</onload>
 	<!-- <onload condition="!Library.HasContent(music) + !Window.Previous(Startup)">ActivateWindow(1110)</onload> -->

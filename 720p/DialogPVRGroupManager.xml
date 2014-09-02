@@ -130,7 +130,7 @@
 							<top>0</top>
 							<width>260</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
+							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(13)">conditional</animation>
 						</control>
 						<control type="image">
@@ -199,7 +199,7 @@
 							<top>0</top>
 							<width>260</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
+							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(11)">conditional</animation>
 						</control>
 						<control type="image">
@@ -276,7 +276,7 @@
 							<top>0</top>
 							<width>260</width>
 							<height>40</height>
-							<texture>buttons/settings_fo.png</texture>
+							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(12)">conditional</animation>
 						</control>
 						<control type="image">

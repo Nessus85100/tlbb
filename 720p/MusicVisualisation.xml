@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="2006">
 	<defaultcontrol>-</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	
 	<controls>
 	  <include>BackgroundItems</include>
 

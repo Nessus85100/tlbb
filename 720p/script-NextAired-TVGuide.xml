@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window >
-  <backgroundcolor>BackgroundColor</backgroundcolor>
+  
 	<onload>ClearProperty(TVGuide.MondayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.TuesdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.WednesdayList,Home)</onload>
@@ -234,7 +234,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(200)</visible>
 		 <!-- <colordiffuse>90FFFFFF</colordiffuse> -->
 				</control>
@@ -303,7 +303,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(201)</visible>
 				</control>
 				<control type="label">
@@ -371,7 +371,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(202)</visible>
 				</control>
 				<control type="label">
@@ -439,7 +439,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(203)</visible>
 				</control>
 				<control type="label">
@@ -507,7 +507,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(204)</visible>
 				</control>
 				<control type="label">
@@ -575,7 +575,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(205)</visible>
 				</control>
 				<control type="label">
@@ -643,7 +643,7 @@
 					<top>0</top>
 					<width>160</width>
 					<height>35</height>
-					<texture>buttons/settings_fo.png</texture>
+					<texture>buttons/focus.png</texture>
 				  <visible>Control.HasFocus(206)</visible>
 				</control>
 				<control type="label">

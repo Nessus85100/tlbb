@@ -4,6 +4,45 @@
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
 
+  <!-- ======================== -->
+  <!-- === DEVELOPMENT INFO === -->
+  <!-- ======================== -->
+	<control type="grouplist">
+		<left>0</left>
+		<top>5</top>
+		<width>1280</width>
+		<height>450</height>
+		<align>center</align>
+    <orientation>horizontal</orientation>
+	  <visible>Skin.HasSetting(ShowDebugInfo)</visible>
+		<itemgap>5</itemgap>
+		<control type="label">
+      <width min="0" max="1280">auto</width>
+			<height>21</height>
+			<textcolor>FFFFFF40</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<font>FontSize_22B</font>
+		  <label>$INFO[System.ScreenResolution]</label>
+		</control>
+		<control type="label">
+      <width min="0" max="1280">auto</width>
+			<height>21</height>
+			<textcolor>FFFFFF40</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<font>FontSize_22B</font>
+		  <label>$INFO[System.CPUUsage,- CPU: ]</label>
+		</control>
+		<control type="label">
+      <width min="0" max="1280">auto</width>
+			<height>21</height>
+			<textcolor>FFFFFF40</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<font>FontSize_22B</font>
+		  <label>$INFO[System.Memory(used.percent),- RAM: ]</label>
+		</control>
+	</control>
+
+
 		<!-- Global debug grid -->
 
 		<control type="image">
