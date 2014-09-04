@@ -1245,7 +1245,8 @@
 				    <include>TopButton</include>
             <label>TLBB</label>
 				    <onclick>SetFocus(20)</onclick>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Control.GetLabel(214)],return)</onclick>
+				    <onclick>ActivateWindow(videos,plugin://plugin.video.tlbbhelp,return)</onclick>
+            <!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Control.GetLabel(214)],return)</onclick> -->
 					</control>
 					<control type="button" id="210">
 						<description>TLBB</description>
