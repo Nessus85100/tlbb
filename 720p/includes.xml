@@ -238,9 +238,8 @@
 				<altlabel>$LOCALIZE[31185] Expert</altlabel>
 				<usealttexture>Skin.HasSetting(ExpertSkinSettings)</usealttexture>
 				<onclick>Skin.ToggleSetting(ExpertSkinSettings)</onclick>
-    		<onclick>RunScript(script.skinshortcuts,type=resetall&amp;warning=false)</onclick>
   		  <onclick>ReplaceWindow(SkinSettings)</onclick>
-			  <visible>Window.IsVisible(SkinSettings)</visible>
+  		  <visible>Window.IsVisible(SkinSettings)</visible>
 		    <include>TopLeftMenusButton</include>
 			</control>
 			<control type="button" id="994">
@@ -1134,20 +1133,20 @@
 
 	<include name="BusyAnimation">
 		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" time="800" center="640,360" start="0" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="800" start="0" easing="out" end="100" />
+			<effect type="zoom" time="600" center="640,360" start="0" end="100" tween="sine" easing="out" />
+			<effect type="fade" time="600" start="0" end="100" />
 		</animation>			
 		<animation type="WindowClose" reversible="false">
-			<effect type="zoom" time="1000" center="640,360" start="100" end="300" tween="cubic" easing="in" />
-			<effect type="fade" time="1000" start="100" easing="in" end="0" />
+			<effect type="zoom" time="600" center="640,360" start="100" end="190" tween="cubic" easing="out" />
+			<effect type="fade" time="500" start="100" end="0" />
 		</animation>
 		<animation type="Visible" reversible="false">
-			<effect type="zoom" time="800" center="640,360" start="0" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="800" start="0" easing="out" end="100" />
+			<effect type="zoom" time="600" center="640,360" start="0" end="100" tween="sine" easing="out" />
+			<effect type="fade" time="600" start="0" end="100" />
 		</animation>			
 		<animation type="Hidden" reversible="false">
-			<effect type="zoom" time="1000" center="640,360" start="100" end="300" tween="cubic" easing="in" />
-			<effect type="fade" time="1000" start="100" easing="in" end="0" />
+			<effect type="zoom" time="600" center="640,360" start="100" end="190" tween="cubic" easing="out" />
+			<effect type="fade" time="500" start="100" end="0" />
 		</animation>
 		<control type="image">
 			<description>Busy animation</description>
@@ -1166,7 +1165,7 @@
 			<height>220</height>
 			<texture>dialogs/busy/animation_1.png</texture>
 			<aspectratio>keep</aspectratio>
-			<animation effect="rotate" start="0" end="360" center="auto" time="3500" loop="true" condition="true">conditional</animation>
+			<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
 		</control>
 		<control type="image">
 			<description>Busy animation</description>
@@ -1176,7 +1175,7 @@
 			<height>220</height>
 			<texture>dialogs/busy/animation_2.png</texture>
 			<aspectratio>keep</aspectratio>
-			<animation effect="rotate" start="0" end="-360" center="auto" time="3500" loop="true" condition="true">conditional</animation>
+			<animation effect="rotate" start="0" end="-360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
 		</control>
 	</include>
 

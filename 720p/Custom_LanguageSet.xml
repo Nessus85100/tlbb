@@ -45,7 +45,7 @@
 			<ondown>1000</ondown>
 			<onleft>1000</onleft>
 			<onright>1000</onright>
-			<scrolltime tween="quadratic" easing="out">250</scrolltime>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
 			<itemlayout height="51" width="553">
 				<control type="label">
 					<left>10</left>

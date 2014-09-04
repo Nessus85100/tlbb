@@ -21,7 +21,7 @@
 		 <animation type="Hidden" reversible="false">
 			<effect type="zoom" time="450" center="auto" start="100" end="190" tween="cubic" easing="in" />
 			<effect type="fade" time="450" start="100" easing="in" end="0" />
-		 </animation>  
+		 </animation>
 		 <control type="image">
 			<left>430</left>
 			<top>165</top>
@@ -63,7 +63,7 @@
 				<height>220</height>
 				<texture>dialogs/busy/animation_1.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -73,7 +73,7 @@
 				<height>220</height>
 				<texture>dialogs/busy/animation_2.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="-360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="label">
 				<description>Busy label</description>

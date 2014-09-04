@@ -774,7 +774,7 @@
 				<height>220</height>
 				<texture>dialogs/busy/animation_1.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -784,7 +784,7 @@
 				<height>220</height>
 				<texture>dialogs/busy/animation_2.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="-360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
 			</control>
 		</control>
 
