@@ -3,8 +3,6 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	
   <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID],type=movie)</onload>
-	<onload condition="StringCompare(Window(movieinformation).Property(similarmovies),show)">ClearProperty(similarmovies)</onload>
-  <onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies) + !substring(Container.FolderPath,plugin://plugin.video,left)">RunScript(script.extendedinfo,info=similarlocal,dbid=$INFO[ListItem.DBID],type=movie)</onload>
 	<controls>
 
 		<control type="group">
@@ -457,8 +455,6 @@
 				</control>
 
 				<control type="group" id="4">
-					<animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Control.IsVisible(50) + !StringCompare(Window.Property(similarmovies),show)">Conditional</animation>
-					<animation effect="fade" start="100" end="0" time="200" reversible="false" condition="Control.IsVisible(50) | StringCompare(Window.Property(similarmovies),show)">Conditional</animation>
 					<control type="textbox">
 						<description>Description Value</description>
 						<posx>0</posx>
@@ -530,7 +526,7 @@
 				<itemgap>13</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VisibleFadeEffect2</include>
-				<visible>![Control.IsVisible(50) | StringCompare(Window.Property(similarmovies),show)] + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+				<visible>!Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 				<include>VideoStereoscopicsFlagsConditions</include>
 				<include>VideoResFlagsConditions</include>
 				<include>AspectRatioFlagsConditions</include>
@@ -634,106 +630,6 @@
 				</focusedlayout>
 			</control>
 	   </control>
-	   
-		  <!-- Similiar Movies -->
-		 <control type="group" id="45">
-				<posx>366</posx>
-				<posy>400</posy>
-				<animation effect="slide" start="0,0" end="0,-40" time="150" condition="Control.HasFocus(40)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" reversible="false" condition="Control.IsVisible(45)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="300" reversible="false" condition="!Control.IsVisible(45)">Conditional</animation>
-			  <visible allowhiddenfocus="true">StringCompare(Window.Property(similarmovies),show) + Container.Content(Movies)</visible>
-			<control type="fixedlist" id="40">
-				<description>Cast</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>860</width>
-				<height>250</height>
-				<orientation>horizontal</orientation>
-			  <scrolltime tween="cubic" easing="out">350</scrolltime>
-				<onleft>40</onleft>
-				<onright>40</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<itemlayout width="143" height="250">
-					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>127</width>
-						<height>175</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-						<texture background="true" diffuse="thumbs/poster_diffuse.png">thumbs/thumb_back.png</texture>
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>127</width>
-						<height>175</height>
-						<aspectratio align="center" aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture background="true" diffuse="thumbs/poster_diffuse.png">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<posx>3</posx>
-						<posy>3</posy>
-						<width>142</width>
-						<height>189</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-						<texture background="true" diffuse="thumbs/poster_diffuse.png">thumbs/poster_overlay_noglass.png</texture>
-					</control>
-				</itemlayout>
-				<focusedlayout width="143" height="250">
-					<control type="group">
-						<animation reversible="false" effect="zoom" start="100" end="125" center="10,10" time="150">Focus</animation>
-						<animation reversible="false" effect="zoom" start="125" end="100" center="10,10" time="150">UnFocus</animation>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>127</width>
-							<height>175</height>
-						  <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-						  <texture background="true" diffuse="thumbs/poster_diffuse.png">thumbs/thumb_back.png</texture>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>10</posy>
-							<width>127</width>
-							<height>175</height>
-							<aspectratio align="center" aligny="top" scalediffuse="false">scale</aspectratio>
-							<texture background="true" diffuse="thumbs/poster_diffuse.png">$INFO[ListItem.Icon]</texture>
-						</control>
-						<control type="image">
-							<posx>3</posx>
-							<posy>3</posy>
-							<width>142</width>
-							<height>189</height>
-						<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-						<texture background="true" diffuse="thumbs/poster_diffuse.png">thumbs/poster_overlay_noglass.png</texture>
-						</control>
-					</control>
-				  <control type="label">
-						<posx>180</posx>
-						<posy>185</posy>
-						<width>670</width>
-						<height>40</height>
-						<font>FontSize_22</font>
-						<align>left</align>
-						<aligny>center</aligny>
-				    <textcolor>white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]$INFO[Listitem.Label2, (,) ]</label>
-						<visible>Control.HasFocus(40)</visible>
-						<animation effect="fade" start="0" end="100" time="200" condition="Control.HasFocus(40)">Conditional</animation>
-						<animation reversible="false" effect="fade" start="0" end="100" time="400">Focus</animation>
-						<animation reversible="false" effect="fade" start="100" end="0" time="0">Unfocus</animation>
-				  </control>
-				</focusedlayout>
-		      <content>
-			      <include>SimilarLocalMoviesContent</include>
-		      </content>
-			</control>
-	   </control>
-	   
 		</control>
 
 
@@ -810,9 +706,8 @@
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<ondown condition="![Control.IsVisible(50) | StringCompare(Window.Property(similarmovies),show)] + !IsEmpty(ListItem.Director)">61</ondown>
+				<ondown condition="!Control.IsVisible(50) + !IsEmpty(ListItem.Director)">61</ondown>
 				<ondown condition="Control.IsVisible(50) + IntegerGreaterThan(Container(50).NumItems,0)">50</ondown>
-				<ondown condition="StringCompare(Window.Property(similarmovies),show)">40</ondown>
 				<control type="togglebutton" id="8">
 					<description>Play/Browse</description>
 				  <include>TopButton</include>
@@ -834,7 +729,6 @@
 				<control type="button" id="105">
 					<description>Cast/Plot</description>
 					<label>-</label>
-          <onclick condition="Control.IsVisible(40)">ClearProperty(similarmovies)</onclick>
           <onclick condition="IntegerGreaterThan(Container(50).NumItems,0)">SendClick(2003,5)</onclick>
 				  <include>TopButton</include>
 					<visible>!substring(Container.FolderPath,plugin://plugin.video,left)</visible>
@@ -886,16 +780,6 @@
 					<visible>!substring(Container.FolderPath,plugin://plugin.video,left)</visible>
 				</control>
 -->
-				<control type="togglebutton" id="17">
-					<description>Similar Movies</description>
-					<label>Similar Movies</label>
-					<usealttexture>StringCompare(Window.Property(similarmovies),show)</usealttexture>
-					<onclick>SetProperty(similarmovies,show)</onclick>
-					<altclick>ClearProperty(similarmovies)</altclick>
-          <onclick condition="Control.IsVisible(50)">SendClick(2003,5)</onclick>
-				  <include>TopButton</include>
-					<visible>[System.HasAddon(script.extendedinfo) + Container.Content(movies)] + !substring(Container.FolderPath,plugin://plugin.video,left)</visible>
-				</control>
 				<control type="button" id="18">
 					<description>Edit</description>
 					<label>$LOCALIZE[21435]</label>
@@ -995,14 +879,6 @@
 					<visible>!substring(Container.FolderPath,plugin://plugin.video,left)</visible>
 				</control>
 -->
-				<control type="label">
-					<description>Similar Movies</description>
-				  <include>TopSmallLabel</include>
-          <label>$INFO[Control.GetLabel(17)]</label>
-					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(17)" reversible="true">Conditional</animation>
-          <animation effect="zoom"  start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(17)" reversible="true">Conditional</animation>
-					<visible>[System.HasAddon(script.extendedinfo) + Container.Content(movies)] + !substring(Container.FolderPath,plugin://plugin.video,left)</visible>
-				</control>
 				<control type="label">
 					<description>Edit</description>
 				  <include>TopSmallLabel</include>
