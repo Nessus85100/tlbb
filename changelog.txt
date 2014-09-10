@@ -1,3 +1,8 @@
+[B][COLOR=FF56ADDA]v3.1.1 - Release Date 4/9/2014[/COLOR][/B]
+• Removed similiar local movies.
+• Fixed "Help" top home menu link.
+• Busy animations optimisations.
+
 [B][COLOR=FF56ADDA]v3.1.0 - Release Date 2/9/2014[/COLOR][/B]
 • Added skin support for Skinshortcuts script.
 • Major code re-work and optimizations across the whole skin.   
