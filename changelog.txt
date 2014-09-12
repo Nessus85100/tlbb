@@ -1,3 +1,12 @@
+[B][COLOR=FF56ADDA]v3.1.2 - Release Date 12/9/2014[/COLOR][/B]
+• Added predefined (HomeMenu) Submenus in Expert Skin Level.
+• Fixed re-build (if changed) HomeMenu in SkinSettings window.
+• Fixed color diffuse for QuickNav custom icons.
+• Fixed VideoFullScreen VideoPlayer.Subtitle(s)Language labels bug.
+• Fixed refresh focus button in Network Manager Add dialog.
+• Removed VideoLangauge script (DialogVideoInfo).
+• Cleanup unused code.
+
 [B][COLOR=FF56ADDA]v3.1.1 - Release Date 4/9/2014[/COLOR][/B]
 • Removed similiar local movies.
 • Fixed "Help" top home menu link.

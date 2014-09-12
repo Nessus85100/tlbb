@@ -1179,6 +1179,11 @@
 		</control>
 	</include>
 
+	<variable name="DiffuseColorQuickNav_Blue">
+		<value condition="Container(150).HasFocus(21) | Container(150).HasFocus(22) | Container(150).HasFocus(23) | Container(150).HasFocus(24) | Container(150).HasFocus(25) | Container(150).HasFocus(26) | Container(150).HasFocus(27) | Container(150).HasFocus(28) | Container(150).HasFocus(29) | Container(150).HasFocus(30)">FFFFFFFF</value>
+		<value>FF04aeda</value>
+	</variable>
+
 	<variable name="CurrentPlayList">
 		<value condition="Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
 		<value condition="[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>

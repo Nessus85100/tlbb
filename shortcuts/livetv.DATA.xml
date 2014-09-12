@@ -1,3 +1,57 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
+	<shortcut>
+		<label>19023</label>
+		<label2 />
+		<defaultID>19023</defaultID>
+		<icon />
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</action>
+	</shortcut>
+	<shortcut>
+		<label>19024</label>
+		<label2 />
+		<defaultID>19024</defaultID>
+		<icon />
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</action>
+	</shortcut>
+	<shortcut>
+		<label>19163</label>
+		<label2 />
+		<defaultID>19163</defaultID>
+		<icon />
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</action>
+	</shortcut>
+	<shortcut>
+		<label>19040</label>
+		<label2 />
+		<defaultID>19040</defaultID>
+		<icon />
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</action>
+	</shortcut>
+	<shortcut>
+		<label>19069</label>
+		<label2 />
+		<defaultID>19069</defaultID>
+		<icon />
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</action>
+	</shortcut>
+	<shortcut>
+		<label>137</label>
+		<label2 />
+		<defaultID>137</defaultID>
+		<icon />
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindowAndFocus(MyPVR, 36,0, 17,0)</action>
+	</shortcut>
 </shortcuts>

@@ -6,7 +6,6 @@
   
   <onload condition="SubString(Container.FolderPath,plugin://plugin.video.youtube)">Container.SetViewMode(561)</onload>
   <onload condition="Skin.HasSetting(HideThumbnailsVideos)">SetFocus(50)</onload>
-	<onload condition="System.HasAddon(script.videolanguage) + Container.Content(movies)">RunScript(script.videolanguage,backend=True)</onload>
 	<!-- <onload condition="![Library.HasContent(movies) | Library.HasContent(tvshows)] + !Window.Previous(Startup) + ![stringcompare(Container.FolderPath,addons://sources/video/) | substring(Container.FolderPath,plugin://plugin.video,left)]">ActivateWindow(1110)</onload> -->
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="IsEmpty(Skin.String(ListViewWideThumbTVShows))">Skin.SetString(ListViewWideThumbTVShows,1)</onload>

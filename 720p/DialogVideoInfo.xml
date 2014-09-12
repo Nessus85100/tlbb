@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="2003">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	
-  <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID],type=movie)</onload>
+
 	<controls>
 
 		<control type="group">
@@ -532,7 +531,6 @@
 				<include>AspectRatioFlagsConditions</include>
 				<include>VideoCodecFlagsConditions</include>
 				<include>AudioFlagsConditions</include>
-				<include>VideoLanguageFlags</include>
 			</control>
 
 		  <!-- Cast List -->

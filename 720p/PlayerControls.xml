@@ -94,7 +94,7 @@
 							<top>5</top>
 							<width>165</width>
 							<height>155</height>
-							<colordiffuse>FF04aeda</colordiffuse>
+							<colordiffuse>$VAR[DiffuseColorQuickNav_Blue]</colordiffuse>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
 						  <bordersize>6</bordersize>

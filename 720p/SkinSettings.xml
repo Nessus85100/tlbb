@@ -4,7 +4,6 @@
   
   
   <onunload condition="!IsEmpty(Window.Property(resetbusy))">ClearProperty(resetbusy)</onunload>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;options=clonewidgets&amp;mainmenuID=20)</onunload>
 	<controls>
 	 <include>BackgroundItems</include>
 	 
@@ -183,7 +182,6 @@
 						<description>Home Menu Customizer</description>
 	          <include>SettingsRadioButton</include>
 				    <label>$ADDON[script.skinshortcuts 32071]</label>
-            <!-- <onclick>ActivateWindow(1115)</onclick> -->
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
 					  <visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 					</control>
