@@ -7,6 +7,7 @@
 
 	 <control type="group">
     <include>DialogAnimation</include>
+	  <visible>IsEmpty(Window.Property(additionalDialog))</visible>
 		<control type="image">
 			<left>183</left>
 			<top>101</top>
@@ -35,7 +36,7 @@
 			<scrollspeed>20</scrollspeed>
 		</control>
 		<control type="group"  id="10002">
-			<!-- Left Part - Shortcusts List -->
+			<!-- Left Part - Submenu's Shortcusts List -->
 			<control type="list" id="211">
 				<left>230</left>
 				<top>190</top>
@@ -375,6 +376,24 @@
   				<visible>System.HasAddon(script.extendedinfo) + StringCompare(Window.Property("groupname"),mainmenu) + stringcompare(Container(211).ListItem.Property(widgetName),RSS Video Feeds)</visible>
   			</control>
 -->
+				<control type="button" id="3003">
+					<description>Custom Widgets Items</description>
+					<width>400</width>
+			    <height>40</height>
+					<font>FontSize_20</font>
+					<textcolor>77white</textcolor>
+					<focusedcolor>white</focusedcolor>
+				  <disabledcolor>33white</disabledcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<texturefocus>buttons/focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<align>left</align>
+					<textoffsetx>10</textoffsetx>
+					<label>Custom Widgets</label>
+          <onclick>SetProperty(ManageButtons,customwidgets)</onclick>
+					<onclick>ActivateWindow(1118)</onclick>
+  				<visible>StringCompare(Window.Property("groupname"),mainmenu) + stringcompare(Container(211).ListItem.Property(widgetName),CustomWidgets)</visible>
+				</control>
 				<control type="button" id="301">
 					<description>Add New</description>
 					<width>400</width>
@@ -436,19 +455,6 @@
 			    <align>left</align>
 		      <include>DialogsSaveCancelButton</include>
 				  <label>$ADDON[script.skinshortcuts 32028]</label>
-					<visible>!StringCompare(Window.Property("groupname"),mainmenu)</visible>
-				</control>
-				<control type="button" id="400">
-					<description>Reset All</description>
-				  <width>400</width>
-				  <textwidth>360</textwidth>
-					<texturefocus border="39,3,39,39">dialogs/buttons/settings_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">dialogs/buttons/settings_nf.png</texturenofocus>
-			    <align>left</align>
-		      <include>DialogsSaveCancelButton</include>
-				  <label>$ADDON[script.skinshortcuts 32037]</label>
-  				<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
-					<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
 				</control>
 				<control type="button" id="10">
 					<description>OK</description>
@@ -472,7 +478,7 @@
 		      <include>DialogsSaveCancelButton</include>
 				  <onclick>Close</onclick>
 				  <label>190</label>
-				<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
+				  <visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
 				</control>
 			</control>
 
