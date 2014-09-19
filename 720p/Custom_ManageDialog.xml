@@ -35,6 +35,9 @@
 			<scrollspeed>20</scrollspeed>
 		</control>
 
+    <!-- ================================ -->
+		<!-- Quick Navigation Default Buttons -->
+    <!-- ================================ -->
 		<control type="grouplist" id="1000">
 			<posx>428</posx>
 			<posy>199</posy>
@@ -214,6 +217,9 @@
 			</control>
 		</control>
 
+    <!-- =============================== -->
+		<!-- Quick Navigation Custom Buttons -->
+    <!-- =============================== -->
 		<control type="grouplist" id="1000">
 			<posx>428</posx>
 			<posy>199</posy>
@@ -226,14 +232,13 @@
 			<ondown>1000</ondown>
 			<scrolltime>250</scrolltime>
 			<visible>StringCompare(Window(SkinSettings).Property(ManageButtons),customquicknav)</visible>
-			<!-- Custom QuickNav Buttons -->
 			<control type="button" id="8661">
 				<description>Custom QuickNav Button 1</description>
 			  <width>425</width>
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 1</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton1.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton1)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton1&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8662">
 				<description>Custom QuickNav Button 2</description>
@@ -241,7 +246,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 2</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton2.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton2)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton2&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8663">
 				<description>Custom QuickNav Button 3</description>
@@ -249,7 +254,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 3</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton3.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton3)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton3&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8664">
 				<description>Custom QuickNav Button 4</description>
@@ -257,7 +262,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 4</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton4.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton4)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton4&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8665">
 				<description>Custom QuickNav Button 5</description>
@@ -265,7 +270,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 5</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton5.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton5)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton5&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8666">
 				<description>Custom QuickNav Button 6</description>
@@ -273,7 +278,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 6</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton6.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton6)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton6&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8667">
 				<description>Custom QuickNav Button 7</description>
@@ -281,7 +286,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 7</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton7.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton7)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton7&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8668">
 				<description>Custom QuickNav Button 8</description>
@@ -289,7 +294,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 8</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton8.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton8)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton8&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8669">
 				<description>Custom QuickNav Button 9</description>
@@ -297,7 +302,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 9</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton9.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton9)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton9&amp;changetitle=true)</onclick>
 			</control>
 			<control type="button" id="8670">
 				<description>Custom QuickNav Button 10</description>
@@ -305,7 +310,7 @@
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31190] 10</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomQuickNavButton10.Label)][/COLOR]</label2>
-				<onclick>RunScript(script.favourites,property=CustomQuickNavButton10)</onclick>
+				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomQuickNavButton10&amp;changetitle=true)</onclick>
 			</control>
 		</control>
 	</control>

@@ -322,6 +322,8 @@
 			<visible>System.CanPowerDown</visible>
 		  <visible>Skin.HasSetting(ShowQuickNavShutdownButton)</visible>
 	 </item>
+
+	 <!-- Custom Items -->
 	 <item id="21">
 			<label>$INFO[Skin.String(CustomQuickNavButton1.Label)]</label>
 			<icon>$INFO[Skin.String(CustomQuickNavButton1.Icon)]</icon>
@@ -392,90 +394,6 @@
 			<onclick>$INFO[Skin.String(CustomQuickNavButton10.Path)]</onclick>
 			<visible>!IsEmpty(Skin.String(CustomQuickNavButton10.Path))</visible>
 	 </item>
-  </include>
-
-
-  <include name="SimilarLocalMoviesContent">
-		<item id="1">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.1.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.1.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.1.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.1.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.1.Title))</visible>
-		</item>
-		<item id="2">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.2.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.2.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.2.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.2.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.2.Title))</visible>
-		</item>
-		<item id="3">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.3.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.3.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.3.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.3.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.3.Title))</visible>
-		</item>
-		<item id="4">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.4.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.4.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.4.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.4.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.4.Title))</visible>
-		</item>
-		<item id="5">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.5.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.5.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.5.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.5.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.5.Title))</visible>
-		</item>
-		<item id="6">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.6.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.6.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.6.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.6.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.6.Title))</visible>
-		</item>
-		<item id="7">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.7.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.7.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.7.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.7.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.7.Title))</visible>
-		</item>
-		<item id="8">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.8.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.8.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.8.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.8.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.8.Title))</visible>
-		</item>
-		<item id="9">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.9.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.9.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.9.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.9.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.9.Title))</visible>
-		</item>
-		<item id="10">
-			<include>OnClickDialogsClose</include>
-			<onclick>Runscript(service.skin.widgets,movieid=$INFO[Window(Home).Property(SimilarLocalMovies.10.DBID)],resume=false)</onclick>
-			<icon>$INFO[Window(Home).Property(SimilarLocalMovies.10.Art(poster))]</icon>
-			<label>$INFO[Window(Home).Property(SimilarLocalMovies.10.Title)]</label>
-	    <label2>$INFO[Window(Home).Property(SimilarLocalMovies.10.Premiered)]</label2>
-			<visible>!IsEmpty(Window(Home).Property(SimilarLocalMovies.10.Title))</visible>
-		</item>
   </include>
 
 
