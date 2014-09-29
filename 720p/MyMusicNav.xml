@@ -100,7 +100,7 @@
 					<include>TopLeftMenusButton</include>
 					<label>587</label>
 					<selected>Container.Filtered</selected>
-					<onclick>Action(right)</onclick>
+					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
 				<control type="button" id="8">

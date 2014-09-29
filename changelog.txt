@@ -1,3 +1,11 @@
+[B][COLOR=FF56ADDA]v3.1.5 - Release Date 19/9/2014[/COLOR][/B]
+• Added "Videos" Home Menu button in both Basic and Expert mode.
+• Added new "First Time Use Setup".
+
+
+[B][COLOR=FF56ADDA]v3.1.4 - Release Date 19/9/2014[/COLOR][/B]
+• Added support for Episode bookmarks.
+
 [B][COLOR=FF56ADDA]v3.1.3 - Release Date 19/9/2014[/COLOR][/B]
 • Replaced simple favorites script support with SuperFavorites addon.
 

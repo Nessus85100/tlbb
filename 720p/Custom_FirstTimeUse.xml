@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window  type="dialog" id="1111">
+	<defaultcontrol always="true">100</defaultcontrol>
+  <onunload>PreviousMenu</onunload>
+	<controls>
+  	<control type="button" id="100">
+  		<include>TopButton</include>
+      <onfocus>SetFocus(900)</onfocus>
+      <animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
+    </control>
+  	<control type="group">
+  	  <visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(busy.xml)</visible>
+  		<include>DialogAnimation</include>
+  		<control type="image">
+  			<left>316</left>
+  			<top>105</top>
+  			<width>649</width>
+  			<height>520</height>
+  			<aspectratio>stretch</aspectratio>
+  			<texture background="true" border="39">dialogs/other/default.png</texture>
+  		</control>
+  		<control type="image">
+  			<description>background image</description>
+  			<include>FullscreenDimensions</include>
+  			<texture background="true">windows/settings/bg_firstuse.png</texture>
+  		</control>
+  		<control type="label">
+  			<description>Heding Label</description>
+  			<left>357</left>
+  			<top>150</top>
+  			<width>565</width>
+  			<label>First Use Setup</label>
+  			<font>FontSize_36</font>
+  			<textcolor>white</textcolor>
+  			<align>center</align>
+  			<scroll>true</scroll>
+  			<scrollspeed>20</scrollspeed>
+  		</control>
+  
+  		<control type="grouplist" id="900">
+  			<left>363</left>
+  			<top>193</top>
+  			<width>553</width>
+  			<height>353</height>
+  		  <itemgap>4</itemgap>
+  			<onleft>10000</onleft>
+  			<onright>10000</onright>
+  			<onup>900</onup>
+  			<ondown>900</ondown>
+  			<scrolltime>250</scrolltime>
+  			<control type="button" id="901">
+  				<description>Language Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>$LOCALIZE[309]</label>
+  				<label2>[COLOR=blue]$INFO[Skin.String(locale.language)][/COLOR]</label2>
+  				<onclick>RunScript(script.tlbb.systemsettings,setLanguage)</onclick>
+  			</control>
+  			<control type="button" id="902">
+  				<description>Subtitles Language Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>$LOCALIZE[21448]</label>
+    			<label2>[COLOR=blue]$INFO[Skin.String(locale.subtitlelanguage)][/COLOR]</label2>
+  				<onclick>-</onclick>
+  			</control>
+  			<control type="button" id="903">
+  				<description>Region Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>Select Region</label>
+    			<label2>[COLOR=blue]$INFO[Skin.String(locale.country)][/COLOR]</label2>
+  				<onclick>-</onclick>
+  			</control>
+  			<control type="button" id="904">
+  				<description>Zoom Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>Adjust Screen</label>
+    			<label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skinzoom)][/COLOR]</label2>
+  				<onclick>-</onclick>
+  			</control>
+  			<control type="button" id="905">
+  				<description>Network Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>Configure Network</label>
+  				<label2>[COLOR=blue]$INFO[System.InternetState]$INFO[Network.IPAddress, (,)][/COLOR]</label2>
+  				<onclick>RunScript(script.linux.nm)</onclick>
+  			</control>
+  			<control type="button" id="906">
+  				<description>Firmware Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>Firmware Updates</label>
+  				<label2>[COLOR=blue][/COLOR]</label2>
+  				<onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
+  			</control>
+  			<control type="button" id="907">
+  				<description>Skin Button</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>Select Skin</label>
+    			<label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skin)][/COLOR]</label2>
+  				<onclick>-</onclick>
+  			</control>
+  		</control>
+  
+  
+      <!-- Buttons -->
+  		<control type="grouplist" id="10000">
+  			<left>355</left>
+  			<top>555</top>
+  			<width>565</width>
+  			<height>0</height>
+  			<itemgap>0</itemgap>
+  			<align>left</align>
+  			<orientation>horizontal</orientation>
+  			<onleft>10000</onleft>
+  			<onright>10000</onright>
+  			<onup>900</onup>
+  			<ondown>900</ondown>
+  			<control type="button" id="10">
+  				<description>Done</description>
+  				<texturefocus border="39,3,39,39">dialogs/buttons/save_fo.png</texturefocus>
+  				<texturenofocus border="39,3,39,39">dialogs/buttons/save_nf.png</texturenofocus>
+          <include>DialogsSaveCancelButton</include>
+  			  <label>$LOCALIZE[20177]</label>
+  				<onclick>Skin.Setbool(FirstTimeRun)</onclick>
+  		    <onclick>Action(back)</onclick>
+  			</control>
+  			<control type="button" id="11">
+  				<description>Cancel</description>
+          <include>DialogsSaveCancelButton</include>
+  				<texturefocus border="39,3,39,39">dialogs/buttons/cancel_fo.png</texturefocus>
+  				<texturenofocus border="39,3,39,39">dialogs/buttons/cancel_nf.png</texturenofocus>
+  			  <label>$LOCALIZE[222]</label>
+  		    <onclick>Action(back)</onclick>
+  			</control>
+  		</control>
+  	</control>
+	</controls>
+</window>

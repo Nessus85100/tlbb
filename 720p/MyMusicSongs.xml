@@ -97,11 +97,11 @@
 					<selected>Window.IsVisible(MusicLibrary)</selected>
 					<enable>Library.HasContent(Music)</enable>
 				</control>
-				<control type="button" id="8">
-					<description>Search</description>
+				<control type="button" id="96">
+					<description>Filter</description>
 					<label>587</label>
 				  <include>TopLeftMenusButton</include>
-	        <onclick>SetFocus(50)</onclick>
+	        <onclick>right</onclick>
 				  <onclick>SendClick(19)</onclick>
 				</control>
 				<control type="button" id="19">

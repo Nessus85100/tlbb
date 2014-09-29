@@ -153,7 +153,7 @@
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 			<include>ShutdownMenuAnimation</include>
-		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(AddonInformation) + !Window.IsActive(MovieInformation) + !Window.IsActive(MovieInformation) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml)</visible>
+		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(AddonInformation) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(contextmenu.xml)</visible>
 			<control type="grouplist">
 				<left>55</left>
 				<top>0</top>

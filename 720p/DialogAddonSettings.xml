@@ -93,8 +93,8 @@
 				</control>
 				<control type="radiobutton" id="4">
 					<description>Default RadioButton</description>
-					<radioposx>578</radioposx>
 					<textwidth>580</textwidth>
+					<radioposx>578</radioposx>
 			    <include>SettingsRadioButton</include>    
 				</control>
 				<control type="spincontrolex" id="5">
