@@ -29,6 +29,12 @@
 			<size>20</size>
 		</font>
 	 	<font>
+			<name>TextboxFont20</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>20</size>
+      <linespacing>0.85</linespacing>
+		</font>
+	 	<font>
 			<name>FontSize_12</name>
 			<filename>OpenSans-Regular.ttf</filename>
 			<size>12</size>

@@ -6,7 +6,6 @@
 		<defaultID>20077</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(SkinSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -15,7 +14,6 @@
 		<defaultID>480</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(AppearanceSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -24,7 +22,6 @@
 		<defaultID>3</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(VideosSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -33,7 +30,6 @@
 		<defaultID>31000</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(PVRSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -42,7 +38,6 @@
 		<defaultID>292</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(MusicSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -51,7 +46,6 @@
 		<defaultID>1</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(PicturesSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -60,7 +54,6 @@
 		<defaultID>8</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(WeatherSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -69,7 +62,6 @@
 		<defaultID>24001</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(AddonBrowser)</action>
 	</shortcut>
 	<shortcut>
@@ -78,7 +70,6 @@
 		<defaultID>14036</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(ServiceSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -87,7 +78,6 @@
 		<defaultID>705</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>RunScript(script.linux.nm)</action>
 		<action>SetFocus(20)</action>
 	</shortcut>
@@ -97,7 +87,6 @@
 		<defaultID>13000</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(SystemSettings)</action>
 	</shortcut>
 	<shortcut>
@@ -106,7 +95,6 @@
 		<defaultID>130</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(SystemInfo)</action>
 	</shortcut>
 	<shortcut>
@@ -115,7 +103,6 @@
 		<defaultID>13200</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Profiles)</action>
 	</shortcut>
 	<shortcut>
@@ -124,7 +111,14 @@
 		<defaultID>31016</defaultID>
 		<icon />
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(FileManager,return)</action>
+	</shortcut>
+	<shortcut>
+		<label>$ADDON[script.skinshortcuts 32071]</label>
+		<label2 />
+		<defaultID>$ADDON[script.skinshortcuts 32071]</defaultID>
+		<icon />
+		<thumb />
+		<action>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</action>
 	</shortcut>
 </shortcuts>

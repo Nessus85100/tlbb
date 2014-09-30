@@ -169,13 +169,13 @@
 				<control type="grouplist">
 					<left>317</left>
 					<top>0</top>
-					<width>782</width>
+					<width>752</width>
 					<height>399</height>
 					<itemgap>1</itemgap>
 					<visible>!Control.HasFocus(200) + !Control.HasFocus(210)</visible>
 					<control type="label" id="2">
 						<description>Label 2</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -185,7 +185,7 @@
 					</control>
 					<control type="label" id="3">
 						<description>Label 3</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -195,7 +195,7 @@
 					</control>
 					<control type="label" id="4">
 						<description>Label 4</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -205,7 +205,7 @@
 					</control>
 					<control type="label" id="5">
 						<description>Label 5</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -215,7 +215,7 @@
 					</control>
 					<control type="label" id="6">
 						<description>Label 6</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -225,7 +225,7 @@
 					</control>
 					<control type="label" id="7">
 						<description>Label 7</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -235,7 +235,7 @@
 					</control>
 					<control type="label" id="8">
 						<description>Label 8</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -245,7 +245,7 @@
 					</control>
 					<control type="label" id="9">
 						<description>Label 9</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -255,7 +255,7 @@
 					</control>
 					<control type="label" id="10">
 						<description>Label 10</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>
@@ -265,7 +265,7 @@
 					</control>
 					<control type="label" id="11">
 						<description>Label 11</description>
-						<width>782</width>
+						<width>742</width>
 						<height>49</height>
 				    <font>FontSize_20</font>
 						<textcolor>77white</textcolor>

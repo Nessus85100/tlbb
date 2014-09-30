@@ -43,6 +43,30 @@
 	</shortcut>
 
 
+  <!-- Family -->
+	<shortcut>
+		<label>Family</label>
+		<label2>32034</label2>
+		<defaultID>family</defaultID>
+		<icon>DefaultMovies.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=movies&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Family,return)</action>
+	</shortcut>
+
+
+  <!-- Sports -->
+	<shortcut>
+		<label>Sports</label>
+		<label2>32034</label2>
+		<defaultID>sports</defaultID>
+		<icon>DefaultVideo.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=videos&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Sports,return)</action>
+	</shortcut>
+
+
   <!-- Music -->
 	<shortcut>
 		<label>$LOCALIZE[10005]</label>
@@ -75,14 +99,13 @@
 	</shortcut>
 
 
-  <!-- Add-ons (submenu file: 24001.DATA.xml) -->
+  <!-- Add-ons -->
 	<shortcut>
 		<label>$LOCALIZE[24001]</label>
 		<label2>32034</label2>
 		<defaultID>addons</defaultID>
 		<icon>DefaultAddon.png</icon>
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(AddonBrowser)</action>
 	</shortcut>
 
@@ -108,30 +131,6 @@
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Programs,Addons,return)</action>
-	</shortcut>
-
-
-  <!-- Family -->
-	<shortcut>
-		<label>Family</label>
-		<label2>32034</label2>
-		<defaultID>family</defaultID>
-		<icon>DefaultMovies.png</icon>
-		<thumb />
-		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=movies&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Family,return)</action>
-	</shortcut>
-
-
-  <!-- Sports -->
-	<shortcut>
-		<label>Sports</label>
-		<label2>32034</label2>
-		<defaultID>sports</defaultID>
-		<icon>DefaultVideo.png</icon>
-		<thumb />
-		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=videos&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Sports,return)</action>
 	</shortcut>
 
 
@@ -163,7 +162,6 @@
 		<defaultID>weather</defaultID>
 		<icon>icons/Weather.png</icon>
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Weather)</action>
 	</shortcut>
 
@@ -211,7 +209,6 @@
 		<defaultID>settings</defaultID>
 		<icon>icons/Settings.png</icon>
 		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Settings)</action>
 	</shortcut>
 

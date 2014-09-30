@@ -567,7 +567,7 @@ msgid "Custom Program Add-ons Widget"
 msgstr ""
 
 msgctxt "#31185"
-msgid "Settings Level:"
+msgid "Current Mode:"
 msgstr ""
 
 msgctxt "#31186"

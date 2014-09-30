@@ -14,6 +14,18 @@
 	<include file="IncludesWeather.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 
+  <!-- Custom Windows IDs (This is for references only) -->	
+  <!--
+  Custom_DialogOK.xml               id=1110
+  Custom_FirstTimeUse.xml           id=1111
+  Custom_DialogVisualization.xml    id=1112
+  Custom_EditMediaInfoDialog.xml    id=1116
+  Custom_Reset.xml                  id=1117
+  Custom_ManageDialog.xml           id=1118
+  Custom_LanguageSet.xml            id=1119
+  Custom_NetworkState.xml           id=1120
+  -->
+
 	<constant name="FanartCrossfadeTime">350</constant>
 	<constant name="IconCrossfadeTime">350</constant>
 	<constant name="ButtonsLabelsFade">50</constant>
@@ -234,8 +246,8 @@
 			</control>
 			<control type="togglebutton" id="993">
 				<description>Expert Skin</description>
-				<label>$LOCALIZE[31185] Basic</label>
-				<altlabel>$LOCALIZE[31185] Expert</altlabel>
+				<label>$LOCALIZE[31185] TLBB</label>
+				<altlabel>$LOCALIZE[31185] XBMC</altlabel>
 				<usealttexture>Skin.HasSetting(ExpertSkinSettings)</usealttexture>
 				<onclick>Skin.ToggleSetting(ExpertSkinSettings)</onclick>
   		  <onclick>ReplaceWindow(SkinSettings)</onclick>
@@ -287,7 +299,7 @@
 			<texturenofocus>-</texturenofocus>
 			<align>left</align>
 			<aligny>top</aligny>
-			<textoffsetx>15</textoffsetx>
+			<textoffsetx>10</textoffsetx>
 			<textoffsety>11</textoffsety>
 			<pulseonselect>false</pulseonselect>
 	</include>
@@ -312,7 +324,7 @@
 			<aligny>top</aligny>
 			<radioposx>578</radioposx>
 			<textwidth>580</textwidth>
-			<textoffsetx>15</textoffsetx>
+			<textoffsetx>10</textoffsetx>
 			<textoffsety>11</textoffsety>
 			<pulseonselect>false</pulseonselect>
 	</include>
@@ -1255,7 +1267,16 @@
 		<value condition="Window.IsVisible(SkinSettings)">$LOCALIZE[31463]</value>
 		<value condition="Window.IsVisible(SubtitleSearch)">$LOCALIZE[24109]</value>
 	</variable>
-
+	
+	<variable name="CustomFirstUseDesciption">
+		<value condition="Control.HasFocus(901)">$LOCALIZE[36114]</value>
+		<value condition="Control.HasFocus(902)">$LOCALIZE[24112]</value>
+		<value condition="Control.HasFocus(903)">$LOCALIZE[36115]</value>
+		<value condition="Control.HasFocus(904)">$LOCALIZE[36108]</value>
+		<value condition="Control.HasFocus(905)">Setup your WiFi connection. Wired connections are configured automatically via DHCP on boot.</value>
+		<value condition="Control.HasFocus(906)">Check for firmware updates.</value>
+		<value condition="Control.HasFocus(907)">$LOCALIZE[36103]</value>
+	</variable>
 
 	<variable name="SettingsCategoryLabels">
 		<value condition="Window.IsVisible(AppearanceSettings) | Container(9001).HasFocus(1)">$LOCALIZE[480]</value>
