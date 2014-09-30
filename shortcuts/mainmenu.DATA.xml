@@ -106,7 +106,7 @@
 		<defaultID>addons</defaultID>
 		<icon>DefaultAddon.png</icon>
 		<thumb />
-		<action>ActivateWindow(AddonBrowser)</action>
+		<action>ActivateWindow(Videos,Addons,return)</action>
 	</shortcut>
 
 
