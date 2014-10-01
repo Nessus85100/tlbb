@@ -10,7 +10,7 @@
       <animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
     </control>
   	<control type="group">
-  	  <visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(busy.xml)</visible>
+  	  <visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(busy.xml)</visible>
   		<include>DialogAnimation</include>
   		<control type="image">
   			<left>316</left>
@@ -151,7 +151,7 @@
   		    <width>553</width>
           <include>DialogsButton</include>
   				<label>$LOCALIZE[24069]</label>
-    			<label2>[COLOR=blue]$INFO[Skin.String(firmware)][/COLOR]</label2>
+    			<label2>[COLOR=blue]$INFO[Skin.String(firmware),v][/COLOR]</label2>
   				<onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
   			</control>
 <!--
