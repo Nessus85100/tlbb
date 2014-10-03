@@ -991,42 +991,16 @@ msgctxt "#31377"
 msgid "Clean Music Library"
 msgstr ""
 
+msgctxt "#31378"
+msgid "Adjust screen size"
+msgstr ""
 
-#empty strings from id 31378 to 31400
+msgctxt "#31379"
+msgid "First Use Setup"
+msgstr ""
+
+#empty strings from id 31380 to 31408
 #Settings Category Description & Header Labels
-
-msgctxt "#31401"
-msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
-msgstr ""
-
-msgctxt "#31402"
-msgid "Manage your video content. Includes library database options, subtitles, scrapers, and playback options."
-msgstr ""
-
-msgctxt "#31403"
-msgid "Change playback settings, manage EPG data settings, recordings and parental control."
-msgstr ""
-
-msgctxt "#31404"
-msgid "Configure how XBMC handles music. Setup playback and listing options, browsing files or database and many more."
-msgstr ""
-
-msgctxt "#31405"
-msgid "Picture handeling can be quite easy. You can do this by adjusting display, effects, tags, timing and picture listing."
-msgstr ""
-
-msgctxt "#31406"
-msgid "Adjusting Weather is very easy with XBMC. Select a weather plugin and get live updates for up to three cities."
-msgstr ""
-
-msgctxt "#31407"
-msgid "Set up XBMC's network interface. Controls IP assignment, WWW and FTP server, SMB client, and UPnP configuration."
-msgstr ""
-
-msgctxt "#31408"
-msgid "Control core hardware and software functions, including audio and video hardware setup, autoplay and locking."
-msgstr ""
-
 msgctxt "#31409"
 msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
 msgstr ""
@@ -1217,4 +1191,10 @@ msgctxt "#31463"
 msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
 msgstr ""
 
+msgctxt "#31464"
+msgid "You have now switched to XBMC/Kodi Expert Mode.[CR]The main menu now reflects this change."
+msgstr ""
 
+msgctxt "#31465"
+msgid "You have now switched to TLBB Easy Mode.[CR]The main menu now reflects this change."
+msgstr ""

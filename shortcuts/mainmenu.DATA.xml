@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 
-  <!-- TVShows -->
+  <!-- TVShows *TLBB* -->
 	<shortcut>
 		<label>$LOCALIZE[31002]</label>
 		<label2>32034</label2>
@@ -11,18 +11,8 @@
 		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=tvshows&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/TV Shows,return)</action>
 	</shortcut>
-	<shortcut>
-		<label>$LOCALIZE[31002]</label>
-		<label2>32034</label2>
-		<defaultID>tvshows</defaultID>
-		<icon>DefaultTVShows.png</icon>
-		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindow(Videos,TVShowTitles,return)</action>
-	</shortcut>
 
-
-  <!-- Movies -->
+  <!-- Movies *TLBB* -->
 	<shortcut>
 		<label>$LOCALIZE[342]</label>
 		<label2>32034</label2>
@@ -32,18 +22,8 @@
 		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=movies&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Movies,return)</action>
 	</shortcut>
-	<shortcut>
-		<label>$LOCALIZE[342]</label>
-		<label2>32034</label2>
-		<defaultID>movies</defaultID>
-		<icon>DefaultMovies.png</icon>
-		<thumb />
-		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindow(Videos,MovieTitles,return)</action>
-	</shortcut>
 
-
-  <!-- Family -->
+  <!-- Family *TLBB* -->
 	<shortcut>
 		<label>Family</label>
 		<label2>32034</label2>
@@ -54,8 +34,7 @@
 		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=movies&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Family,return)</action>
 	</shortcut>
 
-
-  <!-- Sports -->
+  <!-- Sports *TLBB* -->
 	<shortcut>
 		<label>Sports</label>
 		<label2>32034</label2>
@@ -66,8 +45,7 @@
 		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=videos&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Sports,return)</action>
 	</shortcut>
 
-
-  <!-- Music -->
+  <!-- Music *TLBB* -->
 	<shortcut>
 		<label>$LOCALIZE[10005]</label>
 		<label2>32034</label2>
@@ -77,6 +55,88 @@
 		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=songs&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Music,return)</action>
 	</shortcut>
+
+  <!-- Videos *TLBB* -->
+	<shortcut>
+		<label>$LOCALIZE[10006]</label>
+		<label2>32034</label2>
+		<defaultID>videos</defaultID>
+		<icon>DefaultVideo.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(videos,sources://video/,return)</action>
+	</shortcut>
+
+  <!-- Add-ons *TLBB* -->
+	<shortcut>
+		<label>$LOCALIZE[24001]</label>
+		<label2>32034</label2>
+		<defaultID>addons</defaultID>
+		<icon>DefaultAddon.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Videos,Addons,return)</action>
+	</shortcut>
+
+  <!-- Live TV *TLBB* -->
+	<shortcut>
+		<label>$LOCALIZE[31000]</label>
+		<label2>32034</label2>
+		<defaultID>livetv</defaultID>
+		<icon>icons/LiveTV.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=episodes&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Live TV,return)</action>
+	</shortcut>
+
+  <!-- Weather *TLBB* -->
+	<shortcut>
+		<label>$LOCALIZE[12600]</label>
+		<label2>32034</label2>
+		<defaultID>weather</defaultID>
+		<icon>icons/Weather.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Weather)</action>
+	</shortcut>
+
+  <!-- Settings *TLBB* -->
+	<shortcut>
+		<label>$LOCALIZE[10004]</label>
+		<label2>32034</label2>
+		<defaultID>settings</defaultID>
+		<icon>icons/Settings.png</icon>
+		<thumb />
+		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+
+
+
+
+  <!-- TVShows *XBMC* -->
+	<shortcut>
+		<label>$LOCALIZE[31002]</label>
+		<label2>32034</label2>
+		<defaultID>tvshows</defaultID>
+		<icon>DefaultTVShows.png</icon>
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Videos,TVShowTitles,return)</action>
+	</shortcut>
+
+  <!-- Movies *XBMC* -->
+	<shortcut>
+		<label>$LOCALIZE[342]</label>
+		<label2>32034</label2>
+		<defaultID>movies</defaultID>
+		<icon>DefaultMovies.png</icon>
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Videos,MovieTitles,return)</action>
+	</shortcut>
+
+  <!-- Music *XBMC* -->
 	<shortcut>
 		<label>$LOCALIZE[10005]</label>
 		<label2>32034</label2>
@@ -87,30 +147,29 @@
 		<action>ActivateWindow(Music)</action>
 	</shortcut>
 
-
-  <!-- Videos -->
+  <!-- Videos *TLBB* -->
 	<shortcut>
 		<label>$LOCALIZE[10006]</label>
 		<label2>32034</label2>
 		<defaultID>videos</defaultID>
 		<icon>DefaultVideo.png</icon>
 		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(videos,sources://video/,return)</action>
 	</shortcut>
 
-
-  <!-- Add-ons -->
+  <!-- Add-ons *TLBB* -->
 	<shortcut>
 		<label>$LOCALIZE[24001]</label>
 		<label2>32034</label2>
 		<defaultID>addons</defaultID>
 		<icon>DefaultAddon.png</icon>
 		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Videos,Addons,return)</action>
 	</shortcut>
 
-
-  <!-- Pictures -->
+  <!-- Pictures *XBMC* -->
 	<shortcut>
 		<label>$LOCALIZE[10002]</label>
 		<label2>32034</label2>
@@ -121,8 +180,7 @@
 		<action>ActivateWindow(Pictures)</action>
 	</shortcut>
 
-
-  <!-- Programs -->
+  <!-- Programs *XBMC* -->
 	<shortcut>
 		<label>$LOCALIZE[10001]</label>
 		<label2>32034</label2>
@@ -133,17 +191,7 @@
 		<action>ActivateWindow(Programs,Addons,return)</action>
 	</shortcut>
 
-
-  <!-- Live TV -->
-	<shortcut>
-		<label>$LOCALIZE[31000]</label>
-		<label2>32034</label2>
-		<defaultID>livetv</defaultID>
-		<icon>icons/LiveTV.png</icon>
-		<thumb />
-		<visible>!Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindow(Videos,plugin://plugin.program.tlbb.content/?label=episodes&amp;mode=400&amp;path=special://userdata/addon_data/plugin.program.tlbb.content/TLBB Content/Live TV,return)</action>
-	</shortcut>
+  <!-- Live TV *XBMC* -->
 	<shortcut>
 		<label>$LOCALIZE[31000]</label>
 		<label2>32034</label2>
@@ -154,19 +202,7 @@
     <action>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</action>
 	</shortcut>
 
-
-  <!-- Weather -->
-	<shortcut>
-		<label>$LOCALIZE[12600]</label>
-		<label2>32034</label2>
-		<defaultID>weather</defaultID>
-		<icon>icons/Weather.png</icon>
-		<thumb />
-		<action>ActivateWindow(Weather)</action>
-	</shortcut>
-
-
-  <!-- Search (no defaults submenus) -->
+  <!-- Search *XBMC* (no defaults submenus) -->
 	<shortcut>
 		<label>$LOCALIZE[137]</label>
 		<label2>32034</label2>
@@ -176,9 +212,8 @@
 		<visible>Skin.HasSetting(ExpertSkinSettings) + System.HasAddon(script.globalsearch)</visible>
 		<action>RunScript(script.globalsearch)</action>
 	</shortcut>
-	
-	
-  <!-- Trailers (no defaults submenus) -->
+
+  <!-- Trailers *XBMC* (no defaults submenus) -->
 	<shortcut>
 		<label>$LOCALIZE[31018]</label>
 		<label2>32034</label2>
@@ -189,8 +224,7 @@
 		<action>ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</action>
 	</shortcut>
 
-	
-  <!-- Favourites (no defaults submenus) -->
+  <!-- Favourites *XBMC* (no defaults submenus) -->
 	<shortcut>
 		<label>$LOCALIZE[10134]</label>
 		<label2>32034</label2>
@@ -201,16 +235,26 @@
 		<action>ActivateWindow(favourites)</action>
 	</shortcut>
 
-	
-  <!-- Settings -->
+  <!-- Weather *TLBB* -->
+	<shortcut>
+		<label>$LOCALIZE[12600]</label>
+		<label2>32034</label2>
+		<defaultID>weather</defaultID>
+		<icon>icons/Weather.png</icon>
+		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
+		<action>ActivateWindow(Weather)</action>
+	</shortcut>
+
+  <!-- Settings *TLBB* -->
 	<shortcut>
 		<label>$LOCALIZE[10004]</label>
 		<label2>32034</label2>
 		<defaultID>settings</defaultID>
 		<icon>icons/Settings.png</icon>
 		<thumb />
+		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
 		<action>ActivateWindow(Settings)</action>
 	</shortcut>
-
 
 </shortcuts>

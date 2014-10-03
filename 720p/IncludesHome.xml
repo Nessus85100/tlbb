@@ -1239,8 +1239,9 @@
     				<label>TLBB Mode</label>
     				<altlabel>XBMC Mode</altlabel>
     				<usealttexture>Skin.HasSetting(ExpertSkinSettings)</usealttexture>
-    				<onclick>Skin.ToggleSetting(ExpertSkinSettings)</onclick>
+    				<onclick>AlarmClock(switch,Skin.ToggleSetting(ExpertSkinSettings),0:00,true)</onclick>
       		  <onclick>ReplaceWindow(Home)</onclick>
+      		  <onclick>ActivateWindow(1110)</onclick>
 				    <include>TopButton</include>
     			</control>
 					<control type="button" id="211">

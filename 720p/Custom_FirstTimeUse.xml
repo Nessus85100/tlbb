@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window  type="dialog" id="1111">
+<window type="dialog" id="1111">
 	<defaultcontrol always="true">100</defaultcontrol>
   <onload>RunScript(script.tlbb.systemsettings,refresh)</onload>
   <onunload>PreviousMenu</onunload>
@@ -16,7 +16,8 @@
   			<left>316</left>
   			<top>105</top>
   			<width>649</width>
-  			<height>473</height>
+			  <height>473</height>
+			  <!-- <height>520</height> -->
   			<aspectratio>stretch</aspectratio>
   			<texture background="true" border="39">dialogs/other/default.png</texture>
   		</control>
@@ -30,7 +31,7 @@
   			<left>357</left>
   			<top>150</top>
   			<width>565</width>
-  			<label>First Use Setup</label>
+			  <label>$LOCALIZE[31379]</label>
   			<font>FontSize_36</font>
   			<textcolor>white</textcolor>
   			<align>center</align>
@@ -42,12 +43,12 @@
   			<left>363</left>
   			<top>193</top>
   			<width>553</width>
-  			<height>353</height>
+			  <height>400</height>
   		  <itemgap>4</itemgap>
   			<onleft>10000</onleft>
-  			<onright>10000</onright>
-  			<onup>900</onup>
-  			<ondown>900</ondown>
+			  <onright>10000</onright>
+			  <onup>10000</onup>
+			  <ondown>10000</ondown>
   			<scrolltime>250</scrolltime>
   			<control type="button" id="901">
   				<description>Language Button</description>
@@ -75,15 +76,15 @@
   			</control>
 <!--
   			<control type="button" id="904">
-  				<description>Zoom Button</description>
+				  <description>TImezone Button</description>
   		    <width>553</width>
           <include>DialogsButton</include>
-  				<label>Adjust Screen</label>
-    			<label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skinzoom)][/COLOR]</label2>
-  				<onclick>RunScript(script.tlbb.systemsettings,zoomUp)</onclick>
+			    <label>$LOCALIZE[14080]</label>
+			    <label2>[COLOR=blue]???????[/COLOR]</label2>
+			    <onclick>RunScript(script.tlbb.systemsettings,??????????)</onclick>
   			</control>
 -->
-        <control type="group" id="904">
+        <control type="group" id="905">
           <description>Fake spin control</description>
           <width>553</width>
           <height>47</height>
@@ -94,30 +95,30 @@
               <height>47</height>
               <texture>buttons/focus.png</texture>
               <aspectratio>stretch</aspectratio>
-              <visible>ControlGroup(904).HasFocus</visible>
+              <visible>ControlGroup(905).HasFocus</visible>
           </control>
-          <control type="button" id="9041">
+          <control type="button" id="9051">
               <posx>493</posx>
               <posy>1</posy>
               <width>30</width>
               <height>44</height>
               <onleft>10000</onleft>
-              <onright>9042</onright>
+              <onright>9052</onright>
               <onup>903</onup>
-              <ondown>905</ondown>
+              <ondown>906</ondown>
               <texturefocus>buttons/arrow_down_fo.png</texturefocus>
               <texturenofocus>buttons/arrow_down_nf.png</texturenofocus>
               <onclick>RunScript(script.tlbb.systemsettings,zoomDown)</onclick>
           </control>
-          <control type="button" id="9042">
+          <control type="button" id="9052">
               <posx>523</posx>
               <posy>1</posy>
               <width>30</width>
               <height>44</height>
-              <onleft>9041</onleft>
+              <onleft>9051</onleft>
               <onright>10000</onright>
               <onup>903</onup>
-              <ondown>905</ondown>
+              <ondown>906</ondown>
               <texturefocus>buttons/arrow_up_fo.png</texturefocus>
               <texturenofocus>buttons/arrow_up_nf.png</texturenofocus>
               <onclick>RunScript(script.tlbb.systemsettings,zoomUp)</onclick>
@@ -125,20 +126,20 @@
           <control type="button">
               <width>500</width>
               <include>DialogsButton</include>
-              <label>$LOCALIZE[216]</label>
+              <label>$LOCALIZE[31378]</label>
               <label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skinzoom),, %][/COLOR]</label2>
-              <visible>!ControlGroup(904).HasFocus</visible>
+              <visible>!ControlGroup(905).HasFocus</visible>
           </control>
           <control type="button">
               <width>500</width>
 			        <textcolor>white</textcolor>
               <include>DialogsButton</include>
-              <label>$LOCALIZE[216]</label>
+              <label>$LOCALIZE[31378]</label>
               <label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skinzoom),, %][/COLOR]</label2>
-              <visible>ControlGroup(904).HasFocus</visible>
+              <visible>ControlGroup(905).HasFocus</visible>
           </control>
         </control>
-  			<control type="button" id="905">
+			  <control type="button" id="906">
   				<description>Network Button</description>
   		    <width>553</width>
           <include>DialogsButton</include>
@@ -146,7 +147,7 @@
   				<label2>[COLOR=blue]$INFO[System.InternetState]$INFO[Network.IPAddress, (,)][/COLOR]</label2>
   				<onclick>RunScript(script.linux.nm)</onclick>
   			</control>
-  			<control type="button" id="906">
+			  <control type="button" id="907">
   				<description>Firmware Button</description>
   		    <width>553</width>
           <include>DialogsButton</include>
@@ -155,7 +156,7 @@
   				<onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
   			</control>
 <!--
-  			<control type="button" id="907">
+			  <control type="button" id="908">
   				<description>Skin Button</description>
   		    <width>553</width>
           <include>DialogsButton</include>
@@ -170,7 +171,8 @@
       <!-- Buttons -->
   		<control type="grouplist" id="10000">
   			<left>355</left>
-  			<top>508</top>
+			  <top>508</top>
+			  <!-- <top>555</top> -->
   			<width>565</width>
   			<height>0</height>
   			<itemgap>0</itemgap>
