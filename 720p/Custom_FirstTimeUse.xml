@@ -10,14 +10,13 @@
       <animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
     </control>
   	<control type="group">
-  	  <visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(busy.xml)</visible>
+  	  <visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(busy.xml)</visible>
   		<include>DialogAnimation</include>
   		<control type="image">
   			<left>316</left>
-  			<top>105</top>
+  			<top>85</top>
   			<width>649</width>
-			  <height>473</height>
-			  <!-- <height>520</height> -->
+			  <height>560</height>
   			<aspectratio>stretch</aspectratio>
   			<texture background="true" border="39">dialogs/other/default.png</texture>
   		</control>
@@ -29,7 +28,7 @@
   		<control type="label">
   			<description>Heding Label</description>
   			<left>357</left>
-  			<top>150</top>
+  			<top>125</top>
   			<width>565</width>
 			  <label>$LOCALIZE[31379]</label>
   			<font>FontSize_36</font>
@@ -41,9 +40,9 @@
   
   		<control type="grouplist" id="900">
   			<left>363</left>
-  			<top>193</top>
+  			<top>168</top>
   			<width>553</width>
-			  <height>400</height>
+			  <height>404</height>
   		  <itemgap>4</itemgap>
   			<onleft>10000</onleft>
 			  <onright>10000</onright>
@@ -66,24 +65,30 @@
     			<label2>[COLOR=blue]$INFO[Skin.String(subtitles.languages)][/COLOR]</label2>
   				<onclick>RunScript(script.tlbb.systemsettings,SetSubtitleDownload)</onclick>
   			</control>
+			  <control type="button" id="908">
+  				<description>Character Set (Subtitles)</description>
+  		    <width>553</width>
+          <include>DialogsButton</include>
+  				<label>$LOCALIZE[31380]</label>
+			    <label2>[COLOR=blue]$INFO[Skin.String(subtitles.charset)][/COLOR]</label2>
+			    <onclick>RunScript(script.tlbb.systemsettings,SetSubtitleCharset)</onclick>
+  			</control>
   			<control type="button" id="903">
   				<description>Region Button</description>
   		    <width>553</width>
           <include>DialogsButton</include>
-  				<label>$LOCALIZE[424] $LOCALIZE[20026]</label>
+  				<label>$LOCALIZE[20026]</label>
     			<label2>[COLOR=blue]$INFO[Skin.String(locale.country)][/COLOR]</label2>
   				<onclick>RunScript(script.tlbb.systemsettings,SetRegion)</onclick>
   			</control>
-<!--
   			<control type="button" id="904">
-				  <description>TImezone Button</description>
+				  <description>Timezone Button</description>
   		    <width>553</width>
           <include>DialogsButton</include>
 			    <label>$LOCALIZE[14080]</label>
-			    <label2>[COLOR=blue]???????[/COLOR]</label2>
-			    <onclick>RunScript(script.tlbb.systemsettings,??????????)</onclick>
+			    <label2 fallback="N/A">[COLOR=blue]$INFO[Skin.String(locale.timezonecountry)][/COLOR]</label2>
+			    <onclick>RunScript(script.tlbb.systemsettings,setTimezoneCountry)</onclick>
   			</control>
--->
         <control type="group" id="905">
           <description>Fake spin control</description>
           <width>553</width>
@@ -104,7 +109,7 @@
               <height>44</height>
               <onleft>10000</onleft>
               <onright>9052</onright>
-              <onup>903</onup>
+              <onup>904</onup>
               <ondown>906</ondown>
               <texturefocus>buttons/arrow_down_fo.png</texturefocus>
               <texturenofocus>buttons/arrow_down_nf.png</texturenofocus>
@@ -117,7 +122,7 @@
               <height>44</height>
               <onleft>9051</onleft>
               <onright>10000</onright>
-              <onup>903</onup>
+              <onup>904</onup>
               <ondown>906</ondown>
               <texturefocus>buttons/arrow_up_fo.png</texturefocus>
               <texturenofocus>buttons/arrow_up_nf.png</texturenofocus>
@@ -171,8 +176,7 @@
       <!-- Buttons -->
   		<control type="grouplist" id="10000">
   			<left>355</left>
-			  <top>508</top>
-			  <!-- <top>555</top> -->
+			  <top>577</top>
   			<width>565</width>
   			<height>0</height>
   			<itemgap>0</itemgap>

@@ -981,7 +981,7 @@
 					<width>70</width>
 					<height>70</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
+					<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 					<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
 					<bordersize>6</bordersize>
 				</control>
@@ -1037,7 +1037,7 @@
 					<width>70</width>
 					<height>70</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
+					<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 					<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
 					<bordersize>6</bordersize>
 				</control>

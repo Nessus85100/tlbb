@@ -1,3 +1,8 @@
+[B][COLOR=FF56ADDA]v3.1.8 - Release Date 5/10/2014[/COLOR][/B]
+• Added Timezone in First Time Use Setup dialog.
+• Added Subtitles character set in First Time Use Setup dialog.
+• Added flags icons for langauge select in First Time Use Setup dialog.
+
 [B][COLOR=FF56ADDA]v3.1.7 - Release Date 3/10/2014[/COLOR][/B]
 • Added info message on switching TLBB/XBMC modes.
 • Changed navigation behaviour in First Time Use Setup dialog.

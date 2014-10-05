@@ -999,7 +999,11 @@ msgctxt "#31379"
 msgid "First Use Setup"
 msgstr ""
 
-#empty strings from id 31380 to 31408
+msgctxt "#31380"
+msgid "Subtitle character set"
+msgstr ""
+
+#empty strings from id 31381 to 31408
 #Settings Category Description & Header Labels
 msgctxt "#31409"
 msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
