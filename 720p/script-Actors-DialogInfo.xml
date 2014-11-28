@@ -342,7 +342,7 @@
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<ondown>150</ondown>
+				<ondown condition="Control.IsVisible(150) + IntegerGreaterThan(Container(150).NumItems,0)">150</ondown>
 				<control type="button" id="8">
 					<description>Browse</description>
           <onclick>PreviousMenu</onclick>
@@ -404,7 +404,7 @@
           <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(8)" reversible="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<description>Cast/Plot</description>
+					<description>Filmography/Biography</description>
 				  <include>TopSmallLabel</include>
           <label>$INFO[Control.GetLabel(105)]</label>
 					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(105)" reversible="true">Conditional</animation>

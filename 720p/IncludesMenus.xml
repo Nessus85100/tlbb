@@ -852,7 +852,7 @@
 	<include name="DialogSelect">
 	 <control type="group">
 	  <include>DialogAnimation</include>
-		<visible>![Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(virtualkeyboard)]</visible>
+		<visible>![Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(textviewer)]</visible>
 		<control type="image">
 			<left>316</left>
 			<top>122</top>

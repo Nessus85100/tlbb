@@ -7,7 +7,7 @@
 
 	 <control type="group">
     <include>DialogAnimation</include>
-	  <visible>IsEmpty(Window.Property(additionalDialog))</visible>
+		<visible>IsEmpty(Window.Property(additionalDialog)) + !Window.IsActive(SelectDialog) + !Window.IsActive(DialogSelect.xml)</visible>
 		<control type="image">
 			<left>183</left>
 			<top>101</top>
