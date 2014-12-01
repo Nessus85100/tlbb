@@ -1,0 +1,794 @@
+<window id="5533">
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+
+	 <control type="group">
+    <include>OpenCloseSlideAnimation</include>
+    <include>VisibleHiddenSlideAnimation</include>
+		<visible>!Window.IsActive(selectWindow.xml) + !Window.IsActive(contexMenu.xml) + !Window.IsActive(getPasskey.xml) + !Window.IsActive(favourites) + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]</visible>
+		<control type="image">
+		  <include>FullscreenDimensions</include>
+			<texture background="true">windows/tlbb_settings/bg.png</texture>
+      <visible>!StringCompare(Container(1000).ListItem.Property(listTyp), 1900)</visible>  
+		</control>
+		<control type="image">
+		  <include>FullscreenDimensions</include>
+			<texture background="true">windows/tlbb_settings/bg_about.png</texture>
+      <visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1900)</visible>  
+		</control>	
+		<control type="label">
+			<description>header label</description>
+			<left>190</left>
+			<top>145</top>
+			<width>905</width>
+			<height>50</height>
+			<font>FontSize_36</font>
+      <label>TLBB Settings</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<scroll>false</scroll>
+		</control>
+
+		<control type="group" id="8000">
+			<top>196</top>
+			
+      <!-- ====================== -->
+      <!-- ==== Left Section ==== -->
+      <!-- == Main Menu (left) == -->
+      <!-- ====================== -->
+			<control type="list" id="1000">
+				<left>190</left>
+				<top>0</top>
+				<width>250</width>
+				<height>300</height>
+				<itemgap>1</itemgap>
+				<onleft>9000</onleft>
+				<onright>7000</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="50" width="250">
+					<control type="label">
+						<left>235</left>
+						<top>0</top>
+						<width>245</width>
+						<height>49</height>
+				    <font>FontSize_20</font>
+						<textcolor>77white</textcolor>
+						<align>right</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="250">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>250</width>
+						<height>49</height>
+						<texture>windows/settings/settings_left_fo.png</texture>
+            <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(1000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<left>235</left>
+						<top>0</top>
+						<width>245</width>
+						<height>49</height>
+				    <font>FontSize_20</font>
+						<textcolor>white</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+
+      <!-- =================== -->
+      <!-- == Right Section == -->
+      <!-- =================== -->
+		  <control type="group" id="7000">
+				<left>447</left>
+
+        <!-- General List's Content -->
+				<control type="list" id="1100">
+					<description>control area</description>
+					<left>0</left>
+					<top>0</top>
+					<width>645</width>
+					<height>300</height>
+					<itemgap>1</itemgap>
+					<onup>1100</onup>
+					<ondown>1100</ondown>
+					<onleft>1000</onleft>
+					<onright>9000</onright>
+          <visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1100)</visible>   
+					<itemlayout height="50" width="645">
+						<control type="label">
+							<left>15</left>
+							<top>0</top>
+							<width>645</width>
+							<height>49</height>
+					    <font>FontSize_20</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+              <visible>StringCompare(ListItem.Property(Typ), separator)</visible>
+						</control>
+            <control type="group">
+              <visible>!StringCompare(ListItem.Property(Typ), separator)</visible>
+  						<control type="label">
+  							<left>15</left>
+  							<top>0</top>
+  							<width>430</width>
+  							<height>49</height>
+  					    <font>FontSize_20</font>
+  							<textcolor>77white</textcolor>
+  							<align>left</align>
+  							<aligny>center</aligny>
+  							<label>• $INFO[ListItem.Label]</label>
+  						</control>
+  						<control type="label">
+  							<left>625</left>
+  							<top>0</top>
+  							<width>200</width>
+  							<height>49</height>
+  					    <font>FontSize_20</font>
+  							<textcolor>77white</textcolor>
+  							<align>right</align>
+  							<aligny>center</aligny>
+  							<label>$INFO[ListItem.Property(value)]</label>
+                <visible>!StringCompare(ListItem.Property(Typ), bool) + !StringCompare(ListItem.Property(Typ), button)</visible>
+  						</control>
+            </control>
+            <control type="group">
+              <visible>StringCompare(ListItem.Property(Typ), bool)</visible>
+              <control type="image">
+                  <left>575</left>
+                  <top>5</top>
+                  <width>57</width>
+                  <height>41</height>
+                  <texture>buttons/radio_button_off.png</texture>
+                  <visible>StringCompare(ListItem.Property(value), 0) | StringCompare(ListItem.Property(value), false) | IsEmpty(ListItem.Property(value))</visible>
+              </control>
+              <control type="image">
+                  <left>575</left>
+                  <top>5</top>
+                  <width>57</width>
+                  <height>41</height>
+                  <texture>buttons/radio_button_on.png</texture>
+                  <visible>StringCompare(ListItem.Property(value), 1) | StringCompare(ListItem.Property(value), true)</visible>
+              </control>
+            </control>
+					</itemlayout>
+					<focusedlayout height="50" width="645">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>645</width>
+							<height>49</height>
+					    <texture>windows/settings/settings_right_fo.png</texture>
+				      <visible>Control.HasFocus(1100)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>0</top>
+							<width>645</width>
+							<height>49</height>
+					    <font>FontSize_20</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+              <visible>StringCompare(ListItem.Property(Typ), separator)</visible>
+						</control>
+            <control type="group">
+              <visible>!StringCompare(ListItem.Property(Typ), separator)</visible>
+  						<control type="label">
+  							<left>15</left>
+  							<top>0</top>
+  							<width>430</width>
+  							<height>49</height>
+  					    <font>FontSize_20</font>
+  							<textcolor>white</textcolor>
+  							<align>left</align>
+  							<aligny>center</aligny>
+  							<label>• $INFO[ListItem.Label]</label>
+                <visible>Control.HasFocus(1100)</visible>
+  						</control>
+  						<control type="label">
+  							<left>625</left>
+  							<top>0</top>
+  							<width>200</width>
+  							<height>49</height>
+  					    <font>FontSize_20</font>
+  							<textcolor>white</textcolor>
+  							<align>right</align>
+  							<aligny>center</aligny>
+  							<label>$INFO[ListItem.Property(value)]</label>
+                <visible>!StringCompare(ListItem.Property(Typ), bool) + !StringCompare(ListItem.Property(Typ), button) + Control.HasFocus(1100)</visible>
+  						</control>
+  						<control type="label">
+  							<left>15</left>
+  							<top>0</top>
+  							<width>430</width>
+  							<height>49</height>
+  					    <font>FontSize_20</font>
+  							<textcolor>77white</textcolor>
+  							<align>left</align>
+  							<aligny>center</aligny>
+  							<label>• $INFO[ListItem.Label]</label>
+                <visible>!Control.HasFocus(1100)</visible>
+  						</control>
+  						<control type="label">
+  							<left>625</left>
+  							<top>0</top>
+  							<width>200</width>
+  							<height>49</height>
+  					    <font>FontSize_20</font>
+  							<textcolor>77white</textcolor>
+  							<align>right</align>
+  							<aligny>center</aligny>
+  							<label>$INFO[ListItem.Property(value)]</label>
+                <visible>!StringCompare(ListItem.Property(Typ), bool) + !StringCompare(ListItem.Property(Typ), button) + !Control.HasFocus(1100)</visible>
+  						</control>
+            </control>
+            <control type="group">
+              <visible>StringCompare(ListItem.Property(Typ), bool)</visible>
+              <control type="image">
+                  <left>575</left>
+                  <top>5</top>
+                  <width>57</width>
+                  <height>41</height>
+                  <texture>buttons/radio_button_off.png</texture>
+                  <visible>StringCompare(ListItem.Property(value), 0) | StringCompare(ListItem.Property(value), false) | IsEmpty(ListItem.Property(value))</visible>
+              </control>
+              <control type="image">
+                  <left>575</left>
+                  <top>5</top>
+                  <width>57</width>
+                  <height>41</height>
+                  <texture>buttons/radio_button_on.png</texture>
+                  <visible>StringCompare(ListItem.Property(value), 1) | StringCompare(ListItem.Property(value), true)</visible>
+              </control>
+            </control>
+					</focusedlayout>
+
+				</control>
+
+        <!-- Network Content -->
+				<control type="list" id="1200">
+					<description>control area</description>
+					<left>0</left>
+					<top>0</top>
+					<width>645</width>
+					<height>300</height>
+					<itemgap>1</itemgap>
+					<onup>1200</onup>
+					<ondown>1200</ondown>
+					<onleft>1000</onleft>
+					<onright>9000</onright>
+          <visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1200)</visible>   
+					<itemlayout height="50" width="645">
+            <!-- Icon ethernet -->
+            <control type="image">
+                <left>10</left>
+                <top>7</top>
+                <width>36</width>
+                <height>36</height>
+                <visible>StringCompare(ListItem.Property(netType), ethernet)</visible> 
+                <texture>windows/tlbb_settings/icons/eth.png</texture>
+            </control>
+            <!-- Icon wifi -->
+            <control type="image">
+                <left>10</left>
+                <top>7</top>
+                <width>36</width>
+                <height>36</height>
+                <visible>StringCompare(ListItem.Property(netType), wifi)</visible> 
+                <texture>windows/tlbb_settings/icons/wlan.png</texture>
+            </control>
+            <!-- Icon vpn -->
+            <control type="image">
+                <left>10</left>
+                <top>7</top>
+                <width>36</width>
+                <height>36</height>
+                <visible>StringCompare(ListItem.Property(netType), vpn)</visible> 
+                <texture>windows/tlbb_settings/icons/vpn.png</texture>
+            </control>
+            <!-- Connection Name -->
+            <control type="label">
+                <left>50</left>
+                <top>5</top>
+                <width>300</width>
+                <height>20</height>
+                <font>FontSize_18</font>
+                <textcolor>blue</textcolor>
+                <info>ListItem.Label</info>
+            </control>
+            <!-- Connection Address -->
+            <control type="label">
+                <left>625</left>
+                <top>5</top>
+                <width>330</width>
+                <height>20</height>
+		            <align>right</align>
+                <font>FontSize_18</font>
+                <textcolor>blue</textcolor>
+                <label>$ADDON[service.openelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
+            </control>
+            <!-- State/Method/Interface -->
+            <control type="label">
+                <left>50</left>
+                <top>25</top>
+                <width>525</width>
+                <height>20</height>
+                <font>FontSize_16</font>
+                <textcolor>blue</textcolor>
+                <label>$ADDON[service.openelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State),,$COMMA   ][/COLOR]$ADDON[service.openelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method),,$COMMA   ][/COLOR]$ADDON[service.openelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+            </control>
+            <!-- WiFi Signal Value -->
+            <control type="label">
+                <left>585</left>
+                <top>26</top>
+                <width>100</width>
+                <height>20</height>
+		            <align>right</align>
+                <font>FontSize_16</font>
+                <textcolor>white</textcolor>
+                <label>$INFO[ListItem.Property(Strength),,%]</label>
+                <visible>StringCompare(ListItem.Property(netType), wifi)</visible>
+                <animation effect="slide" start="0,0" end="-25,0" time="0" condition="IntegerGreaterThan(ListItem.Property(Security), 0)">Conditional</animation>
+            </control>
+            <!-- WiFi Signal -->
+						<control type="image">
+  							<left>588</left>
+  							<top>27</top>
+  							<width>40</width>
+  							<height>16</height>
+  							<aspectratio align="center" aligny="center">keep</aspectratio>
+  					    <texture background="true">$VAR[WiFiSignalIcons]</texture>
+                <visible>StringCompare(ListItem.Property(netType), wifi)</visible>
+                <animation effect="slide" start="0,0" end="-25,0" time="0" condition="IntegerGreaterThan(ListItem.Property(Security), 0)">Conditional</animation>
+						</control>
+            <!-- Secure Symbol -->
+						<control type="image">
+  							<left>607</left>
+  							<top>26</top>
+  							<width>20</width>
+  							<height>18</height>
+  							<aspectratio align="center" aligny="center">stretch</aspectratio>
+                <texture>windows/tlbb_settings/icons/Key.png</texture>
+                <visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="645">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>645</width>
+							<height>49</height>
+					    <texture>windows/settings/settings_right_fo.png</texture>
+				      <visible>Control.HasFocus(1200)</visible>
+						</control>
+              <!-- Icon ethernet -->
+              <control type="image">
+                  <left>10</left>
+                  <top>7</top>
+                  <width>36</width>
+                  <height>36</height>
+                  <visible>StringCompare(ListItem.Property(netType), ethernet)</visible> 
+                  <texture>windows/tlbb_settings/icons/eth.png</texture>
+              </control>
+              <!-- Icon wifi -->
+              <control type="image">
+                  <left>10</left>
+                  <top>7</top>
+                  <width>36</width>
+                  <height>36</height>
+                  <visible>StringCompare(ListItem.Property(netType), wifi)</visible> 
+                  <texture>windows/tlbb_settings/icons/wlan.png</texture>
+              </control>
+              <!-- Icon vpn -->
+              <control type="image">
+                  <left>10</left>
+                  <top>7</top>
+                  <width>36</width>
+                  <height>36</height>
+                  <visible>StringCompare(ListItem.Property(netType), vpn)</visible> 
+                  <texture>windows/tlbb_settings/icons/vpn.png</texture>
+              </control>
+              <!-- Connection Name -->
+              <control type="label">
+                  <left>50</left>
+                  <top>5</top>
+                  <width>300</width>
+                  <height>20</height>
+                  <font>FontSize_18</font>
+                  <textcolor>blue</textcolor>
+                  <info>ListItem.Label</info>
+              </control>
+              <!-- Connection Address -->
+              <control type="label">
+                  <left>625</left>
+                  <top>5</top>
+                  <width>330</width>
+                  <height>20</height>
+			            <align>right</align>
+                  <font>FontSize_18</font>
+                  <textcolor>blue</textcolor>
+                  <label>$ADDON[service.openelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                  <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
+              </control>
+              <!-- State/Method/Interface -->
+              <control type="label">
+                  <left>50</left>
+                  <top>25</top>
+                  <width>525</width>
+                  <height>20</height>
+                  <font>FontSize_16</font>
+                  <textcolor>blue</textcolor>
+                  <label>$ADDON[service.openelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State),,$COMMA   ][/COLOR]$ADDON[service.openelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method),,$COMMA   ][/COLOR]$ADDON[service.openelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+              </control>
+              <!-- WiFi Signal Value -->
+              <control type="label">
+                  <left>585</left>
+                  <top>26</top>
+                  <width>100</width>
+                  <height>20</height>
+			            <align>right</align>
+                  <font>FontSize_16</font>
+                  <textcolor>white</textcolor>
+                  <label>$INFO[ListItem.Property(Strength),,%]</label>
+                  <visible>StringCompare(ListItem.Property(netType), wifi)</visible>
+                  <animation effect="slide" start="0,0" end="-25,0" time="0" condition="IntegerGreaterThan(ListItem.Property(Security), 0)">Conditional</animation>
+              </control>
+              <!-- WiFi Signal -->
+  						<control type="image">
+    							<left>588</left>
+    							<top>27</top>
+    							<width>40</width>
+    							<height>16</height>
+    							<aspectratio align="center" aligny="center">keep</aspectratio>
+    					    <texture background="true">$VAR[WiFiSignalIcons]</texture>
+                  <visible>StringCompare(ListItem.Property(netType), wifi)</visible>
+                  <animation effect="slide" start="0,0" end="-25,0" time="0" condition="IntegerGreaterThan(ListItem.Property(Security), 0)">Conditional</animation>
+  						</control>
+              <!-- Secure Symbol -->
+  						<control type="image">
+    							<left>607</left>
+    							<top>26</top>
+    							<width>20</width>
+    							<height>18</height>
+    							<aspectratio align="center" aligny="center">stretch</aspectratio>
+                  <texture>windows/tlbb_settings/icons/Key.png</texture>
+                  <visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible>
+  						</control>
+					</focusedlayout>
+				</control>
+
+        <!-- Bluetooth Content -->
+        <control type="label" id="1301">
+            <left>0</left>
+            <top>165</top>
+            <width>645</width>
+            <height>20</height>
+            <font>FontSize_20</font>
+            <textcolor>white</textcolor>
+            <align>center</align>
+            <info>ListItem.Label</info>
+            <visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1300) + StringCompare(Container(1300).NumItems, 0)</visible> 
+        </control>
+				<control type="list" id="1300">
+					<description>control area</description>
+					<left>0</left>
+					<top>0</top>
+					<width>645</width>
+					<height>300</height>
+					<itemgap>1</itemgap>
+					<onup>1300</onup>
+					<ondown>1300</ondown>
+					<onleft>1000</onleft>
+					<onright>9000</onright>
+          <visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1300)</visible>   
+					<itemlayout height="50" width="645">
+            <!-- Icon -->
+            <control type="image">
+                <left>10</left>
+                <top>7</top>
+                <width>36</width>
+                <height>36</height>
+                <texture>$VAR[BluetoothIcons]</texture>
+            </control>
+            <!-- Connection Name -->
+            <control type="label">
+                <left>50</left>
+                <top>5</top>
+                <width>300</width>
+                <height>20</height>
+                <font>FontSize_18</font>
+                <textcolor>blue</textcolor>
+                <info>ListItem.Label</info>
+            </control>
+            <!-- Connection Address -->
+            <control type="label">
+                <left>625</left>
+                <top>5</top>
+                <width>330</width>
+                <height>20</height>
+		            <align>right</align>
+                <font>FontSize_18</font>
+                <textcolor>blue</textcolor>
+                <label>$ADDON[service.openelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+            </control>
+            <!-- State -->
+            <control type="label">
+                <left>50</left>
+                <top>25</top>
+                <width>525</width>
+                <height>20</height>
+                <font>FontSize_16</font>
+                <textcolor>blue</textcolor>
+                <label>$INFO[ListItem.Property(ConnectedState)]</label>
+            </control>
+            <!-- Trusted Symbol -->
+						<control type="image">
+  							<left>607</left>
+  							<top>26</top>
+  							<width>20</width>
+  							<height>18</height>
+  							<aspectratio align="center" aligny="center">stretch</aspectratio>
+                <texture>windows/tlbb_settings/icons/Key.png</texture>
+                <visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible> 
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="645">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>645</width>
+							<height>49</height>
+					    <texture>windows/settings/settings_right_fo.png</texture>
+				      <visible>Control.HasFocus(1300)</visible>
+						</control>
+            <!-- Icon -->
+            <control type="image">
+                <left>10</left>
+                <top>7</top>
+                <width>36</width>
+                <height>36</height>
+                <texture>$VAR[BluetoothIcons]</texture>
+            </control>
+            <!-- Connection Name -->
+            <control type="label">
+                <left>50</left>
+                <top>5</top>
+                <width>300</width>
+                <height>20</height>
+                <font>FontSize_18</font>
+                <textcolor>blue</textcolor>
+                <info>ListItem.Label</info>
+            </control>
+            <!-- Connection Address -->
+            <control type="label">
+                <left>625</left>
+                <top>5</top>
+                <width>330</width>
+                <height>20</height>
+		            <align>right</align>
+                <font>FontSize_18</font>
+                <textcolor>blue</textcolor>
+                <label>$ADDON[service.openelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+            </control>
+            <!-- State -->
+            <control type="label">
+                <left>50</left>
+                <top>25</top>
+                <width>525</width>
+                <height>20</height>
+                <font>FontSize_16</font>
+                <textcolor>blue</textcolor>
+                <label>$INFO[ListItem.Property(ConnectedState)]</label>
+            </control>
+            <!-- Trusted Symbol -->
+						<control type="image">
+  							<left>607</left>
+  							<top>26</top>
+  							<width>20</width>
+  							<height>18</height>
+  							<aspectratio align="center" aligny="center">stretch</aspectratio>
+                <texture>windows/tlbb_settings/icons/Key.png</texture>
+                <visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible> 
+						</control>
+					</focusedlayout>
+				</control>
+
+
+        <!-- About Content -->
+        <control type="group" id="1900">
+          <visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1900)</visible>  
+      		<control type="image">
+      			<left>5</left>
+      			<top>5</top>
+      			<width>123</width>
+      			<height>115</height>
+      			<aspectratio align="center" aligny="center">stretch</aspectratio>
+      			<texture>$INFO[System.AddonIcon(skin.tlbb)]</texture>
+						<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+					  <bordersize>6</bordersize>
+      		</control>
+    		  <control type="textbox">
+    				<description>Category Description</description>
+    				<left>140</left>
+    				<top>5</top>
+    				<width>490</width>
+    				<height>115</height>
+    				<textcolor>44white</textcolor>
+    				<shadowcolor>44333333</shadowcolor>
+    				<font>TextboxFont_18</font>
+					  <align>justify</align>
+    				<scroll>false</scroll>
+    				<label>$LOCALIZE[31434]</label>
+    		  </control>
+    		  <control type="textbox">
+    				<description>Category Description</description>
+    				<left>5</left>
+    				<top>120</top>
+    				<width>490</width>
+    				<height>175</height>
+    				<textcolor>44white</textcolor>
+    				<shadowcolor>44333333</shadowcolor>
+    				<font>TextboxFont_18</font>
+					  <align>justify</align>
+    				<scroll>false</scroll>
+    				<label>$LOCALIZE[31433]</label>
+    		  </control>
+				</control>
+
+			</control>
+		</control>
+
+	  <control type="label" id="1400">
+			<description>Description Area</description>
+			<left>205</left>
+			<top>495</top>
+			<width>875</width>
+			<height>85</height>
+		  <textcolor>44white</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<font>TextboxFont_18</font>
+			<align>left</align>
+			<scroll>false</scroll>
+      <wrapmultiline>true</wrapmultiline>
+      <label>$INFO[Container(5533).Property(InfoText)]</label>
+	  </control>
+
+    <!-- Buttons -->
+		<control type="grouplist" id="9000">
+			<left>203</left>
+			<top>515</top>
+		  <width>870</width>
+			<height>40</height>
+			<itemgap>0</itemgap>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>8000</onup>
+			<ondown>8000</ondown>
+			<control type="button" id="1502">
+				<description>Save</description>
+			  <width>150</width>
+			  <height>40</height>
+				<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
+				<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textwidth>110</textwidth>
+				<textoffsetx>40</textoffsetx>
+				<textoffsety>6</textoffsety>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<shadowcolor>99000000</shadowcolor>
+			  <label>-</label>
+        <visible>!IsEmpty(Control.GetLabel(1502))</visible>
+			</control>
+			<control type="button" id="1501">
+				<description>Cancel</description>
+			  <width>150</width>
+			  <height>40</height>
+				<texturefocus>dialogs/buttons/cancel_fo.png</texturefocus>
+				<texturenofocus>dialogs/buttons/cancel_nf.png</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textwidth>110</textwidth>
+				<textoffsetx>40</textoffsetx>
+				<textoffsety>6</textoffsety>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<shadowcolor>99000000</shadowcolor>
+			  <label>-</label>
+        <visible>!IsEmpty(Control.GetLabel(1501))</visible>
+			</control>
+			<control type="button" id="1503">
+				<description>Disconnect</description>
+			  <width>180</width>
+			  <height>40</height>
+				<texturefocus>dialogs/buttons/disconnect_fo.png</texturefocus>
+				<texturenofocus>dialogs/buttons/disconnect_nf.png</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textwidth>140</textwidth>
+				<textoffsetx>40</textoffsetx>
+				<textoffsety>6</textoffsety>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<shadowcolor>99000000</shadowcolor>
+			  <label>-</label>
+        <visible>!IsEmpty(Control.GetLabel(1503))</visible>
+			</control>
+			<control type="button" id="1504">
+				<description>Defaults</description>
+			  <width>150</width>
+			  <height>40</height>
+				<texturefocus>dialogs/buttons/settings_fo.png</texturefocus>
+				<texturenofocus>dialogs/buttons/settings_nf.png</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textwidth>110</textwidth>
+				<textoffsetx>40</textoffsetx>
+				<textoffsety>6</textoffsety>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<shadowcolor>99000000</shadowcolor>
+			  <label>-</label>
+        <visible>!IsEmpty(Control.GetLabel(1504))</visible>
+			</control>
+			<control type="button" id="1500">
+				<description>Delete</description>
+			  <width>150</width>
+			  <height>40</height>
+				<texturefocus>dialogs/buttons/delete_fo.png</texturefocus>
+				<texturenofocus>dialogs/buttons/delete_nf.png</texturenofocus>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>FontSize_20</font>
+				<textwidth>110</textwidth>
+				<textoffsetx>40</textoffsetx>
+				<textoffsety>6</textoffsety>
+				<textcolor>99grey</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<shadowcolor>99000000</shadowcolor>
+			  <label>-</label>
+        <visible>!IsEmpty(Control.GetLabel(1500))</visible>
+			</control>
+		</control>
+	 </control>
+
+
+   <control type="scrollbar" id="1097">
+     <visible>false</visible>
+   </control>   
+   <control type="scrollbar" id="1098">
+     <visible>false</visible>
+   </control>  
+   <control type="scrollbar" id="1099">
+     <visible>false</visible>
+   </control>
+
+
+   <control type="group" id="1900">
+     <visible>false</visible>
+   </control>
+
+  </controls>
+</window>

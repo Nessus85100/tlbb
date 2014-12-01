@@ -7,7 +7,7 @@
 	<include>BackgroundItems</include>
 
 			<control type="group">
-			  <visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(busy.xml)</visible>
+			  <visible>!Window.IsActive(mainWindow.xml) + !Window.IsActive(selectWindow.xml) + !Window.IsActive(contexMenu.xml) + !Window.IsActive(getPasskey.xml) + !Window.IsActive(ProgressDialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(busy.xml)</visible>
 		    <include>VisibleHiddenSlideAnimation</include>
 		    <include>DialogZoomInOutAnimation</include>
 				<control type="panel" id="9001">

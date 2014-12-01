@@ -45,7 +45,8 @@
 		</item>
 		<item id="9">
 			<onclick condition="Window.IsVisible(Home)">SetFocus(20)</onclick>
-      <onclick>RunScript(script.linux.nm)</onclick>
+			<onclick condition="System.HasAddon(script.linux.nm)">RunScript(script.linux.nm)</onclick>
+			<onclick condition="!System.HasAddon(script.linux.nm)">RunScript(service.openelec.settings)</onclick>
 			<thumb>icons/Network.png</thumb>
 		  <label>705</label>
 		</item>

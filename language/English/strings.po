@@ -1119,9 +1119,16 @@ msgstr ""
 
 
 
+#TLBB Settings
+msgctxt "#31433"
+msgid "[B]Support:[/B][CR]Web: http://thelittleblackbox.co.uk[CR]Forum: http://thelittleblackbox.co.uk/forum[CR]Quick Setup Guides: http://thelittleblackbox.com/go/ [CR][CR][B]Social Media:[/B][CR]Facebook: https://www.facebook.com/TheLittleBlackBox[CR]Twitter: https://twitter.com/TLBlackBox"
+msgstr ""
 
+msgctxt "#31434"
+msgid "This TLBB firmware is based on OpenELEC which is a minimal Linux distribution purpose built for XBMC. If you have any questions please DO NOT contact the official OpenELEC team as this fork is not officially supported by the team there and we have our own developers working on this build."
+msgstr ""
 
-#empty strings from id 31433 to 31439
+#empty strings from id 31435 to 31439
 
 
 #NOTICE1

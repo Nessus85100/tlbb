@@ -1,3 +1,11 @@
+[B][COLOR=FF56ADDA]v3.2.0 - Release Date 2/12/2014[/COLOR][/B]
+• Added support for TLBB Settings addon.
+• Remove script.linux Network Manager link's in newer builds.
+• Remove script TLBB Update Service link's in newer builds.
+
+[B][COLOR=FF56ADDA]v3.1.9 - Release Date 18/11/2014[/COLOR][/B]
+• Bug fixes.
+
 [B][COLOR=FF56ADDA]v3.1.8 - Release Date 5/10/2014[/COLOR][/B]
 • Added Timezone in First Time Use Setup dialog.
 • Added Subtitles character set in First Time Use Setup dialog.

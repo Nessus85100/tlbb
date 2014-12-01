@@ -181,7 +181,7 @@
 						<description>Defaults</description>
 					  <width>150</width>
 					  <height>40</height>
-						<texturefocus>dialogs/buttons/focus.png</texturefocus>
+						<texturefocus>dialogs/buttons/settings_fo.png</texturefocus>
 						<texturenofocus>dialogs/buttons/settings_nf.png</texturenofocus>
 						<align>left</align>
 						<aligny>top</aligny>

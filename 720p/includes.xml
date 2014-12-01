@@ -1206,27 +1206,42 @@
 		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),customquicknav)">$LOCALIZE[31373]</value>
 	</variable>
 
-	<variable name="WiFiSignalIcons">
-		<value condition="!IntegerGreaterThan(ListItem.Property(signal),0)">dialogs/accesspoints/wifi_signal_0.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Property(signal),0) + !IntegerGreaterThan(ListItem.Property(signal),19)">dialogs/accesspoints/wifi_signal_20.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Property(signal),20) + !IntegerGreaterThan(ListItem.Property(signal),39)">dialogs/accesspoints/wifi_signal_40.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Property(signal),40) + !IntegerGreaterThan(ListItem.Property(signal),59)">dialogs/accesspoints/wifi_signal_60.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Property(signal),60) + !IntegerGreaterThan(ListItem.Property(signal),79)">dialogs/accesspoints/wifi_signal_80.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Property(signal),80) + !IntegerGreaterThan(ListItem.Property(signal),100)">dialogs/accesspoints/wifi_signal_100.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Property(signal),100)">dialogs/accesspoints/wifi_signal_100.png</value>
+	<variable name="BluetoothIcons">
+		<value condition="StringCompare(ListItem.Property(Icon), default)">windows/tlbb_settings/icons/bt.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), modem)">windows/tlbb_settings/icons/bt-modem.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), audio-card)">windows/tlbb_settings/icons/bt-audio-card.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), camera-photo)">windows/tlbb_settings/icons/bt-camera-photo.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), phone)">windows/tlbb_settings/icons/bt-phone.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), camera-video)">windows/tlbb_settings/icons/bt-camera-video.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), input-mouse)">windows/tlbb_settings/icons/bt-input-mouse.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), input-gaming)">windows/tlbb_settings/icons/bt-input-gaming.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), input-keyboard)">windows/tlbb_settings/icons/bt-input-keyboard.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), input-tablet)">windows/tlbb_settings/icons/bt-input-tablet.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), printer)">windows/tlbb_settings/icons/bt-printer.png</value>
+		<value condition="StringCompare(ListItem.Property(Icon), computer)">windows/tlbb_settings/icons/bt-computer.png</value>
 	</variable>
 
+	<variable name="WiFiSignalIcons">
+		<value condition="!IntegerGreaterThan(ListItem.Property(Strength),0)">windows/tlbb_settings/wifi_signal_0.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(Strength),0) + !IntegerGreaterThan(ListItem.Property(Strength),19)">windows/tlbb_settings/wifi_signal_20.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(Strength),20) + !IntegerGreaterThan(ListItem.Property(Strength),39)">windows/tlbb_settings/wifi_signal_40.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(Strength),40) + !IntegerGreaterThan(ListItem.Property(Strength),59)">windows/tlbb_settings/wifi_signal_60.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(Strength),60) + !IntegerGreaterThan(ListItem.Property(Strength),79)">windows/tlbb_settings/wifi_signal_80.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(Strength),80) + !IntegerGreaterThan(ListItem.Property(Strength),100)">windows/tlbb_settings/wifi_signal_100.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(Strength),100)">windows/tlbb_settings/wifi_signal_100.png</value>
+	</variable>
+<!--
   <variable name="WiFiStateIcons">
     <value condition="Stringcompare(ListItem.Label,a)">dialogs/accesspoints/disconnected.png</value>
     <value condition="!Stringcompare(ListItem.Label,>)">dialogs/accesspoints/state_empty.png</value>
     <value condition="[Stringcompare(ListItem.Label,>) + !SubString(System.InternetState,$LOCALIZE[13296])]">dialogs/accesspoints/busy.png</value>
     <value condition="[Stringcompare(ListItem.Label,>) + SubString(System.InternetState,$LOCALIZE[13296])]">dialogs/accesspoints/connected.png</value>
   </variable>
-
+-->
   <variable name="InternetStateIcons">
-    <value condition="SubString(System.InternetState,$LOCALIZE[503],left)">dialogs/accesspoints/busy.png</value>
-    <value condition="SubString(System.InternetState,$LOCALIZE[13296],left)">dialogs/accesspoints/connected.png</value>
-    <value>dialogs/accesspoints/disconnected.png</value>
+    <value condition="SubString(System.InternetState,$LOCALIZE[503],left)">windows/tlbb_settings/busy.png</value>
+    <value condition="SubString(System.InternetState,$LOCALIZE[13296],left)">windows/tlbb_settings/connected.png</value>
+    <value>windows/tlbb_settings/disconnected.png</value>
   </variable>
 
 	<variable name="NetworkTypeIcons">

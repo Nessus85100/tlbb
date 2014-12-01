@@ -10,7 +10,7 @@
       <animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
     </control>
   	<control type="group">
-  	  <visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(busy.xml)</visible>
+  	  <visible>!Window.IsActive(mainWindow.xml) + !Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(busy.xml)</visible>
   		<include>DialogAnimation</include>
   		<control type="image">
   			<left>316</left>
@@ -19,11 +19,28 @@
 			  <height>560</height>
   			<aspectratio>stretch</aspectratio>
   			<texture background="true" border="39">dialogs/other/default.png</texture>
+  			<visible>!System.HasAddon(os.openelec.tv)</visible>
   		</control>
   		<control type="image">
   			<description>background image</description>
   			<include>FullscreenDimensions</include>
   			<texture background="true">windows/settings/bg_firstuse.png</texture>
+  			<visible>!System.HasAddon(os.openelec.tv)</visible>
+  		</control>
+  		<control type="image">
+  			<left>316</left>
+  			<top>85</top>
+  			<width>649</width>
+			  <height>513</height>
+  			<aspectratio>stretch</aspectratio>
+  			<texture background="true" border="39">dialogs/other/default.png</texture>
+  			<visible>System.HasAddon(os.openelec.tv)</visible>
+  		</control>
+  		<control type="image">
+  			<description>background image</description>
+  			<include>FullscreenDimensions</include>
+  			<texture background="true">windows/settings/bg_firstuse_oe.png</texture>
+  			<visible>System.HasAddon(os.openelec.tv)</visible>
   		</control>
   		<control type="label">
   			<description>Heding Label</description>
@@ -86,7 +103,7 @@
   		    <width>553</width>
           <include>DialogsButton</include>
 			    <label>$LOCALIZE[14080]</label>
-			    <label2 fallback="N/A">[COLOR=blue]$INFO[Skin.String(locale.timezonecountry)][/COLOR]</label2>
+			    <label2>[COLOR=blue]$INFO[Skin.String(locale.timezonecountry)][/COLOR]</label2>
 			    <onclick>RunScript(script.tlbb.systemsettings,setTimezoneCountry)</onclick>
   			</control>
         <control type="group" id="905">
@@ -150,7 +167,8 @@
           <include>DialogsButton</include>
   				<label>$LOCALIZE[705]</label>
   				<label2>[COLOR=blue]$INFO[System.InternetState]$INFO[Network.IPAddress, (,)][/COLOR]</label2>
-  				<onclick>RunScript(script.linux.nm)</onclick>
+  				<onclick condition="System.HasAddon(script.linux.nm)">RunScript(script.linux.nm)</onclick>
+  				<onclick condition="!System.HasAddon(script.linux.nm)">RunScript(service.openelec.settings)</onclick>
   			</control>
 			  <control type="button" id="907">
   				<description>Firmware Button</description>
@@ -159,6 +177,7 @@
   				<label>$LOCALIZE[24069]</label>
     			<label2>[COLOR=blue]$INFO[Skin.String(firmware),v][/COLOR]</label2>
   				<onclick>RunScript(special://skin/extras/scripts/update.py)</onclick>
+  				<visible>!System.HasAddon(os.openelec.tv)</visible>
   			</control>
 <!--
 			  <control type="button" id="908">
@@ -186,6 +205,7 @@
   			<onright>10000</onright>
   			<onup>900</onup>
   			<ondown>900</ondown>
+        <animation effect="slide" start="0,0" end="0,-47" time="0" condition="System.HasAddon(os.openelec.tv)">Conditional</animation>
   			<control type="button" id="10">
   				<description>Done</description>
   				<texturefocus border="39,3,39,39">dialogs/buttons/save_fo.png</texturefocus>

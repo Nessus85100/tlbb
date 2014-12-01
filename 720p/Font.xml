@@ -29,7 +29,13 @@
 			<size>20</size>
 		</font>
 	 	<font>
-			<name>TextboxFont20</name>
+			<name>TextboxFont_18</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>18</size>
+      <linespacing>0.85</linespacing>
+		</font>
+	 	<font>
+			<name>TextboxFont_20</name>
 			<filename>OpenSans-Regular.ttf</filename>
 			<size>20</size>
       <linespacing>0.85</linespacing>
