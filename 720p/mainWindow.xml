@@ -637,7 +637,7 @@
     		  </control>
     		  <control type="textbox">
     				<description>Category Description</description>
-    				<left>5</left>
+    				<left>10</left>
     				<top>120</top>
     				<width>490</width>
     				<height>175</height>

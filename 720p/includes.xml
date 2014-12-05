@@ -39,9 +39,9 @@
 	</include>
 
 	<include name="CommonItems">
+		<include>CommonDialogsFadeOutBG</include>
 		<include>CommonScrollingLetters</include>
 		<include>CommonNowPlaying</include>
-		<include>CommonDialogsFadeOutBG</include>
 		<include>CommonPageCount</include>
 	</include>
 
@@ -1256,10 +1256,10 @@
 	</variable>
 
 	<variable name="WeatherViewsLabels">
-		<value condition="Stringcompare(Skin.String(WeatherUnderground),1)">$LOCALIZE[31235]</value>
-		<value condition="Stringcompare(Skin.String(WeatherUnderground),2)">$LOCALIZE[31223]</value>
-		<value condition="Stringcompare(Skin.String(WeatherUnderground),3)">$LOCALIZE[31224]</value>
-		<value condition="Stringcompare(Skin.String(WeatherUnderground),4)">$LOCALIZE[31226]</value>
+		<value condition="Stringcompare(Skin.String(WeatherExtended),1)">$LOCALIZE[31235]</value>
+		<value condition="Stringcompare(Skin.String(WeatherExtended),2)">$LOCALIZE[31223]</value>
+		<value condition="Stringcompare(Skin.String(WeatherExtended),3)">$LOCALIZE[31224]</value>
+		<value condition="Stringcompare(Skin.String(WeatherExtended),4)">$LOCALIZE[31226]</value>
 	</variable>
     
   <variable name="AddonStatus">
@@ -1605,7 +1605,7 @@
 	</variable>
 
 	<variable name="WeatherAlerts">
-		<value condition="StringCompare(Weather.Plugin,weather.wunderground)">$LOCALIZE[33050]</value>
+		<value condition="StringCompare(Weather.Plugin,weather.openweathermap.extended)">$LOCALIZE[33050]</value>
 		<value condition="StringCompare(Weather.Plugin,weather.weatherplus)">$INFO[Window.Property(Alerts.Label)]</value>
 	</variable>
 

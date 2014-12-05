@@ -13,7 +13,7 @@
       <control type="image">
         <description>Background Image</description>
 				<include>FullscreenDimensions</include>
-				<texture>dialogs/other/bg_oe_context.png</texture>
+				<texture background="true">windows/tlbb_settings/bg_context.png</texture>
       </control>
 	    <control type="group">
 	      <posx>480</posx>

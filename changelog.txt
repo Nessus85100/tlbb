@@ -1,3 +1,9 @@
+[B][COLOR=FF56ADDA]v3.2.1 - Release Date 5/12/2014[/COLOR][/B]
+• Added support for OpenWeatherMap Extended addon.
+• Added support for hearing impaired subtitles.
+• Fixed missing context menu texture TLBB Settings addon.
+• Small fixes.
+
 [B][COLOR=FF56ADDA]v3.2.0 - Release Date 2/12/2014[/COLOR][/B]
 • Added support for TLBB Settings addon.
 • Remove script.linux Network Manager link's in newer builds.
