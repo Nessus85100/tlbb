@@ -9,35 +9,19 @@
   </control>
 	 <control type="group">
 	  <include>DialogAnimation</include>
-		<control type="image">
-			<left>316</left>
-			<top>122</top>
-			<width>647</width>
-			<height>445</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select.png</texture>
-		</control>
+	  <include>DialogSelectBackgrounds</include>
 		<control type="label">
 			<description>header label</description>
-			<left>340</left>
-			<top>170</top>
-			<width>600</width>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
+			<left>360</left>
+			<top>152</top>
+			<width>560</width>
+	    <include>DialogsHeaderLabel</include>
 			<label>$LOCALIZE[13406]</label>
 		</control>
+
 		<control type="list" id="5">
-			<left>363</left>
-			<top>214</top>
+			<left>364</left>
+			<top>209</top>
 			<width>553</width>
 			<height>306</height>
 			<onup>5</onup>
@@ -60,7 +44,7 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>542</left>
+					<left>210</left>
 					<top>0</top>
 					<width>332</width>
 					<height>47</height>
@@ -73,40 +57,37 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="51" width="553">
-			  <control type="group">
-		      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(5).OnPrevious">focus</animation>
-		      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(5).OnNext">focus</animation>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>553</width>
-						<height>47</height>
-						<texture>buttons/focus.png</texture>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>200</width>
-						<height>47</height>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>542</left>
-						<top>0</top>
-						<width>332</width>
-						<height>47</height>
-						<font>FontSize_20</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>553</width>
+					<height>47</height>
+					<texture>buttons/focus.png</texture>
+          <include>ListFocusAnimation</include>
+				</control>
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>200</width>
+					<height>47</height>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<left>210</left>
+					<top>0</top>
+					<width>332</width>
+					<height>47</height>
+					<font>FontSize_20</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
 				</control>
 			</focusedlayout>
 		</control>

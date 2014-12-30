@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.tlbb" version="3.2.1" name="The Little Black Box" provider-name="Nessus">
+<addon id="skin.tlbb" version="4.0.0" name="The Little Black Box" provider-name="Nessus">
   <requires>
-		<import addon="xbmc.gui" version="5.0.1"/>
+		<import addon="xbmc.gui" version="5.3.0"/>
     <import addon="weather.openweathermap.extended" version="0.0.6"/>
 		<import addon="script.tv.show.next.aired" version="6.0.10"/>
 		<import addon="script.artwork.downloader" version="12.0.24"/>
@@ -10,7 +10,7 @@
 		<import addon="script.playalbum" version="1.0.1"/>
 		<import addon="script.extendedinfo" version="1.0.0"/>
     <import addon="service.library.data.provider" version="0.0.1"/>
-		<import addon="script.skinshortcuts" version="0.3.4"/>
+		<import addon="script.skinshortcuts" version="0.4.4"/>
     <import addon="script.cinema.experience" version="4.0.10"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.75" debugging="false">

@@ -147,7 +147,7 @@
 			<include>FullscreenDimensions</include>
 			<texture background="true">windows/bg/bg_overlay.png</texture>
 			<include>FanartFade</include>
-      <colordiffuse>ddFFFFFF</colordiffuse>
+      <!-- <colordiffuse>ddFFFFFF</colordiffuse> -->
 			<visible>Control.HasFocus(15)
 			       | Control.HasFocus(25)
 			       | Control.HasFocus(35)

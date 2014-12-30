@@ -113,12 +113,4 @@
 		<thumb />
 		<action>ActivateWindow(FileManager,return)</action>
 	</shortcut>
-	<shortcut>
-		<label>$ADDON[script.skinshortcuts 32071]</label>
-		<label2 />
-		<defaultID>$ADDON[script.skinshortcuts 32071]</defaultID>
-		<icon />
-		<thumb />
-		<action>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</action>
-	</shortcut>
 </shortcuts>

@@ -5,40 +5,47 @@
 	<controls>
 
    <control type="group">
+		<left>310</left>
+		<top>235</top>
 	  <include>DialogAnimation</include>
-		<control type="image">
-			<posx>316</posx>
-			<posy>220</posy>
-			<width>649</width>
-			<height>296</height>
+	  <control type="image">
+		  <left>0</left>
+		  <top>0</top>
+		  <width>665</width>
+		  <height>57</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+		  <left>0</left>
+		  <top>55</top>
+		  <width>665</width>
+		  <height>188</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
+		 <control type="image">
+			<left>2</left>
+			<top>53</top>
+			<width>661</width>
+			<height>4</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/other/bg_ok.png</texture>
-		</control>
-		<control type="label" id="1">
-			<description>header label</description>
-			<posx>340</posx>
-			<posy>265</posy>
-			<width>600</width>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-		  <label>-</label>
-		</control>
+			<texture background="true">dialogs/other/header_line.png</texture>
+		 </control>
+    <control type="label" id="1">
+      <description>header label</description>
+      <left>15</left>
+      <top>12</top>
+      <width>630</width>
+	    <include>DialogsHeaderLabel</include>
+      <label>Remove ID to Test, Remove ID to Test</label>
+    </control>
 		<control type="textbox" id="9">
-			<posx>365</posx>
-			<posy>310</posy>
-      <width>550</width>
+		  <left>20</left>
+			<top>65</top>
+      <width>630</width>
 			<height>90</height>
-			<font>FontSize_20</font>
-		  <align>center</align>
+		  <align>left</align>
+			<font>FontSize_22</font>
 			<textcolor>99white</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 			<autoscroll time="3000" delay="3000" repeat="5000">true</autoscroll>
@@ -46,20 +53,9 @@
 		</control>
 		<control type="button" id="10">
 			<description>OK button</description>
-			<posx>575</posx>
-			<posy>433</posy>
-			<width>150</width>
-			<height>43</height>
-			<texturenofocus border="20,15,20,15">dialogs/keyboard/button_nf.png</texturenofocus>
-			<texturefocus border="20,15,20,15">dialogs/keyboard/button_fo.png</texturefocus>
-			<align>center</align>
-			<aligny>top</aligny>
-			<font>FontSize_22</font>
-			<textcolor>99grey</textcolor>
-			<focusedcolor>99white</focusedcolor>
-			<disabledcolor>44white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<textoffsety>6</textoffsety>
+			<left>490</left>
+			<top>180</top>
+	    <include>DialogsButtonsYesNo</include>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>

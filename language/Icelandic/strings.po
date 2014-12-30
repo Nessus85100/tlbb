@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Icelandic (http://www.transifex.com/projects/p/xbmc-skins/language/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,14 +36,6 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "Númer lags"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "Raða: Hækkandi"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "Raða: Lækkandi"
-
 msgctxt "#31008"
 msgid "System auto shutdown in"
 msgstr "Kerfið slekkur sjálfvirkt eftir"
@@ -57,12 +49,12 @@ msgid "-"
 msgstr "-"
 
 msgctxt "#31011"
-msgid "ON"
+msgid "On"
 msgstr "Á"
 
 msgctxt "#31012"
-msgid "OFF"
-msgstr "AF"
+msgid "Off"
+msgstr "Af"
 
 msgctxt "#31016"
 msgid "File Manager"
@@ -112,6 +104,10 @@ msgctxt "#31031"
 msgid "PM"
 msgstr "EH"
 
+msgctxt "#31033"
+msgid "Channel Group"
+msgstr "Rásahópar"
+
 msgctxt "#31034"
 msgid "Teletext"
 msgstr "Textavarp"
@@ -128,6 +124,10 @@ msgctxt "#31041"
 msgid "Creator"
 msgstr "Höfundur"
 
+msgctxt "#31080"
+msgid "Slide"
+msgstr "Skruna"
+
 msgctxt "#31083"
 msgid "Wall"
 msgstr "Veggur"
@@ -135,6 +135,14 @@ msgstr "Veggur"
 msgctxt "#31084"
 msgid "Posters"
 msgstr "Plaköt"
+
+msgctxt "#31086"
+msgid "Banner List"
+msgstr "Listi á borða"
+
+msgctxt "#31098"
+msgid "Home Menu"
+msgstr "Heimavalblað"
 
 msgctxt "#31101"
 msgid "Show Weather Info"
@@ -188,6 +196,10 @@ msgctxt "#31136"
 msgid "Multi Image"
 msgstr "Margföld mynd"
 
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Texti í boði á tölvu"
+
 msgctxt "#31202"
 msgid "My Music"
 msgstr "Tónlistin mín"
@@ -195,10 +207,6 @@ msgstr "Tónlistin mín"
 msgctxt "#31203"
 msgid "New Search"
 msgstr "Ný leit"
-
-msgctxt "#31204"
-msgid "-"
-msgstr "-"
 
 msgctxt "#31218"
 msgid "Landscape"
@@ -256,6 +264,18 @@ msgctxt "#31237"
 msgid "View"
 msgstr "Sýn"
 
+msgctxt "#31247"
+msgid "Random Movies"
+msgstr "Kvikmyndir af handahófi"
+
+msgctxt "#31250"
+msgid "All Movies"
+msgstr "Allar kvikmyndir"
+
+msgctxt "#31254"
+msgid "Search on YouTube"
+msgstr "Leita á YouTube"
+
 msgctxt "#31280"
 msgid "Open Playlist"
 msgstr "Opna spilunarlista"
@@ -284,6 +304,42 @@ msgctxt "#31309"
 msgid "Visualization Presets"
 msgstr "Forstillingar myndskreytinga"
 
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "Í spilun"
+
 msgctxt "#31350"
 msgid "Available Groups"
 msgstr "Tiltækir hópar"
+
+msgctxt "#31351"
+msgid "Add Group"
+msgstr "Bæta við hóp"
+
+msgctxt "#31352"
+msgid "Rename Group"
+msgstr "Endurnefna hóp"
+
+msgctxt "#31353"
+msgid "Delete Group"
+msgstr "Eyða hóp"
+
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr "Uppfæra kvikmyndasafn"
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr "Uppfæra tónlistarsafn"
+
+msgctxt "#31372"
+msgid "Clean Video Library"
+msgstr "Tiltekt á Kvikmyndasafni"
+
+msgctxt "#31373"
+msgid "Clean Music Library"
+msgstr "Tiltekt á Tónlistarsafni"
+
+msgctxt "#31430"
+msgid "Help"
+msgstr "Hjálp"

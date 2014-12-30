@@ -5,7 +5,8 @@
 	<controls>
 
 		<control type="group">
-			<visible>![Window.IsVisible(1116) | Window.IsActive(busydialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(FileBrowser) | Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml)]</visible>
+			<!-- <visible>!Window.IsActive(BusyDialog)</visible> -->
+			<visible>![Window.IsActive(1116) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(FileBrowser) | Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml)]</visible>
       <visible>!Window.IsActive(script-Actors-DialogInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>

@@ -1,4 +1,4 @@
-﻿# XBMC Media Center language file
+﻿# Kodi Media Center language file
 # Addon Name: The Little Black Box
 # Addon id: skin.tlbb
 # Addon Provider: Nessus
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: English (http://www.transifex.com/projects/p/xbmc-skins/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,13 +42,7 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr ""
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr ""
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr ""
+#empty strings from id 31006 to 31007
 
 msgctxt "#31008"
 msgid "System auto shutdown in"
@@ -58,27 +52,17 @@ msgctxt "#31009"
 msgid "Context Menu"
 msgstr ""
 
-msgctxt "#31010"
-msgid "Home Window"
-msgstr ""
+#empty string id 31010
 
 msgctxt "#31011"
-msgid "ON"
+msgid "On"
 msgstr ""
 
 msgctxt "#31012"
-msgid "OFF"
+msgid "Off"
 msgstr ""
 
-#empty string with id 31013
-
-msgctxt "#31014"
-msgid "ViewType Options"
-msgstr ""
-
-msgctxt "#31015"
-msgid "General Options"
-msgstr ""
+#empty strings from id 31013 to 31015
 
 msgctxt "#31016"
 msgid "File Manager"
@@ -96,9 +80,7 @@ msgctxt "#31019"
 msgid "Search for movies directed by"
 msgstr ""
 
-msgctxt "#31020"
-msgid "Found"
-msgstr ""
+#empty strings id 31020
 
 msgctxt "#31021"
 msgid "Music Library"
@@ -223,167 +205,83 @@ msgctxt "#31088"
 msgid "List Wall"
 msgstr ""
 
-#empty strings from id 31089 to 31099
+#empty strings from id 31089 to 31093
 #Skin Settings labels
 
-msgctxt "#31100"
-msgid "Home Menu"
+msgctxt "#31094"
+msgid "Choose Movies Widget" <!-- *NOT USED* -->
 msgstr ""
 
-msgctxt "#31101"
-msgid "Show Home Weather Info"
+msgctxt "#31095"
+msgid "Choose TV Shows Widget" <!-- *NOT USED* -->
 msgstr ""
+
+msgctxt "#31096"
+msgid "Choose Music Widget" <!-- *NOT USED* -->
+msgstr ""
+
+msgctxt "#31097"
+msgid "Choose RSS Video Feed Widget" <!-- *NOT USED* -->
+msgstr ""
+
+#empty strings from id 31098 to 31101
 
 msgctxt "#31102"
-msgid "Hide Home NowPlaying Video Info"
+msgid "Hide Now Playing Video Info"
 msgstr ""
 
 msgctxt "#31103"
-msgid "Hide Home NowPlaying Music Info"
+msgid "Hide Now Playing Music Info"
 msgstr ""
 
-msgctxt "#31104"
-msgid "Show Search Section"
-msgstr ""
-
-msgctxt "#31105"
-msgid "Show Trailers Section"
-msgstr ""
-
-msgctxt "#31106"
-msgid "Show Movies Section"
-msgstr ""
-
-msgctxt "#31107"
-msgid "Show TV Shows Section"
-msgstr ""
-
-msgctxt "#31108"
-msgid "Show Music Section"
-msgstr ""
-
-msgctxt "#31109"
-msgid "Show Pictures Section"
-msgstr ""
-
-msgctxt "#31110"
-msgid "Show Programs Section"
-msgstr ""
-
-msgctxt "#31111"
-msgid "Show Channels Section"
-msgstr ""
-
-msgctxt "#31112"
-msgid "Show Weather Section"
-msgstr ""
-
-msgctxt "#31113"
-msgid "Show Settings Section"
-msgstr ""
-
-msgctxt "#31114"
-msgid "Show Videos Section"
-msgstr ""
-
-msgctxt "#31115"
-msgid "Show Live TV Section"
-msgstr ""
-
-msgctxt "#31116"
-msgid "Show Music Videos Section"
-msgstr ""
-
-msgctxt "#31117"
-msgid "Music button opens..."
-msgstr ""
-
-msgctxt "#31118"
-msgid "Add-ons button opens..."
-msgstr ""
-
-msgctxt "#31119"
-msgid "Videos button opens..."
-msgstr ""
-
-msgctxt "#31120"
-msgid "Movies button opens..."
-msgstr ""
-
-msgctxt "#31121"
-msgid "TV Shows button opens..."
-msgstr ""
-
-msgctxt "#31122"
-msgid "Pictures button opens..."
-msgstr ""
-
-msgctxt "#31123"
-msgid "Programs button opens..."
-msgstr ""
+#empty strings from id 31104 to 31123
 
 msgctxt "#31124"
 msgid "Flashing Lights"
 msgstr ""
 
 msgctxt "#31125"
-msgid "Edit DB Info"
+msgid "Edit Info"
 msgstr ""
 
-msgctxt "#31126"
-msgid "Episode Thumb"
-msgstr ""
-
-msgctxt "#31127"
-msgid "Landscape"
-msgstr ""
-
-msgctxt "#31128"
-msgid "ClearArt"
-msgstr ""
-
-msgctxt "#31129"
-msgid "ClearLogo"
-msgstr ""
+#empty strings from id 31126 to 31129
 
 msgctxt "#31130"
 msgid "Disable Fanart in all sections"
 msgstr ""
 
 msgctxt "#31131"
-msgid "Hide Background Video"
+msgid "Show Only on Home Screen" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31132"
-msgid "Near Concerts"
+msgid "Hide Background Video"
 msgstr ""
 
 msgctxt "#31133"
-msgid "Top Artists"
+msgid "Custom Background" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31134"
-msgid "Trending TV Shows"
+msgid "Edit Background for Media Type" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31135"
-msgid "Top Rated TV Shows"
+msgid "Single Image" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31136"
-msgid "Popular TV Shows"
+msgid "Multi Image" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31137"
 msgid "Enable Notifications"
 msgstr ""
 
-msgctxt "#31138"
-msgid "Enable Movies Notifications"
-msgstr ""
+#empty strings id 31138
 
 msgctxt "#31139"
-msgid "Enable Addons Notifications"
+msgid "Enable Add-ons Notifications"
 msgstr ""
 
 msgctxt "#31140"
@@ -395,7 +293,7 @@ msgid "Choose Lyrics Add-on"
 msgstr ""
 
 msgctxt "#31142"
-msgid "Video Stream"
+msgid "Choose Subtitles Add-on"
 msgstr ""
 
 msgctxt "#31143"
@@ -403,11 +301,11 @@ msgid "Enable NextAired Info on TV Shows [COLOR=55white](Requires Next Aired Add
 msgstr ""
 
 msgctxt "#31144"
-msgid "Enable Music Theme on TV Shows [COLOR=55white](Requires TV Tunes Add-on)[/COLOR]"
+msgid "Enable Music Theme on TV Shows [COLOR=55white](Requires TV Tunes Add-on)[/COLOR]" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31145"
-msgid "Download music themes for all TV Shows"
+msgid "Download music themes for all TV Shows" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31146"
@@ -431,12 +329,10 @@ msgid "Download [COLOR=selected]poster.jpg[/COLOR] for all TV Shows"
 msgstr ""
 
 msgctxt "#31151"
-msgid "Download [COLOR=selected]disc.png[/COLOR] for all Movies"
+msgid "Show RSS feed in whole skin" <!-- *NOT USED* -->
 msgstr ""
 
-msgctxt "#31152"
-msgid "Download [COLOR=selected]logo.png[/COLOR] for all Movies"
-msgstr ""
+#empty strings id 31152
 
 msgctxt "#31153"
 msgid "Enable login screen"
@@ -446,171 +342,81 @@ msgctxt "#31154"
 msgid "Choose Trailers Add-on"
 msgstr ""
 
-msgctxt "#31155"
-msgid "Hide VideoWall Fanart View"
-msgstr ""
+#empty strings id 31155
 
 msgctxt "#31156"
-msgid "Hide Slide View"
+msgid "Manage Video Views"
 msgstr ""
 
 msgctxt "#31157"
-msgid "Hide Gallery View"
+msgid "Manage Music Views"
 msgstr ""
 
 msgctxt "#31158"
-msgid "Show 3D Wall View"
-msgstr ""
-
-msgctxt "#31159"
-msgid "Show Wall View"
-msgstr ""
-
-msgctxt "#31160"
-msgid "Hide Posters View"
-msgstr ""
-
-msgctxt "#31161"
-msgid "Hide Thumbnails View"
-msgstr ""
-
-msgctxt "#31162"
-msgid "Hide Banner List View"
-msgstr ""
-
-msgctxt "#31163"
-msgid "Show List Wall View"
-msgstr ""
-
-msgctxt "#31164"
 msgid "Views"
 msgstr ""
 
-msgctxt "#31165"
-msgid "Show Add-ons Section"
+msgctxt "#31159"
+msgid "Show FullScreenInfo instead of the SeekBar"
 msgstr ""
 
-msgctxt "#31166"
-msgid "Show Favourites Section"
+msgctxt "#31160"
+msgid "Download [COLOR=selected]logo.png[/COLOR] for all Movies"
 msgstr ""
 
-msgctxt "#31167"
-msgid "Top Rated Movies"
+msgctxt "#31161"
+msgid "Hide Home Menu Extra Info"
 msgstr ""
 
-msgctxt "#31168"
-msgid "Popular Movies"
+msgctxt "#31162"
+msgid "Enable Kiosk Mode"
 msgstr ""
 
-msgctxt "#31169"
-msgid "In Cinemas"
+msgctxt "#31163"
+msgid "Cast info"
 msgstr ""
 
-msgctxt "#31170"
-msgid "Custom Video Add-ons Widget"
-msgstr ""
-
-msgctxt "#31171"
-msgid "Coming Soon"
-msgstr ""
-
-msgctxt "#31172"
-msgid "Trending Movies"
-msgstr ""
-
-msgctxt "#31173"
-msgid "Custom Home Menu Buttons"
-msgstr ""
-
-msgctxt "#31174"
-msgid "Favourites Widget"
-msgstr ""
-
-msgctxt "#31175"
-msgid "Weather Widget"
-msgstr ""
-
-msgctxt "#31176"
-msgid "Settings Widget"
-msgstr ""
-
-msgctxt "#31177"
-msgid "Cast Info"
-msgstr ""
-
-msgctxt "#31178"
+msgctxt "#31164"
 msgid "Press DOWN for more info"
 msgstr ""
 
-msgctxt "#31179"
-msgid "Show Library Totals"
+msgctxt "#31165"
+msgid "Download [COLOR=selected]disc.png[/COLOR] for all Movies"
 msgstr ""
 
-msgctxt "#31180"
-msgid "Search on YouTube"
+msgctxt "#31166"
+msgid "Local subtitle available"
 msgstr ""
 
-msgctxt "#31181"
-msgid "Movies In Progress"
+msgctxt "#31167"
+msgid "Settings Level:"
 msgstr ""
 
-msgctxt "#31182"
-msgid "TV Shows In Progress"
-msgstr ""
-
-msgctxt "#31183"
-msgid "Music In Progress"
-msgstr ""
-
-msgctxt "#31184"
-msgid "Custom Program Add-ons Widget"
-msgstr ""
-
-msgctxt "#31185"
-msgid "Current Mode:"
-msgstr ""
-
-msgctxt "#31186"
+msgctxt "#31168"
 msgid "Reset Level"
 msgstr ""
 
-msgctxt "#31187"
+msgctxt "#31169"
 msgid "Reset Skin"
 msgstr ""
 
-msgctxt "#31188"
+msgctxt "#31170"
 msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
 msgstr ""
 
-msgctxt "#31189"
-msgid "Button"
+msgctxt "#31171"
+msgid "Update Art"
 msgstr ""
 
-msgctxt "#31190"
-msgid "Custom Button"
+msgctxt "#31172"
+msgid "Enable Home Menu Fanart SlideShow"  <!-- *NOT USED* -->
 msgstr ""
 
-msgctxt "#31191"
-msgid "Custom Add-on"
+msgctxt "#31173"
+msgid "Current Mode:"
 msgstr ""
 
-msgctxt "#31192"
-msgid "RSS Video Feed Widget"
-msgstr ""
-
-msgctxt "#31193"
-msgid "Add YouTube UserID"
-msgstr ""
-
-msgctxt "#31194"
-msgid "Reset All"
-msgstr ""
-
-msgctxt "#31195"
-msgid "Customize Home Menu"
-msgstr ""
-
-#empty strings from id 31196 to 31199
+#empty strings from id 31174 to 31199
 #Scripts labels
 
 msgctxt "#31200"
@@ -633,41 +439,7 @@ msgctxt "#31204"
 msgid "Please check your weather settings"
 msgstr ""
 
-msgctxt "#31205"
-msgid "Browse the most recently added movies"
-msgstr ""
-
-msgctxt "#31206"
-msgid "Browse the most recently added episodes"
-msgstr ""
-
-msgctxt "#31207"
-msgid "Browse the most recently added albums"
-msgstr ""
-
-msgctxt "#31208"
-msgid "Browse all movies in progress"
-msgstr ""
-
-msgctxt "#31209"
-msgid "Browse all shows in progress"
-msgstr ""
-
-msgctxt "#31210"
-msgid "Browse all music in progress"
-msgstr ""
-
-msgctxt "#31211"
-msgid "Browse all movies in your library"
-msgstr ""
-
-msgctxt "#31212"
-msgid "Browse all shows in your library"
-msgstr ""
-
-msgctxt "#31213"
-msgid "Browse all music in your library"
-msgstr ""
+#empty strings from id 31205 to 31213
 
 msgctxt "#31214"
 msgid "Airing"
@@ -698,11 +470,11 @@ msgid "Extra Info"
 msgstr ""
 
 msgctxt "#31221"
-msgid "Extra Art"
+msgid "Get Extra Art"
 msgstr ""
 
 msgctxt "#31222"
-msgid "TV Tunes"
+msgid "Get TV Tune" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31223"
@@ -749,7 +521,7 @@ msgctxt "#31233"
 msgid "Chance of Precipitation"
 msgstr ""
 
-#empty string 31234
+#empty string with id 31234
 
 msgctxt "#31235"
 msgid "Current Forecast"
@@ -788,15 +560,15 @@ msgid "Recently Added Music"
 msgstr ""
 
 msgctxt "#31244"
-msgid "New Movies"
+msgid "Movies In Progress"
 msgstr ""
 
 msgctxt "#31245"
-msgid "New TV Shows"
+msgid "TV Shows In Progress"
 msgstr ""
 
 msgctxt "#31246"
-msgid "New Music"
+msgid "Music In Progress"
 msgstr ""
 
 msgctxt "#31247"
@@ -812,34 +584,78 @@ msgid "Random Music"
 msgstr ""
 
 msgctxt "#31250"
-msgid "All Movies"
+msgid "First Use Setup"
 msgstr ""
 
 msgctxt "#31251"
-msgid "All TV Shows"
+msgid "Adjust screen size"
 msgstr ""
 
 msgctxt "#31252"
-msgid "All Music"
+msgid "Subtitle character set"
 msgstr ""
 
 msgctxt "#31253"
-msgid "Local subtitle available"
+msgid "Add YouTube UserID and Title" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31254"
-msgid "Unwatched Movies"
+msgid "Search on YouTube"
 msgstr ""
 
 msgctxt "#31255"
-msgid "Unwatched TV Shows"
+msgid "RSS Video Feeds" <!-- *NOT USED* -->
 msgstr ""
 
 msgctxt "#31256"
+msgid "In Cinemas Now"
+msgstr ""
+
+msgctxt "#31257"
+msgid "Trending Movies"
+msgstr ""
+
+msgctxt "#31258"
+msgid "Trending  TV Shows"
+msgstr ""
+
+msgctxt "#31259"
+msgid "Near Concerts"
+msgstr ""
+
+msgctxt "#31260"
+msgid "Coming Soon"
+msgstr ""
+
+msgctxt "#31261"
+msgid "Popular Movies"
+msgstr ""
+
+msgctxt "#31262"
+msgid "Popular  TV Shows"
+msgstr ""
+
+msgctxt "#31263"
+msgid "Top Rated Movies"
+msgstr ""
+
+msgctxt "#31264"
+msgid "Top Rated  TV Shows"
+msgstr ""
+
+msgctxt "#31265"
+msgid "Unwatched Movies"
+msgstr ""
+
+msgctxt "#31266"
+msgid "Unwatched TV Shows"
+msgstr ""
+
+msgctxt "#31267"
 msgid "Unwatched Episodes"
 msgstr ""
 
-#empty strings from id 31257 to 31279
+#empty strings from id 31268 to 31279
 #Playlist Editor labels
 
 msgctxt "#31280"
@@ -957,60 +773,67 @@ msgid "Delete Group"
 msgstr ""
 
 #empty strings from id 31354 to 31369
-#Quick Navigation
+#Quick Navigation labels
 
 msgctxt "#31370"
-msgid "Quick Navigation"
-msgstr ""
-
-msgctxt "#31371"
-msgid "Disable Quick Navigation"
-msgstr ""
-
-msgctxt "#31372"
-msgid "Manage QuickNav Buttons"
-msgstr ""
-
-msgctxt "#31373"
-msgid "Custom QuickNav Buttons"
-msgstr ""
-
-msgctxt "#31374"
 msgid "Update Video Library"
 msgstr ""
 
-msgctxt "#31375"
+msgctxt "#31371"
 msgid "Update Music Library"
 msgstr ""
 
-msgctxt "#31376"
+msgctxt "#31372"
 msgid "Clean Video Library"
 msgstr ""
 
-msgctxt "#31377"
+msgctxt "#31373"
 msgid "Clean Music Library"
 msgstr ""
 
-msgctxt "#31378"
-msgid "Adjust screen size"
+msgctxt "#31374"
+msgid "Quick Navigation"
 msgstr ""
 
-msgctxt "#31379"
-msgid "First Use Setup"
+msgctxt "#31375"
+msgid "Disable Quick Navigation"
 msgstr ""
 
-msgctxt "#31380"
-msgid "Subtitle character set"
+msgctxt "#31376"
+msgid "Custom QuickNav Items"
 msgstr ""
 
-#empty strings from id 31381 to 31408
+#empty strings from id 31377 to 31392
+
+msgctxt "#31393"
+msgid "Manage QuickNav Items"
+msgstr ""
+
+msgctxt "#31394"
+msgid "Custom Items"
+msgstr ""
+
+msgctxt "#31395"
+msgid "Manage Custom Items"
+msgstr ""
+
+msgctxt "#31396"
+msgid "Custom Item"
+msgstr ""
+
+msgctxt "#31397"
+msgid "Edit Item"
+msgstr ""
+
+#empty strings from id 31398 to 31408
 #Settings Category Description & Header Labels
+
 msgctxt "#31409"
 msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
 msgstr ""
 
 msgctxt "#31410"
-msgid "With XBMC you can have several profiles and the auto login option if the login screen is disabled."
+msgid "With Kodi you can have several profiles and the auto login option if the login screen is disabled."
 msgstr ""
 
 msgctxt "#31411"
@@ -1053,159 +876,20 @@ msgctxt "#31420"
 msgid "Configure Skin Settings"
 msgstr ""
 
+#empty strings from id 31421 to 31449
 
-
-#Help Screen strings
-
-#Welecome
-msgctxt "#31421"
-msgid "Thank you for purchasing[B][COLOR=selected] The Little Black Box[/COLOR][/B]. The revolution in Home Media Entertainment.[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR]TLBB Team"
-msgstr ""
-
-#Screen Calibration
-msgctxt "#31422"
-msgid "In the next step you can adjust the screen to your display devise. Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your display device.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
-msgstr ""
-
-#Network Setup
-msgctxt "#31423"
-msgid "In the next step you can setup your network. Click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window. Press the [B]"Add"[/B] button, navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [B]Wired[/B] connections are configured automatically via DHCP on boot.[CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
-msgstr ""
-
-#Region Addons
-msgctxt "#31424"
-msgid "In the next step you can install the Add-ons pack for your region. Click [B]"OK"[/B] on your remote to bring up the [B]Add-ons Region[/B] selection and select the [B]region[/B] you are based in.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
-msgstr ""
-
-#Region Addons WARNING
-msgctxt "#31425"
-msgid "[COLOR=red]WARNING:[/COLOR] Selecting the wrong region may contain content that may not be legal in your country. The Little Black Box is not liable for any content or add-ons played and installed on this device."
-msgstr ""
-
-#Import Video Library
-msgctxt "#31426"
-msgid "In the next step you can add and scan your Videos to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell XBMC what type of media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button when you done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
-msgstr ""
-
-#Import Music Library
-msgctxt "#31427"
-msgid "In the next step you can add and scan your Music to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Music source"[/B] dialog. [B]"Browse"[/B] to where you keep your music stored and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button. Highlight the added [B]Music Source[/B] item and bring up the [B]"Context Menu".[/B] Select the option labeled [B]"Scan Item to Library"[/B] to scan the selected music source into the library database.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
-msgstr ""
-
-#Customize UI
-msgctxt "#31428"
-msgid "In the next step you can customize your UI in order to maximize the unique entertainment experience of [COLOR=blue][B]The Little Black Box.[/B][/COLOR][CR]Your can set your language/region and character set in the [B]Appearance[/B] section and set the video playback options and subtitles fonts in [B]Video[/B] section. Audio/Video output and power saving options can be configured in [B]System[/B] section.[CR]Also you can further customize your UI, by using some of the many and different settings for all sections that are available in [B]Skin Settings[/B].[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step."
-msgstr ""
-
-#Check for Updates
-msgctxt "#31429"
-msgid "Now you are ready to use your "Little Black Box" but before you do that please take a minute to check for any firmware updates. Click [B]"OK"[/B] on your remote. If the there is an update you will be asked if you want to download it. Click "Yes" to start the download. After the download is complete the device will automatically reboot to apply the update.[CR][CR]When you log back in, you will see this Help Guide again. Press the [B]"Don't show this guide again"[/B] button and it will not appear again. You can always open this guide, by going to [B]Settings[/B] and select [B]Help[/B]."
-msgstr ""
-
-msgctxt "#31430"
-msgid "Before making any adjustments here you can define the language we'll use in the UI.[CR][CR]If you have already set the language select option 2, otherwise choose option 1.[CR][CR]After choosing option 2 this warning does not appear again.[CR][CR]Enjoy!"
-msgstr ""
-
-
-
-#Remote Sync
-msgctxt "#31431"
-msgid "Remote Control Sync"
-msgstr ""
-
-msgctxt "#31432"
-msgid "If your unit is not responding, make sure batteries are in the remote. Hold the remote within a few inches from the box and press digits [COLOR=red][B]1[/B][/COLOR] and [COLOR=red][B]9[/B][/COLOR] until the LED stops flashes to sync the remote. When you done press "OK" to close this dialog and it will not appear again."
-msgstr ""
-
-
-
-#TLBB Settings
-msgctxt "#31433"
-msgid "[B]Support:[/B][CR]Web: http://thelittleblackbox.co.uk[CR]Forum: http://thelittleblackbox.co.uk/forum[CR]Quick Setup Guides: http://thelittleblackbox.com/go/ [CR][CR][B]Social Media:[/B][CR]Facebook: https://www.facebook.com/TheLittleBlackBox[CR]Twitter: https://twitter.com/TLBlackBox"
-msgstr ""
-
-msgctxt "#31434"
-msgid "This TLBB firmware is based on OpenELEC which is a minimal Linux distribution purpose built for XBMC. If you have any questions please DO NOT contact the official OpenELEC team as this fork is not officially supported by the team there and we have our own developers working on this build."
-msgstr ""
-
-#empty strings from id 31435 to 31439
-
-
-#NOTICE1
-msgctxt "#31440"
-msgid "[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video."
-msgstr ""
-
-#NOTICE2
-msgctxt "#31441"
-msgid "[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of the[B][COLOR=99white] The Little Black Box.[/COLOR][/B]"
-msgstr ""
-
-
-#Various Help Screen labels
-
-msgctxt "#31442"
-msgid "Welcome"
-msgstr ""
-
-msgctxt "#31443"
-msgid "Screen Calibration"
-msgstr ""
-
-msgctxt "#31444"
-msgid "WiFi Setup"
-msgstr ""
-
-msgctxt "#31445"
-msgid "Region Add-ons"
-msgstr ""
-
-msgctxt "#31446"
-msgid "Customize UI"
-msgstr ""
-
-msgctxt "#31447"
-msgid "Check for Updates"
-msgstr ""
-
-
-#empty strings from id 31448 to 31450
-
-msgctxt "#31451"
-msgid "Skip this guide"
-msgstr ""
-
-msgctxt "#31452"
-msgid "Don't show this guide again"
-msgstr ""
-
-
-
-#END of Help screen strings
-
-#empty strings from id 31453 to 31459
-
-
-msgctxt "#31460"
+msgctxt "#31450"
 msgid "You haven't added any items to Favorites yet.[CR]Highlight an item, and choose "Add to favorites" from the context menu."
 msgstr ""
 
-msgctxt "#31461"
-msgid "You haven't added any videos to Library yet. Please select "Add videos..." to add your video sources and then choose the content type to scrap the items in the library."
-msgstr ""
-
-msgctxt "#31462"
-msgid "You haven't added any music to Library yet. Please select "Add Source" to add your music sources and then select "Scan item to library" from the context menu."
-msgstr ""
-
-msgctxt "#31463"
+msgctxt "#31451"
 msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
 msgstr ""
 
-msgctxt "#31464"
+msgctxt "#31452"
 msgid "You have now switched to XBMC/Kodi Expert Mode.[CR]The main menu now reflects this change."
 msgstr ""
 
-msgctxt "#31465"
+msgctxt "#31453"
 msgid "You have now switched to TLBB Easy Mode.[CR]The main menu now reflects this change."
 msgstr ""

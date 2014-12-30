@@ -6,21 +6,36 @@
 	<controls>
   	<control type="button" id="100">
   		<include>TopButton</include>
-      <onfocus>SetFocus(900)</onfocus>
+      <onfocus>SetFocus(901)</onfocus>
       <animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
     </control>
   	<control type="group">
   	  <visible>!Window.IsActive(mainWindow.xml) + !Window.IsActive(shutdownmenu) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(1119) + !Window.IsActive(script_linux_nm-main.xml) + !Window.IsActive(script_linux_nm-add.xml) + !Window.IsActive(busy.xml)</visible>
   		<include>DialogAnimation</include>
-  		<control type="image">
-  			<left>316</left>
-  			<top>85</top>
-  			<width>649</width>
-			  <height>560</height>
-  			<aspectratio>stretch</aspectratio>
-  			<texture background="true" border="39">dialogs/other/default.png</texture>
+  	  <control type="image">
+  			<left>346</left>
+  			<top>107</top>
+  		  <width>587</width>
+  		  <height>57</height>
+  		  <colordiffuse>blue</colordiffuse>
+  		  <texture background="true" border="9">dialogs/other/header.png</texture>
+  	  </control>
+  	  <control type="image">
+  			<left>346</left>
+  			<top>161</top>
+  		  <width>587</width>
+  		  <height>443</height>
+  		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
   			<visible>!System.HasAddon(os.openelec.tv)</visible>
-  		</control>
+  	  </control>
+  	  <control type="image">
+  			<left>346</left>
+  			<top>161</top>
+  		  <width>587</width>
+  		  <height>392</height>
+  		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+  			<visible>System.HasAddon(os.openelec.tv)</visible>
+  	  </control>
   		<control type="image">
   			<description>background image</description>
   			<include>FullscreenDimensions</include>
@@ -28,43 +43,38 @@
   			<visible>!System.HasAddon(os.openelec.tv)</visible>
   		</control>
   		<control type="image">
-  			<left>316</left>
-  			<top>85</top>
-  			<width>649</width>
-			  <height>513</height>
-  			<aspectratio>stretch</aspectratio>
-  			<texture background="true" border="39">dialogs/other/default.png</texture>
-  			<visible>System.HasAddon(os.openelec.tv)</visible>
-  		</control>
-  		<control type="image">
   			<description>background image</description>
   			<include>FullscreenDimensions</include>
   			<texture background="true">windows/settings/bg_firstuse_oe.png</texture>
   			<visible>System.HasAddon(os.openelec.tv)</visible>
   		</control>
+  		<control type="image">
+  			<left>348</left>
+  			<top>160</top>
+  			<width>583</width>
+  			<height>4</height>
+  			<aspectratio>stretch</aspectratio>
+  			<texture background="true">dialogs/other/header_line.png</texture>
+  		</control>
   		<control type="label">
-  			<description>Heding Label</description>
-  			<left>357</left>
-  			<top>125</top>
-  			<width>565</width>
-			  <label>$LOCALIZE[31379]</label>
-  			<font>FontSize_36</font>
-  			<textcolor>white</textcolor>
-  			<align>center</align>
-  			<scroll>true</scroll>
-  			<scrollspeed>20</scrollspeed>
+  			<description>header label</description>
+  			<left>360</left>
+  			<top>120</top>
+  			<width>560</width>
+  	    <include>DialogsHeaderLabel</include>
+        <label>$LOCALIZE[31250]</label>
   		</control>
   
-  		<control type="grouplist" id="900">
-  			<left>363</left>
-  			<top>168</top>
+  		<control type="grouplist" id="10010">
+  			<left>364</left>
+  			<top>178</top>
   			<width>553</width>
 			  <height>404</height>
   		  <itemgap>4</itemgap>
   			<onleft>10000</onleft>
 			  <onright>10000</onright>
-			  <onup>10000</onup>
-			  <ondown>10000</ondown>
+			  <onup>10010</onup>
+			  <ondown>10010</ondown>
   			<scrolltime>250</scrolltime>
   			<control type="button" id="901">
   				<description>Language Button</description>
@@ -86,7 +96,7 @@
   				<description>Character Set (Subtitles)</description>
   		    <width>553</width>
           <include>DialogsButton</include>
-  				<label>$LOCALIZE[31380]</label>
+  				<label>$LOCALIZE[31252]</label>
 			    <label2>[COLOR=blue]$INFO[Skin.String(subtitles.charset)][/COLOR]</label2>
 			    <onclick>RunScript(script.tlbb.systemsettings,SetSubtitleCharset)</onclick>
   			</control>
@@ -148,7 +158,7 @@
           <control type="button">
               <width>500</width>
               <include>DialogsButton</include>
-              <label>$LOCALIZE[31378]</label>
+              <label>$LOCALIZE[31251]</label>
               <label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skinzoom),, %][/COLOR]</label2>
               <visible>!ControlGroup(905).HasFocus</visible>
           </control>
@@ -156,7 +166,7 @@
               <width>500</width>
 			        <textcolor>white</textcolor>
               <include>DialogsButton</include>
-              <label>$LOCALIZE[31378]</label>
+              <label>$LOCALIZE[31251]</label>
               <label2>[COLOR=blue]$INFO[Skin.String(lookandfeel.skinzoom),, %][/COLOR]</label2>
               <visible>ControlGroup(905).HasFocus</visible>
           </control>
@@ -191,39 +201,41 @@
 -->
   		</control>
   
-  
-      <!-- Buttons -->
-  		<control type="grouplist" id="10000">
-  			<left>355</left>
-			  <top>577</top>
-  			<width>565</width>
-  			<height>0</height>
-  			<itemgap>0</itemgap>
-  			<align>left</align>
-  			<orientation>horizontal</orientation>
-  			<onleft>10000</onleft>
-  			<onright>10000</onright>
-  			<onup>900</onup>
-  			<ondown>900</ondown>
-        <animation effect="slide" start="0,0" end="0,-47" time="0" condition="System.HasAddon(os.openelec.tv)">Conditional</animation>
-  			<control type="button" id="10">
+      <!-- Control Buttons -->
+  	  <control type="group"  id="10000">
+  			<left>938</left>
+  			<top>559</top>
+        <animation effect="slide" start="0,0" end="0,-51" time="0" condition="System.HasAddon(os.openelec.tv)">Conditional</animation>
+    		<control type="button" id="10">
   				<description>Done</description>
-  				<texturefocus border="39,3,39,39">dialogs/buttons/save_fo.png</texturefocus>
-  				<texturenofocus border="39,3,39,39">dialogs/buttons/save_nf.png</texturenofocus>
-          <include>DialogsSaveCancelButton</include>
-  			  <label>$LOCALIZE[20177]</label>
+      		<width>150</width>
+  	      <include>DialogsButtonsText</include>
+      		<texturefocus border="49,0,49,0">dialogs/buttons/save_focus.png</texturefocus>
+      		<texturenofocus border="49,0,49,0">dialogs/buttons/save_nofocus.png</texturenofocus>
+    			<onleft>10010</onleft>
+    			<onright>10010</onright>
+    			<onup>11</onup>
+    			<ondown>11</ondown>
+  				<label>$LOCALIZE[20177]</label>
   				<onclick>Skin.Setbool(FirstTimeRun)</onclick>
   		    <onclick>Action(back)</onclick>
-  			</control>
-  			<control type="button" id="11">
+    		</control>
+    		<control type="button" id="11">
   				<description>Cancel</description>
-          <include>DialogsSaveCancelButton</include>
-  				<texturefocus border="39,3,39,39">dialogs/buttons/cancel_fo.png</texturefocus>
-  				<texturenofocus border="39,3,39,39">dialogs/buttons/cancel_nf.png</texturenofocus>
-  			  <label>$LOCALIZE[222]</label>
+    			<top>-50</top>
+      		<width>150</width>
+  	      <include>DialogsButtonsText</include>
+      		<texturefocus border="49,0,49,0">dialogs/buttons/cancel_focus.png</texturefocus>
+      		<texturenofocus border="49,0,49,0">dialogs/buttons/cancel_nofocus.png</texturenofocus>
+    			<onleft>10010</onleft>
+    			<onright>10010</onright>
+    			<onup>10</onup>
+    			<ondown>10</ondown>
+  				<label>$LOCALIZE[222]</label>
   		    <onclick>Action(back)</onclick>
-  			</control>
-  		</control>
+    		</control>
+  	  </control>
+
   	</control>
 	</controls>
 </window>

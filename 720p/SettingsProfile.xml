@@ -10,7 +10,8 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <include>DialogZoomInOutAnimation</include>
-		<visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(selectdialog) + !Window.IsActive(busy.xml)</visible>
+			<!-- <visible>!Window.IsActive(BusyDialog)</visible> -->
+		<visible>!Window.IsActive(ProgressDialog) + !Window.IsActive(selectdialog) + !Window.IsActive(busy.xml)</visible>
 		<control type="image">
 		  <include>FullscreenDimensions</include>
 		  <texture background="true">windows/settings/bg_settings.png</texture>
@@ -32,7 +33,7 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="50" width="295">
 					<control type="label">
-						<left>280</left>
+						<right>15</right>
 						<top>0</top>
 						<width>295</width>
 						<height>49</height>
@@ -52,7 +53,7 @@
             <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9010)">Conditional</animation>
 					</control>
 					<control type="label">
-						<left>280</left>
+						<right>15</right>
 						<top>0</top>
 						<width>295</width>
 						<height>49</height>

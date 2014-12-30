@@ -11,40 +11,46 @@
 	  <visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(FileBrowser)</visible>
 		<include>DialogAnimation</include>
 	  <visible>Player.HasAudio</visible>
+	  <control type="image">
+			<left>346</left>
+			<top>138</top>
+		  <width>589</width>
+		  <height>57</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+			<left>346</left>
+			<top>192</top>
+		  <width>589</width>
+		  <height>392</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
 		<control type="image">
-			<posx>316</posx>
-			<posy>117</posy>
-			<width>649</width>
-			<height>494</height>
+			<left>348</left>
+			<top>191</top>
+			<width>585</width>
+			<height>4</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-			<colordiffuse>FAFFFFFF</colordiffuse>
-			<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
+			<texture background="true">dialogs/other/header_line.png</texture>
 		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
 			<texture>osd/bg_osd_settings.png</texture>
-			<colordiffuse>FAFFFFFF</colordiffuse>
 		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
 			<texture>osd/bg_osd_settings_lines.png</texture>
-			<colordiffuse>FAFFFFFF</colordiffuse>
-			<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
 		</control>
 		<control type="label">
-			<description>Heding Label</description>
-			<posx>357</posx>
-			<posy>165</posy>
-			<width>565</width>
-			<label>$LOCALIZE[31306]</label>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
+			<description>header label</description>
+			<left>360</left>
+			<top>152</top>
+			<width>560</width>
+	    <include>DialogsHeaderLabel</include>
+		  <label>$LOCALIZE[31306]</label>
 		</control>
 
 		<control type="grouplist" id="1000">

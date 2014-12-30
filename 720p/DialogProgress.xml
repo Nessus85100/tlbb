@@ -1,150 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="101">
-  <zorder>3</zorder>
 	<defaultcontrol always="true">10</defaultcontrol>
+  <zorder>5</zorder>
 	<controls>
 
-		<control type="group">
+	 <control type="group">
+		 <left>305</left>
+		 <top>235</top>
+		 <include>DialogAnimation</include>
      <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>
-		 <animation type="WindowOpen" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="190" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="450" start="0" easing="out" end="100" />
-		 </animation>			
-		 <animation type="WindowClose" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="100" end="190" tween="cubic" easing="in" />
-			<effect type="fade" time="450" start="100" easing="in" end="0" />
-		 </animation>		  
-		 <animation type="Visible" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="190" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="450" start="0" easing="out" end="100" />
-		 </animation>			
-		 <animation type="Hidden" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="100" end="190" tween="cubic" easing="in" />
-			<effect type="fade" time="450" start="100" easing="in" end="0" />
-		 </animation>
 		 <control type="image">
-			<left>430</left>
-			<top>165</top>
-			<width>435</width>
-			<height>375</height>
-			<texture border="49">dialogs/other/default.png</texture>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
+		   <left>0</left>
+			 <top>0</top>
+			 <width>670</width>
+			 <height>57</height>
+			 <colordiffuse>blue</colordiffuse>
+			 <texture background="true" border="9">dialogs/other/header.png</texture>
 		 </control>
-			<control type="label" id="1">
-				<description>header label</description>
-				<left>455</left>
-				<top>200</top>
-				<width>385</width>
-				<font>FontSize_26</font>
-				<textcolor>99white</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<scrollspeed>20</scrollspeed>
-				<label>Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
-			</control>
-		 <control type="group">
-			<left>540</left>
-			<top>233</top>
-			<control type="image">
-				<description>Busy animation</description>
-				<left>0</left>
-				<top>0</top>
-				<width>220</width>
-				<height>220</height>
-				<texture>dialogs/busy/static_busy.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<description>Busy animation</description>
-				<left>0</left>
-				<top>0</top>
-				<width>220</width>
-				<height>220</height>
-				<texture>dialogs/busy/animation_1.png</texture>
-				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
-			</control>
-			<control type="image">
-				<description>Busy animation</description>
-				<left>0</left>
-				<top>0</top>
-				<width>220</width>
-				<height>220</height>
-				<texture>dialogs/busy/animation_2.png</texture>
-				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
-			</control>
+		 <control type="image">
+			 <left>0</left>
+			 <top>55</top>
+			 <width>670</width>
+			 <height>178</height>
+			 <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+		 </control>
+		 <control type="image">
+			<left>2</left>
+			<top>53</top>
+			<width>666</width>
+			<height>4</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">dialogs/other/header_line.png</texture>
+		 </control>
+     <control type="label" id="1">
+       <description>header label</description>
+       <left>15</left>
+       <top>12</top>
+       <width>630</width>
+	     <include>DialogsHeaderLabel</include>
+       <label>Remove ID to Test, Remove ID to Test</label>
+     </control>
+		 <control type="grouplist">
+		  <left>25</left>
+			<top>75</top>
+			<height>60</height>
+			<width>1190</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
 			<control type="label">
-				<description>Busy label</description>
-				<left>-90</left>
-				<top>90</top>
-				<width>400</width>
-				<height>40</height>
-				<align>center</align>
-				<aligny>center</aligny>
+				<height>48</height>
+				<width min="10" max="150">auto</width>
+				<font>FontSize_50</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+		    <align>left</align>
+		    <aligny>center</aligny>
+				<scroll>false</scroll>
 				<label>$INFO[System.Progressbar,,%]</label>
-				<font>FontSize_26</font>
-				<textcolor>99white</textcolor>
 				<visible>IntegerGreaterThan(System.Progressbar,0)</visible>
 			</control>
-		 </control>	
-	
-		 <control type="group">
-			<left>455</left>
-			<top>455</top>
-			<control type="label" id="2">
-				<description>Busy Line 1</description>
-				<left>0</left>
-				<top>0</top>
-				<width>385</width>
-				<height>20</height>
-				<font>FontSize_22</font>
-				<textcolor>77white</textcolor>
-				<shadowcolor>99000000</shadowcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<scrollspeed>20</scrollspeed>
-				<label>Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
-			</control>
-			<control type="label" id="3">
-				<description>Busy Line 2</description>
-				<left>0</left>
-				<top>25</top>
-				<width>385</width>
-				<height>20</height>
-				<font>FontSize_22</font>
-				<textcolor>77white</textcolor>
-				<shadowcolor>99000000</shadowcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<scrollspeed>20</scrollspeed>
-				<label>Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
+			<control type="group">
+				<width>515</width>
+				<control type="label" id="2">
+					<top>0</top>
+				  <description>Header Label</description>
+					<height>25</height>
+					<width>515</width>
+					<font>FontSize_22</font>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+			    <align>left</align>
+			    <aligny>center</aligny>
+					<scroll>false</scroll>
+				<label>Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
+				</control>
+				<control type="label" id="3">
+				  <description>Title Label</description>
+					<top>23</top>
+					<height>25</height>
+					<width>515</width>
+					<font>FontSize_22</font>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+			    <align>left</align>
+			    <aligny>center</aligny>
+					<scroll>false</scroll>
+				  <label>Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
+				</control>
 			</control>
 		 </control>
 		 <control type="button" id="10">
 			<description>Cancel button</description>
-			<left>575</left>
-			<top>530</top>
-			<width>150</width>
-			<height>40</height>
-			<texturenofocus border="10,0,10,0">-</texturenofocus>
-			<texturefocus border="10,0,10,0">-</texturefocus>
-			<align>center</align>
-			<aligny>top</aligny>
-			<font>-</font>
-			<textcolor>99grey</textcolor>
-			<focusedcolor>white</focusedcolor>
-			<disabledcolor>44white</disabledcolor>
-			<shadowcolor>55000000</shadowcolor>
-			<textoffsety>4</textoffsety>
+			<left>492</left>
+			<top>170</top>
+	    <include>DialogsButtonsYesNo</include>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>
 			<ondown>10</ondown>
 		 </control>
-	  </control>
+	 </control>
 	</controls>
 </window>

@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/xbmc-skins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,14 +36,6 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "Číslo stopy"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "Řazení: vzestupně"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "Řazení: sestupně"
-
 msgctxt "#31009"
 msgid "Context Menu"
 msgstr "Místní nabídka"
@@ -53,8 +45,12 @@ msgid "-"
 msgstr "Třídit"
 
 msgctxt "#31011"
-msgid "ON"
+msgid "On"
 msgstr "Zapnuto"
+
+msgctxt "#31012"
+msgid "Off"
+msgstr "Vypnuto"
 
 msgctxt "#31016"
 msgid "File Manager"
@@ -116,6 +112,10 @@ msgctxt "#31036"
 msgid "Close"
 msgstr "Zavřít"
 
+msgctxt "#31039"
+msgid "IP Address"
+msgstr "IP Adresa"
+
 msgctxt "#31080"
 msgid "Slide"
 msgstr "Snímek"
@@ -136,6 +136,10 @@ msgctxt "#31127"
 msgid "Landscape"
 msgstr "Na šířku"
 
+msgctxt "#31128"
+msgid "ClearArt"
+msgstr "Průhledné obrázky"
+
 msgctxt "#31134"
 msgid "Edit Background for Media Type"
 msgstr "Změnit pozadí úvodní obrazovky - sekce"
@@ -148,9 +152,13 @@ msgctxt "#31136"
 msgid "Multi Image"
 msgstr "Více pozadí"
 
-msgctxt "#31204"
-msgid "-"
-msgstr "Třídit"
+msgctxt "#31158"
+msgid "Views"
+msgstr "Počet zobrazení"
+
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Titulky jsou k dispozici lokálně"
 
 msgctxt "#31218"
 msgid "Landscape"
@@ -196,6 +204,10 @@ msgctxt "#31241"
 msgid "Recently Added Movies"
 msgstr "Nejnovější filmy"
 
+msgctxt "#31254"
+msgid "Search on YouTube"
+msgstr "Vyhledat na YouTube"
+
 msgctxt "#31281"
 msgid "Save Playlist"
 msgstr "Uložit seznam skladeb"
@@ -224,6 +236,10 @@ msgctxt "#31309"
 msgid "Visualization Presets"
 msgstr "Předvolby vizualizace"
 
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "Nyní přehrávám"
+
 msgctxt "#31350"
 msgid "Available Groups"
 msgstr "Dostupné skupiny"
@@ -239,3 +255,15 @@ msgstr "Přejmenovat skupinu"
 msgctxt "#31353"
 msgid "Delete Group"
 msgstr "Smazat skupinu"
+
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr "Aktualizovat knihovnu videí"
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr "Aktualizovat hudební knihovnu"
+
+msgctxt "#31430"
+msgid "Help"
+msgstr "Nápověda"

@@ -10,7 +10,7 @@
 
 		<control type="group">
 			<posx>478</posx>
-			<posy>40</posy>
+			<posy>10</posy>
 	    <animation type="WindowOpen">
 	      <effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
 	      <effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />

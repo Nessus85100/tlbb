@@ -4,22 +4,19 @@
   <controls>
 	 <control type="group">
 	  <include>DialogAnimation</include>
-		<control type="image">
-			<left>316</left>
-			<top>165</top>
-			<width>647</width>
-			<height>402</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
+	  <include>DialogSelectBackgrounds</include>
+		<control type="label">
+			<description>header label</description>
+			<left>360</left>
+			<top>152</top>
+			<width>560</width>
+	    <include>DialogsHeaderLabel</include>
+			<label>$LOCALIZE[424]</label>
 		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select.png</texture>
-		</control>
+
 		<control type="list" id="2000">
-			<left>363</left>
-			<top>214</top>
+			<left>364</left>
+			<top>209</top>
 			<width>553</width>
 			<height>306</height>
 			<onup>2000</onup>

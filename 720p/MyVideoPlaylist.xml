@@ -67,13 +67,6 @@
 					<description>View as</description>
 				  <include>TopLeftMenusButton</include>
 				</control>
-				<control type="button" id="95">
-					<description>Viewtype Options</description>
-				  <label>31014</label>
-					<onclick>SetFocus(9222)</onclick>
-				  <include>TopLeftMenusButton</include>
-			    <visible>false</visible>
-				</control>
 				<control type="togglebutton" id="20">
 					<description>Shuffle</description>
 	        <label>$LOCALIZE[191]: $LOCALIZE[31012]</label>
@@ -101,48 +94,7 @@
 				  <include>TopLeftMenusButton</include>
 				</control>
 		  </control>
-	
-	    <!-- Viewtype Options -->
-	    <control type="group">
-	      <include>ViewtypeOptionsTopMenuAnimation</include>
-	      <control type="image">
-	        <left>0</left>
-	        <top>-12</top>
-					<width>380</width>
-					<height>75</height>
-					<texture>dialogs/menus/topmenus_options.png</texture>
-	        <aspectratio>stretch</aspectratio>
-	      </control>
-	      <control type="image">
-	        <left>0</left>
-	        <top>100</top>
-					<width>380</width>
-					<height>22</height>
-					<texture>dialogs/menus/bottom.png</texture>
-	        <aspectratio>stretch</aspectratio> 
-	      </control>
-				<control type="label">
-	        <left>75</left>
-				  <label>$LOCALIZE[31014]</label>
-				  <include>TopBigLabel</include>
-				</control>      
-	    </control>
-			<control type="grouplist" id="9222">
-				<left>0</left>
-				<top>63</top>
-				<width>380</width>
-				<height>520</height>
-				<itemgap>0</itemgap>
-				<onleft>9111</onleft>
-				<onright>9111</onright>
-				<onup>9222</onup>
-				<ondown>9222</ondown>
-	      <include>ViewtypeOptionsTopMenuAnimation</include>
-				<control type="togglebutton" id="390">
-					<description>empty</description>
-				  <visible>false</visible>
-				</control>
-			</control>
+
 		</control>
 
 	  <include>CommonWeatherAndClock</include>
@@ -158,13 +110,14 @@
 			<include>ShutdownMenuAnimation</include>
 	    <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(contextmenu.xml)</visible>
 			<control type="grouplist">
-				<left>55</left>
+				<left>0</left>
 				<top>0</top>
-			  <height>70</height>
 				<width>1000</width>
+			  <height>70</height>
 				<align>left</align>
 				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>Logo</include>
 				<control type="label">
 				  <include>TopBigLabel</include>
 					<label>$LOCALIZE[3] $LOCALIZE[559]</label>

@@ -10,9 +10,9 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <!-- <animation effect="slide" start="0,0" end="0,55" time="250" tween="Quadratic" easing="out" condition="[Container(20).HasFocus(1) + IntegerGreaterThan(Container(45).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedTVShows)] | [Container(20).HasFocus(2) + IntegerGreaterThan(Container(35).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedMovies)] | [Container(20).HasFocus(7) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(51) + IntegerGreaterThan(Container(25).NumItems,0) + Skin.HasSetting(ShowHomeCustomVideoAddons)] | [Container(20).HasFocus(3) + IntegerGreaterThan(Container(15).NumItems,0) + Skin.HasSetting(ShowHomeRecentlyAddedAlbums)]">Conditional</animation> -->
-		<left>283</left>
+		<left>350</left>
 		<top>430</top>
-		<width>700</width>
+		<width>600</width>
 		<height>155</height>
 		<onup>23</onup>
 		<ondown>23</ondown>
@@ -28,48 +28,48 @@
 		<animation type="Conditional" condition="!Control.HasFocus(23)">
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
         <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
-		</animation>     
+		</animation>
 	</include>
 
 
 <!-- Item Layout Vars -->
 	<include name="SubMenuItemLayoutVarsDown">
-		<left>350</left>
+		<left>0</left>
 		<top>0</top>
-		<width>700</width>
+		<width>580</width>
 		<height>50</height>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>FontSize_46</font>
 		<textcolor>white</textcolor>
 		<shadowcolor>77000000</shadowcolor>
-		<info>ListItem.Label</info>
+		<label>$INFO[ListItem.Label]</label>
 		<animation type="Conditional" condition="true" reversible="false">
 			<effect type="fade" end="50" time="0" />
-			<effect type="zoom" end="75" time="0" />
+			<effect type="zoom" end="75" time="0" center="auto"/>
 		</animation>
 	</include>
 
 
 <!-- Focused Layout Vars -->
 	<include name="SubMenuFocusedLayoutVarsDown">
-		<left>350</left>
+		<left>0</left>
 		<top>0</top>
-		<width>700</width>
+		<width>580</width>
 		<height>50</height>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>FontSize_46</font>
 		<textcolor>white</textcolor>
 		<shadowcolor>77000000</shadowcolor>
-		<label>$INFO[ListItem.label]</label>
+		<label>$INFO[ListItem.Label]</label>
 		<animation type="Focus" condition="Container(23).OnNext | Container(23).OnPrevious" reversible="false">
 			<effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />
-			<effect type="zoom" start="75" end="100" time="200" tween="sine" easing="in" />
+			<effect type="zoom" start="75" end="100" time="200" center="auto" tween="sine" easing="in" />
 		</animation>
 		<animation type="Unfocus" condition="Container(23).OnNext | Container(23).OnPrevious" reversible="false">
 			<effect type="fade" start="100" end="40" time="200" tween="sine" easing="out" />
-			<effect type="zoom" start="100" end="75" time="200" tween="sine" easing="out" />
+			<effect type="zoom" start="100" end="75" time="200" center="auto" tween="sine" easing="out" />
 		</animation>
 	</include>
 	
@@ -79,14 +79,15 @@
 
 		<control type="wraplist" id="23">
 			<description>SubMenu Container</description>
-			<visible>![Window.IsActive(script-skinshortcuts.xml) | Window.IsActive(BusyDialog) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious]</visible>
+			<!-- <visible>!Window.IsActive(BusyDialog)</visible> -->
+			<visible>![Window.IsActive(script-skinshortcuts.xml) | Window.IsActive(ProgressDialog) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(1115) | Container(20).OnNext | Container(20).OnPrevious]</visible>
 			<include>SubMenuWraplistVarsDown</include>
-			<itemlayout height="46">
+			<itemlayout width="580" height="46">
 				<control type="label">
 					<include>SubMenuItemLayoutVarsDown</include>
 				</control>
 			</itemlayout>
-			<focusedlayout height="55">
+			<focusedlayout width="580" height="55">
 				<control type="label">
 					<include>SubMenuFocusedLayoutVarsDown</include>
 				</control>
@@ -289,12 +290,13 @@
 	</include>
 
 	<include name="ContextMenuOnTopLeft">
-	    <control type="group">
+	    <control type="grouplist">
 				<left>30</left>
+	      <top>13</top>
+				<width>380</width>
+				<itemgap>0</itemgap>
 	      <include>OpenCloseSlideAnimation</include>
 	      <control type="image" id="997">
-	        <left>0</left>
-	        <top>13</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_context.png</texture>
@@ -303,9 +305,8 @@
 	      <control type="image" id="999">
 	        <description>background image</description>
 	        <width>380</width>
-	        <height>608</height>
+					<height max="700">auto</height>
 	        <texture>-</texture>
-	        <aspectratio aligny="center">stretch</aspectratio>
 	      </control>
 	      <control type="image" id="998">
 					<width>380</width>
@@ -313,12 +314,12 @@
 					<texture>dialogs/menus/bottom.png</texture>
 	        <aspectratio aligny="center">stretch</aspectratio>
 	      </control>
-	    </control>      
+	    </control>
 		  <control type="grouplist" id="996">
 				<left>30</left>
 				<top>88</top>
 				<width>380</width>
-				<height max="520">auto</height>
+				<height max="700">auto</height>
 				<itemgap>0</itemgap>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
@@ -349,12 +350,13 @@
 	</include>
 
 	<include name="ContextMenuFavourites">
-	    <control type="group">
+	    <control type="grouplist">
 				<left>30</left>
+	      <top>13</top>
+				<width>380</width>
+				<itemgap>0</itemgap>
 	      <include>OpenCloseSlideAnimation</include>
 	      <control type="image" id="997">
-	        <left>0</left>
-	        <top>13</top>
 					<width>380</width>
 					<height>75</height>
 					<texture>dialogs/menus/topmenus_context.png</texture>
@@ -363,9 +365,8 @@
 	      <control type="image" id="999">
 	        <description>background image</description>
 	        <width>380</width>
-	        <height>608</height>
+					<height max="700">auto</height>
 	        <texture>-</texture>
-	        <aspectratio aligny="center">stretch</aspectratio>
 	      </control>
 	      <control type="image" id="998">
 					<width>380</width>
@@ -378,7 +379,7 @@
 				<left>30</left>
 				<top>88</top>
 				<width>380</width>
-				<height max="520">auto</height>
+				<height max="700">auto</height>
 				<itemgap>0</itemgap>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
@@ -843,592 +844,6 @@
 				<font>FontSize_22</font>
 			</control>
 	</include>
-
-
-
-	<!-- =========================== -->
-	<!-- == Dialog Select Default == -->
-	<!-- =========================== -->
-	<include name="DialogSelect">
-	 <control type="group">
-	  <include>DialogAnimation</include>
-		<visible>![Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(textviewer)]</visible>
-		<control type="image">
-			<left>316</left>
-			<top>122</top>
-			<width>647</width>
-			<height>472</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select.png</texture>
-			<visible>Control.IsVisible(3)</visible>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select_icon.png</texture>
-			<visible>Control.IsVisible(6)</visible>
-			<visible>![Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)]</visible>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<colordiffuse>FAFFFFFF</colordiffuse>
-			<texture background="true">dialogs/selectdialog/bg_select_icon.png</texture>
-			<visible>Control.IsVisible(6)</visible>
-			<visible>Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)</visible>
-		</control>
-		<control type="label" id="1">
-			<description>header label</description>
-			<left>340</left>
-			<top>170</top>
-			<width>600</width>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-			<label>-</label>
-		</control>
-		<control type="list" id="3">
-			<left>363</left>
-			<top>214</top>
-			<width>553</width>
-			<height>306</height>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<onleft>10000</onleft>
-			<onright>10000</onright>
-			<scrolltime tween="quadratic" easing="out">250</scrolltime>
-			<itemlayout height="51" width="553">
-				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>540</width>
-					<height>47</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>47</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
-    			<visible>ListItem.IsSelected</visible>
-				</control>
-			</itemlayout>
-			<focusedlayout height="51" width="553">
-			 <control type="group">
-	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnPrevious">focus</animation>
-	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnNext">focus</animation>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>47</height>
-					<texture>buttons/focus.png</texture>
-					<visible>Control.HasFocus(3)</visible>
-				</control>
-				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>540</width>
-					<height>47</height>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-          <scroll>true</scroll>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>47</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
-    			<visible>ListItem.IsSelected</visible>
-				</control>
-			 </control>
-			</focusedlayout>
-		</control>
-		<control type="list" id="6">
-			<left>363</left>
-			<top>214</top>
-			<width>555</width>
-			<height>306</height>
-			<onup>6</onup>
-			<ondown>6</ondown>
-			<onleft>10000</onleft>
-			<onright>10000</onright>
-			<pagecontrol>61</pagecontrol>
-			<scrolltime tween="quadratic" easing="out">250</scrolltime>
-			<itemlayout height="76.5" width="553">
-				<control type="image">
-					<left>1</left>
-					<top>1</top>
-					<width>70</width>
-					<height>70</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-					<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
-					<bordersize>6</bordersize>
-				</control>
-				<control type="label">
-					<left>80</left>
-					<top>8</top>
-					<width>470</width>
-					<height>30</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-		      <animation effect="slide" start="0,35" end="0,10" time="0" reversible="false" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
-				</control>
-				<control type="label">
-					<left>80</left>
-					<top>32</top>
-					<width>470</width>
-					<height>30</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31040] ]</label>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>72</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
-    			<visible>ListItem.IsSelected</visible>
-				</control>
-			</itemlayout>
-			<focusedlayout height="76.5" width="553">
-			 <control type="group">
-	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(6).OnPrevious">focus</animation>
-	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(6).OnNext">focus</animation>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>72</height>
-					<texture>buttons/focus.png</texture>
-					<visible>Control.HasFocus(6)</visible>
-				</control>
-				<control type="image">
-					<left>1</left>
-					<top>1</top>
-					<width>70</width>
-					<height>70</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
-					<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
-					<bordersize>6</bordersize>
-				</control>
-				<control type="label">
-					<left>80</left>
-					<top>8</top>
-					<width>470</width>
-					<height>30</height>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-          <scroll>true</scroll>
-		      <animation effect="slide" start="0,0" end="0,10" time="0" reversible="false" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
-				</control>
-				<control type="label">
-					<left>80</left>
-					<top>32</top>
-					<width>470</width>
-					<height>30</height>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-          <scroll>true</scroll>
-					<label>$INFO[ListItem.Label2]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31040] ]</label>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>72</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
-    			<visible>ListItem.IsSelected</visible>
-				</control>
-			 </control>
-			</focusedlayout>
-		</control>
-
-	  <control type="group"  id="10000">
-			<left>355</left>
-			<top>525</top>
-			<control type="grouplist" id="10001">
-				<left>0</left>
-				<top>0</top>
-				<width>0</width>
-				<height>0</height>
-				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
-				<control type="button" id="5">
-					<description>Get more</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
-					<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>200</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>190</label>
-				</control>
-			</control>
-			<control type="group">
-				<left>262</left>
-				<top>0</top>
-				<control type="label">
-					<description>Page Count Label</description>
-					<width>300</width>
-					<height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>44white</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[Container(6).NumItems,, $LOCALIZE[31025]]</label>
-				  <visible>IntegerGreaterThan(Container(6).NumItems,0)</visible>
-				</control>
-				<control type="label">
-					<description>Page Count Label</description>
-					<width>300</width>
-					<height>40</height>
-					<font>FontSize_20</font>
-					<textcolor>44white</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[Container(3).NumItems,, $LOCALIZE[31025]]</label>
-				  <visible>IntegerGreaterThan(Container(3).NumItems,0)</visible>
-				</control>
-			</control>
-	  </control>
-	 </control>
-	</include>
-
-
-
-
-	<!-- ======================= -->
-	<!-- == Dialog Select Art == -->
-	<!-- ======================= -->
-	<include name="DialogSelectArt">
-	 <control type="group">
-	  <include>DialogAnimation</include>
-		<visible>!Window.IsActive(yesnodialog)</visible>
-		<control type="image">
-			<left>316</left>
-			<top>122</top>
-			<width>647</width>
-			<height>472</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-			<visible>Control.IsVisible(3)</visible>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/selectdialog/bg_select.png</texture>
-			<visible>Control.IsVisible(3)</visible>
-		</control>
-		<control type="image">
-			<left>253</left>
-			<top>122</top>
-			<width>776</width>
-			<height>500</height>
-			<colordiffuse>EEFFFFFF</colordiffuse>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-			<visible>Control.IsVisible(6)</visible>
-		</control>		
-		<control type="label" id="1">
-			<description>header label</description>
-			<left>305</left>
-			<top>170</top>
-			<width>670</width>
-			<font>FontSize_34</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-			<label>-</label>
-		</control>
-		<control type="button.">
-			<left>295</left>
-			<top>165</top>
-			<width>698</width>
-			<font>FontSize_32</font>
-			<textcolor>99FFFFFF</textcolor>
-			<focusedcolor>99FFFFFF</focusedcolor>
-		  <disabledcolor>99FFFFFF</disabledcolor>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<align>left</align>
-			<aligny>top</aligny>
-    	<label>[COLOR=white]$INFO[Control.GetLabel(1),,: ][/COLOR]</label>
-			<label2>$INFO[Container(6).ListItem.Label]</label2>
-			<visible>Control.IsVisible(6)</visible>
-		</control>
-		<control type="list" id="3">
-			<left>363</left>
-			<top>214</top>
-			<width>555</width>
-			<height>306</height>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<onleft>10000</onleft>
-			<onright>10000</onright>
-			<scrolltime tween="quadratic" easing="out">250</scrolltime>
-			<itemlayout height="51" width="553">
-				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>540</width>
-					<height>47</height>
-					<font>FontSize_20</font>
-					<textcolor>77white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>47</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
-    			<visible>ListItem.IsSelected</visible>
-				</control>
-			</itemlayout>
-			<focusedlayout height="51" width="553">
-			 <control type="group">
-	      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnPrevious">focus</animation>
-	      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(3).OnNext">focus</animation>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>47</height>
-					<texture>buttons/focus.png</texture>
-					<visible>Control.HasFocus(3)</visible>
-				</control>
-				<control type="label">
-					<left>10</left>
-					<top>0</top>
-					<width>540</width>
-					<height>47</height>
-					<font>FontSize_20</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-          <scroll>true</scroll>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>553</width>
-					<height>47</height>
-					<texture>dialogs/selectdialog/selected.png</texture>
-    			<visible>ListItem.IsSelected</visible>
-				</control>
-			 </control>
-			</focusedlayout>
-		</control>
-
-		<control type="panel" id="6">
-			<left>276</left>
-			<top>211</top>
-			<width>710</width>
-			<height>350</height>
-			<onleft>1000</onleft>
-			<onright>1000</onright>
-			<onup>6</onup>
-			<ondown>6</ondown>
-      <preloaditems>3</preloaditems>
-		  <focusposition>0</focusposition>
-      <scrolltime tween="Quadratic" easing="out">250</scrolltime>
-			<itemlayout height="175" width="175">
-				<control type="image">
-					<left>20</left>
-					<top>0</top>
-					<width>165</width>
-					<height>165</height>
-					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture border="3,0,3,0">osd/quicknav/nofocus_square.png</texture>
-				</control>
-				<control type="image">
-					<left>25</left>
-					<top>5</top>
-					<width>155</width>
-					<height>155</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-				  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
-				  <bordersize>5</bordersize>
-				</control>
-			</itemlayout>
-			<focusedlayout height="175" width="175">
-				<control type="image">
-					<left>20</left>
-					<top>0</top>
-					<width>165</width>
-					<height>165</height>
-					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture border="3,0,3,0">osd/quicknav/nofocus_square.png</texture>
-				</control>
-				<control type="image">
-					<left>25</left>
-					<top>5</top>
-					<width>155</width>
-					<height>155</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-				  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
-				  <bordersize>5</bordersize>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>0</top>
-					<width>165</width>
-					<height>165</height>
-					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture border="3,0,3,0">osd/quicknav/focus_square.png</texture>
-          <animation type="Focus">
-            <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-          </animation>
-          <animation type="Unfocus">
-            <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-          </animation>
-				</control>
-			</focusedlayout>
-		</control>
-
-		<control type="label">
-			<description>Label</description>
-			<left>300</left>
-			<top>553</top>
-			<width>590</width>
-			<height>40</height>
-			<font>FontSize_20</font>
-			<textcolor>99grey</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<scroll>false</scroll>
-			<align>left</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container(6).ListItem.Label2,[COLOR=white]$LOCALIZE[13514]:[/COLOR] ]</label>
-			<visible>Control.IsVisible(6) + [SubString(Container(6).ListItem.Label2,.jpg) | SubString(Container(6).ListItem.Label2,.png) | SubString(Container(6).ListItem.Label2,.tbn)]</visible>
-		</control>
-		<control type="label">
-			<description>Label</description>
-			<left>300</left>
-			<top>553</top>
-			<width>590</width>
-			<height>40</height>
-			<font>FontSize_20</font>
-			<textcolor>99grey</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<scroll>false</scroll>
-			<align>left</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container(6).ListItem.Label]</label>
-			<visible>Control.IsVisible(6) + ![SubString(Container(6).ListItem.Label2,.jpg) | SubString(Container(6).ListItem.Label2,.png) | SubString(Container(6).ListItem.Label2,.tbn) | SubString(Container(6).ListItem.Label,poster) | SubString(Container(6).ListItem.Label,fanart) | SubString(Container(6).ListItem.Label,banner) | SubString(Container(6).ListItem.Label,clearart) | SubString(Container(6).ListItem.Label,clearlogo) | SubString(Container(6).ListItem.Label,landscape) | SubString(Container(6).ListItem.Label,discart)]</visible>
-		</control>
-		<control type="label">
-			<description>Label</description>
-			<left>300</left>
-			<top>553</top>
-			<width>590</width>
-			<height>40</height>
-			<font>FontSize_20</font>
-			<textcolor>99grey</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<scroll>false</scroll>
-			<align>left</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container(6).ListItem.Label,[COLOR=white]$LOCALIZE[13512]:[/COLOR] ]</label>
-			<visible>Control.IsVisible(6) + [SubString(Container(6).ListItem.Label,poster) | SubString(Container(6).ListItem.Label,fanart) | SubString(Container(6).ListItem.Label,banner) | SubString(Container(6).ListItem.Label,clearart) | SubString(Container(6).ListItem.Label,clearlogo) | SubString(Container(6).ListItem.Label,landscape) | SubString(Container(6).ListItem.Label,discart)]</visible>
-		</control>
-		<control type="label">
-			<description>Page Count Label</description>
-			<right>295</right>
-			<top>553</top>
-			<width>300</width>
-			<height>40</height>
-			<font>FontSize_20</font>
-			<textcolor>44white</textcolor>
-			<scroll>false</scroll>
-			<align>right</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container(6).NumItems,, $LOCALIZE[31025]]</label>
-		  <visible>IntegerGreaterThan(Container(6).NumItems,0)</visible>
-		</control>
-		<control type="label">
-			<description>Page Count Label</description>
-			<right>360</right>
-			<top>525</top>
-			<width>300</width>
-			<height>40</height>
-			<font>FontSize_20</font>
-			<textcolor>44white</textcolor>
-			<scroll>false</scroll>
-			<align>right</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container(3).NumItems,, $LOCALIZE[31025]]</label>
-		  <visible>IntegerGreaterThan(Container(3).NumItems,0)</visible>
-		</control>
-	  <control type="button" id="5">
-		  <description>Get more</description>
-			<visible>false</visible>
-		</control>
-	 </control>
-	</include>
-
-
-
-
 
 
 </includes>

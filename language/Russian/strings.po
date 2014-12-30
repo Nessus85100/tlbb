@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-skins/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,14 +40,6 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "Номер композиции"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "По возрастанию"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "По убыванию"
-
 msgctxt "#31008"
 msgid "System auto shutdown in"
 msgstr "Выключение системы через"
@@ -61,12 +53,16 @@ msgid "-"
 msgstr "-"
 
 msgctxt "#31011"
-msgid "ON"
-msgstr "ВКЛ"
+msgid "On"
+msgstr "Вкл."
 
 msgctxt "#31012"
-msgid "OFF"
-msgstr "ВЫКЛ"
+msgid "Off"
+msgstr "Выкл."
+
+msgctxt "#31013"
+msgid "Enable Home Menu Animation"
+msgstr "Включить анимацию главного меню"
 
 msgctxt "#31014"
 msgid "ViewType Options"
@@ -134,11 +130,11 @@ msgstr "Переместить вправо"
 
 msgctxt "#31030"
 msgid "AM"
-msgstr "Утром"
+msgstr "До полудня"
 
 msgctxt "#31031"
 msgid "PM"
-msgstr "Днем"
+msgstr "После полудня"
 
 msgctxt "#31032"
 msgid "User Login"
@@ -208,13 +204,25 @@ msgctxt "#31086"
 msgid "Banner List"
 msgstr "Баннеры"
 
+msgctxt "#31087"
+msgid "VideoWall Fanart"
+msgstr "Фанарт видеостены"
+
 msgctxt "#31088"
 msgid "List Wall"
 msgstr "Стена со списком"
 
+msgctxt "#31098"
+msgid "Home Menu"
+msgstr "Главное Меню"
+
+msgctxt "#31099"
+msgid "Show Home Menu Buttons"
+msgstr "Показать кнопки в Главном Меню"
+
 msgctxt "#31100"
-msgid "Home Categories Buttons"
-msgstr "Пункты Главного меню"
+msgid "Hide Home Menu Buttons"
+msgstr "Скрыть кнопки главного меню"
 
 msgctxt "#31101"
 msgid "Show Weather Info"
@@ -229,8 +237,8 @@ msgid "Hide Now Playing Music Info"
 msgstr "Убрать информацию о проигрываемой музыке"
 
 msgctxt "#31104"
-msgid "Hide Search Button"
-msgstr "Убрать кнопку Поиск"
+msgid "Show Search Button"
+msgstr "Показывать Поиск "
 
 msgctxt "#31105"
 msgid "Hide Trailers Button"
@@ -272,10 +280,6 @@ msgctxt "#31114"
 msgid "Show Videos Button"
 msgstr "Показать кнопку Видео"
 
-msgctxt "#31115"
-msgid "Show DVD Button"
-msgstr "Показать кнопку DVD"
-
 msgctxt "#31116"
 msgid "Show Music Videos Button"
 msgstr "Показать кнопку Муз. видео"
@@ -289,8 +293,8 @@ msgid "Custom Button"
 msgstr "Дополнительная кнопка"
 
 msgctxt "#31119"
-msgid "Custom Home Buttons"
-msgstr "Дополнительные кнопки в Главном меню"
+msgid "Custom Home Menu Buttons"
+msgstr "Пользовательские кнопки главного меню"
 
 msgctxt "#31120"
 msgid "Hide Movies Submenu"
@@ -314,7 +318,7 @@ msgstr "Гирлянда"
 
 msgctxt "#31125"
 msgid "Edit Info"
-msgstr "Изменить информацию"
+msgstr "Изменить"
 
 msgctxt "#31126"
 msgid "Episode Thumb"
@@ -368,10 +372,6 @@ msgctxt "#31138"
 msgid "Enable Movies Notifications"
 msgstr "Включить уведомления о фильмах"
 
-msgctxt "#31139"
-msgid "Enable Addons Notifications"
-msgstr "Включить уведомления дополнений"
-
 msgctxt "#31140"
 msgid "Enable Weather Alerts Notifications"
 msgstr "Включить уведомления о погоде"
@@ -421,12 +421,8 @@ msgid "Show RSS feed in whole skin"
 msgstr "Показывать поток RSS на всех экранах"
 
 msgctxt "#31152"
-msgid "Hide Flagging read from video filenames [COLOR=55white](Blu-ray, HD-DVD)[/COLOR]"
-msgstr "Не показывать флаги из имени видеофайла [COLOR=55white](Blu-ray, HD-DVD)[/COLOR]"
-
-msgctxt "#31153"
-msgid "Enable Login Screen"
-msgstr "Включить экран входа"
+msgid "Hide Live TV Submenu"
+msgstr "Убрать подменю ТВ"
 
 msgctxt "#31154"
 msgid "Choose Trailers Add-on"
@@ -435,6 +431,38 @@ msgstr "Дополнение трейлеров"
 msgctxt "#31155"
 msgid "Add-ons Button opens..."
 msgstr "Кнопка Дополнения открывает..."
+
+msgctxt "#31156"
+msgid "Hide Video Views"
+msgstr "Спрятать просмотры Видео"
+
+msgctxt "#31157"
+msgid "Hide Music Views"
+msgstr "Спрятать просмотры Музыки"
+
+msgctxt "#31158"
+msgid "Views"
+msgstr "Режим просмотра"
+
+msgctxt "#31159"
+msgid "Show FullScreenInfo instead of the SeekBar"
+msgstr "Показывать Полноэкранную информацию вместо панели поиска"
+
+msgctxt "#31160"
+msgid "Download [COLOR=selected]logo.png[/COLOR] for all Movies"
+msgstr "Скачать [COLOR=selected]logo.png[/COLOR] для всех фильмов"
+
+msgctxt "#31162"
+msgid "Enable Kiosk Mode"
+msgstr "Включить Режим \"Киоск\""
+
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Доступны локальные субтитры"
+
+msgctxt "#31169"
+msgid "Reset Skin"
+msgstr "Сброс настроек обложки"
 
 msgctxt "#31200"
 msgid "My Movies"
@@ -451,10 +479,6 @@ msgstr "Моя Музыка"
 msgctxt "#31203"
 msgid "New Search"
 msgstr "Новый поиск"
-
-msgctxt "#31204"
-msgid "-"
-msgstr "-"
 
 msgctxt "#31205"
 msgid "Browse the most recently added movies"
@@ -505,8 +529,8 @@ msgid "Last Aired"
 msgstr "Ранее в эфире"
 
 msgctxt "#31217"
-msgid "Preview Thumb"
-msgstr "Эскиз изображения"
+msgid "Wide Thumb"
+msgstr "Широкий эскиз"
 
 msgctxt "#31218"
 msgid "Landscape"
@@ -571,10 +595,6 @@ msgstr "Mинимальная влажность"
 msgctxt "#31233"
 msgid "Chance of Precipitation"
 msgstr "Вероятность осадков"
-
-msgctxt "#31234"
-msgid "Fetching Forecast Info for..."
-msgstr "Получение прогноза для…"
 
 msgctxt "#31235"
 msgid "Current Forecast"
@@ -647,6 +667,10 @@ msgstr "Все ТВ шоу"
 msgctxt "#31252"
 msgid "All Music"
 msgstr "Вся музыка"
+
+msgctxt "#31254"
+msgid "Search on YouTube"
+msgstr "Искать на YouTube"
 
 msgctxt "#31280"
 msgid "Open Playlist"
@@ -736,6 +760,10 @@ msgctxt "#31315"
 msgid "Hide Scrolling Titles"
 msgstr "Убрать бегущие названия"
 
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "Сейчас проигрывается"
+
 msgctxt "#31350"
 msgid "Available Groups"
 msgstr "Доступные группы"
@@ -752,45 +780,137 @@ msgctxt "#31353"
 msgid "Delete Group"
 msgstr "Удалить группу"
 
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr "Обновить видеотеку"
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr "Обновить медиатеку"
+
+msgctxt "#31372"
+msgid "Clean Video Library"
+msgstr "Очистить видеотеку"
+
+msgctxt "#31373"
+msgid "Clean Music Library"
+msgstr "Очистить медиатеку"
+
+msgctxt "#31374"
+msgid "Quick Navigation"
+msgstr "Упрощенная навигация"
+
+msgctxt "#31375"
+msgid "Disable Quick Navigation"
+msgstr "Отключить упрощенную навигацию"
+
+msgctxt "#31378"
+msgid "Show Clean Video Library Button"
+msgstr "Показать кнопку \"Очистить видеотеку\""
+
+msgctxt "#31379"
+msgid "Show Clean Music Library Button"
+msgstr "Показать кнопку \"Очистить медиатеку\""
+
+msgctxt "#31380"
+msgid "Show Party Mode Button"
+msgstr "Показать кнопку Вечеринка"
+
+msgctxt "#31381"
+msgid "Show Shutdown Button"
+msgstr "Показать кнопку Выключение"
+
+msgctxt "#31382"
+msgid "Show File Manager Button"
+msgstr "Показать кнопку Менеджер файлов"
+
+msgctxt "#31383"
+msgid "Hide Movies Button"
+msgstr "Убрать кнопку Фильмы"
+
+msgctxt "#31384"
+msgid "Hide TV Shows Button"
+msgstr "Убрать кнопку ТВ шоу"
+
+msgctxt "#31385"
+msgid "Hide Music Button"
+msgstr "Убрать кнопку Музыка"
+
+msgctxt "#31386"
+msgid "Hide Pictures Button"
+msgstr "Убрать кнопку Картинки"
+
+msgctxt "#31387"
+msgid "Hide Add-ons Button"
+msgstr "Убрать кнопку Дополнения"
+
+msgctxt "#31388"
+msgid "Hide New Movies Button"
+msgstr "Убрать кнопку Новые Фильмы"
+
+msgctxt "#31389"
+msgid "Hide New TV Shows Button"
+msgstr "Убрать кнопку Новые ТВ шоу"
+
+msgctxt "#31390"
+msgid "Hide New Music Button"
+msgstr "Убрать кнопку Новая Музыка"
+
+msgctxt "#31392"
+msgid "Show Videos Button"
+msgstr "Показать кнопку Видео"
+
+msgctxt "#31393"
+msgid "Hide QuickNav Buttons"
+msgstr "Убрать кнопки упрощенной навигации"
+
+msgctxt "#31394"
+msgid "Show QuickNav Buttons"
+msgstr "Показать кнопки упрощенной навигации"
+
+msgctxt "#31395"
+msgid "Custom QuickNav Buttons"
+msgstr "Дополнительные кнопки упрощенной навигации"
+
+msgctxt "#31396"
+msgid "Custom Button"
+msgstr "Дополнительная кнопка"
+
 msgctxt "#31401"
-msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
-msgstr "Настройки внешнего вида XBMC. Обложки, темы, звуки, выбор шрифтов, опции потока RSS и локализации."
+msgid "Adjust the look and feel of Kodi. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
+msgstr "Настройки внешнего вида Kodi. Обложки, темы, звуки, выбор шрифтов, опции потока RSS и локализации."
 
 msgctxt "#31402"
 msgid "Manage your video content. Includes library database options, subtitles, scrapers, and playback options."
-msgstr "Видео в XBMC: параметры воспроизведения, медиатеки, субтитры, инфоресурсы."
+msgstr "Видео в Kodi: параметры воспроизведения, медиатеки, субтитры, инфоресурсы."
 
 msgctxt "#31403"
 msgid "Change playback settings, manage EPG data settings, recordings and parental control."
 msgstr "Настройки записи и воспроизведения телепередач, программа передач, родительский контроль."
 
 msgctxt "#31404"
-msgid "Configure how XBMC handles music. Setup playback and listing options, browsing files or database and many more."
-msgstr "Музыка в XBMC. Настройка параметров медиатеки, воспроизведения, визуализации и многое другое."
+msgid "Configure how Kodi handles music. Setup playback and listing options, browsing files or database and many more."
+msgstr "Музыка в Kodi. Настройка параметров медиатеки, воспроизведения, визуализации и многое другое."
 
 msgctxt "#31405"
 msgid "Picture handeling can be quite easy. You can do this by adjusting display, effects, tags, timing and picture listing."
-msgstr "Просмотр фото в XBMC. Достаточно задать источник фото, эффекты и время показа."
+msgstr "Просмотр фото в Kodi. Достаточно задать источник фото, эффекты и время показа."
 
 msgctxt "#31406"
-msgid "Adjusting Weather is very easy with XBMC. Select a weather plugin and get live updates for up to three cities."
-msgstr "Изменение настроек погоды в XBMC. Выберите инфоресурс погоды и задайте до 3 местоположений для прогноза."
+msgid "Adjusting Weather is very easy with Kodi. Select a weather plugin and get live updates for up to three cities."
+msgstr "Изменение настроек погоды в Kodi. Выберите инфоресурс погоды и задайте до 3 местоположений для прогноза."
 
 msgctxt "#31407"
-msgid "Set up XBMC's network interface. Controls IP assignment, WWW and FTP server, SMB client, and UPnP configuration."
-msgstr "Настройка сети в XBMC. Адрес IP, параметры WWW и FTP сервера и клиента SMB,  конфигурация UPnP"
+msgid "Set up Kodi's network interface. Controls IP assignment, WWW and FTP server, SMB client, and UPnP configuration."
+msgstr "Настройка сети в Kodi. Адрес IP, параметры WWW и FTP сервера и клиента SMB,  конфигурация UPnP"
 
 msgctxt "#31408"
 msgid "Control core hardware and software functions, including audio and video hardware setup, autoplay and locking."
-msgstr "Настройки аудио-, видео оборудования, устройств ввода, отладка XBMC, функции блокировки."
+msgstr "Настройки аудио-, видео оборудования, устройств ввода, отладка Kodi, функции блокировки."
 
 msgctxt "#31409"
-msgid "Choose from a variety of settings and customization options to make \"Bello\" fit your needs and taste."
-msgstr "Множество дополнительных настроек и возможностей персонификации позволят вам настроить Bello по вашему вкусу."
-
-msgctxt "#31410"
-msgid "With XBMC you can have several profiles, even a logon screen for controlled access."
-msgstr "XBMC позволяет иметь различные профили пользователей и экран входа для ограничения доступа."
+msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
+msgstr "Множество дополнительных настроек и возможностей персонификации позволят вам настроить The Little Black Box по вашему вкусу."
 
 msgctxt "#31411"
 msgid "Configure Appearance Settings"
@@ -831,3 +951,7 @@ msgstr "Настройки профайлов"
 msgctxt "#31420"
 msgid "Configure Skin Settings"
 msgstr "Настройки обложки"
+
+msgctxt "#31430"
+msgid "Help"
+msgstr "Справка"

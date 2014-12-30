@@ -17,39 +17,41 @@
       </animation>
 
 			<control type="panel" id="450">
-				<posx>25</posx>
-				<posy>150</posy>
+				<left>45</left>
+				<top>155</top>
 				<width>1220</width>
-				<height>400</height>
-				<onleft>450</onleft>
-				<onright>450</onright>
-				<onup>close</onup>
-				<ondown>close</ondown>
-        <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+				<height>420</height>
+				<onleft>close</onleft>
+				<onright>close</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+        <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 				<viewtype label="536">icon</viewtype>
-        <orientation>horizontal</orientation>
+        <orientation>vertical</orientation>
 			  <preloaditems>2</preloaditems>
-				<itemlayout height="200" width="203">
+				<itemlayout height="210" width="200">
 					<control type="image">
-						<width>216</width>
-						<height>216</height>
+						<left>0</left>
+						<top>0</top>
+						<width>190</width>
+						<height>200</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/thumbnails/thumb_panel.png</texture>
+				    <texture border="30">views/other/panel.png</texture>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>25</posy>
-						<width>166</width>
-						<height>136</height>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
-					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						<left>5</left>
+						<top>5</top>
+						<width>180</width>
+						<height>160</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					  <texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="label">
-						<posx>108</posx>
-						<posy>160</posy>
-						<width>162</width>
+						<left>10</left>
+						<top>163</top>
+						<width>170</width>
 						<height>35</height>
 						<textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
@@ -60,27 +62,29 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="200" width="203">
+				<focusedlayout height="210" width="200">
 					<control type="image">
-						<width>216</width>
-						<height>216</height>
+						<left>0</left>
+						<top>0</top>
+						<width>190</width>
+						<height>200</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/thumbnails/thumb_panel.png</texture>
+				    <texture border="30">views/other/panel.png</texture>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>25</posy>
-						<width>166</width>
-						<height>136</height>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
-					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+						<left>5</left>
+						<top>5</top>
+						<width>180</width>
+						<height>160</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					  <texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="15,15,15,15">dialogs/other/iconborder_black.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="label">
-						<posx>108</posx>
-						<posy>160</posy>
-						<width>162</width>
+						<left>10</left>
+						<top>163</top>
+						<width>170</width>
 						<height>35</height>
 						<textcolor>blue</textcolor>
 						<shadowcolor>77000000</shadowcolor>
@@ -91,14 +95,13 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<width>216</width>
-						<height>216</height>
+						<left>0</left>
+						<top>0</top>
+						<width>190</width>
+						<height>200</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/thumbnails/focus.png</texture>
-            <animation type="Focus">
-              <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
-            </animation>
+						<texture border="30">views/other/focus_blue.png</texture>
+            <include>ThumbnailsFocusAnimation</include>
 					</control>
 				</focusedlayout>
 			</control>
@@ -112,16 +115,16 @@
         <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
         <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="inout" />
       </animation>
-	    <include>TLBBIco</include>
 		  <!--  Content Info  -->
 			<control type="grouplist">
-				<posx>55</posx>
-				<posy>0</posy>
-				<height>70</height>
+				<left>0</left>
+				<top>0</top>
 				<width>1000</width>
+			  <height>70</height>
 				<align>left</align>
-				<itemgap>20</itemgap>
+				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>Logo</include>
 		    <control type="label">
 				  <include>TopBigLabel</include>
 					<label>1036</label>
@@ -144,125 +147,3 @@
 	  </control>
 	</controls>
 </window>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- *NOT USED*
-			<control type="panel" id="450">
-				<posx>28</posx>
-				<posy>200</posy>
-				<width>1227</width>
-				<height>360</height>
-				<onleft>450</onleft>
-				<onright>450</onright>
-				<onup>close</onup>
-				<ondown>close</ondown>
-	      <orientation>horizontal</orientation>
-				<viewtype label="31085">list</viewtype>
-        <scrolltime tween="Quadratic" easing="out">250</scrolltime>
-				<itemlayout height="265" width="244">
-					<control type="image">
-						<posx>-5</posx>
-						<width>260</width>
-						<height>280</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/thumbnails/thumb_panel.png</texture>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
-					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					  <bordersize>6</bordersize>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
-					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<bordersize>6</bordersize>
-            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-					</control>
-					<control type="label">
-						<posx>128</posx>
-						<posy>220</posy>
-						<width>210</width>
-						<height>40</height>
-						<textcolor>99white</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<font>FontSize_20</font>
-						<scroll>false</scroll>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="265" width="244">
-					<control type="image">
-						<posx>-5</posx>
-						<width>260</width>
-						<height>280</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/thumbnails/thumb_panel.png</texture>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
-					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
-					  <bordersize>6</bordersize>
-					</control>
-					<control type="image">
-						<posx>25</posx>
-						<posy>30</posy>
-						<width>200</width>
-						<height>190</height>
-					  <texture background="true">overlays/unwatched/thumbs/UnWatched_Square.png</texture>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<bordersize>6</bordersize>
-            <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
-					</control>
-					<control type="label">
-						<posx>128</posx>
-						<posy>220</posy>
-						<width>210</width>
-						<height>40</height>
-						<textcolor>blue</textcolor>
-						<shadowcolor>99000000</shadowcolor>
-						<font>FontSize_20</font>
-						<scrollspeed>35</scrollspeed>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="image">
-						<posx>-5</posx>
-						<width>260</width>
-						<height>280</height>
-						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/thumbnails/focus.png</texture>
-            <animation type="Focus">
-              <effect type="zoom" start="95" end="100" time="150" tween="sine" easing="inout" center="auto" />
-            </animation>
-					</control>
-				</focusedlayout>
-			</control>
--->

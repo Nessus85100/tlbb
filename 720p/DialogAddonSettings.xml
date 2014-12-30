@@ -145,14 +145,14 @@
 					<ondown>9000</ondown>
 					<control type="button" id="10">
 						<description>Save</description>
-					  <width>150</width>
+					  <width>120</width>
 					  <height>40</height>
-						<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
-						<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
+						<texturefocus border="39,3,39,39">dialogs/buttons/save_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/save_nf.png</texturenofocus>
 						<align>left</align>
 						<aligny>top</aligny>
 						<font>FontSize_20</font>
-						<textwidth>110</textwidth>
+						<textwidth>80</textwidth>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>6</textoffsety>
 						<textcolor>99grey</textcolor>
@@ -162,14 +162,14 @@
 					</control>
 					<control type="button" id="11">
 						<description>Cancel</description>
-					  <width>150</width>
+					  <width>160</width>
 					  <height>40</height>
-						<texturefocus>dialogs/buttons/cancel_fo.png</texturefocus>
-						<texturenofocus>dialogs/buttons/cancel_nf.png</texturenofocus>
+						<texturefocus border="39,3,39,39">dialogs/buttons/cancel_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/cancel_nf.png</texturenofocus>
 						<align>left</align>
 						<aligny>top</aligny>
 						<font>FontSize_20</font>
-						<textwidth>110</textwidth>
+						<textwidth>120</textwidth>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>6</textoffsety>
 						<textcolor>99grey</textcolor>
@@ -179,14 +179,14 @@
 					</control>
 					<control type="button" id="12">
 						<description>Defaults</description>
-					  <width>150</width>
+					  <width>160</width>
 					  <height>40</height>
-						<texturefocus>dialogs/buttons/settings_fo.png</texturefocus>
-						<texturenofocus>dialogs/buttons/settings_nf.png</texturenofocus>
+						<texturefocus border="39,3,39,39">dialogs/buttons/settings_fo.png</texturefocus>
+						<texturenofocus border="39,3,39,39">dialogs/buttons/settings_nf.png</texturenofocus>
 						<align>left</align>
 						<aligny>top</aligny>
 						<font>FontSize_20</font>
-						<textwidth>110</textwidth>
+						<textwidth>120</textwidth>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>6</textoffsety>
 						<textcolor>99grey</textcolor>

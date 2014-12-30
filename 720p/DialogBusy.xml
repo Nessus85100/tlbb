@@ -1,80 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="136">
-    <zorder>5</zorder>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="190" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="450" start="0" easing="out" end="100" />
-		</animation>			
-		<animation type="WindowClose" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="100" end="190" tween="cubic" easing="in" />
-			<effect type="fade" time="450" start="100" easing="in" end="0" />
-		</animation>		  
-		<animation type="Visible" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="190" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="450" start="0" easing="out" end="100" />
-		</animation>			
-		<animation type="Hidden" reversible="false">
-			<effect type="zoom" time="450" center="auto" start="100" end="190" tween="cubic" easing="in" />
-			<effect type="fade" time="450" start="100" easing="in" end="0" />
-		</animation>  
-		<controls>
-		<control type="group">
-				<posx>545</posx>
-				<posy>245</posy>
-			<control type="image">
-				<description>Busy animation</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>220</width>
-				<height>220</height>
-				<texture>dialogs/busy/static_busy.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<description>Busy animation</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>220</width>
-				<height>220</height>
-				<texture>dialogs/busy/animation_1.png</texture>
-				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
-			</control>
-			<control type="image">
-				<description>Busy animation</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>220</width>
-				<height>220</height>
-				<texture>dialogs/busy/animation_2.png</texture>
-				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
+  <zorder>5</zorder>
+	<controls>
+	<control type="group">
+		<left>45</left>
+		<top>650</top>
+		<control type="grouplist">
+			<include>NowPlaying</include>
+			<left>0</left>
+			<top>0</top>
+			<width>1000</width>
+		  <height>60</height>
+			<align>left</align>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="group">
+  			<top>10</top>
+			  <width>40</width>
+  	    <control type="image">
+  	    	<width>40</width>
+  	    	<height>40</height>
+  		    <!-- <colordiffuse>AA26ADDA</colordiffuse> -->
+	        <colordiffuse>blue</colordiffuse>
+  	      <aspectratio>keep</aspectratio>
+  	    	<texture background="true">dialogs/busy/busy.png</texture>
+		      <animation effect="rotate" start="0" end="-360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
+  	    </control>
+  	  </control>
+			<control type="fadelabel">
+				<height>37</height>
+				<width min="10" max="1000">auto</width>
+				<label>Working...</label>
+				<label>Please Wait...</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>FontSize_46</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+        <scroll>false</scroll>
+        <scrollout>false</scrollout>
+        <scrollspeed>100</scrollspeed>
+        <pauseatend>5000</pauseatend>
 			</control>
 			<control type="label">
-				<description>Busy label</description>
-				<posx>-90</posx>
-				<posy>90</posy>
-				<width>400</width>
-				<height>35</height>
-				<align>center</align>
+				<height>37</height>
+				<width min="10" max="1000">auto</width>
+		    <label>$INFO[Control.GetLabel(10),,%]</label>
+				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[Control.GetLabel(10),,%]</label>
-				<font>FontSize_26</font>
-				<textcolor>99white</textcolor>
-				<!-- <textcolor>FF9E64BD</textcolor> -->
-				<visible>IntegerGreaterThan(Control.GetLabel(10),0)</visible>
+				<font>FontSize_46</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>77000000</shadowcolor>
+		    <visible>IntegerGreaterThan(Control.GetLabel(10),0)</visible>
 			</control>
-			<control type="progress" id="10">
-				<description>progress control</description>
-				<texturebg>-</texturebg>
-				<lefttexture>-</lefttexture>
-				<midtexture>-</midtexture>
-				<righttexture>-</righttexture>
-				<overlaytexture>-</overlaytexture>
-				<visible>false</visible>
-			</control>
-		</control>		
+		</control>
+		<control type="progress" id="10">
+			<description>progress control</description>
+			<texturebg>-</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>-</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>false</visible>
+		</control>
+  </control>
 
+<!-- Alternative Layout
+	<control type="group">
+		<include>NowPlaying</include>
+		<left>43</left>
+		<top>500</top>
+	  <control type="image">
+			<left>0</left>
+			<top>0</top>
+		  <width>158</width>
+		  <height>42</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+			<left>1</left>
+			<top>39</top>
+		  <width>156</width>
+		  <height>150</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
+		<control type="image">
+			<left>2</left>
+			<top>38</top>
+			<width>154</width>
+			<height>4</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">dialogs/other/header_line.png</texture>
+		</control>
+		<control type="label">
+			<description>Loading label</description>
+			<left>10</left>
+			<top>0</top>
+			<width>150</width>
+			<height>45</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Loading...</label>
+			<font>FontSize_22</font>
+			<textcolor>99white</textcolor>
+	    <shadowcolor>99000000</shadowcolor>
+		</control>
+		<control type="image">
+			<description>Busy animation</description>
+			<left>8</left>
+			<top>45</top>
+			<width>140</width>
+			<height>140</height>
+  		  <colordiffuse>blue</colordiffuse>
+			<texture>dialogs/busy/animation_wheel.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" condition="true">conditional</animation>
+		</control>
+		<control type="label">
+			<description>Busy label</description>
+			<left>-121</left>
+			<top>97</top>
+			<width>400</width>
+			<height>35</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[Control.GetLabel(10),,%]</label>
+			<font>FontSize_24</font>
+			<textcolor>99white</textcolor>
+	    <shadowcolor>99000000</shadowcolor>
+			<visible>IntegerGreaterThan(Control.GetLabel(10),0)</visible>
+		</control>
+		<control type="progress" id="10">
+			<description>progress control</description>
+			<texturebg>-</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>-</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>false</visible>
+		</control>
+	</control>
+ -->
 
 	</controls>
 </window>

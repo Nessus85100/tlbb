@@ -7,7 +7,7 @@
 		<icon />
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</action>
+		<action>ActivateWindow(TVChannels)</action>
 	</shortcut>
 	<shortcut>
 		<label>19024</label>
@@ -16,7 +16,7 @@
 		<icon />
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</action>
+		<action>ActivateWindow(RadioChannels)</action>
 	</shortcut>
 	<shortcut>
 		<label>19163</label>
@@ -25,7 +25,7 @@
 		<icon />
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</action>
+		<action>ActivateWindow(TVRecordings)</action>
 	</shortcut>
 	<shortcut>
 		<label>19040</label>
@@ -34,7 +34,7 @@
 		<icon />
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</action>
+		<action>ActivateWindow(TVTimers)</action>
 	</shortcut>
 	<shortcut>
 		<label>19069</label>
@@ -43,7 +43,7 @@
 		<icon />
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</action>
+		<action>ActivateWindow(TVGuide)</action>
 	</shortcut>
 	<shortcut>
 		<label>137</label>
@@ -52,6 +52,6 @@
 		<icon />
 		<thumb />
 		<visible>Skin.HasSetting(ExpertSkinSettings)</visible>
-		<action>ActivateWindowAndFocus(MyPVR, 36,0, 17,0)</action>
+		<action>ActivateWindow(TVSearch)</action>
 	</shortcut>
 </shortcuts>

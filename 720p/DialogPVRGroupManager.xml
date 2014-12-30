@@ -1,68 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window >
-	<defaultcontrol always="true">29</defaultcontrol>
+	<defaultcontrol always="true">13</defaultcontrol>
 	<controls>
-	
 	 <control type="group">
     <include>DialogAnimation</include>
     <visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(shutdownmenu)</visible>
+	  <control type="image">
+			<left>214</left>
+			<top>135</top>
+		  <width>852</width>
+		  <height>57</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+			<left>214</left>
+			<top>189</top>
+		  <width>852</width>
+		  <height>387</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
 		<control type="image">
-			<left>183</left>
-			<top>101</top>
-			<width>912</width>
-			<height>514</height>
+			<left>216</left>
+			<top>188</top>
+			<width>848</width>
+			<height>4</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-			<visible>!Player.HasVideo</visible>
+			<texture background="true">dialogs/other/header_line.png</texture>
 		</control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
 			<texture background="true">dialogs/pvr/bg_groupmanager.png</texture>
-			<visible>!Player.HasVideo</visible>
 		</control>
-		<control type="image">
-			<left>183</left>
-			<top>101</top>
-			<width>912</width>
-			<height>514</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-			<colordiffuse>FAFFFFFF</colordiffuse>
-			<visible>Player.HasVideo</visible>
-		</control>		
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/pvr/bg_groupmanager.png</texture>
-			<colordiffuse>FAFFFFFF</colordiffuse>
-			<visible>Player.HasVideo</visible>
-		</control>
-
 		<control type="label">
 			<description>header label</description>
-      <left>231</left>
-      <top>140</top>
-      <width>825</width>
-      <height>40</height>
-			<font>FontSize_32</font>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-			<label>19143</label>
+			<left>227</left>
+			<top>148</top>
+			<width>750</width>
+	    <include>DialogsHeaderLabel</include>
+			<label>$LOCALIZE[19143]</label>
 		</control>
 
 		<control type="button">
 			<description>Channels GroupsList Label/Items</description>
 			<left>235</left>
-			<top>193</top>
+			<top>207</top>
     	<width>255</width>
 			<height>40</height>
-			<font>FontSize_20B</font>
-			<textcolor>99white</textcolor>
+			<font>FontSize_18B</font>
+			<textcolor>blue</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 		  <include>TopButton</include>
     	<label>[B]$LOCALIZE[31350]:[/B]</label>
@@ -71,11 +58,11 @@
 		<control type="button">
 			<description>Hidden TVChannels Label/Items</description>
 			<left>512</left>
-			<top>193</top>
+			<top>207</top>
     	<width>255</width>
 			<height>40</height>
-			<font>FontSize_20B</font>
-			<textcolor>99white</textcolor>
+			<font>FontSize_18B</font>
+			<textcolor>blue</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 		  <include>TopButton</include>
     	<label>[B]$INFO[Control.GetLabel(21)]:[/B]</label>
@@ -84,30 +71,30 @@
 		<control type="button">
 			<description>Visible TVChannels Label/Items</description>
 			<left>790</left>
-			<top>193</top>
+			<top>207</top>
     	<width>255</width>
 			<height>40</height>
-			<font>FontSize_20B</font>
-			<textcolor>99white</textcolor>
+			<font>FontSize_18B</font>
+			<textcolor>blue</textcolor>
 			<shadowcolor>99000000</shadowcolor>
 		  <include>TopButton</include>
     	<label>[B]$INFO[Control.GetLabel(22)]:[/B]</label>
 			<label2>$INFO[Container(12).NumItems]</label2>
 		</control>
 
-		<control type="group" id="10002">
+		<control type="group" id="10010">
 			<control type="group">
 				<description>Channels GroupsList</description>
-				<left>230</left>
-				<top>195</top>
+				<left>232</left>
+				<top>250</top>
 				<control type="list" id="13">
 					<left>0</left>
-					<top>39</top>
+					<top>0</top>
 					<width>260</width>
 					<height>308</height>
 					<onup>13</onup>
 					<ondown>13</ondown>
-					<onleft>10001</onleft>
+					<onleft>10000</onleft>
 					<onright>11</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
@@ -132,6 +119,7 @@
 							<height>40</height>
 							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(13)">conditional</animation>
+	            <include>ListFocusAnimation</include>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -159,11 +147,11 @@
 	
 			<control type="group">
 				<description>Hidden TV Channels</description>
-				<left>511</left>
-				<top>195</top>
+				<left>510</left>
+				<top>250</top>
 				<control type="list" id="11">
-					<left>-2</left>
-					<top>39</top>
+					<left>0</left>
+					<top>0</top>
 					<width>260</width>
 					<height>308</height>
 					<onup>11</onup>
@@ -173,10 +161,11 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
 						<control type="image">
-							<left>3</left>
+							<left>6</left>
 							<top>3</top>
 							<width>34</width>
 							<height>34</height>
+		          <colordiffuse>77white</colordiffuse>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture fallback="windows/pvr/LiveTV.png">$INFO[ListItem.Icon]</texture>
 						</control>
@@ -201,6 +190,7 @@
 							<height>40</height>
 							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(11)">conditional</animation>
+	            <include>ListFocusAnimation</include>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -211,7 +201,7 @@
 						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(11)">conditional</animation>
 						</control>
 						<control type="image">
-							<left>3</left>
+							<left>6</left>
 							<top>3</top>
 							<width>34</width>
 							<height>34</height>
@@ -236,24 +226,25 @@
 	
 			<control type="group">
 				<description>Visible TV Channels</description>
-				<left>789</left>
-				<top>195</top>
+				<left>788</left>
+				<top>250</top>
 				<control type="list" id="12">
-					<left>-2</left>
-					<top>39</top>
+					<left>0</left>
+					<top>0</top>
 					<width>260</width>
 					<height>308</height>
 					<onup>12</onup>
 					<ondown>12</ondown>
 					<onleft>11</onleft>
-					<onright>10001</onright>
+					<onright>10000</onright>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="44" width="260">
 						<control type="image">
-							<left>3</left>
+							<left>6</left>
 							<top>3</top>
 							<width>34</width>
 							<height>34</height>
+		          <colordiffuse>77white</colordiffuse>
 						  <aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture fallback="windows/pvr/LiveTV.png">$INFO[ListItem.Icon]</texture>
 						</control>
@@ -278,6 +269,7 @@
 							<height>40</height>
 							<texture>buttons/focus.png</texture>
 						  <animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(12)">conditional</animation>
+	            <include>ListFocusAnimation</include>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -288,7 +280,7 @@
 						  <animation effect="fade" start="100" end="0" time="100" condition="Control.HasFocus(12)">conditional</animation>
 						</control>
 						<control type="image">
-							<left>3</left>
+							<left>6</left>
 							<top>3</top>
 							<width>34</width>
 							<height>34</height>
@@ -312,89 +304,67 @@
 			</control>
 		</control>		
 
+
+    <!-- Control Buttons -->
 	  <control type="group" id="10000">
-			<left>220</left>
-			<top>548</top>
-      <!-- Buttons -->
-			<control type="grouplist" id="10001">
-				<width>0</width>
-				<height>0</height>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
-				<onup>10002</onup>
-				<ondown>10002</ondown>
-				<control type="button" id="26">
-					<description>Add Group</description>
-				  <width>210</width>
-				  <height>40</height>
-					<texturefocus border="39,3,39,39">dialogs/buttons/add_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">dialogs/buttons/add_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>170</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>31351</label>
-				</control>
-				<control type="button" id="27">
-					<description>Rename Group</description>
-				  <width>240</width>
-				  <height>40</height>
-					<texturefocus border="39,3,39,39">dialogs/buttons/edit_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">dialogs/buttons/edit_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>200</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>31352</label>
-				</control>
-				<control type="button" id="28">
-					<description>Delete Group</description>
-				  <width>230</width>
-				  <height>40</height>
-					<texturefocus border="39,3,39,39">dialogs/buttons/cancel_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">dialogs/buttons/cancel_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>190</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>31353</label>
-				</control>
-				<control type="button" id="29">
-					<description>Save</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus border="39,3,39,39">dialogs/buttons/save_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">dialogs/buttons/save_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>190</label>
-				</control>
-			</control>
+			<left>1071</left>
+			<top>531</top>
+  		<control type="button" id="29">
+				<description>Save</description>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/save_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/save_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>26</onup>
+  			<ondown>28</ondown>
+				<label>$LOCALIZE[190]</label>
+  		</control>
+  		<control type="button" id="26">
+				<description>Add Group</description>
+  			<top>-50</top>
+    		<width>200</width>
+		    <textwidth>150</textwidth>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/add_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/add_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>27</onup>
+  			<ondown>29</ondown>
+				<label>$LOCALIZE[31351]</label>
+  		</control>
+  		<control type="button" id="27">
+			  <description>Rename Group</description>
+  			<top>-100</top>
+    		<width>200</width>
+		    <textwidth>150</textwidth>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/edit_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/edit_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>28</onup>
+  			<ondown>26</ondown>
+				<label>$LOCALIZE[31352]</label>
+  		</control>
+  		<control type="button" id="28">
+				<description>Delete Group</description>
+  			<top>-150</top>
+    		<width>200</width>
+		    <textwidth>150</textwidth>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/cancel_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/cancel_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>29</onup>
+  			<ondown>27</ondown>
+				<label>$LOCALIZE[31353]</label>
+  		</control>
 	  </control>
+
 		<control type="label" id="20">
 			<description>Fake Label used to pass on name label</description>
 			<visible>false</visible>

@@ -13,33 +13,37 @@
     <!-- Video Library -->
     <!-- ============= -->
 		<node label="32030">
-			<content>movie</content>
-			<content>tvshow</content>
-      <!-- Custom for TVShows -->
-			<content>musicvideo</content>
+			<content>video</content>
+			<content>customvideonode</content>
+      <!-- Custom Shortcuts -->
+	    <shortcut label="::LOCAL::31244" type="::LOCAL::342" grouping="customvideonode" icon="DefaultInProgressMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_InProgress.xsp,return)</shortcut>
+      <shortcut label="::LOCAL::31265" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_Unwatched.xsp,return)</shortcut>
+	    <shortcut label="::LOCAL::31266" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/TVShows_Unwatched.xsp,return)</shortcut>
+	    <shortcut label="::LOCAL::31267" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/Episodes_Unwatched.xsp,return)</shortcut>
+	    <shortcut label="::LOCAL::31001" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultTVShows.png" condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)">RunAddon(script.tv.show.next.aired)</shortcut>
       <!-- Video Addons -->
 			<node label="32010">
-				<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
 				<content>addon-video</content>
 			</node>
       <!-- Video Playlists -->
-			<node label="::SCRIPT::32040">
-				<shortcut label="::LOCAL::136" type="::SCRIPT::32014" icon="DefaultVideoPlaylists.png">ActivateWindow(Videos,Playlists,return)</shortcut>
+			<node label="32040">
 				<content>playlist-video</content>
 			</node>
       <!-- Video sources -->
-			<node label="::SCRIPT::32075">
+			<node label="32075">
 				<content>videosources</content>
-				<content>upnp-video</content>
 			</node>
-      <!-- Video Files -->
-			<shortcut label="::LOCAL::1214" type="::SCRIPT::32014" icon="DefaultVideo.png">ActivateWindow(Videos,Files,return)</shortcut>
-			<content>customvideonode</content>
 		</node>
 
+    <!-- ============= -->
     <!-- Music Library -->
+    <!-- ============= -->
 		<node label="32031">
 			<content>music</content>
+      <!-- Custom Shortcuts -->
+    	<shortcut label="Virgin TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/VirginTV.strm")</shortcut>
+    	<shortcut label="Radio105 TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/Radio105TV.strm")</shortcut>
+    	<shortcut label="Radio Montecarlo TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/RadioMontecarloTV.strm")</shortcut>
 			<node label="32040">
 				<content>playlist-audio</content>
 			</node>
@@ -53,23 +57,32 @@
 			</node>
 		</node>
 
+    <!-- === -->
     <!-- PVR -->
-		<node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
+    <!-- === -->
+		<node label="32017" condition="PVR.HasTVChannels" version="14">
 			<content>pvr</content>
 			<node label="19023">
 				<content>pvr-tv</content>
 			</node>
+		</node>
+		<node label="32087" condition="PVR.HasRadioChannels" version="14">
+			<content>radio</content>
 			<node label="19024">
 				<content>pvr-radio</content>
 			</node>
 		</node>
 
+    <!-- ======== -->
     <!-- Pictures -->
+    <!-- ======== -->
 		<node label="32020">
 			<content>picturesources</content>
 		</node>
 
-    <!-- Add-On -->
+    <!-- ======= -->
+    <!-- Add-Ons -->
+    <!-- ======= -->
 		<node label="32007">
 			<node label="32009">
 				<shortcut label="10001" type="32021" icon="DefaultAddonProgram.png">ActivateWindow(Programs,Addons,return)</shortcut>
@@ -89,43 +102,40 @@
 			</node>
 		</node>
 
+    <!-- ========== -->
     <!-- Favourites -->
+    <!-- ========== -->
 		<node label="32006">
 			<content>favourite</content>
 		</node>
 
+    <!-- ======== -->
     <!-- Settings -->
+    <!-- ======== -->
 		<node label="10004">
 			<content>settings</content>
 		</node>
 
-    <!-- XBMC Commands -->
+    <!-- ============= -->
+    <!-- Kodi Commands -->
+    <!-- ============= -->
 		<node label="32054">
 			<content>commands</content>
 		</node>
 	</groupings>
 
+  <!-- =============== -->
+  <!-- Shortcuts Check -->
+  <!-- =============== -->
+  <checkforshortcut property="trailers">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</checkforshortcut>
 
-  <!-- Custom Shortcuts -->
-	<shortcut label="::LOCAL::31256" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/Episodes_Unwatched.xsp,return)</shortcut>
-	<shortcut label="::LOCAL::31255" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/TVShows_Unwatched.xsp,return)</shortcut>
-	<shortcut label="::LOCAL::31254" grouping="customvideonode" icon="DefaultMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_Unwatched.xsp,return)</shortcut>
-	<shortcut label="::LOCAL::31182" grouping="customvideonode" icon="DefaultInProgressShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/TVShows_InProgress.xsp,return)</shortcut>
-	<shortcut label="::LOCAL::31181" grouping="customvideonode" icon="DefaultInProgressMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_InProgress.xsp,return)</shortcut>
-	<shortcut label="::LOCAL::31242" grouping="customvideonode" icon="DefaultRecentlyAddedEpisodes.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,RecentlyAddedEpisodes,return)</shortcut>
-	<shortcut label="::LOCAL::31241" grouping="customvideonode" icon="DefaultRecentlyAddedMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,RecentlyAddedMovies,return)</shortcut>
-
-	<shortcut label="Virgin TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/VirginTV.strm")</shortcut>
-	<shortcut label="Radio105 TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/Radio105TV.strm")</shortcut>
-	<shortcut label="Radio Montecarlo TV" type="::LOCAL::33002" grouping="musicvideo" icon="DefaultMusicVideos.png">PlayMedia("special://skin/extras/streams/RadioMontecarloTV.strm")</shortcut>
-	<shortcut label="::LOCAL::31001" type="::LOCAL::31002" grouping="tvshow" icon="DefaultTVShows.png" condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)">RunAddon(script.tv.show.next.aired)</shortcut>
-	<shortcut label="137" type="::SCRIPT::32034" grouping="common" icon="DefaultMusicSearch.png" condition="System.HasAddon(script.globalsearch)">RunAddon(script.globalsearch)</shortcut>
-
-
+  <!-- ============== -->
+  <!-- Custom Widgets -->
+  <!-- ============== -->
 	<widget label="31241" type="movies">RecentlyAddedMovies</widget>
-	<widget label="31181" type="movies">InProgressMovies</widget>
+	<widget label="31244" type="movies">InProgressMovies</widget>
 	<widget label="31242" type="tvshows">RecentlyAddedTVShows</widget>
-	<widget label="31182" type="tvshows">InProgressTVShows</widget>
+	<widget label="31245" type="tvshows">InProgressTVShows</widget>
 	<widget label="31243" type="music">RecentlyAddedAlbums</widget>
 	<widget label="31249" type="music">RandomAlbums</widget>
 

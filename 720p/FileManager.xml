@@ -336,13 +336,14 @@
 	    <include>VisibleHiddenSlideAnimation</include>
 			<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
 			<control type="grouplist">
-				<left>55</left>
+				<left>0</left>
 				<top>0</top>
-			  <height>70</height>
 				<width>1000</width>
+			  <height>70</height>
 				<align>left</align>
 				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>Logo</include>
 				<control type="label">
 				  <include>TopBigLabel</include>
 					<label>$LOCALIZE[7]</label>

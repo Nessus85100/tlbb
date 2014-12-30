@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<includes> 
-
-
+<includes>
   <include name="HomeWidget_SettingsContent">
 		<item id="1">
 			<onclick>ActivateWindow(AppearanceSettings)</onclick>
@@ -15,7 +13,7 @@
 		</item>
 		<item id="3">
 			<onclick>ActivateWindow(PVRSettings)</onclick>
-			<thumb>icons/LiveTV.png</thumb>
+			<thumb>DefaultLiveTV.png</thumb>
 			<label>31000</label>
 		</item>
 		<item id="4">
@@ -74,110 +72,6 @@
 		</item>
   </include>
 
-  <include name="HomeWidget_WeatherContent">
-		<item>
-			<label>$INFO[Window(Weather).Property(Day0.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day0.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day0.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day0.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.1.FanartCode),weather/bg/,.png]</property>
-      <onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day0.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day1.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day1.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day1.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.2.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day1.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day2.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day2.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day2.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.3.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day2.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day3.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day3.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day3.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.4.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day3.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day4.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day4.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day4.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day4.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day4.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.5.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day4.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day5.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day5.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day5.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day5.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day5.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.6.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day5.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day6.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day6.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day6.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day6.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day6.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.7.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day6.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day7.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day7.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day7.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day7.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day7.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.8.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day7.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day8.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day8.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day8.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day8.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day8.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.9.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day8.Title))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(Weather).Property(Day9.Title)]</label>
-			<label2>$INFO[Window(Weather).Property(Day9.Outlook)]</label2>
-			<icon>$INFO[Window(Weather).Property(Day9.OutlookIcon)]</icon>
-			<property name="HighTemperature">$INFO[Window(Weather).Property(Day9.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-			<property name="LowTemperature">$INFO[Window(Weather).Property(Day9.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-		  <property name="CurrentFanartCode">$INFO[Window(Weather).Property(Daily.10.FanartCode),weather/bg/,.png]</property>
-			<onclick>ActivateWindow(Weather)</onclick>
-		  <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Day9.Title))</visible>
-		</item>
-  </include>
-
-
   <include name="QuickNavContent">
 	 <item id="1">
 			<label>$LOCALIZE[31002]</label>
@@ -207,7 +101,7 @@
 			<icon>DefaultVideo.png</icon>
 	    <include>OnClickDialogsClose</include>
       <onclick>ActivateWindow(videos,files,return)</onclick>
-		  <visible>Skin.HasSetting(ShowQuickNavVideosButton)</visible>
+		  <visible>!Skin.HasSetting(ShowQuickNavVideosButton)</visible>
 	 </item>
 	 <item id="5">
 			<label>$LOCALIZE[1]</label>
@@ -224,8 +118,16 @@
 			<onclick condition="!IsEmpty(Skin.String(AddonsPath))">ActivateWindow($INFO[Skin.String(AddonsPath)],addons)</onclick>
 		  <visible>!Skin.HasSetting(HideQuickNavAddonsButton)</visible>
 	 </item>
+	 <item id="29">
+			<label>$LOCALIZE[31000]</label>
+			<icon>DefaultLiveTV.png</icon>
+	    <include>OnClickDialogsClose</include>
+      <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
+		  <visible>System.GetBool(pvrmanager.enabled)</visible>
+		  <visible>!Skin.HasSetting(HideQuickNavLiveTVButton)</visible>
+	 </item>
 	 <item id="7">
-			<label>$LOCALIZE[31244]</label>
+			<label>$LOCALIZE[31241]</label>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 	    <include>OnClickDialogsClose</include>
       <onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -233,7 +135,7 @@
 		  <visible>!Skin.HasSetting(HideQuickNavNewMoviesButton)</visible>
 	 </item>
 	 <item id="8">
-			<label>$LOCALIZE[31245]</label>
+			<label>$LOCALIZE[31242]</label>
 			<icon>DefaultRecentlyAddedEpisodes.png</icon>
 	    <include>OnClickDialogsClose</include>
       <onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
@@ -241,12 +143,47 @@
 		  <visible>!Skin.HasSetting(HideQuickNavNewTVShowsButton)</visible>
 	 </item>
 	 <item id="9">
-			<label>$LOCALIZE[31246]</label>
+			<label>$LOCALIZE[31243]</label>
 			<icon>DefaultMusicRecentlyAdded.png</icon>
 	    <include>OnClickDialogsClose</include>
       <onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
 			<visible>Library.HasContent(Music)</visible>
 		  <visible>!Skin.HasSetting(HideQuickNavNewMusicButton)</visible>
+	 </item>
+	 <item id="11">
+			<label>$LOCALIZE[31370]</label>
+			<icon>icons/UpdateVideoLibrary.png</icon>
+	    <include>OnClickDialogsClose</include>
+      <onclick>UpdateLibrary(video)</onclick>
+		  <visible>!Skin.HasSetting(ShowQuickNavUpdateVideoLibraryButton)</visible>
+	 </item>
+	 <item id="12">
+			<label>$LOCALIZE[31371]</label>
+			<icon>icons/UpdateMusicLibrary.png</icon>
+	    <include>OnClickDialogsClose</include>
+      <onclick>UpdateLibrary(music)</onclick>
+		  <visible>!Skin.HasSetting(ShowQuickNavUpdateMusicLibraryButton)</visible>
+	 </item>
+	 <item id="13">
+			<label>$LOCALIZE[31372]</label>
+			<icon>icons/CleanVideoLibrary.png</icon>
+	    <include>OnClickDialogsClose</include>
+      <onclick>CleanLibrary(Video)</onclick>
+		  <visible>!Skin.HasSetting(ShowQuickNavCleanVideoLibraryButton)</visible>
+	 </item>
+	 <item id="14">
+			<label>$LOCALIZE[31373]</label>
+			<icon>icons/CleanMusicLibrary.png</icon>
+	    <include>OnClickDialogsClose</include>
+      <onclick>CleanLibrary(Music)</onclick>
+		  <visible>!Skin.HasSetting(ShowQuickNavCleanMusicLibraryButton)</visible>
+	 </item>
+	 <item id="28">
+			<label>$LOCALIZE[1036]</label>
+			<icon>icons/Favourites.png</icon>
+	    <include>OnClickDialogsClose</include>
+			<onclick>ActivateWindow(Favourites)</onclick>
+		  <visible>!Skin.HasSetting(HideQuickNavFavouritesButton)</visible>
 	 </item>
 	 <item id="10">
 			<label>$LOCALIZE[589]</label>
@@ -256,7 +193,7 @@
       <onclick>PlayerControl(PartyMode)</onclick>
 <!--		      <onclick>AlarmClock(PartyMode,PlayerControl(PartyMode),00:01,silent)</onclick>
       <onclick>AlarmClock(GoFullscreen,Action(Fullscreen),00:02,silent)</onclick> -->
-		  <visible>Skin.HasSetting(ShowQuickNavPartyModeButton)</visible>
+		  <visible>!Skin.HasSetting(ShowQuickNavPartyModeButton)</visible>
 	 </item>
 <!-- <item id="-">
 			<label>$LOCALIZE[653]</label>
@@ -266,41 +203,6 @@
       <onclick condition="Window.IsVisible(MusicLibrary) + !Library.IsScanningMusic">UpdateLibrary(music)</onclick>
 			<visible>[Window.IsVisible(Videos) | Window.IsVisible(MusicLibrary)]</visible>
 	 </item> -->
-	 <item id="11">
-			<label>$LOCALIZE[31374]</label>
-			<icon>icons/UpdateVideoLibrary.png</icon>
-	    <include>OnClickDialogsClose</include>
-      <onclick>UpdateLibrary(video)</onclick>
-		  <visible>Skin.HasSetting(ShowQuickNavUpdateVideoLibraryButton)</visible>
-	 </item>
-	 <item id="12">
-			<label>$LOCALIZE[31375]</label>
-			<icon>icons/UpdateMusicLibrary.png</icon>
-	    <include>OnClickDialogsClose</include>
-      <onclick>UpdateLibrary(music)</onclick>
-		  <visible>Skin.HasSetting(ShowQuickNavUpdateMusicLibraryButton)</visible>
-	 </item>
-	 <item id="13">
-			<label>$LOCALIZE[31376]</label>
-			<icon>icons/CleanVideoLibrary.png</icon>
-	    <include>OnClickDialogsClose</include>
-      <onclick>CleanLibrary(Video)</onclick>
-		  <visible>Skin.HasSetting(ShowQuickNavCleanVideoLibraryButton)</visible>
-	 </item>
-	 <item id="14">
-			<label>$LOCALIZE[31377]</label>
-			<icon>icons/CleanMusicLibrary.png</icon>
-	    <include>OnClickDialogsClose</include>
-      <onclick>CleanLibrary(Music)</onclick>
-		  <visible>Skin.HasSetting(ShowQuickNavCleanMusicLibraryButton)</visible>
-	 </item>
-	 <item id="28">
-			<label>$LOCALIZE[1036]</label>
-			<icon>icons/Favourites.png</icon>
-	    <include>OnClickDialogsClose</include>
-			<onclick>ActivateWindow(Favourites)</onclick>
-		  <visible>!Skin.HasSetting(HideQuickNavFavouritesButton)</visible>
-	 </item>
 	 <item id="15">
 			<label>$LOCALIZE[5]</label>
 			<icon>icons/Settings.png</icon>
@@ -313,7 +215,7 @@
 			<icon>icons/FileManager.png</icon>
 	    <include>OnClickDialogsClose</include>
       <onclick>ActivateWindow(FileManager)</onclick>
-		  <visible>Skin.HasSetting(ShowQuickNavFileManagerButton)</visible>
+		  <visible>!Skin.HasSetting(ShowQuickNavFileManagerButton)</visible>
 	 </item>
 	 <item id="17">
 			<label>$LOCALIZE[13005]</label>
@@ -321,589 +223,80 @@
 	    <include>OnClickDialogsClose</include>
 			<onclick>XBMC.Powerdown()</onclick>
 			<visible>System.CanPowerDown</visible>
-		  <visible>Skin.HasSetting(ShowQuickNavShutdownButton)</visible>
+		  <visible>!Skin.HasSetting(ShowQuickNavShutdownButton)</visible>
 	 </item>
 
 	 <!-- Custom Items -->
 	 <item id="21">
-			<label>$INFO[Skin.String(CustomQuickNavButton1.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton1.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem1.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem1.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton1.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton1.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem1.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem1.Path))</visible>
 	 </item>
 	 <item id="22">
-			<label>$INFO[Skin.String(CustomQuickNavButton2.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton2.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem2.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem2.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton2.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton2.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem2.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem2.Path))</visible>
 	 </item>
 	 <item id="23">
-			<label>$INFO[Skin.String(CustomQuickNavButton3.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton3.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem3.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem3.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton3.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton3.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem3.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem3.Path))</visible>
 	 </item>
 	 <item id="24">
-			<label>$INFO[Skin.String(CustomQuickNavButton4.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton4.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem4.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem4.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton4.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton4.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem4.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem4.Path))</visible>
 	 </item>
 	 <item id="25">
-			<label>$INFO[Skin.String(CustomQuickNavButton5.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton5.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem5.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem5.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton5.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton5.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem5.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem5.Path))</visible>
 	 </item>
 	 <item id="26">
-			<label>$INFO[Skin.String(CustomQuickNavButton6.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton6.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem6.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem6.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton6.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton6.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem6.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem6.Path))</visible>
 	 </item>
 	 <item id="27">
-			<label>$INFO[Skin.String(CustomQuickNavButton7.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton7.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem7.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem7.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton7.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton7.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem7.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem7.Path))</visible>
 	 </item>
 	 <item id="8">
-			<label>$INFO[Skin.String(CustomQuickNavButton8.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton8.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem8.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem8.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton8.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton8.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem8.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem8.Path))</visible>
 	 </item>
 	 <item id="9">
-			<label>$INFO[Skin.String(CustomQuickNavButton9.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton9.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem9.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem9.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton9.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton9.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem9.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem9.Path))</visible>
 	 </item>
 	 <item id="10">
-			<label>$INFO[Skin.String(CustomQuickNavButton10.Label)]</label>
-			<icon>$INFO[Skin.String(CustomQuickNavButton10.Icon)]</icon>
+			<label>$INFO[Skin.String(CustomItem10.Label)]</label>
+			<icon>$INFO[Skin.String(CustomItem10.Icon)]</icon>
 	    <include>OnClickDialogsClose</include>
-			<onclick>$INFO[Skin.String(CustomQuickNavButton10.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(CustomQuickNavButton10.Path))</visible>
+			<onclick>$INFO[Skin.String(CustomItem10.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(CustomItem10.Path))</visible>
 	 </item>
   </include>
-
-
-  <include name="LangaugeSelectionContent">
-	  <item>
-			<label>Afrikaans</label>
-			<icon>osd/xbmcsubs/flags/za.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Afrikaans)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Albanian</label>
-			<icon>osd/xbmcsubs/flags/al.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Albanian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Amharic</label>
-			<icon>osd/xbmcsubs/flags/et.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Amharic)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Azerbaijani</label>
-			<icon>osd/xbmcsubs/flags/az.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Azerbaijani)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Basque</label>
-			<icon>osd/xbmcsubs/flags/bq.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Basque)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Belarusian</label>
-			<icon>osd/xbmcsubs/flags/by.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Belarusian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Bosnian</label>
-			<icon>osd/xbmcsubs/flags/ba.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Bosnian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Bulgarian</label>
-			<icon>osd/xbmcsubs/flags/bg.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Bulgarian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Burmese</label>
-			<icon>osd/xbmcsubs/flags/mm.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Burmese)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Catalan</label>
-			<icon>osd/xbmcsubs/flags/ca.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Catalan)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Chinese (Simple)</label>
-			<icon>osd/xbmcsubs/flags/cn.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Chinese (Simple))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Chinese (Traditional)</label>
-			<icon>osd/xbmcsubs/flags/cn.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Chinese (Traditional))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Croatian</label>
-			<icon>osd/xbmcsubs/flags/hr.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Croatian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Czech</label>
-			<icon>osd/xbmcsubs/flags/cz.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Czech)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Danish</label>
-			<icon>osd/xbmcsubs/flags/dk.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Danish)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Dutch</label>
-			<icon>osd/xbmcsubs/flags/nl.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Dutch)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>English</label>
-			<icon>osd/xbmcsubs/flags/en.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,English)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>English (Australia)</label>
-			<icon>osd/xbmcsubs/flags/en.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,English (Australia))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>English (New Zealand)</label>
-			<icon>osd/xbmcsubs/flags/en.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,English (New Zealand))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>English (United Kingdom)</label>
-			<icon>osd/xbmcsubs/flags/en.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,English (United Kingdom))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>English (US)</label>
-			<icon>osd/xbmcsubs/flags/en.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,English (US))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Esperanto</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Esperanto)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Estonian</label>
-			<icon>osd/xbmcsubs/flags/ee.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Estonian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Faroese</label>
-			<icon>osd/xbmcsubs/flags/fo.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Faroese)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Finnish</label>
-			<icon>osd/xbmcsubs/flags/fi.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Finnish)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>French</label>
-			<icon>osd/xbmcsubs/flags/fr.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,French)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>	  
-	  <item>
-			<label>French (Canada)</label>
-			<icon>osd/xbmcsubs/flags/fr.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,French (Canada))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Galician</label>
-			<icon>osd/xbmcsubs/flags/ga.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Galician)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>German</label>
-			<icon>osd/xbmcsubs/flags/de.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,German)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Greek</label>
-			<icon>osd/xbmcsubs/flags/gr.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Greek)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Hebrew</label>
-			<icon>osd/xbmcsubs/flags/he.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Hebrew)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Hindi (Devanagiri)</label>
-			<icon>osd/xbmcsubs/flags/hi.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Hindi (Devanagiri))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Hungarian</label>
-			<icon>osd/xbmcsubs/flags/hu.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Hungarian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Icelandic</label>
-			<icon>osd/xbmcsubs/flags/is.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Icelandic)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Indonesian</label>
-			<icon>osd/xbmcsubs/flags/id.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Indonesian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Italian</label>
-			<icon>osd/xbmcsubs/flags/it.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Italian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Japanese</label>
-			<icon>osd/xbmcsubs/flags/ja.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Japanese)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Korean</label>
-			<icon>osd/xbmcsubs/flags/kr.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Korean)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Latvian</label>
-			<icon>osd/xbmcsubs/flags/lv.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Latvian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Lithuanian</label>
-			<icon>osd/xbmcsubs/flags/lt.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Lithuanian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Macedonian</label>
-			<icon>osd/xbmcsubs/flags/mk.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Macedonian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Malay</label>
-			<icon>osd/xbmcsubs/flags/my.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Malay)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Malayalam</label>
-			<icon>osd/xbmcsubs/flags/hi.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Malayalam)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Maltese</label>
-			<icon>osd/xbmcsubs/flags/mt.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Maltese)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Maori</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Maori)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Norwegian</label>
-			<icon>osd/xbmcsubs/flags/no.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Norwegian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Ossetic</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Ossetic)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Persian</label>
-			<icon>osd/xbmcsubs/flags/ir.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Persian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Persian (Iran)</label>
-			<icon>osd/xbmcsubs/flags/ir.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Persian (Iran))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Polish</label>
-			<icon>osd/xbmcsubs/flags/pl.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Polish)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Portuguese</label>
-			<icon>osd/xbmcsubs/flags/pt.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Portuguese)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Portuguese (Brazil)</label>
-			<icon>osd/xbmcsubs/flags/br.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Portuguese (Brazil))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Romanian</label>
-			<icon>osd/xbmcsubs/flags/ro.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Romanian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Russian</label>
-			<icon>osd/xbmcsubs/flags/ru.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Russian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Serbian</label>
-			<icon>osd/xbmcsubs/flags/rs.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Serbian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Serbian (Cyrillic)</label>
-			<icon>osd/xbmcsubs/flags/rs.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Serbian (Cyrillic))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Slovak</label>
-			<icon>osd/xbmcsubs/flags/sk.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Slovak)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Slovenian</label>
-			<icon>osd/xbmcsubs/flags/sl.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Slovenian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Spanish</label>
-			<icon>osd/xbmcsubs/flags/es.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Spanish)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Spanish (Argentina)</label>
-			<icon>osd/xbmcsubs/flags/es.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Spanish (Argentina))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Spanish (Mexico)</label>
-			<icon>osd/xbmcsubs/flags/es.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Spanish (Mexico))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Swedish</label>
-			<icon>osd/xbmcsubs/flags/sv.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Swedish)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Tajik</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Tajik)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Tamil (India)</label>
-			<icon>osd/xbmcsubs/flags/hi.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Tamil (India))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Telugu</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Telugu)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Thai</label>
-			<icon>osd/xbmcsubs/flags/th.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Thai)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Turkish</label>
-			<icon>osd/xbmcsubs/flags/tr.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Turkish)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Ukrainian</label>
-			<icon>osd/xbmcsubs/flags/ua.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Ukrainian)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Uzbek</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Uzbek)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Vietnamese</label>
-			<icon>osd/xbmcsubs/flags/vi.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Vietnamese)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Vietnamese (Viet Nam)</label>
-			<icon>osd/xbmcsubs/flags/vi.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Vietnamese (Viet Nam))</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-	  <item>
-			<label>Welsh</label>
-			<icon>osd/xbmcsubs/flags/un.png</icon>
-			<onclick>RunScript(special://skin/extras/scripts/setLanguage.py,Welsh)</onclick>
-      <onclick>Skin.SetBool(LanguageSet)</onclick>
-      <onclick>Dialog.Close(1119)</onclick>
-	  </item>
-  </include>
-
 
 </includes>

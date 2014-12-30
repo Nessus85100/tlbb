@@ -747,6 +747,16 @@
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
 						<texture border="25">windows/weather/day_panel.png</texture>
 					</control>
+					<control type="image">
+						<left>30</left>
+						<top>10</top>
+						<width>502</width>
+						<height>286</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+    				<visible>IsEmpty(Container(53).ListItem.Icon)</visible>
+					  <include>VisibleFadeEffect</include>
+					</control>
     			<control type="list" id="53">
     				<left>30</left>
     				<top>10</top>
@@ -843,7 +853,7 @@
     						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
     					</item>
     				</content>
-    			</control>					
+    			</control>
 					<control type="image">
 						<left>24</left>
 						<top>4</top>
@@ -861,6 +871,8 @@
 					  <aspectratio>stretch</aspectratio>
 						<texture border="1">weather/map_tile.png</texture>
     				<colordiffuse>aaFFFFFF</colordiffuse>
+    				<visible>!IsEmpty(Container(53).ListItem.Icon)</visible>
+					  <include>VisibleFadeEffect</include>
 					</control>
           <!-- Legend -->
 					<control type="image">
@@ -870,6 +882,8 @@
 						<width>224</width>
 						<height>35</height>
 						<texture border="1">$INFO[Container(53).ListItem.Label2]</texture>
+    				<visible>!IsEmpty(Container(53).ListItem.Icon)</visible>
+					  <include>VisibleFadeEffect</include>
 					</control>
           <!-- Heading Label -->
     			<control type="label">
@@ -883,6 +897,8 @@
     				<textcolor>white</textcolor>
     				<shadowcolor>99000000</shadowcolor>
 				    <label>$INFO[Container(53).ListItem.Label]</label>
+    				<visible>!IsEmpty(Container(53).ListItem.Icon)</visible>
+					  <include>VisibleFadeEffect</include>
     			</control>
 					<control type="image">
 						<left>30</left>
@@ -2699,7 +2715,7 @@
 							<texture border="25">windows/weather/day_panel.png</texture>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>5</top>
 							<width>200</width>
 							<height>60</height>
@@ -2711,7 +2727,7 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>30</top>
 							<width>200</width>
 							<height>60</height>
@@ -2723,7 +2739,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>110</top>
 							<width>200</width>
 							<height>30</height>
@@ -2735,7 +2751,7 @@
 							<label>$INFO[ListItem.Property(HighTemperature)]</label>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>135</top>
 							<width>200</width>
 							<height>30</height>
@@ -2835,7 +2851,7 @@
 							<visible>Control.HasFocus(51)</visible>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>5</top>
 							<width>200</width>
 							<height>60</height>
@@ -2847,7 +2863,7 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>30</top>
 							<width>200</width>
 							<height>60</height>
@@ -2859,7 +2875,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>110</top>
 							<width>200</width>
 							<height>30</height>
@@ -2871,7 +2887,7 @@
 							<label>$INFO[ListItem.Property(HighTemperature)]</label>
 						</control>
 						<control type="label">
-						  <left>283</left>
+						  <left>83</left>
 							<top>135</top>
 							<width>200</width>
 							<height>30</height>

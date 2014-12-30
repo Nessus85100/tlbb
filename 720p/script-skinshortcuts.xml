@@ -7,14 +7,29 @@
 
 	 <control type="group">
     <include>DialogAnimation</include>
-		<visible>IsEmpty(Window.Property(additionalDialog)) + !Window.IsActive(SelectDialog) + !Window.IsActive(DialogSelect.xml)</visible>
+		<visible>IsEmpty(Window.Property(additionalDialog)) + !Window.IsActive(SelectDialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(VirtualKeyboard)</visible>
+	  <control type="image">
+			<left>213</left>
+			<top>116</top>
+		  <width>852</width>
+		  <height>60</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+			<left>213</left>
+			<top>173</top>
+		  <width>852</width>
+		  <height>387</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
 		<control type="image">
-			<left>183</left>
-			<top>101</top>
-			<width>912</width>
-			<height>515</height>
+			<left>215</left>
+			<top>172</top>
+			<width>848</width>
+			<height>4</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
+			<texture background="true">dialogs/other/header_line.png</texture>
 		</control>
 		<control type="image">
 			<description>background image</description>
@@ -23,17 +38,25 @@
 		</control>
 		<control type="label" id="500">
 			<description>header label</description>
-      <left>230</left>
-      <top>140</top>
-      <width>825</width>
-      <height>40</height>
-			<font>FontSize_32</font>
-			<align>center</align>
+			<left>225</left>
+			<top>132</top>
+			<width>775</width>
+	    <include>DialogsHeaderLabel</include>
+      <label>-</label>
+		</control>
+		<control type="label">
+			<description>Page Count Label</description>
+			<left>280</left>
+			<top>142</top>
+			<width>775</width>
+			<height>35</height>
+			<font>FontSize_16B</font>
+			<textcolor>88white</textcolor>
+  		<shadowcolor>99000000</shadowcolor>
+			<scroll>false</scroll>
+			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
+			<label>$VAR[ContainerNumItems]</label>
 		</control>
 		<control type="group"  id="10002">
 			<!-- Left Part - Submenu's Shortcusts List -->
@@ -79,6 +102,7 @@
 						<width>400</width>
 						<height>40</height>
 						<texture>buttons/focus.png</texture>
+	          <include>ListFocusAnimation</include>
 					  <animation effect="fade" start="100" end="30" time="100" condition="!Control.HasFocus(211)">conditional</animation>
 					</control>
 					<control type="image">
@@ -195,7 +219,7 @@
 				<width>400</width>
 				<height>352</height>
 				<onleft>211</onleft>
-				<onright>10</onright>
+				<onright>10001</onright>
 				<onup>30000</onup>
 				<ondown>30000</ondown>
   			<onback>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;options=clonewidgets&amp;mainmenuID=20)</onback>
@@ -431,70 +455,53 @@
 			</control>
 		</control>
 
-	  <control type="group">
-			<left>220</left>
-			<top>548</top>
-			<control type="grouplist" id="10001">
-				<left>0</left>
-				<top>0</top>
-				<width>840</width>
-				<height>40</height>
-				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
-				<onup>10002</onup>
-				<ondown>10002</ondown>
-				<control type="button" id="308">
-					<description>Reset</description>
-				  <width>400</width>
-				  <textwidth>360</textwidth>
-					<texturefocus border="39,3,39,39">dialogs/buttons/settings_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">dialogs/buttons/settings_nf.png</texturenofocus>
-			    <align>left</align>
-		      <include>DialogsSaveCancelButton</include>
-				  <label>$ADDON[script.skinshortcuts 32028]</label>
-				</control>
-				<control type="button" id="10">
-					<description>OK</description>
-				  <width>440</width>
-				  <textwidth>400</textwidth>
-					<texturefocus border="39,3,39,39">buttons/save_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">buttons/save_nf.png</texturenofocus>
-			    <align>right</align>
-		      <include>DialogsSaveCancelButton</include>
-				  <onclick>Close</onclick>
-				  <label>186</label>
-				  <visible>!StringCompare(Window.Property("groupname"),mainmenu)</visible>
-				</control>
-				<control type="button" id="11">
-					<description>Save</description>
-				  <width>440</width>
-				  <textwidth>400</textwidth>
-					<texturefocus border="39,3,39,39">buttons/save_fo.png</texturefocus>
-					<texturenofocus border="39,3,39,39">buttons/save_nf.png</texturenofocus>
-			    <align>right</align>
-		      <include>DialogsSaveCancelButton</include>
-				  <onclick>Close</onclick>
-				  <label>190</label>
-				  <visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
-				</control>
-			</control>
-
-			<control type="label.">
-				<description>Page Count Label</description>
-			  <left>75</left>
-				<width>300</width>
-				<height>40</height>
-				<font>FontSize_20</font>
-				<textcolor>44white</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[Container(211).NumItems,, $LOCALIZE[31025]]</label>
-			  <visible>IntegerGreaterThan(Container(211).NumItems,0)</visible>
-			</control>
+    <!-- Control Buttons -->
+	  <control type="group"  id="10001">
+			<left>1070</left>
+			<top>515</top>
+  		<control type="button" id="10">
+				<description>Save</description>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/save_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/save_nofocus.png</texturenofocus>
+  			<onleft>30000</onleft>
+  			<onright>30000</onright>
+  			<onup>308</onup>
+  			<ondown>308</ondown>
+				<onclick>Close</onclick>
+				<label>$LOCALIZE[190]</label>
+				<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
+  		</control>
+  		<control type="button" id="11">
+				<description>OK</description>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/save_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/save_nofocus.png</texturenofocus>
+  			<onleft>30000</onleft>
+  			<onright>30000</onright>
+  			<onup>308</onup>
+  			<ondown>308</ondown>
+				<onclick>Close</onclick>
+				<label>$LOCALIZE[186]</label>
+				<visible>!StringCompare(Window.Property("groupname"),mainmenu)</visible>
+  		</control>
+  		<control type="button" id="308">
+				<description>Reset</description>
+  			<top>-50</top>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/settings_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/settings_nofocus.png</texturenofocus>
+  			<onleft>30000</onleft>
+  			<onright>30000</onright>
+  			<onup condition="Control.IsVisible(10)">10</onup>
+  			<onup condition="Control.IsVisible(11)">11</onup>
+  			<ondown condition="Control.IsVisible(10)">10</ondown>
+  			<ondown condition="Control.IsVisible(11)">11</ondown>
+				<label>$LOCALIZE[10035]</label>
+  		</control>
 	  </control>
 	 </control>
 	</controls>

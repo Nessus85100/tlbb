@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="12">
 	<defaultcontrol>3</defaultcontrol>
-  
-  
 	<controls>
 	 <include>BackgroundItems</include>
 
@@ -10,8 +8,8 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
     <include>DialogZoomInOutAnimation</include>
-	  <visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(busy.xml) + !Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrgroupmanager)</visible>
-
+			<!-- <visible>!Window.IsActive(BusyDialog)</visible> -->
+	  <visible>!Window.IsActive(ProgressDialog) + !Window.IsActive(busy.xml) + !Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrgroupmanager)</visible>
 
 		<control type="image">
 		<include>FullscreenDimensions</include>
@@ -37,6 +35,10 @@
 		<control type="edit" id="12">
 			<description>Default edit</description>
 	    <include>SettingsButton</include>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default Slider</description>
+      <include>SettingsSliderex</include>
 		</control>
 
 		<control type="group" id="9001">

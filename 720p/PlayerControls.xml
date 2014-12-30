@@ -34,7 +34,7 @@
 			    <align>center</align>
 			    <aligny>center</aligny>
 					<scroll>false</scroll>
-					<label>$LOCALIZE[31370]</label>
+					<label>$LOCALIZE[31374]</label>
 				</control>
 				<control type="image">
 			    <description>background image</description>
@@ -100,9 +100,9 @@
 						  <bordersize>6</bordersize>
 						</control>
 						<control type="label">
-							<left>118</left>
+							<left>-30</left>
 							<top>168</top>
-							<width>275</width>
+							<width>295</width>
 							<height>35</height>
 							<textcolor>blue</textcolor>
 							<shadowcolor>99000000</shadowcolor>
@@ -142,7 +142,7 @@
 		      </content>
 				</control>
 				<control type="image">
-					<left>629</left>
+					<left>628</left>
 					<top>482</top>
 					<width>25</width>
 					<height>22</height>
@@ -278,7 +278,7 @@
 		      <content>plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</content>
 				</control>
 				<control type="image">
-					<left>629</left>
+					<left>628</left>
 					<top>498</top>
 					<width>25</width>
 					<height>22</height>
@@ -414,7 +414,7 @@
 		      <content>plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window(Home).Property(recentepisodes)]</content>
 				</control>
 				<control type="image">
-					<left>629</left>
+					<left>628</left>
 					<top>498</top>
 					<width>25</width>
 					<height>22</height>
@@ -572,7 +572,7 @@
 		      <content>plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window(Home).Property(recentalbums)]</content>
 				</control>
 				<control type="image">
-					<left>629</left>
+					<left>628</left>
 					<top>482</top>
 					<width>25</width>
 					<height>22</height>

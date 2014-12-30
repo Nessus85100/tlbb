@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/xbmc-skins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,6 +19,10 @@ msgstr ""
 msgctxt "#31000"
 msgid "Live TV"
 msgstr "TV en directe"
+
+msgctxt "#31001"
+msgid "TV Guide"
+msgstr "Guía TV"
 
 msgctxt "#31002"
 msgid "TV Shows"
@@ -32,17 +36,21 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "Número de pista"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "Ordena: Ascendent"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "Ordena: Descendent"
-
 msgctxt "#31009"
 msgid "Context Menu"
 msgstr "Menú contextual"
+
+msgctxt "#31010"
+msgid "-"
+msgstr "-"
+
+msgctxt "#31011"
+msgid "On"
+msgstr "Iniciar"
+
+msgctxt "#31012"
+msgid "Off"
+msgstr "Inactiu"
 
 msgctxt "#31015"
 msgid "General Options"
@@ -96,17 +104,37 @@ msgctxt "#31033"
 msgid "Channel Group"
 msgstr "Grup del canal"
 
+msgctxt "#31034"
+msgid "Teletext"
+msgstr "Teletext"
+
 msgctxt "#31036"
 msgid "Close"
 msgstr "Tanca"
+
+msgctxt "#31039"
+msgid "IP Address"
+msgstr "Adreça IP"
 
 msgctxt "#31080"
 msgid "Slide"
 msgstr "Diapositiva"
 
+msgctxt "#31083"
+msgid "Wall"
+msgstr "Paret"
+
 msgctxt "#31084"
 msgid "Posters"
 msgstr "Cartell"
+
+msgctxt "#31127"
+msgid "Landscape"
+msgstr "Horitzontal"
+
+msgctxt "#31128"
+msgid "ClearArt"
+msgstr "ClearART"
 
 msgctxt "#31134"
 msgid "Edit Background for Media Type"
@@ -119,6 +147,18 @@ msgstr "Una imatge"
 msgctxt "#31136"
 msgid "Multi Image"
 msgstr "Multi-imatge"
+
+msgctxt "#31162"
+msgid "Enable Kiosk Mode"
+msgstr "Activa el mode quiosc"
+
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Subtítol local disponible"
+
+msgctxt "#31218"
+msgid "Landscape"
+msgstr "Horitzontal"
 
 msgctxt "#31219"
 msgid "Logo"
@@ -160,6 +200,14 @@ msgctxt "#31247"
 msgid "Random Movies"
 msgstr "Pel·lícules aleatòries"
 
+msgctxt "#31250"
+msgid "All Movies"
+msgstr "Totes les pel·lícules"
+
+msgctxt "#31254"
+msgid "Search on YouTube"
+msgstr "Cerca a YouTube"
+
 msgctxt "#31285"
 msgid "Playlist Options"
 msgstr "Opcions de la llista de reproducció"
@@ -176,6 +224,18 @@ msgctxt "#31309"
 msgid "Visualization Presets"
 msgstr "Visualitzacions preestablertes"
 
+msgctxt "#31310"
+msgid "Visualization Settings"
+msgstr "Configuració de la Visualització"
+
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "S'està reproduint"
+
+msgctxt "#31350"
+msgid "Available Groups"
+msgstr "Grups disponibles"
+
 msgctxt "#31351"
 msgid "Add Group"
 msgstr "Afegeix un grup"
@@ -187,3 +247,23 @@ msgstr "Canvia el nom del grup"
 msgctxt "#31353"
 msgid "Delete Group"
 msgstr "Elimina el grup"
+
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr "Actualitza la biblioteca de vídeo"
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr "Actualitza la biblioteca de música"
+
+msgctxt "#31372"
+msgid "Clean Video Library"
+msgstr "Neteja la biblioteca de vídeo"
+
+msgctxt "#31373"
+msgid "Clean Music Library"
+msgstr "Neteja la biblioteca de música"
+
+msgctxt "#31430"
+msgid "Help"
+msgstr "Ajuda"

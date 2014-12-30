@@ -149,15 +149,15 @@
 	    <include>VisibleHiddenSlideAnimation</include>
 			<include>ShutdownMenuAnimation</include>
 		  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites)</visible>
-      <include>TLBBIco</include>
 			<control type="grouplist">
-				<left>55</left>
+				<left>0</left>
 				<top>0</top>
-				<height>70</height>
 				<width>1000</width>
+			  <height>70</height>
 				<align>left</align>
-				<itemgap>20</itemgap>
+				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>Logo</include>
 	      <include>OpenCloseSlideAnimation</include>
 			  <visible>![IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] + !IsEmpty(Control.GetLabel(3)) + !SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
 				<control type="label">
@@ -186,13 +186,14 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>55</left>
+				<left>0</left>
 				<top>0</top>
-				<height>70</height>
 				<width>1000</width>
+			  <height>70</height>
 				<align>left</align>
-				<itemgap>20</itemgap>
+				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
+	      <include>Logo</include>
 	      <include>OpenCloseSlideAnimation</include>
 			  <visible>[IsEmpty(Window(Weather).Property(Current.Condition)) | IsEmpty(Window(Weather).Property(Location))] | IsEmpty(Control.GetLabel(3)) | SubString(Window(Weather).Property(Current.ConditionIcon),na)</visible>
 				<control type="label">

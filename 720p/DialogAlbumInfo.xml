@@ -427,12 +427,12 @@
 						<texture diffuse="thumbs/music_diffuse.png">thumbs/music_overlay_noglass.png</texture>
 					</control>
 					<control type="image">
-						<posx>-8</posx>
-						<posy>-8</posy>
-						<width>176</width>
-						<height>176</height>
+						<posx>7</posx>
+						<posy>7</posy>
+						<width>146</width>
+						<height>146</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30" diffuse="thumbs/music_diffuse.png">views/thumbnails/focus.png</texture>
+						<texture border="30" diffuse="thumbs/music_diffuse.png">views/other/focus_blue.png</texture>
 						<visible>Control.HasFocus(50) | Control.HasFocus(150)</visible>
 					</control>
 					<control type="group">

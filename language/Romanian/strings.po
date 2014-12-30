@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/xbmc-skins/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,17 +32,13 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "Număr pistă"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "Sort.: Ascendent"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "Sort.: Descendent"
-
 msgctxt "#31009"
 msgid "Context Menu"
 msgstr "Meniu Contextual"
+
+msgctxt "#31012"
+msgid "Off"
+msgstr "Oprit"
 
 msgctxt "#31017"
 msgid "Karaoke Song Selector"
@@ -108,6 +104,10 @@ msgctxt "#31136"
 msgid "Multi Image"
 msgstr "Imagini multiple"
 
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Există subtitrare locală"
+
 msgctxt "#31223"
 msgid "36 Hour Forecast"
 msgstr "Previziune pe 36 de ore"
@@ -155,6 +155,10 @@ msgstr "Pauză"
 msgctxt "#31309"
 msgid "Visualization Presets"
 msgstr "Vizualizări predefinite"
+
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "În redare"
 
 msgctxt "#31351"
 msgid "Add Group"

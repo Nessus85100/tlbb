@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
-	<fontset id="Default" idloc="15109" unicode="true">
+	<fontset id="Default" idloc="15109">
 	 	<font>
 			<name>BackFont_22B</name>
 			<filename>OpenSans-Regular.ttf</filename>

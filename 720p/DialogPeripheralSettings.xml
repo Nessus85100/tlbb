@@ -2,65 +2,26 @@
 <window  id="123">
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
-
 	 <control type="group">
 	  <include>DialogAnimation</include>
 		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput)</visible>
-		<control type="image">
-			<posx>316</posx>
-			<posy>122</posy>
-			<width>647</width>
-			<height>472</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-		</control>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/profiles/bg_locksettings.png</texture>
-		</control>
-		<control type="image">
-      <include>FullscreenDimensions</include>
-			<texture background="true">dialogs/profiles/locksettings_lines.png</texture>
-			<visible>!Control.IsVisible(3)</visible>
-			<animation effect="fade" start="0" end="100" time="250" reversible="true">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
-		</control>
+	  <include>DialogSelectBackgrounds</include>
 		<control type="label">
 			<description>header label</description>
-			<posx>341</posx>
-			<posy>170</posy>
-			<width>600</width>
-			<font>FontSize_36</font>
-			<label>$LOCALIZE[35000] $LOCALIZE[5]</label>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-		</control>
-		<control type="label" id="3">
-			<description>No Settings Label</description>
-			<posx>363</posx>
-			<posy>225</posy>
-			<width>553</width>
-			<height>300</height>
-			<textcolor>77white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<label>35004</label>
-			<font>FontSize_22</font>
+			<left>360</left>
+			<top>152</top>
+			<width>560</width>
+	    <include>DialogsHeaderLabel</include>
+			<label>$LOCALIZE[5]</label>
 		</control>
 
-	  <control type="group" id="9000">
-			<posx>363</posx>
-			<posy>214</posy>
+	  <control type="group" id="10010">
+			<left>364</left>
+			<top>209</top>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>553</width>
 				<height>302</height>
 				<itemgap>4</itemgap>
@@ -81,9 +42,9 @@
 				<description>Default spincontrolex</description>
 	      <include>DialogsSpincontrolex</include>
 			</control>
-			<control type="sliderex" id="10">
+			<control type="sliderex" id="13">
 				<description>Default Slider</description>
-	      <include>DialogsSliderx</include>
+	      <include>DialogsSliderex</include>
 			</control>
 			<control type="image" id="11">
 				<description>Default Seperator</description>
@@ -92,75 +53,51 @@
         <visible>false</visible>
 			</control>
 	  </control>
-	  
+
+    <!-- Control Buttons -->
 	  <control type="group"  id="10000">
-			<posx>355</posx>
-			<posy>525</posy>
-			<control type="grouplist" id="10001">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>0</width>
-				<height>0</height>
-				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<control type="button" id="28">
-					<description>Save</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
-					<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>190</label>
-				</control>
-				<control type="button" id="29">
-					<description>Cancel</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus>dialogs/buttons/cancel_fo.png</texturefocus>
-					<texturenofocus>dialogs/buttons/cancel_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>222</label>
-				</control>
-				<control type="button" id="50">
-					<description>Defaults</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus>dialogs/buttons/focus.png</texturefocus>
-					<texturenofocus>dialogs/buttons/settings_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>409</label>
-				</control>
-			</control>
+			<left>940</left>
+			<top>488</top>
+  		<control type="button" id="28">
+				<description>Save</description>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/save_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/save_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>29</onup>
+  			<ondown>50</ondown>
+				<label>$LOCALIZE[190]</label>
+  		</control>
+  		<control type="button" id="29">
+				<description>Cancel</description>
+  			<top>-50</top>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/cancel_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/cancel_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>50</onup>
+  			<ondown>28</ondown>
+				<label>$LOCALIZE[222]</label>
+  		</control>
+  		<control type="button" id="50">
+				<description>Defaults</description>
+  			<top>-100</top>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/settings_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/settings_nofocus.png</texturenofocus>
+  			<onleft>10010</onleft>
+  			<onright>10010</onright>
+  			<onup>28</onup>
+  			<ondown>29</ondown>
+				<label>$LOCALIZE[409]</label>
+  		</control>
 	  </control>
+
 	 </control>
 	</controls>
 </window>

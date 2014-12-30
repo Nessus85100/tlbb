@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window  id="25">
 	<defaultcontrol always="true">56</defaultcontrol>
-  
 	<views>56,50,51,52,53,54,58,580,55,560,561,57</views>
-  
   <onload condition="SubString(Container.FolderPath,plugin://plugin.video.youtube)">Container.SetViewMode(561)</onload>
   <onload condition="Skin.HasSetting(HideThumbnailsVideos)">SetFocus(50)</onload>
-	<!-- <onload condition="![Library.HasContent(movies) | Library.HasContent(tvshows)] + !Window.Previous(Startup) + ![stringcompare(Container.FolderPath,addons://sources/video/) | substring(Container.FolderPath,plugin://plugin.video,left)]">ActivateWindow(1110)</onload> -->
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="IsEmpty(Skin.String(ListViewWideThumbTVShows))">Skin.SetString(ListViewWideThumbTVShows,1)</onload>
 	<onload condition="IsEmpty(Skin.String(GalleryViewWideThumbTVShows))">Skin.SetString(GalleryViewWideThumbTVShows,1)</onload>
@@ -59,7 +56,7 @@
         <aspectratio>stretch</aspectratio>
         <animation effect="slide" start="0,0" end="0,-37" time="0" condition="!Control.IsVisible(99)">Conditional</animation>
         <animation effect="slide" start="0,0" end="0,-37" time="0" condition="!Control.IsVisible(97)">Conditional</animation>
-        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(95)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(290) | Control.IsVisible(291) | Control.IsVisible(292) | Control.IsVisible(293) | Control.IsVisible(294)">Conditional</animation>
       </control>
 			<control type="label">
         <left>75</left>
@@ -89,12 +86,53 @@
 				<description>View as</description>
 			  <include>TopLeftMenusButton</include>
 			</control>
-			<control type="button" id="95">
-				<description>Viewtype Options</description>
-			  <label>31014</label>
-				<onclick>SetFocus(9222)</onclick>
+			<control type="button" id="290">
+				<description>ListView WideThumb (TVShows)</description>
+  			<include>TopLeftMenusButton</include>
+        <label>$LOCALIZE[31217]: $VAR[FanartThumbsOptionsLabels]</label>
+		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">Skin.SetString(ListViewWideThumbTVShows,1)</onclick>
+		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">Skin.SetString(ListViewWideThumbTVShows,3)</onclick>
+		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),1)">Skin.SetString(ListViewWideThumbTVShows,2)</onclick>
+		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">Skin.SetString(ListViewWideThumbTVShows,1)</onclick>
+			  <visible>Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+			</control>
+			<control type="button" id="291">
+				<description>GalleryView WideThumb (TVShows)</description>
+  			<include>TopLeftMenusButton</include>
+        <label>$LOCALIZE[31217]: $VAR[FanartThumbsOptionsLabels]</label>
+		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),3)">Skin.SetString(GalleryViewWideThumbTVShows,1)</onclick>
+		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),2)">Skin.SetString(GalleryViewWideThumbTVShows,3)</onclick>
+		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),1)">Skin.SetString(GalleryViewWideThumbTVShows,2)</onclick>
+		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),3)">Skin.SetString(GalleryViewWideThumbTVShows,1)</onclick>
+			  <visible>Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+			</control>
+			<control type="togglebutton" id="292">
+				<description>Disable Posters Flashing Cinema Lights</description>
+  			<include>TopLeftMenusButton</include>
+        <label>$LOCALIZE[31124]: $LOCALIZE[31012]</label>
+        <altlabel>$LOCALIZE[31124]: $LOCALIZE[31011]</altlabel>
+				<onclick>Skin.ToggleSetting(FlashingCinemaLights)</onclick>
+				<selected>Skin.HasSetting(FlashingCinemaLights)</selected>
+			  <visible>Control.IsVisible(55) + Container.Content(Movies)</visible>
+			</control>
+			<control type="togglebutton" id="293">
+			  <description>Show Info (Thumbnails View)</description>
+  			<include>TopLeftMenusButton</include>
+        <label>$LOCALIZE[22081]: $LOCALIZE[31012]</label>
+        <altlabel>$LOCALIZE[22081]: $LOCALIZE[31011]</altlabel>
+				<onclick>Skin.ToggleSetting(ThumbnailShowInfo)</onclick>
+			  <onclick>Reloadskin</onclick>
+				<selected>Skin.HasSetting(ThumbnailShowInfo)</selected>
+			  <visible>Control.IsVisible(561) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Window.IsVisible(VideoPlaylist)]</visible>
+			</control>
+			<control type="togglebutton" id="294">
+			  <description>Change Thumbs Size (Thumbnails View)</description>
 			  <include>TopLeftMenusButton</include>
-			  <visible>[Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)]] | [Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)]] | [Control.IsVisible(55) + Container.Content(Movies)] | [Control.IsVisible(560) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Window.IsVisible(VideoPlaylist)]]</visible>
+        <label>Show Small Thumbs</label>
+        <altlabel>Show Big Thumbs</altlabel>
+				<onclick>Skin.ToggleSetting(ShowSmallVideoThumbs)</onclick>
+				<selected>Skin.HasSetting(ShowSmallVideoThumbs)</selected>
+			  <visible>Control.IsVisible(560) + stringcompare(Container.FolderPath,addons://sources/video/)</visible>
 			</control>
 			<control type="button" id="3">
 				<description>Sort by</description>
@@ -202,167 +240,7 @@
 			</control>
 	  </control>
 
-    <!-- Viewtype Options Buttons (Not Visible) -->
-		<control type="grouplist" id="9222">
-			<left>0</left>
-			<top>63</top>
-			<width>380</width>
-			<height>520</height>
-			<itemgap>0</itemgap>
-			<onleft>9111</onleft>
-			<onright>9111</onright>
-			<onup>9222</onup>
-			<ondown>9222</ondown>
-			<control type="button" id="290">
-				<description>ListView WideThumb (TVShows)</description>
-        <label>$LOCALIZE[31217]: $VAR[FanartThumbsOptionsLabels]</label>
-		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">Skin.SetString(ListViewWideThumbTVShows,1)</onclick>
-		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">Skin.SetString(ListViewWideThumbTVShows,3)</onclick>
-		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),1)">Skin.SetString(ListViewWideThumbTVShows,2)</onclick>
-		    <onclick condition="Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">Skin.SetString(ListViewWideThumbTVShows,1)</onclick>
-			  <include>TopButton</include>
-			  <visible>Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-			</control>
-			<control type="button" id="291">
-				<description>GalleryView WideThumb (TVShows)</description>
-        <label>$LOCALIZE[31217]: $VAR[FanartThumbsOptionsLabels]</label>
-		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),3)">Skin.SetString(GalleryViewWideThumbTVShows,1)</onclick>
-		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),2)">Skin.SetString(GalleryViewWideThumbTVShows,3)</onclick>
-		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),1)">Skin.SetString(GalleryViewWideThumbTVShows,2)</onclick>
-		    <onclick condition="Stringcompare(Skin.String(GalleryViewWideThumbTVShows),3)">Skin.SetString(GalleryViewWideThumbTVShows,1)</onclick>
-			  <include>TopButton</include>
-			  <visible>Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-			</control>
-			<control type="togglebutton" id="292">
-				<description>Disable Posters Flashing Cinema Lights</description>
-			  <include>TopButton</include>
-        <label>$LOCALIZE[31124]: $LOCALIZE[31012]</label>
-        <altlabel>$LOCALIZE[31124]: $LOCALIZE[31011]</altlabel>
-				<onclick>Skin.ToggleSetting(FlashingCinemaLights)</onclick>
-				<selected>Skin.HasSetting(FlashingCinemaLights)</selected>
-			  <visible>Control.IsVisible(55) + Container.Content(Movies)</visible>
-			</control>
-			<control type="togglebutton" id="293">
-			  <description>Show Info (Thumbnails View)</description>
-        <label>$LOCALIZE[22081]: $LOCALIZE[31012]</label>
-        <altlabel>$LOCALIZE[22081]: $LOCALIZE[31011]</altlabel>
-			  <include>TopButton</include>
-				<onclick>Skin.ToggleSetting(ThumbnailShowInfo)</onclick>
-			  <onclick>Reloadskin</onclick>
-				<selected>Skin.HasSetting(ThumbnailShowInfo)</selected>
-			  <visible>Control.IsVisible(560) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Window.IsVisible(VideoPlaylist)]</visible>
-			</control>
-		</control>
-    <!-- Viewtype Options Panel -->
-    <control type="group">
-      <include>ViewtypeOptionsTopMenuAnimation</include>
-      <control type="image">
-        <left>0</left>
-        <top>-12</top>
-				<width>380</width>
-				<height>75</height>
-				<texture>dialogs/menus/topmenus_options.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <control type="image">
-        <left>0</left>
-        <top>100</top>
-				<width>380</width>
-				<height>22</height>
-				<texture>dialogs/menus/bottom.png</texture>
-        <aspectratio>stretch</aspectratio> 
-      </control>
-			<control type="label">
-        <left>75</left>
-			  <label>$LOCALIZE[31014]</label>
-			  <include>TopBigLabel</include>
-			</control>
-		</control>
-    <!-- Viewtype Options Labels -->
-		<control type="grouplist">
-			<left>0</left>
-			<top>63</top>
-			<width>380</width>
-			<height>520</height>
-			<itemgap>0</itemgap>
-      <include>ViewtypeOptionsTopMenuAnimation</include>
-			<control type="button">
-				<description>ListView WideThumb (TVShows)</description>
-			  <include>TopLeftViewtypeOptionsButton</include>
-        <label>$INFO[Control.GetLabel(290)]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(290)" reversible="true">Conditional</animation>
-			  <visible>Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-			</control>
-			<control type="button">
-				<description>GalleryView WideThumb (TVShows)</description>
-			  <include>TopLeftViewtypeOptionsButton</include>
-        <label>$INFO[Control.GetLabel(291)]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(291)" reversible="true">Conditional</animation>
-			  <visible>Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-			</control>
-			<control type="button">
-				<description>Flashing Cinema Lights On</description>
-			  <include>TopLeftViewtypeOptionsButton</include>
-        <label>$INFO[Control.GetLabel(292)]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(292)" reversible="true">Conditional</animation>
-			  <visible>Control.IsVisible(55) + Container.Content(Movies)</visible>
-			</control>
-			<control type="button">
-			  <description>Show Info (Thumbnails View)</description>
-			  <include>TopLeftViewtypeOptionsButton</include>
-        <label>$INFO[Control.GetLabel(293)]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!ControlGroup(9222).HasFocus(293)" reversible="true">Conditional</animation>
-			  <visible>Control.IsVisible(560) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Window.IsVisible(VideoPlaylist)]</visible>
-			</control>
-		</control>
-
 	 </control>
-
-   <!-- ============================ -->
-   <!-- OptionsMenu Top Content Info -->
-   <!-- ============================
-		<control type="grouplist.">
-			<left>75</left>
-			<top>0</top>
-			<height>70</height>
-			<width>1000</width>
-			<align>left</align>
-			<itemgap>10</itemgap>
-			<orientation>horizontal</orientation>
-	    <include>OpenCloseSlideAnimation</include>
-		  <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
-			<control type="label">
-			  <include>TopBigLabel</include>
-			  <label>$LOCALIZE[33063] $LOCALIZE[33061]</label>
-			</control>
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[3]</label>
-	      <visible>IsEmpty(Container.FolderName) | Container.Content(Files)</visible>
-			</control>			
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$INFO[Container.FolderName]</label>
-	      <visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Files)]</visible>
-			</control>
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[20389]</label>
-	      <visible>Container.Content(MusicVideos)</visible>
-			</control>
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[20342]</label>
-	      <visible>Container.Content(Movies) | Container.Content(Sets)</visible>
-			</control>
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[31002]</label>
-	      <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-			</control>
-		</control>
-	 </control> -->
-
 
    <!-- ================ -->
    <!-- Top Content Info -->
@@ -375,13 +253,14 @@
 		<include>ShutdownMenuAnimation</include>
 	  <visible>!ControlGroup(9000).HasFocus + !Window.IsActive(favourites) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(contextmenu.xml)</visible>
 		<control type="grouplist">
-			<left>55</left>
+			<left>0</left>
 			<top>0</top>
-			<height>70</height>
 			<width>1000</width>
+		  <height>70</height>
 			<align>left</align>
-			<itemgap>20</itemgap>
+			<itemgap>12</itemgap>
 			<orientation>horizontal</orientation>
+      <include>Logo</include>
 			<!-- Videos -->
 			<control type="label">
 			  <include>TopBigLabel</include>

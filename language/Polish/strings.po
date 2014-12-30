@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/xbmc-skins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgstr "Seriale"
 
 msgctxt "#31003"
 msgid "Aired"
-msgstr "Emisja"
+msgstr "Premiera"
 
 msgctxt "#31004"
 msgid "Premiere"
@@ -39,14 +39,6 @@ msgstr "Premiera"
 msgctxt "#31005"
 msgid "Track Number"
 msgstr "Numer ścieżki"
-
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "Sortuj: rosnąco"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "Sortuj: malejąco"
 
 msgctxt "#31008"
 msgid "System auto shutdown in"
@@ -61,20 +53,24 @@ msgid "-"
 msgstr "-"
 
 msgctxt "#31011"
-msgid "ON"
-msgstr "WŁĄCZ"
+msgid "On"
+msgstr "Włączony"
 
 msgctxt "#31012"
-msgid "OFF"
-msgstr "WYŁĄCZ"
+msgid "Off"
+msgstr "brak"
+
+msgctxt "#31013"
+msgid "Enable Home Menu Animation"
+msgstr "Animuj menu startowe"
 
 msgctxt "#31014"
 msgid "ViewType Options"
-msgstr "Opcje Typów widoku"
+msgstr "Opcje widoku"
 
 msgctxt "#31015"
 msgid "General Options"
-msgstr "Ogólne opcje"
+msgstr "Opcje ogólne"
 
 msgctxt "#31016"
 msgid "File Manager"
@@ -82,7 +78,7 @@ msgstr "Menedżer plików"
 
 msgctxt "#31017"
 msgid "Karaoke Song Selector"
-msgstr "Wybór piosenki karaoke"
+msgstr "Selektor utworów Karaoke"
 
 msgctxt "#31018"
 msgid "Trailers"
@@ -106,7 +102,7 @@ msgstr "Muzyka - pliki"
 
 msgctxt "#31023"
 msgid "Info"
-msgstr "Info"
+msgstr "Informacje"
 
 msgctxt "#31024"
 msgid "Page"
@@ -122,7 +118,7 @@ msgstr "Przewijanie"
 
 msgctxt "#31027"
 msgid "Memory Used:"
-msgstr "Używana pamięć:"
+msgstr "Użycie pamięci:"
 
 msgctxt "#31028"
 msgid "Move Left"
@@ -174,7 +170,7 @@ msgstr "Adres IP"
 
 msgctxt "#31040"
 msgid "Created by"
-msgstr "Utworzono przez"
+msgstr "Utworzony przez"
 
 msgctxt "#31041"
 msgid "Creator"
@@ -190,11 +186,11 @@ msgstr "Galeria"
 
 msgctxt "#31082"
 msgid "3D Wall"
-msgstr "Ściana 3D"
+msgstr "Kafelki 3D"
 
 msgctxt "#31083"
 msgid "Wall"
-msgstr "Ściana"
+msgstr "Kafelki"
 
 msgctxt "#31084"
 msgid "Posters"
@@ -206,31 +202,59 @@ msgstr "Miniatury"
 
 msgctxt "#31086"
 msgid "Banner List"
-msgstr "Lista banerów"
+msgstr "Banery"
+
+msgctxt "#31087"
+msgid "VideoWall Fanart"
+msgstr "Używaj kolażu plakatów w roli tła"
 
 msgctxt "#31088"
 msgid "List Wall"
-msgstr "Lista "
+msgstr "Lista Kafelki"
+
+msgctxt "#31094"
+msgid "Choose Movies Widget"
+msgstr "Wybierz widżet filmów"
+
+msgctxt "#31095"
+msgid "Choose TV Shows Widget"
+msgstr "Wybierz widżet seriali"
+
+msgctxt "#31096"
+msgid "Choose Music Widget"
+msgstr "Wybierz widżet muzyki"
+
+msgctxt "#31097"
+msgid "Choose RSS Video Feed Widget"
+msgstr "Wybierz widżet wideo kanałów RSS"
+
+msgctxt "#31098"
+msgid "Home Menu"
+msgstr "Menu startowe"
+
+msgctxt "#31099"
+msgid "Show Home Menu Buttons"
+msgstr "Pokazuj przyciski menu startowego"
 
 msgctxt "#31100"
-msgid "Home Categories Buttons"
-msgstr "Przyciski kategorii menu głównego"
+msgid "Hide Home Menu Buttons"
+msgstr "Ukrywaj przyciski menu startowego"
 
 msgctxt "#31101"
 msgid "Show Weather Info"
-msgstr "Pokazuj info o pogodzie"
+msgstr "Pokazuj informacje pogodowe"
 
 msgctxt "#31102"
 msgid "Hide Now Playing Video Info"
-msgstr "Ukryj informacje o odtwarzanym wideo"
+msgstr "Ukrywaj Teraz odtwarzane dla wideo"
 
 msgctxt "#31103"
 msgid "Hide Now Playing Music Info"
-msgstr "Ukryj informacje o odtwarzanej muzyce"
+msgstr "Ukrywaj Teraz odtwarzane dla muzyki"
 
 msgctxt "#31104"
-msgid "Hide Search Button"
-msgstr "Ukryj przycisk wyszukiwania"
+msgid "Show Search Button"
+msgstr "Pokazuj przycisk wyszukiwania"
 
 msgctxt "#31105"
 msgid "Hide Trailers Button"
@@ -258,11 +282,11 @@ msgstr "Ukryj przycisk programów"
 
 msgctxt "#31111"
 msgid "Hide Add-ons Button"
-msgstr "Ukryj przycisk wtyczek"
+msgstr "Ukrywaj przycisk Dodatki"
 
 msgctxt "#31112"
 msgid "Hide Weather Button"
-msgstr "Ukryj przycisk pogody"
+msgstr "Ukrywaj przycisk pogody"
 
 msgctxt "#31113"
 msgid "Hide Settings Button"
@@ -270,15 +294,11 @@ msgstr "Ukryj przycisk ustawień"
 
 msgctxt "#31114"
 msgid "Show Videos Button"
-msgstr "Pokaż przycisk wideo"
-
-msgctxt "#31115"
-msgid "Show DVD Button"
-msgstr "Pokaż przycisk DVD"
+msgstr "Pokazuj przycisk wideo"
 
 msgctxt "#31116"
 msgid "Show Music Videos Button"
-msgstr "Pokaż przycisk teledysków"
+msgstr "Pokazuj przycisk teledysków"
 
 msgctxt "#31117"
 msgid "Music Button opens..."
@@ -286,19 +306,19 @@ msgstr "Przycisk muzyki otwiera..."
 
 msgctxt "#31118"
 msgid "Custom Button"
-msgstr "Niestandardowy/Dostosowany Przycisk"
+msgstr "Przycisk niestandardowy"
 
 msgctxt "#31119"
-msgid "Custom Home Buttons"
-msgstr "Niestandardowe Przyciski"
+msgid "Custom Home Menu Buttons"
+msgstr "Zdefiniowane przyciski menu startowego"
 
 msgctxt "#31120"
 msgid "Hide Movies Submenu"
-msgstr "Ukryj podmenu filmów"
+msgstr "Ukrywaj podmenu filmów"
 
 msgctxt "#31121"
 msgid "Hide TV Shows Submenu"
-msgstr "Ukryj podmenu seriali"
+msgstr "Ukrywaj podmenu seriali"
 
 msgctxt "#31122"
 msgid "Hide Music Submenu"
@@ -307,6 +327,10 @@ msgstr "Ukryj podmenu muzyki"
 msgctxt "#31123"
 msgid "Hide Settings Submenu"
 msgstr "Ukryj podmenu ustawień"
+
+msgctxt "#31124"
+msgid "Flashing Lights"
+msgstr "Błyskające światła"
 
 msgctxt "#31125"
 msgid "Edit Info"
@@ -318,11 +342,11 @@ msgstr "Miniatury odcinków"
 
 msgctxt "#31127"
 msgid "Landscape"
-msgstr "Krajobraz"
+msgstr "Panorama"
 
 msgctxt "#31128"
 msgid "ClearArt"
-msgstr "ClearArt"
+msgstr "Przezrocze"
 
 msgctxt "#31129"
 msgid "ClearLogo"
@@ -330,15 +354,15 @@ msgstr "Clear Logo"
 
 msgctxt "#31130"
 msgid "Disable Fanart in all sections"
-msgstr "Wyłącz Fanart we wszystkich sekcjach"
+msgstr "Dezaktywuj tapety we wszystkich sekcjach"
 
 msgctxt "#31131"
 msgid "Show Only on Home Screen"
-msgstr "Pokaż jedynie na ekranie głónym"
+msgstr "Pokazuj jedynie na ekranie startowym"
 
 msgctxt "#31132"
 msgid "Hide Background Video"
-msgstr "Ukryj Wideo odtwarzane w tle"
+msgstr "Nie używaj odtwarzane wideo w roli tła"
 
 msgctxt "#31133"
 msgid "Custom Background"
@@ -346,7 +370,7 @@ msgstr "Własne tło"
 
 msgctxt "#31134"
 msgid "Edit Background for Media Type"
-msgstr "Edytuj tło dla"
+msgstr "Edytuj tła typów mediów"
 
 msgctxt "#31135"
 msgid "Single Image"
@@ -364,29 +388,25 @@ msgctxt "#31138"
 msgid "Enable Movies Notifications"
 msgstr "Włącz powiadomienia filmów"
 
-msgctxt "#31139"
-msgid "Enable Addons Notifications"
-msgstr "Włącz powiadomienia wtyczek"
-
 msgctxt "#31140"
 msgid "Enable Weather Alerts Notifications"
-msgstr "Włącz powiadomienia o ostrzeżeniach pogodowych"
+msgstr "Powiadamiaj o ostrzeżeniach pogodowych"
 
 msgctxt "#31141"
 msgid "Choose Lyrics Add-on"
-msgstr "Wybierz wtyczkę tekstów"
+msgstr "Wybierz dodatek Tekst utworu"
 
 msgctxt "#31142"
 msgid "Choose Subtitles Add-on"
-msgstr "Wybierz wtyczkę napisów"
+msgstr "Wybierz dodatek Napisy"
 
 msgctxt "#31143"
 msgid "Enable NextAired Info on TV Shows [COLOR=55white](Requires Next Aired Add-on)[/COLOR]"
-msgstr "Włącz wtyczkę NexAired o następnie ukazywanych programach  [COLOR=55white](Wymaga wtyczki Next Aired)[/COLOR]"
+msgstr "Pokazuj daty emisji następnych odcinków [COLOR=greyblue](wymaga dodatku Next Aired)[/COLOR]"
 
 msgctxt "#31144"
 msgid "Enable Music Theme on TV Shows [COLOR=55white](Requires TV Tunes Add-on)[/COLOR]"
-msgstr "Włącz tematy muzyczne w programach telewizyjnych [COLOR=55white](wymagany dodatek Tunes TV)[/COLOR]"
+msgstr "Odtwarzaj motywy muzyczne w bibliotece wideo [COLOR=55white](dodatek TvTunes)[/COLOR]"
 
 msgctxt "#31145"
 msgid "Download music themes for all TV Shows"
@@ -398,15 +418,15 @@ msgstr "Ściągnij [COLOR=selected]logo.png[/COLOR] dla wszystkich seriali"
 
 msgctxt "#31147"
 msgid "Download [COLOR=selected]clearart.png[/COLOR] for all TV Shows"
-msgstr "Ściągnij [COLOR=selected]clearart.png[/COLOR] dla wszystkich seriali"
+msgstr "Pobierz [COLOR=selected]clearart.png[/COLOR] dla wszystkich seriali"
 
 msgctxt "#31148"
 msgid "Download [COLOR=selected]landscape.jpg[/COLOR] for all TV Shows"
-msgstr "Ściągnij [COLOR=selected]landscape.jpg[/COLOR] dla wszystkich seriali"
+msgstr "Pobierz [COLOR=selected]landscape.jpg[/COLOR] dla wszystkich seriali"
 
 msgctxt "#31149"
 msgid "Download [COLOR=selected]banner.jpg[/COLOR] for all TV Shows"
-msgstr "Ściągnij [COLOR=selected]banner.jpg[/COLOR] dla wszystkich seriali"
+msgstr "Pobierz [COLOR=selected]banner.jpg[/COLOR] dla wszystkich seriali"
 
 msgctxt "#31150"
 msgid "Download [COLOR=selected]poster.jpg[/COLOR] for all TV Shows"
@@ -417,20 +437,48 @@ msgid "Show RSS feed in whole skin"
 msgstr "Wyświetlaj wiadomości RSS przez cały czas używania skóry"
 
 msgctxt "#31152"
-msgid "Hide Flagging read from video filenames [COLOR=55white](Blu-ray, HD-DVD)[/COLOR]"
-msgstr "Ukryj Flagowanie odczytane z nazw plików wideo [COLOR=55white](Blu-ray, HD-DVD)[/COLOR]"
-
-msgctxt "#31153"
-msgid "Enable Login Screen"
-msgstr "Włącz ekran logowania"
+msgid "Hide Live TV Submenu"
+msgstr "Ukrywaj podmenu Telewizja"
 
 msgctxt "#31154"
 msgid "Choose Trailers Add-on"
-msgstr "Wybierz rodzaj wtyczki zwiastunów"
+msgstr "Wybierz dodatek Zwiastuny"
 
 msgctxt "#31155"
 msgid "Add-ons Button opens..."
 msgstr "Przycisk Dodatek otwiera ..."
+
+msgctxt "#31158"
+msgid "Views"
+msgstr "Odsłony"
+
+msgctxt "#31159"
+msgid "Show FullScreenInfo instead of the SeekBar"
+msgstr "Pokazuj informacje ekranowe zamiast paska przeszukiwania"
+
+msgctxt "#31162"
+msgid "Enable Kiosk Mode"
+msgstr "Włącz tryb Kiosku"
+
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Dostępne lokalne napisy"
+
+msgctxt "#31168"
+msgid "Reset Level"
+msgstr "Przywrócić domyślny poziom"
+
+msgctxt "#31169"
+msgid "Reset Skin"
+msgstr "Przywróć domyślne ustawienia skóry"
+
+msgctxt "#31170"
+msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
+msgstr "Wszystkie powyższe ustawienia skóry zostaną przywrócone do wartości domyślnych.[CR] Czy na pewno chcesz kontynuować?"
+
+msgctxt "#31174"
+msgid "Hide Submenus"
+msgstr "Ukryj podmenu"
 
 msgctxt "#31200"
 msgid "My Movies"
@@ -449,20 +497,20 @@ msgid "New Search"
 msgstr "Nowe wyszukiwanie"
 
 msgctxt "#31204"
-msgid "-"
-msgstr "-"
+msgid "Please check your weather settings"
+msgstr "Sprawdź ustawienia pogody"
 
 msgctxt "#31205"
 msgid "Browse the most recently added movies"
-msgstr "Przeglądaj ostatnio dodane filmy"
+msgstr "Przeglądaj filmy ostatnio dodane"
 
 msgctxt "#31206"
 msgid "Browse the most recently added episodes"
-msgstr "Przeglądaj ostatnio dodane odcinki"
+msgstr "Przeglądaj odcinki ostatnio dodane"
 
 msgctxt "#31207"
 msgid "Browse the most recently added albums"
-msgstr "Przeglądaj ostatnio dodane albumy"
+msgstr "Przeglądaj albumy ostatnio dodane"
 
 msgctxt "#31208"
 msgid "Browse all movies in progress"
@@ -494,19 +542,15 @@ msgstr "Emisja"
 
 msgctxt "#31215"
 msgid "Next Airs"
-msgstr "Nadchodząca emisja"
+msgstr "Nadchodzące premiery"
 
 msgctxt "#31216"
 msgid "Last Aired"
-msgstr "Ostatnio emitowany"
-
-msgctxt "#31217"
-msgid "Preview Thumb"
-msgstr "Podgląd miniatur"
+msgstr "Ostatnie premiery"
 
 msgctxt "#31218"
 msgid "Landscape"
-msgstr "Krajobraz"
+msgstr "Panorama"
 
 msgctxt "#31219"
 msgid "Logo"
@@ -526,11 +570,11 @@ msgstr "Pobierz TV Tune"
 
 msgctxt "#31223"
 msgid "36 Hour Forecast"
-msgstr "Prognoza na 36 godzin"
+msgstr "Prognoza 36 godzinna"
 
 msgctxt "#31224"
 msgid "Hourly Forecast"
-msgstr "Godzinna Prognoza"
+msgstr "Prognoza godzinna"
 
 msgctxt "#31225"
 msgid "Weekend Forecast"
@@ -538,7 +582,7 @@ msgstr "Prognoza na weekend"
 
 msgctxt "#31226"
 msgid "10 Days Forecast"
-msgstr "Prognoza na 10 dni"
+msgstr "Prognoza 10 dniowa"
 
 msgctxt "#31227"
 msgid "From"
@@ -550,7 +594,7 @@ msgstr "o"
 
 msgctxt "#31229"
 msgid "Last Updated"
-msgstr "Ostatnio zaktualizowane"
+msgstr "Ostatnia aktualizacja"
 
 msgctxt "#31230"
 msgid "Data Provider"
@@ -566,19 +610,15 @@ msgstr "Minimalna wilgotność"
 
 msgctxt "#31233"
 msgid "Chance of Precipitation"
-msgstr "Możliwość opadów"
-
-msgctxt "#31234"
-msgid "Fetching Forecast Info for..."
-msgstr "Pobieranie prognozy dla..."
+msgstr "Możliwe opady"
 
 msgctxt "#31235"
 msgid "Current Forecast"
-msgstr "Bieżąca prognoza"
+msgstr "Aktualna prognoza"
 
 msgctxt "#31236"
 msgid "Forecast"
-msgstr "Pogoda"
+msgstr "Prognoza"
 
 msgctxt "#31237"
 msgid "View"
@@ -598,15 +638,15 @@ msgstr "Dzisiejsze emisje seriali"
 
 msgctxt "#31241"
 msgid "Recently Added Movies"
-msgstr "Ostatnio dodane filmy"
+msgstr "Filmy ostatnio dodane"
 
 msgctxt "#31242"
 msgid "Recently Added TV Shows"
-msgstr "Ostatnio dodane seriale"
+msgstr "Seriale ostatnio dodane"
 
 msgctxt "#31243"
 msgid "Recently Added Music"
-msgstr "Ostatnio dodana muzyka"
+msgstr "Muzyka ostatnio dodana"
 
 msgctxt "#31244"
 msgid "New Movies"
@@ -644,17 +684,21 @@ msgctxt "#31252"
 msgid "All Music"
 msgstr "Wszystkie utwory muzyczne"
 
+msgctxt "#31254"
+msgid "Search on YouTube"
+msgstr "Wyszukaj na YouTube"
+
 msgctxt "#31280"
 msgid "Open Playlist"
-msgstr "Otwórz playlistę"
+msgstr "Otwórz listę odtwarzania"
 
 msgctxt "#31281"
 msgid "Save Playlist"
-msgstr "Zapisz playlistę"
+msgstr "Zapisz listę odtwarzania"
 
 msgctxt "#31282"
 msgid "Close Playlist"
-msgstr "Zamknij playlistę"
+msgstr "Zamknij listę odtwarzania"
 
 msgctxt "#31283"
 msgid "System Music Files"
@@ -662,11 +706,11 @@ msgstr "Systemowe pliki muzyczne"
 
 msgctxt "#31284"
 msgid "Current Playlist"
-msgstr "Bieżąca lista odtwarzania"
+msgstr "Aktualna lista odtwarzania"
 
 msgctxt "#31285"
 msgid "Playlist Options"
-msgstr "Opcje playlisty"
+msgstr "Opcje listy odtwarzania"
 
 msgctxt "#31300"
 msgid "Muted"
@@ -674,7 +718,7 @@ msgstr "Wyciszony"
 
 msgctxt "#31301"
 msgid "Playing"
-msgstr "Odtwarzam"
+msgstr "Odtwarzanie"
 
 msgctxt "#31302"
 msgid "Paused"
@@ -682,7 +726,7 @@ msgstr "Pauza"
 
 msgctxt "#31303"
 msgid "Rewinding:"
-msgstr "Cofanie:"
+msgstr "Przewijanie do tyłu:"
 
 msgctxt "#31304"
 msgid "Forwarding:"
@@ -702,11 +746,11 @@ msgstr "Włącz wizualizację"
 
 msgctxt "#31308"
 msgid "Visualization Type"
-msgstr "Rodzaj wizualizacji"
+msgstr "Typ wizualizacji"
 
 msgctxt "#31309"
 msgid "Visualization Presets"
-msgstr "Ustawienia wizualizacji"
+msgstr "Zestaw ustawień wizualizacji"
 
 msgctxt "#31310"
 msgid "Visualization Settings"
@@ -714,11 +758,11 @@ msgstr "Opcje wizualizacji"
 
 msgctxt "#31311"
 msgid "Enable Music Fanart SlideShow"
-msgstr "Włącz pokaz slajdów z fanartami muzycznymi"
+msgstr "Aktywuj pokaz slajdów tapet muzycznych"
 
 msgctxt "#31312"
 msgid "Enable Artist SlideShow"
-msgstr "Włącz pokaz slajdów z fanartami artysów"
+msgstr "Wizualizuj odtwarzanie muzyki pokazem slajdów wykonawcy"
 
 msgctxt "#31313"
 msgid "Animated Backgrounds"
@@ -726,11 +770,15 @@ msgstr "Animowane tła"
 
 msgctxt "#31314"
 msgid "Hide Diffuse Colors"
-msgstr "Ukryj rozproszone kolory"
+msgstr "Ukrywaj rozmyte kolory"
 
 msgctxt "#31315"
 msgid "Hide Scrolling Titles"
 msgstr "Ukryj przewijane napisy"
+
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "Teraz odtwarzane"
 
 msgctxt "#31350"
 msgid "Available Groups"
@@ -742,38 +790,142 @@ msgstr "Dodaj grupę"
 
 msgctxt "#31352"
 msgid "Rename Group"
-msgstr "Zmień nazwę grupy"
+msgstr "Przemianuj grupę"
 
 msgctxt "#31353"
 msgid "Delete Group"
 msgstr "Usuń grupę"
 
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr "Aktualizacja biblioteki wideo"
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr "Aktualizacja biblioteki muzyki"
+
+msgctxt "#31372"
+msgid "Clean Video Library"
+msgstr "Czyść bibliotekę wideo"
+
+msgctxt "#31373"
+msgid "Clean Music Library"
+msgstr "Czyść bibliotekę muzyki"
+
+msgctxt "#31374"
+msgid "Quick Navigation"
+msgstr "Szybka nawigacja"
+
+msgctxt "#31375"
+msgid "Disable Quick Navigation"
+msgstr "Wyłącz szybką nawigację"
+
+msgctxt "#31378"
+msgid "Show Clean Video Library Button"
+msgstr "Pokazuj przycisk Wyczyść bibliotekę wideo"
+
+msgctxt "#31379"
+msgid "Show Clean Music Library Button"
+msgstr "Pokazuj przycisk Wyczyść bibliotekę muzyki"
+
+msgctxt "#31380"
+msgid "Show Party Mode Button"
+msgstr "Pokazuj przycisk Trybu Imprezy"
+
+msgctxt "#31381"
+msgid "Show Shutdown Button"
+msgstr "Pokazuj przycisk Koniec"
+
+msgctxt "#31382"
+msgid "Show File Manager Button"
+msgstr "Pokazuj przycisk Menedżer plików"
+
+msgctxt "#31383"
+msgid "Hide Movies Button"
+msgstr "Ukrywaj przycisk Filmy"
+
+msgctxt "#31384"
+msgid "Hide TV Shows Button"
+msgstr "Ukrywaj przycisk Seriale"
+
+msgctxt "#31385"
+msgid "Hide Music Button"
+msgstr "Ukrywaj przycisk Muzyka"
+
+msgctxt "#31386"
+msgid "Hide Pictures Button"
+msgstr "Ukrywaj przycisk Obrazy"
+
+msgctxt "#31387"
+msgid "Hide Add-ons Button"
+msgstr "Ukrywaj przycisk Dodatki"
+
+msgctxt "#31388"
+msgid "Hide New Movies Button"
+msgstr "Ukrywaj przycisk Nowe Filmy"
+
+msgctxt "#31389"
+msgid "Hide New TV Shows Button"
+msgstr "Ukrywaj przycisk Nowe Seriale"
+
+msgctxt "#31390"
+msgid "Hide New Music Button"
+msgstr "Ukrywaj przycisk Nowe Utwory"
+
+msgctxt "#31392"
+msgid "Show Videos Button"
+msgstr "Pokazuj przycisk Wideo"
+
+msgctxt "#31393"
+msgid "Hide QuickNav Buttons"
+msgstr "Ukryj przyciski szybkiej nawigacji"
+
+msgctxt "#31394"
+msgid "Show QuickNav Buttons"
+msgstr "Pokaż przyciski szybkiej nawigacji"
+
+msgctxt "#31395"
+msgid "Custom QuickNav Buttons"
+msgstr "Własne przyciski szybkiej nawigacji"
+
+msgctxt "#31396"
+msgid "Custom Button"
+msgstr "Przycisk niestandardowy"
+
+msgctxt "#31398"
+msgid "Hide Favourites Button"
+msgstr "Ukrywaj przycisk Ulubionych"
+
+msgctxt "#31399"
+msgid "Hide LiveTV Button"
+msgstr "Ukrywaj przycisk Telewizja"
+
 msgctxt "#31401"
-msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
-msgstr "Dostosuj wygląd XBMC. Skórkę, temat, dźwięki i wybór czcionki, kanały RSS i ustawienia lokalizacji. "
+msgid "Adjust the look and feel of Kodi. Includes skin, theme, sound and font selection, RSS feed and localisation settings."
+msgstr "Dostosuj wygląd Kodi. Skórkę, temat, dźwięki i wybór czcionki, kanały RSS i ustawienia lokalizacji. "
 
 msgctxt "#31402"
 msgid "Manage your video content. Includes library database options, subtitles, scrapers, and playback options."
-msgstr "Zarządzaj swoją zawartością wideo. Opcje bazy danych, biblioteki, napisy, skrobaczek i opcje odtwarzania. "
+msgstr "Zarządzanie zawartością wideo. Opcje bazy danych, biblioteki, napisy, skrobaczek i opcje odtwarzania. "
 
 msgctxt "#31403"
 msgid "Change playback settings, manage EPG data settings, recordings and parental control."
 msgstr "Zmiana ustawień odtwarzania, zarządzanie ustawieniami EPG, nagraniami i kontrolą rodzicielską. "
 
 msgctxt "#31404"
-msgid "Configure how XBMC handles music. Setup playback and listing options, browsing files or database and many more."
-msgstr "Konfiguracja obsługi muzyki. Ustawienia i opcje odtwarzania, przeglądania plików lub bazy danych oraz wiele innych. "
+msgid "Configure how Kodi handles music. Setup playback and listing options, browsing files or database and many more."
+msgstr "Konfiguracja muzyki. Ustawienia odtwarzania, przeglądania plików lub bazy danych oraz wiele innych. "
 
 msgctxt "#31405"
 msgid "Picture handeling can be quite easy. You can do this by adjusting display, effects, tags, timing and picture listing."
-msgstr "Konfiguracja obsługi obrazów i zdjęć może być całkiem prosta. \nUstawienia i opcje oraz dostosowanie wyświetlacza, efekty, znaczniki czasu oraz wiele innych. "
+msgstr "Konfiguracja obsługi obrazów. Ustawienia i opcje oraz dostosowanie wyświetlacza, efekty, znaczniki czasu oraz wiele innych. "
 
 msgctxt "#31406"
-msgid "Adjusting Weather is very easy with XBMC. Select a weather plugin and get live updates for up to three cities."
-msgstr "Ustawienie pogody jest bardzo łatwe w XBMC. Wybierz plugin pogody i ustaw wybrane lokalizacje do trzech miast. "
+msgid "Adjusting Weather is very easy with Kodi. Select a weather plugin and get live updates for up to three cities."
+msgstr "Ustawienie pogody jest bardzo łatwe w Kodi. Wybierz plugin pogody i ustaw wybrane lokalizacje do trzech miast. "
 
 msgctxt "#31407"
-msgid "Set up XBMC's network interface. Controls IP assignment, WWW and FTP server, SMB client, and UPnP configuration."
+msgid "Set up Kodi's network interface. Controls IP assignment, WWW and FTP server, SMB client, and UPnP configuration."
 msgstr "Konfiguracja interfejsu sieci. Dostępne przypisanie IP, ustawienia serwera WWW i FTP, klienta SMB oraz konfiguracja UPnP. "
 
 msgctxt "#31408"
@@ -781,49 +933,49 @@ msgid "Control core hardware and software functions, including audio and video h
 msgstr "Ustawienia funkcji sprzętu i oprogramowania, w tym konfiguracja oprogramowania audio, wideo, automatycznej blokady. "
 
 msgctxt "#31409"
-msgid "Choose from a variety of settings and customization options to make \"Bello\" fit your needs and taste."
-msgstr "Wybierz z pośród różnych ustawień i opcji, aby skórka \"Bello\" jak najbardziej odpowiadała Twoim potrzebom i upodobaniom. "
-
-msgctxt "#31410"
-msgid "With XBMC you can have several profiles, even a logon screen for controlled access."
-msgstr "XBMC pozwala na ustawienie kilku profili, nawet ekran logowania dostępu. "
+msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
+msgstr "Wybierz z pośród różnych ustawień i opcji, aby skórka \"The Little Black Box\" jak najbardziej odpowiadała Twoim potrzebom i upodobaniom. "
 
 msgctxt "#31411"
 msgid "Configure Appearance Settings"
-msgstr "Konfiguruj ustawienia wyglądu"
+msgstr "Konfiguracja wyglądu"
 
 msgctxt "#31412"
 msgid "Configure Video Settings"
-msgstr "Konfiguruj ustawienia Wideo"
+msgstr "Konfiguracja wideo"
 
 msgctxt "#31413"
 msgid "Configure Live TV Settings"
-msgstr "Konfiguruj ustawienia TV na żywo"
+msgstr "Konfiguracja telewizji"
 
 msgctxt "#31414"
 msgid "Configure Music Settings"
-msgstr "Konfiguruj ustawienia Muzyki"
+msgstr "Konfiguracja muzyki"
 
 msgctxt "#31415"
 msgid "Configure Pictures Settings"
-msgstr "Konfiguruj ustawienia Zdjęć"
+msgstr "Konfiguracja obrazów"
 
 msgctxt "#31416"
 msgid "Configure Weather Settings"
-msgstr "Konfiguruj ustawienia Pogody"
+msgstr "Konfiguracja pogody"
 
 msgctxt "#31417"
 msgid "Configure Services Settings"
-msgstr "Konfiguruj ustawienia serwisów"
+msgstr "Konfiguracja usług"
 
 msgctxt "#31418"
 msgid "Configure System Settings"
-msgstr "Konfiguruj ustawienia Systemowe"
+msgstr "Konfiguracja systemu"
 
 msgctxt "#31419"
 msgid "Configure Profiles Settings"
-msgstr "Konfiguruj ustawienia profili"
+msgstr "Konfiguracja profili"
 
 msgctxt "#31420"
 msgid "Configure Skin Settings"
-msgstr "Konfiguruj ustawienia skóry"
+msgstr "Konfiguracja skóry"
+
+msgctxt "#31430"
+msgid "Help"
+msgstr "Pomoc"

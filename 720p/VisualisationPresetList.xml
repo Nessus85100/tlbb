@@ -9,40 +9,60 @@
   </control>
 		<control type="group">
   		<include>DialogAnimation</include>
-			<control type="image">
-				<posx>316</posx>
-				<posy>117</posy>
-				<width>649</width>
-				<height>494</height>
-				<texture background="true" border="39">dialogs/other/default.png</texture>
-				<colordiffuse>FAFFFFFF</colordiffuse>
-				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
-			</control>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture>osd/bg_osd_settings.png</texture>
-				<colordiffuse>FAFFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture>osd/bg_osd_settings_lines.png</texture>
-				<colordiffuse>FAFFFFFF</colordiffuse>
-				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
-			  <visible>!Control.IsVisible(4)</visible>
-			</control>
+  	  <control type="image">
+  			<left>346</left>
+  			<top>138</top>
+  		  <width>589</width>
+  		  <height>57</height>
+  		  <colordiffuse>blue</colordiffuse>
+  		  <texture background="true" border="9">dialogs/other/header.png</texture>
+  	  </control>
+  	  <control type="image">
+  			<left>346</left>
+  			<top>192</top>
+  		  <width>589</width>
+  		  <height>392</height>
+  		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+  	  </control>
+  		<control type="image">
+  			<left>348</left>
+  			<top>191</top>
+  			<width>585</width>
+  			<height>4</height>
+  			<aspectratio>stretch</aspectratio>
+  			<texture background="true">dialogs/other/header_line.png</texture>
+  		</control>
+  		<control type="image">
+  			<description>background image</description>
+  			<include>FullscreenDimensions</include>
+  			<texture>osd/bg_osd_settings.png</texture>
+  		</control>
+  		<control type="image">
+  			<description>background image</description>
+  			<include>FullscreenDimensions</include>
+  			<texture>osd/bg_osd_settings_lines.png</texture>
+  		</control>
+  		<control type="label">
+  			<description>header label</description>
+  			<left>360</left>
+  			<top>152</top>
+  			<width>560</width>
+  	    <include>DialogsHeaderLabel</include>
+  		  <label>$LOCALIZE[31309]</label>
+  		</control>
 			<control type="label">
-				<description>Heding Label</description>
-				<posx>357</posx>
-				<posy>165</posy>
-				<width>565</width>
-				<label>$LOCALIZE[31309]</label>
-				<font>FontSize_36</font>
-				<textcolor>white</textcolor>
-				<align>center</align>
-				<scroll>true</scroll>
-				<scrollspeed>20</scrollspeed>
+				<description>Page Count Label</description>
+				<left>370</left>
+				<top>160</top>
+				<width>555</width>
+				<height>35</height>
+				<font>FontSize_16B</font>
+				<textcolor>88white</textcolor>
+    		<shadowcolor>99000000</shadowcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$VAR[ContainerNumItems]</label>
 			</control>
 			<control type="label" id="4">
 				<description>No Settings Label</description>
@@ -56,9 +76,9 @@
 				<font>FontSize_20</font>
 			</control>
 			<control type="list" id="2">
-				<posx>362</posx>
-				<posy>209</posy>
-				<width>556</width>
+  			<posx>363</posx>
+  			<posy>209</posy>
+  			<width>555</width>
 				<height>357</height>
 			  <itemgap>4</itemgap>
 				<onleft>Close</onleft>
@@ -88,6 +108,7 @@
 						<height>47</height>
 					  <texture>buttons/focus.png</texture>
 						<visible>Control.HasFocus(2)</visible>
+	          <include>ListFocusAnimation</include>
 					</control>
 					<control type="label">
 						<posx>10</posx>

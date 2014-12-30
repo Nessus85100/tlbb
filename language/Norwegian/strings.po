@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Norwegian (http://www.transifex.com/projects/p/xbmc-skins/language/no/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,9 +20,13 @@ msgctxt "#31000"
 msgid "Live TV"
 msgstr "Live TV"
 
+msgctxt "#31001"
+msgid "TV Guide"
+msgstr "TV guide"
+
 msgctxt "#31002"
 msgid "TV Shows"
-msgstr "TV Serier"
+msgstr "TV-Serier"
 
 msgctxt "#31003"
 msgid "Aired"
@@ -32,14 +36,6 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "Spornummer"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "Sorter: Stigende"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "Sorter: Synkende"
-
 msgctxt "#31009"
 msgid "Context Menu"
 msgstr "Kontekstmeny"
@@ -47,6 +43,18 @@ msgstr "Kontekstmeny"
 msgctxt "#31010"
 msgid "-"
 msgstr "-"
+
+msgctxt "#31011"
+msgid "On"
+msgstr "På"
+
+msgctxt "#31012"
+msgid "Off"
+msgstr "Av"
+
+msgctxt "#31015"
+msgid "General Options"
+msgstr "Generelle innstillinger"
 
 msgctxt "#31016"
 msgid "File Manager"
@@ -100,6 +108,10 @@ msgctxt "#31033"
 msgid "Channel Group"
 msgstr "Kanalgruppe"
 
+msgctxt "#31034"
+msgid "Teletext"
+msgstr "Tekst-TV"
+
 msgctxt "#31036"
 msgid "Close"
 msgstr "Lukk"
@@ -115,6 +127,18 @@ msgstr "Skli"
 msgctxt "#31083"
 msgid "Wall"
 msgstr "Vegg"
+
+msgctxt "#31084"
+msgid "Posters"
+msgstr "Plakater"
+
+msgctxt "#31085"
+msgid "Thumbnails"
+msgstr "Miniatyrbilder"
+
+msgctxt "#31127"
+msgid "Landscape"
+msgstr "Landskap"
 
 msgctxt "#31128"
 msgid "ClearArt"
@@ -132,17 +156,29 @@ msgctxt "#31136"
 msgid "Multi Image"
 msgstr "Multibilde"
 
+msgctxt "#31158"
+msgid "Views"
+msgstr "Vis"
+
+msgctxt "#31162"
+msgid "Enable Kiosk Mode"
+msgstr "Aktiver kioskmodus"
+
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "Lokal undertekst tilgjengelig"
+
 msgctxt "#31203"
 msgid "New Search"
 msgstr "Nytt søk"
 
-msgctxt "#31204"
-msgid "-"
-msgstr "-"
-
 msgctxt "#31215"
 msgid "Next Airs"
 msgstr "Neste på lufta"
+
+msgctxt "#31218"
+msgid "Landscape"
+msgstr "Landskap"
 
 msgctxt "#31219"
 msgid "Logo"
@@ -192,6 +228,10 @@ msgctxt "#31250"
 msgid "All Movies"
 msgstr "Alle filmer"
 
+msgctxt "#31254"
+msgid "Search on YouTube"
+msgstr "Søk på YouTube"
+
 msgctxt "#31285"
 msgid "Playlist Options"
 msgstr "Alternativer for spilleliste"
@@ -208,6 +248,10 @@ msgctxt "#31309"
 msgid "Visualization Presets"
 msgstr "Visualiseringsforvalg"
 
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "Nå spilles"
+
 msgctxt "#31350"
 msgid "Available Groups"
 msgstr "Available Groups"
@@ -223,3 +267,23 @@ msgstr "Gi nytt navn på gruppe"
 msgctxt "#31353"
 msgid "Delete Group"
 msgstr "Slett gruppe"
+
+msgctxt "#31370"
+msgid "Update Video Library"
+msgstr "Oppdater bibliotek for Video"
+
+msgctxt "#31371"
+msgid "Update Music Library"
+msgstr "Oppdater bibliotek for Musikk"
+
+msgctxt "#31372"
+msgid "Clean Video Library"
+msgstr "Rydd i Video biblioteket"
+
+msgctxt "#31373"
+msgid "Clean Music Library"
+msgstr "Rydd i Musikk biblioteket"
+
+msgctxt "#31430"
+msgid "Help"
+msgstr "Hjelp"

@@ -6,14 +6,21 @@
 	 <control type="group">
 		<include>DialogAnimation</include>
 		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(DialogGamepad.xml) + !Window.IsVisible(busydialog) + !Window.IsActive(okdialog)</visible>
-		<control type="image">
-			<left>316</left>
-			<top>122</top>
-			<width>647</width>
-			<height>472</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" border="39">dialogs/other/default.png</texture>
-		</control>
+	  <control type="image">
+			<left>346</left>
+			<top>144</top>
+		  <width>587</width>
+		  <height>57</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+			<left>346</left>
+			<top>198</top>
+		  <width>587</width>
+		  <height>340</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
 		<control type="image">
 			<description>background image</description>
 			<include>FullscreenDimensions</include>
@@ -26,17 +33,22 @@
 			<animation effect="fade" start="0" end="100" time="250" reversible="true">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
 		</control>
-		<control type="label">
-			<description>Head Label</description>
-			<left>340</left>
-			<top>170</top>
-			<width>600</width>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-			<label>20043</label>
+		<control type="image">
+			<left>348</left>
+			<top>197</top>
+			<width>583</width>
+			<height>4</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">dialogs/other/header_line.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>header label</description>
+			<left>360</left>
+			<top>157</top>
+			<width>560</width>
+	    <include>DialogsHeaderLabel</include>
+      <label>Remove ID to Test, Remove ID to Test, Remove</label>
+      <animation effect="slide" start="0,0" end="0,-25" time="0" condition="Control.IsVisible(6)">Conditional</animation>
 		</control>
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
@@ -64,64 +76,44 @@
 			<description>Default SpinControlex</description>
 	    <include>DialogsSpincontrolex</include>
 		</control>
-		<control type="image." id="11">
+<!--
+		<control type="image" id="11">
 			<description>separator image</description>
 			<height>0</height>
 			<texture>-</texture>
 		</control>
-
-	  <control type="group" id="10000">
-			<left>356</left>
-			<top>525</top>
-      <!-- Buttons -->
-			<control type="grouplist" id="10001">
-				<left>0</left>
-				<top>0</top>
-				<width>0</width>
-				<height>0</height>
-				<itemgap>0</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<onleft>10001</onleft>
-				<onright>10001</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
-				<control type="button" id="28">
-					<description>Save</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus>dialogs/buttons/save_fo.png</texturefocus>
-					<texturenofocus>dialogs/buttons/save_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>190</label>
-				</control>
-				<control type="button" id="29">
-					<description>Cancel</description>
-				  <width>150</width>
-				  <height>40</height>
-					<texturefocus>dialogs/buttons/cancel_fo.png</texturefocus>
-					<texturenofocus>dialogs/buttons/cancel_nf.png</texturenofocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_20</font>
-					<textwidth>110</textwidth>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>6</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<shadowcolor>99000000</shadowcolor>
-				  <label>222</label>
-				</control>
-			</control>
+-->
+    <!-- Control Buttons -->
+	  <control type="group"  id="10000">
+			<left>940</left>
+			<top>493</top>
+  		<control type="button" id="28">
+				<description>Save</description>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/save_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/save_nofocus.png</texturenofocus>
+  			<onleft>5</onleft>
+  			<onright>5</onright>
+  			<onup>29</onup>
+  			<ondown>29</ondown>
+				<label>$LOCALIZE[190]</label>
+  		</control>
+  		<control type="button" id="29">
+				<description>Cancel</description>
+  			<top>-50</top>
+    		<width>150</width>
+	      <include>DialogsButtonsText</include>
+    		<texturefocus border="49,0,49,0">dialogs/buttons/cancel_focus.png</texturefocus>
+    		<texturenofocus border="49,0,49,0">dialogs/buttons/cancel_nofocus.png</texturenofocus>
+  			<onleft>5</onleft>
+  			<onright>5</onright>
+  			<onup>28</onup>
+  			<ondown>28</ondown>
+				<label>$LOCALIZE[222]</label>
+  		</control>
 	  </control>
+
    </control>
 	</controls>
 </window>

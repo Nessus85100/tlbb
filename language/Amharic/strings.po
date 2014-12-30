@@ -1,6 +1,6 @@
-# XBMC Media Center language file
-# Addon Name: Bello
-# Addon id: skin.bello
+# Kodi Media Center language file
+# Addon Name: The Little Black Box
+# Addon id: skin.tlbb
 # Addon Provider: Nessus
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Amharic (http://www.transifex.com/projects/p/xbmc-skins/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,17 +28,17 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr "ተራ ቁጥር"
 
-msgctxt "#31006"
-msgid "Sort: Ascending"
-msgstr "መለያ እየጨመረ በሚሄድ"
-
-msgctxt "#31007"
-msgid "Sort: Descending"
-msgstr "መለያ እየቀነሰ በሚሄድ"
-
 msgctxt "#31009"
 msgid "Context Menu"
 msgstr "የ አገባብ ዝርዝር"
+
+msgctxt "#31011"
+msgid "On"
+msgstr "ማብሪያ"
+
+msgctxt "#31012"
+msgid "Off"
+msgstr "ማጥፊያ "
 
 msgctxt "#31017"
 msgid "Karaoke Song Selector"
@@ -88,6 +88,10 @@ msgctxt "#31136"
 msgid "Multi Image"
 msgstr "ተንሸራታች"
 
+msgctxt "#31166"
+msgid "Local subtitle available"
+msgstr "የ አካባቢ ንዑስ አርእስት ዝግጁ ነው"
+
 msgctxt "#31223"
 msgid "36 Hour Forecast"
 msgstr "የ 36 ሰአት ግምት "
@@ -123,6 +127,10 @@ msgstr "በማጫወት ላይ"
 msgctxt "#31302"
 msgid "Paused"
 msgstr "ማቆሚያ"
+
+msgctxt "#31316"
+msgid "Now Playing"
+msgstr "አሁን የሚጫወተው"
 
 msgctxt "#31351"
 msgid "Add Group"

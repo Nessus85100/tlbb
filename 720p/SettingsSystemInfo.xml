@@ -10,7 +10,8 @@
 	    <include>OpenCloseSlideAnimation</include>
 	    <include>VisibleHiddenSlideAnimation</include>
 	    <include>DialogZoomInOutAnimation</include>
-			<visible>!Window.IsActive(BusyDialog) + !Window.IsActive(ProgressDialog) + !Window.IsActive(busy.xml)</visible>
+			<!-- <visible>!Window.IsActive(BusyDialog)</visible> -->
+			<visible>!Window.IsActive(ProgressDialog) + !Window.IsActive(busy.xml)</visible>
 			<control type="image">
 			  <include>FullscreenDimensions</include>
 			  <texture background="true">windows/settings/bg_settings.png</texture>
