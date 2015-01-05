@@ -5,7 +5,7 @@
  <controls>
 	<control type="group">
 		<include>DialogAnimation</include>
-		<visible>!Window.IsActive(DialogSelect.xml)</visible>
+		<visible>!Window.IsActive(DialogSelect.xml) + !Window.IsActive(ProgressDialog)</visible>
 	  <control type="image">
 			<left>411</left>
 			<top>128</top>
@@ -57,7 +57,7 @@
 			<onup>10010</onup>
 			<ondown>10010</ondown>
 			<scrolltime>250</scrolltime>
-			<visible>StringCompare(Window(SkinSettings).Property(ManageButtons),quicknav)</visible>
+			<visible>StringCompare(Window(SkinSettings).Property(ManageButtons),defualtquicknav)</visible>
 			<control type="radiobutton" id="8611">
 				<description>Movies Button</description>
 			  <width>425</width>
@@ -111,8 +111,8 @@
 			  <width>425</width>
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31000]</label>
-				<onclick>Skin.ToggleSetting(HideQuickNavLiveTVButton)</onclick>
-				<selected>!Skin.HasSetting(HideQuickNavLiveTVButton)</selected>
+				<onclick>Skin.ToggleSetting(QuickNavLiveTVButton)</onclick>
+				<selected>!Skin.HasSetting(QuickNavLiveTVButton)</selected>
 		    <visible>System.GetBool(pvrmanager.enabled)</visible>
 			</control>
 			<control type="radiobutton" id="8618">
@@ -120,24 +120,24 @@
 			  <width>425</width>
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31241]</label>
-				<onclick>Skin.ToggleSetting(QuickNavNewMoviesButton)</onclick>
-				<selected>!Skin.HasSetting(QuickNavNewMoviesButton)</selected>
+				<onclick>Skin.ToggleSetting(QuickNavRecentMoviesButton)</onclick>
+				<selected>!Skin.HasSetting(QuickNavRecentMoviesButton)</selected>
 			</control>
 			<control type="radiobutton" id="8619">
 				<description>RecentlyAdded TVShows Button</description>
 			  <width>425</width>
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31242]</label>
-				<onclick>Skin.ToggleSetting(QuickNavNewTVShowsButton)</onclick>
-				<selected>!Skin.HasSetting(QuickNavNewTVShowsButton)</selected>
+				<onclick>Skin.ToggleSetting(QuickNavRecentTVShowsButton)</onclick>
+				<selected>!Skin.HasSetting(QuickNavRecentTVShowsButton)</selected>
 			</control>
 			<control type="radiobutton" id="8620">
 				<description>RecentlyAdded Music Button</description>
 			  <width>425</width>
         <include>DialogsButton</include>
 				<label>$LOCALIZE[31243]</label>
-				<onclick>Skin.ToggleSetting(QuickNavNewMusicButton)</onclick>
-				<selected>!Skin.HasSetting(QuickNavNewMusicButton)</selected>
+				<onclick>Skin.ToggleSetting(QuickNavRecentMusicButton)</onclick>
+				<selected>!Skin.HasSetting(QuickNavRecentMusicButton)</selected>
 			</control>
 			<control type="radiobutton" id="8621">
 				<description>Update VideoLibrary Button</description>
@@ -196,6 +196,14 @@
 				<selected>!Skin.HasSetting(QuickNavFileManagerButton)</selected>
 			</control>
 			<control type="radiobutton" id="8628">
+				<description>Skin Settings Button</description>
+			  <width>425</width>
+        <include>DialogsButton</include>
+				<label>$LOCALIZE[20077]</label>
+				<onclick>Skin.ToggleSetting(QuickSkinSettingsButton)</onclick>
+				<selected>!Skin.HasSetting(QuickSkinSettingsButton)</selected>
+			</control>
+			<control type="radiobutton" id="8629">
 				<description>Settings Button</description>
 			  <width>425</width>
         <include>DialogsButton</include>
@@ -203,7 +211,7 @@
 				<onclick>Skin.ToggleSetting(QuickNavSettingsButton)</onclick>
 				<selected>!Skin.HasSetting(QuickNavSettingsButton)</selected>
 			</control>
-			<control type="radiobutton" id="8629">
+			<control type="radiobutton" id="8630">
 				<description>Shutdown Button</description>
 			  <width>425</width>
         <include>DialogsButton</include>
@@ -215,7 +223,7 @@
 
     <!-- =============================== -->
 		<!-- Quick Navigation Custom Buttons -->
-    <!-- =============================== -->
+    <!-- ===============================
 		<control type="grouplist" id="10010">
 			<posx>428</posx>
 			<posy>199</posy>
@@ -232,7 +240,7 @@
 				<description>Custom QuickNav Button 1</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 1</label>
+				<label>$LOCALIZE[31378] 1</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem1.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem1&amp;changetitle=true)</onclick>
 			</control>
@@ -240,7 +248,7 @@
 				<description>Custom QuickNav Button 2</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 2</label>
+				<label>$LOCALIZE[31378] 2</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem2.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem2&amp;changetitle=true)</onclick>
 			</control>
@@ -248,7 +256,7 @@
 				<description>Custom QuickNav Button 3</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 3</label>
+				<label>$LOCALIZE[31378] 3</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem3.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem3&amp;changetitle=true)</onclick>
 			</control>
@@ -256,7 +264,7 @@
 				<description>Custom QuickNav Button 4</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 4</label>
+				<label>$LOCALIZE[31378] 4</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem4.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem4&amp;changetitle=true)</onclick>
 			</control>
@@ -264,7 +272,7 @@
 				<description>Custom QuickNav Button 5</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 5</label>
+				<label>$LOCALIZE[31378] 5</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem5.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem5&amp;changetitle=true)</onclick>
 			</control>
@@ -272,7 +280,7 @@
 				<description>Custom QuickNav Button 6</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 6</label>
+				<label>$LOCALIZE[31378] 6</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem6.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem6&amp;changetitle=true)</onclick>
 			</control>
@@ -280,7 +288,7 @@
 				<description>Custom QuickNav Button 7</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 7</label>
+				<label>$LOCALIZE[31378] 7</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem7.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem7&amp;changetitle=true)</onclick>
 			</control>
@@ -288,7 +296,7 @@
 				<description>Custom QuickNav Button 8</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 8</label>
+				<label>$LOCALIZE[31378] 8</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem8.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem8&amp;changetitle=true)</onclick>
 			</control>
@@ -296,7 +304,7 @@
 				<description>Custom QuickNav Button 9</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 9</label>
+				<label>$LOCALIZE[31378] 9</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem9.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem9&amp;changetitle=true)</onclick>
 			</control>
@@ -304,7 +312,7 @@
 				<description>Custom QuickNav Button 10</description>
 			  <width>425</width>
         <include>DialogsButton</include>
-				<label>$LOCALIZE[31396] 10</label>
+				<label>$LOCALIZE[31378] 10</label>
 				<label2>[COLOR=selected]$INFO[Skin.String(CustomItem10.Label)][/COLOR]</label2>
 				<onclick>RunScript(special://home/addons/plugin.program.super.favourites/chooser.py,property=CustomItem10&amp;changetitle=true)</onclick>
 			</control>

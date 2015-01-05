@@ -60,8 +60,8 @@
 			<control type="togglebutton" id="294">
 			  <description>Change Thumbs Size (Thumbnails View)</description>
 			  <include>TopLeftMenusButton</include>
-        <label>Show Small Thumbs</label>
-        <altlabel>Show Big Thumbs</altlabel>
+        <label>$LOCALIZE[31098]</label>
+        <altlabel>$LOCALIZE[31099]</altlabel>
 				<onclick>Skin.ToggleSetting(ShowSmallAddonsThumbs)</onclick>
 				<selected>Skin.HasSetting(ShowSmallAddonsThumbs)</selected>
 			  <visible>Control.IsVisible(560)</visible>

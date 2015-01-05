@@ -1,3 +1,12 @@
+[B][COLOR=FF56ADDA]v4.0.1 - Release Date 6/1/2015[/COLOR][/B]
+• Added new QuickNav Custom Items selection dialog.
+• Fixed missing labels in Skin Settings.
+• Fixed misaligned labels in default Weather view.
+• Added missing localized strings.
+• More work on unifying skin code (WIP).
+• Remove unused textures and code.
+• Several small fixes.
+
 [B][COLOR=FF56ADDA]v4.0.0 - Release Date 30/12/2014[/COLOR][/B]
 • Updated code for Kodi v14.0 Helix (including PVR section).
 • Added skin option for small thumbs in Thumbnails views.

@@ -2,23 +2,22 @@
 <window  id="131">
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
-	
 	 <control type="group">
 		<include>DialogAnimation</include>
-		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(DialogGamepad.xml) + !Window.IsVisible(busydialog) + !Window.IsActive(okdialog)</visible>
+		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(DialogGamepad.xml) + !Window.IsActive(okdialog)</visible>
 	  <control type="image">
-			<left>346</left>
-			<top>144</top>
+			<left>347</left>
+			<top>138</top>
 		  <width>587</width>
 		  <height>57</height>
 		  <colordiffuse>blue</colordiffuse>
 		  <texture background="true" border="9">dialogs/other/header.png</texture>
 	  </control>
 	  <control type="image">
-			<left>346</left>
-			<top>198</top>
+			<left>347</left>
+			<top>192</top>
 		  <width>587</width>
-		  <height>340</height>
+		  <height>341</height>
 		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
 	  </control>
 		<control type="image">
@@ -34,8 +33,8 @@
 			<animation effect="fade" start="100" end="0" time="200" reversible="true">Hidden</animation>
 		</control>
 		<control type="image">
-			<left>348</left>
-			<top>197</top>
+			<left>349</left>
+			<top>191</top>
 			<width>583</width>
 			<height>4</height>
 			<aspectratio>stretch</aspectratio>
@@ -44,16 +43,15 @@
 		<control type="label" id="2">
 			<description>header label</description>
 			<left>360</left>
-			<top>157</top>
+			<top>152</top>
 			<width>560</width>
 	    <include>DialogsHeaderLabel</include>
       <label>Remove ID to Test, Remove ID to Test, Remove</label>
-      <animation effect="slide" start="0,0" end="0,-25" time="0" condition="Control.IsVisible(6)">Conditional</animation>
 		</control>
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
-			<left>363</left>
-			<top>214</top>
+			<left>364</left>
+			<top>209</top>
 			<width>553</width>
 			<height>302</height>
 			<itemgap>4</itemgap>
@@ -85,8 +83,8 @@
 -->
     <!-- Control Buttons -->
 	  <control type="group"  id="10000">
-			<left>940</left>
-			<top>493</top>
+			<left>939</left>
+			<top>488</top>
   		<control type="button" id="28">
 				<description>Save</description>
     		<width>150</width>

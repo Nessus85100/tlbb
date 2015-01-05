@@ -17,7 +17,7 @@
 			<content>customvideonode</content>
       <!-- Custom Shortcuts -->
 	    <shortcut label="::LOCAL::31244" type="::LOCAL::342" grouping="customvideonode" icon="DefaultInProgressMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_InProgress.xsp,return)</shortcut>
-      <shortcut label="::LOCAL::31265" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_Unwatched.xsp,return)</shortcut>
+      <shortcut label="::LOCAL::31265" type="::LOCAL::342" grouping="customvideonode" icon="DefaultMovies.png" condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/extras/playlists/Movies_Unwatched.xsp,return)</shortcut>
 	    <shortcut label="::LOCAL::31266" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/TVShows_Unwatched.xsp,return)</shortcut>
 	    <shortcut label="::LOCAL::31267" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultTVShows.png" condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/extras/playlists/Episodes_Unwatched.xsp,return)</shortcut>
 	    <shortcut label="::LOCAL::31001" type="::LOCAL::31002" grouping="customvideonode" icon="DefaultTVShows.png" condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)">RunAddon(script.tv.show.next.aired)</shortcut>

@@ -750,7 +750,7 @@
 				<align>left</align>
 				<aligny>top</aligny>
       	<label>$INFO[ListItem.Label]</label>
-				<label2>$VAR[AddonsThumbsnailsLabel2]</label2>
+				<label2>$VAR[AddonsLabel2]</label2>
         <animation effect="slide" start="0,0" end="0,-6" time="0" condition="!Skin.HasSetting(ShowSmallAddonsThumbs)">Conditional</animation>
 			</control>
 			<control type="scrollbar" id="60">

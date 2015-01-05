@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">10</defaultcontrol>
   <zorder>5</zorder>
 	<controls>
-
 	 <control type="group">
 		 <left>305</left>
 		 <top>235</top>

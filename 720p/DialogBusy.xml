@@ -30,8 +30,8 @@
 			<control type="fadelabel">
 				<height>37</height>
 				<width min="10" max="1000">auto</width>
-				<label>Working...</label>
-				<label>Please Wait...</label>
+				<label>$LOCALIZE[31006]</label>
+				<label>$LOCALIZE[31007]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>FontSize_46</font>

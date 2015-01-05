@@ -115,7 +115,6 @@
 	    <include>DialogsSpincontrolex</include>
 		</control>
 
-
     <!-- Control Buttons -->
 	  <control type="group"  id="10000">
 			<left>940</left>
@@ -146,6 +145,6 @@
 				<label>$LOCALIZE[222]</label>
   		</control>
 	  </control>
-	</control>		
+	</control>
 	</controls>
 </window>		

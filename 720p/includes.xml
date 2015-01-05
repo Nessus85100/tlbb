@@ -24,7 +24,7 @@
   Custom_EditMediaInfoDialog.xml    id=1116
   Custom_Reset.xml                  id=1117
   Custom_ManageDialog.xml           id=1118
-  Custom_LanguageSet.xml            id=1119
+  Custom_CustomItems.xml            id=1119
   Custom_NetworkState.xml           id=1120
   -->
 
@@ -250,8 +250,8 @@
 			</control>
 			<control type="togglebutton" id="993">
 				<description>Expert Skin</description>
-				<label>$LOCALIZE[31173] TLBB</label>
-				<altlabel>$LOCALIZE[31173] XBMC</altlabel>
+				<label>$LOCALIZE[31200] TLBB</label>
+				<altlabel>$LOCALIZE[31200] XBMC</altlabel>
 				<usealttexture>Skin.HasSetting(ExpertSkinSettings)</usealttexture>
 				<onclick>Skin.ToggleSetting(ExpertSkinSettings)</onclick>
   		  <onclick>ReplaceWindow(Home)</onclick>
@@ -1089,19 +1089,72 @@
 		</control>
 	</include>
 
+	<variable name="CustomItemNumber">
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem1)">1</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem2)">2</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem3)">3</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem4)">4</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem5)">5</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem6)">6</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem7)">7</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem8)">8</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem9)">9</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem10)">10</value>
+	</variable>
+
+	<variable name="CustomItemLabel">
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem1)">$INFO[Skin.String(CustomItem.1.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem2)">$INFO[Skin.String(CustomItem.2.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem3)">$INFO[Skin.String(CustomItem.3.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem4)">$INFO[Skin.String(CustomItem.4.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem5)">$INFO[Skin.String(CustomItem.5.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem6)">$INFO[Skin.String(CustomItem.6.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem7)">$INFO[Skin.String(CustomItem.7.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem8)">$INFO[Skin.String(CustomItem.8.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem9)">$INFO[Skin.String(CustomItem.9.Label)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem10)">$INFO[Skin.String(CustomItem.10.Label)]</value>
+	</variable>
+
+	<variable name="CustomItemThumb">
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem1)">$INFO[Skin.String(CustomItem.1.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem2)">$INFO[Skin.String(CustomItem.2.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem3)">$INFO[Skin.String(CustomItem.3.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem4)">$INFO[Skin.String(CustomItem.4.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem5)">$INFO[Skin.String(CustomItem.5.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem6)">$INFO[Skin.String(CustomItem.6.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem7)">$INFO[Skin.String(CustomItem.7.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem8)">$INFO[Skin.String(CustomItem.8.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem9)">$INFO[Skin.String(CustomItem.9.Thumb)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem10)">$INFO[Skin.String(CustomItem.10.Thumb)]</value>
+	</variable>
+
+	<variable name="CustomItemPath">
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem1)">$INFO[Skin.String(CustomItem.1.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem2)">$INFO[Skin.String(CustomItem.2.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem3)">$INFO[Skin.String(CustomItem.3.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem4)">$INFO[Skin.String(CustomItem.4.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem5)">$INFO[Skin.String(CustomItem.5.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem6)">$INFO[Skin.String(CustomItem.6.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem7)">$INFO[Skin.String(CustomItem.7.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem8)">$INFO[Skin.String(CustomItem.8.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem9)">$INFO[Skin.String(CustomItem.9.Path)]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(EditCustomItems),customitem10)">$INFO[Skin.String(CustomItem.10.Path)]</value>
+	</variable>
+
+	<variable name="ManageDialogHeader">
+		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),defualtquicknav)">$LOCALIZE[31376]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),hidevideoviews)">$LOCALIZE[31156]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),hidemusicviews)">$LOCALIZE[31157]</value>
+	</variable>
+
 	<variable name="DiffuseColorQuickNav_Blue">
-		<value condition="Container(150).HasFocus(21) | Container(150).HasFocus(22) | Container(150).HasFocus(23) | Container(150).HasFocus(24) | Container(150).HasFocus(25) | Container(150).HasFocus(26) | Container(150).HasFocus(27) | Container(150).HasFocus(28) | Container(150).HasFocus(29) | Container(150).HasFocus(30)">FFFFFFFF</value>
+		<value condition="Container(150).HasFocus(18) | Container(150).HasFocus(31) | Container(150).HasFocus(32) | Container(150).HasFocus(33) | Container(150).HasFocus(34) | Container(150).HasFocus(35) | Container(150).HasFocus(36) | Container(150).HasFocus(37) | Container(150).HasFocus(38) | Container(150).HasFocus(39) | Container(150).HasFocus(40)">FFFFFFFF</value>
 		<value>FF04aeda</value>
 	</variable>
 
 	<variable name="CurrentPlayList">
 		<value condition="Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
 		<value condition="[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>
-	</variable>
-
-	<variable name="ManageDialogHeader">
-		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),quicknav)">$LOCALIZE[31393]</value>
-		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),customquicknav)">$LOCALIZE[31376]</value>
 	</variable>
 
 	<variable name="BluetoothIcons">
@@ -1152,26 +1205,20 @@
 		<value condition="Stringcompare(Skin.String(WeatherExtended),3)">$LOCALIZE[31224]</value>
 		<value condition="Stringcompare(Skin.String(WeatherExtended),4)">$LOCALIZE[31226]</value>
 	</variable>
-    
-  <variable name="AddonStatus">
-    <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
-    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098]) | stringcompare(ListItem.Label2,$LOCALIZE[24049])">overlays/addons_status/status_broken.png</value>
-    <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
-  </variable>
 
 	<variable name="CustomDialogOKHeadLabel">
 		<value condition="Window.IsVisible(SkinSettings)">Reset Skin Settings</value>
-		<value condition="Window.IsVisible(SubtitleSearch)">XBMC $LOCALIZE[24012]</value>
+		<value condition="Window.IsVisible(SubtitleSearch)">KODI $LOCALIZE[24012]</value>
 		<value condition="[Window.IsVisible(Home) + Skin.HasSetting(ExpertSkinSettings)] + !Window.IsVisible(favourites)">XBMC Mode</value>
 		<value condition="[Window.IsVisible(Home) + !Skin.HasSetting(ExpertSkinSettings)] + !Window.IsVisible(favourites)">TLBB Mode</value>
 		<value>$LOCALIZE[10043]</value>
 	</variable>
 	
 	<variable name="CustomDialogOKMessage">
-		<value condition="Window.IsVisible(favourites)">$LOCALIZE[31450]</value>
-		<value condition="Window.IsVisible(SkinSettings)">$LOCALIZE[31451]</value>
-		<value condition="[Window.IsVisible(Home) + Skin.HasSetting(ExpertSkinSettings)]">$LOCALIZE[31452]</value>
-		<value condition="[Window.IsVisible(Home) + !Skin.HasSetting(ExpertSkinSettings)]">$LOCALIZE[31453]</value>
+		<value condition="Window.IsVisible(favourites)">$LOCALIZE[31431]</value>
+		<value condition="Window.IsVisible(SkinSettings)">$LOCALIZE[31170]</value>
+		<value condition="[Window.IsVisible(Home) + Skin.HasSetting(ExpertSkinSettings)]">$LOCALIZE[31432]</value>
+		<value condition="[Window.IsVisible(Home) + !Skin.HasSetting(ExpertSkinSettings)]">$LOCALIZE[31433]</value>
 		<value condition="Window.IsVisible(Weather)">$LOCALIZE[412][CR]$LOCALIZE[31204]</value>
 		<value condition="Window.IsVisible(SubtitleSearch)">$LOCALIZE[24109]</value>
 	</variable>
@@ -1256,15 +1303,6 @@
 		<value condition="[StringCompare(Window(movieinformation).Property(MetadataActors.Type),actor) | StringCompare(Window(movieinformation).Property(MetadataActors.Type),director)] + Control.HasFocus(150)">$LOCALIZE[31164]</value>
 	</variable>
 
-	<variable name="FanartThumbsOptionsLabels">
-		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),1)">$LOCALIZE[20445]</value>
-		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">$LOCALIZE[31218]</value>
-		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">$LOCALIZE[31219]</value>
-		<value condition="Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(GalleryViewWideThumbTVShows),1)">$LOCALIZE[20445]</value>
-		<value condition="Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(GalleryViewWideThumbTVShows),2)">$LOCALIZE[31218]</value>
-		<value condition="Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(GalleryViewWideThumbTVShows),3)">$LOCALIZE[31219]</value>
-	</variable>
-
 	<variable name="HomeWidgetsListItemLabel">
 		<value condition="Control.HasFocus(35) + !IsEmpty(Container(35).ListItem.Label)">$INFO[Container(35).ListItem.Label]</value>
 		<value condition="Control.HasFocus(45) + !IsEmpty(Container(45).ListItem.TVShowTitle)">$INFO[Container(45).ListItem.TVShowTitle]</value>
@@ -1302,7 +1340,6 @@
 	</variable>
 
 	<variable name="HomeWidgetsHeaderLabels">
-
 		<value condition="[Control.HasFocus(35) + StringCompare(Container(20).ListItem.Property(Widget),RecentlyAddedMovies)]">$LOCALIZE[31241]</value>
 		<value condition="[Control.HasFocus(45) + StringCompare(Container(20).ListItem.Property(Widget),RecentlyAddedTVShows)]">$LOCALIZE[31242]</value>
 		<value condition="[Control.HasFocus(15) + StringCompare(Container(20).ListItem.Property(Widget),RecentlyAddedAlbums)]">$LOCALIZE[31243]</value>
@@ -1324,56 +1361,6 @@
     <value condition="!IsEmpty(ListItem.Rating) | !Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_full.png</value>
     <value condition="IsEmpty(ListItem.Rating) | Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_empty.png</value>
   </variable>
-
-	<variable name="VideosLabel2">
-		<value condition="!IsEmpty(ListItem.Property(Addon.Version)">$INFO[ListItem.Property(Addon.Version)]</value>
-		<value>$INFO[ListItem.Label2]</value>
-	</variable>
-
-	<variable name="FirstMusicLabel">
-		<value condition="Container.Content(Songs) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,0]</value>
-		<value condition="Container.Content(Songs) + IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber]</value>
-	  <value condition="!IsEmpty(ListItem.Year) + !Container.Content(Songs)">$INFO[ListItem.Year]</value>
-	  <value condition="!Container.Content(Songs)">․  ․  ․</value>
-	</variable>	
-
-	<variable name="MusicLabel">
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]$INFO[ListItem.Artist, - ]</value>
-		<value>$INFO[ListItem.Label]</value>
-	</variable>	
-	
-	<variable name="MusicLabel2">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Duration]</value>
-		<value>$INFO[ListItem.Label2]</value>
-	</variable>
-
-	<variable name="BannersListMusicLabel">
-		<value condition="Container.Content(Songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
-		<value>$INFO[ListItem.Label]</value>
-	</variable>
-	
-	<variable name="BannersListMusicUnderLabel">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Album]$INFO[ListItem.Artist, - ]</value>
-		<value>$INFO[ListItem.Label2]</value>
-	</variable>
-
-	<variable name="BannersListMusicBottomLabel">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_YearsActive), $LOCALIZE[21898]  ]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Year]$INFO[ListItem.Property(Album_label), • ]</value>
-		<value condition="Container.Content(Songs) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,$LOCALIZE[554] #0,]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
-		<value condition="Container.Content(Songs) + IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,$LOCALIZE[554] #,]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
-	</variable>
-
-	<variable name="GlobalPlotDescription">
-		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
-		<value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Description)]</value>
-		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[Container.ShowPlot]</value>
-		<value>$INFO[ListItem.Plot]</value>
-	</variable>
 
 	<variable name="VideoPlayerThumb">
 		<value condition="!IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>

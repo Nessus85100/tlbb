@@ -5,39 +5,7 @@
 		<control type="group">
 	    <include>DialogAnimation</include>
 			<visible>!Window.IsActive(SliderDialog) + !Window.IsVisible(FileBrowser)</visible>
-  	  <control type="image">
-  			<left>346</left>
-  			<top>138</top>
-  		  <width>589</width>
-  		  <height>57</height>
-  		  <colordiffuse>blue</colordiffuse>
-  		  <texture background="true" border="9">dialogs/other/header.png</texture>
-  	  </control>
-  	  <control type="image">
-  			<left>346</left>
-  			<top>192</top>
-  		  <width>589</width>
-  		  <height>392</height>
-  		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
-  	  </control>
-  		<control type="image">
-  			<left>348</left>
-  			<top>191</top>
-  			<width>585</width>
-  			<height>4</height>
-  			<aspectratio>stretch</aspectratio>
-  			<texture background="true">dialogs/other/header_line.png</texture>
-  		</control>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture>osd/bg_osd_settings.png</texture>
-			</control>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture>osd/bg_osd_settings_lines.png</texture>
-			</control>
+	    <include>DialogSelectBackground</include>
   		<control type="label">
   			<description>header label</description>
   			<left>360</left>
@@ -48,11 +16,11 @@
   		</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>363</posx>
-				<posy>209</posy>
-				<width>555</width>
-				<height>353</height>
-			  <itemgap>4</itemgap>
+  			<left>364</left>
+  			<top>209</top>
+				<width>553</width>
+				<height>302</height>
+				<itemgap>4</itemgap>>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
 				<onup>5</onup>

@@ -1096,25 +1096,25 @@
 		        <posy>0</posy>
 						<width>360</width>
 						<height>37</height>
-						<texture border="15">dialogs/menus/topmenus_empty.png</texture>
+						<texture border="39,0,39,0">dialogs/menus/topmenus_nf.png</texture>
 		        <aspectratio>stretch</aspectratio>
 		      </control>
 					<control type="label">
-						<posx>25</posx>
+						<posx>50</posx>
 						<posy>0</posy>
-						<width>380</width>
+						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
 						<textcolor>77white</textcolor>
 					  <shadowcolor>99000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>․  $INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>330</posx>
+						<posx>0</posx>
 						<posy>0</posy>
-						<width>380</width>
+						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
 						<textcolor>77white</textcolor>
@@ -1130,25 +1130,25 @@
 		        <posy>0</posy>
 						<width>360</width>
 						<height>37</height>
-						<texture border="15">dialogs/menus/topmenus_empty.png</texture>
+						<texture border="39,0,39,0">dialogs/menus/topmenus_fo.png</texture>
 		        <aspectratio>stretch</aspectratio>
 		      </control>
 					<control type="label">
-						<posx>25</posx>
+						<posx>50</posx>
 						<posy>0</posy>
-						<width>380</width>
+						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
 						<textcolor>white</textcolor>
 					  <shadowcolor>99000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>․  $INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>330</posx>
+						<posx>0</posx>
 						<posy>0</posy>
-						<width>380</width>
+						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
 						<textcolor>white</textcolor>

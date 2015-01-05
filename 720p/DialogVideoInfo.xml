@@ -277,6 +277,7 @@
 							<font>FontSize_22</font>
 							<width min="10" max="780">auto</width>
 							<height>30</height>
+              <haspath>true</haspath>
 							<label fallback="195">$INFO[ListItem.FilenameAndPath]</label>
 						</control>
 					</control>
@@ -425,6 +426,7 @@
 							<font>FontSize_22</font>
 							<width min="10" max="780">auto</width>
 							<height>30</height>
+              <haspath>true</haspath>
 							<label fallback="195">$INFO[ListItem.FilenameAndPath]</label>
 						</control>
 					</control>

@@ -245,12 +245,12 @@
 							<width>305</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="label">
-						  <left>163</left>
+						  <left>35</left>
 							<top>25</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>ddC6C6C8</textcolor>
@@ -260,9 +260,9 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-						  <left>163</left>
+						  <left>35</left>
 							<top>55</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>white</textcolor>
@@ -272,9 +272,9 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-					    <left>163</left>
+					    <left>35</left>
 							<top>255</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>white</textcolor>
@@ -284,9 +284,9 @@
 							<label>$INFO[ListItem.Property(HighTemperature)]</label>
 						</control>
 						<control type="label">
-					    <left>163</left>
+					    <left>35</left>
 							<top>285</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>white</textcolor>
@@ -311,7 +311,7 @@
 							<width>305</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -319,15 +319,15 @@
 							<width>305</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_focus.png</texture>
+							<texture border="25">weather/day_panel_focus.png</texture>
 							<animation effect="slide" start="70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
 							<animation effect="slide" start="-70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="label">
-						  <left>163</left>
+						  <left>35</left>
 							<top>25</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>ddC6C6C8</textcolor>
@@ -337,9 +337,9 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-						  <left>163</left>
+						  <left>35</left>
 							<top>55</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>white</textcolor>
@@ -349,9 +349,9 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-						  <left>163</left>
+						  <left>35</left>
 							<top>255</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>white</textcolor>
@@ -361,9 +361,9 @@
 							<label>$INFO[ListItem.Property(HighTemperature)]</label>
 						</control>
 						<control type="label">
-						  <left>163</left>
+						  <left>35</left>
 							<top>285</top>
-							<width>245</width>
+							<width>255</width>
 							<height>30</height>
 							<font>FontSize_26</font>
 							<textcolor>white</textcolor>
@@ -381,98 +381,9 @@
 							<texture>$INFO[ListItem.ActualIcon]</texture>
 						</control>
 					</focusedlayout>
-	
+
 					<content>
-						<item>
-							<label>$INFO[Window.Property(Day0.Title)]</label>
-							<label2>$INFO[Window.Property(Day0.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day0.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day0.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day0.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day0.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day1.Title)]</label>
-							<label2>$INFO[Window.Property(Day1.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day1.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day1.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day1.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day1.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day2.Title)]</label>
-							<label2>$INFO[Window.Property(Day2.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day2.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day2.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day2.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day2.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day3.Title)]</label>
-							<label2>$INFO[Window.Property(Day3.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day3.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day3.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day3.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day3.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day4.Title)]</label>
-							<label2>$INFO[Window.Property(Day4.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day4.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day4.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day4.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day4.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day5.Title)]</label>
-							<label2>$INFO[Window.Property(Day5.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day5.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day5.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day5.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day5.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day6.Title)]</label>
-							<label2>$INFO[Window.Property(Day6.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day6.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day6.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day6.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day6.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day7.Title)]</label>
-							<label2>$INFO[Window.Property(Day7.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day7.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day7.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day7.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day7.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day8.Title)]</label>
-							<label2>$INFO[Window.Property(Day8.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day8.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day8.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day8.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day8.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(Day9.Title)]</label>
-							<label2>$INFO[Window.Property(Day9.Outlook)]</label2>
-							<icon>$INFO[Window.Property(Day9.OutlookIcon)]</icon>
-							<property name="HighTemperature">$INFO[Window.Property(Day9.HighTemp),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemperature">$INFO[Window.Property(Day9.LowTemp),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR]]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
-						  <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day9.Title))</visible>
-						</item>
+	          <include>Weather_DefaultForecast</include>
 					</content>
 				</control>
 	
@@ -517,7 +428,7 @@
 						<width>345</width>
 						<height>355</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="25">windows/weather/day_panel.png</texture>
+						<texture border="25">weather/day_panel.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -631,7 +542,7 @@
 						<width>345</width>
 						<height>355</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="25">windows/weather/day_panel.png</texture>
+						<texture border="25">weather/day_panel.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -745,7 +656,7 @@
 						<width>572</width>
 						<height>355</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="25">windows/weather/day_panel.png</texture>
+						<texture border="25">weather/day_panel.png</texture>
 					</control>
 					<control type="image">
 						<left>30</left>
@@ -942,7 +853,7 @@
 							<width>420</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="label">
 							<left>25</left>
@@ -1055,7 +966,7 @@
 							<width>420</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="label">
 							<left>25</left>
@@ -1168,7 +1079,7 @@
 							<width>420</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="label">
 							<left>25</left>
@@ -1287,7 +1198,7 @@
 							<width>380</width>
 							<height>300</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel1.png</texture>
+							<texture border="25">weather/day_panel1.png</texture>
 						</control>
 						<control type="label">
 							<left>375</left>
@@ -1350,7 +1261,7 @@
 							<width>380</width>
 							<height>300</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel1.png</texture>
+							<texture border="25">weather/day_panel1.png</texture>
 						</control>
 						<control type="label">
 							<left>375</left>
@@ -1413,7 +1324,7 @@
 							<width>380</width>
 							<height>300</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel1.png</texture>
+							<texture border="25">weather/day_panel1.png</texture>
 						</control>
 						<control type="label">
 							<left>375</left>
@@ -1492,7 +1403,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -1512,7 +1423,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.1.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.1.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -1592,7 +1503,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -1612,7 +1523,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.2.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.2.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -1692,7 +1603,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -1712,7 +1623,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.3.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.3.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -1792,7 +1703,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -1812,7 +1723,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.4.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.4.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -1892,7 +1803,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -1912,7 +1823,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.5.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.5.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -1992,7 +1903,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2012,7 +1923,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.6.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.6.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2093,7 +2004,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2113,7 +2024,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.7.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.7.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2193,7 +2104,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2213,7 +2124,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.8.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.8.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2293,7 +2204,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2313,7 +2224,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.9.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.9.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2393,7 +2304,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2413,7 +2324,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.10.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.10.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2493,7 +2404,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2513,7 +2424,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.11.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.11.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2593,7 +2504,7 @@
 							<width>215</width>
 							<height>190</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_small.png</texture>
+							<texture border="25">weather/day_panel_small.png</texture>
 						</control>
 						<control type="image">
 							<left>125</left>
@@ -2613,7 +2524,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<label>$INFO[Window.Property(Hourly.12.Outlook)]</label>
+							<label>$INFO[Window.Property(Hourly.12.ShortOutlook)]</label>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2712,7 +2623,7 @@
 							<width>305</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="label">
 						  <left>83</left>
@@ -2837,7 +2748,7 @@
 							<width>305</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel.png</texture>
+							<texture border="25">weather/day_panel.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -2845,7 +2756,7 @@
 							<width>305</width>
 							<height>355</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-							<texture border="25">windows/weather/day_panel_focus.png</texture>
+							<texture border="25">weather/day_panel_focus.png</texture>
 							<animation effect="slide" start="70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(51).OnPrevious">Focus</animation>
 							<animation effect="slide" start="-70,0" end="0,0" time="350" reversible="false" tween="back" easing="out" condition="Container(51).OnNext">Focus</animation>
 							<visible>Control.HasFocus(51)</visible>
@@ -2967,156 +2878,7 @@
 						</control>
 					</focusedlayout>
 					<content>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.1.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.1.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.1.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.1.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.1.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.1.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.1.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.1.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.1.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.1.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.1.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.1.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.1.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.2.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.2.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.2.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.2.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.2.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.2.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.2.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.2.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.2.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.2.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.2.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.2.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.2.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.3.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.3.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.3.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.3.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.3.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.3.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.3.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.3.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.3.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.3.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.3.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.3.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.3.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.4.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.4.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.4.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.4.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.4.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.4.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.4.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.4.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.4.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.4.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.4.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.4.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.4.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.5.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.5.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.5.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.5.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.5.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.5.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.5.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.5.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.5.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.5.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.5.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.5.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.5.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.6.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.6.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.6.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.6.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.6.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.6.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.6.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.6.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.6.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.6.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.6.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.6.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.6.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.7.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.7.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.7.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.7.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.7.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.7.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.7.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.7.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.7.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.7.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.7.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.7.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.7.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.8.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.8.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.8.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.8.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.8.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.8.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.8.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.8.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.8.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.8.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.8.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.8.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.8.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.9.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.9.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.9.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.9.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.9.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.9.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.9.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.9.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.9.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.9.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.9.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.9.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.9.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
-        		<item>
-        		  <icon>$INFO[Window.Property(Daily.10.OutlookIcon)]</icon>
-        			<label>$INFO[Window.Property(Daily.10.LongDay)]</label>
-        			<label2>$INFO[Window.Property(Daily.10.LongDate)]</label2>
-        			<thumb>[COLOR=ddC6C6C8]$LOCALIZE[383]:[/COLOR] $LOCALIZE[31227] $INFO[Window.Property(Daily.10.WindDirection)] $LOCALIZE[31228] $INFO[Window.Property(Daily.10.WindSpeed)]</thumb>
-        			<property name="ShortOutlook">$INFO[Window.Property(Daily.10.ShortOutlook),]</property>
-        			<property name="HighTemperature">$INFO[Window.Property(Daily.10.HighTemperature),[COLOR=ddC6C6C8]$LOCALIZE[419]: [/COLOR],]</property>
-        			<property name="LowTemperature">$INFO[Window.Property(Daily.10.LowTemperature),[COLOR=ddC6C6C8]$LOCALIZE[418]: [/COLOR],]</property>
-        			<property name="FeelsLike">[COLOR=ddC6C6C8]$LOCALIZE[402]:[/COLOR] $INFO[Window.Property(Daily.10.FeelsLike)]</property>
-        			<property name="DewPointAndHumidity">[COLOR=ddC6C6C8]$LOCALIZE[405]:[/COLOR] $INFO[Window.Property(Daily.10.DewPoint)]$COMMA [COLOR=ddC6C6C8]$LOCALIZE[33023]:[/COLOR] $INFO[Window.Property(Daily.10.Humidity)]</property>
-        			<property name="Outlook">$INFO[Window.Property(Daily.10.Outlook),[COLOR=ddC6C6C8]$LOCALIZE[31236]: [/COLOR]]</property>
-        			<property name="PDAWeatherIcons">$INFO[Window(Weather).Property(Daily.10.FanartCode),special://home/addons/weather.fanart.pda.style/media/]</property>
-        			<onclick>noop</onclick>
-        			<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
-        		</item>
+	          <include>Weather_10DaysForecast</include>
 					</content>
 				</control>
 		  </control>

@@ -25,8 +25,8 @@
 	
 			<control type="label"  id="20">
 				<description>header label</description>
-				<posx>190</posx>
-				<posy>145</posy>
+				<left>190</left>
+				<top>145</top>
 				<width>905</width>
 				<height>50</height>
 				<font>FontSize_36</font>
@@ -39,13 +39,13 @@
 			</control>
 				
 		  <control type="group" id="9000">
-			 <posy>196</posy>
+			 <top>196</top>
 		   <control type="group">
-				<posx>190</posx>
+				<left>190</left>
 				<control type="grouplist" id="9">
 					<description>category area</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>250</width>
 					<height>349</height>
 					<itemgap>1</itemgap>
@@ -74,11 +74,11 @@
 			 </control>
 	
 		   <control type="group">
-				<posx>447</posx>
+				<left>447</left>
 				<control type="grouplist" id="2">
 					<description>control area</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>645</width>
 					<height>349</height>
 					<itemgap>1</itemgap>
@@ -94,13 +94,13 @@
 				<control type="radiobutton" id="4">
 					<description>Default RadioButton</description>
 					<textwidth>580</textwidth>
-					<radioposx>578</radioposx>
+					<radioleft>578</radioleft>
 			    <include>SettingsRadioButton</include>    
 				</control>
 				<control type="spincontrolex" id="5">
 					<description>Default spincontrolex</description>
 					<textwidth>570</textwidth>
-				  <spinposx>10</spinposx>
+				  <spinleft>10</spinleft>
 			    <include>SettingsSpincontrolex</include>
 				</control>
 				<control type="sliderex" id="8">
@@ -128,12 +128,12 @@
 	
 	
 		  <control type="group" id="10000">
-				<posx>203</posx>
-				<posy>558</posy>
+				<left>203</left>
+				<top>558</top>
 	      <!-- Buttons -->
 				<control type="grouplist" id="10001">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>0</width>
 					<height>0</height>
 					<itemgap>0</itemgap>

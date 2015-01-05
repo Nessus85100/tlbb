@@ -896,6 +896,7 @@
 					<height>25</height>
 					<label fallback="195">$INFO[Container(100).ListItem.Property(Path)]</label>
 					<font>FontSize_22</font>
+          <haspath>true</haspath>
 			    <textcolor>99white</textcolor>
 			    <shadowcolor>99000000</shadowcolor>
 				</control>

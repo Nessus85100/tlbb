@@ -540,24 +540,13 @@
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 	    <include>DialogZoomInOutAnimation</include>
-		  <control type="group">
-			  <visible>Control.IsVisible(51)</visible>
-				<control type="image.">
-					<left>-230</left>
-					<top>-25</top>
-					<width>1800</width>
-					<height>760</height>
-					<aspectratio align="center" aligny="center">stretch</aspectratio>
-					<texture background="true">views/list/shine.png</texture>
-				</control>
-				<control type="image">
-			    <include>FullscreenDimensions</include>
-				  <texture background="true">views/slide/top_bottom_shadows_music.png</texture>
-				</control>
-		  </control>
+			<control type="image">
+		    <include>FullscreenDimensions</include>
+			  <texture background="true">views/slide/top_bottom_shadows_music.png</texture>
+			</control>
 	
 			<control type="wraplist" id="51">
-				<left>-260</left>
+				<left>-253</left>
 				<top>210</top>
 				<width>1900</width>
 				<height>800</height>
@@ -566,103 +555,76 @@
 	      <onup>100</onup>
 	      <ondown>60</ondown>
 	      <viewtype label="31080">List</viewtype>
-        <scrolltime tween="Quadratic" easing="out">250</scrolltime>
+        <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 	      <orientation>horizontal</orientation>
 	      <preloaditems>2</preloaditems>
 	      <focusposition>1</focusposition>
 			  <pagecontrol>60</pagecontrol>
 				<visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] + ![SubString(Container.Folderpath,plugin://) | IsEmpty(Container.Folderpath)]</visible>
-				<itemlayout width="300" height="300">
+				<itemlayout width="297.5" height="300">
 					<control type="image">
-						<width>300</width>
+						<width>298</width>
 						<height>300</height>
 		        <colordiffuse>FFbbbbbb</colordiffuse>
-						<aspectratio aligny="center" align="center">stretch</aspectratio>
-						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_square_big.png">$VAR[VarArtThumbSquare]</texture>
+						<aspectratio aligny="center" align="center">scale</aspectratio>
+						<texture background="true" diffuse="views/slide/poster_diffuse_nf.png" fallback="thumbs/fallback_square_tp.png">$VAR[VarArtThumbSquare]</texture>
+			      <bordertexture border="15">thumbs/thumb_back.png</bordertexture>
 					</control>
 				</itemlayout>
-				<focusedlayout width="300" height="300">
-					<control type="group">
+				<focusedlayout width="297.5" height="300">
+					<control type="image">
+						<width>298</width>
+						<height>300</height>
+					  <aspectratio aligny="center" align="center">stretch</aspectratio>
+					  <texture background="true" border="25">thumbs/thumb_back.png</texture>
+					</control>
+					<control type="image">
+						<width>298</width>
+						<height>300</height>
+					  <aspectratio aligny="center" align="center">scale</aspectratio>
+					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[VarArtThumbSquare]</texture>
+		        <bordersize>6</bordersize>
 		        <animation type="Focus" reversible="false" condition="Container(51).OnNext">
 		          <effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
 		        </animation>
 		        <animation type="Focus" reversible="false" condition="Container(51).OnPrevious">
 		          <effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
 		        </animation>
-						<control type="image">
-							<width>300</width>
-							<height>300</height>
-							<aspectratio align="center">stretch</aspectratio>
-						  <texture background="true" fallback="thumbs/fallback_square_big.png">$VAR[VarArtThumbSquare]</texture>
-						</control>
 					</control>
 					<control type="group">
-					  <left>300</left>
+					  <left>315</left>
 			      <top>225</top>
-	          <animation type="Focus" reversible="false" condition="Container(51).OnNext">
-	            <effect type="slide" start="56,0" end="0,0" time="200" tween="circle" easing="out" />
-	            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
-	          </animation>
-	          <animation type="Focus" reversible="false" condition="Container(51).OnPrevious">
-	            <effect type="slide" start="-56,0" end="0,0" time="200" tween="circle" easing="out" />
-	            <effect type="fade" start="20" end="100" time="400" delay="100" tween="sine" easing="out" />
-	          </animation>
 						<control type="label">
-						  <left>15</left>
+						  <left>0</left>
+			        <top>0</top>
 							<height>30</height>
-							<width>640</width>
+							<width>875</width>
 							<textcolor>white</textcolor>
 			        <shadowcolor>99000000</shadowcolor>
 							<font>FontSize_38</font>
 				      <scroll>false</scroll>
 							<align>left</align>
-							<label>$INFO[ListItem.label]</label>
-							<visible>!Container.Content(Songs)</visible>
+							<label>$VAR[BannersListMusicLabel]</label>
+	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 	            <animation effect="slide" start="0,0" end="0,-208" time="250" tween="sine" easing="inout" condition="Control.HasFocus(100)">Conditional</animation>
 						</control>
 						<control type="label">
-						  <left>15</left>
-							<height>30</height>
-							<width>640</width>
-							<textcolor>white</textcolor>
-			        <shadowcolor>99000000</shadowcolor>
-							<font>FontSize_38</font>
-				      <scroll>false</scroll>
-							<align>left</align>
-							<label>$INFO[ListItem.Title]</label>
-							<visible>Container.Content(Songs)</visible>
-						</control>
-						<control type="label">
-						  <left>17</left>
+						  <left>2</left>
 							<top>30</top>
 							<height>30</height>
-							<width>640</width>
+							<width>873</width>
 							<textcolor>77white</textcolor>
 			        <shadowcolor>99000000</shadowcolor>
 							<font>FontSize_22</font>
 				      <scroll>false</scroll>
 							<align>left</align>
-							<label>$VAR[GlobalInfo]</label>
-							<visible>!Container.Content(Albums)</visible>
-						</control>
-						<control type="label">
-						  <left>17</left>
-							<top>30</top>
-							<height>30</height>
-							<width>640</width>
-							<textcolor>77white</textcolor>
-			        <shadowcolor>99000000</shadowcolor>
-							<font>FontSize_22</font>
-				      <scroll>false</scroll>
-							<align>left</align>
-							<label>$INFO[ListItem.Artist]</label>
-							<visible>Container.Content(Albums)</visible>
+							<label>$VAR[BannersListMusicSubLabel]</label>
 						</control>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="group">
-				<left>357</left>
+				<left>362</left>
 				<animation type="Visible" tween="sine" easing="inout" reversible="false">
 					<effect type="zoom" start="100,120" end="100,100" time="220" />
 					<effect type="fade" start="0" end="100" time="220" />
@@ -671,11 +633,11 @@
 					<effect type="zoom" start="100,100" end="100,110" time="150" />
 					<effect type="fade" start="100" end="0" time="150" />
 				</animation>
-		    <visible>![IsEmpty(Container.ListItem.Property(Album_Description)) + IsEmpty(Container.ListItem.Property(Artist_Description))] + Control.HasFocus(100)</visible>
+		    <visible>![IsEmpty(Container.ListItem.Property(Album_Description)) + IsEmpty(Container.ListItem.Property(Artist_Description)) + IsEmpty(Container.ListItem.Comment)] + Control.HasFocus(100)</visible>
 				<control type="label">
 					<top>258</top>
 					<height>30</height>
-					<width>600</width>
+					<width>875</width>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<font>FontSize_22</font>
@@ -687,7 +649,7 @@
 				<control type="label">
 					<top>258</top>
 					<height>30</height>
-					<width>600</width>
+					<width>875</width>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<font>FontSize_22</font>
@@ -697,9 +659,9 @@
 					<visible>Container.Content(Artists)</visible>
 				</control>				
 		    <control type="textbox">
-		      <top>293</top>
-		      <width>570</width>
-		      <height>160</height>
+		      <top>295</top>
+		      <width>860</width>
+		      <height>155</height>
 					<font>FontSize_22</font>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
@@ -708,25 +670,32 @@
 					<label fallback="195">$VAR[GlobalPlotDescription]</label>
 		    </control>
 		  </control>
+			<control type="image">
+				<left>39</left>
+				<top>204</top>
+				<width>310</width>
+				<height>312</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture border="30">osd/quicknav/focus_square.png</texture>
+			</control>
 	    <control type="button" id="100">
 				<include>TopButton</include>
 				<onleft>51</onleft>
 	      <onright>51</onright>
 	      <onup>9000</onup>
 	      <ondown>51</ondown>
-	      <visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] + ![IsEmpty(Container.ListItem.Property(Album_Description)) + IsEmpty(Container.ListItem.Property(Artist_Description))] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
+	      <visible>[Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)] + ![IsEmpty(Container.ListItem.Property(Album_Description)) + IsEmpty(Container.ListItem.Property(Artist_Description)) + IsEmpty(Container.ListItem.Comment)] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)</visible>
 	    </control>
 			<control type="scrollbar" id="60">
 				<left>355</left>
 				<top>495</top>
-				<width>900</width>
-				<height>11</height>
+				<width>870</width>
+				<height>9</height>
 				<texturesliderbackground>-</texturesliderbackground>
-				<texturesliderbar border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
-				<texturesliderbarfocus border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
+				<texturesliderbar border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
+				<texturesliderbarfocus border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
-				<colordiffuse>77white</colordiffuse>
 				<onup>51</onup>
 				<ondown>51</ondown>
 				<showonepage>false</showonepage>
@@ -746,24 +715,22 @@
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
 	    <include>DialogZoomInOutAnimation</include>
-		  <control type="group">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>1280</width>
-					<height>720</height>
-					<texture>views/gallery/top_bottom_shadows.png</texture>
-				</control>
-  			<control type="image">
-  				<left>-50</left>
-  				<top>116</top>
-  				<width>1380</width>
-  				<height>492</height>
-  				<aspectratio align="center" aligny="center">stretch</aspectratio>
-  				<texture border="39,39,39,39">views/other/panel.png</texture>
-  				<bordersize>41</bordersize>
-  			</control>
-		  </control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<texture>views/gallery/top_bottom_shadows.png</texture>
+			</control>
+			<control type="image">
+				<left>-50</left>
+				<top>116</top>
+				<width>1380</width>
+				<height>492</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture border="39,39,39,39">views/other/panel.png</texture>
+				<bordersize>41</bordersize>
+			</control>
 	
 			<control type="wraplist" id="52">
 				<left>-34</left>
@@ -915,12 +882,12 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<left>305</left>
-				<top>555</top>
+				<top>552</top>
 				<width>670</width>
-				<height>11</height>
+				<height>9</height>
 				<texturesliderbackground>-</texturesliderbackground>
-				<texturesliderbar border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
-				<texturesliderbarfocus border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
+				<texturesliderbar border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
+				<texturesliderbarfocus border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
 				<colordiffuse>77white</colordiffuse>
@@ -972,7 +939,7 @@
 						<left>40</left>
 						<top>23</top>
 						<width>550</width>
-						<label>$VAR[BannersListMusicUnderLabel]</label>
+						<label>$VAR[BannersListMusicSubLabel]</label>
 						<font>FontSize_20</font>
 						<textcolor>77white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
@@ -1028,7 +995,7 @@
 							<left>245</left>
 							<top>50</top>
 							<width>475</width>
-							<label>$VAR[BannersListMusicUnderLabel]</label>
+							<label>$VAR[BannersListMusicSubLabel]</label>
 							<font>FontSize_20</font>
 							<textcolor>99white</textcolor>
 							<align>left</align>

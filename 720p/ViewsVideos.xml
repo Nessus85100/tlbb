@@ -446,7 +446,7 @@
 						<shadowcolor>77000000</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$VAR[VideosLabel2]</label>
+						<label fallback="․  ․  ․">$VAR[ListItemLabel2]</label>
             <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist) | Substring(ListItem.Path,videodb://movies/sets/)]</visible>
             <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -596,7 +596,7 @@
 							<shadowcolor>77000000</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>
-						  <label fallback="․  ․  ․">$VAR[VideosLabel2]</label>
+						  <label fallback="․  ․  ․">$VAR[ListItemLabel2]</label>
 	            <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist) | Substring(ListItem.Path,videodb://movies/sets/)]</visible>
 	            <visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>
@@ -682,13 +682,13 @@
 						<height>340</height>
 		        <colordiffuse>FFbbbbbb</colordiffuse>
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
-						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_poster_big.png">$VAR[VarArtPoster]</texture>
+						<texture background="true" diffuse="views/slide/poster_diffuse_nf.png" fallback="thumbs/fallback_poster_big.png">$VAR[VarArtPoster]</texture>
 					</control>
 					<control type="image">
 						<width>238</width>
 						<height>340</height>
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
-	          <texture diffuse="overlays/skin_widgets/poster_diffuse_nf.png">overlays/unwatched/slide/UnWatched_Poster.png</texture>
+	          <texture diffuse="views/slide/poster_diffuse_nf.png">overlays/unwatched/slide/UnWatched_Poster.png</texture>
 	          <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 					</control>
 				</itemlayout>
@@ -698,6 +698,7 @@
 						<height>340</height>
 						<aspectratio align="center">stretch</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_poster_big.png">$VAR[VarArtPoster]</texture>
+		        <bordersize>6</bordersize>
 					</control>
 					<control type="image">
 						<width>238</width>
@@ -705,6 +706,7 @@
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
             <texture>overlays/unwatched/slide/UnWatched_Poster.png</texture>
             <visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+		        <bordersize>6</bordersize>
 					</control>
 					<control type="group">
 						<left>252</left>
@@ -822,6 +824,14 @@
 					<label fallback="195">$VAR[GlobalPlotDescription]</label>
 		    </control>
 		  </control>
+			<control type="image">
+				<left>40</left>
+				<top>194</top>
+				<width>250</width>
+				<height>352</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture border="30">osd/quicknav/focus_poster.png</texture>
+			</control>
 	    <control type="button" id="100">
 				<include>TopButton</include>
 				<onleft>51</onleft>
@@ -1088,12 +1098,12 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<left>305</left>
-				<top>555</top>
+				<top>552</top>
 				<width>670</width>
-				<height>11</height>
+				<height>9</height>
 				<texturesliderbackground>-</texturesliderbackground>
-				<texturesliderbar border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
-				<texturesliderbarfocus border="14,14,14,14">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
+				<texturesliderbar border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
+				<texturesliderbarfocus border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
 				<colordiffuse>77white</colordiffuse>
@@ -2683,7 +2693,7 @@
 				<align>left</align>
 				<aligny>top</aligny>
       	<label>$INFO[ListItem.Label]</label>
-				<label2>$VAR[AddonsThumbsnailsLabel2]</label2>
+				<label2>$VAR[AddonsLabel2]</label2>
 				<visible>!Container.Content(Episodes)</visible>
         <animation effect="slide" start="0,0" end="0,-10" time="0" condition="!Skin.HasSetting(ShowSmallVideoThumbs)">Conditional</animation>
 			</control>
@@ -2786,14 +2796,6 @@
 	<!-- ================================================ -->
 	<!-- ==== Thumbnails View Videos - Posters "561" ==== -->
 	<!-- ================================================ -->
-  <include name="VideoThumbnailsNoInfoWidth">
-    <width>1200</width>
-  </include>
-  <include name="VideoThumbnailsInfoWidth">
-    <width>855</width>
-  </include>
-
-
 	<include name="ThumbnailsView_Videos_Posters">
 		<control type="group">
 			<visible>Control.IsVisible(561)</visible>
@@ -3090,6 +3092,14 @@
 			</control>
 		</control>
 	</include>
+
+  <include name="VideoThumbnailsNoInfoWidth">
+    <width>1200</width>
+  </include>
+  <include name="VideoThumbnailsInfoWidth">
+    <width>855</width>
+  </include>
+
 
 	<!-- =========================== -->
 	<!-- ==== Banners View "57" ==== -->
@@ -3530,6 +3540,7 @@
 			</control>
 		</control>
 	</include>		
+
 
 	<!-- ===================================== -->
 	<!-- ==== VideoWall Fanart View "580" ==== -->

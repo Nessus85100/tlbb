@@ -107,7 +107,7 @@
 			  <visible>Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 			</control>
 			<control type="togglebutton" id="292">
-				<description>Disable Posters Flashing Cinema Lights</description>
+				<description>Flashing Cinema Lights</description>
   			<include>TopLeftMenusButton</include>
         <label>$LOCALIZE[31124]: $LOCALIZE[31012]</label>
         <altlabel>$LOCALIZE[31124]: $LOCALIZE[31011]</altlabel>
@@ -128,8 +128,8 @@
 			<control type="togglebutton" id="294">
 			  <description>Change Thumbs Size (Thumbnails View)</description>
 			  <include>TopLeftMenusButton</include>
-        <label>Show Small Thumbs</label>
-        <altlabel>Show Big Thumbs</altlabel>
+        <label>$LOCALIZE[31098]</label>
+        <altlabel>$LOCALIZE[31099]</altlabel>
 				<onclick>Skin.ToggleSetting(ShowSmallVideoThumbs)</onclick>
 				<selected>Skin.HasSetting(ShowSmallVideoThumbs)</selected>
 			  <visible>Control.IsVisible(560) + stringcompare(Container.FolderPath,addons://sources/video/)</visible>
@@ -139,13 +139,13 @@
 			  <include>TopLeftMenusButton</include>
 			</control>
 			<control type="togglebutton" id="4">
-				<description>Ascending/Descending</description>
-        <label>584</label>
-        <altlabel>585</altlabel>
+				<description>Sort Ascending/Descending</description>
+        <label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
+        <altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
 			  <include>TopLeftMenusButton</include>
 			</control>
 			<control type="button" id="10">
-				<description>Watched/Unwatched Toggle</description>
+  			<description>All/Watched/Unwatched Toggle</description>
 			  <include>TopLeftMenusButton</include>
 			</control>
 			<control type="button" id="19">

@@ -42,7 +42,13 @@ msgctxt "#31005"
 msgid "Track Number"
 msgstr ""
 
-#empty strings from id 31006 to 31007
+msgctxt "#31006"
+msgid "Working..."
+msgstr ""
+
+msgctxt "#31007"
+msgid "Please Wait..."
+msgstr ""
 
 msgctxt "#31008"
 msgid "System auto shutdown in"
@@ -52,7 +58,9 @@ msgctxt "#31009"
 msgid "Context Menu"
 msgstr ""
 
-#empty string id 31010
+msgctxt "#31010"
+msgid "-"
+msgstr ""
 
 msgctxt "#31011"
 msgid "On"
@@ -224,7 +232,19 @@ msgctxt "#31097"
 msgid "Choose RSS Video Feed Widget" <!-- *NOT USED* -->
 msgstr ""
 
-#empty strings from id 31098 to 31101
+msgctxt "#31098"
+msgid "Show Small Thumbs"
+msgstr ""
+
+msgctxt "#31099"
+msgid "Show Big Thumbs"
+msgstr ""
+
+#empty string id 31100
+
+msgctxt "#31101"
+msgid "Show Weather Info"
+msgstr ""
 
 msgctxt "#31102"
 msgid "Hide Now Playing Video Info"
@@ -251,7 +271,7 @@ msgid "Disable Fanart in all sections"
 msgstr ""
 
 msgctxt "#31131"
-msgid "Show Only on Home Screen" <!-- *NOT USED* -->
+msgid "Show Only on Home Screen"
 msgstr ""
 
 msgctxt "#31132"
@@ -262,9 +282,7 @@ msgctxt "#31133"
 msgid "Custom Background" <!-- *NOT USED* -->
 msgstr ""
 
-msgctxt "#31134"
-msgid "Edit Background for Media Type" <!-- *NOT USED* -->
-msgstr ""
+#empty string 31134
 
 msgctxt "#31135"
 msgid "Single Image" <!-- *NOT USED* -->
@@ -278,7 +296,7 @@ msgctxt "#31137"
 msgid "Enable Notifications"
 msgstr ""
 
-#empty strings id 31138
+#empty string id 31138
 
 msgctxt "#31139"
 msgid "Enable Add-ons Notifications"
@@ -332,7 +350,7 @@ msgctxt "#31151"
 msgid "Show RSS feed in whole skin" <!-- *NOT USED* -->
 msgstr ""
 
-#empty strings id 31152
+#empty string id 31152
 
 msgctxt "#31153"
 msgid "Enable login screen"
@@ -365,7 +383,7 @@ msgid "Download [COLOR=selected]logo.png[/COLOR] for all Movies"
 msgstr ""
 
 msgctxt "#31161"
-msgid "Hide Home Menu Extra Info"
+msgid "Show Library Totals"
 msgstr ""
 
 msgctxt "#31162"
@@ -408,28 +426,14 @@ msgctxt "#31171"
 msgid "Update Art"
 msgstr ""
 
-msgctxt "#31172"
-msgid "Enable Home Menu Fanart SlideShow"  <!-- *NOT USED* -->
-msgstr ""
-
-msgctxt "#31173"
-msgid "Current Mode:"
-msgstr ""
-
-#empty strings from id 31174 to 31199
+#empty strings from id 31172 to 31199
 #Scripts labels
 
 msgctxt "#31200"
-msgid "My Movies"
+msgid "Current Mode:"
 msgstr ""
 
-msgctxt "#31201"
-msgid "My TV Shows"
-msgstr ""
-
-msgctxt "#31202"
-msgid "My Music"
-msgstr ""
+#empty strings from id 31201 to 31202
 
 msgctxt "#31203"
 msgid "New Search"
@@ -800,34 +804,24 @@ msgid "Disable Quick Navigation"
 msgstr ""
 
 msgctxt "#31376"
+msgid "Default QuickNav Items"
+msgstr ""
+
+msgctxt "#31377"
 msgid "Custom QuickNav Items"
 msgstr ""
 
-#empty strings from id 31377 to 31392
-
-msgctxt "#31393"
-msgid "Manage QuickNav Items"
-msgstr ""
-
-msgctxt "#31394"
-msgid "Custom Items"
-msgstr ""
-
-msgctxt "#31395"
-msgid "Manage Custom Items"
-msgstr ""
-
-msgctxt "#31396"
+msgctxt "#31378"
 msgid "Custom Item"
 msgstr ""
 
-msgctxt "#31397"
-msgid "Edit Item"
+msgctxt "#31379"
+msgid "Custom Items"
 msgstr ""
 
-#empty strings from id 31398 to 31408
-#Settings Category Description & Header Labels
+#empty strings from id 31380 to 31408
 
+#Settings Category Description & Header Labels
 msgctxt "#31409"
 msgid "Choose from a variety of settings and customization options to make \"The Little Black Box\" fit your needs and taste."
 msgstr ""
@@ -876,20 +870,16 @@ msgctxt "#31420"
 msgid "Configure Skin Settings"
 msgstr ""
 
-#empty strings from id 31421 to 31449
+#empty strings from id 31421 to 31430
 
-msgctxt "#31450"
-msgid "You haven't added any items to Favorites yet.[CR]Highlight an item, and choose "Add to favorites" from the context menu."
+msgctxt "#31431"
+msgid "You haven't added any items to Favorites yet.[CR]Highlight an item, and choose \"Add to favorites\" from the context menu."
 msgstr ""
 
-msgctxt "#31451"
-msgid "All Skin Settings will revert back to their default state.[CR]Are you sure you want to proceed ?"
-msgstr ""
-
-msgctxt "#31452"
+msgctxt "#31432"
 msgid "You have now switched to XBMC/Kodi Expert Mode.[CR]The main menu now reflects this change."
 msgstr ""
 
-msgctxt "#31453"
+msgctxt "#31433"
 msgid "You have now switched to TLBB Easy Mode.[CR]The main menu now reflects this change."
 msgstr ""

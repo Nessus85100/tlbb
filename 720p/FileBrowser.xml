@@ -198,7 +198,7 @@
     			<onup>413</onup>
     			<ondown>414</ondown>
   				<label>$LOCALIZE[119]</label>
-          <animation effect="fade" start="100" end="70" time="0" condition="!Control.IsEnabled(415)">Conditional</animation>
+          <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(415)">Conditional</animation>
     		</control>
 	    </control>
 		</control>

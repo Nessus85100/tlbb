@@ -316,6 +316,15 @@
       <value condition="!IsEmpty(ListItem.VideoResolution)">flags/def/sd.png</value>
     </variable>
 
+  	<variable name="FanartThumbsOptionsLabels">
+  		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),1)">$LOCALIZE[20445]</value>
+  		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">$LOCALIZE[31218]</value>
+  		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">$LOCALIZE[31219]</value>
+  		<value condition="Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(GalleryViewWideThumbTVShows),1)">$LOCALIZE[20445]</value>
+  		<value condition="Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(GalleryViewWideThumbTVShows),2)">$LOCALIZE[31218]</value>
+  		<value condition="Control.IsVisible(52) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(GalleryViewWideThumbTVShows),3)">$LOCALIZE[31219]</value>
+  	</variable>
+
   	<variable name="GlobalInfo">
   		<value condition="Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !IsEmpty(ListItem.Title)">$LOCALIZE[20434]</value>
   		<value condition="Container.Content(Movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</value>
@@ -343,7 +352,63 @@
   		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,$LOCALIZE[31003] ]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
   	</variable>
 
-  	<variable name="AddonsThumbsnailsLabel2">
+	<variable name="ListItemLabel2">
+    <value condition="!IsEmpty(ListItem.Label2)">[COLOR=selected]$INFO[ListItem.Label2][/COLOR]</value>
+		<value>$INFO[ListItem.Property(Addon.Version)]</value>
+	</variable>	
+  
+  	<variable name="FirstMusicLabel">
+  		<value condition="Container.Content(Songs) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,0]</value>
+  		<value condition="Container.Content(Songs) + IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber]</value>
+  	  <value condition="!IsEmpty(ListItem.Year) + !Container.Content(Songs)">$INFO[ListItem.Year]</value>
+  	  <value condition="!Container.Content(Songs)">․  ․  ․</value>
+  	</variable>	
+  
+  	<variable name="MusicLabel">
+  		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]$INFO[ListItem.Artist, - ]</value>
+  		<value>$INFO[ListItem.Label]</value>
+  	</variable>	
+  	
+  	<variable name="MusicLabel2">
+  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
+  		<value condition="Container.Content(Songs)">$INFO[ListItem.Duration]</value>
+  		<value>$INFO[ListItem.Label2]</value>
+  	</variable>
+  
+  	<variable name="BannersListMusicLabel">
+  		<value condition="Container.Content(Songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
+  		<value>$INFO[ListItem.Label]</value>
+  	</variable>
+  	
+  	<variable name="BannersListMusicSubLabel">
+  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
+  		<value condition="Container.Content(Songs)">$INFO[ListItem.Album]$INFO[ListItem.Artist, - ]</value>
+  		<value>$INFO[ListItem.Label2]</value>
+  	</variable>
+  
+  	<variable name="BannersListMusicBottomLabel">
+  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_YearsActive), $LOCALIZE[21898]  ]</value>
+  		<value condition="Container.Content(Albums)">$INFO[ListItem.Year]$INFO[ListItem.Property(Album_label), • ]</value>
+  		<value condition="Container.Content(Songs) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,$LOCALIZE[554] #0,]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
+  		<value condition="Container.Content(Songs) + IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,$LOCALIZE[554] #,]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
+  	</variable>
+  
+  	<variable name="GlobalPlotDescription">
+  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Description)]</value>
+  		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
+  		<value condition="Container.Content(Songs)">$INFO[ListItem.Comment]</value>
+  		<value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Description)]</value>
+  		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[Container.ShowPlot]</value>
+  		<value>$INFO[ListItem.Plot]</value>
+  	</variable>
+
+    <variable name="AddonStatus">
+      <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
+      <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098]) | stringcompare(ListItem.Label2,$LOCALIZE[24049])">overlays/addons_status/status_broken.png</value>
+      <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
+    </variable>
+
+  	<variable name="AddonsLabel2">
   		<value condition="stringcompare(Container.FolderPath,addons://sources/video/) + !IsEmpty(ListItem.Property(Addon.Broken))">[COLOR=red]$LOCALIZE[24098][/COLOR]</value>
   		<value condition="!stringcompare(Container.FolderPath,addons://sources/video/) + !IsEmpty(ListItem.Property(Addon.Broken))">[COLOR=red]$INFO[ListItem.Label2][/COLOR]</value>
   		<value condition="!stringcompare(Container.FolderPath,addons://sources/video/) + IsEmpty(ListItem.Label2)">$INFO[ListItem.Property(Addon.Version)]</value>

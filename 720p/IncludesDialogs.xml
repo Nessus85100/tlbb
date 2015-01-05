@@ -175,7 +175,7 @@
 	</variable>
 
 
-	<include name="DialogSelectBackgrounds">
+	<include name="DialogSelectBackground">
 	  <control type="image">
 			<left>347</left>
 			<top>138</top>
@@ -264,7 +264,7 @@
 		<control type="label" id="1">
 			<description>header label</description>
 			<left>360</left>
-			<top>150</top>
+			<top>152</top>
 			<width>560</width>
 	    <include>DialogsHeaderLabel</include>
       <label>Remove ID to Test, Remove ID to Test, Remove</label>
@@ -488,7 +488,7 @@
 	  <control type="group"  id="10000">
   		<control type="button" id="5">
 				<description>Get More/Manual</description>
-  			<left>940</left>
+  			<left>939</left>
   			<top>488</top>
     		<width>165</width>
 				<textwidth>220</textwidth>

@@ -5,7 +5,7 @@
 	 <control type="group">
 	  <include>DialogAnimation</include>
 		<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput)</visible>
-	  <include>DialogSelectBackgrounds</include>
+	  <include>DialogSelectBackground</include>
 		<control type="label">
 			<description>header label</description>
 			<left>360</left>
@@ -56,7 +56,7 @@
 
     <!-- Control Buttons -->
 	  <control type="group"  id="10000">
-			<left>940</left>
+			<left>939</left>
 			<top>488</top>
   		<control type="button" id="28">
 				<description>Save</description>

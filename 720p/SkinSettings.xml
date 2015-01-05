@@ -9,7 +9,7 @@
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
 			<!-- <visible>!Window.IsActive(BusyDialog)</visible> -->
-		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(script-skinshortcuts.xml) + !Window.IsActive(favourites)  + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(1115) + !Window.IsActive(1117) + !Window.IsActive(1118) + !StringCompare(Window.Property(resetbusy),show)</visible>
+		<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(script-skinshortcuts.xml) + !Window.IsActive(favourites)  + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + !Window.IsActive(1115) + !Window.IsActive(1117) + !Window.IsActive(1118) + !Window.IsActive(1119) + !StringCompare(Window.Property(resetbusy),show)</visible>
 		<control type="image">
 		  <include>FullscreenDimensions</include>
 		  <texture background="true">windows/settings/bg_settings.png</texture>
@@ -204,7 +204,7 @@
 					<control type="radiobutton" id="8204">
 						<description>Show Library Totals</description>
 	          <include>SettingsRadioButton</include>
-						<label>31179</label>
+						<label>31161</label>
 						<onclick>Skin.ToggleSetting(ShowLibraryTotals)</onclick>
 						<selected>Skin.HasSetting(ShowLibraryTotals)</selected>
 					</control>
@@ -232,7 +232,7 @@
 					</control>
 					<control type="radiobutton" id="8302">
 	          <include>SettingsRadioButton</include>
-						<label>31131</label>
+						<label>31132</label>
 						<onclick>Skin.ToggleSetting(HideBGVideo)</onclick>
 						<selected>Skin.HasSetting(HideBGVideo)</selected>
 					</control>
@@ -394,19 +394,19 @@
 						<selected>Skin.HasSetting(DisableQuickNav)</selected>
 					</control>
 					<control type="button" id="8602">
-						<description>Manage QuickNav Buttons</description>
+						<description>Default QuickNav Buttons</description>
 	          <include>SettingsButton</include>
-						<label>$LOCALIZE[31393]</label>
-            <onclick>SetProperty(ManageButtons,quicknav)</onclick>
+						<label>$LOCALIZE[31376]</label>
+            <onclick>SetProperty(ManageButtons,defualtquicknav)</onclick>
 						<onclick>ActivateWindow(1118)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav)</visible>
 					</control>
 					<control type="button" id="8603">
 						<description>Custom QuickNav Buttons</description>
 	          <include>SettingsButton</include>
-						<label>$LOCALIZE[31376]</label>
+						<label>$LOCALIZE[31377]</label>
             <onclick>SetProperty(ManageButtons,customquicknav)</onclick>
-						<onclick>ActivateWindow(1118)</onclick>
+						<onclick>ActivateWindow(1119)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav)</visible>
 					</control>
 				</control>
