@@ -7,29 +7,7 @@
 		<left>310</left>
 		<top>235</top>
 	  <include>DialogAnimation</include>
-	  <control type="image">
-		  <left>0</left>
-		  <top>0</top>
-		  <width>660</width>
-		  <height>57</height>
-		  <colordiffuse>blue</colordiffuse>
-		  <texture background="true" border="9">dialogs/other/header.png</texture>
-	  </control>
-	  <control type="image">
-		  <left>0</left>
-		  <top>55</top>
-		  <width>660</width>
-		  <height>188</height>
-		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
-	  </control>
-		 <control type="image">
-			<left>2</left>
-			<top>53</top>
-			<width>656</width>
-			<height>4</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true">dialogs/other/header_line.png</texture>
-		 </control>
+	  <include>Dialog-OK-YesNo-Progress</include>
     <control type="label">
       <description>header label</description>
       <left>15</left>
@@ -50,10 +28,10 @@
 			<autoscroll time="3000" delay="3000" repeat="5000">true</autoscroll>
 	    <label>$VAR[CustomDialogOKMessage]</label>
 		</control>
-		 <control type="button" id="11">
+		<control type="button" id="11">
 			<description>Yes button</description>
-			<left>315</left>
-			<top>180</top>
+			<left>320</left>
+			<top>172</top>
 	    <include>DialogsButtonsYesNo</include>
 			<label>$LOCALIZE[107]</label>
 			<onleft>10</onleft>
@@ -65,11 +43,11 @@
   		<onclick>RunScript(script.skinshortcuts,type=resetall&amp;warning=false)</onclick>
 			<onclick>Skin.ResetSettings</onclick>
       <onclick>AlarmClock(replace,ReplaceWindow(0),0:03,true)</onclick>
-		 </control>
-		 <control type="button" id="10">
+		</control>
+		<control type="button" id="10">
 			<description>No button</description>
-			<left>485</left>
-			<top>180</top>
+			<left>490</left>
+			<top>172</top>
 	    <include>DialogsButtonsYesNo</include>
 			<label>$LOCALIZE[106]</label>
 			<onleft>11</onleft>
@@ -77,8 +55,7 @@
 			<onup>11</onup>
 			<ondown>11</ondown>
 		  <onclick>PreviousMenu</onclick>
-		  <onclick>SetFocus(8000)</onclick>
-		 </control>
+		</control>
 	 </control>
 	</controls>
 </window>

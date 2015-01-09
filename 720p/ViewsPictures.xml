@@ -398,8 +398,57 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-						<visible>IsEmpty(ListItem.Property(Addon.Broken))</visible>
+						<label fallback="․  ․  ․">$VAR[AddonsLabel2]</label>
+            <visible>!Stringcompare(ListItem.Label,..)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="45" width="710" condition="Container.Content(Addons)">
+					<control type="image">
+						<left>7</left>
+						<top>3</top>
+		        <width>586</width>
+						<height>40</height>	
+				    <aspectratio align="center" aligny="center">stretch</aspectratio>
+			      <colordiffuse>22ffffff</colordiffuse>
+			      <texture background="true">views/list/list_fo.png</texture>
+					</control>
+					<control type="label">
+						<left>14</left>
+						<top>0</top>
+						<width>100</width>
+						<height>45</height>
+						<font>BackFont_22B</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>↚</label>
+            <visible>Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>100</width>
+						<height>45</height>
+						<font>FontSize_20</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>․  ․  ․</label>
+            <visible>!Stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>95</left>
+						<top>0</top>
+						<width>455</width>
+						<height>44</height>
+						<font>FontSize_22</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
             <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
@@ -408,95 +457,13 @@
 						<width>300</width>
 						<height>45</height>
 						<font>FontSize_22</font>
-						<textcolor>red</textcolor>
+						<textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
-						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+					  <label fallback="․  ․  ․">$VAR[AddonsLabel2]</label>
             <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
-				</itemlayout>
-				<focusedlayout height="45" width="710" condition="Container.Content(Addons)">
-		      <control type="group">
-						<control type="image">
-							<left>7</left>
-							<top>3</top>
-			        <width>586</width>
-							<height>40</height>	
-					    <aspectratio align="center" aligny="center">stretch</aspectratio>
-				      <colordiffuse>22ffffff</colordiffuse>
-				      <texture background="true">views/list/list_fo.png</texture>
-						</control>
-  					<control type="label">
-  						<left>14</left>
-  						<top>0</top>
-  						<width>100</width>
-  						<height>45</height>
-  						<font>BackFont_22B</font>
-  						<textcolor>white</textcolor>
-  						<shadowcolor>77000000</shadowcolor>
-  						<align>left</align>
-  						<aligny>center</aligny>
-  						<label>↚</label>
-              <visible>Stringcompare(ListItem.Label,..)</visible>
-  					</control>
-						<control type="label">
-							<left>15</left>
-							<top>0</top>
-							<width>100</width>
-							<height>45</height>
-							<font>FontSize_20</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>77000000</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>․  ․  ․</label>
-              <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<left>95</left>
-							<top>0</top>
-							<width>455</width>
-							<height>44</height>
-							<font>FontSize_22</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>77000000</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-              <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<left>285</left>
-							<top>0</top>
-							<width>300</width>
-							<height>45</height>
-							<font>FontSize_22</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>77000000</shadowcolor>
-							<align>right</align>
-							<aligny>center</aligny>
-							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-							<visible>IsEmpty(ListItem.Property(Addon.Broken))</visible>
-              <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<left>285</left>
-							<top>0</top>
-							<width>300</width>
-							<height>45</height>
-							<font>FontSize_22</font>
-							<textcolor>red</textcolor>
-							<shadowcolor>77000000</shadowcolor>
-							<align>right</align>
-							<aligny>center</aligny>
-							<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-							<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
-              <visible>!Stringcompare(ListItem.Label,..)</visible>
-						</control>
-          </control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">

@@ -171,7 +171,7 @@
             <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<left>285</left>
+						<left>280</left>
 						<top>0</top>
 						<width>300</width>
 						<height>45</height>
@@ -180,23 +180,7 @@
 						<shadowcolor>77000000</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-						<visible>IsEmpty(ListItem.Property(Addon.Broken))</visible>
-            <visible>!Stringcompare(ListItem.Label,..)</visible>
-					</control>
-					<control type="label">
-						<left>285</left>
-						<top>0</top>
-						<width>300</width>
-						<height>45</height>
-						<font>FontSize_22</font>
-						<textcolor>red</textcolor>
-						<shadowcolor>77000000</shadowcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
-            <visible>!Stringcompare(ListItem.Label,..)</visible>
+						<label fallback="․  ․  ․">$VAR[AddonsLabel2]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="45" width="710">
@@ -249,7 +233,7 @@
             <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<left>285</left>
+						<left>280</left>
 						<top>0</top>
 						<width>300</width>
 						<height>45</height>
@@ -258,22 +242,8 @@
 						<shadowcolor>77000000</shadowcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-						<visible>IsEmpty(ListItem.Property(Addon.Broken))</visible>
-            <visible>!Stringcompare(ListItem.Label,..)</visible>
-					</control>
-					<control type="label">
-						<left>285</left>
-						<top>0</top>
-						<width>300</width>
-						<height>45</height>
-						<font>FontSize_22</font>
-						<textcolor>red</textcolor>
-						<shadowcolor>77000000</shadowcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
-						<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+				    <scroll>true</scroll>
+					  <label fallback="․  ․  ․">$VAR[AddonsLabel2]</label>
             <visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
 				</focusedlayout>
@@ -390,7 +360,7 @@
 						<left>15</left>
 						<top>215</top>
 						<width>212</width>
-						<height>40</height>
+						<height>45</height>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<font>FontSize_20</font>
@@ -404,7 +374,7 @@
 						<left>15</left>
 						<top>215</top>
 						<width>212</width>
-						<height>40</height>
+						<height>45</height>
 						<font>BackFont_22</font>
 						<textcolor>99white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
@@ -486,7 +456,7 @@
 						<left>15</left>
 						<top>215</top>
 						<width>212</width>
-						<height>40</height>
+						<height>45</height>
 						<textcolor>blue</textcolor>
 						<shadowcolor>99000000</shadowcolor>
 						<font>FontSize_20</font>
@@ -500,7 +470,7 @@
 						<left>15</left>
 						<top>215</top>
 						<width>212</width>
-						<height>40</height>
+						<height>45</height>
 						<font>BackFont_22</font>
 						<textcolor>blue</textcolor>
 						<shadowcolor>99000000</shadowcolor>

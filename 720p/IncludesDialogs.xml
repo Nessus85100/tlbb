@@ -206,6 +206,51 @@
 		</control>
   </include>
 
+	<include name="Dialog-OK-YesNo-Progress">
+	  <control type="image">
+		  <left>0</left>
+		  <top>0</top>
+		  <width>665</width>
+		  <height>57</height>
+		  <colordiffuse>blue</colordiffuse>
+		  <texture background="true" border="9">dialogs/other/header.png</texture>
+	  </control>
+	  <control type="image">
+		  <left>0</left>
+		  <top>55</top>
+		  <width>665</width>
+		  <height>178</height>
+		  <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
+	  </control>
+		 <control type="image">
+			<left>2</left>
+			<top>53</top>
+			<width>661</width>
+			<height>4</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">dialogs/other/header_line.png</texture>
+		 </control>
+    <control type="label" id="1">
+      <description>header label</description>
+      <left>15</left>
+      <top>12</top>
+      <width>630</width>
+	    <include>DialogsHeaderLabel</include>
+      <label>Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
+    </control>
+		<control type="textbox" id="9">
+		  <left>15</left>
+			<top>60</top>
+      <width>630</width>
+			<height>90</height>
+		  <align>left</align>
+			<font>FontSize_22</font>
+			<textcolor>99white</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<autoscroll time="3000" delay="3000" repeat="5000">true</autoscroll>
+		  <label>Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
+		</control>
+  </include>
 
 
 	<!-- =========================== -->

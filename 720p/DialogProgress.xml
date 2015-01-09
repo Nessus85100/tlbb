@@ -1,105 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window  id="101">
+<window id="101">
+  <zorder>3</zorder>
 	<defaultcontrol always="true">10</defaultcontrol>
-  <zorder>5</zorder>
 	<controls>
 	 <control type="group">
-		 <left>305</left>
-		 <top>235</top>
-		 <include>DialogAnimation</include>
-     <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>
-		 <control type="image">
-		   <left>0</left>
-			 <top>0</top>
-			 <width>670</width>
-			 <height>57</height>
-			 <colordiffuse>blue</colordiffuse>
-			 <texture background="true" border="9">dialogs/other/header.png</texture>
-		 </control>
-		 <control type="image">
-			 <left>0</left>
-			 <top>55</top>
-			 <width>670</width>
-			 <height>178</height>
-			 <texture background="true" border="39,19,39,19">dialogs/other/body.png</texture>
-		 </control>
-		 <control type="image">
-			<left>2</left>
-			<top>53</top>
-			<width>666</width>
-			<height>4</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true">dialogs/other/header_line.png</texture>
-		 </control>
-     <control type="label" id="1">
-       <description>header label</description>
-       <left>15</left>
-       <top>12</top>
-       <width>630</width>
-	     <include>DialogsHeaderLabel</include>
-       <label>Remove ID to Test, Remove ID to Test</label>
-     </control>
+		<left>310</left>
+		<top>235</top>
+		<include>DialogAnimation</include>
+    <visible>!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog)</visible>
+	  <include>Dialog-OK-YesNo-Progress</include>
 		 <control type="grouplist">
-		  <left>25</left>
-			<top>75</top>
+  		<left>17</left>
+  		<top>168</top>
 			<height>60</height>
-			<width>1190</width>
+			<width>480</width>
 			<align>left</align>
 			<aligny>center</aligny>
-			<itemgap>20</itemgap>
+			<itemgap>7</itemgap>
 			<orientation>horizontal</orientation>
-			<control type="label">
-				<height>48</height>
+  		<control type="label">
+  			<height>48</height>
 				<width min="10" max="150">auto</width>
-				<font>FontSize_50</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>99000000</shadowcolor>
-		    <align>left</align>
-		    <aligny>center</aligny>
-				<scroll>false</scroll>
+  			<font>FontSize_48</font>
+  			<textcolor>white</textcolor>
+  			<shadowcolor>99000000</shadowcolor>
+  	    <align>left</align>
+  			<scroll>false</scroll>
 				<label>$INFO[System.Progressbar,,%]</label>
-				<visible>IntegerGreaterThan(System.Progressbar,0)</visible>
-			</control>
+  		</control>
 			<control type="group">
-				<width>515</width>
-				<control type="label" id="2">
-					<top>0</top>
-				  <description>Header Label</description>
-					<height>25</height>
-					<width>515</width>
+				<width>330</width>
+				<control type="label">
+  			<height>68</height>
+				  <width min="10" max="330">auto</width>
 					<font>FontSize_22</font>
-					<textcolor>99white</textcolor>
+					<textcolor>bbwhite</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 			    <align>left</align>
-			    <aligny>center</aligny>
 					<scroll>false</scroll>
-				<label>Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
-				</control>
-				<control type="label" id="3">
-				  <description>Title Label</description>
-					<top>23</top>
-					<height>25</height>
-					<width>515</width>
-					<font>FontSize_22</font>
-					<textcolor>99white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-			    <align>left</align>
-			    <aligny>center</aligny>
-					<scroll>false</scroll>
-				  <label>Remove ID to Test, Remove ID to Test, Remove ID to Test, Remove ID to Test</label>
+				  <label>$LOCALIZE[31134]...</label>
+				  <visible>IntegerGreaterThan(System.Progressbar,0)</visible>
 				</control>
 			</control>
 		 </control>
-		 <control type="button" id="10">
+		<control type="button" id="10">
 			<description>Cancel button</description>
-			<left>492</left>
-			<top>170</top>
+			<left>490</left>
+			<top>172</top>
 	    <include>DialogsButtonsYesNo</include>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>
 			<ondown>10</ondown>
-		 </control>
+		</control>
 	 </control>
 	</controls>
 </window>

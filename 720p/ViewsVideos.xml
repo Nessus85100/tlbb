@@ -1059,7 +1059,7 @@
 	          <visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes)]</visible>
 					</control>
 					<control type="label">
-						<left>13</left>
+						<left>-45</left>
 						<top>15</top>
 						<width>60</width>
 						<height>60</height>

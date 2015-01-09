@@ -368,11 +368,12 @@
   		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]$INFO[ListItem.Artist, - ]</value>
   		<value>$INFO[ListItem.Label]</value>
   	</variable>	
-  	
+
   	<variable name="MusicLabel2">
-  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-  		<value condition="Container.Content(Songs)">$INFO[ListItem.Duration]</value>
-  		<value>$INFO[ListItem.Label2]</value>
+  		<value condition="Container.Content(Artists) + !IsEmpty(ListItem.Property(Artist_Genre))">$INFO[ListItem.Property(Artist_Genre)]</value>
+  		<value condition="Container.Content(Songs) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration]</value>
+  		<value condition="!IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
+  		<value>$INFO[ListItem.Property(Addon.Version)]</value>
   	</variable>
   
   	<variable name="BannersListMusicLabel">
@@ -413,8 +414,8 @@
   		<value condition="!stringcompare(Container.FolderPath,addons://sources/video/) + !IsEmpty(ListItem.Property(Addon.Broken))">[COLOR=red]$INFO[ListItem.Label2][/COLOR]</value>
   		<value condition="!stringcompare(Container.FolderPath,addons://sources/video/) + IsEmpty(ListItem.Label2)">$INFO[ListItem.Property(Addon.Version)]</value>
   		<value condition="Window.IsActive(Pictures) + Control.IsVisible(560)  + !IsEmpty(ListItem.PictureResolution)">$INFO[ListItem.PictureDateTime,, • ]$INFO[ListItem.PictureResolution]$INFO[ListItem.PictureCamModel, • ]</value>
-  		<value condition="!substring(Container.FolderPath,addons://enabled/)">$INFO[ListItem.Label2]</value>
-  		<value condition="substring(Container.FolderPath,addons://enabled/)">$INFO[ListItem.Property(Addon.Version)]</value>
+  		<value condition="!substring(Container.FolderPath,addons://enabled/) + !IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
+  		<value>$INFO[ListItem.Property(Addon.Version)]</value>
   	</variable>
 
   	<variable name="VarArtBanner">

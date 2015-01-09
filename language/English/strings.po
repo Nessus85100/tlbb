@@ -282,7 +282,9 @@ msgctxt "#31133"
 msgid "Custom Background" <!-- *NOT USED* -->
 msgstr ""
 
-#empty string 31134
+msgctxt "#31134"
+msgid "Complete"
+msgstr ""
 
 msgctxt "#31135"
 msgid "Single Image" <!-- *NOT USED* -->

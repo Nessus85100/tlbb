@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window  id="29">
-	<defaultcontrol always="true">52</defaultcontrol>
-	
-  
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>  
 	<controls>
 
 	 <control type="image">
@@ -36,18 +34,18 @@
 			<ondown>52</ondown>
 			<itemlayout width="135">
 				<control type="image">
-					<left>7</left>
-					<top>297</top>
-					<width>93</width>
-					<height>93</height>
+					<left>8</left>
+					<top>298</top>
+					<width>91</width>
+					<height>91</height>
 					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="windows/logon/profile_icon_diffuse.png">thumbs/thumb_back.png</texture>
 				</control>
 				<control type="image">
-					<left>7</left>
-					<top>297</top>
-					<width>93</width>
-					<height>93</height>
+					<left>8</left>
+					<top>298</top>
+					<width>91</width>
+					<height>91</height>
 					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture fallback="dialogs/profiles/unknown_user.png" diffuse="windows/logon/profile_icon_diffuse.png">$INFO[ListItem.Icon]</texture>
 				</control>
@@ -62,20 +60,20 @@
 			</itemlayout>
 			<focusedlayout width="135">
 				<control type="image">
-					<left>7</left>
-					<top>297</top>
-					<width>93</width>
-					<height>93</height>
+					<left>8</left>
+					<top>298</top>
+					<width>91</width>
+					<height>91</height>
 					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 					<texture diffuse="windows/logon/profile_icon_diffuse.png">thumbs/thumb_back.png</texture>
 					<animation reversible="false" effect="zoom" start="100" end="150" center="auto" time="200">focus</animation>
 					<animation reversible="false" effect="zoom" start="150" end="100" center="auto" time="200">unfocus</animation>
 				</control>
 				<control type="image">
-					<left>7</left>
-					<top>297</top>
-					<width>93</width>
-					<height>93</height>
+					<left>8</left>
+					<top>298</top>
+					<width>91</width>
+					<height>91</height>
 					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture fallback="dialogs/profiles/unknown_user.png" diffuse="windows/logon/profile_icon_diffuse.png">$INFO[ListItem.Icon]</texture>
 					<animation reversible="false" effect="zoom" start="100" end="150" center="auto" time="200">focus</animation>

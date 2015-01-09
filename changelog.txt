@@ -1,3 +1,9 @@
+[B][COLOR=FF56ADDA]v4.0.2 - Release Date 9/1/2015[/COLOR][/B]
+• More work on unifying skin code (WIP).
+• Fixed broken Search on YouTube link. 
+• Added missing localized strings.
+• Several small fixes.
+
 [B][COLOR=FF56ADDA]v4.0.1 - Release Date 6/1/2015[/COLOR][/B]
 • Added new QuickNav Custom Items selection dialog.
 • Fixed missing labels in Skin Settings.

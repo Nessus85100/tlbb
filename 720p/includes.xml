@@ -502,17 +502,17 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1000</width>
-			  <height>55</height>
+			  <height>60</height>
 				<align>left</align>
 				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="label">
-					<height>57</height>
+					<height>53</height>
 					<width min="10" max="1000">auto</width>
 					<label>$INFO[Player.Time]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>FontSize_46</font>
+					<font>FontSize_50</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
@@ -531,7 +531,7 @@
 							<left>0</left>
 							<top>0</top>
 							<width>300</width>
-							<height>35</height>
+							<height>33</height>
 							<label>$LOCALIZE[31316]...</label>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -562,7 +562,7 @@
 							<left>0</left>
 							<top>0</top>
 							<width>300</width>
-							<height>35</height>
+							<height>33</height>
 							<label>$LOCALIZE[209]...</label>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -593,7 +593,7 @@
 						<left>0</left>
 						<top>0</top>
 						<width>300</width>
-						<height>35</height>
+						<height>33</height>
 						<label>$LOCALIZE[31316]...</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -623,7 +623,7 @@
 						<left>0</left>
 						<top>0</top>
 						<width>300</width>
-						<height>35</height>
+						<height>33</height>
 						<label>$LOCALIZE[31316]...</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -653,7 +653,7 @@
 						<left>0</left>
 						<top>0</top>
 						<width>300</width>
-						<height>35</height>
+						<height>33</height>
 						<label>$LOCALIZE[31316]...</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -689,8 +689,8 @@
 							<left>0</left>
 							<top>0</top>
 							<width>300</width>
-							<height>35</height>
-						  <label>$LOCALIZE[31316]...</label>
+							<height>33</height>
+							<label>$LOCALIZE[31316]...</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>NotificationsFont</font>
@@ -720,7 +720,7 @@
 							<left>0</left>
 							<top>0</top>
 							<width>300</width>
-							<height>35</height>
+							<height>33</height>
 							<label>$LOCALIZE[209]...</label>
 							<align>left</align>
 							<aligny>center</aligny>
