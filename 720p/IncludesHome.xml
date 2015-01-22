@@ -6,7 +6,7 @@
 		<!-- ====================== -->
 		<include name="HomeMenuWraplist">
 			<control type="group">
-		    <visible allowhiddenfocus="true">!ControlGroup(22).HasFocus() + !Window.IsActive(1110) + !Window.IsActive(1115) + !Window.IsActive(script-skinshortcuts.xml) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(busy.xml) + !Window.IsActive(ProgressDialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
+		    <visible allowhiddenfocus="true">!ControlGroup(22).HasFocus() + !Window.IsActive(1110) + !Window.IsActive(1115) + !Window.IsActive(VirtualKeyboard) + !Window.IsActive(script-skinshortcuts.xml) + !Window.IsActive(Favourites) + !Window.IsActive(PlayerControls) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(busy.xml) + !Window.IsActive(ProgressDialog) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + ![Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)]</visible>
 		    <include>VisibleHiddenSlideAnimation</include>
 				<control type="wraplist" id="20">
 				 <description>Home Container</description>
@@ -122,7 +122,7 @@
 					<height>208</height>
 					<aspectratio align="center" aligny="top">stretch</aspectratio>
 				  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[HomeWidgetsThumbs]</texture>
-					<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 				  <bordersize>6</bordersize>
 				</control>
 			</itemlayout>
@@ -142,7 +142,7 @@
 					<height>208</height>
 					<aspectratio align="center" aligny="top">stretch</aspectratio>
 				  <texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[HomeWidgetsThumbs]</texture>
-					<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 				  <bordersize>6</bordersize>
 				</control>
 				<control type="image">
@@ -189,7 +189,7 @@
 					<height>182</height>
 					<aspectratio align="center" aligny="center">scale</aspectratio>
 				  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[HomeWidgetsThumbs]</texture>
-					<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 				  <bordersize>6</bordersize>
 				</control>
 			</itemlayout>
@@ -209,7 +209,7 @@
 					<height>182</height>
 					<aspectratio align="center" aligny="center">scale</aspectratio>
 				  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[HomeWidgetsThumbs]</texture>
-					<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 				  <bordersize>6</bordersize>
 				</control>
 				<control type="image">

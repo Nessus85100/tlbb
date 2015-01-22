@@ -41,7 +41,7 @@
 				<width>295</width>
 				<height>165</height>
 				<aspectratio aligny="center" align="center">stretch</aspectratio>
-				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
+				<texture background="true" border="10">thumbs/thumb_border.png</texture>
 			</control>
 			<control type="image">
 				<description>Landscape Preview Thumb</description>
@@ -86,7 +86,7 @@
 				<width>134</width>
 				<height>80</height>
 				<aspectratio aligny="center" align="center">stretch</aspectratio>
-				<texture background="true" border="10">dialogs/other/iconborder_black.png</texture>
+				<texture background="true" border="10">thumbs/thumb_border.png</texture>
 				<visible>!Stringcompare(Skin.String(PreviewThumb),3)</visible>
 			</control>
 			<control type="image">

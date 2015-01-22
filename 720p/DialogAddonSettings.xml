@@ -94,7 +94,7 @@
 				<control type="radiobutton" id="4">
 					<description>Default RadioButton</description>
 					<textwidth>580</textwidth>
-					<radioleft>578</radioleft>
+					<radioposx>578</radioposx>
 			    <include>SettingsRadioButton</include>    
 				</control>
 				<control type="spincontrolex" id="5">
@@ -134,7 +134,7 @@
 				<control type="grouplist" id="10001">
 					<left>0</left>
 					<top>0</top>
-					<width>0</width>
+					<width>905</width>
 					<height>0</height>
 					<itemgap>0</itemgap>
 					<align>left</align>

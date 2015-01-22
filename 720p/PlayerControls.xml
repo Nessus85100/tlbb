@@ -615,7 +615,7 @@
 						<height>200</height>
 						<texture background="true" fallback="thumbs/fallback_poster.png">$VAR[VideoPlayerThumb]</texture>
 						<aspectratio aligny="center" scalediffuse="false">stretch</aspectratio>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>7</bordersize>
 					</control>
 					<control type="image">
@@ -670,7 +670,7 @@
 						<height>200</height>
 						<texture background="true" fallback="thumbs/fallback_square.png">$VAR[VideoPlayerThumb]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>[Player.HasVideo + VideoPlayer.Content(LiveTV)]</visible>
 					</control>
@@ -682,7 +682,7 @@
 						<height>200</height>
 						<texture background="true">$INFO[VideoPlayer.Cover]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>[Player.HasVideo + !VideoPlayer.Content(LiveTV)]</visible>
 					</control>
@@ -694,7 +694,7 @@
 						<height>200</height>
 						<texture background="true" fallback="thumbs/fallback_square.png">$INFO[Player.Art(thumb)]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-						<bordertexture border="15">dialogs/other/iconborder_black.png</bordertexture>
+					  <bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					  <visible>Player.HasAudio</visible>
 					</control>

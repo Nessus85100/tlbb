@@ -1,3 +1,11 @@
+[B][COLOR=FF56ADDA]v4.0.2 - Release Date 22/1/2015[/COLOR][/B]
+• Final work (hopefully) on unifying skin code.
+• Fixed several bugs in TLBB Settings dialog.
+• Fixed several bugs in Weather window and dialogs.
+• Fixed Save/Browse bugs in SmartPlaylistEditor dialogs.
+• Fixed OK dialogs text messages bug.
+• Several other tweaks and small fixes.
+
 [B][COLOR=FF56ADDA]v4.0.2 - Release Date 9/1/2015[/COLOR][/B]
 • More work on unifying skin code (WIP).
 • Fixed broken Search on YouTube link. 

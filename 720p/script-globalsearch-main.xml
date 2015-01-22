@@ -50,8 +50,8 @@
 					<control type="fixedlist" id="111">
 						<visible>Container(9111).HasFocus(1)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -64,7 +64,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -73,8 +73,8 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<font>FontSize_20</font>
 								<textcolor>88white</textcolor>
@@ -83,8 +83,8 @@
 								<label>$INFO[ListItem.Property(Genre)]</label>
 							</control>
 							<control type="image">
-								<posx>583</posx>
-								<posy>15</posy>
+								<left>585</left>
+								<top>15</top>
 								<width>128</width>
 								<height>22</height>
 								<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -95,44 +95,38 @@
 						<focusedlayout width="560" height="265">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
+				        <include>BannersView_Panel</include>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>741</width>
-									<height>255</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>21</posy>
-									<width>150</width>
-									<height>213</height>
-									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Icon)]</texture>
+    							<left>18</left>
+    							<top>18</top>
+    							<width>153</width>
+    							<height>217</height>
+									<texture fallback="thumbs/fallback_poster_tp.png">$INFO[ListItem.Property(Icon)]</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+									<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>21</posx>
-									<posy>21</posy>
-									<width>150</width>
-									<height>213</height>
+    							<left>18</left>
+    							<top>18</top>
+    							<width>153</width>
+    							<height>217</height>
 									<texture>overlays/unwatched/thumbs/UnWatched_Poster.png</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
 									<bordersize>6</bordersize>
 									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 								</control>
 								<control type="image">
-									<posx>583</posx>
-									<posy>207</posy>
+									<left>585</left>
+									<top>207</top>
 									<width>128</width>
 									<height>22</height>
 									<aspectratio align="right">keep</aspectratio>
 									<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 								</control>
 								<control type="label">
-									<posx>180</posx>
-									<posy>25</posy>
+									<left>180</left>
+									<top>22</top>
 									<width>530</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
@@ -141,8 +135,8 @@
 									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
-									<posx>180</posx>
-									<posy>48</posy>
+									<left>180</left>
+									<top>44</top>
 									<width>520</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
@@ -151,22 +145,22 @@
 									<label>$INFO[ListItem.Property(Genre)]</label>
 								</control>
 								<control type="textbox" id="4">
-									<posx>180</posx>
-									<posy>80</posy>
-									<width>530</width>
-									<height>110</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
+    							<left>180</left>
+    							<top>73</top>
+    							<width>535</width>
+    							<height>120</height>
+    							<font>TextboxFont_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
 								  <align>justify</align>
 									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 								</control>
 								<control type="label">
-									<posx>180</posx>
-									<posy>198</posy>
+									<left>180</left>
+									<top>207</top>
 									<width>380</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -190,8 +184,8 @@
 					<control type="fixedlist" id="121">
 						<visible>Container(9111).HasFocus(2)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -204,7 +198,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -213,8 +207,8 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<font>FontSize_20</font>
 								<textcolor>88white</textcolor>
@@ -223,8 +217,8 @@
 								<label>$INFO[ListItem.Property(Genre)]</label>
 							</control>
 							<control type="image">
-								<posx>583</posx>
-								<posy>15</posy>
+								<left>585</left>
+								<top>15</top>
 								<width>128</width>
 								<height>22</height>
 								 <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -235,45 +229,39 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
+				        <include>BannersView_Panel</include>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>741</width>
-									<height>255</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>21</posy>
-									<width>150</width>
-									<height>213</height>
-									<texture fallback="thumbs/fallback_poster.png">$INFO[ListItem.Property(Icon)]</texture>
+    							<left>18</left>
+    							<top>18</top>
+    							<width>705</width>
+    							<height>123</height>
+									<texture fallback="thumbs/fallback_banner_tp.png">$INFO[ListItem.Property(Art(banner))]</texture>
 									<aspectratio align="center" aligny="center">stretch</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+									<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
+    						<control type="image">
+    							<left>18</left>
+    							<top>18</top>
+    							<width>705</width>
+    							<height>123</height>
+    							<aspectratio align="center" aligny="center">stretch</aspectratio>
+    							<texture background="true">overlays/unwatched/banners/UnWatched_Banner.png</texture>
+    							<bordersize>6</bordersize>
+    							<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+    						</control>
 								<control type="image">
-									<posx>21</posx>
-									<posy>21</posy>
-									<width>150</width>
-									<height>213</height>
-									<texture>overlays/unwatched/thumbs/UnWatched_Poster.png</texture>
-									<aspectratio align="center" aligny="center">stretch</aspectratio>
-									<bordersize>6</bordersize>
-									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-								</control>
-								<control type="image">
-									<posx>583</posx>
-									<posy>207</posy>
-									<width>128</width>
-									<height>22</height>
+								  <left>585</left>
+								  <top>205</top>
+								  <width>128</width>
+								  <height>22</height>
 									<aspectratio align="right">keep</aspectratio>
 									<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 								</control>
 								<control type="label">
-									<posx>180</posx>
-									<posy>25</posy>
-									<width>530</width>
+    							<left>25</left>
+    							<top>143</top>
+    							<width>690</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -281,32 +269,20 @@
 									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
-									<posx>180</posx>
-									<posy>48</posy>
-									<width>520</width>
+    							<left>25</left>
+    							<top>165</top>
+    							<width>690</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
 									<label>$INFO[ListItem.Property(Genre)]</label>
 								</control>
-								<control type="textbox" id="4">
-									<posx>180</posx>
-									<posy>80</posy>
-									<width>530</width>
-									<height>110</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-								  <align>justify</align>
-									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
-								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-								</control>
 								<control type="label">
-									<posx>180</posx>
-									<posy>198</posy>
+									<left>25</left>
+									<top>207</top>
 									<width>380</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -344,8 +320,8 @@
 					<control type="fixedlist" id="141">
 						<visible>Container(9111).HasFocus(4)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -358,7 +334,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<label>$INFO[ListItem..Property(Season),,x]$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
@@ -366,8 +342,8 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<label>$INFO[ListItem.Property(TvShowTitle)]</label>
 								<font>FontSize_20</font>
@@ -375,8 +351,8 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>582</posx>
-								<posy>15</posy>
+								<left>585</left>
+								<top>15</top>
 								<width>128</width>
 								<height>22</height>
 								<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -387,78 +363,74 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
-								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
-									<aspectratio align="center" aligny="center">scale</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
-									<bordersize>6</bordersize>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture>overlays/unwatched/thumbs/UnWatched_Square.png</texture>
-									<aspectratio align="center" aligny="center">stretch</aspectratio>
-									<bordersize>6</bordersize>
-									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-								</control>
-								<control type="image">
-									<posx>582</posx>
-									<posy>205</posy>
-									<width>128</width>
+				        <include>BannersView_Panel</include>
+    						<control type="image">
+    							<left>18</left>
+    							<top>18</top>
+    							<width>290</width>
+    							<height>182</height>
+    							<aspectratio align="center" aligny="top">scale</aspectratio>
+    							<texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Thumb]</texture>
+    							<bordertexture border="20">thumbs/thumb_border.png</bordertexture>
+    							<bordersize>6</bordersize>
+    						</control>
+    						<control type="image">
+    							<left>18</left>
+    							<top>18</top>
+    							<width>290</width>
+    							<height>182</height>
+    							<texture background="true">overlays/unwatched/banners/UnWatched_Episodes.png</texture>
+    							<aspectratio align="center" aligny="center">stretch</aspectratio>
+    							<bordersize>6</bordersize>
+    							<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+    						</control>
+    						<control type="image">
+    							<left>580</left>
+    							<top>207</top>
+    							<width>128</width>
+    							<height>22</height>
+    						  <texture fallback="rating/rating0.png">$INFO[ListItem.StarRating,rating/,]</texture>
+    							<aspectratio align="right">keep</aspectratio>
+    		          <visible>!Stringcompare(ListItem.Label,..)</visible>
+    						</control>
+    						<control type="label">
+    							<left>315</left>
+    							<top>22</top>
+    							<width>405</width>
+    							<font>FontSize_26</font>
+    							<textcolor>white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
+    							<align>left</align>
+    							<label>$INFO[ListItem.Label]</label>
+    						</control>
+    						<control type="label">
+    							<left>315</left>
+    							<top>47</top>
+    							<width>400</width>
+    							<font>FontSize_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
+    		          <selectedcolor>99white</selectedcolor>
+    							<align>left</align>
+    							<label>$INFO[ListItem.Property(TvShowTitle),, ]$INFO[ListItem..Property(Season),,x]$INFO[ListItem.Property(Episode)]</label>
+    						</control>
+    						<control type="textbox" id="4">
+    							<left>315</left>
+    							<top>76</top>
+    							<width>400</width>
+    							<height>120</height>
+    							<font>TextboxFont_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
+    						  <align>justify</align>
+    							<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
+    						  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+    						</control>
+								<control type="label">
+									<left>25</left>
+									<top>207</top>
+									<width>470</width>
 									<height>22</height>
-								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
-									<aspectratio align="right">keep</aspectratio>
-								</control>
-								<control type="label">
-									<posx>240</posx>
-									<posy>25</posy>
-									<width>470</width>
-									<font>FontSize_26</font>
-									<textcolor>white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-									<align>left</align>
-									<label>$INFO[ListItem.Label]</label>
-								</control>
-								<control type="label">
-									<posx>240</posx>
-									<posy>50</posy>
-									<width>470</width>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-									<align>left</align>
-									<label>$INFO[ListItem.Property(TvShowTitle),, ]$INFO[ListItem..Property(Season),,x]$INFO[ListItem.Property(Episode)]</label>
-								</control>
-								<control type="textbox" id="4">
-									<posx>240</posx>
-									<posy>80</posy>
-									<width>470</width>
-									<height>105</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-								  <align>justify</align>
-									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
-								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-								</control>
-								<control type="label">
-									<posx>240</posx>
-									<posy>198</posy>
-									<width>470</width>
-									<height>35</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -482,8 +454,8 @@
 					<control type="fixedlist" id="151">
 						<visible>Container(9111).HasFocus(5)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -496,7 +468,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -504,82 +476,95 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<font>FontSize_20</font>
 								<textcolor>88white</textcolor>
 								<shadowcolor>77000000</shadowcolor>
 								<label>$INFO[ListItem.Property(Artist)]</label>
 							</control>
+							<control type="image">
+								<left>585</left>
+								<top>15</top>
+								<width>128</width>
+								<height>22</height>
+								<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
+								<aspectratio align="right">keep</aspectratio>
+								<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
+							</control>
 						</itemlayout>
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
-								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
-									<aspectratio align="center" aligny="center">scale</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
-									<bordersize>6</bordersize>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture>overlays/unwatched/thumbs/UnWatched_Square.png</texture>
-									<aspectratio align="center" aligny="center">stretch</aspectratio>
-									<bordersize>6</bordersize>
-									<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-								</control>
-								<control type="label">
-									<posx>240</posx>
-									<posy>25</posy>
-									<width>470</width>
-									<font>FontSize_26</font>
-									<textcolor>white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-									<align>left</align>
-									<label>$INFO[ListItem.Label]</label>
-								</control>
-								<control type="label">
-									<posx>240</posx>
-									<posy>50</posy>
-									<width>470</width>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-									<align>left</align>
+				        <include>BannersView_Panel</include>
+    						<control type="image">
+    							<left>18</left>
+    							<top>18</top>
+    							<width>290</width>
+    							<height>182</height>
+    							<aspectratio align="center" aligny="top">scale</aspectratio>
+    							<texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[ListItem.Thumb]</texture>
+    							<bordertexture border="20">thumbs/thumb_border.png</bordertexture>
+    							<bordersize>6</bordersize>
+    						</control>
+    						<control type="image">
+    							<left>18</left>
+    							<top>18</top>
+    							<width>290</width>
+    							<height>182</height>
+    							<texture background="true">overlays/unwatched/banners/UnWatched_Episodes.png</texture>
+    							<aspectratio align="center" aligny="center">stretch</aspectratio>
+    							<bordersize>6</bordersize>
+    							<visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+    						</control>
+    						<control type="image">
+    							<left>580</left>
+    							<top>207</top>
+    							<width>128</width>
+    							<height>22</height>
+    						  <texture fallback="rating/rating0.png">$INFO[ListItem.StarRating,rating/,]</texture>
+    							<aspectratio align="right">keep</aspectratio>
+    		          <visible>!Stringcompare(ListItem.Label,..)</visible>
+    						</control>
+    						<control type="label">
+    							<left>315</left>
+    							<top>22</top>
+    							<width>405</width>
+    							<font>FontSize_26</font>
+    							<textcolor>white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
+    							<align>left</align>
+    							<label>$INFO[ListItem.Label]</label>
+    						</control>
+    						<control type="label">
+    							<left>315</left>
+    							<top>47</top>
+    							<width>400</width>
+    							<font>FontSize_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
+    		          <selectedcolor>99white</selectedcolor>
+    							<align>left</align>
 									<label>$INFO[ListItem.Property(Artist)]</label>
-								</control>
-								<control type="textbox" id="4">
-									<posx>240</posx>
-									<posy>80</posy>
-									<width>470</width>
-									<height>105</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-								  <align>justify</align>
-									<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
-								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-								</control>
+    						</control>
+    						<control type="textbox" id="4">
+    							<left>315</left>
+    							<top>76</top>
+    							<width>400</width>
+    							<height>120</height>
+    							<font>TextboxFont_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
+    						  <align>justify</align>
+    							<label fallback="195">$INFO[ListItem.Property(Plot)]</label>
+    						  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+    						</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>198</posy>
+									<left>25</left>
+									<top>207</top>
 									<width>470</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -603,8 +588,8 @@
 					<control type="fixedlist" id="161">
 						<visible>Container(9111).HasFocus(6)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -617,7 +602,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -625,8 +610,8 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<font>FontSize_20</font>
 								<textcolor>88white</textcolor>
@@ -637,27 +622,21 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
+				        <include>BannersView_Panel</include>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
+    							<left>18</left>
+    							<top>18</top>
+    							<width>220</width>
+    							<height>217</height>
+									<texture fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Thumb]</texture>
 									<aspectratio align="center" aligny="center">scale</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+									<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>25</posy>
-									<width>470</width>
+									<left>245</left>
+									<top>22</top>
+									<width>475</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -665,9 +644,9 @@
 									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>50</posy>
-									<width>470</width>
+									<left>245</left>
+									<top>47</top>
+									<width>475</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -675,27 +654,27 @@
 									<label>$INFO[ListItem.Property(Artist_Genre)]</label>
 								</control>
 								<control type="textbox" id="4">
-									<posx>240</posx>
-									<posy>80</posy>
-									<width>470</width>
-									<height>105</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-								  <align>justify</align>
+    							<left>245</left>
+    							<top>77</top>
+    							<width>470</width>
+    							<height>120</height>
+    						  <align>justify</align>
+    							<font>TextboxFont_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
 									<label fallback="195">$INFO[ListItem.Property(Artist_Description)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>198</posy>
+									<left>245</left>
+									<top>207</top>
 									<width>470</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
 									<align>left</align>
-                  <label>$INFO[ListItem.Property(Artist_YearsActive), $LOCALIZE[21898]  ]</label>
+                  <label>$INFO[ListItem.Property(Artist_YearsActive),$LOCALIZE[21898]  ]</label>
 								</control>
 							</control>
 						</focusedlayout>
@@ -714,8 +693,8 @@
 					<control type="fixedlist" id="171">
 						<visible>Container(9111).HasFocus(7)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -728,7 +707,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
@@ -736,8 +715,8 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<label>$INFO[ListItem.Property(Artist)]</label>
 								<font>FontSize_20</font>
@@ -745,8 +724,8 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>582</posx>
-								<posy>15</posy>
+								<left>585</left>
+								<top>15</top>
 								<width>128</width>
 								<height>22</height>
 								<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -757,35 +736,29 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
+				        <include>BannersView_Panel</include>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
+    							<left>18</left>
+    							<top>18</top>
+    							<width>220</width>
+    							<height>217</height>
+									<texture fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Thumb]</texture>
 									<aspectratio align="center" aligny="center">scale</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+									<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>582</posx>
-									<posy>205</posy>
+									<left>585</left>
+									<top>207</top>
 									<width>128</width>
 									<height>22</height>
 								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 									<aspectratio align="right">keep</aspectratio>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>25</posy>
-									<width>470</width>
+									<left>245</left>
+									<top>22</top>
+									<width>475</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -793,9 +766,9 @@
 									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>50</posy>
-									<width>470</width>
+									<left>245</left>
+									<top>47</top>
+									<width>475</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -803,22 +776,22 @@
 									<label>$INFO[ListItem.Property(Artist)]</label>
 								</control>
 								<control type="textbox" id="4">
-									<posx>240</posx>
-									<posy>80</posy>
-									<width>470</width>
-									<height>105</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-								  <align>justify</align>
+    							<left>245</left>
+    							<top>77</top>
+    							<width>470</width>
+    							<height>120</height>
+    						  <align>justify</align>
+    							<font>TextboxFont_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
 									<label fallback="195">$INFO[ListItem.Property(Album_Description)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>198</posy>
+									<left>245</left>
+									<top>207</top>
 									<width>470</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -842,8 +815,8 @@
 					<control type="fixedlist" id="181">
 						<visible>Container(9111).HasFocus(8)</visible>
 				    <include>OpenCloseSlideAnimation</include>
-						<posx>270</posx>
-						<posy>110</posy>
+						<left>270</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9111</onleft>
@@ -856,7 +829,7 @@
 				    <scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="65">
 							<control type="label">
-								<posx>40</posx>
+								<left>40</left>
 								<width>550</width>
 								<label>$INFO[ListItem.Label]</label>
 								<font>FontSize_22</font>
@@ -864,8 +837,8 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="label">
-								<posx>40</posx>
-								<posy>23</posy>
+								<left>40</left>
+								<top>23</top>
 								<width>550</width>
 								<label>$INFO[ListItem.Property(Album)]</label>
 								<font>FontSize_20</font>
@@ -873,8 +846,8 @@
 								<shadowcolor>77000000</shadowcolor>
 							</control>
 							<control type="image">
-								<posx>582</posx>
-								<posy>15</posy>
+								<left>585</left>
+								<top>15</top>
 								<width>128</width>
 								<height>22</height>
 								<texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
@@ -885,35 +858,29 @@
 						<focusedlayout width="560" height="260">
 							<control type="group">
 				        <include>BannerListFocusAnimation</include>
+				        <include>BannersView_Panel</include>
 								<control type="image">
-									<posx>0</posx>
-									<posy>0</posy>
-									<width>746</width>
-									<height>252</height>
-						      <texture background="true">views/banners/banner_panel.png</texture>
-								</control>
-								<control type="image">
-									<posx>21</posx>
-									<posy>20</posy>
-									<width>210</width>
-									<height>212</height>
-									<texture fallback="thumbs/fallback_square.png">$INFO[ListItem.Thumb]</texture>
+    							<left>18</left>
+    							<top>18</top>
+    							<width>220</width>
+    							<height>217</height>
+									<texture fallback="thumbs/fallback_square_tp.png">$INFO[ListItem.Thumb]</texture>
 									<aspectratio align="center" aligny="center">scale</aspectratio>
-									<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+									<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 									<bordersize>6</bordersize>
 								</control>
 								<control type="image">
-									<posx>582</posx>
-									<posy>205</posy>
+									<left>585</left>
+									<top>207</top>
 									<width>128</width>
 									<height>22</height>
 								  <texture fallback="rating/rating0.png">$INFO[ListItem.Property(StarRating),rating/,]</texture>
 									<aspectratio align="right">keep</aspectratio>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>25</posy>
-									<width>470</width>
+									<left>245</left>
+									<top>22</top>
+									<width>475</width>
 									<font>FontSize_26</font>
 									<textcolor>white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -921,9 +888,9 @@
 									<label>$INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>50</posy>
-									<width>470</width>
+									<left>245</left>
+									<top>47</top>
+									<width>475</width>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -931,22 +898,22 @@
 									<label>$INFO[ListItem.Property(Album)] $INFO[ListItem.Property(Year), (,)]</label>
 								</control>
 								<control type="textbox" id="4">
-									<posx>240</posx>
-									<posy>80</posy>
-									<width>470</width>
-									<height>105</height>
-									<font>FontSize_20</font>
-									<textcolor>99white</textcolor>
-						      <shadowcolor>99000000</shadowcolor>
-								  <align>justify</align>
+    							<left>245</left>
+    							<top>77</top>
+    							<width>470</width>
+    							<height>120</height>
+    						  <align>justify</align>
+    							<font>TextboxFont_20</font>
+    							<textcolor>99white</textcolor>
+    				      <shadowcolor>99000000</shadowcolor>
 									<label fallback="195">$INFO[ListItem.Property(Comment)]</label>
 								  <autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>198</posy>
+									<left>245</left>
+									<top>207</top>
 									<width>470</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -955,10 +922,10 @@
 							    <visible>!IntegerGreaterThan(ListItem.Property(Track),9)</visible>
 								</control>
 								<control type="label">
-									<posx>240</posx>
-									<posy>198</posy>
+									<left>245</left>
+									<top>207</top>
 									<width>470</width>
-									<height>35</height>
+									<height>22</height>
 									<font>FontSize_20</font>
 									<textcolor>99white</textcolor>
 						      <shadowcolor>99000000</shadowcolor>
@@ -976,8 +943,8 @@
 		 <!-- Top Content Info -->
 		 <!-- ================ -->
 		 <control type="group">
-				<posx>105</posx>
-				<posy>25</posy>
+				<left>105</left>
+				<top>25</top>
 		    <include>OpenCloseSlideAnimation</include>
 		    <include>VisibleHiddenSlideAnimation</include>
 				<include>ShutdownMenuAnimation</include>
@@ -986,8 +953,8 @@
 			     <effect type="slide" start="0" end="-60" time="350" tween="sine" easing="inout"/>
 			  </animation>  
 				<control type="grouplist">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<height>70</height>
 					<width>1000</width>
 					<align>left</align>
@@ -1039,16 +1006,16 @@
 	      <effect type="slide" start="0,0" end="0,-55" time="300" tween="sine" easing="inout" />
 		  </animation>					
       <control type="image">
-        <posx>30</posx>
-        <posy>13</posy>
+        <left>30</left>
+        <top>13</top>
 				<width>380</width>
 				<height>75</height>
 				<texture>dialogs/menus/topmenus_search.png</texture>
         <aspectratio>stretch</aspectratio>
       </control>
       <control type="image">
-        <posx>30</posx>
-        <posy>88</posy>
+        <left>30</left>
+        <top>88</top>
 				<width>360</width>
 				<height>37</height>
 				<texture border="15">dialogs/menus/topmenus_empty.png</texture>
@@ -1064,8 +1031,8 @@
         <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(189)">Conditional</animation>
       </control>
       <control type="image">
-        <posx>30</posx>
-        <posy>125</posy>
+        <left>30</left>
+        <top>125</top>
 				<width>380</width>
 				<height>22</height>
 				<texture>dialogs/menus/bottom_search.png</texture>
@@ -1080,8 +1047,8 @@
         <animation effect="slide" start="0,0" end="0,37" time="0" condition="Control.IsVisible(189)">Conditional</animation>
       </control>
 			<control type="list" id="9111">
-				<posx>30</posx>
-				<posy>88</posy>
+				<left>30</left>
+				<top>88</top>
 				<width>380</width>
 				<height>540</height>
 				<onleft>100</onleft>
@@ -1092,16 +1059,16 @@
 				<scrolltime>300</scrolltime>
 				<itemlayout height="37" width="380">
 		      <control type="image">
-		        <posx>0</posx>
-		        <posy>0</posy>
+		        <left>0</left>
+		        <top>0</top>
 						<width>360</width>
 						<height>37</height>
 						<texture border="39,0,39,0">dialogs/menus/topmenus_nf.png</texture>
 		        <aspectratio>stretch</aspectratio>
 		      </control>
 					<control type="label">
-						<posx>50</posx>
-						<posy>0</posy>
+						<left>50</left>
+						<top>0</top>
 						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
@@ -1112,8 +1079,8 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
@@ -1126,16 +1093,16 @@
 				</itemlayout>
 				<focusedlayout height="37" width="380">
 		      <control type="image">
-		        <posx>0</posx>
-		        <posy>0</posy>
+		        <left>0</left>
+		        <top>0</top>
 						<width>360</width>
 						<height>37</height>
 						<texture border="39,0,39,0">dialogs/menus/topmenus_fo.png</texture>
 		        <aspectratio>stretch</aspectratio>
 		      </control>
 					<control type="label">
-						<posx>50</posx>
-						<posy>0</posy>
+						<left>50</left>
+						<top>0</top>
 						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
@@ -1146,8 +1113,8 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>330</width>
 						<height>37</height>
 						<font>FontSize_22</font>
@@ -1217,8 +1184,8 @@
 
 			<control type="button" id="198">
 				<!-- Hide this Control and use the list to pass the label -->
-				<posx>2000</posx>
-				<posy>2000</posy>
+				<left>2000</left>
+				<top>2000</top>
 				<onup>9111</onup>
 				<ondown>9111</ondown>
 				<onleft>101</onleft>
@@ -1226,8 +1193,8 @@
 			</control>
 			<control type="label" id="199">
 				<!-- Hide this Control and use the list to pass the label -->
-				<posx>2000</posx>
-				<posy>2000</posy>
+				<left>2000</left>
+				<top>2000</top>
 				<width>0</width>
 				<height>0</height>
 				<label>-</label>

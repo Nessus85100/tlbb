@@ -45,7 +45,7 @@
 				</itemlayout>
 				<focusedlayout height="50" width="295">
 					<control type="image">
-						<left>0</left>
+						<right>0</right>
 						<top>0</top>
 						<width>295</width>
 						<height>49</height>

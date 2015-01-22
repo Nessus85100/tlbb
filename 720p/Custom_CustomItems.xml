@@ -167,7 +167,7 @@
   			<height>49</height>
   			<aspectratio align="center" aligny="center">keep</aspectratio>
   			<texture background="true" fallback="DefaultShortcut.png">$VAR[CustomItemThumb]</texture>
-  			<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+  			<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
   			<bordersize>5</bordersize>
   		</control>
 		</control>

@@ -289,7 +289,6 @@
 	    <textoffsety>10</textoffsety>
 			<pulseonselect>false</pulseonselect>
 	</include>
--->
 	<include name="AddonSettingsButton">
 			<description>Default Button</description>
 			<width>645</width>
@@ -332,6 +331,7 @@
 			<textoffsety>11</textoffsety>
 			<pulseonselect>false</pulseonselect>
 	</include>
+-->
 	<include name="SettingsButtonLeft">
 			<description>Default Category Button</description>
 			<width>295</width>
@@ -1143,8 +1143,8 @@
 
 	<variable name="ManageDialogHeader">
 		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),defualtquicknav)">$LOCALIZE[31376]</value>
-		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),hidevideoviews)">$LOCALIZE[31156]</value>
-		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),hidemusicviews)">$LOCALIZE[31157]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),managevideoviews)">$LOCALIZE[31156]</value>
+		<value condition="StringCompare(Window(SkinSettings).Property(ManageButtons),managemusicviews)">$LOCALIZE[31157]</value>
 	</variable>
 
 	<variable name="DiffuseColorQuickNav_Blue">
@@ -1191,12 +1191,6 @@
 	<variable name="NetworkTypeIcons">
 		<value condition="System.HasNetwork">windows/home/network_state/net_wired.png</value>
 		<value>windows/home/network_state/net_wifi.png</value>
-	</variable>
-
-	<variable name="TVGuidePreviewThumbsLabels">
-		<value condition="Stringcompare(Skin.String(PreviewThumb),1)">$LOCALIZE[31218]</value>
-		<value condition="Stringcompare(Skin.String(PreviewThumb),2)">$LOCALIZE[31219]</value>
-		<value condition="Stringcompare(Skin.String(PreviewThumb),3)">$LOCALIZE[20445]</value>
 	</variable>
 
 	<variable name="WeatherViewsLabels">

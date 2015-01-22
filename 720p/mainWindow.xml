@@ -1,4 +1,4 @@
-<window id="5533">
+<window id="1130">
     <defaultcontrol always="true">1000</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
@@ -6,7 +6,7 @@
 	 <control type="group">
     <include>OpenCloseSlideAnimation</include>
     <include>VisibleHiddenSlideAnimation</include>
-		<visible>!Window.IsActive(selectWindow.xml) + !Window.IsActive(contexMenu.xml) + !Window.IsActive(getPasskey.xml) + !Window.IsActive(favourites) + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]</visible>
+		<visible>!Window.IsActive(selectWindow.xml) + !Window.IsActive(contexMenu.xml) + !Window.IsActive(getPasskey.xml) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(favourites) + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(okdialog) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml) + ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]</visible>
 		<control type="image">
 		  <include>FullscreenDimensions</include>
 			<texture background="true">windows/tlbb_settings/bg.png</texture>
@@ -53,7 +53,7 @@
 				<scrolltime>300</scrolltime>
 				<itemlayout height="50" width="250">
 					<control type="label">
-						<left>235</left>
+						<right>15</right>
 						<top>0</top>
 						<width>245</width>
 						<height>49</height>
@@ -65,7 +65,7 @@
 				</itemlayout>
 				<focusedlayout height="50" width="250">
 					<control type="image">
-						<left>0</left>
+						<right>0</right>
 						<top>0</top>
 						<width>250</width>
 						<height>49</height>
@@ -73,7 +73,7 @@
             <animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(1000)">Conditional</animation>
 					</control>
 					<control type="label">
-						<left>235</left>
+						<right>15</right>
 						<top>0</top>
 						<width>245</width>
 						<height>49</height>
@@ -132,7 +132,7 @@
   							<label>• $INFO[ListItem.Label]</label>
   						</control>
   						<control type="label">
-  							<left>625</left>
+  							<right>15</right>
   							<top>0</top>
   							<width>200</width>
   							<height>49</height>
@@ -200,7 +200,7 @@
                 <visible>Control.HasFocus(1100)</visible>
   						</control>
   						<control type="label">
-  							<left>625</left>
+  							<right>15</right>
   							<top>0</top>
   							<width>200</width>
   							<height>49</height>
@@ -224,7 +224,7 @@
                 <visible>!Control.HasFocus(1100)</visible>
   						</control>
   						<control type="label">
-  							<left>625</left>
+  							<right>15</right>
   							<top>0</top>
   							<width>200</width>
   							<height>49</height>
@@ -312,7 +312,7 @@
             </control>
             <!-- Connection Address -->
             <control type="label">
-                <left>625</left>
+                <right>15</right>
                 <top>5</top>
                 <width>330</width>
                 <height>20</height>
@@ -334,7 +334,7 @@
             </control>
             <!-- WiFi Signal Value -->
             <control type="label">
-                <left>585</left>
+                <right>60</right>
                 <top>26</top>
                 <width>100</width>
                 <height>20</height>
@@ -347,7 +347,7 @@
             </control>
             <!-- WiFi Signal -->
 						<control type="image">
-  							<left>588</left>
+  							<left>593</left>
   							<top>27</top>
   							<width>40</width>
   							<height>16</height>
@@ -358,7 +358,7 @@
 						</control>
             <!-- Secure Symbol -->
 						<control type="image">
-  							<left>607</left>
+  							<left>612</left>
   							<top>26</top>
   							<width>20</width>
   							<height>18</height>
@@ -415,7 +415,7 @@
               </control>
               <!-- Connection Address -->
               <control type="label">
-                  <left>625</left>
+                  <right>15</right>
                   <top>5</top>
                   <width>330</width>
                   <height>20</height>
@@ -437,11 +437,11 @@
               </control>
               <!-- WiFi Signal Value -->
               <control type="label">
-                  <left>585</left>
+                  <right>60</right>
                   <top>26</top>
                   <width>100</width>
                   <height>20</height>
-			            <align>right</align>
+  		            <align>right</align>
                   <font>FontSize_16</font>
                   <textcolor>white</textcolor>
                   <label>$INFO[ListItem.Property(Strength),,%]</label>
@@ -450,7 +450,7 @@
               </control>
               <!-- WiFi Signal -->
   						<control type="image">
-    							<left>588</left>
+    							<left>593</left>
     							<top>27</top>
     							<width>40</width>
     							<height>16</height>
@@ -461,7 +461,7 @@
   						</control>
               <!-- Secure Symbol -->
   						<control type="image">
-    							<left>607</left>
+    							<left>612</left>
     							<top>26</top>
     							<width>20</width>
     							<height>18</height>
@@ -475,7 +475,7 @@
         <!-- Bluetooth Content -->
         <control type="label" id="1301">
             <left>0</left>
-            <top>165</top>
+            <top>115</top>
             <width>645</width>
             <height>20</height>
             <font>FontSize_20</font>
@@ -517,7 +517,7 @@
             </control>
             <!-- Connection Address -->
             <control type="label">
-                <left>625</left>
+                <right>15</right>
                 <top>5</top>
                 <width>330</width>
                 <height>20</height>
@@ -576,7 +576,7 @@
             </control>
             <!-- Connection Address -->
             <control type="label">
-                <left>625</left>
+                <right>15</right>
                 <top>5</top>
                 <width>330</width>
                 <height>20</height>
@@ -619,7 +619,7 @@
       			<height>115</height>
       			<aspectratio align="center" aligny="center">stretch</aspectratio>
       			<texture>$INFO[System.AddonIcon(skin.tlbb)]</texture>
-						<bordertexture border="6">dialogs/other/iconborder.png</bordertexture>
+						<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
       		</control>
     		  <control type="textbox">
@@ -646,7 +646,7 @@
     				<font>TextboxFont_18</font>
 					  <align>justify</align>
     				<scroll>false</scroll>
-    				<label>$LOCALIZE[31433]</label>
+    				<label>$LOCALIZE[31435]</label>
     		  </control>
 				</control>
 

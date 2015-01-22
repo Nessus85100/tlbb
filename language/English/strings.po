@@ -874,6 +874,7 @@ msgstr ""
 
 #empty strings from id 31421 to 31430
 
+#Help Messages
 msgctxt "#31431"
 msgid "You haven't added any items to Favorites yet.[CR]Highlight an item, and choose \"Add to favorites\" from the context menu."
 msgstr ""
@@ -884,4 +885,13 @@ msgstr ""
 
 msgctxt "#31433"
 msgid "You have now switched to TLBB Easy Mode.[CR]The main menu now reflects this change."
+msgstr ""
+
+#TLBB OE Settings
+msgctxt "#31434"
+msgid "This TLBB firmware is based on OpenELEC which is a minimal Linux distribution purpose built for XBMC. If you have any questions please DO NOT contact the official OpenELEC team as this fork is not officially supported by the team there and we have our own developers working on this build."
+msgstr ""
+
+msgctxt "#31435"
+msgid "[B]Support:[/B][CR]Web: http://thelittleblackbox.co.uk[CR]Forum: http://thelittleblackbox.co.uk/forum[CR]Quick Setup Guides: http://thelittleblackbox.com/go/ [CR][CR][B]Social Media:[/B][CR]Facebook: https://www.facebook.com/TheLittleBlackBox[CR]Twitter: https://twitter.com/TLBlackBox"
 msgstr ""

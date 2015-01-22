@@ -39,7 +39,7 @@
 				<height>280</height>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture background="true" border="20">empty_icon.png</texture>
-				<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
+				<bordertexture border="20">thumbs/thumb_border.png</bordertexture>
 				<bordersize>6</bordersize>
 			</control>
 			<control type="image">
@@ -211,17 +211,7 @@
 		<!-- ==== List Container ==== -->
 	  <control type="group">
 			<control type="list" id="50">
-				<left>25</left>
-				<top>150</top>
-				<width>1190</width>
-				<height>450</height>
-				<onleft>60</onleft>
-				<onright>9000</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<viewtype label="535">list</viewtype>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime tween="Quadratic" easing="out">250</scrolltime>
+        <include>ListView_Dimensions</include>
 				<itemlayout height="45" width="710" condition="!Container.Content(addons)">
 					<control type="label">
 						<left>14</left>
@@ -466,37 +456,8 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
-				<left>20</left>
-				<top>160</top>
-				<width>11</width>
-				<height>427</height>
-				<texturesliderbackground>-</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">views/scrollbar/scrollbar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">views/scrollbar/scrollbar.png</texturesliderbarfocus>
-				<textureslidernib>-</textureslidernib>
-				<textureslidernibfocus>-</textureslidernibfocus>
-				<onleft>9000</onleft>
-				<onright>50</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-			  <animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60)">Conditional</animation>
-				<visible>Control.IsVisible(50)</visible>
-			</control>
-			<control type="image">
-				<left>53</left>
-				<top>135</top>
-				<width>23</width>
-				<height>20</height>
-				<texture background="true">views/scrollbar/arrow.png</texture>
-		  </control>
-		  <control type="image">
-				<left>53</left>
-				<top>598</top>
-				<width>23</width>
-				<height>20</height>		
-				<texture background="true" flipy="true">views/scrollbar/arrow.png</texture>
-      </control>
+      <include>ListView_Scrollbar</include>
+      <include>ListView_Arrows</include>
 	  </control>
 	 </control>
 	</include>
@@ -554,7 +515,7 @@
 						<height>380</height>
 						<align>left</align>
 						<aspectratio>stretch</aspectratio>
-					  <texture border="25">dialogs/other/iconborder_black.png</texture>
+					  <texture border="20">thumbs/thumb_border.png</texture>
 					</control>
 					<control type="label">
 						<left>47</left>
@@ -585,14 +546,12 @@
 							<width>675</width>
 							<height>380</height>
 							<aspectratio align="center" aligny="center">stretch</aspectratio>
-						  <texture background="true">empty_icon.png</texture>
-							<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
-							<bordersize>6</bordersize>
+						  <texture background="true" border="20">thumbs/thumb_border.png</texture>
 						</control>
 						<control type="image">
 							<width>675</width>
 							<height>380</height>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
 						  <texture background="true" fallback="thumbs/fallback_fanart_big.png">$INFO[ListItem.FileNameAndPath]</texture>
               <visible>Container.HasFiles + !IsEmpty(ListItem.FileName)</visible>
 							<bordersize>6</bordersize>
@@ -704,7 +663,7 @@
 						<width>231</width>
 						<height>240</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/other/panel2.png</texture>
+						<texture border="31">views/other/panel.png</texture>
 					</control>
 					<control type="image">
 						<left>9</left>
@@ -713,6 +672,7 @@
 						<height>232</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
+						<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
@@ -740,9 +700,9 @@
 						<left>5</left>
 						<top>5</top>
 						<width>163</width>
-						<height>160</height>
+						<height>158</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/other/panel2.png</texture>
+						<texture border="31">views/other/panel.png</texture>
 					</control>
 					<control type="image">
 						<left>9</left>
@@ -751,6 +711,7 @@
 						<height>150</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
+						<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
@@ -780,7 +741,7 @@
 						<width>231</width>
 						<height>240</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/other/panel2.png</texture>
+						<texture border="31">views/other/panel.png</texture>
 					</control>
 					<control type="image">
 						<left>9</left>
@@ -790,6 +751,7 @@
 						<colordiffuse>$VAR[DiffuseColorThumbnailsViews_Blue]</colordiffuse>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
+						<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
@@ -817,7 +779,7 @@
 						<width>231</width>
 						<height>240</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/other/focus_blue.png</texture>
+						<texture border="31">views/other/focus_blue.png</texture>
 	          <include>ThumbnailsFocusAnimation</include>
 					</control>
 				</focusedlayout>
@@ -826,9 +788,9 @@
 						<left>5</left>
 						<top>5</top>
 						<width>163</width>
-						<height>160</height>
+						<height>158</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/other/panel2.png</texture>
+						<texture border="31">views/other/panel.png</texture>
 					</control>
 					<control type="image">
 						<left>9</left>
@@ -838,6 +800,7 @@
 						<colordiffuse>$VAR[DiffuseColorThumbnailsViews_Blue]</colordiffuse>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					  <texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[ThumbnailsIcon]</texture>
+						<bordertexture border="6">thumbs/thumb_border.png</bordertexture>
 					  <bordersize>6</bordersize>
 					</control>
 					<control type="image">
@@ -865,7 +828,7 @@
 						<width>163</width>
 						<height>158</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture border="30">views/other/focus_blue.png</texture>
+						<texture border="31">views/other/focus_blue.png</texture>
 	          <include>ThumbnailsFocusAnimation</include>
 					</control>
 				</focusedlayout>

@@ -2,7 +2,7 @@
 <window  id="501">
 	<defaultcontrol always="true">560</defaultcontrol>
 	<views>560,56,50</views>
-  <onload condition="Skin.HasSetting(HideThumbnailsMusic)">SetFocus(50)</onload>
+  <onload condition="Skin.HasSetting(ThumbnailsMusic)">SetFocus(50)</onload>
 	<controls>
 		<include>BackgroundItems</include>
 		<include>MusicFilesViews</include>

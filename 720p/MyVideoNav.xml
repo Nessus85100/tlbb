@@ -2,8 +2,8 @@
 <window  id="25">
 	<defaultcontrol always="true">56</defaultcontrol>
 	<views>56,50,51,52,53,54,58,580,55,560,561,57</views>
-  <onload condition="SubString(Container.FolderPath,plugin://plugin.video.youtube)">Container.SetViewMode(561)</onload>
-  <onload condition="Skin.HasSetting(HideThumbnailsVideos)">SetFocus(50)</onload>
+  <onload condition="SubString(Container.FolderPath,plugin://plugin.video.youtube)">Container.SetViewMode(560)</onload>
+  <onload condition="Skin.HasSetting(ThumbnailsVideos)">SetFocus(50)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAiredEnabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="IsEmpty(Skin.String(ListViewWideThumbTVShows))">Skin.SetString(ListViewWideThumbTVShows,1)</onload>
 	<onload condition="IsEmpty(Skin.String(GalleryViewWideThumbTVShows))">Skin.SetString(GalleryViewWideThumbTVShows,1)</onload>
@@ -11,11 +11,11 @@
 	<controls>
 	 <include>BackgroundItems</include>
 	 <include>VideoViews</include>
-   <include condition="Skin.HasSetting(Show3DWallViewVideos)">3DWallView_Videos</include> <!-- id = 53 -->
-   <include condition="Skin.HasSetting(ShowWallViewVideos)">WallView_Videos</include> <!-- id = 54 -->
-   <include condition="Skin.HasSetting(ShowListWallViewVideos)">ListWallView_Videos</include> <!-- id = 58 -->
-   <include condition="!Skin.HasSetting(HidePostersViewVideos)">PostersView_Videos</include> <!-- id = 55 -->
-   <include condition="!Skin.HasSetting(HideVideoWallFanartViewVideos)">VideoWallFanartView</include> <!-- id = 580 -->
+   <include condition="Skin.HasSetting(3DWallViewVideos)">3DWallView_Videos</include> <!-- id = 53 -->
+   <include condition="Skin.HasSetting(WallViewVideos)">WallView_Videos</include> <!-- id = 54 -->
+   <include condition="Skin.HasSetting(ListWallViewVideos)">ListWallView_Videos</include> <!-- id = 58 -->
+   <include condition="!Skin.HasSetting(PostersViewVideos)">PostersView_Videos</include> <!-- id = 55 -->
+   <include condition="!Skin.HasSetting(VideoWallFanartViewVideos)">VideoWallFanartView</include> <!-- id = 580 -->
    <include condition="Skin.HasSetting(EnableNextAiredNotifications) + Skin.HasSetting(NextAiredEnabled)">NextAiredNotifications</include>
    <include>CommonItems</include>
 
@@ -261,29 +261,10 @@
 			<itemgap>12</itemgap>
 			<orientation>horizontal</orientation>
       <include>Logo</include>
-			<!-- Videos -->
+			<!-- Big Labels -->
 			<control type="label">
 			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[3]</label>
-	      <visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-			</control>
-			<!-- Movies -->
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[20342]</label>
-	      <visible>Container.Content(Movies) | Container.Content(Sets)</visible>
-			</control>
-			<!-- TV Shows -->
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[31002]</label>
-	      <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-			</control>
-			<!-- Music Videos -->
-			<control type="label">
-			  <include>TopBigLabel</include>
-				<label>$LOCALIZE[20389]</label>
-	      <visible>Container.Content(MusicVideos)</visible>
+				<label>$VAR[ContentInfoVideos]</label>
 			</control>
 			<!-- Small Labels -->
 			<control type="label">
@@ -299,12 +280,12 @@
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
 		    <label>$LOCALIZE[24001]</label>
-	      <visible>substring(Container.FolderPath,plugin://plugin.video,left) + ![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+	      <visible>substring(Container.FolderPath,plugin://plugin.video,left) | substring(Container.FolderPath,addons://sources/video/,left)</visible>
 			</control>
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
 		    <label>$INFO[Container.FolderName]</label>
-	      <visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+	      <visible>!substring(Container.FolderPath,addons://sources/video/,left) + ![[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !substring(Container.FolderPath,plugin://plugin.video,left)]</visible>
 			</control>
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
@@ -351,12 +332,12 @@
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
 		    <label>$INFO[Container.FolderName]</label>
-        <visible>Container.Content(Movies) | Container.Content(Sets)</visible>
+        <visible>[Container.Content(Movies) | Container.Content(Sets)] + !substring(Container.FolderPath,plugin://plugin.video,left)</visible>
 			</control>
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
 		    <label>$INFO[Container.FolderName]</label>
-	      <visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
+	      <visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !substring(Container.FolderPath,plugin://plugin.video,left)</visible>
 			</control>
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
@@ -371,7 +352,7 @@
 			<control type="label">
 			  <include>TopZoomedSmallLabel</include>
 		    <label>$INFO[ListItem.Season,$LOCALIZE[20373] ]</label>
-	      <visible>Container.Content(Episodes) + !IsEmpty(ListItem.Season) + !SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)</visible>
+	      <visible>Container.Content(Episodes) + !IsEmpty(ListItem.Season) + !SubString(Container.FolderPath,videodb://recentlyaddedepisodes/) + !substring(Container.FolderPath,plugin://plugin.video,left)</visible>
 			</control>
 		</control>
    </control>

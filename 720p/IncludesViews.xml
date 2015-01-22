@@ -11,12 +11,12 @@
      <control type="group">
       <include>OpenCloseSlideAnimation</include>
       <include>ListView_Videos</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideSlideViewVideos)">SlideView_Videos</include> <!-- id = 51 -->
-      <include condition="!Skin.HasSetting(HideGalleryViewVideos)">GalleryView_Videos</include> <!-- id = 52 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView</include> <!-- id = 56 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos</include> <!-- id = 560 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsVideos)">ThumbnailsView_Videos_Posters</include> <!-- id = 561 -->
-      <include condition="!Skin.HasSetting(HideBannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
+      <include condition="!Skin.HasSetting(SlideViewVideos)">SlideView_Videos</include> <!-- id = 51 -->
+      <include condition="!Skin.HasSetting(GalleryViewVideos)">GalleryView_Videos</include> <!-- id = 52 -->
+      <include condition="!Skin.HasSetting(ThumbnailsVideos)">ThumbnailsView</include> <!-- id = 56 -->
+      <include condition="!Skin.HasSetting(ThumbnailsVideos)">ThumbnailsView_Videos</include> <!-- id = 560 -->
+      <include condition="!Skin.HasSetting(ThumbnailsVideos)">ThumbnailsView_Videos_Posters</include> <!-- id = 561 -->
+      <include condition="!Skin.HasSetting(BannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
      </control>
     </include>
 
@@ -24,11 +24,11 @@
      <control type="group">
       <include>OpenCloseSlideAnimation</include>
       <include>ListView_Music</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideSlideViewMusic)">SlideView_Music</include> <!-- id = 51 -->
-      <include condition="!Skin.HasSetting(HideGalleryViewMusic)">GalleryView_Music</include> <!-- id = 52 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView_Music</include> <!-- id = 560 -->
-      <include condition="!Skin.HasSetting(HideBannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
+      <include condition="!Skin.HasSetting(SlideViewMusic)">SlideView_Music</include> <!-- id = 51 -->
+      <include condition="!Skin.HasSetting(GalleryViewMusic)">GalleryView_Music</include> <!-- id = 52 -->
+      <include condition="!Skin.HasSetting(ThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
+      <include condition="!Skin.HasSetting(ThumbnailsMusic)">ThumbnailsView_Music</include> <!-- id = 560 -->
+      <include condition="!Skin.HasSetting(BannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
      </control>
     </include>
     
@@ -36,8 +36,8 @@
      <control type="group">
       <include>OpenCloseSlideAnimation</include>
       <include>ListView_Music</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView_Music</include> <!-- id = 560 -->
+      <include condition="!Skin.HasSetting(ThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
+      <include condition="!Skin.HasSetting(ThumbnailsMusic)">ThumbnailsView_Music</include> <!-- id = 560 -->
      </control>
     </include>
 
@@ -73,7 +73,7 @@
      <control type="group">
       <include>OpenCloseSlideAnimation</include>
       <include>ListView_Videos</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideBannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
+      <include condition="!Skin.HasSetting(BannersViewVideos)">BannersView_Videos</include> <!-- id = 57 -->
      </control>
     </include>
     
@@ -81,14 +81,79 @@
      <control type="group">
       <include>OpenCloseSlideAnimation</include>
       <include>ListView_Music</include> <!-- id = 50 -->
-      <include condition="!Skin.HasSetting(HideSlideViewMusic)">SlideView_Music</include> <!-- id = 51 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
-      <include condition="!Skin.HasSetting(HideThumbnailsMusic)">ThumbnailsView_Music</include> <!-- id = 560 -->
-      <include condition="!Skin.HasSetting(HideBannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
+      <include condition="!Skin.HasSetting(SlideViewMusic)">SlideView_Music</include> <!-- id = 51 -->
+      <include condition="!Skin.HasSetting(ThumbnailsMusic)">ThumbnailsView</include> <!-- id = 56 -->
+      <include condition="!Skin.HasSetting(ThumbnailsMusic)">ThumbnailsView_Music</include> <!-- id = 560 -->
+      <include condition="!Skin.HasSetting(BannersViewMusic)">BannersView_Music</include> <!-- id = 57 -->
      </control>
     </include>
 
 
+		<!-- ==== ListView Dimensions ==== -->
+    <include name="ListView_Dimensions">
+  			<left>30</left>
+  			<top>150</top>
+  			<width>1190</width>
+  			<height>450</height>
+  			<onleft>60</onleft>
+  			<onright>9111</onright>
+  			<onup>50</onup>
+  			<ondown>50</ondown>
+  			<viewtype label="535">List</viewtype>
+  			<pagecontrol>60</pagecontrol>
+  		  <scrolltime tween="cubic" easing="out">300</scrolltime>
+    </include>
+
+		<!-- ==== ListView Arrows ==== -->
+    <include name="ListView_Arrows">
+			<control type="image">
+				<left>58</left>
+				<top>135</top>
+				<width>24</width>
+				<height>21</height>
+				<texture>views/scrollbar/arrow.png</texture>
+		  </control>
+		  <control type="image">
+				<left>58</left>
+				<top>595</top>
+				<width>24</width>
+				<height>21</height>
+				<texture flipy="true">views/scrollbar/arrow.png</texture>
+		  </control>
+    </include>
+    
+		<!-- ==== ListView Scrollbar ==== -->
+    <include name="ListView_Scrollbar">
+			<control type="scrollbar" id="60">
+				<left>25</left>
+				<top>165</top>
+				<width>9</width>
+				<height>425</height>
+				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">views/scrollbar/scrollbar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">views/scrollbar/scrollbar.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onleft>9000</onleft>
+				<onright>50</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			  <animation effect="fade" start="100" end="0" time="250" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+    </include>
+
+		<!-- ==== Banners View Panel ==== -->
+    <include name="BannersView_Panel">
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>741</width>
+				<height>255</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+	      <texture background="true">views/banners/banner_panel.png</texture>
+			</control>
+    </include>
 
 		<!-- ==== ListView Poster/Fanart ==== -->
     <include name="ListView_PosterAndFanart">
@@ -111,74 +176,63 @@
   			<bordersize>20</bordersize>
   		</control>
   		<control type="image">
-  			<description>back</description>
-  			<left>632</left>
-  			<top>163</top>
-  			<width>179</width>
-  			<height>250</height>
-  			<aspectratio aligny="center" align="center">stretch</aspectratio>
-  			<texture background="true">thumbs/thumb_back2.png</texture>
-  			<bordersize>5</bordersize>
-  		</control>
-  		<control type="image">
-  			<left>632</left>
-  			<top>163</top>
-  			<width>179</width>
-  			<height>250</height>
+  			<left>630</left>
+  			<top>161</top>
+  			<width>183</width>
+  			<height>254</height>
   			<aspectratio align="center" aligny="center">scale</aspectratio>
-  			<fadetime>100</fadetime>
   			<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[VarArtPoster]</texture>
-  			<bordersize>6</bordersize>
+  			<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
+  			<fadetime>IconCrossfadeTime</fadetime>
+  		  <bordersize>6</bordersize>
   		</control>
   		<control type="image">
-  			<left>632</left>
-  			<top>163</top>
-  			<width>179</width>
-  			<height>250</height>
+  			<left>630</left>
+  			<top>161</top>
+  			<width>183</width>
+  			<height>254</height>
   			<aspectratio align="center" aligny="center">stretch</aspectratio>
   			<texture background="true">views/list/overlay_poster.png</texture>
-  			<bordersize>5</bordersize>
-  		</control>
-  		<control type="image">
-  			<description>back</description>
-  			<left>808</left>
-  			<top>163</top>
-  			<width>422</width>
-  			<height>250</height>
-  			<aspectratio aligny="center" align="center">stretch</aspectratio>
-  			<texture background="true">thumbs/thumb_back2.png</texture>
-  			<bordersize>5</bordersize>
-  		</control>
-  		<control type="image">
-  			<left>808</left>
-  			<top>163</top>
-  			<width>422</width>
-  			<height>250</height>
-  			<aspectratio align="center" aligny="center">scale</aspectratio>
-  			<fadetime>100</fadetime>
-  	    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[VarArtFanart]</texture>
   			<bordersize>6</bordersize>
-  		  <visible>![[Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)]</visible>
   		</control>
   		<control type="image">
-  			<left>808</left>
-  			<top>163</top>
+  			<left>810</left>
+  			<top>161</top>
   			<width>422</width>
-  			<height>250</height>
-  			<aspectratio align="center" aligny="center">keep</aspectratio>
-  			<fadetime>150</fadetime>
+  			<height>254</height>
+  			<aspectratio align="center" aligny="center">stretch</aspectratio>
+  			<texture background="true" border="15">thumbs/thumb_border.png</texture>
+  		</control>
+  		<control type="image">
+  			<left>810</left>
+  			<top>161</top>
+  			<width>422</width>
+  			<height>254</height>
+  			<aspectratio align="center" aligny="center">scale</aspectratio>
   	    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[VarArtFanart]</texture>
-  			<bordersize>40</bordersize>
-  		  <visible>[[Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)]</visible>
+  			<fadetime>IconCrossfadeTime</fadetime>
+  		  <bordersize>6</bordersize>
+				<visible>![[Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)]</visible>
   		</control>
   		<control type="image">
-  			<left>808</left>
-  			<top>163</top>
+  			<left>810</left>
+  			<top>161</top>
   			<width>422</width>
-  			<height>250</height>
+  			<height>254</height>
+  			<aspectratio align="center" aligny="center">keep</aspectratio>
+  	    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[VarArtFanart]</texture>
+  			<fadetime>IconCrossfadeTime</fadetime>
+  			<bordersize>40</bordersize>
+				<visible>[[Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)]</visible>
+  		</control>
+  		<control type="image">
+  			<left>810</left>
+  			<top>161</top>
+  			<width>422</width>
+  			<height>254</height>
   			<aspectratio align="center" aligny="center">stretch</aspectratio>
   			<texture background="true">views/list/overlay_fanart.png</texture>
-  			<bordersize>5</bordersize>
+  			<bordersize>6</bordersize>
   		</control>
   		<control type="image">
   			<left>670</left>
@@ -211,64 +265,44 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<description>back</description>
-				<left>636</left>
-				<top>166</top>
-				<width>223</width>
-				<height>222</height>
-				<aspectratio aligny="center" align="center">stretch</aspectratio>
-				<texture background="true">thumbs/thumb_back2.png</texture>
-				<bordersize>5</bordersize>
-			</control>
-			<control type="image">
-				<left>636</left>
-				<top>166</top>
-				<width>223</width>
-				<height>222</height>
+				<left>634</left>
+				<top>164</top>
+				<width>227</width>
+				<height>226</height>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
-				<fadetime>100</fadetime>
 				<texture background="true" fallback="thumbs/fallback_square_tp.png">$VAR[VarArtPoster]</texture>
-				<bordersize>6</bordersize>
+  			<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
+  			<fadetime>IconCrossfadeTime</fadetime>
+  		  <bordersize>6</bordersize>
 			</control>
 			<control type="image">
-				<left>636</left>
-				<top>166</top>
-				<width>223</width>
-				<height>222</height>
+				<left>634</left>
+				<top>164</top>
+				<width>227</width>
+				<height>226</height>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
-				<fadetime>100</fadetime>
 				<texture background="true" >views/list/overlay_square.png</texture>
-				<bordersize>5</bordersize>
-			</control>
-			<control type="image">
-				<description>back</description>
-				<left>855</left>
-				<top>166</top>
-				<width>374</width>
-				<height>222</height>
-				<aspectratio aligny="center" align="center">stretch</aspectratio>
-				<texture background="true">thumbs/thumb_back2.png</texture>
-				<bordersize>5</bordersize>
-			</control>
-			<control type="image">
-				<left>855</left>
-				<top>166</top>
-				<width>374</width>
-				<height>222</height>
-				<aspectratio align="center" aligny="center">stretch</aspectratio>
-				<fadetime>100</fadetime>
-		    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[VarArtFanart]</texture>
 				<bordersize>6</bordersize>
 			</control>
 			<control type="image">
-				<left>855</left>
-				<top>166</top>
-				<width>374</width>
-				<height>222</height>
+				<left>858</left>
+				<top>164</top>
+				<width>373</width>
+				<height>226</height>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
-				<fadetime>100</fadetime>
+		    <texture background="true" fallback="thumbs/fallback_fanart_tp.png">$VAR[VarArtFanart]</texture>
+  			<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
+  			<fadetime>IconCrossfadeTime</fadetime>
+  		  <bordersize>6</bordersize>
+			</control>
+			<control type="image">
+				<left>858</left>
+				<top>164</top>
+				<width>373</width>
+				<height>226</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture background="true" >views/list/overlay_fanart.png</texture>
-				<bordersize>5</bordersize>
+				<bordersize>6</bordersize>
 			</control>
 			<control type="image">
 				<left>690</left>
@@ -298,7 +332,7 @@
   			<height>256</height>
   			<aspectratio align="right" aligny="top">keep</aspectratio>
   			<texture>$INFO[Listitem.Icon]</texture>
-  			<bordertexture border="30">views/other/panel2.png</bordertexture>
+  			<bordertexture border="31">views/other/panel2.png</bordertexture>
   			<bordersize>10</bordersize>
   		</control>
     </include>
@@ -352,10 +386,10 @@
   		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,$LOCALIZE[31003] ]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
   	</variable>
 
-	<variable name="ListItemLabel2">
-    <value condition="!IsEmpty(ListItem.Label2)">[COLOR=selected]$INFO[ListItem.Label2][/COLOR]</value>
-		<value>$INFO[ListItem.Property(Addon.Version)]</value>
-	</variable>	
+  	<variable name="ListItemLabel2">
+      <value condition="!IsEmpty(ListItem.Label2)">[COLOR=selected]$INFO[ListItem.Label2][/COLOR]</value>
+  		<value>$INFO[ListItem.Property(Addon.Version)]</value>
+  	</variable>
   
   	<variable name="FirstMusicLabel">
   		<value condition="Container.Content(Songs) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,0]</value>
@@ -388,7 +422,7 @@
   	</variable>
   
   	<variable name="BannersListMusicBottomLabel">
-  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_YearsActive), $LOCALIZE[21898]  ]</value>
+  		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_YearsActive),$LOCALIZE[21898]  ]</value>
   		<value condition="Container.Content(Albums)">$INFO[ListItem.Year]$INFO[ListItem.Property(Album_label), • ]</value>
   		<value condition="Container.Content(Songs) + !IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,$LOCALIZE[554] #0,]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
   		<value condition="Container.Content(Songs) + IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,$LOCALIZE[554] #,]$INFO[ListItem.Duration,  •  , $LOCALIZE[12391]]</value>
@@ -403,12 +437,6 @@
   		<value>$INFO[ListItem.Plot]</value>
   	</variable>
 
-    <variable name="AddonStatus">
-      <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
-      <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098]) | stringcompare(ListItem.Label2,$LOCALIZE[24049])">overlays/addons_status/status_broken.png</value>
-      <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
-    </variable>
-
   	<variable name="AddonsLabel2">
   		<value condition="stringcompare(Container.FolderPath,addons://sources/video/) + !IsEmpty(ListItem.Property(Addon.Broken))">[COLOR=red]$LOCALIZE[24098][/COLOR]</value>
   		<value condition="!stringcompare(Container.FolderPath,addons://sources/video/) + !IsEmpty(ListItem.Property(Addon.Broken))">[COLOR=red]$INFO[ListItem.Label2][/COLOR]</value>
@@ -418,63 +446,76 @@
   		<value>$INFO[ListItem.Property(Addon.Version)]</value>
   	</variable>
 
-  	<variable name="VarArtBanner">
-  		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-  		<value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
-      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_banner.png]</value>
-  	</variable>
-  
-  	<variable name="VarArtThumb">
-      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_episode.png]</value>
-  	</variable>
-  
-  	<variable name="VarArtThumbSquare">
-      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_square.png]</value>
-  	</variable>
-  	
-  	<variable name="VideoWallThumb">
-  		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
-  		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
-      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_episode.png]</value>
-  	</variable>
-
-    <variable name="ThumbnailsIcon">
-      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-      <value>$INFO[ListItem.Icon]</value>
+    <variable name="AddonStatus">
+      <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
+      <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098]) | stringcompare(ListItem.Label2,$LOCALIZE[24049])">overlays/addons_status/status_broken.png</value>
+      <value condition="Stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
     </variable>
-  
+
   	<variable name="VarArtPoster">
   		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
   		<value condition="Container.Content(Episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
   		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
   		<value condition="Container.Content(Seasons) + IsEmpty(ListItem.Art(season.poster)) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
   		<value condition="[IsEmpty(ListItem.Art(poster)) | IsEmpty(ListItem.Art(season.poster)) | IsEmpty(ListItem.Art(tvshow.poster))] + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-      <value condition="Control.IsVisible(561) | Control.IsVisible(57)">$INFO[ListItem.ActualIcon,thumbs/,/folderback_poster.png]</value>
-      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_poster_big.png]</value>
-  	</variable>
-  
+      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_poster_big_tp.png]</value>
+  	</variable> 
+ 
   	<variable name="VarArtFanart">
   		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">$VAR[LandscapeVars]</value>
   		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">$VAR[ClearlogoVars]</value>
-  		<value condition="Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets)] + Stringcompare(Skin.String(ListViewWideThumbMovies),2)">$VAR[ClearlogoVars]</value>
+  		<value condition="Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets)] + Stringcompare(Skin.String(ListViewWideThumbMovies),2)">$VAR[LandscapeVars]</value>
+  		<value condition="Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Sets)] + Stringcompare(Skin.String(ListViewWideThumbMovies),3)">$VAR[ClearlogoVars]</value>
   		<value condition="Container.Content(Episodes) + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
   		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
   		<value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
-  		<value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_fanart_big.png]</value>
-  	</variable>
-  
-  	<variable name="LandscapeVars">
-  		<value condition="[Container.Content(TVShows)] | [Container.Content(Movies) | Container.Content(Sets)]">$INFO[ListItem.Art(landscape)]</value>
-  		<value condition="Container.Content(Seasons)">$INFO[ListItem.Art(tvshow.landscape)]</value>
-  	</variable>
-  	<variable name="ClearlogoVars">
-  		<value condition="[Container.Content(TVShows)] | [Container.Content(Movies) | Container.Content(Sets)] + !IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
-  		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
-  		<value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_episode_tp.png]</value>
+  		<value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_fanart_tp.png]</value>
   	</variable>
 
+  	<variable name="VarArtBanner">
+  		<value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
+  		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_banner_tp.png]</value>
+  	</variable>
+  
+  	<variable name="VarArtThumb">
+      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_episode_tp.png]</value>
+  	</variable>
+  
+  	<variable name="VarArtThumbSquare">
+      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_square_tp.png]</value>
+  	</variable>
+  	
+  	<variable name="VideoWallThumb">
+  		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+  		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+      <value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_episode_tp.png]</value>
+  	</variable>
+  
+    <variable name="ThumbnailsIcon">
+      <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+      <value>$INFO[ListItem.Icon]</value>
+    </variable>
+ 
+  	<variable name="LandscapeVars">
+  		<value condition="[Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Sets)] + !IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+  		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
+  		<value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_fanart_tp.png]</value>
+  	</variable>
+  	<variable name="ClearlogoVars">
+  		<value condition="[Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Sets)] + !IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+  		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+  		<value>$INFO[ListItem.ActualIcon,thumbs/,/folderback_fanart_tp.png]</value>
+  	</variable>
+
+    <variable name="ContentInfoVideos">
+      <value condition="![[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !substring(Container.FolderPath,plugin://plugin.video,left)]">$LOCALIZE[3]</value>
+      <value condition="[Container.Content(Movies) | Container.Content(Sets)]  + !substring(Container.FolderPath,plugin://plugin.video,left)">$LOCALIZE[20342]</value>
+      <value condition="[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !substring(Container.FolderPath,plugin://plugin.video,left)">$LOCALIZE[31002]</value>
+      <value condition="Container.Content(MusicVideos)">$LOCALIZE[20389]</value>
+    </variable>
 
 </includes>    
